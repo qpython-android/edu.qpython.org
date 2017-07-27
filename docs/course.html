@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Index</title>
+<title>A hands-on introduction to Python for beginning programmers</title>
 <link rel="stylesheet" href="static/qpy_dev.css" type="text/css" />
 <link rel="stylesheet" href="static/pygments.css" type="text/css" />
 <meta charset="UTF-8">
@@ -14,8 +14,70 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<h1 id="index">Index</h1>
-<div class="genindex-jumpbox">
+<div class="section" id="a-hands-on-introduction-to-python-for-beginning-programmers">
+<h1>A hands-on introduction to Python for beginning programmers<a class="headerlink" href="#a-hands-on-introduction-to-python-for-beginning-programmers" title="Permalink to this headline">¶</a></h1>
+<p>If you are a new guy to QPython, you should watch the tutorial video and just follow the steps to learn how to run script with QPython</p>
+
+        <button data-url="http://www.baidu.com" class="button">Watch Tutorial</button>
+    
+<div class="section" id="running-with-console">
+<h2>Running with Console<a class="headerlink" href="#running-with-console" title="Permalink to this headline">¶</a></h2>
+<p>Running QPython’s simple script with console model</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>qpy:2
+#qpy:console
+#qpy:http://qpython.com/s/qpy-sample.py
+class Calculator(object):
+    #define class to simulate a simple calculator
+    def __init__ (self):
+        #start with zero
+        self.current = 0
+    def add(self, amount):
+        #add number to current
+        self.current += amount
+    def getCurrent(self):
+        return self.current
+myBuddy = Calculator() # make myBuddy into a Calculator object
+myBuddy.add(2) #use myBuddy&#39;s new add method derived from the Calculator class
+print(myBuddy.getCurrent()) #print myBuddy&#39;s current instance variable
+</pre></div>
+</div>
+<button class="button">Run …</button>
+</div>
+<div class="section" id="running-with-kivy">
+<h2>Running with Kivy<a class="headerlink" href="#running-with-kivy" title="Permalink to this headline">¶</a></h2>
+<p>Running QPython’s script with GUI model ( Kivy library )</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>#qpy:2
+#qpy:kivy
+#qpy:http://qpython.com/s/qpy-guisample.py
+from kivy.app import App
+from kivy.uix.button import Button
+class TestApp(App):
+    def build(self):
+        # display a button with the text : Hello QPython
+        return Button(text=&#39;Hello QPython&#39;)
+TestApp().run()
+</pre></div>
+</div>
+<button class="button">Run …</button>
+</div>
+<div class="section" id="running-as-web-app">
+<h2>Running as Web App<a class="headerlink" href="#running-as-web-app" title="Permalink to this headline">¶</a></h2>
+<p>Running Web App with QPython</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>#qpy:2
+#qpy:webapp:Hello Qpython
+#qpy://localhost:8080/hello
+&quot;&quot;&quot;
+This is a sample for qpython webapp
+&quot;&quot;&quot;
+from bottle import route, run
+@route(&#39;/hello&#39;)
+def hello():
+    return &quot;Hello World!&quot;
+run(host=&#39;localhost&#39;, port=8080)
+</pre></div>
+</div>
+<button class="button">Run …</button>
+</div>
 </div>
 </div>
 </div>

@@ -20,9 +20,9 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('.'))
 try:
-    import qpython_theme
+    import qpy_dev
 except:
-    print('please install qpython_theme')
+    print('please install qpy_dev')
 
     sys.exit(1)
 
@@ -51,7 +51,7 @@ source_suffix = '.rst'
 # source_encoding = 'utf-8-sig'
 
 # The master toctree document.
-master_doc = 'document'
+master_doc = 'course'
 
 # General information about the project.
 project = u'QPython'
@@ -125,7 +125,7 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'qpython_theme'
+html_theme = 'qpy_dev'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -134,7 +134,7 @@ html_theme = 'qpython_theme'
 # html_theme_options = {}
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = [qpython_theme.theme_path]
+html_theme_path = [qpy_dev.theme_path]
 
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
