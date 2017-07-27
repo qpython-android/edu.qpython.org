@@ -2,10 +2,12 @@
 #-*- coding: UTF-8 -*- 
 import os
 import re
+import glob
 
 path = './'   #相对路径
 
-filelist = [os.path.join(path, x) for x in os.listdir(path) if os.path.isfile(os.path.join(path ,x)) and os.path.splitext(os.path.join(path, x))[1] == '.html']
+filelist = glob.glob(path+"*.html")+glob.glob(path+"*/*.html")
+
 
 def call_repl_jumpbutton(matchobj):
     return '''
@@ -30,9 +32,9 @@ for x in filelist:
         _temp = f.read()
 
     #处理
-    _temp=  _temp.replace('_static', 'static').replace('_images', 'images').replace('<p>&lt;button&gt;', '<button class="button">').replace('&lt;/button&gt;</p>', '</button>')
+    _temp=  _temp.replace('_static', 'static').replace('_images', 'images').replace('<p>&lt;button&gt;', '<button class="button">').replace('&lt;/button&gt;</p>', '</button>').replace('&#8221;','"')
     #jumpbutton
-    reg = r'<p>&lt;jumpbutton\s+data-url=”(.+)”(?=&gt;)&gt;(.+)&lt;/jumpbutton&gt;</p>'
+    reg = r'<p>&lt;jumpbutton\s+data-url="(.+)"(?=&gt;)&gt;(.+)&lt;/jumpbutton&gt;</p>'
     _temp = re.sub(reg, call_repl_jumpbutton, _temp)
 
     #video
