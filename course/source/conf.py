@@ -301,7 +301,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'qpython', u'QPython Documentation',
+    (master_doc, 'qpython', u'QPython Courses',
      [author], 1)
 ]
 
@@ -316,8 +316,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'QPython', u'QPython User Guide',
-     author, 'QPython', 'One line description of project.',
+    (master_doc, 'QPython', u'QPython Courses',
+     author, 'QPython', 'One line description of courses.',
      'Miscellaneous'),
 ]
 
