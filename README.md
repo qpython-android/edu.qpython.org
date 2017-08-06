@@ -6,12 +6,12 @@ QPython Courses
 
 About
 -------
-QPython courses is a social Python learning project, based on QPython community, we hope more and more people could join us wo help write or translate and share QPython learning materials which could help other friends learn coding(especiallylearnning Python) with fun.
+QPython courses is a social Python learning project, based on QPython community, we hope more and more people could join us wo help write or translate and share QPython learning materials which could help other friends learn Python with more fun.
 
 How to contribute
 ------------------
-* We extend sphinx to organize the courses,  you need to learn some `sphinx's syntax <https://www.sphinx-doc.org/>`_
-* Fork & clone our project on github, `project address <https://github.com/qpython-android/course>`
+* We extend sphinx to organize the courses,  you need to learn some [sphinx's syntax](https://www.sphinx-doc.org/)
+* Fork & clone our project on github, [project address](https://github.com/qpython-android/course)
 * Add new course or improve the current course or translate to other language
 * Send pull reuqest to us
 
