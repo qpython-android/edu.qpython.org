@@ -1,4 +1,67 @@
-What's QPython
-=======================
-QPython is a Python script engine for Android, it is the best Python IDE for Android also.
-It helps your runs Python programs on android devices. lt contains the Python interpreter, console, editor, and the SL4A Library for Android development.
+What is QPython
+========================
+Chapter Author, contributor and updated time
+------------------------------------------------------
+Author: `River <https://github.com/riverfor>`_
+
+Submitted: 2017/8/6
+
+About
+--------
+QPython(for Android) is a Python script engine for Android system, which runs Python programs on any Android device. It contains a Python interpreter, a console, and an editor. Besides a basic Python library, QPython also integrates a bottle library that supports WebApp development, and an SL4A library that supports invoking Android APIs.
+
+A QPython (for iOS) application designed for iOS users is under development and will make face soon.
+
+
+History of QPython
+------------------------------------------------------
+Born in 2012, QPython at first was a Python script SDK created by River for the rapid release of hotfix on Android programs, and was later independently released as a Python App on Android system. Ever since its release, QPython has been widely favored by Python developers, and received tens of thousands of installment and reviews in a very short time even in the circumstance of none market promotion. In 2015, the total installment exceeds 2,000,000. Until now, it is the most popular Python integrated development environment on Android.
+
+Supported program types
+------------------------------------------------------
+Currently, QPython can run console applications, WebApp applications, backend applications, graphic interface-based applications, and so on. Each type of program fits with a different application scenario, Python determines how to  run an application according to a unique head statement. For example, #qpy:webapp indicates that the program will be released in the WebApp manner, #qpy:kivy indicates that the program is a ivy program, #qpy:qpyapp indicates that the program is a QPYApp (fits with the backend application scenario), and a program without head statement will by default run in the console manner (for easy debugging).
+
+How to install a third party package
+------------------------------------------------------
+QPython is imbedded with most of the Python libraries for PCs. As Android system itself does not support compilation tool links, you cannot install all libraries like Python on PCs. However, you can install some pre-compiled libraries via QPYPI, which supports libraries including kivy, numpy, opencv, pycrypto, tornado. In addition, you can use the pip client to install most packages implemented by Python from the official website or from a third party Pypi designated by you.
+
+
+*WebApp header declaration*
+::
+
+    #qpy:webapp
+
+
+*QPYApp header declaration*
+::
+
+    #qpy:qpyapp
+
+
+*Kivy header declaration*
+::
+
+    #qpy:kivy
+
+*Console header declaration*
+::
+
+    #qpy:console
+
+
+
+
+QPython media and community
+------------------------------------------------------
+QPython is a rapidly updated program which pays attention to user feedbacks, including feedbacks from Facebook fan page, twitter, weibo, Facebook group, G+, WeChat/QQ group, and other medias. Social groups are a significant part of QPython. We welcome you to join in our social group discussion, activities, and QPython construction, so as to learn and understand the latest development state of QPython.
+
+
+Open source version and business version of QPython
+------------------------------------------------------
+QPython has two versions: the open source version and the business version. The open source version provides a basic Python operating environment (which is consistent with the business version), and uses the Apache license. We welcome any person or company of interest to customize your own service on this basis. Our QPython development team will also actively respond to any kinds of questions from users of the open source version.
+The business version of QPython, on the other hand, is dedicated to providing unique and convenient features and services, including online tutoring, online development, code sharing, etc.
+
+No matter which version you are using, we hope everyone can really enjoy Python programing on cell phones.
+
+
+.. image:: http://dl.qpy.io/assets/banners/course-qpython-quick-start.png
