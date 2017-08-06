@@ -4,6 +4,8 @@ Chapter Author, contributor and updated time
 ------------------------------------------------------
 Author: `River <https://github.com/riverfor>`_
 
+Translator: `TGJ <http://quseit.com/>`_
+
 Submitted: 2017/8/6
 
 About
