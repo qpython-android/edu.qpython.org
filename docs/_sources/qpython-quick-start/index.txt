@@ -58,12 +58,12 @@ QPython media and community
 QPython is a rapidly updated program which pays attention to user feedbacks, including feedbacks from Facebook fan page, twitter, weibo, Facebook group, G+, WeChat/QQ group, and other medias. Social groups are a significant part of QPython. We welcome you to join in our social group discussion, activities, and QPython construction, so as to learn and understand the latest development state of QPython.
 
 
-Open source version and business version of QPython
+Open source branch and business branch of QPython
 ------------------------------------------------------
-QPython has two versions: the open source version and the business version. The open source version provides a basic Python operating environment (which is consistent with the business version), and uses the Apache license. We welcome any person or company of interest to customize your own service on this basis. Our QPython development team will also actively respond to any kinds of questions from users of the open source version.
-The business version of QPython, on the other hand, is dedicated to providing unique and convenient features and services, including online tutoring, online development, code sharing, etc.
+QPython has two branches: the open source branch and the business branch. The open source branch provides a basic Python operating environment (which is consistent with the business branch), and uses the Apache license. We welcome any person or company of interest to customize your own service on this basis. Our QPython development team will also actively respond to any kinds of questions from users of the open source branch.
+The business branch of QPython, on the other hand, is dedicated to providing unique and convenient features and services, including online tutoring, online development, code sharing, etc.
 
-No matter which version you are using, we hope everyone can really enjoy Python programing on cell phones.
+No matter which branch you are using, we hope everyone can really enjoy Python programing on cell phones.
 
 
 .. image:: http://dl.qpy.io/assets/banners/course-qpython-quick-start.png
