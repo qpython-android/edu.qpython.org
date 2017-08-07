@@ -20,7 +20,7 @@ QPython supports the newest Python2 and Python3, which satisfy users’ requirem
 
 Mobile IDE and learning community
 ---------------------------------------
-QPython has a console, an editor, a develop toolkit(QRCode Code reader、 local file manager), QPYPI, courses, a code share community and QPYIO online development service, which provide a convenient mobile Python IDE and learning community for Python users.
+QPython has a console, an editor, a develop toolkit(QRCode Code reader, local file manager), QPYPI, courses, a code share community and QPYIO online development service, which provide a convenient mobile Python IDE and learning community for Python users.
 
 
 Powerful and open source
