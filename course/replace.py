@@ -38,7 +38,7 @@ for x in filelist:
     _temp = re.sub(reg, call_repl_jumpbutton, _temp)
 
     #video
-    reg = r'<a\s+class="reference\s+external\s+image-reference"\s+href="data-video:&quot;(http://www.baidu.com)(?=&quot;")&quot;"'
+    reg = r'<a\s+class="reference\s+external\s+image-reference"\s+href="data-video:&quot;(http://m.tubebook.net)(?=&quot;")&quot;"'
     _temp = re.sub(reg, call_repl_video, _temp)
 
     reg = r'\^(\d{1,2})\$'
