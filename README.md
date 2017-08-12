@@ -60,3 +60,6 @@ Thank you for contributing
 
 
 
+License
+----------------
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">This tutorial </span> is contributed by <a xmlns:cc="http://creativecommons.org/ns#" href="http://plus.google.com/u/1/communities/111340957575273631204" property="cc:attributionName" rel="cc:attributionURL">QPython course community</a>，and licensed under a  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>。
