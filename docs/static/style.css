@@ -10,6 +10,7 @@ body {
     color: #3d3d3d;
     letter-spacing: .1px;
 }
+ol {padding-left:10px}
 ul {list-style:none;padding-left:10px;}
 
 li {
