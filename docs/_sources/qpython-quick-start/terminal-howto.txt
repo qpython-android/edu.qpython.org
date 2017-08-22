@@ -10,6 +10,7 @@ You can
 
 * open additional consoles by tapping the plus button and usedrop-down list on the upper left corner to switch between consoles
 * To close the console just tap the close button
+* Select text & Paste text ( Just long touch on the terminal to show the menu)
 
 Note
 ------

@@ -1,0 +1,8 @@
+QPython Daily Featured
+========================
+
+How to copy and paste text in terminal?
+------------------------------------------------------
+By long touching on the terminal, the menu shows, you can copy text through "Select text"  and past text through "Paste"
+
+.. image:: http://edu.qpython.org/static/terminal-howto-select-text.png
