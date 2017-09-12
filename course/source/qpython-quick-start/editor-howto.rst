@@ -29,3 +29,17 @@ You can modify the editor's setting bu clicking the top-right icon. You can set 
 **Auto-highlight lines**
 
 Sometimes syntax highlight feature make the editor be slow when open a large file on some devices, so we make the editor's highlight being enable when the total lines are lower than this limit(default is 300), you can adjust it to you want.
+
+**Give a try**
+
+..  code-block :: none
+
+    class TestC():
+        ^4$def ask_age(self):
+            ^8$v = raw_input("> How old are you ?")
+            ^8$return v
+
+    tc = TestC()
+    tc.ask_age()
+
+<button>Run ...</button>
