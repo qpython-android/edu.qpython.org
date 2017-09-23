@@ -20,4 +20,4 @@ The QPython community
 More and more talent people join the QPython community (https://www.facebook.com/groups/qpython)  recently.  And we hope that we could learn from each other.
 
 
-*If you want to talk to develop directory, please leave a message to us through twitter@qpython, and we will give you an answer as soon as possible.*
+*If you want to talk to us, please leave a message to us through twitter ( @qpython ), and we will reply you as soon as possible.*
