@@ -71,5 +71,5 @@ No matter which branch you are using, we hope everyone can really enjoy Python p
 
 
 .. image:: http://edu.qpython.org/static/codeanywhere.png
-    :target: data-video: "http://m.tubebook.net/youtube-featured/HqfUUiftrRw/"
+    :target: data-video: "https://youtu.be/HqfUUiftrRw"
     :alt: QPython - Code Anywhere，Study Anytime
