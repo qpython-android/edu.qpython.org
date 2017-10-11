@@ -27,3 +27,11 @@ Powerful and open source
 ------------------------
 Besides learning Python programing on Android, QPython helps you control your android device with programs.
 The open source version of QPython is convenient for you to embed Python SDK into your app development.
+
+*Video: QPython - Code Anywhere，Study Anytime*
+
+
+.. image:: http://edu.qpython.org/static/codeanywhere.png
+    :target: data-video: "http://m.tubebook.net/youtube-featured/HqfUUiftrRw/"
+    :alt: QPython - Code Anywhere，Study Anytime
+
