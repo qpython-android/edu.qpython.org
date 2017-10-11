@@ -66,4 +66,10 @@ The business branch of QPython, on the other hand, is dedicated to providing uni
 No matter which branch you are using, we hope everyone can really enjoy Python programing on cell phones.
 
 
-.. image:: http://dl.qpy.io/assets/banners/course-qpython-quick-start.png
+
+*Video: QPython - Code Anywhere，Study Anytime*
+
+
+.. image:: http://edu.qpython.org/static/codeanywhere.png
+    :target: data-video: "http://m.tubebook.net/youtube-featured/HqfUUiftrRw/"
+    :alt: QPython - Code Anywhere，Study Anytime
