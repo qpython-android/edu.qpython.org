@@ -28,6 +28,87 @@ HAS_SOURCE:  true
 <div class="body" role="main">
 <div class="section" id="qpython-webapp-principle">
 <h1>QPython WebApp Principle<a class="headerlink" href="#qpython-webapp-principle" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="chapter-author-contributor-and-updated-time">
+<h2>Chapter Author, contributor and updated time<a class="headerlink" href="#chapter-author-contributor-and-updated-time" title="Permalink to this headline">¶</a></h2>
+<p>Author: <a class="reference external" href="https://github.com/riverfor">River</a></p>
+<p>Submitted: 2017/10/16</p>
+</div>
+<div class="section" id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<p>QPython supports WebApp, the goal is to enable all developers to the fastest development of mobile applications.</p>
+</div>
+<div class="section" id="advantages">
+<h2>Advantages<a class="headerlink" href="#advantages" title="Permalink to this headline">¶</a></h2>
+<p>There are lots of mobile WebApp solutions, like cordova, phonegap etc, and compared to them, QPython&#8217;s WebApp has the following advantages.</p>
+<p><em>QPython is a powerful Python engine that can handle many logical jobs, effectively reducing data transfer time and enhancing the user experience</em></p>
+<p><em>QPython supports massive Python libraries, you could import them in your project, so that you could save much time.</em></p>
+<p><em>It is very convenient for development with QPython, you can complete your development just in palm. And you could develop from PC then transfer to your mobile in the end</em></p>
+</div>
+<div class="section" id="how-does-webapp-work-in-qpython">
+<h2>How does WebApp work in QPython<a class="headerlink" href="#how-does-webapp-work-in-qpython" title="Permalink to this headline">¶</a></h2>
+<p><strong>1</strong> When you run a WebApp program from QPython, QPython launch the WebApp service in the background, at the same time, QPython will start a webview which loads the entry link declared in the program header in the front.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#qpy:webapp:&lt;webapp-title&gt;</span>
+<span class="c1">#qpy://&lt;webapp-address&gt;:&lt;webapp-port&gt;/&lt;webapp-path&gt;</span>
+</pre></div>
+</div>
+<p><strong>2</strong> Then the user can start to interact with the applicaton with the web mode. So the developer could write the logic code with the web development way.</p>
+<p><strong>3</strong> When the user exit by clicking the left arrow, the application will request the <strong>http://&lt;webapp-address&gt;&lt;:webapp-port&gt;/__exit</strong> to exit the application
+The developer could rewrite the __exit function to defines the exit behaviors.</p>
+</div>
+<div class="section" id="run-a-minimal-webapp">
+<h2>Run a minimal webapp<a class="headerlink" href="#run-a-minimal-webapp" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#qpy:webapp:Hello Qpython
+#qpy://127.0.0.1:8080/
+#This is a sample for qpython webapp
+from bottle import Bottle, ServerAdapter
+from bottle import run, debug, route, error, static_file, template
+######### QPYTHON WEB SERVER ###############
+class MyWSGIRefServer(ServerAdapter):
+    server = None
+    def run(self, handler):
+        from wsgiref.simple_server import make_server, WSGIRequestHandler
+        if self.quiet:
+            class QuietHandler(WSGIRequestHandler):
+                def log_request(*args, **kw): pass
+            self.options[&#39;handler_class&#39;] = QuietHandler
+        self.server = make_server(self.host, self.port, handler, **self.options)
+        self.server.serve_forever()
+    def stop(self):
+        import threading
+        threading.Thread(target=self.server.shutdown).start()
+        #self.server.shutdown()
+        self.server.server_close() #&lt;--- alternative but causes bad fd exception
+        print &quot;# qpyhttpd stop&quot;
+######### BUILT-IN ROUTERS ###############
+@route(&#39;/__exit&#39;, method=[&#39;GET&#39;,&#39;HEAD&#39;])
+def __exit():
+    global server
+    server.stop()
+@route(&#39;/__ping&#39;)
+def __ping():
+    return &quot;ok&quot;
+@route(&#39;/assets/&lt;filepath:path&gt;&#39;)
+def serverstatic(filepath):
+    return static_file(filepath, root=&#39;/sdcard&#39;)
+######### WEBAPP ROUTERS ###############
+@route(&#39;/&#39;)
+def home():
+    return template(&#39;&lt;h1&gt;Hello {{name}} !&lt;/h1&gt;&lt;a href=&quot;/assets/qpython/projects/WebAppSample/main.py&quot;&gt;View source&lt;/a&gt;&lt;br /&gt;&lt;br /&gt; &lt;a href=&quot;http://wiki.qpython.org/doc/program_guide/web_app/&quot;&gt;&gt;&gt; About QPython Web App&lt;/a&gt;&#39;,name=&#39;QPython&#39;)
+######### WEBAPP ROUTERS ###############
+app = Bottle()
+app.route(&#39;/&#39;, method=&#39;GET&#39;)(home)
+app.route(&#39;/__exit&#39;, method=[&#39;GET&#39;,&#39;HEAD&#39;])(__exit)
+app.route(&#39;/__ping&#39;, method=[&#39;GET&#39;,&#39;HEAD&#39;])(__ping)
+app.route(&#39;/assets/&lt;filepath:path&gt;&#39;, method=&#39;GET&#39;)(serverstatic)
+try:
+    server = MyWSGIRefServer(host=&quot;127.0.0.1&quot;, port=&quot;8080&quot;)
+    app.run(server=server,reloader=False)
+except Exception,ex:
+    print &quot;Exception: %s&quot; % repr(ex)
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+</div>
 </div>
 </div>
 </div>
