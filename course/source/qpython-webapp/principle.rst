@@ -23,7 +23,7 @@ There are lots of mobile WebApp solutions, like cordova, phonegap etc, and compa
 
 How does WebApp work in QPython
 ----------------------------
-QPython WebApp contains the following roles: WebApp service, WebApp WebView.
+QPython WebApp contains the following roles: WebApp service and Webview. The WebApp service runs in the background and is responsible for responding to user's submmitted data. WebView is a front component, which shows the user interface and and is responsible for responding to render user interactions, such as scrolling, click the button and so on.
 
 **1** When you run a WebApp program from QPython, QPython launch the WebApp service in the background, at the same time, QPython will start a webview which loads the entry link declared in the program header in the front.
 

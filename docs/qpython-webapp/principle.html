@@ -46,6 +46,7 @@ HAS_SOURCE:  true
 </div>
 <div class="section" id="how-does-webapp-work-in-qpython">
 <h2>How does WebApp work in QPython<a class="headerlink" href="#how-does-webapp-work-in-qpython" title="Permalink to this headline">¶</a></h2>
+<p>QPython WebApp contains the following roles: WebApp service and Webview. The WebApp service runs in the background and is responsible for responding to user&#8217;s submmitted data. WebView is a front component, which shows the user interface and and is responsible for responding to render user interactions, such as scrolling, click the button and so on.</p>
 <p><strong>1</strong> When you run a WebApp program from QPython, QPython launch the WebApp service in the background, at the same time, QPython will start a webview which loads the entry link declared in the program header in the front.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#qpy:webapp:&lt;webapp-title&gt;</span>
 <span class="c1">#qpy://&lt;webapp-address&gt;:&lt;webapp-port&gt;/&lt;webapp-path&gt;</span>
