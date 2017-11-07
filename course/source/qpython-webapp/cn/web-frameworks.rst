@@ -88,3 +88,8 @@ Django
 *可以通过Django manage script来管理Django项目*
 
 通过djangoman.py来完成项目的初始化之后，您就可以按照WebApp的规范来开发您的WebApp并在QPython上运行。
+
+
+其他
+------
+除了上述框架，诸如其他框架如Flask,cherrypy等也有可能被QPython支持，你若感兴趣可以通过QPYPI中的INSTALL FROM PYTHON'S PYPI来探索。

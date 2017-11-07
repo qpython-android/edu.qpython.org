@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>QPython中的WEB框架</title>
+<title>QPython的WebApp</title>
 <link rel="stylesheet" href="../../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
 <script type="text/javascript">
@@ -26,13 +26,29 @@ HAS_SOURCE:  true
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="qpythonweb">
-<h1>QPython中的WEB框架<a class="headerlink" href="#qpythonweb" title="Permalink to this headline">¶</a></h1>
-<p>使用WEB开发框架，开发者能够高效迅速地开发出WEB应用。同样，在QPython中，你能用下列WEB框架来快速开发WebApp。</p>
-<div class="section" id="bottle">
-<h2>Bottle<a class="headerlink" href="#bottle" title="Permalink to this headline">¶</a></h2>
-<p>Bottle是QPython内置的WebApp开发框架，您无需额外安装，只需要遵循WebApp的规范，参考bottle开发的方法就可以进行。</p>
-<p>来看一个最简单的bottle的Hello world。</p>
+<div class="section" id="qpythonwebapp">
+<h1>QPython的WebApp<a class="headerlink" href="#qpythonwebapp" title="Permalink to this headline">¶</a></h1>
+<p>WebApp是一种Web开发者能够快速上手开发的应用，QPython的WebApp支持常见WebAApp的优势。此外，QPython让手机本身就能成为WebApp的运行容器，支持处理复杂的程序逻辑，因此能能极大地提高WebApp使用体验，同时也增加了开发了灵活度。</p>
+<div class="section" id="webapp">
+<h2>WebApp声明<a class="headerlink" href="#webapp" title="Permalink to this headline">¶</a></h2>
+<p>在QPython中，通过头部声明来区分程序类型，当头部有以下定义时，我们知道它是一个WebApp程序。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#qpy:webapp:&lt;WebApp程序名称&gt;</span>
+<span class="c1">#qpy://&lt;WebApp运行所在的IP，一般为127.0.0.1&gt;:&lt;WebApp运行所在的端口&gt;/&lt;初次载入时对应的WebApp Url路径&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>WebApp运行流程<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>在程序被识别为WebApp运行后，QPython会让程序作为后台服务的方式启动，同时在前端会启动一个WebView组件，载入你在程序头部声明所对应的URL（由IP、端口、URL路径组合而成）</p>
+<p>如，如果IP为127.0.0.1，端口为8080，URL路径为hello/test，则WebView载入的URL为：<a class="reference external" href="http://127.0.0.1:8080/hello/test">http://127.0.0.1:8080/hello/test</a></p>
+</div>
+<div class="section" id="id2">
+<h2>WebApp退出原理<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>当你点了后退键退出WebView时，WebApp后台进程也需要退出，由于一开始QPython让其按照后台服务的方式启动，所以我们需要通知其退出，QPython是在WebView退出时，发出一个http://IP:端口/__exit 的GET请求到后台服务，由其处理结束后台进程，退出服务的工作，因此，作为一个完成的流程，您需要在自己的WebApp中定义/__exit 对应的退出服务操作，我们在结尾示例中付有示例。</p>
+</div>
+<div class="section" id="id3">
+<h2>例子<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>作为QPython内嵌的Web开发库，来看一个最简单的bottle的Hello world</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#qpy:webapp:Bottle Sample
 #qpy://127.0.0.1:8080/hello/qpython
 from bottle import route, run, template
@@ -48,48 +64,7 @@ run(host=&#39;127.0.0.1&#39;, port=8080)
 </div>
 <button class="button">Run ...</button>
 <p>点击运行，将代码复制到编辑器中点击运行即可看见效果。</p>
-</div>
-<div class="section" id="tornado">
-<h2>Tornado<a class="headerlink" href="#tornado" title="Permalink to this headline">¶</a></h2>
-<p>QPython同样支持异步通信Web开发框架Tornado，您可以通过QPYPI来安装它。</p>
-<img alt="tornado library in QPYPI" src="http://edu.qpython.org/static/qpypi-tornado.png" />
-<p><em>通过QPYPI来安装tornado库</em></p>
-<p>安装完毕之后，点击以下代码底部的运行即可将代码拷贝到编辑器中，保存运行即可看到基于Tornado的WebApp示例效果。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#qpy:webapp:Tornado Sample
-#qpy://127.0.0.1:8080/
-import tornado
-import tornado.web
-class MainHandler(tornado.web.RequestHandler):
-    def get(self):
-        self.write(&quot;Hello, world&quot;)
-class ExitHandler(tornado.web.RequestHandler):
-    def get(self):
-        import os,signal
-        os.kill(os.getpid(), signal.SIGKILL)
-def make_app():
-    return tornado.web.Application([
-        (r&quot;/&quot;, MainHandler),
-        (r&quot;/__exit&quot;, ExitHandler),
-    ])
-if __name__ == &quot;__main__&quot;:
-    app = make_app()
-    app.listen(8080)
-    tornado.ioloop.IOLoop.current().start()
-</pre></div>
-</div>
-<button class="button">Run ...</button>
-<p>此外值得一提的是，在QPython的AIPY扩展插件中，matlibplot也是默认支持了用Tornado作为绘图展示支持后端。</p>
-</div>
-<div class="section" id="django">
-<h2>Django<a class="headerlink" href="#django" title="Permalink to this headline">¶</a></h2>
-<p>作为Python WEB开发的最常用框架，Django同样获得了QPython的支持, QPython提供了一个djangoman.py脚本来帮助您快速安装django库和初始化django项目，通过运行该工具，你可以快速创建或者管理django项目。</p>
-<img alt="djangoman.py" src="http://edu.qpython.org/static/djangoman.png" />
-<p><em>可以通过Django manage script来管理Django项目</em></p>
-<p>通过djangoman.py来完成项目的初始化之后，您就可以按照WebApp的规范来开发您的WebApp并在QPython上运行。</p>
-</div>
-<div class="section" id="id1">
-<h2>其他<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>除了上述框架，诸如其他框架如Flask,cherrypy等也有可能被QPython支持，你若感兴趣可以通过QPYPI中的INSTALL FROM PYTHON&#8217;S PYPI来探索。</p>
+<p>当然，在QPython中，还提供了其他Web开发框架的支持来帮助你简化工作。</p>
 </div>
 </div>
 </div>
