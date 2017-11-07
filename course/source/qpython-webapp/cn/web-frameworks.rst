@@ -36,6 +36,8 @@ Bottle是QPython内置的WebApp开发框架，您无需额外安装，只需要�
 Tornado
 ----------
 QPython同样支持异步通信Web开发框架Tornado，您可以通过QPYPI来安装它。
+
+
 .. image:: http://edu.qpython.org/static/qpypi-tornado.png
     :alt: tornado library in QPYPI
 
@@ -84,3 +86,5 @@ Django
     :alt: djangoman.py
 
 *可以通过Django manage script来管理Django项目*
+
+通过djangoman.py来完成项目的初始化之后，您就可以按照WebApp的规范来开发您的WebApp并在QPython上运行。
