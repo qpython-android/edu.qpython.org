@@ -3,7 +3,7 @@
         "src":"http://qpython.org",
         "rdate":"2017-06-15",
         "auth":"River",
-        "link":"http://edu.qpython.org/qpython-quick-start/index.html",
+        "link":"http://edu.qpython.org/qpython-quick-start/cn/index.html",
         "smodule":"qpython-quick-start",
         "description":"QPython Quick Start",
         "title":"QPython Quick Start",
@@ -16,7 +16,7 @@
         "courses":[
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/principle.html",
+                "link":"http://edu.qpython.org/qpython-quick-start/cn/principle.html",
                 "smodule":"qpython-quick-start-principles",
                 "description":"Why QPython",
                 "title":"QPython Principles",

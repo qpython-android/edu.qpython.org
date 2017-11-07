@@ -25,7 +25,7 @@ rst文件新增三种组件模式
 
 5.视频显示，跳转链接。以图片的形式，将target按eg添加data-video: 视频跳转观看链接
     eg:     .. image:: http://img4.duitang.com/uploads/item/201408/30/20140830185456_Eijik.jpeg
-            :target: data-video: "http://www.baidu.com"
+            :target: data-video: "http://www.quseit.cn"
             :alt: MathiasLuo is a a"ndroid geek developer
 
 6.运行代码按钮必须存在有标题之后，且同一个标题下不能有多个按钮！

@@ -32,49 +32,53 @@ HAS_SOURCE:  true
 <div class="section" id="bottle">
 <h2>Bottle<a class="headerlink" href="#bottle" title="Permalink to this headline">¶</a></h2>
 <p>Bottle是QPython内置的WebApp开发框架，无需额外安装。你只需要遵循WebApp的规范，以及参考bottle开发的方法就可以进行。来看一个最简单的bottle的Hello world.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#qpy:webapp:Bottle Sample</span>
-<span class="c1">#qpy://127.0.0.1:8080/hello/qpython</span>
-<span class="kn">from</span> <span class="nn">bottle</span> <span class="k">import</span> <span class="n">route</span><span class="p">,</span> <span class="n">run</span><span class="p">,</span> <span class="n">template</span>
-<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/hello/&lt;name&gt;&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">index</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-<span class="k">return</span> <span class="n">template</span><span class="p">(</span><span class="s1">&#39;&lt;b&gt;Hello {{name}}&lt;/b&gt;!&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
-<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/__exit&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">exit</span><span class="p">():</span>
-<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span><span class="nn">signal</span>
-<span class="n">os</span><span class="o">.</span><span class="n">kill</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">(),</span> <span class="n">signal</span><span class="o">.</span><span class="n">SIGKILL</span><span class="p">)</span>
-<span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8080</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#qpy:webapp:Bottle Sample
+#qpy://127.0.0.1:8080/hello/qpython
+from bottle import route, run, template
+@route(&#39;/hello/&lt;name&gt;&#39;)
+def index(name):
+^4$return template(&#39;&lt;b&gt;Hello {{name}}&lt;/b&gt;!&#39;, name=name)
+@route(&#39;/__exit&#39;)
+def exit():
+^4$import os,signal
+^4$os.kill(os.getpid(), signal.SIGKILL)
+run(host=&#39;127.0.0.1&#39;, port=8080)
 </pre></div>
 </div>
+<p>&lt;button&gt;Run ...&lt;/button&gt;</p>
 </div>
 <div class="section" id="tornado">
 <h2>Tornado<a class="headerlink" href="#tornado" title="Permalink to this headline">¶</a></h2>
-<p>QPython同样支持Tornado这个高效支持异步通信的Web框架，您可以通过QPYPI来安装它。安装完毕之后，同样可以参考以下方式实现一个WebApp的Hello world。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#qpy:webapp:Tornado Sample</span>
-<span class="c1">#qpy://127.0.0.1:8080/</span>
-<span class="kn">import</span> <span class="nn">tornado</span>
-<span class="kn">import</span> <span class="nn">tornado.web</span>
-<span class="k">class</span> <span class="nc">MainHandler</span><span class="p">(</span><span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">RequestHandler</span><span class="p">):</span>
-<span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello, world&quot;</span><span class="p">)</span>
-<span class="k">class</span> <span class="nc">ExitHandler</span><span class="p">(</span><span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">RequestHandler</span><span class="p">):</span>
-<span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span><span class="nn">signal</span>
-<span class="n">os</span><span class="o">.</span><span class="n">kill</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getpid</span><span class="p">(),</span> <span class="n">signal</span><span class="o">.</span><span class="n">SIGKILL</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">make_app</span><span class="p">():</span>
-<span class="k">return</span> <span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">Application</span><span class="p">([</span>
-<span class="p">(</span><span class="sa">r</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="n">MainHandler</span><span class="p">),</span>
-<span class="p">(</span><span class="sa">r</span><span class="s2">&quot;/__exit&quot;</span><span class="p">,</span> <span class="n">ExitHandler</span><span class="p">),</span>
-<span class="p">])</span>
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<span class="n">app</span> <span class="o">=</span> <span class="n">make_app</span><span class="p">()</span>
-<span class="n">app</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">8080</span><span class="p">)</span>
-<span class="n">tornado</span><span class="o">.</span><span class="n">ioloop</span><span class="o">.</span><span class="n">IOLoop</span><span class="o">.</span><span class="n">current</span><span class="p">()</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+<p>QPython同样支持Tornado这个高效支持异步通信的Web框架，您可以通过QPYPI来安装它。安装完毕之后，打开编辑器，输入以下代码并保存运行即可看到效果</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#qpy:webapp:Tornado Sample
+#qpy://127.0.0.1:8080/
+import tornado
+import tornado.web
+class MainHandler(tornado.web.RequestHandler):
+^4$def get(self):
+^8$self.write(&quot;Hello, world&quot;)
+class ExitHandler(tornado.web.RequestHandler):
+^4$def get(self):
+^8$import os,signal
+^8$os.kill(os.getpid(), signal.SIGKILL)
+def make_app():
+^4$return tornado.web.Application([
+^8$(r&quot;/&quot;, MainHandler),
+^8$(r&quot;/__exit&quot;, ExitHandler),
+^4$])
+if __name__ == &quot;__main__&quot;:
+^4$app = make_app()
+^4$app.listen(8080)
+^4$tornado.ioloop.IOLoop.current().start()
 </pre></div>
 </div>
+<p>此外值得一提的是，在QPython的AIPY栏目中，matlibplot也是默认支持了用Tornado作为后段的WebApp模式。</p>
 </div>
 <div class="section" id="django">
 <h2>Django<a class="headerlink" href="#django" title="Permalink to this headline">¶</a></h2>
-<p>作为Python WEB开发的最常用框架，Django同样获得了QPython的支持, 您可以直接通过QPYPI的“INSTALL WITH PYTHON PYPI&#8221;来安装Django，安装完之后，为了快速实现Django 的HELLO WORLD,您需要通过TOOLS里的Django manage script来新建一个项目，新建完项目后即可通过编辑器来编辑对应的views.py来实现Hello world。</p>
+<p>作为Python WEB开发的最常用框架，Django同样获得了QPython的支持, QPython提供了一个djangoman.py脚本来帮助您快速安装django库和初始化django项目，通过运行该工具，你可以快速创建或者管理django项目，以下为过程说明及简介。</p>
+<img alt="djangoman.py" src="http://edu.qpython.org/static/djangoman.png" />
+<p><em>Djangoman - manage django projects</em></p>
 </div>
 </div>
 </div>
