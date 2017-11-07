@@ -6,7 +6,7 @@ import glob
 
 path = './'   #相对路径
 
-filelist = glob.glob(path+"*.html")+glob.glob(path+"*/*.html")
+filelist = glob.glob(path+"*.html")+glob.glob(path+"*/*.html")+glob.glob(path+"*/*/*.html")
 
 
 def call_repl_jumpbutton(matchobj):
