@@ -1,5 +1,9 @@
 AIPY - Learn AI programming on Mobile
 --------------------------------------------------------
+.. image:: http://www.aipy.org/img/img_logo.png
+    :alt: AIPY Logo
+    :target: http://www.aipy.org
+
 AIPY  is a high-level AI learning app, based on related libraries like Numpy, Scipy, theano, keras, etc.... It was developed with a focus on helping you learn and practise AI related programming well and fast.
 
 Now, AIPY is released as a QPython plugin, aftering being installed, you could see the AIPY category in QPYPI, where you could find Numpy, Scipy, Pandas, Matplotlib, Scikit-learn, Theano, Lasange, Keras.
