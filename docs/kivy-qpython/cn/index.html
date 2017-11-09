@@ -57,60 +57,15 @@ HAS_SOURCE:  true
 <h2>例子<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>让我们来看一个最简单的KivyApp示例，这个是安装完QPython后默认带的示例程序。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#qpy:kivy
-# Check if the kivy library installed
-try:
-    import kivy
-except ImportError:
-    import androidhelper
-    droid = androidhelper.Android()
-    title = &#39;KivySample&#39;
-    message = &#39;You must to have kivy-qpython installed, please install it through QPYPI&#39;
-    droid.dialogCreateAlert(title, message)
-    droid.dialogSetPositiveButtonText(&#39;Close&#39;)
-    droid.dialogShow()
-    import sys
-    sys.exit(1)
-# Main process
-kivy.require(&#39;1.0.6&#39;)
-from glob import glob
-from random import randint
-from os.path import join, dirname
 from kivy.app import App
-from kivy.logger import Logger
-from kivy.uix.scatter import Scatter
-from kivy.properties import StringProperty
-from kivy.core.window import Window
-#
-class Picture(Scatter):
-    &#39;&#39;&#39;Picture is the class that will show the image with a white border and a
-shadow. They are nothing here because almost everything is inside the
-picture.kv. Check the rule named &lt;Picture&gt; inside the file, and you&#39;ll see
-how the Picture() is really constructed and used.
-The source property will be the filename to show.
-&#39;&#39;&#39;
-    source = StringProperty(None)
-class PicturesApp(App):
+from kivy.uix.button import Button
+class TestApp(App):
     def build(self):
-        # the root is created in pictures.kv
-        root = self.root
-        # get any files into images directory
-        curdir = dirname(__file__)
-        for filename in glob(join(curdir, &#39;images&#39;, &#39;*&#39;)):
-            try:
-                # load the image
-                picture = Picture(source=filename, rotation=randint(-30,30))
-                # add to the main field
-                root.add_widget(picture)
-            except Exception, e:
-                Logger.exception(&#39;Pictures: Unable to load &lt;%s&gt;&#39; % filename)
-    def on_pause(self):
-        return True
-if __name__ == &#39;__main__&#39;:
-    PicturesApp().run()
+        return Button(text=&#39;Hello World&#39;)
+TestApp().run()
 </pre></div>
 </div>
 <button class="button">Run ...</button>
-<img alt="KivySample运行效果" src="http://edu.qpython.org/static/kivy-sample.png" />
 </div>
 </div>
 </div>

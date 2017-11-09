@@ -1,2 +1,0 @@
-Advanced parameters for WebApp
-==============================

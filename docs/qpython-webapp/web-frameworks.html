@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Web Frameworks on QPython</title>
+<title>WEB framework in QPython</title>
 <link rel="stylesheet" href="../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
 <script type="text/javascript">
@@ -26,17 +26,70 @@ HAS_SOURCE:  true
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="web-frameworks-on-qpython">
-<h1>Web Frameworks on QPython<a class="headerlink" href="#web-frameworks-on-qpython" title="Permalink to this headline">¶</a></h1>
-<p>You can use any web framework for QPython webapp development.</p>
+<div class="section" id="web-framework-in-qpython">
+<h1>WEB framework in QPython<a class="headerlink" href="#web-framework-in-qpython" title="Permalink to this headline">¶</a></h1>
+<p>By using the WEB development framework, developers can efficiently and quickly develop Web applications. Similarly, in QPython, you can quickly develop WebApp with the following web frameworks.</p>
 <div class="section" id="bottle">
 <h2>Bottle<a class="headerlink" href="#bottle" title="Permalink to this headline">¶</a></h2>
+<p>Bottle is a QPython built-in WebApp development framework, you do not need to install additional, just follow the WebApp&#8217;s specifications, reference bottle development methods can be carried out.</p>
+<p>Look at one of the most simple Hello world with bottle</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#qpy:webapp:Bottle Sample
+#qpy://127.0.0.1:8080/hello/qpython
+from bottle import route, run, template
+@route(&#39;/hello/&lt;name&gt;&#39;)
+def index(name):
+    return template(&#39;&lt;b&gt;Hello {{name}}&lt;/b&gt;!&#39;, name=name)
+@route(&#39;/__exit&#39;)
+def exit():
+    import os,signal
+    os.kill(os.getpid(), signal.SIGKILL)
+run(host=&#39;127.0.0.1&#39;, port=8080)
+</pre></div>
 </div>
-<div class="section" id="django">
-<h2>Django<a class="headerlink" href="#django" title="Permalink to this headline">¶</a></h2>
+<button class="button">Run ...</button>
+<p>Click Run, copy the code to the editor and Run to check out the result.</p>
 </div>
 <div class="section" id="tornado">
 <h2>Tornado<a class="headerlink" href="#tornado" title="Permalink to this headline">¶</a></h2>
+<p>QPython also supports the asynchronous Communication Web Development Framework - Tornado, which you can install with QPYPI.</p>
+<img alt="tornado library in QPYPI" src="http://edu.qpython.org/static/qpypi-tornado.png" />
+<p><em>To install tornado library by QPYPI</em></p>
+<p>After the installation is complete, click on the bottom of the following code to run the code can be copied to the editor,save the run to check out Tornado-based WebApp sample effects.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#qpy:webapp:Tornado Sample
+#qpy://127.0.0.1:8080/
+import tornado
+import tornado.web
+class MainHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.write(&quot;Hello, world&quot;)
+class ExitHandler(tornado.web.RequestHandler):
+    def get(self):
+        import os,signal
+        os.kill(os.getpid(), signal.SIGKILL)
+def make_app():
+    return tornado.web.Application([
+        (r&quot;/&quot;, MainHandler),
+        (r&quot;/__exit&quot;, ExitHandler),
+    ])
+if __name__ == &quot;__main__&quot;:
+    app = make_app()
+    app.listen(8080)
+    tornado.ioloop.IOLoop.current().start()
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>Also worth mentioning is that in QPython&#8217;s AIPY extension,matlibplot also supports Tornado as the default drawing support backend by default.</p>
+</div>
+<div class="section" id="django">
+<h2>Django<a class="headerlink" href="#django" title="Permalink to this headline">¶</a></h2>
+<p>As the most commonly used framework for Python Web development, Django also received QPython support, QPython provides a djangoman.py scripts to help you quickly install and initialize django library project,By running this tool,You can quickly create or manage django projects.</p>
+<img alt="djangoman.py" src="http://edu.qpython.org/static/djangoman.png" />
+<p><em>Django projects can be managed by Django manage script</em></p>
+<p>After djangoman.py to complete the project&#8217;s initialization,You can follow the WebApp&#8217;s specifications to develop your WebApp and run it on QPython.</p>
+</div>
+<div class="section" id="other">
+<h2>Other<a class="headerlink" href="#other" title="Permalink to this headline">¶</a></h2>
+<p>In addition to the above framework,Other frameworks such as Flask, Cherrypy, etc. are also likely to be supported by QPython,If you are interested, you can explore through INSTALL FROM PYTHON&#8217;S PYPI in QPYPI.</p>
 </div>
 </div>
 </div>

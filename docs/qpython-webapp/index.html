@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>QPython WebApp</title>
+<title>QPython WebApp Principle</title>
 <link rel="stylesheet" href="../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
 <script type="text/javascript">
@@ -26,22 +26,36 @@ HAS_SOURCE:  true
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="qpython-webapp">
-<h1>QPython WebApp<a class="headerlink" href="#qpython-webapp" title="Permalink to this headline">¶</a></h1>
-<p>The courses are still in the planning. Welcome to reward us.</p>
-<ol class="arabic simple">
-<li><strong>Primary course</strong></li>
-</ol>
-<p>If the total number of people who reward us is more than 100, we promise to complete the primary course within 1 week, so that, after finishing your study, you can master the basic concepts and write simple scripts.</p>
-<ol class="arabic simple" start="2">
-<li><strong>Intermediate course</strong></li>
-</ol>
-<p>If the total number of people who reward us is more than 500, we will launch the intermediate course within 2 weeks, so that, after finishing your study, you will be familiar with the knowledge and framework of the course and apply it to practical development.</p>
-<ol class="arabic simple" start="3">
-<li><strong>Advanced course</strong></li>
-</ol>
-<p>If the total number of people who reward us is more than 2,000, we will launch the advanced course in a month, so that, after finishing your study, you will have a better understanding of the principles of the framework and be able to do advanced development.</p>
-<p><strong>The primary course is free to all, and the intermediate and advanced courses are only open to those who have rewarded us.</strong></p>
+<div class="section" id="qpython-webapp-principle">
+<h1>QPython WebApp Principle<a class="headerlink" href="#qpython-webapp-principle" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="chapter-author-contributor-and-updated-time">
+<h2>Chapter Author, contributor and updated time<a class="headerlink" href="#chapter-author-contributor-and-updated-time" title="Permalink to this headline">¶</a></h2>
+<p>Author: <a class="reference external" href="https://github.com/riverfor">River</a></p>
+<p>Submitted: 2017/10/16</p>
+</div>
+<div class="section" id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<p>QPython supports WebApp, the goal is to enable all developers to the fastest development of mobile applications.</p>
+</div>
+<div class="section" id="advantages">
+<h2>Advantages<a class="headerlink" href="#advantages" title="Permalink to this headline">¶</a></h2>
+<p>There are lots of mobile WebApp solutions, like cordova, phonegap etc, and compared to them, QPython&#8217;s WebApp has the following advantages.</p>
+<p><em>QPython is a powerful Python engine that can handle many logical jobs, effectively reducing data transfer time and enhancing the user experience</em></p>
+<p><em>QPython supports massive Python libraries, you could import them in your project, so that you could save much time.</em></p>
+<p><em>It is very convenient for development with QPython, you can complete your development just in palm. And you could develop from PC then transfer to your mobile in the end</em></p>
+</div>
+<div class="section" id="how-does-webapp-work-in-qpython">
+<h2>How does WebApp work in QPython<a class="headerlink" href="#how-does-webapp-work-in-qpython" title="Permalink to this headline">¶</a></h2>
+<p>QPython WebApp contains the following roles: WebApp service and Webview. The WebApp service runs in the background and is responsible for responding to user&#8217;s submmitted data. WebView is a front component, which shows the user interface and and is responsible for responding to render user interactions, such as scrolling, click the button and so on.</p>
+<p><strong>1</strong> When you run a WebApp program from QPython, QPython launch the WebApp service in the background, at the same time, QPython will start a webview which loads the entry link declared in the program header in the front.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#qpy:webapp:&lt;webapp-title&gt;</span>
+<span class="c1">#qpy://&lt;webapp-address&gt;:&lt;webapp-port&gt;/&lt;webapp-path&gt;</span>
+</pre></div>
+</div>
+<p><strong>2</strong> Then the user can start to interact with the applicaton with the web mode. So the developer could write the logic code with the web development way.</p>
+<p><strong>3</strong> When the user exit by clicking the left arrow, the application will request the <strong>http://&lt;webapp-address&gt;&lt;:webapp-port&gt;/__exit</strong> to exit the application
+The developer could rewrite the __exit function to defines the exit behaviors.</p>
+</div>
 </div>
 </div>
 </div>
