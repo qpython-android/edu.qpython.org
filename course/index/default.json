@@ -66,14 +66,14 @@
         "title":"QPython WebApp",
         "ver":"1.0.0",
         "downloads": "10,000+",
-        "cat":"featured",
+        "cat":"new",
         "level": 2,
         "open": 0,
         "logo": "http://dl.qpy.io/assets/banners/course-qpython-webapp.png",
         "courses":[
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-webapp/principle.html",
+                "link":"http://edu.qpython.org/qpython-webapp/index.html",
                 "smodule":"qpython-webapp-principle",
                 "description":"Why QPython WebApp",
                 "title":"QPython WebApp Principle",
@@ -85,14 +85,6 @@
                 "smodule":"qpython-webapp-your-first-webapp",
                 "description":"How to develop your first WebApp",
                 "title":"Your first WebApp",
-                "ver":"1.0.0",
-                "downloads": "10,000+"
-            },
-            {
-                "link":"http://edu.qpython.org/qpython-webapp/advanced-parameters.html",
-                "smodule":"qpython-webapp-advanced-parameters",
-                "description":"Any other advanced parameters",
-                "title":"Advanced parameters",
                 "ver":"1.0.0",
                 "downloads": "10,000+"
             },
@@ -120,6 +112,23 @@
         "logo": "http://dl.qpy.io/assets/banners/course-kivy-qpython.png",
         "open": 0,
         "courses":[
+            {
+                "rdate":"2017-06-15",
+                "link":"http://edu.qpython.org/kivy-qpython/index.html",
+                "smodule":"qpython-webapp-principle",
+                "description":"Kivy on QPython",
+                "title":"QPython Kivy Principle",
+                "ver":"1.0.0",
+                "downloads": "10,000+"
+            },
+            {
+                "link":"http://edu.qpython.org/kivy-qpython/your-first-kivyapp.html",
+                "smodule":"kivy-qpython-your-first-kivyapp",
+                "description":"How to develop your first KivyApp",
+                "title":"Your first KivyApp",
+                "ver":"1.0.0",
+                "downloads": "10,000+"
+            }
         ]
     },
     {
