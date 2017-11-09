@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>QPython的KivyApp</title>
+<link rel="stylesheet" href="../../static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true
+};
+</script>
+<script type="text/javascript" src="../../static/jquery.js"></script>
+<script type="text/javascript" src="../../static/underscore.js"></script>
+<script type="text/javascript" src="../../static/doctools.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+</head>
+<body role="document">
+<main class="contain">
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="qpythonkivyapp">
+<h1>QPython的KivyApp<a class="headerlink" href="#qpythonkivyapp" title="Permalink to this headline">¶</a></h1>
+<p>Kivy是Python上一个支持多点触摸的跨平台图形界面开发框架，使用Kivy可以方便地开发包括游戏在内的图形界面程序。QPython能较好地支持Kivy。</p>
+<div class="section" id="kivy">
+<h2>Kivy的安装<a class="headerlink" href="#kivy" title="Permalink to this headline">¶</a></h2>
+<p>在使用Kivy之前，您需要先安装Kivy。您可以在QPYPI中安装及升级kivy相关的库，QPYPI能自动安装依赖库。如果Kivy有更新，也可以通过QPYPI来进行升级操作。</p>
+<img alt="在QPYPI中管理kivy库" src="http://edu.qpython.org/static/qpypi-kivy.png" />
+</div>
+<div class="section" id="kivyapp">
+<h2>KivyApp声明<a class="headerlink" href="#kivyapp" title="Permalink to this headline">¶</a></h2>
+<p>在QPython中，通过头部声明来区分程序类型，当头部有以下定义时，我们知道它是一个KivyApp程序。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#qpy:kivy</span>
+</pre></div>
+</div>
+<p>此外，如果想要让你的Kivy程序按照全屏模式运行，您需要增加下面声明。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#qpy:fullscreen</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>KivyApp运行流程<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>在程序被识别为KivyApp运行后，QPython会同事启动OpenGL引擎，新建一个SDL视图，并在其中完成渲染，输出画面。</p>
+</div>
+<div class="section" id="id2">
+<h2>KivyApp退出流程<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>按退出退出时，QPython会结束Kivy程序，进行清理，结束OpenGL引擎，同时退出SDL视图。</p>
+</div>
+<div class="section" id="id3">
+<h2>例子<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>让我们来看一个最简单的KivyApp示例，这个是安装完QPython后默认带的示例程序。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#qpy:kivy
+# Check if the kivy library installed
+try:
+    import kivy
+except ImportError:
+    import androidhelper
+    droid = androidhelper.Android()
+    title = &#39;KivySample&#39;
+    message = &#39;You must to have kivy-qpython installed, please install it through QPYPI&#39;
+    droid.dialogCreateAlert(title, message)
+    droid.dialogSetPositiveButtonText(&#39;Close&#39;)
+    droid.dialogShow()
+    import sys
+    sys.exit(1)
+# Main process
+kivy.require(&#39;1.0.6&#39;)
+from glob import glob
+from random import randint
+from os.path import join, dirname
+from kivy.app import App
+from kivy.logger import Logger
+from kivy.uix.scatter import Scatter
+from kivy.properties import StringProperty
+from kivy.core.window import Window
+#
+class Picture(Scatter):
+    &#39;&#39;&#39;Picture is the class that will show the image with a white border and a
+shadow. They are nothing here because almost everything is inside the
+picture.kv. Check the rule named &lt;Picture&gt; inside the file, and you&#39;ll see
+how the Picture() is really constructed and used.
+The source property will be the filename to show.
+&#39;&#39;&#39;
+    source = StringProperty(None)
+class PicturesApp(App):
+    def build(self):
+        # the root is created in pictures.kv
+        root = self.root
+        # get any files into images directory
+        curdir = dirname(__file__)
+        for filename in glob(join(curdir, &#39;images&#39;, &#39;*&#39;)):
+            try:
+                # load the image
+                picture = Picture(source=filename, rotation=randint(-30,30))
+                # add to the main field
+                root.add_widget(picture)
+            except Exception, e:
+                Logger.exception(&#39;Pictures: Unable to load &lt;%s&gt;&#39; % filename)
+    def on_pause(self):
+        return True
+if __name__ == &#39;__main__&#39;:
+    PicturesApp().run()
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<img alt="KivySample运行效果" src="http://edu.qpython.org/static/kivy-sample.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+</main>
+<footer>
+<img onclick="openPurchase()" src="../../static/star.jpg">
+<div id="praise"><span>0</span> persons have rewarded</div>
+</footer>
+<script>
+var milib;
+if (milib==undefined) {
+var milib = function(){
+};
+milib.qeditor = function(str){
+alert('please open it with QPython browser')
+};
+milib.getPurchaseNumber = function(str){
+//alert('getPurchaseNumber:'+str)
+return "10+";
+};
+milib.a8playVideoFromGW= function(url){
+window.open(url)
+};
+milib.qpylibinstall = function(cat,url,target){
+window.open(url)
+};
+milib.gotoIfPay = function(url, packageId, packageUrl){
+window.open(url)
+};
+} else {
+}
+function openPurchase() {
+//获取标识
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+milib.openPurchaseActivity(s)
+}
+//按钮事件
+function btnEvent(){
+var a = this.parentElement.getElementsByTagName('pre')
+if ( a && a.length == 1){
+/**********有代码，调用控制台*************/
+var code = a[0].lastChild.nodeValue
+milib.qeditor(code)
+}else{
+//没有代码，调转
+var url = this.getAttribute('data-url');
+window.open(url);
+}
+}
+//获取赞赏
+function setPraise(){
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+var i = document.getElementById('praise').getElementsByTagName('span')[0]
+var num = milib.getPurchaseNumber(s);
+i.innerHTML = num
+}
+//初始化代码显示
+function initCode(){
+var prearr = document.getElementsByTagName('pre');
+for (var i = 0; i < prearr.length; i++) {
+var temp_data = prearr[i].lastChild.nodeValue
+//正则处理 lavel5
+temp_data = temp_data.replace(/\^2\$/g, spaceString(2));
+temp_data = temp_data.replace(/\^4\$/g, spaceString(4));
+temp_data = temp_data.replace(/\^6\$/g, spaceString(6));
+temp_data = temp_data.replace(/\^8\$/g, spaceString(8));
+temp_data = temp_data.replace(/\^10\$/g, spaceString(10));
+temp_data = temp_data.replace(/\^12\$/g, spaceString(12));
+temp_data = temp_data.replace(/\^16\$/g, spaceString(16));
+temp_data = temp_data.replace(/\^20\$/g, spaceString(20));
+//set
+prearr[i].lastChild.nodeValue = temp_data;
+}
+}
+//产生空格
+function spaceString(num){
+var v = ''
+for (var i = 0; i < num; i++) {
+v += ' ';
+}
+return v;
+}
+window.onload = function(){
+setPraise();
+initCode();
+//将所有的button绑定事件
+var b = document.getElementsByTagName('button');
+for (var i = 0; i < b.length; i++) {
+b[i].onclick = btnEvent;
+}
+}
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-103260045-3', 'auto');
+ga('send', 'pageview');
+</script>
+</body>
+</html>
