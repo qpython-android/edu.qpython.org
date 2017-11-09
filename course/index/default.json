@@ -68,7 +68,7 @@
         "downloads": "10,000+",
         "cat":"new",
         "level": 2,
-        "open": 0,
+        "open": 1,
         "logo": "http://dl.qpy.io/assets/banners/course-qpython-webapp.png",
         "courses":[
             {
@@ -110,7 +110,7 @@
         "cat":"new",
         "level": 3,
         "logo": "http://dl.qpy.io/assets/banners/course-kivy-qpython.png",
-        "open": 0,
+        "open": 1,
         "courses":[
             {
                 "rdate":"2017-06-15",
