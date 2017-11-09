@@ -1,4 +1,4 @@
-﻿Qpython’s WebApp
+﻿QPython’s WebApp
 ==========================
 WebApp is an app allows developers to quickly get started application development, QPython's WebApp has the advantage of supporting common WebApps.Moreover, QPython lets the phone itself become a WebApp's run container, support for handling complex program logic, therefore, it can greatly improve the WebApp user experience, while also increasing the flexibility of the development.WebApp statement
 
@@ -38,5 +38,9 @@ As QPython embedded Web development library, Let's look at one of the easiest bo
 
     run(host='127.0.0.1', port=8080)
 
-<button>Run ...</button>Click Run, copy the code to the editor and click Run to see the result.Of course,
-in QPython, It also provides support for other web development frameworks to help you streamline your work.
+<button>Run ...</button>
+
+
+Click Run, copy the code to the editor and click Run to see the result.
+
+Of course, in QPython, It also provides support for other web development frameworks to help you streamline your work.
