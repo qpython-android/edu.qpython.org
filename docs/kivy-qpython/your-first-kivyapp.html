@@ -67,28 +67,18 @@ if __name__ == &#39;__main__&#39;:
 <p><em>Note: You may be wondering why you have to import App and Widget separately, instead of doing something like from kivy import *. While shorter, this would have the disadvantage of polluting your namespace and make the start of the application potentially much slower. It can also introduce ambiguity into class and variable naming, so is generally frowned upon in the Python community. The way we do it is faster and cleaner.</em></p>
 <p><strong>Adding Behaviour</strong></p>
 <p>Let’s now add some actual behaviour to the widget, i.e. make it react to user input. Change the code like so:</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd><p class="first">from kivy.app import App
-from kivy.uix.widget import Widget</p>
-<dl class="last docutils">
-<dt>class MyPaintWidget(Widget):</dt>
-<dd><dl class="first last docutils">
-<dt>    def on_touch_down(self, touch):</dt>
-<dd>        print(touch)</dd>
-</dl>
-</dd>
-<dt>class MyPaintApp(App):</dt>
-<dd><dl class="first last docutils">
-<dt>    def build(self):</dt>
-<dd>        return MyPaintWidget()</dd>
-</dl>
-</dd>
-<dt>if __name__ == &#8216;__main__&#8217;:</dt>
-<dd>    MyPaintApp().run()</dd>
-</dl>
-</dd>
-</dl>
+<div class="highlight-default"><div class="highlight"><pre><span></span>from kivy.app import App
+from kivy.uix.widget import Widget
+class MyPaintWidget(Widget):
+    def on_touch_down(self, touch):
+        print(touch)
+class MyPaintApp(App):
+    def build(self):
+        return MyPaintWidget()
+if __name__ == &#39;__main__&#39;:
+    MyPaintApp().run()
+</pre></div>
+</div>
 <button class="button">Run ...</button>
 <p>This is just to show how easy it is to react to user input. When a MotionEvent (i.e. a touch, click, etc.) occurs, we simply print the information about the touch object to the console. You won’t see anything on the screen, but if you observe the command-line from which you are running the program, you will see a message for every touch. This also demonstrates that a widget does not have to have a visual representation.</p>
 <p>Now that’s not really an overwhelming user experience. Let’s add some code that actually draws something into our window:</p>

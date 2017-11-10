@@ -74,6 +74,7 @@ Let’s now add some actual behaviour to the widget, i.e. make it react to user 
 
 
 ::
+
     from kivy.app import App
     from kivy.uix.widget import Widget
 
