@@ -66,4 +66,6 @@ QPython的商业版则致力于提供独特便利的功能和服务，包括在�
 无论是社区版或者商业版，我们希望都能让大家真正享受到在手机进行Python编程的快乐。
 
 
-.. image:: http://dl.qpy.io/assets/banners/course-qpython-quick-start.png
+.. image:: http://edu.qpython.org/static/codeanywhere.png
+    :target: data-video: "https://v.qq.com/x/page/o05523dlsmm.html"
+    :alt: QPython - 随时随地编程
