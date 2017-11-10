@@ -10,7 +10,7 @@ Submitted: 2017/8/7
 
 About
 --------
-QPython provides a convenient mobile Python IDE and development service for Python users.
+QPython is focus on providing the convenient mobile Python IDE and learning service for Python users.
 
 
 Supports Python2 and Python3
