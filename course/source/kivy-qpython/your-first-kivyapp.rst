@@ -129,6 +129,7 @@ Now that’s not really an overwhelming user experience. Let’s add some code t
 
 .. image:: http://edu.qpython.org/static/kivy-guide-3.jpg
     :alt: screenshot of pong game
+    :align: center
 
 
 If you run your code with these modifications, you will see that every time you touch, there will be a small yellow circle drawn where you touched. How does it work?
@@ -172,6 +173,7 @@ That was easy, wasn’t it? It gets better! Update the code to look like this:
 
 .. image:: http://edu.qpython.org/static/kivy-guide-4.jpg
     :alt: screenshot of pong game
+    :align: center
 
 
 
@@ -220,6 +222,7 @@ So far so good. This isn’t exactly beautiful yet, though. It looks a bit like 
 
 .. image:: http://edu.qpython.org/static/kivy-guide-5.jpg
     :alt: Screenshot of pong game
+    :align: center
 
 Here are the changes:
 
@@ -290,6 +293,7 @@ For our simple example, it doesn’t really matter that much. For larger applica
 
 .. image:: http://edu.qpython.org/static/kivy-guide-6.jpg
     :alt: screenshot of pong game
+    :align: center
 
 
 Here’s what happens:
