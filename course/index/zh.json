@@ -11,47 +11,47 @@
         "downloads": "10,000+",
         "cat":"new",
         "level": 1,
-        "logo": "http://dl.qpy.io/assets/banners/course-qpython-quick-start.png",
+        "logo": "http://edu.qpython.org/static/course-qpython-quick-start.png",
         "open": 1,
         "courses":[
             {
                 "rdate":"2017-06-15",
                 "link":"http://edu.qpython.org/qpython-quick-start/cn/principle.html",
                 "smodule":"qpython-quick-start-principles",
-                "description":"Why QPython",
-                "title":"QPython Principles",
+                "description":"为何要使用QPython",
+                "title":"QPython",
                 "downloads": "10,000+"
             },
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/terminal-howto.html",
+                "link":"http://edu.qpython.org/qpython-quick-start/cn/terminal-howto.html",
                 "smodule":"qpython-quick-start-terminal-howto",
-                "description":"Explore to use QPython's Terminal",
-                "title":"Terminal howto",
+                "description":"使用QPython的控制台来探索",
+                "title":"控制台使用帮助",
                 "downloads": "10,000+"
             },
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/editor-howto.html",
+                "link":"http://edu.qpython.org/qpython-quick-start/cn/editor-howto.html",
                 "smodule":"qpython-quick-start-editor-howto",
-                "description":"Develop with QPython's editor ",
-                "title":"Editor howto",
+                "description":"使用QPython的编辑器来进行开发",
+                "title":"Editor使用帮助",
                 "downloads": "10,000+"
             },
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/qpypi-howto.html",
+                "link":"http://edu.qpython.org/qpython-quick-start/cn/qpypi-howto.html",
                 "smodule":"qpython-quick-start-qpypi-howto",
-                "description":"Install packages & programs on QPython",
-                "title":"QPYPI howto",
+                "description":"在QPython上如何安装包和快捷工具",
+                "title":"QPYPI使用帮助",
                 "downloads": "10,000+"
             },
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/community-howto.html",
+                "link":"http://edu.qpython.org/qpython-quick-start/cn/community-howto.html",
                 "smodule":"qpython-quick-start-community-howto",
-                "description":"Join a QPython community",
-                "title":"Community howto",
+                "description":"如何加入QPython的社区",
+                "title":"关于社区",
                 "downloads": "10,000+"
             }
         ]
@@ -60,47 +60,39 @@
         "src":"http://qpython.org",
         "rdate":"2017-06-15",
         "author":"River",
-        "link":"http://edu.qpython.org/qpython-webapp/index.html",
+        "link":"http://edu.qpython.org/qpython-webapp/cn/index.html",
         "smodule":"qpython-webapp",
-        "description":"Introduce how to develop QPython WebApp",
+        "description":"介绍如何开发QPython WebApp",
         "title":"QPython WebApp",
         "ver":"1.0.0",
         "downloads": "10,000+",
-        "cat":"featured",
+        "cat":"new",
         "level": 2,
-        "open": 0,
-        "logo": "http://dl.qpy.io/assets/banners/course-qpython-webapp.png",
+        "open": 1,
+        "logo": "http://edu.qpython.org/static/course-qpython-webapp.png",
         "courses":[
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-webapp/principle.html",
+                "link":"http://edu.qpython.org/qpython-webapp/cn/index.html",
                 "smodule":"qpython-webapp-principle",
-                "description":"Why QPython WebApp",
-                "title":"QPython WebApp Principle",
+                "description":"为什么要使用QPython WebApp",
+                "title":"QPython上的WebApp",
                 "ver":"1.0.0",
                 "downloads": "10,000+"
             },
             {
-                "link":"http://edu.qpython.org/qpython-webapp/your-first-webapp.html",
+                "link":"http://edu.qpython.org/qpython-webapp/cn/your-first-webapp.html",
                 "smodule":"qpython-webapp-your-first-webapp",
-                "description":"How to develop your first WebApp",
-                "title":"Your first WebApp",
+                "description":"如何开发你的第一个WebApp",
+                "title":"你的第一个WebApp",
                 "ver":"1.0.0",
                 "downloads": "10,000+"
             },
             {
-                "link":"http://edu.qpython.org/qpython-webapp/advanced-parameters.html",
-                "smodule":"qpython-webapp-advanced-parameters",
-                "description":"Any other advanced parameters",
-                "title":"Advanced parameters",
-                "ver":"1.0.0",
-                "downloads": "10,000+"
-            },
-            {
-                "link":"http://edu.qpython.org/qpython-webapp/web-frameworks.html",
+                "link":"http://edu.qpython.org/qpython-webapp/cn/web-frameworks.html",
                 "smodule":"qpython-webapp-web-frameworks",
-                "description":"Develop WebApp with your familiar web framework",
-                "title":"Web Frameworks on QPython",
+                "description":"在QPython中使用你熟悉的Web开发框架来开发WebApp",
+                "title":"QPython支持的Web开发框架",
                 "ver":"1.0.0",
                 "downloads": "10,000+"
             }
@@ -111,15 +103,32 @@
         "rdate":"2017-06-15",
         "link":"http://edu.qpython.org/kivy-qpython/index.html",
         "smodule":"kivy-qpython",
-        "description":"How to develop a GUI program with Kivy",
+        "description":"如何用Kivy开发图形界面程序",
         "title":"Kivy on QPython",
         "ver":"1.0.0",
         "downloads": "5,000+",
         "cat":"new",
         "level": 3,
-        "logo": "http://dl.qpy.io/assets/banners/course-kivy-qpython.png",
-        "open": 0,
+        "logo": "http://edu.qpython.org/static/course-kivy-qpython.png",
+        "open": 1,
         "courses":[
+            {
+                "rdate":"2017-06-15",
+                "link":"http://edu.qpython.org/kivy-qpython/cn/index.html",
+                "smodule":"qpython-webapp-principle",
+                "description":"介绍QPython上的Kivy",
+                "title":"QPython上的Kivy",
+                "ver":"1.0.0",
+                "downloads": "10,000+"
+            },
+            {
+                "link":"http://edu.qpython.org/kivy-qpython/cn/your-first-kivyapp.html",
+                "smodule":"kivy-qpython-your-first-kivyapp",
+                "description":"如何开发第一个KivyApp",
+                "title":"你的第一个KivyApp",
+                "ver":"1.0.0",
+                "downloads": "10,000+"
+            }
         ]
     },
     {
@@ -133,7 +142,7 @@
         "downloads": "3,000+",
         "cat":"featured",
         "level": 3,
-        "logo": "http://dl.qpy.io/assets/banners/course-sl4a.png",
+        "logo": "http://edu.qpython.org/static/course-sl4a.png",
         "open": 0,
         "courses":[
         ]
@@ -149,7 +158,7 @@
         "downloads": "1,000+",
         "cat":"featured",
         "level": 4,
-        "logo": "http://dl.qpy.io/assets/banners/course-data-analytics.png",
+        "logo": "http://edu.qpython.org/static/course-data-analytics.png",
         "open": 0,
         "courses":[
         ]

@@ -1,5 +1,12 @@
 Kivy App Tutorials >> A Simple Paint App
 ============================================
+
+Chapter Author, contributor
+------------------------------------------------------
+Author: `Kivy <https://kivy.org/>`_
+
+
+
 In the following tutorial, you will be guided through the creation of your first widget. This provides powerful and important knowledge when programming Kivy applications, as it lets you create completely new user interfaces with custom elements for your specific purpose.
 
 Basic Considerations
@@ -119,7 +126,7 @@ Now that’s not really an overwhelming user experience. Let’s add some code t
 
 <button>Run ...</button>
 
-.. image:: https://kivy.org/docs/_images/guide-3.jpg
+.. image:: http://edu.qpython.org/static/kivy-guide-3.jpg
     :alt: screenshot of pong game
 
 
@@ -162,7 +169,7 @@ That was easy, wasn’t it? It gets better! Update the code to look like this:
 
 <button>Run ...</button>
 
-.. image:: https://kivy.org/docs/_images/guide-4.jpg
+.. image:: http://edu.qpython.org/static/kivy-guide-4.jpg
     :alt: screenshot of pong game
 
 
@@ -210,7 +217,7 @@ So far so good. This isn’t exactly beautiful yet, though. It looks a bit like 
 
 <button>Run ...</button>
 
-.. image:: https://kivy.org/docs/_images/guide-5.jpg
+.. image:: http://edu.qpython.org/static/kivy-guide-5.jpg
     :alt: Screenshot of pong game
 
 Here are the changes:
@@ -280,7 +287,7 @@ For our simple example, it doesn’t really matter that much. For larger applica
 
 <button>Run ...</button>
 
-.. image:: https://kivy.org/docs/_images/guide-6.jpg
+.. image:: http://edu.qpython.org/static/kivy-guide-6.jpg
     :alt: screenshot of pong game
 
 

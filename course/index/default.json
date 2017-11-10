@@ -11,7 +11,7 @@
         "downloads": "10,000+",
         "cat":"new",
         "level": 1,
-        "logo": "http://dl.qpy.io/assets/banners/course-qpython-quick-start.png",
+        "logo": "http://edu.qpython.org/static/course-qpython-quick-start.png",
         "open": 1,
         "courses":[
             {
@@ -69,7 +69,7 @@
         "cat":"new",
         "level": 2,
         "open": 1,
-        "logo": "http://dl.qpy.io/assets/banners/course-qpython-webapp.png",
+        "logo": "http://edu.qpython.org/static/course-qpython-webapp.png",
         "courses":[
             {
                 "rdate":"2017-06-15",
@@ -109,7 +109,7 @@
         "downloads": "5,000+",
         "cat":"new",
         "level": 3,
-        "logo": "http://dl.qpy.io/assets/banners/course-kivy-qpython.png",
+        "logo": "http://edu.qpython.org/static/course-kivy-qpython.png",
         "open": 1,
         "courses":[
             {
@@ -142,7 +142,7 @@
         "downloads": "3,000+",
         "cat":"featured",
         "level": 3,
-        "logo": "http://dl.qpy.io/assets/banners/course-sl4a.png",
+        "logo": "http://edu.qpython.org/static/course-sl4a.png",
         "open": 0,
         "courses":[
         ]
@@ -158,7 +158,7 @@
         "downloads": "1,000+",
         "cat":"featured",
         "level": 4,
-        "logo": "http://dl.qpy.io/assets/banners/course-data-analytics.png",
+        "logo": "http://edu.qpython.org/static/course-data-analytics.png",
         "open": 0,
         "courses":[
         ]
