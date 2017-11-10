@@ -26,6 +26,6 @@ QPython的控制台，编辑器，开发快捷工具集（QRCode代码读取器�
 除了可以在安卓上学习Python编程外，QPython还允许你编程控制你的安卓设备。
 此外开源版QPython方便你在APP开发中使用Python引擎。
 
-.. image:: http://edu.qpython.org/static/codeanywhere.png
+.. image:: http://edu.qpython.org/static/course-index-principle.png
     :target: data-video: "https://v.qq.com/x/page/v0500qflzs9.html"
     :alt: QPython - 专注的掌上开发环境和编程学习服务
