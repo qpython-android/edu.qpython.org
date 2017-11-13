@@ -5,7 +5,7 @@
         "auth":"River",
         "link":"http://edu.qpython.org/qpython-quick-start/cn/index.html",
         "smodule":"qpython-quick-start",
-        "description":"QPython快速开始",
+        "description":"快速开始",
         "title":"快速开始",
         "ver":"1.0.0",
         "downloads": "10,000+",
@@ -19,7 +19,7 @@
                 "link":"http://edu.qpython.org/qpython-quick-start/cn/principle.html",
                 "smodule":"qpython-quick-start-principles",
                 "description":"为何要使用QPython",
-                "title":"QPython",
+                "title":"QPython - 编程学习助手",
                 "downloads": "10,000+"
             },
             {
@@ -35,7 +35,7 @@
                 "link":"http://edu.qpython.org/qpython-quick-start/cn/editor-howto.html",
                 "smodule":"qpython-quick-start-editor-howto",
                 "description":"使用QPython的编辑器来进行开发",
-                "title":"Editor使用帮助",
+                "title":"编辑器使用帮助",
                 "downloads": "10,000+"
             },
             {
@@ -62,8 +62,8 @@
         "author":"River",
         "link":"http://edu.qpython.org/qpython-webapp/cn/index.html",
         "smodule":"qpython-webapp",
-        "description":"介绍如何开发QPython WebApp",
-        "title":"QPython WebApp",
+        "description":"如何开发QPython WebApp",
+        "title":"如何开发QPython WebApp",
         "ver":"1.0.0",
         "downloads": "10,000+",
         "cat":"new",
@@ -104,7 +104,7 @@
         "link":"http://edu.qpython.org/kivy-qpython/index.html",
         "smodule":"kivy-qpython",
         "description":"如何用Kivy开发图形界面程序",
-        "title":"QPython上的Kivy",
+        "title":"如何用Kivy开发图形界面程序",
         "ver":"1.0.0",
         "downloads": "5,000+",
         "cat":"new",
