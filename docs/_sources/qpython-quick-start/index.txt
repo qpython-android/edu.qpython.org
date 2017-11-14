@@ -12,7 +12,7 @@ About
 --------
 QPython(for Android) is a Python script engine for Android system, which runs Python programs on any Android device. It contains a Python interpreter, a console, and an editor. Besides a basic Python library, QPython also integrates a bottle library that supports WebApp development, and an SL4A library that supports invoking Android APIs.
 
-A QPython (for iOS) application designed for iOS users is under development and will make face soon.
+A QPython (for iOS) application designed for iOS users is released in appstore also.
 
 
 History of QPython

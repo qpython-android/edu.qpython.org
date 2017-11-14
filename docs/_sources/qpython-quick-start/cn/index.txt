@@ -12,7 +12,7 @@ QPython是什么
 -----
 QPython (for Android)是安卓上的Python脚本引擎，它能让你在安卓设备上运行Python程序，它包含了Python解析器、控制台、编辑器。除了集成了基础的Python库之外，它还集成了支持WebApp开发的bottle库、支持调用安卓API的SL4A库等常见有用的库。
 
-针对iOS用户的QPython (for iOS)应用也正在研发中，很快就会推出。
+针对iOS用户的QPython (for iOS)应用也已在appstore上线。
 
 QPython历史
 -------------
