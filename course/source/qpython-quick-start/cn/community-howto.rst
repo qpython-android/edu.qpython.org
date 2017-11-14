@@ -2,9 +2,6 @@
 ================
 很多QPython用户喜欢在QPython各类社区里交流分享编程经验，你将有机会在这里遇见像你一样聪明的人，互相学习，获得成长。
 
-.. image:: http://edu.qpython.org/static/editor-main.png
-    :alt: QPython - 社区
-
 获得QPython的新消息和提示
 --------------------------
 我们衷心希望你可以在微信和微博上关注我们，关注后可以及时获取QPython的新闻。

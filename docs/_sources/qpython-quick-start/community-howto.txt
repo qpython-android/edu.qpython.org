@@ -3,10 +3,6 @@ QPython Communities
 Many QPython users like to exchange and share programming experience in QPython community, you have a great chance to meet smart and pythonic guys like you here, learn from each other and gain growth.
 
 
-.. image:: http://edu.qpython.org/static/editor-main.png
-    :alt: QPython - communities
-
-
 Get QPython news & tips
 --------------------------
 We recommend you follow us on facebook and twitter to get QPython's news.
