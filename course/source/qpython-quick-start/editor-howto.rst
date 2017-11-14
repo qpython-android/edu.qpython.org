@@ -1,5 +1,10 @@
 Editor howto
 ==============
+This is the most used tools by Python developers - editor.
+
+.. image:: http://edu.qpython.org/static/editor-main.png
+    :alt: QPython - editor
+
 
 
 Features
@@ -9,6 +14,12 @@ The editor allows you obviously enter and modify text. Here you can develop your
 When typing, you can easily control indentation level (which is critical for Python code) using two buttons on the toolbar . Next buttons on the toolbar are Jump to, Run, Search, Undo, Save. Also there are two buttons on the top: Open and New.
 
 When saving, don’t forget to add .py estension to the file name since the editor don’t do it for you.
+
+When you were opening a QPython project, you could swipe on the editor's left to unfolder the project tree drawer, which allow you switch file in project easily.
+
+.. image:: http://edu.qpython.org/static/editor-left.png
+    :alt: QPython - project tree
+
 
 Setting
 -------

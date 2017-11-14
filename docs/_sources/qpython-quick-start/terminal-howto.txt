@@ -1,17 +1,20 @@
 Terminal howto
 =================
-Yes, it’s regular Python console, feel free to comunicate with interpreter directly
+Yes, it’s regular Python terminal, feel free to comunicate with interpreter directly.
+
+.. image:: http://edu.qpython.org/static/terminal.png
+    :alt: QPython - Terminal
 
 Features
 ---------
-There is an ordinary Python console. Many people usually use it to explore objects’ properties, consult about syntax and test their ideas. You can type your commands directly and Python interpreter will execute them.
+There is an ordinary Python terminal. Many people usually use it to explore objects’ properties, consult about syntax and test their ideas. You can type your commands directly and Python interpreter will execute them.
 
 You can
 
-* open additional consoles by tapping the plus button and usedrop-down list on the upper left corner to switch between consoles
-* To close the console just tap the close button
-* Select text & Paste text ( Just long touch on the terminal to show the menu)
+* open additional terminals by tapping the plus button and usedrop-down list on the upper left corner to switch between terminals.
+* To close the console just tap the close button.
+* Select text & Paste text ( Just long touch on the terminal to show the menu).
 
 Note
 ------
-There will be notification in the notification bar unless you explicitly close the console and you always can reach the open console by tapping the notification.
+There will be notification in the notification bar unless you explicitly close the terminal and you always can reach the open terminal by tapping the notification.
