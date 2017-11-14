@@ -56,7 +56,7 @@
 <button>Run ...</button>
 
 .. image:: http://edu.qpython.org/static/course-index-principle.png
-    :target: data-video: "https://v.qq.com/x/page/z0503ywb2pl.html"
+    :target: data-video: "http://player.youku.com/embed/XMzE0OTI4NDgyMA=="
     :alt: QPython - 编辑器帮助
 
 作者 & 更新时间

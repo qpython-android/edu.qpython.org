@@ -1,8 +1,6 @@
 随时随地学习编程
 ====================================
 
-
-
 QPython专注为Python用户提供方便易用的的移动Python IDE工具和编程学习服务。
 
 
@@ -22,7 +20,7 @@ QPython的控制台，编辑器，开发快捷工具集（QRCode代码读取器�
 此外开源版QPython方便你在APP开发中使用Python引擎。
 
 .. image:: http://edu.qpython.org/static/course-index-principle.png
-    :target: data-video: "https://v.qq.com/x/page/v0500qflzs9.html"
+    :target: data-video: "http://player.youku.com/embed/XMzA1NzI1NTE5Ng=="
     :alt: QPython - 专注的掌上开发环境和编程学习服务
 
 作者 & 更新时间
