@@ -1,4 +1,4 @@
-QPython Principles
+Learnning Programming assistant
 ====================================
 
 Chapter Author, contributor and updated time
