@@ -48,9 +48,9 @@ QPython诞生于2012年, 最初是其作者River为了实现能在安卓程序�
     #qpy:console
 
 
-如何安装第三方包
+如何安装第三方库
 -----------------
-QPython内置了PC版Python的绝大部分库。由于安卓里本身不支持编译工具链，因此你无法像PC上的Python一样能够安装所有的库，但是你可以通过QPYPI安装一些预编译的库，目前已经支持包括kivy, numpy, opencv, pycrypto, tornado 在内的库。此外你还可以用pip client从官方或者你指定的第三方Pypi来安装大多数Python实现的包。
+QPython内置了PC版Python的绝大部分库。由于安卓里本身不支持编译工具链，因此你无法像PC上的Python一样能够安装所有的库，但是你可以通过QPYPI安装一些预编译的库，目前已经支持包括kivy, numpy, opencv, pycrypto, tornado 在内的库。此外你还可以用pip控制台从官方或者你指定的第三方QPYPI来安装大多数Python实现的库。
 
 
 QPython媒体、社区

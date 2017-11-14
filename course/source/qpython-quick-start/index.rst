@@ -23,9 +23,9 @@ Supported program types
 ------------------------------------------------------
 Currently, QPython can run console applications, WebApp applications, backend applications, graphic interface-based applications, and so on. Each type of program fits with a different application scenario, Python determines how to  run an application according to a unique head statement. For example, #qpy:webapp indicates that the program will be released in the WebApp manner, #qpy:kivy indicates that the program is a ivy program, #qpy:qpyapp indicates that the program is a QPYApp (fits with the backend application scenario), and a program without head statement will by default run in the console manner (for easy debugging).
 
-How to install a third party package
+How to install a third party library
 ------------------------------------------------------
-QPython is imbedded with most of the Python libraries for PCs. As Android system itself does not support compilation tool links, you cannot install all libraries like Python on PCs. However, you can install some pre-compiled libraries via QPYPI, which supports libraries including kivy, numpy, opencv, pycrypto, tornado. In addition, you can use the pip client to install most packages implemented by Python from the official website or from a third party Pypi designated by you.
+QPython is imbedded with most of the Python libraries for PCs. As Android system itself does not support compilation tool links, you cannot install all libraries like Python on PCs. However, you can install some pre-compiled libraries via QPYPI, which supports libraries including kivy, numpy, opencv, pycrypto, tornado. In addition, you can use the pip client to install most libraries implemented by Python from the official website or from a third party Pypi designated by you.
 
 
 *WebApp header declaration*
