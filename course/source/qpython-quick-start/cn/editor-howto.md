@@ -54,3 +54,7 @@
     tc.ask_age()
 
 <button>Run ...</button>
+
+.. image:: http://edu.qpython.org/static/course-index-principle.png
+    :target: data-video: "https://v.qq.com/x/page/z0503ywb2pl.html"
+    :alt: QPython - 编辑器帮助
