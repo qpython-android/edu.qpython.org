@@ -32,24 +32,29 @@ HAS_SOURCE:  true
 <img alt="QPython - editor" src="http://edu.qpython.org/static/editor-main.png" />
 <div class="section" id="features">
 <h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
-<p>The editor allows you obviously enter and modify text. Here you can develop your scripts, save them and execute. The editor supports Python syntax highlighting and shows line numbers (there is no ability to go to the line by number though).</p>
-<p>When typing, you can easily control indentation level (which is critical for Python code) using two buttons on the toolbar . Next buttons on the toolbar are Jump to, Run, Search, Undo, Save. Also there are two buttons on the top: Open and New.</p>
+<p>The editor allows you obviously edit or run your QPython script program or project. The QPython editor supports Python syntax highlighting and shows line numbers (there is no ability to go to the line by number though).</p>
+<p>There are the open, new, setting on the editor&#8217;s right-top area, which allow you open script or project, create script or project, and set the editor&#8217;s behaviors(like theme, font etc.).</p>
+<p><em>Sometimes syntax highlight feature make the editor be slow when open a large file on some devices, so we make the editor&#8217;s highlight being enable when the total lines are lower than this limit(default is 300), you can adjust it to you want.</em></p>
+<p>In the editor&#8217;s bottom, the icons are unfolder, save, run, goto, search, undo, lock keyboard in toolbar.</p>
+<img alt="QPython - editor's toolbar" src="http://edu.qpython.org/static/editor-toolbar.png" />
+<p>When clicking the unfold icon, you could saveas, see recent modified files, and insert code snippets.o</p>
 <p>When saving, don’t forget to add .py estension to the file name since the editor don’t do it for you.</p>
 <p>When you were opening a QPython project, you could swipe on the editor&#8217;s left to unfolder the project tree drawer, which allow you switch file in project easily.</p>
 <img alt="QPython - project tree" src="http://edu.qpython.org/static/editor-left.png" />
 </div>
-<div class="section" id="setting">
-<h2>Setting<a class="headerlink" href="#setting" title="Permalink to this headline">¶</a></h2>
-<p>You can modify the editor&#8217;s setting bu clicking the top-right icon. You can set some editor&#8217;s attributes here:</p>
-<p><em>Show line numbers</em></p>
-<p><em>Word wrap</em></p>
-<p><em>Fling to scroll faster</em></p>
-<p><em>Color theme</em></p>
-<p><em>Text size</em></p>
-<p><em>Change text font</em></p>
-<p><strong>Auto-highlight lines</strong></p>
-<p>Sometimes syntax highlight feature make the editor be slow when open a large file on some devices, so we make the editor&#8217;s highlight being enable when the total lines are lower than this limit(default is 300), you can adjust it to you want.</p>
-<p><strong>Give a try</strong></p>
+<div class="section" id="other">
+<h2>Other<a class="headerlink" href="#other" title="Permalink to this headline">¶</a></h2>
+<p>It&#8217;s big challenge for mobile inputting, the QPython team offers kinds of tools for improving development efficiency.</p>
+<p><strong>Scan</strong>
+In QPython&#8217;s dashboard, there is a qrcode scanner, which can scan the qrcode and read the code into editor.</p>
+<p><strong>QEditor WebApp</strong>
+In QPYPI&#8217;s tools, there is a QEditor WebApp. After installing and running, it starts a WebApp service, allow user edit files from the computer&#8217;s browser in the same lan by visit some online editor.</p>
+<img alt="QPython - QEditor" src="http://edu.qpython.org/static/editor-left.png" />
+<img alt="QPython - Start QEditor" src="http://edu.qpython.org/static/editor-left.png" />
+<p><em>As above shows, you could start develop by enter http://192.168.1.191:10000 on your computer browser</em></p>
+</div>
+<div class="section" id="give-a-try-to-run-the-code-in-editor">
+<h2>Give a try to run the code in editor ?<a class="headerlink" href="#give-a-try-to-run-the-code-in-editor" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-none"><div class="highlight"><pre><span></span>class TestC():
     def ask_age(self):
         v = raw_input(&quot;&gt; How old are you ?&quot;)

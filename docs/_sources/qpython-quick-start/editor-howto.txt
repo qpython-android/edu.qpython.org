@@ -9,9 +9,19 @@ This is the most used tools by Python developers - editor.
 
 Features
 ---------
-The editor allows you obviously enter and modify text. Here you can develop your scripts, save them and execute. The editor supports Python syntax highlighting and shows line numbers (there is no ability to go to the line by number though). 
+The editor allows you obviously edit or run your QPython script program or project. The QPython editor supports Python syntax highlighting and shows line numbers (there is no ability to go to the line by number though).
 
-When typing, you can easily control indentation level (which is critical for Python code) using two buttons on the toolbar . Next buttons on the toolbar are Jump to, Run, Search, Undo, Save. Also there are two buttons on the top: Open and New.
+There are the open, new, setting on the editor's right-top area, which allow you open script or project, create script or project, and set the editor's behaviors(like theme, font etc.).
+
+*Sometimes syntax highlight feature make the editor be slow when open a large file on some devices, so we make the editor's highlight being enable when the total lines are lower than this limit(default is 300), you can adjust it to you want.*
+
+
+In the editor's bottom, the icons are unfolder, save, run, goto, search, undo, lock keyboard in toolbar. 
+
+.. image:: http://edu.qpython.org/static/editor-toolbar.png
+    :alt: QPython - editor's toolbar
+
+When clicking the unfold icon, you could saveas, see recent modified files, and insert code snippets.o
 
 When saving, don’t forget to add .py estension to the file name since the editor don’t do it for you.
 
@@ -21,27 +31,30 @@ When you were opening a QPython project, you could swipe on the editor's left to
     :alt: QPython - project tree
 
 
-Setting
+Other
 -------
-You can modify the editor's setting bu clicking the top-right icon. You can set some editor's attributes here:
+It's big challenge for mobile inputting, the QPython team offers kinds of tools for improving development efficiency.
 
-*Show line numbers*
+**Scan**
+In QPython's dashboard, there is a qrcode scanner, which can scan the qrcode and read the code into editor.
 
-*Word wrap*
 
-*Fling to scroll faster*
+**QEditor WebApp**
+In QPYPI's tools, there is a QEditor WebApp. After installing and running, it starts a WebApp service, allow user edit files from the computer's browser in the same lan by visit some online editor.
 
-*Color theme*
 
-*Text size*
+.. image:: http://edu.qpython.org/static/editor-left.png
+    :alt: QPython - QEditor
 
-*Change text font*
+.. image:: http://edu.qpython.org/static/editor-left.png
+    :alt: QPython - Start QEditor
 
-**Auto-highlight lines**
 
-Sometimes syntax highlight feature make the editor be slow when open a large file on some devices, so we make the editor's highlight being enable when the total lines are lower than this limit(default is 300), you can adjust it to you want.
+*As above shows, you could start develop by enter http://192.168.1.191:10000 on your computer browser*
 
-**Give a try**
+
+Give a try to run the code in editor ?
+------------------------------------------------
 
 ..  code-block :: none
 
