@@ -17,7 +17,7 @@
 除非您已完全关闭终端, 否则在通知栏中会有通知. 您可以在任何界面通过点击通知回到已打开的终端.
 
 .. image:: http://edu.qpython.org/static/course-index-principle.png
-    :target: data-video: "https://v.qq.com/x/page/j0569yn4knh.html"
+    :target: data-video: "https://v.qq.com/iframe/player.html?vid=j0569yn4knh&tiny=0&auto=0"
     :alt: QPython - 终端帮助
 
 作者 & 更新时间
