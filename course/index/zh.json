@@ -5,8 +5,8 @@
         "auth":"River",
         "link":"http://edu.qpython.org/qpython-quick-start/cn/index.html",
         "smodule":"qpython-quick-start",
-        "description":"快速开始",
-        "title":"快速开始",
+        "description":"QPython快速开始",
+        "title":"QPython快速开始",
         "ver":"1.0.0",
         "downloads": "10,000+",
         "cat":"new",
@@ -19,7 +19,7 @@
                 "link":"http://edu.qpython.org/qpython-quick-start/cn/principle.html",
                 "smodule":"qpython-quick-start-principles",
                 "description":"为何要使用QPython",
-                "title":"编程学习助手",
+                "title":"随时随地学习编程",
                 "downloads": "10,000+"
             },
             {
