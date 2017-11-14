@@ -19,3 +19,10 @@
 .. image:: http://edu.qpython.org/static/course-index-principle.png
     :target: data-video: "https://v.qq.com/x/page/j0569yn4knh.html"
     :alt: QPython - 终端帮助
+
+作者 & 更新时间
+------------------------------------
+作者: `River <https://github.com/riverfor>`_
+
+提交: 2017/8/6
+

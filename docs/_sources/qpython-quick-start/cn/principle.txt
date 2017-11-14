@@ -1,11 +1,6 @@
 随时随地学习编程
 ====================================
 
-章节作者、贡献者、最后更新时间
-------------------------------------
-作者: `River <https://github.com/riverfor>`_
-
-提交: 2017/8/7
 
 
 QPython专注为Python用户提供方便易用的的移动Python IDE工具和编程学习服务。
@@ -29,3 +24,10 @@ QPython的控制台，编辑器，开发快捷工具集（QRCode代码读取器�
 .. image:: http://edu.qpython.org/static/course-index-principle.png
     :target: data-video: "https://v.qq.com/x/page/v0500qflzs9.html"
     :alt: QPython - 专注的掌上开发环境和编程学习服务
+
+作者 & 更新时间
+------------------------------------
+作者: `River <https://github.com/riverfor>`_
+
+提交: 2017/8/7
+

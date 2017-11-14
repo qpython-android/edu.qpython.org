@@ -52,3 +52,10 @@ QPython的微博会分享一些QPython的小贴士，回答你的问题等。
 * `报告QPython3的问题 <https://github.com/qpython-android/qpython3/issues>`_
 * `希望能支持一个库 <https://github.com/qpython-android/QPYPI/issues>`_
 * `直接给我们写信 <mailto:support@qpython.org>`_
+
+作者 & 更新时间
+------------------------------------
+作者: `River <https://github.com/riverfor>`_
+
+提交: 2017/8/6
+
