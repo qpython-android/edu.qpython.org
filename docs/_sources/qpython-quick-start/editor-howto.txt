@@ -67,3 +67,10 @@ Give a try to run the code in editor ?
     tc.ask_age()
 
 <button>Run ...</button>
+
+
+Author & updated time
+------------------------------------------------------
+Author: `River <https://github.com/riverfor>`_
+
+Submitted: 2017/10/7

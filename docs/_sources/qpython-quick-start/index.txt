@@ -1,12 +1,5 @@
 What is QPython
 ========================
-Chapter Author, contributor and updated time
-------------------------------------------------------
-Author: `River <https://github.com/riverfor>`_
-
-Translator: `TGJ <http://quseit.com/>`_
-
-Submitted: 2017/8/6
 
 About
 --------
@@ -73,3 +66,11 @@ No matter which branch you are using, we hope everyone can really enjoy Python p
 .. image:: http://edu.qpython.org/static/codeanywhere.png
     :target: data-video: "https://youtu.be/HqfUUiftrRw"
     :alt: QPython - Code Anywhere，Study Anytime
+
+Author & updated time
+------------------------------------------------------
+Author: `River <https://github.com/riverfor>`_
+
+Translator: `TGJ <http://quseit.com/>`_
+
+Submitted: 2017/8/6

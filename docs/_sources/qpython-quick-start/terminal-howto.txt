@@ -18,3 +18,9 @@ You can
 Note
 ------
 There will be notification in the notification bar unless you explicitly close the terminal and you always can reach the open terminal by tapping the notification.
+
+Author & updated time
+------------------------------------------------------
+Author: `River <https://github.com/riverfor>`_
+
+Submitted: 2017/10/7

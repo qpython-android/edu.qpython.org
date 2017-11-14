@@ -44,3 +44,10 @@ In AIPY libraries, QPython team add the AI related programming libraries (like n
 Manage Manually
 -----------------
 Besides these ways above, you could copy libraries into the /sdcard/qpython/lib/python2.7/site-packages in your device to install them.
+
+
+Author & updated time
+------------------------------------------------------
+Author: `River <https://github.com/riverfor>`_
+
+Submitted: 2017/10/7

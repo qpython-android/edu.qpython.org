@@ -33,17 +33,17 @@ QPython的微博会分享一些QPython的小贴士，回答你的问题等。
 
 贡献
 -------------------
-**如果你想快人一步获得新版本，并我们进行帮助测试，请加入QPython测试社区:**
+如果你想快人一步获得新版本，并我们进行帮助测试，请加入QPython测试社区:
 
 * `加入QPython测试员社区 <https://plus.google.com/communities/111759148772865961493>`_
 
 
-**在QPython里课程是非常重要的一个部分。如果您想为课程社区做出一些贡献，例如发布您自己的课程或帮助将当前课程翻译成其他语言，欢迎加入课程社区：**
+在QPython里课程是非常重要的一个部分。如果您想为课程社区做出一些贡献，例如发布您自己的课程或帮助将当前课程翻译成其他语言，欢迎加入课程社区：
 
 * `加入QPython课程贡献社区 <https://plus.google.com/u/1/communities/111340957575273631204>`_
 
 
-**如果您在使用QPython时遇到任何问题，请随时与我们联系，我们将尽快解决**
+如果您在使用QPython时遇到任何问题，请随时与我们联系，我们将尽快解决
 
 * `报告一个问题 <https://github.com/qpython-android/qpython/issues>`_
 * `报告QPython3的问题 <https://github.com/qpython-android/qpython3/issues>`_

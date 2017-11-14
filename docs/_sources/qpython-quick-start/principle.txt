@@ -1,11 +1,5 @@
-Learnning Programming assistant
+Principle
 ====================================
-
-Chapter Author, contributor and updated time
-------------------------------------------------------
-Author: `River <https://github.com/riverfor>`_
-
-Submitted: 2017/8/7
 
 
 About
@@ -28,3 +22,9 @@ Powerful and open source
 Besides learning Python programing on Android, QPython helps you control your android device with programs.
 The open source version of QPython is convenient for you to embed Python SDK into your app development.
 
+
+Author & updated time
+------------------------------------------------------
+Author: `River <https://github.com/riverfor>`_
+
+Submitted: 2017/8/7
