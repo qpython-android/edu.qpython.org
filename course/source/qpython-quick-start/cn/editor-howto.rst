@@ -40,10 +40,10 @@
 **QEditor WebApp**
 在QPYPI的工具集中，有一个QEditor WebApp程序，在安装和运行之后，它会在手机上开启一项WebApp服务，允许用户从相同局域网的电脑用户通过访问指定地址来打开一个在线的编辑器，可以通过电脑浏览器来直接在手机上进行编程。
 
-.. image:: http://edu.qpython.org/static/editor-left.png
+.. image:: http://edu.qpython.org/static/qeditor.png
     :alt: QPython - QEditor
 
-.. image:: http://edu.qpython.org/static/editor-left.png
+.. image:: http://edu.qpython.org/static/qeditor-run.png
     :alt: QPython - 启动QEditor
 
 *如上图启动后，你可以在电脑上输入http://192.168.1.191:10000即可在浏览器上进行开发*

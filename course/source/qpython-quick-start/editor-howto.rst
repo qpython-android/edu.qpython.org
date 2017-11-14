@@ -43,10 +43,10 @@ In QPython's dashboard, there is a qrcode scanner, which can scan the qrcode and
 In QPYPI's tools, there is a QEditor WebApp. After installing and running, it starts a WebApp service, allow user edit files from the computer's browser in the same lan by visit some online editor.
 
 
-.. image:: http://edu.qpython.org/static/editor-left.png
+.. image:: http://edu.qpython.org/static/qeditor.png
     :alt: QPython - QEditor
 
-.. image:: http://edu.qpython.org/static/editor-left.png
+.. image:: http://edu.qpython.org/static/qeditor-run.png
     :alt: QPython - Start QEditor
 
 
