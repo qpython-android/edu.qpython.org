@@ -9,13 +9,11 @@ Features
 ---------
 There is an ordinary Python terminal. Many people usually use it to explore objects’ properties, consult about syntax and test their ideas. You can type your commands directly and Python interpreter will execute them.
 
-You can :
+QPython's terminal has the following features:
 
-* open additional terminals by tapping the plus button and usedrop-down list on the upper left corner to switch between terminals.
-* To close the console just tap the close button.
-
-
-Besides the above behaviors, by long clicking on the terminal window, you could complete the complex operations like select text, copy all, paste, send control key, send fn key from the popup menu.
+* open additional terminals by tapping the plus button 
+* Switch terminal by click the drop-down list on the upper left corner, click the "X" to close the terminal
+* Long clicking on the terminal window, you could complete the complex operations like select text, copy all, paste, send control key, send fn key from the popup menu.
 
 .. image:: http://edu.qpython.org/static/terminal-menu.png
     :alt: QPython - Terminal popup menu

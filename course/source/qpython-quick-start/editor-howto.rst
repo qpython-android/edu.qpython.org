@@ -13,23 +13,28 @@ The editor allows you obviously edit or run your QPython script program or proje
 
 There are the open, new, setting on the editor's right-top area, which allow you open script or project, create script or project, and set the editor's behaviors(like theme, font etc.).
 
-*Sometimes syntax highlight feature make the editor be slow when open a large file on some devices, so we make the editor's highlight being enable when the total lines are lower than this limit(default is 300), you can adjust it to you want.*
+Syntax highlight feature make the editor be slow when open a large file, so the editor's highlight is enable when the total lines are lower than this limit(default is 300), and you can adjust it to you want in editor's setting page.
 
 
-In the editor's bottom, the icons are unfolder, save, run, goto, search, undo, lock keyboard in toolbar. 
+In the editor's bottom, the icons are siwtch to hotkeys, lock keyboard, goto, save, run, find, undo, redo, recent open, snippets.
 
-.. image:: http://edu.qpython.org/static/editor-toolbar.png
+.. image:: http://edu.qpython.org/static/editor-toolbar-1.png
     :alt: QPython - editor's toolbar
 
-When clicking the unfold icon, you could saveas, see recent modified files, and insert code snippets.o
+When you switch to the hot keys toolbar, the toolbar shows the following icons: switch to develop toolbar, untab, tab, TAB，DEF(def), IF(if), EF(elif), EL(else), FOR(for), IMT(import), IMF(from import), CLZ(class), RET(return), @, :, =, ", ', ;, ,, +, -, *, /, <, >, (, ), [, ], {, }, #.
+
+.. image:: http://edu.qpython.org/static/editor-toolbar-2.png
+    :alt: QPython - editor's hotkey toolbar
+
+
+Skilled using the toolbar can greatly accelerate your development
 
 When saving, don’t forget to add .py estension to the file name since the editor don’t do it for you.
 
-When you were opening a QPython project, you could swipe on the editor's left to unfolder the project tree drawer, which allow you switch file in project easily.
+When you were opening a QPython project, you could swipe on the editor's left to unfolder the project tree drawer, which allow you edit other file in the same project easily.
 
 .. image:: http://edu.qpython.org/static/editor-left.png
     :alt: QPython - project tree
-
 
 Other
 -------
