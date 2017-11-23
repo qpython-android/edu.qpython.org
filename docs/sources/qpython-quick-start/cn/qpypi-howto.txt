@@ -21,7 +21,7 @@ INSTALL WITH PYTHON'S PYPI
 通过该工具，你可以使用QPython内置的pip工具来安装很多Python库，它能帮你安装大部分由纯Python语言开发（包括依赖库）的Python库。
 
 
-注意：一些与c / c++文件混合的库不能通过pip控制台安装，这是由于因为android本身缺少开发编译环境，您可以向qpython团队寻求帮助。
+注意：一些与c / c++文件混合的库不能通过pip控制台安装，这是由于安卓本身缺少开发编译环境支持，您可以向QPython团队寻求帮助。
 
 
 库
@@ -42,11 +42,11 @@ AIPY库
 
 手动管理
 ------------
-除了上面的方法，你可以将你所要的安装的及其依赖的库复制到你设备中的 /sdcard/qpython/lib/python2.7/site-packages 目录中来安装上该库（注意，只支持纯Python开发的库）.
+如果通过QPYPI无法安装你希望安装的库，你可以将你所要的安装的库复制到设备的 /sdcard/qpython/lib/python2.7/site-packages 目录，这样你就可以在代码中使用 import <module> 的方式来让QPython加载对应的库。
 
 作者 & 更新时间
 ------------------------------------
 作者: `River <https://github.com/riverfor>`_
 
-提交: 2017/8/6
+提交: 2017/11/6
 

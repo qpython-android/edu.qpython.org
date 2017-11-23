@@ -27,7 +27,7 @@ KivyApp声明
 
 KivyApp运行流程
 --------------
-在程序被识别为KivyApp运行后，QPython会同事启动OpenGL引擎，新建一个SDL视图，并在其中完成渲染，输出画面。
+在程序被识别为KivyApp运行后，QPython会启动OpenGL引擎，新建一个SDL视图，并在其中完成渲染，输出画面。
 
 
 KivyApp退出流程

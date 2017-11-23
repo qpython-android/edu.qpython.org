@@ -1,6 +1,6 @@
 QPython的WebApp
 ==========================
-WebApp是一种Web开发者能够快速上手开发的应用，QPython的WebApp支持常见WebAApp的优势。此外，QPython让手机本身就能成为WebApp的运行容器，支持处理复杂的程序逻辑，因此能能极大地提高WebApp使用体验，同时也增加了开发了灵活度。
+WebApp是一种Web开发者能够快速上手开发的应用，QPython的WebApp支持常见WebAApp的优势。此外，QPython让手机本身就能成为WebApp的运行容器，支持处理复杂的程序逻辑，因此能极大地提高WebApp使用体验，同时也增加了开发的灵活度。
 
 WebApp声明
 -----------
@@ -21,7 +21,7 @@ WebApp运行流程
 
 WebApp退出原理
 --------------
-当你点了后退键退出WebView时，WebApp后台进程也需要退出，由于一开始QPython让其按照后台服务的方式启动，所以我们需要通知其退出，QPython是在WebView退出时，发出一个http://IP:端口/__exit 的GET请求到后台服务，由其处理结束后台进程，退出服务的工作，因此，作为一个完成的流程，您需要在自己的WebApp中定义/__exit 对应的退出服务操作，我们在结尾示例中付有示例。
+当你点了后退键退出WebView时，WebApp后台进程也需要退出，由于一开始QPython让其按照后台服务的方式启动，所以我们需要通知其退出，QPython是在WebView退出时，发出一个http://IP:端口/__exit 的GET请求到后台服务，由其处理结束后台进程，退出服务的工作，因此，作为一个完成的流程，您需要在自己的WebApp中定义/__exit 对应的退出服务操作，我们在结尾示例中附有示例。
 
 
 

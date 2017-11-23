@@ -1,7 +1,7 @@
 随时随地学习编程
 ====================================
 
-QPython专注为Python用户提供方便易用的的移动Python IDE工具和编程学习服务。
+QPython专注为Python用户提供方便易用的移动Python IDE工具和编程学习服务。
 
 
 支持Python2和Python3
