@@ -3,20 +3,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>QPython WebApp Principle</title>
-<link rel="stylesheet" href="../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../../static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
 <script type="text/javascript">
 var DOCUMENTATION_OPTIONS = {
-URL_ROOT:    '../',
+URL_ROOT:    '../../',
 VERSION:     '0.9',
 COLLAPSE_INDEX: false,
 FILE_SUFFIX: '.html',
 HAS_SOURCE:  true
 };
 </script>
-<script type="text/javascript" src="../static/jquery.js"></script>
-<script type="text/javascript" src="../static/underscore.js"></script>
-<script type="text/javascript" src="../static/doctools.js"></script>
+<script type="text/javascript" src="../../static/jquery.js"></script>
+<script type="text/javascript" src="../../static/underscore.js"></script>
+<script type="text/javascript" src="../../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 </head>
@@ -28,33 +28,32 @@ HAS_SOURCE:  true
 <div class="body" role="main">
 <div class="section" id="qpython-webapp-principle">
 <h1>QPython WebApp Principle<a class="headerlink" href="#qpython-webapp-principle" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="about">
-<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
-<p>QPython supports WebApp, the goal is to enable all WEB developers to the fastest development of mobile applications.</p>
+<div class="section" id="id1">
+<h2>关于<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>QPython支持WebApp，能让所有的Web开发者马上开始快速移动开发。</p>
 </div>
-<div class="section" id="advantages">
-<h2>Advantages<a class="headerlink" href="#advantages" title="Permalink to this headline">¶</a></h2>
-<p>There are lots of mobile WebApp solutions, like cordova, phonegap etc, and compared to them, QPython&#8217;s WebApp has the following advantages.</p>
-<p><em>QPython is a powerful Python engine that can handle many logical jobs, effectively reducing data transfer time and enhancing your app&#8217;s user experience</em></p>
-<p><em>QPython supports massive Python libraries, you could import them in your project, so that you could save much develop time.</em></p>
-<p><em>It is very convenient for development with QPython, you can complete your development just in palm. And you could develop from PC then transfer to your mobile to run</em></p>
+<div class="section" id="id2">
+<h2>优势<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>移动开发领域已经有了很多WebApp解决方案，比如cordova, phonegap等等，和它们对比，QPython的WebApp方案有下面的优势：</p>
+<p><em>QPython是一个强大的Python引擎，能够处理许多逻辑事务，能有效地减少数据传输时间由此极大地提升应用的用户使用体验</em></p>
+<p><em>QPython支持大量的Python库，安装之后，你可以很方便地在项目中使用它们，由此大大节省开发时间</em></p>
+<p><em>使用QPython开发非常方便，你可以在掌上就完成开发任务，同时你也可以在PC上开发然后传输到移动设备上运行</em></p>
 </div>
-<div class="section" id="how-does-webapp-work-in-qpython">
-<h2>How does WebApp work in QPython<a class="headerlink" href="#how-does-webapp-work-in-qpython" title="Permalink to this headline">¶</a></h2>
-<p>QPython WebApp contains the following components: WebApp service and Webview. The WebApp service runs in the background and is responsible for responding to user&#8217;s input. WebView is a front component, which shows the user interface and and is responsible for responding to render user interactions, such as scrolling, click the button and so on.</p>
-<p><strong>1</strong> When you run a WebApp program from QPython, QPython launch the WebApp service in the background, at the same time, QPython will start a webview which loads the entry link declared in the program header in the front.</p>
+<div class="section" id="qpythonwebapp">
+<h2>QPython中的WebApp是如何工作的<a class="headerlink" href="#qpythonwebapp" title="Permalink to this headline">¶</a></h2>
+<p>QPython的WebApp包含以下几个模块： WebApp服务和Webview。WebApp服务在后台运行并且负责响应用户的输入， WebView是一个前段组件，它复杂显示用户交互界面和负责响应用户的交互，比如界面展示，界面滚动，点击等等。</p>
+<p><strong>1</strong> 当你从QPython运行一个WebApp程序时，QPython在后台启动WebApp服务，同时，QPython会在前端启动一个Webview去载入程序头部盛宁的WebApp入口链接。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#qpy:webapp:&lt;webapp-title&gt;</span>
 <span class="c1">#qpy://&lt;webapp-address&gt;:&lt;webapp-port&gt;/&lt;webapp-path&gt;</span>
 </pre></div>
 </div>
-<p><strong>2</strong> Then the user can start to interact with the applicaton with the web mode. So the developer could write the logic code with the web development way.</p>
-<p><strong>3</strong> When the user exit by clicking the left arrow, the application will request the <strong>http://&lt;webapp-address&gt;&lt;:webapp-port&gt;/__exit</strong> to exit the application
-The developer could rewrite the __exit function to defines the exit behaviors.</p>
+<p><strong>2</strong> 然后用户能够开始用WEB的模式和应用进行交互，因此开发者能够用Web开发弄的模式去编写代码。</p>
+<p><strong>3</strong> 当用户靠点击左上角的箭头退出应用是，程序将会请求 <strong>http://&lt;webapp-address&gt;&lt;:webapp-port&gt;/__exit</strong> 这个URL来退出程序，开发能够重写其对应的逻辑函数 __exit 来定义退出行为。</p>
 </div>
-<div class="section" id="chapter-author-contributor-and-updated-time">
-<h2>Chapter Author, contributor and updated time<a class="headerlink" href="#chapter-author-contributor-and-updated-time" title="Permalink to this headline">¶</a></h2>
-<p>Author: <a class="reference external" href="https://github.com/riverfor">River</a></p>
-<p>Submitted: 2017/10/16</p>
+<div class="section" id="id3">
+<h2>作者<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>作者: <a class="reference external" href="https://github.com/riverfor">River</a></p>
+<p>更新: 2017/10/16</p>
 </div>
 </div>
 </div>
@@ -64,7 +63,7 @@ The developer could rewrite the __exit function to defines the exit behaviors.</
 </div>
 </main>
 <footer>
-<img onclick="openPurchase()" src="../static/star.jpg">
+<img onclick="openPurchase()" src="../../static/star.jpg">
 <div id="praise"><span>0</span> persons have rewarded</div>
 </footer>
 <script>
