@@ -1,11 +1,6 @@
 Kivy App Tutorials >> A Simple Paint App
 ============================================
 
-Chapter Author, contributor
-------------------------------------------------------
-Author: `Kivy <https://kivy.org/>`_
-
-
 
 In the following tutorial, you will be guided through the creation of your first widget. This provides powerful and important knowledge when programming Kivy applications, as it lets you create completely new user interfaces with custom elements for your specific purpose.
 
@@ -92,8 +87,8 @@ Let’s now add some actual behaviour to the widget, i.e. make it react to user 
     if __name__ == '__main__':
         ^4$MyPaintApp().run()
 
-
 <button>Run ...</button>
+
 
 This is just to show how easy it is to react to user input. When a MotionEvent (i.e. a touch, click, etc.) occurs, we simply print the information about the touch object to the console. You won’t see anything on the screen, but if you observe the command-line from which you are running the program, you will see a message for every touch. This also demonstrates that a widget does not have to have a visual representation.
 
@@ -126,6 +121,7 @@ Now that’s not really an overwhelming user experience. Let’s add some code t
         ^4$MyPaintApp().run()
 
 <button>Run ...</button>
+
 
 .. image:: http://edu.qpython.org/static/kivy-guide-3.jpg
     :alt: screenshot of pong game
@@ -170,6 +166,7 @@ That was easy, wasn’t it? It gets better! Update the code to look like this:
         ^4$MyPaintApp().run()
 
 <button>Run ...</button>
+
 
 .. image:: http://edu.qpython.org/static/kivy-guide-4.jpg
     :alt: screenshot of pong game
@@ -219,6 +216,7 @@ So far so good. This isn’t exactly beautiful yet, though. It looks a bit like 
         ^4$MyPaintApp().run()
 
 <button>Run ...</button>
+
 
 .. image:: http://edu.qpython.org/static/kivy-guide-5.jpg
     :alt: Screenshot of pong game
@@ -285,11 +283,11 @@ For our simple example, it doesn’t really matter that much. For larger applica
         ^4$def clear_canvas(self, obj):
             ^8$self.painter.canvas.clear()
 
-
     if __name__ == '__main__':
         ^4$MyPaintApp().run()
 
 <button>Run ...</button>
+
 
 .. image:: http://edu.qpython.org/static/kivy-guide-6.jpg
     :alt: screenshot of pong game
@@ -309,3 +307,8 @@ Here’s what happens:
 *Note: The Kivy Widget class, by design, is kept simple. There are no general properties such as background color and border color. Instead, the examples and documentation illustrate how to easily handle such simple things yourself, as we have done here, setting the color for the canvas, and drawing the shape. From a simple start, you can move to more elaborate customization. Higher-level built-in widgets, deriving from Widget, such as Button, do have convenience properties such as background_color, but these vary by widget. Use the API docs to see what is offered by a widget, and subclass if you need to add more functionality.*
 
 Congratulations! You’ve written your first Kivy widget. Obviously this was just a quick introduction. There is much more to discover. We suggest taking a short break to let what you just learned sink in. Maybe draw some nice pictures to relax? If you feel like you’ve understood everything and are ready for more, we encourage you to read on.
+
+Chapter Author, contributor
+------------------------------------------------------
+Author: `Kivy <https://kivy.org/>`_
+

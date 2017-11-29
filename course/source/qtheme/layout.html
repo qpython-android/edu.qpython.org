@@ -68,10 +68,11 @@
 
     //按钮事件
     function btnEvent(){
+        var seq = this.getAttribute('target')
         var a = this.parentElement.getElementsByTagName('pre')
-        if ( a && a.length == 1){
+        if ( a && a.length > 0){
             /**********有代码，调用控制台*************/
-            var code = a[0].lastChild.nodeValue
+            var code = a[seq].lastChild.nodeValue
             milib.qeditor(code)
         }else{
             //没有代码，调转
@@ -81,7 +82,7 @@
     }
     //获取赞赏
     function setPraise(){
-        var u = window.location.href.split('/') 
+        var u = window.location.href.split('/')
         var s = u[u.length-1].replace('.html', '')
         s = u[u.length-2]+'-'+s
 
@@ -122,7 +123,9 @@
         //将所有的button绑定事件
         var b = document.getElementsByTagName('button');
         for (var i = 0; i < b.length; i++) {
-            b[i].onclick = btnEvent;
+            b[i].setAttribute('target', i)
+            b[i].onclick = btnEvent ;
+
         }
     }
 </script>
