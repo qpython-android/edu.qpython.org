@@ -50,7 +50,7 @@ QSL4A支持的接口
 
 **QPython相关的接口**
 
-* QPy接口：在手机上运行QPython脚本 `(接口文档) <>`_
+* QPy接口：在手机上运行QPython脚本 `(接口文档) <http://www.qpython.org/en/guide_androidhelpers.html#qpyinterfacefacade>`_
 
 
 示例代码
