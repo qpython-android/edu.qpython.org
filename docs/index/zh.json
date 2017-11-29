@@ -143,8 +143,17 @@
         "cat":"featured",
         "level": 3,
         "logo": "http://edu.qpython.org/static/course-sl4a.png",
-        "open": 0,
+        "open": 1,
         "courses":[
+            {
+                "rdate":"2017-06-15",
+                "link":"http://edu.qpython.org/qsl4a-develop/cn/index.html",
+                "smodule":"qpython-webapp-principle",
+                "description":"QSL4A是Python调用安卓的桥梁",
+                "title":"QSL4A介绍",
+                "ver":"1.0.0",
+                "downloads": "10,000+"
+            }
         ]
     },
     {
