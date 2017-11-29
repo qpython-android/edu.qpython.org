@@ -63,7 +63,8 @@ if __name__ == &#39;__main__&#39;:
 <p><em>Note: You may be wondering why you have to import App and Widget separately, instead of doing something like from kivy import *. While shorter, this would have the disadvantage of polluting your namespace and make the start of the application potentially much slower. It can also introduce ambiguity into class and variable naming, so is generally frowned upon in the Python community. The way we do it is faster and cleaner.</em></p>
 <p><strong>Adding Behaviour</strong></p>
 <p>Let’s now add some actual behaviour to the widget, i.e. make it react to user input. Change the code like so:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>from kivy.app import App
+<div class="highlight-default"><div class="highlight"><pre><span></span>#qpy:kivy
+from kivy.app import App
 from kivy.uix.widget import Widget
 class MyPaintWidget(Widget):
     def on_touch_down(self, touch):
