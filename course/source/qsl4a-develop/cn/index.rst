@@ -60,12 +60,12 @@ QSL4A支持的接口
 
 ::
 
-    #-*-coding:utf8;-*-
-    import androidhelper
-    droid = androidhelper.Android()
-    line = droid.dialogGetInput()
-    s = "Hello, %s" % (line.result,)
-    droid.makeToast(line)
+    ^0$import androidhelper
+    ^0$droid = androidhelper.Android()
+    ^0$line = droid.dialogGetInput()
+    ^0$s = "Hello, %s" % (line.result,)
+    ^0$droid.makeToast(line)
+
 
 <button>Run ...</button>
 

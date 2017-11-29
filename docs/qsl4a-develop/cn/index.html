@@ -77,12 +77,11 @@ HAS_SOURCE:  true
 <div class="section" id="id28">
 <h2>示例代码<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h2>
 <p>在安卓中，可以引入androidhelper模块来载入QSL4A的支持。下面我们来运行一个简单的QSL4A脚本来体验下：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#-*-coding:utf8;-*-</span>
-<span class="kn">import</span> <span class="nn">androidhelper</span>
-<span class="n">droid</span> <span class="o">=</span> <span class="n">androidhelper</span><span class="o">.</span><span class="n">Android</span><span class="p">()</span>
-<span class="n">line</span> <span class="o">=</span> <span class="n">droid</span><span class="o">.</span><span class="n">dialogGetInput</span><span class="p">()</span>
-<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Hello, </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">result</span><span class="p">,)</span>
-<span class="n">droid</span><span class="o">.</span><span class="n">makeToast</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span>import androidhelper
+droid = androidhelper.Android()
+line = droid.dialogGetInput()
+s = &quot;Hello, %s&quot; % (line.result,)
+droid.makeToast(line)
 </pre></div>
 </div>
 <button class="button">Run ...</button>
