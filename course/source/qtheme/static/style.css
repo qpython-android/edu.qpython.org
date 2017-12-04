@@ -200,10 +200,7 @@ li {
         z-index: 10;
     }
     .margin-header {
-        margin-top: 100px;
-    }
-    #example-navbar-collapse {
-        overflow-y: hidden !important;
+        margin-top: 100px !important;
     }
 }
 
