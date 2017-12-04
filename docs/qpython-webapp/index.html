@@ -1,27 +1,57 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>QPython WebApp Principle</title>
 <link rel="stylesheet" href="../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
-<script type="text/javascript">
-var DOCUMENTATION_OPTIONS = {
-URL_ROOT:    '../',
-VERSION:     '0.9',
-COLLAPSE_INDEX: false,
-FILE_SUFFIX: '.html',
-HAS_SOURCE:  true
-};
-</script>
-<script type="text/javascript" src="../static/jquery.js"></script>
-<script type="text/javascript" src="../static/underscore.js"></script>
-<script type="text/javascript" src="../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body role="document">
-<main class="contain">
+<body>
+<div class="header doc-header web-show">
+<div class="col-sm-offset-2 col-sm-8  index-header">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+<span class="sr-only">切换导航</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/index.html" class="logo"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+<ul class="header-title collapse navbar-collapse" id="example-navbar-collapse" >
+<li>
+<a href="http://www.qpython.org/index.html">Home</a>
+</li>
+<li>
+<a href="http://www.qpython.org/document.html">Guide</a>
+</li>
+<li class="header-phone-selected">
+<a href="/index.html" class="header-selected">Course</a>
+<span class="header-title-selected"></span>
+</li>
+<li>
+<a href="http://www.aipy.org">AIPY</a>
+</li>
+<li>
+<a target="_blank" href="https://github.com/qpython-android/qpython">Github</a>
+</li>
+</ul>
+<div class="search-box hidden-xs">
+<form action="search.html">
+<input type="search" name="q" placeholder="keyword">
+<input type="hidden" name="check_keywords" value="yes" />
+<input type="hidden" name="area" value="default" />
+<button><img src="http://www.qpython.org/static/ic_search.png"></button>
+</form>
+</div>
+</div>
+</div>
+<main class="contain web-content">
 <div class="document">
 <div class="documentwrapper">
 <div class="bodywrapper">
@@ -34,14 +64,14 @@ HAS_SOURCE:  true
 </div>
 <div class="section" id="advantages">
 <h2>Advantages<a class="headerlink" href="#advantages" title="Permalink to this headline">¶</a></h2>
-<p>There are lots of mobile WebApp solutions, like cordova, phonegap etc, and compared to them, QPython&#8217;s WebApp has the following advantages.</p>
-<p><em>QPython is a powerful Python engine that can handle many logical jobs, effectively reducing data transfer time and enhancing your app&#8217;s user experience</em></p>
+<p>There are lots of mobile WebApp solutions, like cordova, phonegap etc, and compared to them, QPython’s WebApp has the following advantages.</p>
+<p><em>QPython is a powerful Python engine that can handle many logical jobs, effectively reducing data transfer time and enhancing your app’s user experience</em></p>
 <p><em>QPython supports massive Python libraries, you could import them in your project, so that you could save much develop time.</em></p>
 <p><em>It is very convenient for development with QPython, you can complete your development just in palm. And you could develop from PC then transfer to your mobile to run</em></p>
 </div>
 <div class="section" id="how-does-webapp-work-in-qpython">
 <h2>How does WebApp work in QPython<a class="headerlink" href="#how-does-webapp-work-in-qpython" title="Permalink to this headline">¶</a></h2>
-<p>QPython WebApp contains the following components: WebApp service and Webview. The WebApp service runs in the background and is responsible for responding to user&#8217;s input. WebView is a front component, which shows the user interface and and is responsible for responding to render user interactions, such as scrolling, click the button and so on.</p>
+<p>QPython WebApp contains the following components: WebApp service and Webview. The WebApp service runs in the background and is responsible for responding to user’s input. WebView is a front component, which shows the user interface and and is responsible for responding to render user interactions, such as scrolling, click the button and so on.</p>
 <p><strong>1</strong> When you run a WebApp program from QPython, QPython launch the WebApp service in the background, at the same time, QPython will start a webview which loads the entry link declared in the program header in the front.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#qpy:webapp:&lt;webapp-title&gt;</span>
 <span class="c1">#qpy://&lt;webapp-address&gt;:&lt;webapp-port&gt;/&lt;webapp-path&gt;</span>
@@ -63,9 +93,21 @@ The developer could rewrite the __exit function to defines the exit behaviors.</
 <div class="clearer"></div>
 </div>
 </main>
-<footer>
+<div class="star-footer">
 <img onclick="openPurchase()" src="../static/star.jpg">
 <div id="praise"><span>0</span> persons have rewarded</div>
+</div>
+<div class="foo"></div>
+<footer class="clearfix fixfooter web-show">
+<div class="col-sm-offset-2 col-sm-6 footer-div1">
+<div class="footer-block-item">
+<span class="footer-item1">Built with Sphinx using a theme provid by QPython.</span>
+<span class="footer-item2 visible-xs">Copyight 2017, QPython.</span>
+</div>
+</div>
+<div class="col-sm-2 footer-div2">
+<a href="/index.html" class="pull-right"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
 </footer>
 <script>
 var milib;
@@ -152,10 +194,22 @@ initCode();
 //将所有的button绑定事件
 var b = document.getElementsByTagName('button');
 for (var i = 0; i < b.length; i++) {
+if (b[i].className=='button') {
 b[i].setAttribute('target', i)
 b[i].onclick = btnEvent ;
 }
 }
+}
+$(function(){
+var url = location.href.split('?');
+if (url.length === 2) {
+var c = url[1].split('=');
+if (c[1] == 'web') {
+$('.web-show').css('display','block');
+$('.web-content').addClass('margin-top');
+}
+}
+})
 </script>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
