@@ -18,18 +18,18 @@ QPython支持WebApp，能让所有的Web开发者马上开始快速移动开发�
 
 QPython中的WebApp是如何工作的
 ----------------------------
-QPython的WebApp包含以下几个模块： WebApp服务和Webview。WebApp服务在后台运行并且负责响应用户的输入， WebView是一个前段组件，它复杂显示用户交互界面和负责响应用户的交互，比如界面展示，界面滚动，点击等等。
+QPython的WebApp包含以下几个模块： WebApp服务和Webview。WebApp服务在后台运行并且负责响应用户的输入， WebView是一个前端组件，它负责显示用户交互界面和负责响应用户的交互，比如界面展示，界面滚动，点击等等。
 
-**1** 当你从QPython运行一个WebApp程序时，QPython在后台启动WebApp服务，同时，QPython会在前端启动一个Webview去载入程序头部盛宁的WebApp入口链接。
+**1** 当你从QPython运行一个WebApp程序时，QPython在后台启动WebApp服务，同时，QPython会在前端启动一个Webview去载入程序头部声明的WebApp入口链接。
 
 ::
 
 #qpy:webapp:<webapp-title>
 #qpy://<webapp-address>:<webapp-port>/<webapp-path>
 
-**2** 然后用户能够开始用WEB的模式和应用进行交互，因此开发者能够用Web开发弄的模式去编写代码。
+**2** 然后用户能够开始用WEB的模式和应用进行交互，因此开发者能够用Web开发的模式去编写代码。
 
-**3** 当用户靠点击左上角的箭头退出应用是，程序将会请求 **http://<webapp-address><:webapp-port>/__exit** 这个URL来退出程序，开发能够重写其对应的逻辑函数 __exit 来定义退出行为。
+**3** 当用户靠点击左上角的箭头退出应用时，程序将会请求 **http://<webapp-address><:webapp-port>/__exit** 这个URL来退出程序，开发能够重写其对应的逻辑函数 __exit 来定义退出行为。
 
 作者
 ------------------------------------------------------
