@@ -138,7 +138,7 @@
                             </li>
                         </ol>
                     </div>
-                    <ul class="sc-page">
+                    <ul class="sc-page" v-if="c_page[tag] > 6">
                       <li v-if=" c_page[tag] > 1 " @click="change_page(c_page[tag]-1)">&laquo;</li>
                       <li class="active">{{c_page[tag]}}</li>
                       <li v-if="is_has_next() === true" @click="change_page(c_page[tag]+1)">&raquo;</li>

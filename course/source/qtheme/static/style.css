@@ -12,9 +12,14 @@ body {
 }
 ol {padding-left:10px}
 ul {list-style:none;padding-left:10px;}
-
-li {
-
+h1 {
+    font-size: 20px;
+}
+h2 {
+    font-size: 28px;
+}
+h3 {
+    font-size: 18px;
 }
 
 /************* common  ***************/
