@@ -18,6 +18,7 @@ li {
 }
 
 /************* common  ***************/
+/* same css is useless */
 @media screen and (min-width: 768px) {
     .foo {
         height: 80px;
@@ -200,6 +201,9 @@ li {
     }
     .margin-header {
         margin-top: 100px;
+    }
+    #example-navbar-collapse {
+        overflow-y: hidden !important;
     }
 }
 
