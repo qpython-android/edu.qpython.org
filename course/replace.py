@@ -34,7 +34,7 @@ for x in filelist:
     #处理
     _temp=  _temp.replace('_static', 'static').replace('_images', 'images').replace('<p>&lt;button&gt;', '<button class="button">').replace('&lt;/button&gt;</p>', '</button>').replace('&#8221;','"')
     #jumpbutton
-    reg = r'<p>&lt;jumpbutton\s+data-url="(.+)"(?=&gt;)&gt;(.+)&lt;/jumpbutton&gt;</p>'
+    reg = r'<p>&lt;jumpbutton\s+data-url=["”](.+)["”](?=&gt;)&gt;(.+)&lt;/jumpbutton&gt;</p>'
     _temp = re.sub(reg, call_repl_jumpbutton, _temp)
 
     #video
