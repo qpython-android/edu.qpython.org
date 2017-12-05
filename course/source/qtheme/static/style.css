@@ -351,9 +351,9 @@ h3 {
     padding-right: 15px;
 }
 div.highlight {
-    padding: 10px 20px;
+    /*padding: 10px 20px;*/
     background-color: #f4f4f4;
-    border: 1.5px solid #979797;
+    /*border: 1.5px solid #979797;*/
     border-radius: 3px;
     margin-top: 25px;
     margin-bottom: 25px;
