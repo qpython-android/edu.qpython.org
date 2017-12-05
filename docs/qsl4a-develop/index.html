@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<title>QSL4A - QPython’s Android script layer</title>
+<link rel="stylesheet" href="../static/style.css" type="text/css" />
+<link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true
+};
+</script>
+<script type="text/javascript" src="../static/jquery.js"></script>
+<script type="text/javascript" src="../static/underscore.js"></script>
+<script type="text/javascript" src="../static/doctools.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body role="document">
+<div class="header doc-header web-show">
+<div class="col-sm-offset-2 col-sm-8  index-header">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+<span class="sr-only">切换导航</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/index.html" class="logo"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+<ul class="header-title collapse navbar-collapse" id="example-navbar-collapse" >
+<li>
+<a href="http://www.qpython.org/index.html">Home</a>
+</li>
+<li>
+<a href="http://www.qpython.org/document.html">Guide</a>
+</li>
+<li class="header-phone-selected">
+<a href="/index.html" class="header-selected">Course</a>
+<span class="header-title-selected"></span>
+</li>
+<li>
+<a href="http://www.aipy.org">AIPY</a>
+</li>
+<li>
+<a target="_blank" href="https://github.com/qpython-android/qpython">Github</a>
+</li>
+</ul>
+<div class="search-box hidden-xs">
+<form action="search.html">
+<input type="search" name="q" placeholder="keyword">
+<input type="hidden" name="check_keywords" value="yes" />
+<input type="hidden" name="area" value="default" />
+<button><img src="http://www.qpython.org/static/ic_search.png"></button>
+</form>
+</div>
+</div>
+</div>
+<main class="contain web-content">
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="qsl4a-qpython-s-android-script-layer">
+<h1>QSL4A - QPython&#8217;s Android script layer<a class="headerlink" href="#qsl4a-qpython-s-android-script-layer" title="Permalink to this headline">¶</a></h1>
+<p>SL4A is an acronym for Android&#8217;s script layer, QSL4A is QPython&#8217;s Android script layer.</p>
+<div class="section" id="what-is-sl4a">
+<h2>What is SL4A?<a class="headerlink" href="#what-is-sl4a" title="Permalink to this headline">¶</a></h2>
+<p>The full name of SL4A Scripting Layer for Android, as the name suggests is Android&#8217;s script architecture layer, Its purpose is to develop Android applications using well-known scripting languages.Its working principle is based on RPC remote call, through the local script parser and the remote native Android server layer APK information exchange,That is to achieve a remote agent,The local script function calls is encapsulated by JSON format,pass to the Remote ECS APK and proceed to the actual android system function call,and the results of the operation will be fed back to the local script parser,finally the terminal will show the results of the operation.</p>
+<p>QPython integrated support of SL4A, users can easily be invoked by Andrews characteristics Python code, by SL4A.</p>
+</div>
+<div class="section" id="qsl4a-supported-interfaces">
+<h2>QSL4A supported interfaces<a class="headerlink" href="#qsl4a-supported-interfaces" title="Permalink to this headline">¶</a></h2>
+<p>You need to turn on the QPython permission settings in your Android system settings to use the associated SL4A interface.</p>
+<p><strong>System application interface</strong></p>
+<ul class="simple">
+<li>Including clipboard, Intent object, broadcast, vibration, network status, version number, send mail, prompts, Input boxes, etc. <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html">(Interface documentation)</a></li>
+<li>Application: Mainly as an application management interface <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#applicationmanagerfacade">(Interface documentation)</a></li>
+<li>ActivityResult??In Android control ActivityResult the interface of behavior <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#activityresultfacade">(Interface documentation)</a></li>
+<li>Common Intent??Access two-dimensional code, Use XX application to view the interface <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#commonintentsfacade">(Interface documentation)</a></li>
+</ul>
+<p><strong>Android related device interface</strong></p>
+<ul class="simple">
+<li>Camera??Access &amp; recall device&#8217;s camera interface <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#camerafacade">(Interface documentation)</a></li>
+<li>Contact??Contact access interface <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#contactsfacade">(Interface documentation)</a></li>
+<li>Location??Access location interface <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#locationfacade">(Interface documentation)</a></li>
+<li>Phone: Access the phone interface <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#phonefacade">(Interface documentation)</a></li>
+<li></li>
+<li>Media recording: able to control recording or video <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#mediarecorderfacade">(Interface documentation)</a></li>
+<li>Sensor Management: Access Control &amp; Sensor device <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#sensormanagerfacade">(Interface documentation)</a></li>
+<li>Settings: Ability to set device screen, flight mode, ringtone mode, vibration mode, volume, brightness, etc. <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#settingsfacade">(Interface documentation)</a></li>
+<li>SMS: equipment can be access to SMS <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#smsfacade">(Interface documentation)</a></li>
+<li>Speech recognition: Can recognize the user&#8217;s speech and returns the most likely outcome <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#speechrecognitionfacade">(Interface documentation)</a></li>
+<li>Tone Generator: The ability to generate DTMF speech from a given phone number <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#tonegeneratorfacade">(?ӿ??ĵ?)</a></li>
+<li>Wake lock: The device&#8217;s wake lock interface <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#wakelockfacade">(Interface documentation)</a></li>
+<li>WIFI: Device WIFI Management <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#wififacade">(Interface documentation)</a></li>
+<li>Battery Management: Provides the device&#8217;s battery management interface <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#batterymanagerfacade">(Interface documentation)</a></li>
+<li>Media Player: Media Player Settings <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#mediaplayerfacade">(Interface documentation)</a></li>
+<li>Preferences: Access / Control Preferences <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#preferencesfacade">(Interface documentation)</a></li>
+<li>Text Voice: Control text to voice output <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#texttospeechfacade">(Interface documentation)</a></li>
+<li>Bluetooth: Control Bluetooth devices on your phone <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#bluetoothfacade">(Interface documentation)</a></li>
+<li>Signal strength: access phone signal strength information <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#signalstrengthfacade">(Interface documentation)</a></li>
+<li>Webcam: A camera that controls the phone <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#webcamfacade">(Interface documentation)</a></li>
+<li>User interface: UI interface is used to control related exhibits, such as a text box, the password input box, the status bar, progress bar, date picker, etc. <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#uifacade">(Interface documentation)</a></li>
+<li>NFC: NFC related control, mainly provided in the NFC mode master/slave exchange information <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#nfc">(Interface documentation)</a></li>
+<li>USB Host Sequence: A device used to control USB-like sequences from Android that has a USB host controller <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#usb-host-serial-facade">(Interface documentation)</a></li>
+</ul>
+<p><strong>QPython relevant interface</strong></p>
+<ul class="simple">
+<li>QPy interface??Run QPython script on your phone <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#qpyinterfacefacade">(Interface documentation)</a></li>
+</ul>
+</div>
+<div class="section" id="sample-code">
+<h2>Sample Code<a class="headerlink" href="#sample-code" title="Permalink to this headline">¶</a></h2>
+<p>In Android, you can import the androidhelper module to load QSL4A support.Let&#8217;s run a simple QSL4A script to experience the following:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>import androidhelper
+droid = androidhelper.Android()
+line = droid.dialogGetInput()
+s = &quot;Hello, %s&quot; % (line.result,)
+droid.makeToast(line)
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+</main>
+<div class="star-footer">
+<img onclick="openPurchase()" src="../static/star.jpg">
+<div id="praise"><span>0</span> persons have rewarded</div>
+</div>
+<div class="foo"></div>
+<footer class="clearfix fixfooter web-show">
+<div class="col-sm-offset-2 col-sm-6 footer-div1">
+<div class="footer-block-item">
+<span class="footer-item1">Built with Sphinx using a theme provid by QPython.</span>
+<span class="footer-item2 visible-xs">Copyight 2017, QPython.</span>
+</div>
+</div>
+<div class="col-sm-2 footer-div2">
+<a href="/index.html" class="pull-right"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+</footer>
+<script>
+var milib;
+if (milib==undefined) {
+var milib = function(){
+};
+milib.qeditor = function(str){
+alert('please open it with QPython browser')
+};
+milib.getPurchaseNumber = function(str){
+//alert('getPurchaseNumber:'+str)
+return "10+";
+};
+milib.a8playVideoFromGW= function(url){
+window.open(url)
+};
+milib.qpylibinstall = function(cat,url,target){
+window.open(url)
+};
+milib.gotoIfPay = function(url, packageId, packageUrl){
+window.open(url)
+};
+} else {
+}
+function openPurchase() {
+//获取标识
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+milib.openPurchaseActivity(s)
+}
+//按钮事件
+function btnEvent(){
+var seq = this.getAttribute('target')
+var a = this.parentElement.getElementsByTagName('pre')
+if ( a && a.length > 0){
+/**********有代码，调用控制台*************/
+var code = a[seq].lastChild.nodeValue
+milib.qeditor(code)
+}else{
+//没有代码，调转
+var url = this.getAttribute('data-url');
+window.open(url);
+}
+}
+//获取赞赏
+function setPraise(){
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+var i = document.getElementById('praise').getElementsByTagName('span')[0]
+var num = milib.getPurchaseNumber(s);
+i.innerHTML = num
+}
+//初始化代码显示
+function initCode(){
+var prearr = document.getElementsByTagName('pre');
+for (var i = 0; i < prearr.length; i++) {
+var temp_data = prearr[i].lastChild.nodeValue
+//正则处理 lavel5
+temp_data = temp_data.replace(/\^2\$/g, spaceString(2));
+temp_data = temp_data.replace(/\^4\$/g, spaceString(4));
+temp_data = temp_data.replace(/\^6\$/g, spaceString(6));
+temp_data = temp_data.replace(/\^8\$/g, spaceString(8));
+temp_data = temp_data.replace(/\^10\$/g, spaceString(10));
+temp_data = temp_data.replace(/\^12\$/g, spaceString(12));
+temp_data = temp_data.replace(/\^16\$/g, spaceString(16));
+temp_data = temp_data.replace(/\^20\$/g, spaceString(20));
+//set
+prearr[i].lastChild.nodeValue = temp_data;
+}
+}
+//产生空格
+function spaceString(num){
+var v = ''
+for (var i = 0; i < num; i++) {
+v += ' ';
+}
+return v;
+}
+window.onload = function(){
+setPraise();
+initCode();
+//将所有的button绑定事件
+var b = document.getElementsByTagName('button');
+for (var i = 0; i < b.length; i++) {
+if (b[i].className=='button') {
+b[i].setAttribute('target', i)
+b[i].onclick = btnEvent ;
+}
+}
+}
+$(function(){
+var url = location.href.split('?');
+if (url.length === 2) {
+var c = url[1].split('=');
+if (c[1] == 'web') {
+$('.web-show').css('display','block');
+$('.web-content').addClass('margin-header');
+}
+}
+})
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-103260045-3', 'auto');
+ga('send', 'pageview');
+</script>
+</body>
+</html>
