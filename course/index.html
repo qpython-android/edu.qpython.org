@@ -61,13 +61,19 @@
                         <div id="myCarousel" class="carousel slide" data-ride="carousel">
                             <!-- 轮播（Carousel）指标 -->
                             <ol class="carousel-indicators" >
-                                <li data-target="#myCarousel" v-for=" v,k in ad_data" :data-slide-to="k" :class="{active: k===0}" ></li>
+                                <li data-target="#myCarousel" data-slide-to="0" class="active" ></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
                             </ol>
                             <!-- 轮播（Carousel）项目 -->
                             <div class="carousel-inner">
-                                <div v-for=" v,k in ad_data" class="item" :class="{active: k===0}">
-                                    <a :href="v.ad_link" target="_blank">
-                                        <img :src="v.ad_img" alt="picture">
+                                <div class="item active" >
+                                    <a href="http://edu.qpython.org/activity-edu.html" target="_blank">
+                                        <img src="http://apu.quseit.com/static/adimg/activity-qpython-edu.png" alt="picture">
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="http://edu.qpython.org/activity-qpypi.html" target="_blank">
+                                        <img src="http://apu.quseit.com/static/adimg/activity-qpython-qpypi.png" alt="picture">
                                     </a>
                                 </div>
                             </div>

@@ -3,7 +3,6 @@ var STATUS = false;
 var vm = new Vue({
   el: '#app',
   data: {
-    ad_data: {},
     content: {},
     tag: 'featured',
     c_page: {
@@ -16,14 +15,8 @@ var vm = new Vue({
   },
   created: function () {
     var that = this;
-    $.getJSON("http://quseit.cn:33333/?type=head&callback=?", 
-      function(data){
-        that.ad_data = data.qpy.ext_ad.featured;
-      }
-    );
-    $.getJSON("http://quseit.cn:33333/?type=course&callback=?", 
-      function(data){
-        var _new = [];
+    $.get('/index/default.json', function(data){
+      var _new = [];
         var _featured = [];
         $.each(data, function(k, v){
           v.is_open = false;
@@ -37,8 +30,7 @@ var vm = new Vue({
           new: _new,
           featured: _featured
         };
-      }
-    );
+    })
   },
   methods: {
     toggle_tag: function(tag) {
