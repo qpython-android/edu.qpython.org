@@ -1,2 +1,0 @@
-QPython Online Courses
-=======================

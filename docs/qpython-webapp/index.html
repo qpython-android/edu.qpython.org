@@ -1,29 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>QPython WebApp Principle</title>
 <link rel="stylesheet" href="../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
-<script type="text/javascript">
-var DOCUMENTATION_OPTIONS = {
-URL_ROOT:    '../',
-VERSION:     '0.9',
-COLLAPSE_INDEX: false,
-FILE_SUFFIX: '.html',
-HAS_SOURCE:  true
-};
-</script>
-<script type="text/javascript" src="../static/jquery.js"></script>
-<script type="text/javascript" src="../static/underscore.js"></script>
-<script type="text/javascript" src="../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
-<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body role="document">
+<body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -76,14 +63,14 @@ HAS_SOURCE:  true
 </div>
 <div class="section" id="advantages">
 <h2>Advantages<a class="headerlink" href="#advantages" title="Permalink to this headline">¶</a></h2>
-<p>There are lots of mobile WebApp solutions, like cordova, phonegap etc, and compared to them, QPython&#8217;s WebApp has the following advantages.</p>
-<p><em>QPython is a powerful Python engine that can handle many logical jobs, effectively reducing data transfer time and enhancing your app&#8217;s user experience</em></p>
+<p>There are lots of mobile WebApp solutions, like cordova, phonegap etc, and compared to them, QPython’s WebApp has the following advantages.</p>
+<p><em>QPython is a powerful Python engine that can handle many logical jobs, effectively reducing data transfer time and enhancing your app’s user experience</em></p>
 <p><em>QPython supports massive Python libraries, you could import them in your project, so that you could save much develop time.</em></p>
 <p><em>It is very convenient for development with QPython, you can complete your development just in palm. And you could develop from PC then transfer to your mobile to run</em></p>
 </div>
 <div class="section" id="how-does-webapp-work-in-qpython">
 <h2>How does WebApp work in QPython<a class="headerlink" href="#how-does-webapp-work-in-qpython" title="Permalink to this headline">¶</a></h2>
-<p>QPython WebApp contains the following components: WebApp service and Webview. The WebApp service runs in the background and is responsible for responding to user&#8217;s input. WebView is a front component, which shows the user interface and and is responsible for responding to render user interactions, such as scrolling, click the button and so on.</p>
+<p>QPython WebApp contains the following components: WebApp service and Webview. The WebApp service runs in the background and is responsible for responding to user’s input. WebView is a front component, which shows the user interface and and is responsible for responding to render user interactions, such as scrolling, click the button and so on.</p>
 <p><strong>1</strong> When you run a WebApp program from QPython, QPython launch the WebApp service in the background, at the same time, QPython will start a webview which loads the entry link declared in the program header in the front.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#qpy:webapp:&lt;webapp-title&gt;</span>
 <span class="c1">#qpy://&lt;webapp-address&gt;:&lt;webapp-port&gt;/&lt;webapp-path&gt;</span>
