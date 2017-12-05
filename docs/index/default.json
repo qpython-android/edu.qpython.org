@@ -66,6 +66,48 @@
         "title":"QPython WebApp",
         "ver":"1.0.0",
         "downloads": "10,000+",
+        "cat":"featured",
+        "level": 2,
+        "open": 1,
+        "logo": "http://edu.qpython.org/static/course-qpython-webapp.png",
+        "courses":[
+            {
+                "rdate":"2017-06-15",
+                "link":"http://edu.qpython.org/qpython-webapp/index.html",
+                "smodule":"qpython-webapp-principle",
+                "description":"Why QPython WebApp",
+                "title":"QPython WebApp Principle",
+                "ver":"1.0.0",
+                "downloads": "10,000+"
+            },
+            {
+                "link":"http://edu.qpython.org/qpython-webapp/your-first-webapp.html",
+                "smodule":"qpython-webapp-your-first-webapp",
+                "description":"How to develop your first WebApp",
+                "title":"Your first WebApp",
+                "ver":"1.0.0",
+                "downloads": "10,000+"
+            },
+            {
+                "link":"http://edu.qpython.org/qpython-webapp/web-frameworks.html",
+                "smodule":"qpython-webapp-web-frameworks",
+                "description":"Develop WebApp with your familiar web framework",
+                "title":"Web Frameworks on QPython",
+                "ver":"1.0.0",
+                "downloads": "10,000+"
+            }
+        ]
+    },
+    {
+        "src":"http://qpython.org",
+        "rdate":"2017-06-15",
+        "author":"River",
+        "link":"http://edu.qpython.org/qpython-webapp/index.html",
+        "smodule":"qpython-webapp",
+        "description":"Introduce how to develop QPython WebApp",
+        "title":"QPython WebApp",
+        "ver":"1.0.0",
+        "downloads": "10,000+",
         "cat":"new",
         "level": 2,
         "open": 1,
@@ -148,7 +190,7 @@
             {
                 "rdate":"2017-06-15",
                 "link":"http://edu.qpython.org/qsl4a-develop/index.html",
-                "smodule":"qpython-webapp-principle",
+                "smodule":"qsl4a-develop-index",
                 "description":"QSL4A is the bridge of calling Android APIs with Python",
                 "title":"QSL4A Introduction",
                 "ver":"1.0.0",
