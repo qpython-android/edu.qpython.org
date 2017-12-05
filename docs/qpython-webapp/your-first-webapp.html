@@ -1,17 +1,29 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>QPython’s WebApp</title>
 <link rel="stylesheet" href="../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true
+};
+</script>
+<script type="text/javascript" src="../static/jquery.js"></script>
+<script type="text/javascript" src="../static/underscore.js"></script>
+<script type="text/javascript" src="../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body role="document">
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -58,13 +70,13 @@
 <div class="body" role="main">
 <div class="section" id="qpythons-webapp">
 <h1>QPython’s WebApp<a class="headerlink" href="#qpythons-webapp" title="Permalink to this headline">¶</a></h1>
-<p>WebApp is an app allows developers to quickly get started application development, QPython’s WebApp has the advantage of supporting common WebApps.Moreover, QPython lets the phone itself become a WebApp’s run container, support for handling complex program logic, therefore, it can greatly improve the WebApp user experience, while also increasing the flexibility of the development.WebApp statement</p>
+<p>WebApp is an app allows developers to quickly get started application development, QPython&#8217;s WebApp has the advantage of supporting common WebApps.Moreover, QPython lets the phone itself become a WebApp&#8217;s run container, support for handling complex program logic, therefore, it can greatly improve the WebApp user experience, while also increasing the flexibility of the development.WebApp statement</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#qpy:webapp:&lt;WebApp Program name&gt;</span>
 <span class="c1">#qpy://&lt;WebApp runs on which the IP，generally for this 127.0.0.1&gt;:&lt;The port on which WebApp is running&gt;/&lt;Corresponding WebApp URL path when Initializing&gt;</span>
 </pre></div>
 </div>
 <div class="section" id="webapp-s-run-process">
-<h2>WebApp’s Run process<a class="headerlink" href="#webapp-s-run-process" title="Permalink to this headline">¶</a></h2>
+<h2>WebApp&#8217;s Run process<a class="headerlink" href="#webapp-s-run-process" title="Permalink to this headline">¶</a></h2>
 <p>After the program is recognized as a WebApp run，QPython will let the program starts as a background service，At the same time in the front end will start a WebView component，Load the URL you specified in the program header(By the IP, port, URL path combination)For example, If the IP is 127.0.0.1, the port is 8080 and the URL path is hello / test, then the URL that WebView loads is：<a class="reference external" href="http://127.0.0.1:8080/hello/test">http://127.0.0.1:8080/hello/test</a> Web application exit principle</p>
 </div>
 <div class="section" id="exit-the-webapp">
@@ -73,7 +85,7 @@
 </div>
 <div class="section" id="e-g">
 <h2>E.g<a class="headerlink" href="#e-g" title="Permalink to this headline">¶</a></h2>
-<p>As QPython embedded Web development library, Let’s look at one of the easiest bottles - Hello world:</p>
+<p>As QPython embedded Web development library, Let&#8217;s look at one of the easiest bottles - Hello world:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#qpy:webapp: Bottle Sample
 #qpy://127.0.0.1:8080/hello/qpython
 from bottle import route, run, template
@@ -87,7 +99,7 @@ def exit():
 run(host=&#39;127.0.0.1&#39;, port=8080)
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>Click Run, copy the code to the editor and click Run to see the result.</p>
 <p>Of course, in QPython, It also provides support for other web development frameworks to help you streamline your work.</p>
 </div>

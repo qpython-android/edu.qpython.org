@@ -1,17 +1,29 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>Editor howto</title>
 <link rel="stylesheet" href="../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true
+};
+</script>
+<script type="text/javascript" src="../static/jquery.js"></script>
+<script type="text/javascript" src="../static/underscore.js"></script>
+<script type="text/javascript" src="../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body role="document">
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -63,24 +75,24 @@
 <div class="section" id="features">
 <h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
 <p>The editor allows you obviously edit or run your QPython script program or project. The QPython editor supports Python syntax highlighting and shows line numbers (there is no ability to go to the line by number though).</p>
-<p>There are the open, new, setting on the editor’s right-top area, which allow you open script or project, create script or project, and set the editor’s behaviors(like theme, font etc.).</p>
-<p>Syntax highlight feature make the editor be slow when open a large file, so the editor’s highlight is enable when the total lines are lower than this limit(default is 300), and you can adjust it to you want in editor’s setting page.</p>
-<p>In the editor’s bottom, the icons are siwtch to hotkeys, lock keyboard, goto, save, run, find, undo, redo, recent open, snippets.</p>
+<p>There are the open, new, setting on the editor&#8217;s right-top area, which allow you open script or project, create script or project, and set the editor&#8217;s behaviors(like theme, font etc.).</p>
+<p>Syntax highlight feature make the editor be slow when open a large file, so the editor&#8217;s highlight is enable when the total lines are lower than this limit(default is 300), and you can adjust it to you want in editor&#8217;s setting page.</p>
+<p>In the editor&#8217;s bottom, the icons are siwtch to hotkeys, lock keyboard, goto, save, run, find, undo, redo, recent open, snippets.</p>
 <img alt="QPython - editor's toolbar" src="http://edu.qpython.org/static/editor-toolbar-1.png" />
-<p>When you switch to the hot keys toolbar, the toolbar shows the following icons: switch to develop toolbar, untab, tab, TAB，DEF(def), IF(if), EF(elif), EL(else), FOR(for), IMT(import), IMF(from import), CLZ(class), RET(return), &#64;, :, =, “, ‘, ;, ,, +, -, <a href="#id1"><span class="problematic" id="id2">*</span></a>, /, &lt;, &gt;, (, ), [, ], {, }, #.</p>
+<p>When you switch to the hot keys toolbar, the toolbar shows the following icons: switch to develop toolbar, untab, tab, TAB，DEF(def), IF(if), EF(elif), EL(else), FOR(for), IMT(import), IMF(from import), CLZ(class), RET(return), &#64;, :, =, ", &#8216;, ;, ,, +, -, <a href="#id1"><span class="problematic" id="id2">*</span></a>, /, &lt;, &gt;, (, ), [, ], {, }, #.</p>
 <img alt="QPython - editor's hotkey toolbar" src="http://edu.qpython.org/static/editor-toolbar-2.png" />
 <p>Skilled using the toolbar can greatly accelerate your development</p>
 <p>When saving, don’t forget to add .py estension to the file name since the editor don’t do it for you.</p>
-<p>When you were opening a QPython project, you could swipe on the editor’s left to unfolder the project tree drawer, which allow you edit other file in the same project easily.</p>
+<p>When you were opening a QPython project, you could swipe on the editor&#8217;s left to unfolder the project tree drawer, which allow you edit other file in the same project easily.</p>
 <img alt="QPython - project tree" src="http://edu.qpython.org/static/editor-left.png" />
 </div>
 <div class="section" id="other">
 <h2>Other<a class="headerlink" href="#other" title="Permalink to this headline">¶</a></h2>
-<p>It’s big challenge for mobile inputting, the QPython team offers kinds of tools for improving development efficiency.</p>
+<p>It&#8217;s big challenge for mobile inputting, the QPython team offers kinds of tools for improving development efficiency.</p>
 <p><strong>Scan</strong>
-In QPython’s dashboard, there is a qrcode scanner, which can scan the qrcode and read the code into editor.</p>
+In QPython&#8217;s dashboard, there is a qrcode scanner, which can scan the qrcode and read the code into editor.</p>
 <p><strong>QEditor WebApp</strong>
-In QPYPI’s tools, there is a QEditor WebApp. After installing and running, it starts a WebApp service, allow user edit files from the computer’s browser in the same lan by visit some online editor.</p>
+In QPYPI&#8217;s tools, there is a QEditor WebApp. After installing and running, it starts a WebApp service, allow user edit files from the computer&#8217;s browser in the same lan by visit some online editor.</p>
 <img alt="QPython - QEditor" src="http://edu.qpython.org/static/qeditor.png" />
 <img alt="QPython - Start QEditor" src="http://edu.qpython.org/static/qeditor-run.png" />
 <p><em>As above shows, you could start develop by enter http://192.168.1.191:10000 on your computer browser</em></p>
@@ -95,7 +107,7 @@ tc = TestC()
 tc.ask_age()
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 </div>
 <div class="section" id="author-updated-time">
 <h2>Author &amp; updated time<a class="headerlink" href="#author-updated-time" title="Permalink to this headline">¶</a></h2>

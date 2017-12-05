@@ -1,17 +1,29 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>QPython WebApp Principle</title>
 <link rel="stylesheet" href="../../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true
+};
+</script>
+<script type="text/javascript" src="../../static/jquery.js"></script>
+<script type="text/javascript" src="../../static/underscore.js"></script>
+<script type="text/javascript" src="../../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body role="document">
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -71,14 +83,14 @@
 </div>
 <div class="section" id="qpythonwebapp">
 <h2>QPython中的WebApp是如何工作的<a class="headerlink" href="#qpythonwebapp" title="Permalink to this headline">¶</a></h2>
-<p>QPython的WebApp包含以下几个模块： WebApp服务和Webview。WebApp服务在后台运行并且负责响应用户的输入， WebView是一个前段组件，它复杂显示用户交互界面和负责响应用户的交互，比如界面展示，界面滚动，点击等等。</p>
-<p><strong>1</strong> 当你从QPython运行一个WebApp程序时，QPython在后台启动WebApp服务，同时，QPython会在前端启动一个Webview去载入程序头部盛宁的WebApp入口链接。</p>
+<p>QPython的WebApp包含以下几个模块： WebApp服务和Webview。WebApp服务在后台运行并且负责响应用户的输入， WebView是一个前端组件，它负责显示用户交互界面和负责响应用户的交互，比如界面展示，界面滚动，点击等等。</p>
+<p><strong>1</strong> 当你从QPython运行一个WebApp程序时，QPython在后台启动WebApp服务，同时，QPython会在前端启动一个Webview去载入程序头部声明的WebApp入口链接。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#qpy:webapp:&lt;webapp-title&gt;</span>
 <span class="c1">#qpy://&lt;webapp-address&gt;:&lt;webapp-port&gt;/&lt;webapp-path&gt;</span>
 </pre></div>
 </div>
-<p><strong>2</strong> 然后用户能够开始用WEB的模式和应用进行交互，因此开发者能够用Web开发弄的模式去编写代码。</p>
-<p><strong>3</strong> 当用户靠点击左上角的箭头退出应用是，程序将会请求 <strong>http://&lt;webapp-address&gt;&lt;:webapp-port&gt;/__exit</strong> 这个URL来退出程序，开发能够重写其对应的逻辑函数 __exit 来定义退出行为。</p>
+<p><strong>2</strong> 然后用户能够开始用WEB的模式和应用进行交互，因此开发者能够用Web开发的模式去编写代码。</p>
+<p><strong>3</strong> 当用户靠点击左上角的箭头退出应用时，程序将会请求 <strong>http://&lt;webapp-address&gt;&lt;:webapp-port&gt;/__exit</strong> 这个URL来退出程序，开发能够重写其对应的逻辑函数 __exit 来定义退出行为。</p>
 </div>
 <div class="section" id="id3">
 <h2>作者<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
