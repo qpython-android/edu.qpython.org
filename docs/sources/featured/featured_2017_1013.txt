@@ -1,0 +1,18 @@
+Hello
+========
+
+
+What's new
+-----------------------------------------------
+
+We are working on the AIPY branch which offers data analysis and deeplearning features. It mainly includes numpy, scipy, matplitlib, pandas, theano, scikit-learn and keras etc. Please follow us on facebook (http://www.facebook.com/qpython) to get it's progress.
+
+A Chinese qpython users group is going to launching a QPython Programming contest, if you want to join this contest, please follow wechat GONGZHONGHAO qpython to get the detail information.
+
+
+Saving scripts to cloud
+-----------------------
+Newest QPython (2.0.6) has support saving script to cloud (require google login), Would you like give a try ?
+
+
+*If you want to talk to us, please leave a message to us through twitter ( @qpython ), and we will reply you as soon as possible.*

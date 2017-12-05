@@ -1,0 +1,13 @@
+QPython Daily Featured
+========================
+
+How to help with translate QPython to other languages?
+------------------------------------------------------
+Thank you very much for being willing to contribute, pelase see `QPython localization project <https://github.com/qpython-android/localization>`_ for more detail.  by *Railson Oliveira ( from facebook )*
+
+Run Kivy app don't show log information
+----------------------------------------
+How to avoid the qpython miss important log in kivy project ? Just see  `an example of changing qpython log behavior <https://github.com/qpython-android/qpython/issues/24>`_ by  *yingshaoxo ( from github )*
+
+
+*If you have any question, please leave a message to us, we will answer in next featured.*

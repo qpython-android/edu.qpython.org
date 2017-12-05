@@ -1,0 +1,23 @@
+QPython Featured
+========================
+
+How to close the push notification
+------------------------------------------------------
+Last time, someone asked how to close the push notification. The fact is QPython didn't support that function, so we stopped sending push notifications. But now QPython supports closing push notifications. Besides, QPython supports closing log notifications too. You can find these options in your QPython's setting page.
+
+
+We don't recommend to close notifications because you may lost some amazing featured contents.
+
+What's new recently
+--------------------
+We published a stable version (v2.0.5) a few days ago, which supports Russian language and fixes some bugs like FTP issue.
+
+We published a BETA version (v2.0.6) yesterday which fixes sqlite3 error (get it from https://github.com/qpython-android/qpython/releases) and allows users to call QPython API with service.
+
+
+The QPython community
+-------------------------
+More and more talent people join the QPython community (https://www.facebook.com/groups/qpython)  recently.  And we hope that we could learn from each other.
+
+
+*If you want to talk to us, please leave a message to us through twitter ( @qpython ), and we will reply you as soon as possible.*
