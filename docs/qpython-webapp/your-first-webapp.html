@@ -84,18 +84,51 @@ HAS_SOURCE:  true
 </div>
 <div class="section" id="e-g">
 <h2>E.g<a class="headerlink" href="#e-g" title="Permalink to this headline">¶</a></h2>
-<p>As QPython embedded Web development library, Let&#8217;s look at one of the easiest bottles - Hello world:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#qpy:webapp: Bottle Sample
-#qpy://127.0.0.1:8080/hello/qpython
-from bottle import route, run, template
-@route(&#39;/hello/&lt;name&gt;&#39;)
-def index(name):
-    return template(&#39;&lt;b&gt;Hello {{name}}&lt;/b&gt;!&#39;, name=name)
-@route(&#39;/__exit&#39;)
-def exit():
-    import os,signal
-    os.kill(os.getpid(), signal.SIGKILL)
-run(host=&#39;127.0.0.1&#39;, port=8080)
+<p>As QPython embedded Web development library, Let&#8217;s look at one of the easiest bottles - Hello world</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>#qpy:webapp:Hello Qpython
+#qpy://127.0.0.1:8080/
+&quot;&quot;&quot;
+This is a sample for qpython webapp
+&quot;&quot;&quot;
+from bottle import Bottle, ServerAdapter
+from bottle import run, debug, route, error, static_file, template
+######### QPYTHON WEB SERVER ###############
+class MyWSGIRefServer(ServerAdapter):
+    server = None
+    def run(self, handler):
+        from wsgiref.simple_server import make_server, WSGIRequestHandler
+        if self.quiet:
+            class QuietHandler(WSGIRequestHandler):
+            def log_request(*args, **kw): pass
+        self.options[&#39;handler_class&#39;] = QuietHandler
+    self.server = make_server(self.host, self.port, handler, **self.options)
+    self.server.serve_forever()
+    def stop(self):
+        import threading
+        threading.Thread(target=self.server.shutdown).start()
+        self.server.server_close()
+######### BUILT-IN ROUTERS ###############
+@route(&#39;/__exit&#39;, method=[&#39;GET&#39;,&#39;HEAD&#39;])
+def __exit():
+    global server
+    server.stop()
+@route(&#39;/assets/&lt;filepath:path&gt;&#39;)
+def serverstatic(filepath):
+    return static_file(filepath, root=&#39;/sdcard&#39;)
+######### WEBAPP ROUTERS WRITE YOUR CODE BELOW###############
+@route(&#39;/&#39;)
+def home():
+    return template(&#39;&lt;h1&gt;Hello {{name}} !&lt;/h1&gt;&lt;a href=&quot;/assets/qpython/projects/WebAppSample/main.py&quot;&gt;View source&lt;/a&gt;&lt;br /&gt;&lt;br /&gt; &lt;a href=&quot;http://edu.qpython.org/qpython-webapp/index.html&quot;&gt;&gt;&gt; About QPython Web App&lt;/a&gt;&#39;,name=&#39;QPython&#39;)
+######### WEBAPP ROUTERS ###############
+app = Bottle()
+app.route(&#39;/&#39;, method=&#39;GET&#39;)(home)
+app.route(&#39;/__exit&#39;, method=[&#39;GET&#39;,&#39;HEAD&#39;])(__exit)
+app.route(&#39;/assets/&lt;filepath:path&gt;&#39;, method=&#39;GET&#39;)(serverstatic)
+try:
+    server = MyWSGIRefServer(host=&quot;127.0.0.1&quot;, port=&quot;8080&quot;)
+    app.run(server=server,reloader=False)
+except Exception,ex:
+    print &quot;Exception: %s&quot; % repr(ex)
 </pre></div>
 </div>
 <button class="button">Run ...</button>

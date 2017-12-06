@@ -32,21 +32,60 @@ WebApp退出原理
 
 ::
 
-    #qpy:webapp:Bottle Sample
-    #qpy://127.0.0.1:8080/hello/qpython
-    from bottle import route, run, template
+    #qpy:webapp:Hello Qpython
+    #qpy://127.0.0.1:8080/
+    """
+    This is a sample for qpython webapp
+    """
+    from bottle import Bottle, ServerAdapter
+    from bottle import run, debug, route, error, static_file, template
 
-    @route('/hello/<name>')
-    def index(name):
-        ^4$return template('<b>Hello {{name}}</b>!', name=name)
+    ######### QPYTHON WEB SERVER ###############
+    class MyWSGIRefServer(ServerAdapter):
+        ^4$server = None
+        ^4$def run(self, handler):
+            ^8$from wsgiref.simple_server import make_server, WSGIRequestHandler
+            ^8$if self.quiet:
+                ^12$class QuietHandler(WSGIRequestHandler):
+                    ^12$def log_request(*args, **kw): pass
+                ^8$self.options['handler_class'] = QuietHandler
+            ^4$self.server = make_server(self.host, self.port, handler, **self.options)
+            ^4$self.server.serve_forever()
 
-    @route('/__exit')
-    def exit():
-        ^4$import os,signal
-        ^4$os.kill(os.getpid(), signal.SIGKILL)
+        ^4$def stop(self):
+            ^8$import threading
+            ^8$threading.Thread(target=self.server.shutdown).start()
+            ^8$self.server.server_close()
+
+    ######### BUILT-IN ROUTERS ###############
+    @route('/__exit', method=['GET','HEAD'])
+    def __exit():
+        ^4$global server
+        ^4$server.stop()
+
+    @route('/assets/<filepath:path>')
+    def server_static(filepath):
+        ^4$return static_file(filepath, root='/sdcard')
 
 
-    run(host='127.0.0.1', port=8080)
+    ######### WEBAPP ROUTERS WRITE YOUR CODE BELOW###############
+    @route('/')
+    def home():
+        ^4$return template('<h1>Hello {{name}} !</h1><a href="/assets/qpython/projects/WebAppSample/main.py">View source</a><br /><br /> <a href="http://edu.qpython.org/qpython-webapp/index.html">>> About QPython Web App</a>',name='QPython')
+
+    ######### WEBAPP ROUTERS ###############
+    app = Bottle()
+    app.route('/', method='GET')(home)
+    app.route('/__exit', method=['GET','HEAD'])(__exit)
+    app.route('/assets/<filepath:path>', method='GET')(server_static)
+
+    try:
+        ^4$server = MyWSGIRefServer(host="127.0.0.1", port="8080")
+        ^4$app.run(server=server,reloader=False)
+    except Exception,ex:
+        ^4$print "Exception: %s" % repr(ex)
+
+
 
 <button>Run ...</button>
 
