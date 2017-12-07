@@ -34,7 +34,7 @@ INSTALL WITH PYTHON'S PYPI
 
 AIPY库
 --------
-在AIPY库栏目中，QPython团队专门将与AI相关（包括神经网络、深度学习、数据统计和数学运算等等）的库整理进来，以便用户能够借助QPython在手机上就方便地进行AI相关编程学习。
+在AIPY库栏目中，QPython团队专门将与AI相关（包括神经网络、深度学习、数据统计和数学运算等等）的库整理进来，以便用户能够借助QPython在手机上进行AI相关编程学习。
 
 .. image:: http://edu.qpython.org/static/qpypi-aipy.png
     :alt: QPYPI - AIPY
