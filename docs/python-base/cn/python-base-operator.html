@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<title>简述</title>
+<link rel="stylesheet" href="../../static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true
+};
+</script>
+<script type="text/javascript" src="../../static/jquery.js"></script>
+<script type="text/javascript" src="../../static/underscore.js"></script>
+<script type="text/javascript" src="../../static/doctools.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body role="document">
+<div class="header doc-header web-show">
+<div class="col-sm-offset-2 col-sm-8  index-header">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+<span class="sr-only">切换导航</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/index.html" class="logo"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+<ul class="header-title collapse navbar-collapse" id="example-navbar-collapse" >
+<li>
+<a href="http://www.qpython.org/index.html">Home</a>
+</li>
+<li>
+<a href="http://www.qpython.org/document.html">Guide</a>
+</li>
+<li class="header-phone-selected">
+<a href="/index.html" class="header-selected">Course</a>
+<span class="header-title-selected"></span>
+</li>
+<li>
+<a href="http://www.aipy.org">AIPY</a>
+</li>
+<li>
+<a target="_blank" href="https://github.com/qpython-android/qpython">Github</a>
+</li>
+</ul>
+<div class="search-box hidden-xs">
+<form action="search.html">
+<input type="search" name="q" placeholder="keyword">
+<input type="hidden" name="check_keywords" value="yes" />
+<input type="hidden" name="area" value="default" />
+<button><img src="http://www.qpython.org/static/ic_search.png"></button>
+</form>
+</div>
+</div>
+</div>
+<main class="contain web-content">
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="id1">
+<h1>简述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>在 Python 中，运算符是执行算术或逻辑运算的特殊符号，操作的值被称为操作数。例如：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>这里，+ 是执行加法的运算符，5 和 6 是操作数，11 是操作的输出。</p>
+<p>运算符种类</p>
+<hr class="docutils" />
+<p>在 Python 中，支持以下类型的运算符：</p>
+<ul class="simple">
+<li>算术运算符</li>
+<li>比较（关系）运算符</li>
+<li>逻辑（布尔）运算符</li>
+<li>位运算符</li>
+<li>赋值运算符</li>
+<li><dl class="first docutils">
+<dt>特殊运算符</dt>
+<dd><ul class="first last">
+<li>成员运算符</li>
+<li>身份运算符</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>算术运算符</li>
+</ul>
+<hr class="docutils" />
+<p>算术运算符用于执行加、减、乘、除等数学运算。</p>
+<p>示例：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="n">x</span> <span class="o">-</span> <span class="n">y</span>
+<span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+<span class="n">x</span> <span class="o">/</span> <span class="n">y</span>  <span class="c1"># 总是浮点数</span>
+<span class="n">x</span> <span class="o">//</span> <span class="n">y</span>
+<span class="n">x</span> <span class="o">**</span> <span class="n">y</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p><strong>注意</strong>： 除法 / 运算的结果总是浮点数。例如：4 / 2 返回的是 2.0，而不是 2。</p>
+<p>比较运算符</p>
+<hr class="docutils" />
+<p>比较运算符又称关系运算符，用于比较值，根据条件返回 True 或 False。</p>
+<p>示例：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span>
+<span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span>
+<span class="n">x</span> <span class="o">==</span> <span class="n">y</span>
+<span class="n">x</span> <span class="o">!=</span> <span class="n">y</span>
+<span class="n">x</span> <span class="o">&gt;=</span> <span class="n">y</span>
+<span class="n">x</span> <span class="o">&lt;=</span> <span class="n">y</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<div class="section" id="id2">
+<h2>逻辑运算符<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>逻辑运算符又称布尔运算符，通常用于测试真假值。</p>
+<p>示例：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">y</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">x</span> <span class="ow">and</span> <span class="n">y</span>
+<span class="ow">not</span> <span class="n">x</span>
+<span class="ow">not</span> <span class="n">y</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+</div>
+<div class="section" id="id3">
+<h2>位运算符<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>位运算符作用于操作数，就像它们是二进制数字的字符串一样，它一点点地运行，因此而得名。</p>
+<p>例如：2 是二进制 10，7 是 111。</p>
+<p>令 x = 10（二进制 0000 1010），y = 4（二进制 0000 0100），进行位运算：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># 二进制 0000 1010</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># 二进制 0000 0100</span>
+<span class="n">x</span> <span class="o">&amp;</span> <span class="n">y</span>  <span class="c1"># 0000 0000</span>
+<span class="n">x</span> <span class="o">|</span> <span class="n">y</span>  <span class="c1"># 0000 1110</span>
+<span class="o">~</span><span class="n">x</span>  <span class="c1"># 1111 0101</span>
+<span class="n">x</span> <span class="o">^</span> <span class="n">y</span>  <span class="c1"># 0000 1110</span>
+<span class="n">x</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span>  <span class="c1"># 0000 0010</span>
+<span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span>  <span class="c1"># 0010 1000</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+</div>
+<div class="section" id="id4">
+<h2>赋值运算符<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>赋值运算符用于为变量赋值。</p>
+<p>例如：x = 5，是一个简单的赋值运算符，它将右侧的值 5 分配给左侧的变量 x。</p>
+<p>在 Python 中，有各种各样的复合运算符，例如：x += 5，先将变量 x 的值与 5 相加，再将最终结果分配给变量 x，等价于：x = x + 5。</p>
+</div>
+<div class="section" id="id5">
+<h2>特殊运算符<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>除以上运算符外，Python 还提供了一些特殊类型的运算符：</p>
+<ul class="simple">
+<li>身份运算符</li>
+<li>成员运算符</li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h2>身份运算符<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>身份运算符用于检查两个值（或变量）是否位于存储器的同一部分。</p>
+<p><strong>注意</strong>： 两个变量相等，并不意味着它们也相同。</p>
+<p>示例：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x1</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="s1">&#39;Python&#39;</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="s1">&#39;Python&#39;</span>
+<span class="n">x3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">y3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">x1</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">y1</span>
+<span class="n">x2</span> <span class="ow">is</span> <span class="n">y2</span>
+<span class="n">x3</span> <span class="ow">is</span> <span class="n">y3</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>可以看到 x1 和 y1 是相同值的整数，所以它们相等且相同。x2 和 y2（字符串）同样是这样。</p>
+<p>但 x3 和 y3 是列表，它们相等，但不相同。由于列表是可变的（可以更改），即使它们相等，解释器也会将它们分别存储在内存中。</p>
+</div>
+<div class="section" id="id7">
+<h2>成员运算符<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>成员运算符用于测试在序列（字符串、列表、元组、集合和字典）中是否可以找到一个值/变量。</p>
+<p><strong>注意</strong>： 在字典中，只能检测 key 是否存在，而不能检测 value。</p>
+<p>示例：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;Hello, World!&#39;</span>  <span class="c1"># 字符串</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s1">&#39;Python&#39;</span><span class="p">}</span>  <span class="c1"># 字典</span>
+<span class="s1">&#39;H&#39;</span> <span class="ow">in</span> <span class="n">x</span>
+<span class="s1">&#39;hello&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">x</span>
+<span class="mi">1</span> <span class="ow">in</span> <span class="n">y</span>
+<span class="s1">&#39;Python&#39;</span> <span class="ow">in</span> <span class="n">y</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>1这里，&#8217;H&#8217; 在 x 中，但 &#8216;hello&#8217; 不存在于 x 中（切记，Python 是区分大小写的）。同样地，1 是 key，&#8217;Python&#8217; 是字典 y 中的值。因此，&#8217;Python&#8217; in y 返回 False。</p>
+</div>
+<div class="section" id="id8">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>作者: <a class="reference external" href="http://blog.csdn.net/liang19890820">一去丶二三里</a></p>
+<p>提交: 2017/12/6</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+</main>
+<div class="star-footer">
+<img onclick="openPurchase()" src="../../static/star.jpg">
+<div id="praise"><span>0</span> persons have rewarded</div>
+</div>
+<div class="foo"></div>
+<footer class="clearfix fixfooter web-show">
+<div class="col-sm-offset-2 col-sm-6 footer-div1">
+<div class="footer-block-item">
+<span class="footer-item1">Built with Sphinx using a theme provid by QPython.</span>
+<span class="footer-item2 visible-xs">Copyight 2017, QPython.</span>
+</div>
+</div>
+<div class="col-sm-2 footer-div2">
+<a href="/index.html" class="pull-right"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+</footer>
+<script>
+var milib;
+if (milib==undefined) {
+var milib = function(){
+};
+milib.qeditor = function(str){
+alert('Please share this page to QPython then run it')
+};
+milib.getPurchaseNumber = function(str){
+//alert('getPurchaseNumber:'+str)
+return "10+";
+};
+milib.a8playVideoFromGW= function(url){
+window.open(url)
+};
+milib.qpylibinstall = function(cat,url,target){
+window.open(url)
+};
+milib.gotoIfPay = function(url, packageId, packageUrl){
+window.open(url)
+};
+} else {
+}
+function openPurchase() {
+//获取标识
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+milib.openPurchaseActivity(s)
+}
+//按钮事件
+function btnEvent(){
+var seq = this.getAttribute('target')-2
+var a = this.parentElement.getElementsByTagName('pre')
+if ( a && a.length > 0){
+/**********有代码，调用控制台*************/
+var code = a[seq].lastChild.nodeValue
+milib.qeditor(code)
+}else{
+//没有代码，调转
+var url = this.getAttribute('data-url');
+window.open(url);
+}
+}
+//获取赞赏
+function setPraise(){
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+var i = document.getElementById('praise').getElementsByTagName('span')[0]
+var num = milib.getPurchaseNumber(s);
+i.innerHTML = num
+}
+//初始化代码显示
+function initCode(){
+var prearr = document.getElementsByTagName('pre');
+for (var i = 0; i < prearr.length; i++) {
+var temp_data = prearr[i].lastChild.nodeValue
+//正则处理 lavel5
+temp_data = temp_data.replace(/\^2\$/g, spaceString(2));
+temp_data = temp_data.replace(/\^4\$/g, spaceString(4));
+temp_data = temp_data.replace(/\^6\$/g, spaceString(6));
+temp_data = temp_data.replace(/\^8\$/g, spaceString(8));
+temp_data = temp_data.replace(/\^10\$/g, spaceString(10));
+temp_data = temp_data.replace(/\^12\$/g, spaceString(12));
+temp_data = temp_data.replace(/\^16\$/g, spaceString(16));
+temp_data = temp_data.replace(/\^20\$/g, spaceString(20));
+//set
+prearr[i].lastChild.nodeValue = temp_data;
+}
+}
+//产生空格
+function spaceString(num){
+var v = ''
+for (var i = 0; i < num; i++) {
+v += ' ';
+}
+return v;
+}
+window.onload = function(){
+setPraise();
+initCode();
+//将所有的button绑定事件
+var b = document.getElementsByTagName('button');
+for (var i = 0; i < b.length; i++) {
+if (b[i].className=='button') {
+b[i].setAttribute('target', i)
+b[i].onclick = btnEvent ;
+}
+}
+}
+$(function(){
+var url = location.href.split('?');
+if (url.length === 2) {
+var c = url[1].split('=');
+if (c[1] == 'web') {
+$('.web-show').css('display','block');
+$('.web-content').addClass('margin-header');
+}
+}
+})
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-103260045-3', 'auto');
+ga('send', 'pageview');
+</script>
+</body>
+</html>

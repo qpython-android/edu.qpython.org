@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<title>简述</title>
+<link rel="stylesheet" href="../../static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true
+};
+</script>
+<script type="text/javascript" src="../../static/jquery.js"></script>
+<script type="text/javascript" src="../../static/underscore.js"></script>
+<script type="text/javascript" src="../../static/doctools.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body role="document">
+<div class="header doc-header web-show">
+<div class="col-sm-offset-2 col-sm-8  index-header">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+<span class="sr-only">切换导航</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/index.html" class="logo"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+<ul class="header-title collapse navbar-collapse" id="example-navbar-collapse" >
+<li>
+<a href="http://www.qpython.org/index.html">Home</a>
+</li>
+<li>
+<a href="http://www.qpython.org/document.html">Guide</a>
+</li>
+<li class="header-phone-selected">
+<a href="/index.html" class="header-selected">Course</a>
+<span class="header-title-selected"></span>
+</li>
+<li>
+<a href="http://www.aipy.org">AIPY</a>
+</li>
+<li>
+<a target="_blank" href="https://github.com/qpython-android/qpython">Github</a>
+</li>
+</ul>
+<div class="search-box hidden-xs">
+<form action="search.html">
+<input type="search" name="q" placeholder="keyword">
+<input type="hidden" name="check_keywords" value="yes" />
+<input type="hidden" name="area" value="default" />
+<button><img src="http://www.qpython.org/static/ic_search.png"></button>
+</form>
+</div>
+</div>
+</div>
+<main class="contain web-content">
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="id1">
+<h1>简述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>当仅在满足某个条件才会执行相应的代码时，需要进行决策。在 Python 中，由 if … elif … else 语句来实现。</p>
+<div class="section" id="if">
+<h2>if 语句<a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h2>
+<p>语法格式：</p>
+<dl class="docutils">
+<dt>if &lt;判断条件&gt;：</dt>
+<dd>&lt;执行语句……&gt;</dd>
+</dl>
+<p>当“判断条件”成立（True）时，才执行语句；反之，则不执行。</p>
+<p>执行语句可以为多行，以缩进来区分表示同一范围。</p>
+<p><strong>注意</strong>： 在 Python 中，非零值表示 True；None 和 0 表示 False。</p>
+<p>流程图：</p>
+<blockquote>
+<div><img alt="http://img.blog.csdn.net/20170416144600526" src="http://img.blog.csdn.net/20170416144600526" />
+</div></blockquote>
+<p>以购物为例（预算 500），进入商场，价格都是 1000+。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">price</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;纳尼，居然&#39;</span><span class="p">,</span> <span class="n">price</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;简直太贵了！&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;货比三家，再转转。&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>执行程序，输出如下：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>纳尼，居然 1000
+简直太贵了！
+货比三家，再转转。
+</pre></div>
+</div>
+</div>
+<div class="section" id="if-else">
+<h2>if…else 语句<a class="headerlink" href="#if-else" title="Permalink to this headline">¶</a></h2>
+<p>语法格式：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>if &lt;判断条件&gt;:
+    &lt;执行语句1……&gt;
+else:
+    &lt;执行语句2……&gt;
+</pre></div>
+</div>
+<p>当“判断条件”为 True 时，执行语句1；否则，执行语句2。</p>
+<p>流程图：</p>
+<img alt="http://img.blog.csdn.net/20170416145014731" src="http://img.blog.csdn.net/20170416145014731" />
+<p>既然 1000 贵了，好吧！开始讨价还价，降价到 300：</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd><p class="first">price = 300
+if price &gt; 500:</p>
+<blockquote>
+<div>print(&#8216;纳尼，居然&#8217;, price)
+print(&#8216;简直太贵了！&#8217;)</div></blockquote>
+<dl class="last docutils">
+<dt>else:</dt>
+<dd>print(price, &#8216;还算地道&#8217;)
+print(&#8216;来一打！&#8217;)
+print(&#8220;合适才买")</dd>
+</dl>
+</dd>
+</dl>
+<button class="button">Run ...</button>
+<p>执行程序，输出如下：</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>300 还算地道
+来一打！
+合适才买</dd>
+</dl>
+</div>
+<div class="section" id="if-elif-else">
+<h2>if…elif…else 语句<a class="headerlink" href="#if-elif-else" title="Permalink to this headline">¶</a></h2>
+<p>语法格式：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>if &lt;判断条件1&gt;:
+    &lt;执行语句1……&gt;
+elif &lt;判断条件2&gt;:
+    &lt;执行语句2……&gt;
+else:
+    &lt;执行语句3……&gt;
+</pre></div>
+</div>
+<p>elif 是 else if 的缩写，允许我们检查多个表达式。</p>
+<p>如果 if 的条件为 False，则检查下一个 elif 的状态，依次进行。倘若所有条件都为 False，则执行 else 中的语句（语句3）。</p>
+<p><strong>注意</strong>： if 和 else 只能有一个，但 elif 可以有多个，if … elif … else 中只有一个语句块可以根据条件来执行。</p>
+<p>流程图：</p>
+<img alt="http://img.blog.csdn.net/20170416145420452" src="http://img.blog.csdn.net/20170416145420452" />
+<p>一般，大部分顾客买东西都要讨价还价。当然，其中不乏土豪，只管买买买。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>price = 2000
+if price &gt; 1000:
+    print(&#39;这么贵，肯定是好东西。&#39;)
+    print(&#39;买、买、买！&#39;)
+elif price &gt; 500:
+    print(&#39;价格还行，值得拥有。&#39;)
+    print(&#39;买买买！&#39;)
+elif price &gt; 200:
+    print(&#39;先入手，合不合适再说。&#39;)
+    print(&#39;买买买。&#39;)
+else:
+    print(&#39;这么便宜，赶紧抢。&#39;)
+    print(&#39;买买买&#39;)
+print(&#39;管它多钱，反正我要买买买。&#39;)
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>执行程序，输出如下：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>这么贵，肯定是好东西。
+买、买、买！
+管它多钱，反正我要买买买。
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>嵌套 if 语句<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>可以将一个 if … elif … else 语句加入至另一个 if … elif … else 语句中，这被称为嵌套。</p>
+<p>任何数量的这些语句都可以嵌套在一起，要找出嵌套级别，缩进是唯一的方法。</p>
+<p>买东西，追求的是性价比，所以既要价格适中，又要质量有保证：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>price = 300
+quality = True
+if price &gt; 500:
+    print(&#39;纳尼，居然&#39;, price)
+    print(&#39;简直太贵了！&#39;)
+else:
+    print(price, &#39;价钱合适&#39;)
+    if quality:
+        print(&#39;质量也还不错&#39;)
+        print(&#39;来一打&#39;)
+    else:
+        print(&#39;质量不行&#39;)
+        print(&#39;算了，不要&#39;)
+    print(&#39;性价比较高再买&#39;)
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>输出如下：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">300</span> <span class="n">价钱合适</span>
+<span class="n">质量也还不错</span>
+<span class="n">来一打</span>
+<span class="n">性价比较高再买</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>作者: <a class="reference external" href="http://blog.csdn.net/liang19890820">一去丶二三里</a></p>
+<p>提交: 2017/12/6</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+</main>
+<div class="star-footer">
+<img onclick="openPurchase()" src="../../static/star.jpg">
+<div id="praise"><span>0</span> persons have rewarded</div>
+</div>
+<div class="foo"></div>
+<footer class="clearfix fixfooter web-show">
+<div class="col-sm-offset-2 col-sm-6 footer-div1">
+<div class="footer-block-item">
+<span class="footer-item1">Built with Sphinx using a theme provid by QPython.</span>
+<span class="footer-item2 visible-xs">Copyight 2017, QPython.</span>
+</div>
+</div>
+<div class="col-sm-2 footer-div2">
+<a href="/index.html" class="pull-right"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+</footer>
+<script>
+var milib;
+if (milib==undefined) {
+var milib = function(){
+};
+milib.qeditor = function(str){
+alert('Please share this page to QPython then run it')
+};
+milib.getPurchaseNumber = function(str){
+//alert('getPurchaseNumber:'+str)
+return "10+";
+};
+milib.a8playVideoFromGW= function(url){
+window.open(url)
+};
+milib.qpylibinstall = function(cat,url,target){
+window.open(url)
+};
+milib.gotoIfPay = function(url, packageId, packageUrl){
+window.open(url)
+};
+} else {
+}
+function openPurchase() {
+//获取标识
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+milib.openPurchaseActivity(s)
+}
+//按钮事件
+function btnEvent(){
+var seq = this.getAttribute('target')-2
+var a = this.parentElement.getElementsByTagName('pre')
+if ( a && a.length > 0){
+/**********有代码，调用控制台*************/
+var code = a[seq].lastChild.nodeValue
+milib.qeditor(code)
+}else{
+//没有代码，调转
+var url = this.getAttribute('data-url');
+window.open(url);
+}
+}
+//获取赞赏
+function setPraise(){
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+var i = document.getElementById('praise').getElementsByTagName('span')[0]
+var num = milib.getPurchaseNumber(s);
+i.innerHTML = num
+}
+//初始化代码显示
+function initCode(){
+var prearr = document.getElementsByTagName('pre');
+for (var i = 0; i < prearr.length; i++) {
+var temp_data = prearr[i].lastChild.nodeValue
+//正则处理 lavel5
+temp_data = temp_data.replace(/\^2\$/g, spaceString(2));
+temp_data = temp_data.replace(/\^4\$/g, spaceString(4));
+temp_data = temp_data.replace(/\^6\$/g, spaceString(6));
+temp_data = temp_data.replace(/\^8\$/g, spaceString(8));
+temp_data = temp_data.replace(/\^10\$/g, spaceString(10));
+temp_data = temp_data.replace(/\^12\$/g, spaceString(12));
+temp_data = temp_data.replace(/\^16\$/g, spaceString(16));
+temp_data = temp_data.replace(/\^20\$/g, spaceString(20));
+//set
+prearr[i].lastChild.nodeValue = temp_data;
+}
+}
+//产生空格
+function spaceString(num){
+var v = ''
+for (var i = 0; i < num; i++) {
+v += ' ';
+}
+return v;
+}
+window.onload = function(){
+setPraise();
+initCode();
+//将所有的button绑定事件
+var b = document.getElementsByTagName('button');
+for (var i = 0; i < b.length; i++) {
+if (b[i].className=='button') {
+b[i].setAttribute('target', i)
+b[i].onclick = btnEvent ;
+}
+}
+}
+$(function(){
+var url = location.href.split('?');
+if (url.length === 2) {
+var c = url[1].split('=');
+if (c[1] == 'web') {
+$('.web-show').css('display','block');
+$('.web-content').addClass('margin-header');
+}
+}
+})
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-103260045-3', 'auto');
+ga('send', 'pageview');
+</script>
+</body>
+</html>

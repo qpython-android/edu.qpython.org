@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<title>Python 运算符</title>
+<link rel="stylesheet" href="../../static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true
+};
+</script>
+<script type="text/javascript" src="../../static/jquery.js"></script>
+<script type="text/javascript" src="../../static/underscore.js"></script>
+<script type="text/javascript" src="../../static/doctools.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body role="document">
+<div class="header doc-header web-show">
+<div class="col-sm-offset-2 col-sm-8  index-header">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+<span class="sr-only">切换导航</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/index.html" class="logo"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+<ul class="header-title collapse navbar-collapse" id="example-navbar-collapse" >
+<li>
+<a href="http://www.qpython.org/index.html">Home</a>
+</li>
+<li>
+<a href="http://www.qpython.org/document.html">Guide</a>
+</li>
+<li class="header-phone-selected">
+<a href="/index.html" class="header-selected">Course</a>
+<span class="header-title-selected"></span>
+</li>
+<li>
+<a href="http://www.aipy.org">AIPY</a>
+</li>
+<li>
+<a target="_blank" href="https://github.com/qpython-android/qpython">Github</a>
+</li>
+</ul>
+<div class="search-box hidden-xs">
+<form action="search.html">
+<input type="search" name="q" placeholder="keyword">
+<input type="hidden" name="check_keywords" value="yes" />
+<input type="hidden" name="area" value="default" />
+<button><img src="http://www.qpython.org/static/ic_search.png"></button>
+</form>
+</div>
+</div>
+</div>
+<main class="contain web-content">
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="python">
+<h1>Python 运算符<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>简述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>在 Python 中，for 循环用于迭代序列（例如：列表、元组）或其他可迭代对象，迭代序列称为遍历。</p>
+</div>
+<div class="section" id="for">
+<h2>for 循环<a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h2>
+<p>语法格式：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>for &lt;val&gt; in &lt;序列&gt;:
+    &lt;循环体&gt;
+</pre></div>
+</div>
+<p>val 是一个变量，在每次迭代中，用于接收将序列中元素的值。</p>
+<p>循环会一直继续，直到到达序列的最后一项。循环体与其余的代码使用缩进分隔。</p>
+<p>流程图：</p>
+<img alt="http://img.blog.csdn.net/20170416152544984" src="http://img.blog.csdn.net/20170416152544984" />
+<div class="highlight-default"><div class="highlight"><pre><span></span>for letter in &#39;Jay&#39;:
+    print(&#39;当前字母：&#39;, letter)
+songs = [&#39;安静&#39;, &#39;蜗牛&#39;, &#39;稻香&#39;]
+for song in songs:
+    print(&#39;正在播放：&#39;, song)
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>运行程序，输出如下：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>当前字母： J
+当前字母： a
+当前字母： y
+正在播放： 安静
+正在播放： 蜗牛
+正在播放： 稻香
+</pre></div>
+</div>
+<p>这里，可以将 for 循环视为歌曲中的顺序播放。</p>
+</div>
+<div class="section" id="id2">
+<h2>通过索引遍历<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>可以使用 range() 函数生成一个数字序列。</p>
+<p>还可以定义 range(start, stop[, step]) 中的 start、stop 和 step，如果没有提供 step，步长默认为 1。</p>
+<p>要强制该函数输出所有元素，可以使用函数 list()：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># 输出：range(0, 10)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="c1"># 输出：[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)))</span>
+<span class="c1"># 输出：[2, 3, 4, 5, 6, 7]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">)))</span>
+<span class="c1"># 输出：[2, 5, 8, 11, 14, 17]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">)))</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>可以在 for 循环中使用 range() 来遍历一个数字序列，它可以与内置函数 len() 结合，使用索引进行序列迭代。</p>
+<p>len() 返回列表的长度，即：元素的个数。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>songs = [&#39;安静&#39;, &#39;蜗牛&#39;, &#39;稻香&#39;]
+# 通过索引遍历列表
+for i in range(len(songs)):
+    print(&quot;正在播放：&quot;, songs[i])
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>运行程序，输出如下：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>正在播放： 安静
+正在播放： 蜗牛
+正在播放： 稻香
+</pre></div>
+</div>
+</div>
+<div class="section" id="for-else">
+<h2>for … else<a class="headerlink" href="#for-else" title="Permalink to this headline">¶</a></h2>
+<p>for 循环也可以有一个可选的 else 块，如果循环正常执行完（即：不是通过 break 跳出而中断的），则执行 else 部分。</p>
+<p><strong>注意：</strong> break 语句可以用来跳出 for 循环，在这种情况下，else 部分会被忽略。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>songs = [&#39;安静&#39;, &#39;蜗牛&#39;, &#39;稻香&#39;]
+for song in songs:
+    print(&#39;正在播放：&#39;, song)
+else:
+    print(&#39;播放结束&#39;)
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>运行程序，输出如下：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>正在播放： 安静
+正在播放： 蜗牛
+正在播放： 稻香
+播放结束
+</pre></div>
+</div>
+<p>可以看到，当 for 循环结束时，执行 else 中的代码块。</p>
+</div>
+<div class="section" id="id3">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>作者: <a class="reference external" href="http://blog.csdn.net/liang19890820">一去丶二三里</a></p>
+<p>提交: 2017/12/6</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+</main>
+<div class="star-footer">
+<img onclick="openPurchase()" src="../../static/star.jpg">
+<div id="praise"><span>0</span> persons have rewarded</div>
+</div>
+<div class="foo"></div>
+<footer class="clearfix fixfooter web-show">
+<div class="col-sm-offset-2 col-sm-6 footer-div1">
+<div class="footer-block-item">
+<span class="footer-item1">Built with Sphinx using a theme provid by QPython.</span>
+<span class="footer-item2 visible-xs">Copyight 2017, QPython.</span>
+</div>
+</div>
+<div class="col-sm-2 footer-div2">
+<a href="/index.html" class="pull-right"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+</footer>
+<script>
+var milib;
+if (milib==undefined) {
+var milib = function(){
+};
+milib.qeditor = function(str){
+alert('Please share this page to QPython then run it')
+};
+milib.getPurchaseNumber = function(str){
+//alert('getPurchaseNumber:'+str)
+return "10+";
+};
+milib.a8playVideoFromGW= function(url){
+window.open(url)
+};
+milib.qpylibinstall = function(cat,url,target){
+window.open(url)
+};
+milib.gotoIfPay = function(url, packageId, packageUrl){
+window.open(url)
+};
+} else {
+}
+function openPurchase() {
+//获取标识
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+milib.openPurchaseActivity(s)
+}
+//按钮事件
+function btnEvent(){
+var seq = this.getAttribute('target')-2
+var a = this.parentElement.getElementsByTagName('pre')
+if ( a && a.length > 0){
+/**********有代码，调用控制台*************/
+var code = a[seq].lastChild.nodeValue
+milib.qeditor(code)
+}else{
+//没有代码，调转
+var url = this.getAttribute('data-url');
+window.open(url);
+}
+}
+//获取赞赏
+function setPraise(){
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+var i = document.getElementById('praise').getElementsByTagName('span')[0]
+var num = milib.getPurchaseNumber(s);
+i.innerHTML = num
+}
+//初始化代码显示
+function initCode(){
+var prearr = document.getElementsByTagName('pre');
+for (var i = 0; i < prearr.length; i++) {
+var temp_data = prearr[i].lastChild.nodeValue
+//正则处理 lavel5
+temp_data = temp_data.replace(/\^2\$/g, spaceString(2));
+temp_data = temp_data.replace(/\^4\$/g, spaceString(4));
+temp_data = temp_data.replace(/\^6\$/g, spaceString(6));
+temp_data = temp_data.replace(/\^8\$/g, spaceString(8));
+temp_data = temp_data.replace(/\^10\$/g, spaceString(10));
+temp_data = temp_data.replace(/\^12\$/g, spaceString(12));
+temp_data = temp_data.replace(/\^16\$/g, spaceString(16));
+temp_data = temp_data.replace(/\^20\$/g, spaceString(20));
+//set
+prearr[i].lastChild.nodeValue = temp_data;
+}
+}
+//产生空格
+function spaceString(num){
+var v = ''
+for (var i = 0; i < num; i++) {
+v += ' ';
+}
+return v;
+}
+window.onload = function(){
+setPraise();
+initCode();
+//将所有的button绑定事件
+var b = document.getElementsByTagName('button');
+for (var i = 0; i < b.length; i++) {
+if (b[i].className=='button') {
+b[i].setAttribute('target', i)
+b[i].onclick = btnEvent ;
+}
+}
+}
+$(function(){
+var url = location.href.split('?');
+if (url.length === 2) {
+var c = url[1].split('=');
+if (c[1] == 'web') {
+$('.web-show').css('display','block');
+$('.web-content').addClass('margin-header');
+}
+}
+})
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-103260045-3', 'auto');
+ga('send', 'pageview');
+</script>
+</body>
+</html>

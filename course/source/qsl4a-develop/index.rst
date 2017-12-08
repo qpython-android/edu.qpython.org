@@ -17,41 +17,41 @@ You need to turn on the QPython permission settings in your Android system setti
 
 **System application interface**
 
-* Including clipboard, Intent object, broadcast, vibration, network status, version number, send mail, prompts, Input boxes, etc. `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html>`_
-* Application: Mainly as an application management interface `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#applicationmanagerfacade>`_
-* ActivityResult£ºIn Android control ActivityResult the interface of behavior `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#activityresultfacade>`_
-* Common Intent£ºAccess two-dimensional code, Use XX application to view the interface `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#commonintentsfacade>`_
+* Including clipboard, Intent object, broadcast, vibration, network status, version number, send mail, prompts, Input boxes, etc. `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html>`_
+* Application: Mainly as an application management interface `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#applicationmanagerfacade>`_
+* ActivityResult£ºIn Android control ActivityResult the interface of behavior `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#activityresultfacade>`_
+* Common Intent£ºAccess two-dimensional code, Use XX application to view the interface `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#commonintentsfacade>`_
 
 **Android related device interface**
 
-* Camera£ºAccess & recall device's camera interface `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#camerafacade>`_
-* Contact£ºContact access interface `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#contactsfacade>`_
-* Location£ºAccess location interface `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#locationfacade>`_
-* Phone: Access the phone interface `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#phonefacade>`_
+* Camera£ºAccess & recall device's camera interface `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#camerafacade>`_
+* Contact£ºContact access interface `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#contactsfacade>`_
+* Location£ºAccess location interface `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#locationfacade>`_
+* Phone: Access the phone interface `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#phonefacade>`_
 * 
-* Media recording: able to control recording or video `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#mediarecorderfacade>`_
-* Sensor Management: Access Control & Sensor device `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#sensormanagerfacade>`_
-* Settings: Ability to set device screen, flight mode, ringtone mode, vibration mode, volume, brightness, etc. `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#settingsfacade>`_
-* SMS: equipment can be access to SMS `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#smsfacade>`_
-* Speech recognition: Can recognize the user's speech and returns the most likely outcome `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#speechrecognitionfacade>`_
-* Tone Generator: The ability to generate DTMF speech from a given phone number `(½Ó¿ÚÎÄµµ) <http://www.qpython.org/en/guide_androidhelpers.html#tonegeneratorfacade>`_
-* Wake lock: The device's wake lock interface `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#wakelockfacade>`_
-* WIFI: Device WIFI Management `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#wififacade>`_
-* Battery Management: Provides the device's battery management interface `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#batterymanagerfacade>`_
-* Media Player: Media Player Settings `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#mediaplayerfacade>`_
-* Preferences: Access / Control Preferences `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#preferencesfacade>`_
-* Text Voice: Control text to voice output `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#texttospeechfacade>`_
-* Bluetooth: Control Bluetooth devices on your phone `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#bluetoothfacade>`_
-* Signal strength: access phone signal strength information `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#signalstrengthfacade>`_
-* Webcam: A camera that controls the phone `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#webcamfacade>`_
-* User interface: UI interface is used to control related exhibits, such as a text box, the password input box, the status bar, progress bar, date picker, etc. `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#uifacade>`_
-* NFC: NFC related control, mainly provided in the NFC mode master/slave exchange information `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#nfc>`_
-* USB Host Sequence: A device used to control USB-like sequences from Android that has a USB host controller `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#usb-host-serial-facade>`_
+* Media recording: able to control recording or video `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#mediarecorderfacade>`_
+* Sensor Management: Access Control & Sensor device `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#sensormanagerfacade>`_
+* Settings: Ability to set device screen, flight mode, ringtone mode, vibration mode, volume, brightness, etc. `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#settingsfacade>`_
+* SMS: equipment can be access to SMS `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#smsfacade>`_
+* Speech recognition: Can recognize the user's speech and returns the most likely outcome `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#speechrecognitionfacade>`_
+* Tone Generator: The ability to generate DTMF speech from a given phone number `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#tonegeneratorfacade>`_
+* Wake lock: The device's wake lock interface `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#wakelockfacade>`_
+* WIFI: Device WIFI Management `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#wififacade>`_
+* Battery Management: Provides the device's battery management interface `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#batterymanagerfacade>`_
+* Media Player: Media Player Settings `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#mediaplayerfacade>`_
+* Preferences: Access / Control Preferences `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#preferencesfacade>`_
+* Text Voice: Control text to voice output `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#texttospeechfacade>`_
+* Bluetooth: Control Bluetooth devices on your phone `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#bluetoothfacade>`_
+* Signal strength: access phone signal strength information `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#signalstrengthfacade>`_
+* Webcam: A camera that controls the phone `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#webcamfacade>`_
+* User interface: UI interface is used to control related exhibits, such as a text box, the password input box, the status bar, progress bar, date picker, etc. `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#uifacade>`_
+* NFC: NFC related control, mainly provided in the NFC mode master/slave exchange information `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#nfc>`_
+* USB Host Sequence: A device used to control USB-like sequences from Android that has a USB host controller `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#usb-host-serial-facade>`_
 
 
 **QPython relevant interface**
 
-* QPy interface£ºRun QPython script on your phone `(Interface documentation) <http://www.qpython.org/en/guide_androidhelpers.html#qpyinterfacefacade>`_
+* QPy interface: Run QPython script on your phone `(APIs Document) <http://www.qpython.org/en/guide_androidhelpers.html#qpyinterfacefacade>`_
 
 
 Sample Code

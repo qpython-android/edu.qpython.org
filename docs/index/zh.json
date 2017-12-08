@@ -213,5 +213,102 @@
         "open": 0,
         "courses":[
         ]
+    },
+    {
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/python-base/cn/index.html",
+        "smodule":"python-base",
+        "description":"Python入门",
+        "title":"Python入门基础",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"new",
+        "level": 1,
+        "logo": "http://edu.qpython.org/static/course-qpython-quick-start.png",
+        "open": 0,
+        "courses":[
+            {
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/python-base/cn/python-base-keyword.html",
+                "smodule":"python-base-keyword",
+                "description":"Python的关键字",
+                "title":"基础 - 关键字",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/python-base/cn/python-base-annotation.html",
+                "smodule":"python-base-annotation",
+                "description":"Python注释",
+                "title":"基础 - 注释",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/python-base/cn/python-base-variable.html",
+                "smodule":"python-base-variable",
+                "description":"Python的变量",
+                "title":"基础 - 变量",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/python-base/cn/python-base-python-datatype-number.html",
+                "smodule":"python-base-python-datatype-number",
+                "description":"Python的数据类型",
+                "title":"基础 - 数据类型",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/python-base/cn/python-base-operator.html",
+                "smodule":"python-base-operator",
+                "description":"Python的运算符",
+                "title":"基础 - 运算符",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/python-base/cn/python-controller-if.html",
+                "smodule":"python-controller-if",
+                "description":"Python的if 语句",
+                "title":"流控制 - if 语句",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/python-base/cn/python-controller-for.html",
+                "smodule":"python-controller-for",
+                "description":"Python的for 循环",
+                "title":"流控制 - for 循环",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/python-base/cn/python-controller-while.html",
+                "smodule":"python-controller-while",
+                "description":"Python的while 循环",
+                "title":"流控制 - while 循环",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/python-base/cn/python-controller-break.html",
+                "smodule":"python-controller-break",
+                "description":"Python的break和continue语句",
+                "title":"流控制 - break和continue语句",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/python-base/cn/python-controller-pass.html",
+                "smodule":"python-controller-pass",
+                "description":"Python的pass语句",
+                "title":"流控制 - pass 语句",
+                "reward":"0",
+                "downloads": "10,000+"
+            }
+        ]
     }
 ]

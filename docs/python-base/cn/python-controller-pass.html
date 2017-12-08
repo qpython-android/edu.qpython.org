@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<title>Python pass 语句</title>
+<link rel="stylesheet" href="../../static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true
+};
+</script>
+<script type="text/javascript" src="../../static/jquery.js"></script>
+<script type="text/javascript" src="../../static/underscore.js"></script>
+<script type="text/javascript" src="../../static/doctools.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body role="document">
+<div class="header doc-header web-show">
+<div class="col-sm-offset-2 col-sm-8  index-header">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+<span class="sr-only">切换导航</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/index.html" class="logo"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+<ul class="header-title collapse navbar-collapse" id="example-navbar-collapse" >
+<li>
+<a href="http://www.qpython.org/index.html">Home</a>
+</li>
+<li>
+<a href="http://www.qpython.org/document.html">Guide</a>
+</li>
+<li class="header-phone-selected">
+<a href="/index.html" class="header-selected">Course</a>
+<span class="header-title-selected"></span>
+</li>
+<li>
+<a href="http://www.aipy.org">AIPY</a>
+</li>
+<li>
+<a target="_blank" href="https://github.com/qpython-android/qpython">Github</a>
+</li>
+</ul>
+<div class="search-box hidden-xs">
+<form action="search.html">
+<input type="search" name="q" placeholder="keyword">
+<input type="hidden" name="check_keywords" value="yes" />
+<input type="hidden" name="area" value="default" />
+<button><img src="http://www.qpython.org/static/ic_search.png"></button>
+</form>
+</div>
+</div>
+</div>
+<main class="contain web-content">
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="python-pass">
+<h1>Python pass 语句<a class="headerlink" href="#python-pass" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>简述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>在 Python 中，pass 是一个空语句，为了保持程序结构的完整性。一般情况下，pass 被用作占位符。</p>
+<p>pass 和注释之间的区别在于：解释器会完全忽略注释，但不会忽略 pass。</p>
+<p>然而，执行 pass 时什么都不会发生，导致无操作（NOP）。</p>
+</div>
+<div class="section" id="pass">
+<h2>pass 语句<a class="headerlink" href="#pass" title="Permalink to this headline">¶</a></h2>
+<p>语法格式：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">pass</span>
+</pre></div>
+</div>
+<p>假设，欧阳锋写了一个循环或者函数，尚未实现（暂未想好如何实现或者出差交付给其他人），但是会在将来的某个时候实现。这时，如果循环体或者函数体为空，解释器就会报错。所以，可以使用 pass 语句构造一个不做任何事情的主体。</p>
+<p>上课了，开始听歌，随机播放、顺序播放、单曲循环、列表循环。。。反复思量着，到底选哪一个呢？没想好，那么就先纠结着，什么都不干！</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">songs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;安静&#39;</span><span class="p">,</span> <span class="s1">&#39;蜗牛&#39;</span><span class="p">,</span> <span class="s1">&#39;稻香&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">song</span> <span class="ow">in</span> <span class="n">songs</span><span class="p">:</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>执行语句，输出如下：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">unexpected</span> <span class="n">EOF</span> <span class="k">while</span> <span class="n">parsing</span>
+</pre></div>
+</div>
+<p>报错了，所以呢？还是乖乖的加上 pass 吧！</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>songs = [&#39;安静&#39;, &#39;蜗牛&#39;, &#39;稻香&#39;]
+for song in songs:
+    pass
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>相应的，也可以在空函数或类中做同样的事情：</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd><dl class="first last docutils">
+<dt>def function(args):</dt>
+<dd>    pass</dd>
+</dl>
+</dd>
+</dl>
+<button class="button">Run ...</button>
+<div class="highlight-default"><div class="highlight"><pre><span></span>class example:
+    pass
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>总之，pass 什么也不做，就是为了占位，防止语法错误。</p>
+</div>
+<div class="section" id="id2">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>作者: <a class="reference external" href="http://blog.csdn.net/liang19890820">一去丶二三里</a></p>
+<p>提交: 2017/12/6</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+</main>
+<div class="star-footer">
+<img onclick="openPurchase()" src="../../static/star.jpg">
+<div id="praise"><span>0</span> persons have rewarded</div>
+</div>
+<div class="foo"></div>
+<footer class="clearfix fixfooter web-show">
+<div class="col-sm-offset-2 col-sm-6 footer-div1">
+<div class="footer-block-item">
+<span class="footer-item1">Built with Sphinx using a theme provid by QPython.</span>
+<span class="footer-item2 visible-xs">Copyight 2017, QPython.</span>
+</div>
+</div>
+<div class="col-sm-2 footer-div2">
+<a href="/index.html" class="pull-right"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+</footer>
+<script>
+var milib;
+if (milib==undefined) {
+var milib = function(){
+};
+milib.qeditor = function(str){
+alert('Please share this page to QPython then run it')
+};
+milib.getPurchaseNumber = function(str){
+//alert('getPurchaseNumber:'+str)
+return "10+";
+};
+milib.a8playVideoFromGW= function(url){
+window.open(url)
+};
+milib.qpylibinstall = function(cat,url,target){
+window.open(url)
+};
+milib.gotoIfPay = function(url, packageId, packageUrl){
+window.open(url)
+};
+} else {
+}
+function openPurchase() {
+//获取标识
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+milib.openPurchaseActivity(s)
+}
+//按钮事件
+function btnEvent(){
+var seq = this.getAttribute('target')-2
+var a = this.parentElement.getElementsByTagName('pre')
+if ( a && a.length > 0){
+/**********有代码，调用控制台*************/
+var code = a[seq].lastChild.nodeValue
+milib.qeditor(code)
+}else{
+//没有代码，调转
+var url = this.getAttribute('data-url');
+window.open(url);
+}
+}
+//获取赞赏
+function setPraise(){
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+var i = document.getElementById('praise').getElementsByTagName('span')[0]
+var num = milib.getPurchaseNumber(s);
+i.innerHTML = num
+}
+//初始化代码显示
+function initCode(){
+var prearr = document.getElementsByTagName('pre');
+for (var i = 0; i < prearr.length; i++) {
+var temp_data = prearr[i].lastChild.nodeValue
+//正则处理 lavel5
+temp_data = temp_data.replace(/\^2\$/g, spaceString(2));
+temp_data = temp_data.replace(/\^4\$/g, spaceString(4));
+temp_data = temp_data.replace(/\^6\$/g, spaceString(6));
+temp_data = temp_data.replace(/\^8\$/g, spaceString(8));
+temp_data = temp_data.replace(/\^10\$/g, spaceString(10));
+temp_data = temp_data.replace(/\^12\$/g, spaceString(12));
+temp_data = temp_data.replace(/\^16\$/g, spaceString(16));
+temp_data = temp_data.replace(/\^20\$/g, spaceString(20));
+//set
+prearr[i].lastChild.nodeValue = temp_data;
+}
+}
+//产生空格
+function spaceString(num){
+var v = ''
+for (var i = 0; i < num; i++) {
+v += ' ';
+}
+return v;
+}
+window.onload = function(){
+setPraise();
+initCode();
+//将所有的button绑定事件
+var b = document.getElementsByTagName('button');
+for (var i = 0; i < b.length; i++) {
+if (b[i].className=='button') {
+b[i].setAttribute('target', i)
+b[i].onclick = btnEvent ;
+}
+}
+}
+$(function(){
+var url = location.href.split('?');
+if (url.length === 2) {
+var c = url[1].split('=');
+if (c[1] == 'web') {
+$('.web-show').css('display','block');
+$('.web-content').addClass('margin-header');
+}
+}
+})
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-103260045-3', 'auto');
+ga('send', 'pageview');
+</script>
+</body>
+</html>
