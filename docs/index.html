@@ -81,8 +81,8 @@
                     </div>
                     <div class="sc-body">
                         <div class="sc-tag">
-                            <div @click="toggle_tag('featured')" class="sc-re" :class="{active: tag=='featured'}">Recommend</div>
                             <div @click="toggle_tag('new')" class="sc-la" :class="{active: tag=='new'}">Latest</div>
+                            <div @click="toggle_tag('featured')" class="sc-re" :class="{active: tag=='featured'}">Recommend</div>
                         </div>
                         <ol class="sc-content clearfix">
                             <li class="sc-item" v-for="v,k in content[tag]" v-if="k < c_page[tag]*page_size && k >= (c_page[tag]-1)*page_size" >

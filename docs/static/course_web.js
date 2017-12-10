@@ -4,7 +4,7 @@ var vm = new Vue({
   el: '#app',
   data: {
     content: {},
-    tag: 'featured',
+    tag: 'new',
     c_page: {
       new: 1,
       featured: 1
