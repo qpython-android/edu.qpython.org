@@ -214,5 +214,21 @@
         "open": 0,
         "courses":[
         ]
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/python-base/cn/index.html",
+        "smodule":"python-base",
+        "description":"Python Basic",
+        "title":"Python Basic",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"new",
+        "level": 1,
+        "logo": "http://edu.qpython.org/static/course-python-basic.png",
+        "open": 0,
+        "courses":[
+        ]
     }
+
 ]

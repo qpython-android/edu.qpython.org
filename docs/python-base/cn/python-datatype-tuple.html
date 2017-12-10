@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<title>简述</title>
+<link rel="stylesheet" href="../../static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true
+};
+</script>
+<script type="text/javascript" src="../../static/jquery.js"></script>
+<script type="text/javascript" src="../../static/underscore.js"></script>
+<script type="text/javascript" src="../../static/doctools.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body role="document">
+<div class="header doc-header web-show">
+<div class="col-sm-offset-2 col-sm-8  index-header">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+<span class="sr-only">切换导航</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/index.html" class="logo"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+<ul class="header-title collapse navbar-collapse" id="example-navbar-collapse" >
+<li>
+<a href="http://www.qpython.org/index.html">Home</a>
+</li>
+<li>
+<a href="http://www.qpython.org/document.html">Guide</a>
+</li>
+<li class="header-phone-selected">
+<a href="/index.html" class="header-selected">Course</a>
+<span class="header-title-selected"></span>
+</li>
+<li>
+<a href="http://www.aipy.org">AIPY</a>
+</li>
+<li>
+<a target="_blank" href="https://github.com/qpython-android/qpython">Github</a>
+</li>
+</ul>
+<div class="search-box hidden-xs">
+<form action="search.html">
+<input type="search" name="q" placeholder="keyword">
+<input type="hidden" name="check_keywords" value="yes" />
+<input type="hidden" name="area" value="default" />
+<button><img src="http://www.qpython.org/static/ic_search.png"></button>
+</form>
+</div>
+</div>
+</div>
+<main class="contain web-content">
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="id1">
+<h1>简述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>在 Python 中，元组（Tuple）与列表类似。两者之间的区别在于：元组不能更改，列表可以。也就是说，一旦被分配，就不能从元组中添加、更改或删除元素。</p>
+<div class="section" id="id2">
+<h2>元组的优点<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>既然和列表类似，那元组的作用到底是什么呢？用列表代替不就可以了？</p>
+<p>与列表相比，元组有很多优点：</p>
+<ul class="simple">
+<li>通常将元组用于不同的数据类型，将列表用于相同（或相似）的数据类型。</li>
+<li>由于元组不可变，所以遍历元组比列表要快（较小的性能提升）。</li>
+<li>元组可以用作字典的 key，而列表不行。因为字典的 key 必须是不可变的，元组本身就是不可变的。</li>
+<li>如果数据不需要更改，将其作为元组来实现，可以确保“写保护”。</li>
+<li>元组可以被用在字符串格式化中。</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>元组<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>在 Python 中，元组由内置的 tuple 类型定义。</p>
+<p>要创建元组，需要将所有项（元素）放在括号（()）内，以逗号（,）分隔。</p>
+<p><strong>注意</strong>： 括号是可选的，但还是建议写上。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>tup = (&#39;P&#39;, &#39;y&#39;, &#39;t&#39;, &#39;h&#39;, &#39;o&#39;, &#39;n&#39;)
+type(tup)
+&lt;class &#39;tuple&#39;&gt;
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>元组中的元素可以是任意数量，还可以是不同类型（例如：数字、字符串、列表等）。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span> <span class="n">tup</span> <span class="o">=</span> <span class="p">()</span>  <span class="c1"># 空元组</span>
+<span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">)</span>   <span class="c1"># 字符串类型元组</span>
+<span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">)</span>   <span class="c1"># 混合类型元组</span>
+<span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">))</span>  <span class="c1"># 嵌套元组</span>
+<span class="n">tup</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span>   <span class="c1"># 创建元组时可以没有括号，也称为元组包装</span>
+<span class="n">tup</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">)</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">tup</span>  <span class="c1"># 元组解包</span>
+<span class="n">a</span>
+<span class="mi">1</span>
+<span class="n">b</span>
+<span class="mf">5.5</span>
+<span class="n">c</span>
+<span class="s1">&#39;Python&#39;</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>构造包含一个元素的元组比较特殊，括号内只包含一个元素是不够的，还需要在元素后添加一个逗号。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>tup = (&#39;Python&#39;)  # 只有括号
+type(tup)
+&lt;class &#39;str&#39;&gt;
+tup = (&#39;Python&#39;,)  # 在元素后面添加逗号
+type(tup)
+&lt;class &#39;tuple&#39;&gt;
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>可以看出，没有逗号就不是元组，加了逗号才是。</p>
+</div>
+<div class="section" id="id4">
+<h2>索引和切片<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>有了前面关于字符串和列表的基础知识，元组很容易掌握。因为它们都属于序列，因此，基本操作是一样的。</p>
+<p>可以使用索引操作符（[]） 来访问元组中的一个元素，使用切片操作符（:）来访问元组中的一系列元素。</p>
+<img alt="http://img.blog.csdn.net/20170517202258988?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGlhbmcxOTg5MDgyMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" src="http://img.blog.csdn.net/20170517202258988?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbGlhbmcxOTg5MDgyMA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" />
+<div class="highlight-default"><div class="highlight"><pre><span></span> <span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">)</span>
+<span class="n">tup</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># 第 1 个元素</span>
+<span class="s1">&#39;P&#39;</span>
+<span class="n">tup</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># 第 5 个元素（反向索引）</span>
+<span class="s1">&#39;o&#39;</span>
+<span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">))</span>  <span class="c1"># 嵌套元组</span>
+<span class="n">tup</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>  <span class="c1"># 嵌套索引</span>
+<span class="s1">&#39;h&#39;</span>
+<span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">)</span>
+<span class="n">tup</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>  <span class="c1">#  第 2 个到第 4 个元素</span>
+<span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">)</span>
+<span class="n">tup</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>  <span class="c1"># 开始到第 3 个元素</span>
+<span class="p">(</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>其他的一些基本操作，例如：连接（+）、重复（*）、成员测试（in）、遍历（for）等，就不再一一展示了，请参考：Python 列表</p>
+<p>更改元组</p>
+<p>元组是不可变的，也就是说，元组中的元素在被赋值后不能改变。</p>
+<p>但是，如果元素本身是一个可变数据类型的列表，那么其嵌套项可以被改变。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span> <span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">])</span>
+<span class="n">tup</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">8</span>  <span class="c1"># 不能改变元素</span>
+<span class="n">tup</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;s&#39;</span>  <span class="c1"># 可变的元素可以被改变</span>
+<span class="n">tup</span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+</div>
+<div class="section" id="id5">
+<h2>删除元组<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>如上所述，不能更改元组中的元素，这也意味着无法删除元组中的元素。</p>
+<p>但是，使用关键字 del 可以删除整个元组。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">tup</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># 无法删除元素</span>
+<span class="k">del</span> <span class="n">tup</span>  <span class="c1"># 可以删除整个元组</span>
+<span class="n">tup</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+</div>
+<div class="section" id="id6">
+<h2>列表和元组互转<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>列表和元组之间可以进行相互转换，分别使用 list() 和 tuple() 实现：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span> <span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">)</span>
+<span class="n">listx</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">tup</span><span class="p">)</span>
+<span class="n">listx</span>
+<span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
+<span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">]</span>
+<span class="n">tupx</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+<span class="n">tupx</span>
+<span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>既然可以互转，那么要改变元组，可以先将其转化为列表，对列表进行更改，然后再将列表转换为元组。</p>
+<p>例如，删除元组中的元素：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span> <span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">)</span>
+<span class="n">listx</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">tup</span><span class="p">)</span>  <span class="c1"># 将元组转换为列表</span>
+<span class="n">listx</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">)</span>  <span class="c1"># 删除列表中的元素</span>
+<span class="n">tup</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">listx</span><span class="p">)</span>  <span class="c1"># 再将列表转换为元组</span>
+<span class="n">tup</span>
+<span class="p">(</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p><strong>注意</strong>： 元组本身是不可变的。这里说的并不是传统意义的改变，相当于元组的重新赋值。</p>
+</div>
+<div class="section" id="id7">
+<h2>元组的方法<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>元组中的方法相对较少，可以通过 dir() 来查看方法列表：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="nb">tuple</span><span class="p">)</span>
+<span class="p">[</span><span class="s1">&#39;__add__&#39;</span><span class="p">,</span> <span class="s1">&#39;__class__&#39;</span><span class="p">,</span> <span class="s1">&#39;__contains__&#39;</span><span class="p">,</span> <span class="s1">&#39;__delattr__&#39;</span><span class="p">,</span> <span class="s1">&#39;__dir__&#39;</span><span class="p">,</span> <span class="s1">&#39;__doc__&#39;</span><span class="p">,</span> <span class="s1">&#39;__eq__&#39;</span><span class="p">,</span> <span class="s1">&#39;__format__&#39;</span><span class="p">,</span> <span class="s1">&#39;__ge__&#39;</span><span class="p">,</span> <span class="s1">&#39;__getattribute__&#39;</span><span class="p">,</span> <span class="s1">&#39;__getitem__&#39;</span><span class="p">,</span>      <span class="s1">&#39;__getnewargs__&#39;</span><span class="p">,</span> <span class="s1">&#39;__gt__&#39;</span><span class="p">,</span> <span class="s1">&#39;__hash__&#39;</span><span class="p">,</span> <span class="s1">&#39;__init__&#39;</span><span class="p">,</span> <span class="s1">&#39;__iter__&#39;</span><span class="p">,</span> <span class="s1">&#39;__le__&#39;</span><span class="p">,</span> <span class="s1">&#39;__len__&#39;</span><span class="p">,</span> <span class="s1">&#39;__lt__&#39;</span><span class="p">,</span> <span class="s1">&#39;__mul__&#39;</span><span class="p">,</span> <span class="s1">&#39;__ne__&#39;</span><span class="p">,</span> <span class="s1">&#39;__new__&#39;</span><span class="p">,</span> <span class="s1">&#39;__reduce__&#39;</span><span class="p">,</span> <span class="s1">&#39;__reduce_ex__&#39;</span><span class="p">,</span>      <span class="s1">&#39;__repr__&#39;</span><span class="p">,</span> <span class="s1">&#39;__rmul__&#39;</span><span class="p">,</span> <span class="s1">&#39;__setattr__&#39;</span><span class="p">,</span> <span class="s1">&#39;__sizeof__&#39;</span><span class="p">,</span> <span class="s1">&#39;__str__&#39;</span><span class="p">,</span> <span class="s1">&#39;__subclasshook__&#39;</span><span class="p">,</span> <span class="s1">&#39;count&#39;</span><span class="p">,</span> <span class="s1">&#39;index&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>可以看到，有两个可用的方法：：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">方法</th>
+<th class="head">描述</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>index()</td>
+<td>返回第一个匹配项的索引</td>
+</tr>
+<tr class="row-odd"><td>count()</td>
+<td>统计某个元素在列表中出现的次数</td>
+</tr>
+</tbody>
+</table>
+<p>使用很简单，也非常好记。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">)</span>
+<span class="n">tup</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">)</span>  <span class="c1"># 返回第一个匹配 &#39;h&#39; 的索引</span>
+<span class="n">tup</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>  <span class="c1"># 统计 &#39;o&#39; 在元组中出现的次数</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p><strong>注意</strong>： 元组不可变，所以添加或删除元素的方法不适用于元组。</p>
+</div>
+<div class="section" id="id8">
+<h2>元组与内置函数<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>下述内置函数通常与元组一起使用，来执行不同的任务。</p>
+</div>
+<div class="section" id="id9">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>作者: <a class="reference external" href="http://blog.csdn.net/liang19890820">CSDN</a></p>
+<p>提交: 2017/12/6</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+</main>
+<div class="star-footer">
+<img onclick="openPurchase()" src="../../static/star.jpg">
+<div id="praise"><span>0</span> persons have rewarded</div>
+</div>
+<div class="foo"></div>
+<footer class="clearfix fixfooter web-show">
+<div class="col-sm-offset-2 col-sm-6 footer-div1">
+<div class="footer-block-item">
+<span class="footer-item1">Built with Sphinx using a theme provid by QPython.</span>
+<span class="footer-item2 visible-xs">Copyight 2017, QPython.</span>
+</div>
+</div>
+<div class="col-sm-2 footer-div2">
+<a href="/index.html" class="pull-right"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+</footer>
+<script>
+var milib;
+if (milib==undefined) {
+var milib = function(){
+};
+milib.qeditor = function(str){
+alert('Please share this page to QPython then run it')
+};
+milib.getPurchaseNumber = function(str){
+//alert('getPurchaseNumber:'+str)
+return "10+";
+};
+milib.a8playVideoFromGW= function(url){
+window.open(url)
+};
+milib.qpylibinstall = function(cat,url,target){
+window.open(url)
+};
+milib.gotoIfPay = function(url, packageId, packageUrl){
+window.open(url)
+};
+} else {
+}
+function openPurchase() {
+//获取标识
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+milib.openPurchaseActivity(s)
+}
+//按钮事件
+function btnEvent(){
+var seq = this.getAttribute('target')-2
+var a = this.parentElement.getElementsByTagName('pre')
+if ( a && a.length > 0){
+/**********有代码，调用控制台*************/
+var code = a[seq].lastChild.nodeValue
+milib.qeditor(code)
+}else{
+//没有代码，调转
+var url = this.getAttribute('data-url');
+window.open(url);
+}
+}
+//获取赞赏
+function setPraise(){
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+var i = document.getElementById('praise').getElementsByTagName('span')[0]
+var num = milib.getPurchaseNumber(s);
+i.innerHTML = num
+}
+//初始化代码显示
+function initCode(){
+var prearr = document.getElementsByTagName('pre');
+for (var i = 0; i < prearr.length; i++) {
+var temp_data = prearr[i].lastChild.nodeValue
+//正则处理 lavel5
+temp_data = temp_data.replace(/\^2\$/g, spaceString(2));
+temp_data = temp_data.replace(/\^4\$/g, spaceString(4));
+temp_data = temp_data.replace(/\^6\$/g, spaceString(6));
+temp_data = temp_data.replace(/\^8\$/g, spaceString(8));
+temp_data = temp_data.replace(/\^10\$/g, spaceString(10));
+temp_data = temp_data.replace(/\^12\$/g, spaceString(12));
+temp_data = temp_data.replace(/\^16\$/g, spaceString(16));
+temp_data = temp_data.replace(/\^20\$/g, spaceString(20));
+//set
+prearr[i].lastChild.nodeValue = temp_data;
+}
+}
+//产生空格
+function spaceString(num){
+var v = ''
+for (var i = 0; i < num; i++) {
+v += ' ';
+}
+return v;
+}
+window.onload = function(){
+setPraise();
+initCode();
+//将所有的button绑定事件
+var b = document.getElementsByTagName('button');
+for (var i = 0; i < b.length; i++) {
+if (b[i].className=='button') {
+b[i].setAttribute('target', i)
+b[i].onclick = btnEvent ;
+}
+}
+}
+$(function(){
+var url = location.href.split('?');
+if (url.length === 2) {
+var c = url[1].split('=');
+if (c[1] == 'web') {
+$('.web-show').css('display','block');
+$('.web-content').addClass('margin-header');
+}
+}
+})
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-103260045-3', 'auto');
+ga('send', 'pageview');
+</script>
+</body>
+</html>

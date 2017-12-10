@@ -225,7 +225,7 @@
         "downloads": "1,000+",
         "cat":"new",
         "level": 1,
-        "logo": "http://edu.qpython.org/static/course-qpython-quick-start.png",
+        "logo": "http://edu.qpython.org/static/course-python-basic.png",
         "open": 0,
         "courses":[
             {
@@ -306,6 +306,62 @@
                 "smodule":"python-controller-pass",
                 "description":"Python的pass语句",
                 "title":"流控制 - pass 语句",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/python-base/cn/python-datatype-number.html",
+                "smodule":"python-datatype-number",
+                "description":"Python的数字",
+                "title":"数据类型 - 数字",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/python-base/cn/python-datatype-character-string.html",
+                "smodule":"python-datatype-character-string",
+                "description":"Python的字符串",
+                "title":"数据类型 - 字符串",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/python-base/cn/python-datatype-escape-sequence.html",
+                "smodule":"python-datatype-escape-sequence",
+                "description":"Python的转义序列",
+                "title":"数据类型 - 转义序列",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/python-base/cn/python-datatype-list.html",
+                "smodule":"python-datatype-list",
+                "description":"Python的列表",
+                "title":"数据类型 - 列表"",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/python-base/cn/python-datatype-tuple.html",
+                "smodule":"python-datatype-tuple",
+                "description":"Python的元组",
+                "title":"数据类型 - 元组"",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/python-base/cn/python-datatype-dictionaries.html",
+                "smodule":"python-datatype-dictionaries",
+                "description":"Python的字典",
+                "title":"数据类型 - 字典"",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/python-base/cn/python-datatype-gather.html",
+                "smodule":"python-datatype-gather",
+                "description":"Python的集合",
+                "title":"数据类型 - 集合"",
                 "reward":"0",
                 "downloads": "10,000+"
             }

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<title>简述</title>
+<link rel="stylesheet" href="../../static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true
+};
+</script>
+<script type="text/javascript" src="../../static/jquery.js"></script>
+<script type="text/javascript" src="../../static/underscore.js"></script>
+<script type="text/javascript" src="../../static/doctools.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body role="document">
+<div class="header doc-header web-show">
+<div class="col-sm-offset-2 col-sm-8  index-header">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+<span class="sr-only">切换导航</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/index.html" class="logo"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+<ul class="header-title collapse navbar-collapse" id="example-navbar-collapse" >
+<li>
+<a href="http://www.qpython.org/index.html">Home</a>
+</li>
+<li>
+<a href="http://www.qpython.org/document.html">Guide</a>
+</li>
+<li class="header-phone-selected">
+<a href="/index.html" class="header-selected">Course</a>
+<span class="header-title-selected"></span>
+</li>
+<li>
+<a href="http://www.aipy.org">AIPY</a>
+</li>
+<li>
+<a target="_blank" href="https://github.com/qpython-android/qpython">Github</a>
+</li>
+</ul>
+<div class="search-box hidden-xs">
+<form action="search.html">
+<input type="search" name="q" placeholder="keyword">
+<input type="hidden" name="check_keywords" value="yes" />
+<input type="hidden" name="area" value="default" />
+<button><img src="http://www.qpython.org/static/ic_search.png"></button>
+</form>
+</div>
+</div>
+</div>
+<main class="contain web-content">
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="id1">
+<h1>简述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>字符串（String），是由零个或多个字符组成的有限序列，在 Python 中表示文本的数据类型。</p>
+<p>字符只是一个符号，例如：字母（A-Z）、数字（0-9）、特殊符号（~!&#64;#￥%…）等。</p>
+<div class="section" id="id2">
+<h2>字符串<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>在 Python 中，字符串由内置的 str 类型定义。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>s = &#39;Hello, Python!&#39;
+type(s)
+&lt;class &#39;str&#39;&gt;
+</pre></div>
+</div>
+<p>可以使用单引号（&#8217;&#8216;）或双引号（"&#8220;）来表示字符串。</p>
+<p><strong>PS</strong>： 单引号比双引号更常用。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>  <span class="c1"># 单引号</span>
+<span class="n">s</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>  <span class="c1"># 双引号</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>字符串可以跨多行，但是每行末尾必须添加反斜杠（）以转义换行符。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello </span><span class="se">\</span>
+<span class="s1">World&#39;</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>三重引号（&#8217;&#8216;&#8217; 或 &#8220;"&#8220;）内的字符串可以跨多个文本行。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;Hello</span>
+<span class="s1">Python</span>
+<span class="s1">&#39;&#39;&#39;</span>
+<span class="n">s</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Hello</span>
+<span class="s2">Python</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p><strong>注意</strong>： 三重引号通常用于表示多行字符串和 docstring。</p>
+</div>
+</div>
+<div class="section" id="id3">
+<h1>访问字符串<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id4">
+<h2>索引<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>字符串是字符的有序序列，可以通过其位置来获取具体的字符。在 Python 中，位置有一个优雅的称呼 - 索引（index）。</p>
+<p>索引分为两种形式：</p>
+<ul class="simple">
+<li>正向索引（从左到右）：索引从 0 开始，直到 length - 1，可以很方便地访问字符串开头附近的字符。</li>
+<li>反向索引（从右到左）：索引从 -1 开始，直到 -length，可以很方便地访问字符串末尾附近的字符。</li>
+</ul>
+<p>其中，length 为字符串的长度。</p>
+<p>为了更清晰以上概念，来看一个直观地索引图。假设，有一个字符串 s = &#8220;Hello"：</p>
+<img alt="http://img.blog.csdn.net/20170510181247783" src="http://img.blog.csdn.net/20170510181247783" />
+<p>使用 [index] 的语法形式来访问指定索引处的字符：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+<span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># 第一个字符</span>
+<span class="n">s</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>  <span class="c1"># 最后一个字符</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>负索引（反向索引）从字符串的末尾开始计数，也可以起到同样的效果：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+<span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">]</span>  <span class="c1"># 第一个字符</span>
+<span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># 最后一个字符</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>试图访问索引范围外的字符会引发 IndexError。索引必须是一个整数，不能使用 float 或其他类型，这将引发 TypeError。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+<span class="n">s</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">s</span><span class="p">[</span><span class="mf">1.5</span><span class="p">]</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+</div>
+<div class="section" id="id5">
+<h2>切片<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>切片操作（slice）是一种很方便的方法，用于引用序列（通常是字符串和列表）的子部分。</p>
+<p>切片操作的语法格式：</p>
+<p>[start:stop:step]</p>
+<ul class="simple">
+<li>start（开始索引）：第一个索引的值是 0，最后一个是 -1。</li>
+<li>stop（结束索引）：切片操作符将取到该索引为止，但不包含该索引的值。</li>
+<li>step（步长）：默认是 1，也就是说，一个接一个切取。如果为 2，则表示隔一取一。步长为正数时，表示从左向右取；如果为负数，表示从右向左取；步长不能为 0。</li>
+</ul>
+<p>通过上图，其实也可以很直观地看到切片。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+<span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>  <span class="c1"># 第 2 个到第 4 个字符</span>
+<span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>  <span class="c1"># 第 2 个到最后一个字符（将索引默认设置为字符串的开始或结束）</span>
+<span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">100</span><span class="p">]</span>  <span class="c1"># 索引太大，被截断至字符串长度处</span>
+<span class="n">s</span><span class="p">[:]</span>  <span class="c1"># 所有字符（从开始到结束）</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p><strong>PS</strong>： s[:] 形式会忽略开始和结束索引，总是获得一个完整的副本。是 pythonic 使用的方式，用于复制序列（例如：字符串或列表）。</p>
+<p>和提取字符类似，切片操作也可以使用反向索引：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># 第 2 个到第 4 个字符</span>
+<span class="n">s</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>  <span class="c1"># 开始到第 2 个字符</span>
+<span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span>  <span class="c1"># 第 3 个到最后一个字符</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>对于任何索引 n，s[:n] + s[n:] == s 是一个整齐的切片，甚至对于负数或超出界限的值也是如此。换一种说法，s[:n] 和 s[n:] 总是将字符串分成两部分，来保存所有的字符。</p>
+</div>
+<div class="section" id="id6">
+<h2>更改或删除字符串<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>字符串是不可变的，也就是说，一旦分配了字符串的元素就不能被更改。</p>
+<p>但是，可以将不同的字符串重新分配给同一个变量。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+<span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Python&#39;</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>无法从字符串中删除字符，但是可以使用关键字 del 完全删除字符串。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+<span class="k">del</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">s</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+</div>
+<div class="section" id="id7">
+<h2>基本操作<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>字符串能成为 Python 中最常用的数据类型之一，很大原因是因为它使用非常方便，提供了大量的字符串操作，例如：连接字符串、遍历字符串…</p>
+<p>所有的序列（例如：字符串、列表）都可以进行以下基本操作：</p>
+<ul class="simple">
+<li>+：连接两个序列</li>
+<li><a href="#id8"><span class="problematic" id="id9">*</span></a>：重复序列元素</li>
+<li>in：判断元素是否在序列中</li>
+<li>min()：返回最小值</li>
+<li>max()：返回最大值</li>
+<li>len()：返回序列长度</li>
+<li>enumerate()：返回一个枚举对象，包含字符串中所有元素的索引和值（作为一对）</li>
+</ul>
+</div>
+<div class="section" id="id10">
+<h2>连接字符串<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<p>连接是指将多个字符串合并为一个单独的字符串。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s1</span> <span class="o">=</span> <span class="s2">&quot;Hello,&quot;</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="s2">&quot; World!&quot;</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">s1</span> <span class="o">+</span> <span class="n">s2</span>  <span class="c1"># 连接字符串</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>如果想在不同的行中连接字符串，可以使用括号。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># 两个字符串一起</span>
+<span class="s1">&#39;Hello,&#39;</span> <span class="s1">&#39; World!&#39;</span>
+<span class="c1"># 使用括号</span>
+<span class="n">s</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Hello,&#39;</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>操作符 + 不会将数字或其他类型自动转换为字符串形式，需要通过 str() 函数将值转换为字符串形式，以便它们可以与其他字符串组合。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;My age is &#39;</span> <span class="o">+</span> <span class="n">age</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;My age is &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+</div>
+<div class="section" id="id11">
+<h2>重复字符串<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<p>操作符 * 用于以指定的次数来重复字符串。有时很好用，比如打印一条华丽的分割线：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+<span class="n">s</span> <span class="o">*</span> <span class="mi">3</span>  <span class="c1"># 重复字符串 3 次</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="mi">20</span><span class="p">)</span>  <span class="c1"># 无需输入很多 -</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+</div>
+<div class="section" id="id12">
+<h2>最大值/最小值<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<p>在一个字符串中，每个字符在计算机中都有对应的 ASCII 码。min() 和 max() 就是根据对应的 ASCII 码进行比较的，从而获取最小值和最大值对应的字符。</p>
+<p>Python 提供了两个内置函数 ord() 和 chr()，用于字符和 ASCII 码之间的转换。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">)</span>  <span class="c1"># 字符转 ASCII 码</span>
+<span class="nb">chr</span><span class="p">(</span><span class="mi">72</span><span class="p">)</span>  <span class="c1"># ASCII 码转字符</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>别犹豫啦，开始比较吧！</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+<span class="nb">min</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># 最小字符</span>
+<span class="nb">max</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># 最大字符</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+</div>
+<div class="section" id="id13">
+<h2>字符串成员测试<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<p>使用关键字 in，可以测试字符串中是否包含指定的子串。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="s1">&#39;t&#39;</span> <span class="ow">in</span> <span class="s1">&#39;python&#39;</span>
+<span class="s1">&#39;th&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s1">&#39;python&#39;</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+</div>
+<div class="section" id="id14">
+<h2>字符串长度<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<p>要获取一个字符串的长度，可以使用内置函数 len()：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># 字符数</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+</div>
+<div class="section" id="id15">
+<h2>迭代字符串<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<p>使用 for 循环，可以遍历一个字符串。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span># 查找字符串中 l 的数量
+count = 0
+for letter in &#39;Hello&#39;:
+    if (letter == &#39;l&#39;):
+        count += 1
+print(count, &#39;letters found&#39;)
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>还可使用 enumerate()，它会返回一个枚举对象，包含字符串中所有元素的索引和值（作为一对），这对于迭代很有用。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>s = &#39;Hello&#39;
+e = list(enumerate(s))
+print(e)
+for index, item in e:
+    print(index, item)
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>运行程序，输出如下：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>[(0, ‘H’), (1, ‘e’), (2, ‘l’), (3, ‘l’), (4, ‘o’)]
+</pre></div>
+</div>
+<p>0 H
+1 e
+2 l
+3 l
+4 o</p>
+</div>
+<div class="section" id="id16">
+<h2>字符串的方法<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<p>字符串有许多方法，可以通过 dir() 来查看方法列表：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>这么多，当然不需要逐一介绍了，重在掌握如何使用（授人以鱼不如授人以渔），能做到随用随查就好。</p>
+<p>利用 help() 函数，可以查看函数或模块用途的详细说明：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span><span class="n">Help</span> <span class="n">on</span> <span class="n">method_descriptor</span><span class="p">:</span>
+<span class="n">lower</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">S</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+<span class="n">Return</span> <span class="n">a</span> <span class="n">copy</span> <span class="n">of</span> <span class="n">the</span> <span class="n">string</span> <span class="n">S</span> <span class="n">converted</span> <span class="n">to</span> <span class="n">lowercase</span><span class="o">.</span>
+<span class="p">(</span><span class="n">END</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>注意</strong>： 要终止查询，使用 q 键。</p>
+<p>按照说明，可以在交互模式下进行实验，这里仅列举一些比较常用的方法。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
+<span class="n">s</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>  <span class="c1"># 转换所有字符为小写</span>
+<span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>  <span class="c1"># 转换所有字符为大写</span>
+<span class="n">s</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;ll&#39;</span><span class="p">)</span>  <span class="c1"># 返回子串的开始索引</span>
+<span class="n">s</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;llo&#39;</span><span class="p">)</span>  <span class="c1"># 检查字符串是否以指定的子串结束</span>
+<span class="n">s</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span>  <span class="c1"># 检查字符串是否只包含数字</span>
+<span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;ll&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>  <span class="c1"># 替换字符串中的子串</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;I like Python&#39;</span>
+<span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>  <span class="c1"># 分割字符串</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+</div>
+<div class="section" id="id17">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<p>作者: <a class="reference external" href="http://blog.csdn.net/liang19890820">一去丶二三里</a></p>
+<p>提交: 2017/12/6</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+</main>
+<div class="star-footer">
+<img onclick="openPurchase()" src="../../static/star.jpg">
+<div id="praise"><span>0</span> persons have rewarded</div>
+</div>
+<div class="foo"></div>
+<footer class="clearfix fixfooter web-show">
+<div class="col-sm-offset-2 col-sm-6 footer-div1">
+<div class="footer-block-item">
+<span class="footer-item1">Built with Sphinx using a theme provid by QPython.</span>
+<span class="footer-item2 visible-xs">Copyight 2017, QPython.</span>
+</div>
+</div>
+<div class="col-sm-2 footer-div2">
+<a href="/index.html" class="pull-right"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+</footer>
+<script>
+var milib;
+if (milib==undefined) {
+var milib = function(){
+};
+milib.qeditor = function(str){
+alert('Please share this page to QPython then run it')
+};
+milib.getPurchaseNumber = function(str){
+//alert('getPurchaseNumber:'+str)
+return "10+";
+};
+milib.a8playVideoFromGW= function(url){
+window.open(url)
+};
+milib.qpylibinstall = function(cat,url,target){
+window.open(url)
+};
+milib.gotoIfPay = function(url, packageId, packageUrl){
+window.open(url)
+};
+} else {
+}
+function openPurchase() {
+//获取标识
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+milib.openPurchaseActivity(s)
+}
+//按钮事件
+function btnEvent(){
+var seq = this.getAttribute('target')-2
+var a = this.parentElement.getElementsByTagName('pre')
+if ( a && a.length > 0){
+/**********有代码，调用控制台*************/
+var code = a[seq].lastChild.nodeValue
+milib.qeditor(code)
+}else{
+//没有代码，调转
+var url = this.getAttribute('data-url');
+window.open(url);
+}
+}
+//获取赞赏
+function setPraise(){
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+var i = document.getElementById('praise').getElementsByTagName('span')[0]
+var num = milib.getPurchaseNumber(s);
+i.innerHTML = num
+}
+//初始化代码显示
+function initCode(){
+var prearr = document.getElementsByTagName('pre');
+for (var i = 0; i < prearr.length; i++) {
+var temp_data = prearr[i].lastChild.nodeValue
+//正则处理 lavel5
+temp_data = temp_data.replace(/\^2\$/g, spaceString(2));
+temp_data = temp_data.replace(/\^4\$/g, spaceString(4));
+temp_data = temp_data.replace(/\^6\$/g, spaceString(6));
+temp_data = temp_data.replace(/\^8\$/g, spaceString(8));
+temp_data = temp_data.replace(/\^10\$/g, spaceString(10));
+temp_data = temp_data.replace(/\^12\$/g, spaceString(12));
+temp_data = temp_data.replace(/\^16\$/g, spaceString(16));
+temp_data = temp_data.replace(/\^20\$/g, spaceString(20));
+//set
+prearr[i].lastChild.nodeValue = temp_data;
+}
+}
+//产生空格
+function spaceString(num){
+var v = ''
+for (var i = 0; i < num; i++) {
+v += ' ';
+}
+return v;
+}
+window.onload = function(){
+setPraise();
+initCode();
+//将所有的button绑定事件
+var b = document.getElementsByTagName('button');
+for (var i = 0; i < b.length; i++) {
+if (b[i].className=='button') {
+b[i].setAttribute('target', i)
+b[i].onclick = btnEvent ;
+}
+}
+}
+$(function(){
+var url = location.href.split('?');
+if (url.length === 2) {
+var c = url[1].split('=');
+if (c[1] == 'web') {
+$('.web-show').css('display','block');
+$('.web-content').addClass('margin-header');
+}
+}
+})
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-103260045-3', 'auto');
+ga('send', 'pageview');
+</script>
+</body>
+</html>
