@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>QPython的WebApp</title>
 <link rel="stylesheet" href="../../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true
+};
+</script>
+<script type="text/javascript" src="../../static/jquery.js"></script>
+<script type="text/javascript" src="../../static/underscore.js"></script>
+<script type="text/javascript" src="../../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body role="document">
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -78,20 +90,53 @@
 <div class="section" id="id3">
 <h2>例子<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>作为QPython内嵌的Web开发库，来看一个最简单的bottle的Hello world</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#qpy:webapp:Bottle Sample
-#qpy://127.0.0.1:8080/hello/qpython
-from bottle import route, run, template
-@route(&#39;/hello/&lt;name&gt;&#39;)
-def index(name):
-    return template(&#39;&lt;b&gt;Hello {{name}}&lt;/b&gt;!&#39;, name=name)
-@route(&#39;/__exit&#39;)
-def exit():
-    import os,signal
-    os.kill(os.getpid(), signal.SIGKILL)
-run(host=&#39;127.0.0.1&#39;, port=8080)
+<div class="highlight-default"><div class="highlight"><pre><span></span>#qpy:webapp:Hello Qpython
+#qpy://127.0.0.1:8080/
+&quot;&quot;&quot;
+This is a sample for qpython webapp
+&quot;&quot;&quot;
+from bottle import Bottle, ServerAdapter
+from bottle import run, debug, route, error, static_file, template
+######### QPYTHON WEB SERVER ###############
+class MyWSGIRefServer(ServerAdapter):
+    server = None
+    def run(self, handler):
+        from wsgiref.simple_server import make_server, WSGIRequestHandler
+        if self.quiet:
+            class QuietHandler(WSGIRequestHandler):
+            def log_request(*args, **kw): pass
+        self.options[&#39;handler_class&#39;] = QuietHandler
+    self.server = make_server(self.host, self.port, handler, **self.options)
+    self.server.serve_forever()
+    def stop(self):
+        import threading
+        threading.Thread(target=self.server.shutdown).start()
+        self.server.server_close()
+######### BUILT-IN ROUTERS ###############
+@route(&#39;/__exit&#39;, method=[&#39;GET&#39;,&#39;HEAD&#39;])
+def __exit():
+    global server
+    server.stop()
+@route(&#39;/assets/&lt;filepath:path&gt;&#39;)
+def serverstatic(filepath):
+    return static_file(filepath, root=&#39;/sdcard&#39;)
+######### WEBAPP ROUTERS WRITE YOUR CODE BELOW###############
+@route(&#39;/&#39;)
+def home():
+    return template(&#39;&lt;h1&gt;Hello {{name}} !&lt;/h1&gt;&lt;a href=&quot;/assets/qpython/projects/WebAppSample/main.py&quot;&gt;View source&lt;/a&gt;&lt;br /&gt;&lt;br /&gt; &lt;a href=&quot;http://edu.qpython.org/qpython-webapp/index.html&quot;&gt;&gt;&gt; About QPython Web App&lt;/a&gt;&#39;,name=&#39;QPython&#39;)
+######### WEBAPP ROUTERS ###############
+app = Bottle()
+app.route(&#39;/&#39;, method=&#39;GET&#39;)(home)
+app.route(&#39;/__exit&#39;, method=[&#39;GET&#39;,&#39;HEAD&#39;])(__exit)
+app.route(&#39;/assets/&lt;filepath:path&gt;&#39;, method=&#39;GET&#39;)(serverstatic)
+try:
+    server = MyWSGIRefServer(host=&quot;127.0.0.1&quot;, port=&quot;8080&quot;)
+    app.run(server=server,reloader=False)
+except Exception,ex:
+    print &quot;Exception: %s&quot; % repr(ex)
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>点击运行，将代码复制到编辑器中点击运行即可看见效果。</p>
 <p>当然，在QPython中，还提供了其他Web开发框架的支持来帮助你简化工作。</p>
 </div>
@@ -124,7 +169,7 @@ if (milib==undefined) {
 var milib = function(){
 };
 milib.qeditor = function(str){
-alert('please open it with QPython browser')
+alert('Please share this page to QPython then run it')
 };
 milib.getPurchaseNumber = function(str){
 //alert('getPurchaseNumber:'+str)
@@ -150,7 +195,7 @@ milib.openPurchaseActivity(s)
 }
 //按钮事件
 function btnEvent(){
-var seq = this.getAttribute('target')
+var seq = this.getAttribute('target')-2
 var a = this.parentElement.getElementsByTagName('pre')
 if ( a && a.length > 0){
 /**********有代码，调用控制台*************/

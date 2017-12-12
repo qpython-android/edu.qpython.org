@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>AIPY - Learn AI programming on Mobile</title>
 <link rel="stylesheet" href="../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true
+};
+</script>
+<script type="text/javascript" src="../static/jquery.js"></script>
+<script type="text/javascript" src="../static/underscore.js"></script>
+<script type="text/javascript" src="../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body role="document">
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -58,7 +70,7 @@
 <div class="section" id="aipy-learn-ai-programming-on-mobile">
 <h1>AIPY - Learn AI programming on Mobile<a class="headerlink" href="#aipy-learn-ai-programming-on-mobile" title="Permalink to this headline">¶</a></h1>
 <a class="reference external image-reference" href="http://www.aipy.org"><img alt="AIPY Logo" src="http://www.aipy.org/img/img_logo.png" /></a>
-<p>AIPY  is a high-level AI learning app, based on related libraries like Numpy, Scipy, theano, keras, etc…. It was developed with a focus on helping you learn and practise AI related programming well and fast.</p>
+<p>AIPY  is a high-level AI learning app, based on related libraries like Numpy, Scipy, theano, keras, etc.... It was developed with a focus on helping you learn and practise AI related programming well and fast.</p>
 <p>Now, AIPY is released as a QPython plugin, aftering being installed, you could see the AIPY category in QPYPI, where you could find Numpy, Scipy, Pandas, Matplotlib, Scikit-learn, Theano, Lasange, Keras.</p>
 <p>By installing these libraries, you could start mathematics, scientific, data  analytics, deeplearning etc. with QPython.</p>
 </div>
@@ -67,7 +79,7 @@
 <p>You should install AIPY application first, then please make sure you have the QPython(version &gt;=2.0.7) installed.</p>
 <p>If you have complete the previous step, then you could launch QPython and enter the QPYPI, you will see the AIPY category, from where you could install the related libraries. They are numpy, scipy, pandas, matplotlib, scikit-learn, theano, Lasagne, keras etc.</p>
 <img alt="AIPY libraires" src="http://edu.qpython.org/static/qpypi-aipy.png" />
-<p><em>You could install AIPY libraries from QPython’s QPYPI</em></p>
+<p><em>You could install AIPY libraries from QPython&#8217;s QPYPI</em></p>
 </div>
 <div class="section" id="keras">
 <h1>Keras<a class="headerlink" href="#keras" title="Permalink to this headline">¶</a></h1>
@@ -121,7 +133,7 @@
 <li>1 Simple and efficient tools for data mining and data analysis</li>
 <li>2 Accessible to everybody, and reusable in various contexts</li>
 </ul>
-<p><strong>It’s AIPY’s first release, we will keep developing, and bring more amazing features. Please give us any feedback to support&#64;qpython.org.</strong></p>
+<p><strong>It&#8217;s AIPY&#8217;s first release, we will keep developing, and bring more amazing features. Please give us any feedback to support&#64;qpython.org.</strong></p>
 <a class="reference external image-reference" href="http://www.aipy.org"><img alt="Get AIPY Application" src="http://edu.qpython.org/static/aipy.png" /></a>
 <p><em>Get AIPY Application http://www.aipy.org</em></p>
 </div>
@@ -153,7 +165,7 @@ if (milib==undefined) {
 var milib = function(){
 };
 milib.qeditor = function(str){
-alert('please open it with QPython browser')
+alert('Please share this page to QPython then run it')
 };
 milib.getPurchaseNumber = function(str){
 //alert('getPurchaseNumber:'+str)
@@ -179,7 +191,7 @@ milib.openPurchaseActivity(s)
 }
 //按钮事件
 function btnEvent(){
-var seq = this.getAttribute('target')
+var seq = this.getAttribute('target')-2
 var a = this.parentElement.getElementsByTagName('pre')
 if ( a && a.length > 0){
 /**********有代码，调用控制台*************/

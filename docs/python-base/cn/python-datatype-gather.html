@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<title>Python 集合</title>
+<link rel="stylesheet" href="../../static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true
+};
+</script>
+<script type="text/javascript" src="../../static/jquery.js"></script>
+<script type="text/javascript" src="../../static/underscore.js"></script>
+<script type="text/javascript" src="../../static/doctools.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body role="document">
+<div class="header doc-header web-show">
+<div class="col-sm-offset-2 col-sm-8  index-header">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+<span class="sr-only">切换导航</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/index.html" class="logo"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+<ul class="header-title collapse navbar-collapse" id="example-navbar-collapse" >
+<li>
+<a href="http://www.qpython.org/index.html">Home</a>
+</li>
+<li>
+<a href="http://www.qpython.org/document.html">Guide</a>
+</li>
+<li class="header-phone-selected">
+<a href="/index.html" class="header-selected">Course</a>
+<span class="header-title-selected"></span>
+</li>
+<li>
+<a href="http://www.aipy.org">AIPY</a>
+</li>
+<li>
+<a target="_blank" href="https://github.com/qpython-android/qpython">Github</a>
+</li>
+</ul>
+<div class="search-box hidden-xs">
+<form action="search.html">
+<input type="search" name="q" placeholder="keyword">
+<input type="hidden" name="check_keywords" value="yes" />
+<input type="hidden" name="area" value="default" />
+<button><img src="http://www.qpython.org/static/ic_search.png"></button>
+</form>
+</div>
+</div>
+</div>
+<main class="contain web-content">
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="python">
+<h1>Python 集合<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>简述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>数学上有一个基础概念 -集合，上高一的时候学过。集合的作用大吗？高考必考，你说呢？</p>
+<p>关于集合，维基百科这样描述：</p>
+<p>在 Python 中，集合分为两类：</p>
+<ul class="simple">
+<li>set：可变集合</li>
+<li>frozenset：不可变集合</li>
+</ul>
+<p>set 可以原地修改，或者说是可变的，也可以说是 unhashable（不可哈希）的。</p>
+<p>frozenset，顾名思义，是一个被“冻结”的集合，不能原地修改，是 hashable（可哈希）的。</p>
+</div>
+<div class="section" id="id2">
+<h2>集合<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>在 Python 中，集合由内置的 set 类型定义。</p>
+<p>要创建集合，需要将所有项（元素）放在花括号（{}）内，以逗号（,）分隔。</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>d = {&#8216;name&#8217;:&#8217;Python&#8217;, &#8216;site&#8217;:&#8217;www.python.org&#8217;}
+type(d)
+&lt;class &#8216;dict&#8217;&gt;</dd>
+</dl>
+<button class="button">Run ...</button>
+<p>字典的创建方式很多，还可以使用 dict()：</p>
+<p>由于列表是可变的，不可 hash，因此不能作为字典的 key。</p>
+<p>key 唯一，意思是说：不要有重复的 key 出现。</p>
+<p>虽然 value 可以是任何数据类型，并且可以重复，但 key 必须是不可变类型（例如：字符串、数字）或具有不可变元素的元组。</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd><blockquote class="first">
+<div>s = {&#8216;P&#8217;, &#8216;y&#8217;, &#8216;t&#8217;, &#8216;h&#8217;, &#8216;o&#8217;, &#8216;n&#8217;}
+type(s)</div></blockquote>
+<p class="last">&lt;class &#8216;set&#8217;&gt;</p>
+</dd>
+</dl>
+<button class="button">Run ...</button>
+<p>集合可以有任意数量的元素，它们可以是不同的类型（例如：数字、元组、字符串等）。但是，集合不能有可变元素（例如：列表、集合或字典）。</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd><blockquote class="first">
+<div><p>s = {1, 2, 3}  # 整形的集合</p>
+<p>s = {1.0, &#8216;Python&#8217;, (1, 2, 3)}  # 混合类型的集合</p>
+<p>s = set([&#8216;P&#8217;, &#8216;y&#8217;])  # 从列表创建</p>
+<p>s = {1, 2, [3, 4]}  # 不能有可变元素</p>
+</div></blockquote>
+<p class="last">...
+TypeError: unhashable type: &#8216;list&#8217;</p>
+</dd>
+</dl>
+<button class="button">Run ...</button>
+<p>创建空集合比较特殊。在 Python 中，空花括号（{}）用于创建空字典。要创建一个没有任何元素的集合，使用 set() 函数（不要包含任何参数）。</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd><blockquote class="first">
+<div>d = {}  # 空字典
+type(d)</div></blockquote>
+<p>&lt;class &#8216;dict&#8217;&gt;</p>
+<blockquote>
+<div>s = set()  # 空集合</div></blockquote>
+<p class="last">type(s)
+&lt;class &#8216;set&#8217;&gt;</p>
+</dd>
+</dl>
+<button class="button">Run ...</button>
+</div>
+<div class="section" id="id3">
+<h2>集合的特性<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>–《论语》</p>
+<p>回顾数学相关知识，集合有以下特性：</p>
+<ul class="simple">
+<li>无序性：一个集合中，每个元素的地位都是相同的，元素之间是无序的。</li>
+</ul>
+<p>集合上可以定义序关系，定义了序关系后，元素之间就可以按照序关系排序。但就集合本身的特性而言，元素之间没有必然的序。
+- 互异性：一个集合中，任何两个元素都认为是不相同的，即每个元素只能出现一次。
+有时需要对同一元素出现多次的情形进行刻画，可以使用多重集，其中的元素允许出现多次。
+- 确定性：给定一个集合，任给一个元素，该元素或者属于或者不属于该集合，二者必居其一，不允许有模棱两可的情况出现。</p>
+<p>当然，Python 中的集合也具备这些特性：</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd><dl class="first docutils">
+<dt># 无序性</dt>
+<dd>s = set(&#8216;Python&#8217;)
+s</dd>
+</dl>
+<p>{&#8216;y&#8217;, &#8216;n&#8217;, &#8216;h&#8217;, &#8216;o&#8217;, &#8216;P&#8217;, &#8216;t&#8217;}</p>
+<blockquote>
+<div>s[0]  # 不支持索引</div></blockquote>
+<p>...
+TypeError: &#8216;set&#8217; object does not support indexing</p>
+<dl class="docutils">
+<dt># 互异性</dt>
+<dd>s = set(&#8216;Hello&#8217;)
+s</dd>
+</dl>
+<p>{&#8216;e&#8217;, &#8216;H&#8217;, &#8216;l&#8217;, &#8216;o&#8217;}</p>
+<dl class="docutils">
+<dt># 确定性</dt>
+<dd>&#8216;l&#8217; in s</dd>
+</dl>
+<p>True</p>
+<blockquote>
+<div>&#8216;P&#8217; not in s</div></blockquote>
+<p class="last">True</p>
+</dd>
+</dl>
+<button class="button">Run ...</button>
+<p><strong>注意：</strong> 由于集合是无序的，所以索引没有任何意义。也就是说，无法使用索引或切片访问或更改集合元素。</p>
+</div>
+<div class="section" id="id4">
+<h2>集合运算<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>集合之间也可进行数学集合运算（例如：并集、交集等），可用相应的操作符或方法来实现。</p>
+<p>考虑 A、B 两个集合，进行以下操作。</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>A = set(&#8216;abcd&#8217;)
+B = set(&#8216;cdef&#8217;)</dd>
+</dl>
+<button class="button">Run ...</button>
+</div>
+<div class="section" id="id5">
+<h2>子集<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>子集，为某个集合中一部分的集合，故亦称部分集合。</p>
+<p>使用操作符 &lt; 执行子集操作，同样地，也可使用方法 issubset() 完成。</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd><blockquote class="first">
+<div><p>C = set(&#8216;ab&#8217;)</p>
+<p>C &lt; A</p>
+</div></blockquote>
+<p>True</p>
+<blockquote class="last">
+<div><p>C &lt; B
+False</p>
+<p>C.issubset(A)
+True</p>
+</div></blockquote>
+</dd>
+</dl>
+<button class="button">Run ...</button>
+</div>
+<div class="section" id="id6">
+<h2>并集<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>一组集合的并集是这些集合的所有元素构成的集合，而不包含其他元素。</p>
+<p>使用操作符 | 执行并集操作，同样地，也可使用方法 union() 完成。</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd><blockquote class="first">
+<div>A | B</div></blockquote>
+<p>{&#8216;e&#8217;, &#8216;f&#8217;, &#8216;d&#8217;, &#8216;c&#8217;, &#8216;b&#8217;, &#8216;a&#8217;}</p>
+<blockquote>
+<div>A.union(B)</div></blockquote>
+<p class="last">{&#8216;e&#8217;, &#8216;f&#8217;, &#8216;d&#8217;, &#8216;c&#8217;, &#8216;b&#8217;, &#8216;a&#8217;}</p>
+</dd>
+</dl>
+<button class="button">Run ...</button>
+</div>
+<div class="section" id="id7">
+<h2>交集<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>两个集合 A 和 B 的交集是含有所有既属于 A 又属于 B 的元素，而没有其他元素的集合。</p>
+<p>使用 &amp; 操作符执行交集操作，同样地，也可使用方法 intersection() 完成。</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd><blockquote class="first">
+<div>A &amp; B</div></blockquote>
+<p>{&#8216;d&#8217;, &#8216;c&#8217;}</p>
+<blockquote>
+<div>A.intersection(B)</div></blockquote>
+<p class="last">{&#8216;d&#8217;, &#8216;c&#8217;}</p>
+</dd>
+</dl>
+<button class="button">Run ...</button>
+</div>
+<div class="section" id="id8">
+<h2>差集<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>A 与 B 的差集是所有属于 A 且不属于 B 的元素构成的集合</p>
+<p>使用操作符 - 执行差集操作，同样地，也可使用方法 difference() 完成。</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd><blockquote class="first">
+<div>A - B</div></blockquote>
+<p>{&#8216;b&#8217;, &#8216;a&#8217;}</p>
+<blockquote>
+<div>A.difference(B)</div></blockquote>
+<p class="last">{&#8216;b&#8217;, &#8216;a&#8217;}</p>
+</dd>
+</dl>
+<button class="button">Run ...</button>
+</div>
+<div class="section" id="id9">
+<h2>对称差<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>两个集合的对称差是只属于其中一个集合，而不属于另一个集合的元素组成的集合。</p>
+<p>使用 ^ 操作符执行差集操作，同样地，也可使用方法 symmetric_difference() 完成。</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd><blockquote class="first">
+<div>A ^ B</div></blockquote>
+<p>{&#8216;b&#8217;, &#8216;e&#8217;, &#8216;f&#8217;, &#8216;a&#8217;}</p>
+<blockquote>
+<div>A.symmetric_difference(B)</div></blockquote>
+<p class="last">{&#8216;b&#8217;, &#8216;e&#8217;, &#8216;f&#8217;, &#8216;a&#8217;}</p>
+</dd>
+</dl>
+<button class="button">Run ...</button>
+</div>
+<div class="section" id="id10">
+<h2>更改集合<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<p>虽然集合不能有可变元素，但是集合本身是可变的。也就是说，可以添加或删除其中的元素。</p>
+<p>可以使用 add() 方法添加单个元素，使用 update() 方法添加多个元素，update() 可以使用元组、列表、字符串或其他集合作为参数。</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd><blockquote class="first">
+<div><p>s = {&#8216;P&#8217;, &#8216;y&#8217;}</p>
+<p>s.add(&#8216;t&#8217;)  # 添加一个元素
+s</p>
+</div></blockquote>
+<p>{&#8216;P&#8217;, &#8216;y&#8217;, &#8216;t&#8217;}</p>
+<blockquote>
+<div>s.update([&#8216;h&#8217;, &#8216;o&#8217;, &#8216;n&#8217;])  # 添加多个元素</div></blockquote>
+<p>s
+{&#8216;y&#8217;, &#8216;o&#8217;, &#8216;n&#8217;, &#8216;t&#8217;, &#8216;P&#8217;, &#8216;h&#8217;}</p>
+<blockquote>
+<div>s.update([&#8216;H&#8217;, &#8216;e&#8217;], {&#8216;l&#8217;, &#8216;l&#8217;, &#8216;o&#8217;})  # 添加列表和集合
+s</div></blockquote>
+<p class="last">{&#8216;H&#8217;, &#8216;y&#8217;, &#8216;e&#8217;, &#8216;o&#8217;, &#8216;n&#8217;, &#8216;t&#8217;, &#8216;l&#8217;, &#8216;P&#8217;, &#8216;h&#8217;}</p>
+</dd>
+</dl>
+<button class="button">Run ...</button>
+<p>在所有情况下，元素都不会重复。</p>
+</div>
+<div class="section" id="id11">
+<h2>从集合中删除元素<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<p>可以使用 discard() 和 remove() 方法删除集合中特定的元素。</p>
+<p>两者之间唯一的区别在于：如果集合中不存在指定的元素，使用 discard() 保持不变；但在这种情况下，remove() 会引发 KeyError。</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd><blockquote class="first">
+<div><p>s = {&#8216;P&#8217;, &#8216;y&#8217;, &#8216;t&#8217;, &#8216;h&#8217;, &#8216;o&#8217;, &#8216;n&#8217;}</p>
+<p>s.discard(&#8216;t&#8217;)  # 去掉一个存在的元素
+s</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>{&#8216;y&#8217;, &#8216;o&#8217;, &#8216;n&#8217;, &#8216;P&#8217;, &#8216;h&#8217;}</dt>
+<dd>s.remove(&#8216;h&#8217;)  # 删除一个存在的元素
+s</dd>
+</dl>
+<p>{&#8216;y&#8217;, &#8216;o&#8217;, &#8216;n&#8217;, &#8216;P&#8217;}</p>
+<blockquote>
+<div>s.discard(&#8216;w&#8217;)  # 去掉一个不存在的元素（正常）
+s</div></blockquote>
+<p>{&#8216;y&#8217;, &#8216;o&#8217;, &#8216;n&#8217;, &#8216;P&#8217;}</p>
+<blockquote>
+<div>s.remove(&#8216;w&#8217;)  # 删除一个不存在的元素（引发错误）</div></blockquote>
+<p class="last">...
+KeyError: &#8216;w&#8217;</p>
+</dd>
+</dl>
+<button class="button">Run ...</button>
+<p>类似地，可以使用 pop() 方法删除和返回一个项目。</p>
+<p>还可以使用 clear() 删除集合中的所有元素。</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd><blockquote class="first">
+<div><p>s = set(&#8216;Python&#8217;)</p>
+<p>s.pop()  # 随机返回一个元素</p>
+</div></blockquote>
+<p>&#8216;y&#8217;</p>
+<blockquote>
+<div>s.clear()  # 清空集合
+s</div></blockquote>
+<p class="last">set()</p>
+</dd>
+</dl>
+<button class="button">Run ...</button>
+<p><strong>注意：</strong> 集合是无序的，所以无法确定哪个元素将被 pop，完全随机。</p>
+</div>
+<div class="section" id="id12">
+<h2>集合的方法<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<p>老规矩，利用 dir() 来查看方法列表：</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd><blockquote class="first">
+<div>dir(set)</div></blockquote>
+<p class="last">[&#8216;__and__&#8217;, &#8216;__class__&#8217;, &#8216;__contains__&#8217;, &#8216;__delattr__&#8217;, &#8216;__dir__&#8217;, &#8216;__doc__&#8217;, &#8216;__eq__&#8217;, &#8216;__format__&#8217;, &#8216;__ge__&#8217;, &#8216;__getattribute__&#8217;, &#8216;__gt__&#8217;, &#8216;__hash__&#8217;, &#8216;__iand__&#8217;, &#8216;__init__&#8217;, &#8216;__ior__&#8217;, &#8216;__isub__&#8217;, &#8216;__iter__&#8217;, &#8216;__ixor__&#8217;, &#8216;__le__&#8217;, &#8216;__len__&#8217;, &#8216;__lt__&#8217;, &#8216;__ne__&#8217;, &#8216;__new__&#8217;, &#8216;__or__&#8217;, &#8216;__rand__&#8217;, &#8216;__reduce__&#8217;, &#8216;__reduce_ex__&#8217;, &#8216;__repr__&#8217;, &#8216;__ror__&#8217;, &#8216;__rsub__&#8217;, &#8216;__rxor__&#8217;, &#8216;__setattr__&#8217;, &#8216;__sizeof__&#8217;, &#8216;__str__&#8217;, &#8216;__sub__&#8217;, &#8216;__subclasshook__&#8217;, &#8216;__xor__&#8217;, &#8216;add&#8217;, &#8216;clear&#8217;, &#8216;copy&#8217;, &#8216;difference&#8217;, &#8216;difference_update&#8217;, &#8216;discard&#8217;, &#8216;intersection&#8217;, &#8216;intersection_update&#8217;, &#8216;isdisjoint&#8217;, &#8216;issubset&#8217;, &#8216;issuperset&#8217;, &#8216;pop&#8217;, &#8216;remove&#8217;, &#8216;symmetric_difference&#8217;, &#8216;symmetric_difference_update&#8217;, &#8216;union&#8217;, &#8216;update&#8217;]</p>
+</dd>
+</dl>
+<button class="button">Run ...</button>
+<p>可以看到，有以下方法可用：</p>
+<p>可以看到，有以下方法可用：
++&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+
+| 方法                          |                                描述                                                  |
++=============================+======================================================================================+
+<a href="#id13"><span class="problematic" id="id14">|</span></a>add()                        |            将元素添加到集合中                                                        |
++=============================+======================================================================================+
+clear()                       |     删除集合中的所有元素                                                             |
++=============================+======================================================================================+
+copy()                        |             返回集合的浅拷贝                                                         |
++=============================+======================================================================================+
+difference                    |          将两个或多个集合的差集作为一个新集合返回                                    |
++=============================+======================================================================================+
+difference_update()           |            从这个集合中删除另一个集合的所有元素                                      |
++=============================+======================================================================================+
+discard()                     |         删除集合中的一个元素（如果元素不存在，则不执行任何操作）                     |
++=============================+======================================================================================+
+intersection()                |            将两个集合的交集作为一个新集合返回                                        |
++=============================+======================================================================================+
+intersection_update()         |              用自己和另一个的交集来更新这个集合                                      |
++=============================+======================================================================================+
+isdisjoint()                  |             如果两个集合有一个空交集，返回 True                                      |
++=============================+======================================================================================+
+issubset()                    |          如果另一个集合包含这个集合，返回 True                                       |
++=============================+======================================================================================+
+issuperset()                  |         如果这个集合包含另一个集合，返回 True                                        |
++=============================+======================================================================================+
+pop()                         |          删除并返回任意的集合元素（如果集合为空，会引发 KeyError）                   |
++=============================+======================================================================================+
+remove()                      |        删除集合中的一个元素（如果元素不存在，会引发 KeyError）                       |
++=============================+======================================================================================+
+symmetric_difference()        |             将两个集合的对称差作为一个新集合返回                                     |
++=============================+======================================================================================+
+symmetric_difference_update() |           用自己和另一个的对称差来更新这个集合                                       |
++=============================+======================================================================================+
+union()                       |           将集合的并集作为一个新集合返回                                             |
++=============================+======================================================================================+
+update()                      |           用自己和另一个的并集来更新这个集合                                         |
++&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+</p>
+<p>其中一些方法在上述示例中已经被使用过了，如果有方法不会用，可利用 help() 函数，查看用途及详细说明。</p>
+</div>
+<div class="section" id="id15">
+<h2>集合与内置函数<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<p>下述内置函数通常作用于集合，来执行不同的任务。</p>
+<table border="1" class="docutils">
+<colgroup>
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+<p>函数        <a href="#id16"><span class="problematic" id="id17">|</span></a>描述                                                                                    |
++===========+========================================================================================+
+all()       <a href="#id18"><span class="problematic" id="id19">|</span></a>如果集合中的所有元素都是 True（或者集合为空），则返回 True。                            |
++===========+========================================================================================+
+any()       <a href="#id20"><span class="problematic" id="id21">|</span></a>如果集合中的所有元素都是 True，则返回 True；如果集合为空，则返回 False。                |
++===========+========================================================================================+
+enumerate() |   返回一个枚举对象，其中包含了集合中所有元素的索引和值（配对）。                       |
++===========+========================================================================================+
+len()       <a href="#id22"><span class="problematic" id="id23">|</span></a>返回集合的长度（元素个数）                                                              |
++===========+========================================================================================+
+max()       <a href="#id24"><span class="problematic" id="id25">|</span></a>返回集合中的最大项                                                                      |
++===========+========================================================================================+
+min()       <a href="#id26"><span class="problematic" id="id27">|</span></a>返回集合中的最小项                                                                      |
++===========+========================================================================================+
+sorted()    |   从集合中的元素返回新的排序列表（不排序集合本身）                                     |
++===========+========================================================================================+
+sum()       <a href="#id28"><span class="problematic" id="id29">|</span></a>返回集合的所有元素之和                                                                  |
++&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-+</p>
+</div>
+<div class="section" id="id30">
+<h2>不可变集合<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h2>
+<p>frozenset 是一个具有集合特征的新类，但是一旦分配，它里面的元素就不能更改。这一点和元组非常类似：元组是不可变的列表，frozenset 是不可变的集合。</p>
+<p>集合是 unhashable 的，因此不能用作字典的 key；而 frozensets 是 hashable 的，可以用作字典的 key。</p>
+<p>可以使用函数 frozenset() 创建 frozenset。</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd><blockquote class="first">
+<div>s = frozenset(&#8216;Python&#8217;)
+type(s)</div></blockquote>
+<p class="last">&lt;class &#8216;frozenset&#8217;&gt;</p>
+</dd>
+</dl>
+<button class="button">Run ...</button>
+<p>frozenset 也提供了一些列方法，和 set 中的类似。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span> <span class="nb">dir</span><span class="p">(</span><span class="nb">frozenset</span><span class="p">)</span>
+<span class="p">[</span><span class="s1">&#39;__and__&#39;</span><span class="p">,</span> <span class="s1">&#39;__class__&#39;</span><span class="p">,</span> <span class="s1">&#39;__contains__&#39;</span><span class="p">,</span> <span class="s1">&#39;__delattr__&#39;</span><span class="p">,</span> <span class="s1">&#39;__dir__&#39;</span><span class="p">,</span> <span class="s1">&#39;__doc__&#39;</span><span class="p">,</span> <span class="s1">&#39;__eq__&#39;</span><span class="p">,</span> <span class="s1">&#39;__format__&#39;</span><span class="p">,</span> <span class="s1">&#39;__ge__&#39;</span><span class="p">,</span> <span class="s1">&#39;__getattribute__&#39;</span><span class="p">,</span> <span class="s1">&#39;__gt__&#39;</span><span class="p">,</span> <span class="s1">&#39;__hash__&#39;</span><span class="p">,</span> <span class="s1">&#39;__init__&#39;</span><span class="p">,</span> <span class="s1">&#39;__iter__&#39;</span><span class="p">,</span> <span class="s1">&#39;__le__&#39;</span><span class="p">,</span> <span class="s1">&#39;__len__&#39;</span><span class="p">,</span> <span class="s1">&#39;__lt__&#39;</span><span class="p">,</span> <span class="s1">&#39;__ne__&#39;</span><span class="p">,</span> <span class="s1">&#39;__new__&#39;</span><span class="p">,</span> <span class="s1">&#39;__or__&#39;</span><span class="p">,</span> <span class="s1">&#39;__rand__&#39;</span><span class="p">,</span> <span class="s1">&#39;__reduce__&#39;</span><span class="p">,</span> <span class="s1">&#39;__reduce_ex__&#39;</span><span class="p">,</span> <span class="s1">&#39;__repr__&#39;</span><span class="p">,</span> <span class="s1">&#39;__ror__&#39;</span><span class="p">,</span> <span class="s1">&#39;__rsub__&#39;</span><span class="p">,</span> <span class="s1">&#39;__rxor__&#39;</span><span class="p">,</span> <span class="s1">&#39;__setattr__&#39;</span><span class="p">,</span> <span class="s1">&#39;__sizeof__&#39;</span><span class="p">,</span> <span class="s1">&#39;__str__&#39;</span><span class="p">,</span> <span class="s1">&#39;__sub__&#39;</span><span class="p">,</span> <span class="s1">&#39;__subclasshook__&#39;</span><span class="p">,</span> <span class="s1">&#39;__xor__&#39;</span><span class="p">,</span> <span class="s1">&#39;copy&#39;</span><span class="p">,</span> <span class="s1">&#39;difference&#39;</span><span class="p">,</span> <span class="s1">&#39;intersection&#39;</span><span class="p">,</span> <span class="s1">&#39;isdisjoint&#39;</span><span class="p">,</span> <span class="s1">&#39;issubset&#39;</span><span class="p">,</span> <span class="s1">&#39;issuperset&#39;</span><span class="p">,</span> <span class="s1">&#39;symmetric_difference&#39;</span><span class="p">,</span> <span class="s1">&#39;union&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>由于 frozenset 是不可变的，所以没有添加或删除元素的方法。</p>
+</div>
+<div class="section" id="id31">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h2>
+<p>作者: <a class="reference external" href="http://blog.csdn.net/liang19890820">CSDN</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+</main>
+<div class="star-footer">
+<img onclick="openPurchase()" src="../../static/star.jpg">
+<div id="praise"><span>0</span> persons have rewarded</div>
+</div>
+<div class="foo"></div>
+<footer class="clearfix fixfooter web-show">
+<div class="col-sm-offset-2 col-sm-6 footer-div1">
+<div class="footer-block-item">
+<span class="footer-item1">Built with Sphinx using a theme provid by QPython.</span>
+<span class="footer-item2 visible-xs">Copyight 2017, QPython.</span>
+</div>
+</div>
+<div class="col-sm-2 footer-div2">
+<a href="/index.html" class="pull-right"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+</footer>
+<script>
+var milib;
+if (milib==undefined) {
+var milib = function(){
+};
+milib.qeditor = function(str){
+alert('Please share this page to QPython then run it')
+};
+milib.getPurchaseNumber = function(str){
+//alert('getPurchaseNumber:'+str)
+return "10+";
+};
+milib.a8playVideoFromGW= function(url){
+window.open(url)
+};
+milib.qpylibinstall = function(cat,url,target){
+window.open(url)
+};
+milib.gotoIfPay = function(url, packageId, packageUrl){
+window.open(url)
+};
+} else {
+}
+function openPurchase() {
+//获取标识
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+milib.openPurchaseActivity(s)
+}
+//按钮事件
+function btnEvent(){
+var seq = this.getAttribute('target')-2
+var a = this.parentElement.getElementsByTagName('pre')
+if ( a && a.length > 0){
+/**********有代码，调用控制台*************/
+var code = a[seq].lastChild.nodeValue
+milib.qeditor(code)
+}else{
+//没有代码，调转
+var url = this.getAttribute('data-url');
+window.open(url);
+}
+}
+//获取赞赏
+function setPraise(){
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+var i = document.getElementById('praise').getElementsByTagName('span')[0]
+var num = milib.getPurchaseNumber(s);
+i.innerHTML = num
+}
+//初始化代码显示
+function initCode(){
+var prearr = document.getElementsByTagName('pre');
+for (var i = 0; i < prearr.length; i++) {
+var temp_data = prearr[i].lastChild.nodeValue
+//正则处理 lavel5
+temp_data = temp_data.replace(/\^2\$/g, spaceString(2));
+temp_data = temp_data.replace(/\^4\$/g, spaceString(4));
+temp_data = temp_data.replace(/\^6\$/g, spaceString(6));
+temp_data = temp_data.replace(/\^8\$/g, spaceString(8));
+temp_data = temp_data.replace(/\^10\$/g, spaceString(10));
+temp_data = temp_data.replace(/\^12\$/g, spaceString(12));
+temp_data = temp_data.replace(/\^16\$/g, spaceString(16));
+temp_data = temp_data.replace(/\^20\$/g, spaceString(20));
+//set
+prearr[i].lastChild.nodeValue = temp_data;
+}
+}
+//产生空格
+function spaceString(num){
+var v = ''
+for (var i = 0; i < num; i++) {
+v += ' ';
+}
+return v;
+}
+window.onload = function(){
+setPraise();
+initCode();
+//将所有的button绑定事件
+var b = document.getElementsByTagName('button');
+for (var i = 0; i < b.length; i++) {
+if (b[i].className=='button') {
+b[i].setAttribute('target', i)
+b[i].onclick = btnEvent ;
+}
+}
+}
+$(function(){
+var url = location.href.split('?');
+if (url.length === 2) {
+var c = url[1].split('=');
+if (c[1] == 'web') {
+$('.web-show').css('display','block');
+$('.web-content').addClass('margin-header');
+}
+}
+})
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-103260045-3', 'auto');
+ga('send', 'pageview');
+</script>
+</body>
+</html>

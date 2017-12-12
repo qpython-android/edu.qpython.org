@@ -92,7 +92,7 @@
         var milib = function(){
         };
         milib.qeditor = function(str){
-            alert('please open it with QPython browser')
+            alert('Please share this page to QPython then run it')
         };
         milib.getPurchaseNumber = function(str){
             //alert('getPurchaseNumber:'+str)
@@ -120,7 +120,7 @@
 
     //按钮事件
     function btnEvent(){
-        var seq = this.getAttribute('target')
+        var seq = this.getAttribute('target')-2
         var a = this.parentElement.getElementsByTagName('pre')
         if ( a && a.length > 0){
             /**********有代码，调用控制台*************/

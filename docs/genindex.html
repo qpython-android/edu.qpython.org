@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>Index</title>
 <link rel="stylesheet" href="static/style.css" type="text/css" />
 <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    './',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true
+};
+</script>
+<script type="text/javascript" src="static/jquery.js"></script>
+<script type="text/javascript" src="static/underscore.js"></script>
+<script type="text/javascript" src="static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body role="document">
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -86,7 +98,7 @@ if (milib==undefined) {
 var milib = function(){
 };
 milib.qeditor = function(str){
-alert('please open it with QPython browser')
+alert('Please share this page to QPython then run it')
 };
 milib.getPurchaseNumber = function(str){
 //alert('getPurchaseNumber:'+str)
@@ -112,7 +124,7 @@ milib.openPurchaseActivity(s)
 }
 //按钮事件
 function btnEvent(){
-var seq = this.getAttribute('target')
+var seq = this.getAttribute('target')-2
 var a = this.parentElement.getElementsByTagName('pre')
 if ( a && a.length > 0){
 /**********有代码，调用控制台*************/
