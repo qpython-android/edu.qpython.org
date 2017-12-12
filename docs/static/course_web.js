@@ -15,7 +15,8 @@ var vm = new Vue({
   },
   created: function () {
     var that = this;
-    $.get('/index/default.json', function(data){
+    var _url = navigator.language == 'zh-CN'  ? '/index/zh.json' : navigator.language == 'zh' ? '/index/zh.json' : '/index/default.json';
+    $.get(_url, function(data){
       var _new = [];
         var _featured = [];
         $.each(data, function(k, v){
