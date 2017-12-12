@@ -380,6 +380,63 @@
         "logo": "http://edu.qpython.org/static/course-dive-into-python.png",
         "open": 0,
         "courses":[
+            {
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/dive-into-python/cn/sys.html",
+                "smodule":"dive-into-python-sys",
+                "description":"sys模块",
+                "title":"深入Python - sys模块",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/dive-into-python/cn/os.html",
+                "smodule":"dive-into-python-os",
+                "description":"与操作系统进行交互：os 模块",
+                "title":"深入Python - os模块",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/dive-into-python/cn/csv.html",
+                "smodule":"dive-into-python-csv",
+                "description":"CSV 文件和 csv 模块",
+                "title":"深入Python - csv模块",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/dive-into-python/cn/re.html",
+                "smodule":"dive-into-python-re",
+                "description":"正则表达式和re模块",
+                "title":"深入Python - 正则表达式re模块",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/dive-into-python/cn/datetime.html",
+                "smodule":"dive-into-python-datetime",
+                "description":"datetime 模块",
+                "title":"深入Python - datetime 模块",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/dive-into-python/cn/sql.html",
+                "smodule":"dive-into-python-sql",
+                "description":"SQL 数据库",
+                "title":"深入Python - SQL 数据库",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/dive-into-python/cn/orm.html",
+                "smodule":"dive-into-python-orm",
+                "description":"关系对象映射",
+                "title":"深入Python - 关系对象映射",
+                "reward":"0",
+                "downloads": "10,000+"
+            }
         ]
     }
 ]

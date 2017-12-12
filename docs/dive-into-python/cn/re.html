@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<title>正则表达式和 re 模块</title>
+<link rel="stylesheet" href="../../static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true
+};
+</script>
+<script type="text/javascript" src="../../static/jquery.js"></script>
+<script type="text/javascript" src="../../static/underscore.js"></script>
+<script type="text/javascript" src="../../static/doctools.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body role="document">
+<div class="header doc-header web-show">
+<div class="col-sm-offset-2 col-sm-8  index-header">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+<span class="sr-only">切换导航</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/index.html" class="logo"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+<ul class="header-title collapse navbar-collapse" id="example-navbar-collapse" >
+<li>
+<a href="http://www.qpython.org/index.html">Home</a>
+</li>
+<li>
+<a href="http://www.qpython.org/document.html">Guide</a>
+</li>
+<li class="header-phone-selected">
+<a href="/index.html" class="header-selected">Course</a>
+<span class="header-title-selected"></span>
+</li>
+<li>
+<a href="http://www.aipy.org">AIPY</a>
+</li>
+<li>
+<a target="_blank" href="https://github.com/qpython-android/qpython">Github</a>
+</li>
+</ul>
+<div class="search-box hidden-xs">
+<form action="search.html">
+<input type="search" name="q" placeholder="keyword">
+<input type="hidden" name="check_keywords" value="yes" />
+<input type="hidden" name="area" value="default" />
+<button><img src="http://www.qpython.org/static/ic_search.png"></button>
+</form>
+</div>
+</div>
+</div>
+<main class="contain web-content">
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="re">
+<h1>正则表达式和 re 模块<a class="headerlink" href="#re" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>正则表达式<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>正则表达式是用来匹配字符串或者子串的一种模式，匹配的字符串可以很具体，也可以很一般化。</p>
+<p>Python 标准库提供了 re 模块。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="nb">dir</span><span class="p">(</span><span class="n">re</span><span class="p">)</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+</div>
+<div class="section" id="re-match-re-search">
+<h2>re.match &amp; re.search<a class="headerlink" href="#re-match-re-search" title="Permalink to this headline">¶</a></h2>
+<p>在 re 模块中， re.match 和 re.search 是常用的两个方法：
+re.match(pattern, string[, flags])
+re.search(pattern, string[, flags])</p>
+<p>两者都寻找第一个匹配成功的部分，成功则返回一个 match 对象，不成功则返回 None，不同之处在于 re.match 只匹配字符串的开头部分，而 re.search 匹配的则是整个字符串中的子串。</p>
+</div>
+<div class="section" id="re-findall-re-finditer">
+<h2>re.findall &amp; re.finditer<a class="headerlink" href="#re-findall-re-finditer" title="Permalink to this headline">¶</a></h2>
+<p>re.findall(pattern, string) 返回所有匹配的对象,
+re.finditer 则返回一个迭代器。</p>
+</div>
+<div class="section" id="re-split">
+<h2>re.split<a class="headerlink" href="#re-split" title="Permalink to this headline">¶</a></h2>
+<p>re.split(pattern, string[, maxsplit]) 按照 pattern 指定的内容对字符串进行分割。</p>
+</div>
+<div class="section" id="re-sub">
+<h2>re.sub<a class="headerlink" href="#re-sub" title="Permalink to this headline">¶</a></h2>
+<p>re.sub(pattern, repl, string[, count]) 将 pattern 匹配的内容进行替换。</p>
+</div>
+<div class="section" id="re-compile">
+<h2>re.compile<a class="headerlink" href="#re-compile" title="Permalink to this headline">¶</a></h2>
+<p>re.compile(pattern) 生成一个 pattern 对象，这个对象有匹配，替换，分割字符串的方法。</p>
+</div>
+<div class="section" id="id2">
+<h2>正则表达式规则<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>正则表达式由一些普通字符和一些元字符（metacharacters）组成。普通字符包括大小写的字母和数字，而元字符则具有特殊的含义：</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">子表达式</th>
+<th class="head">匹配内容</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>.</td>
+<td>匹配除了换行符之外的内容</td>
+</tr>
+<tr class="row-odd"><td>w</td>
+<td>匹配所有字母和数字字符</td>
+</tr>
+<tr class="row-even"><td>d</td>
+<td>匹配所有数字，相当于 [0-9]</td>
+</tr>
+<tr class="row-odd"><td>s</td>
+<td>匹配空白，相当于 [tntfv]</td>
+</tr>
+<tr class="row-even"><td>W,D,S</td>
+<td>匹配对应小写字母形式的补</td>
+</tr>
+<tr class="row-odd"><td>[...]</td>
+<td>表示可以匹配的集合支持范围表示如 a-z, 0-9 等</td>
+</tr>
+<tr class="row-even"><td>(...)</td>
+<td>表示作为一个整体进行匹配</td>
+</tr>
+<tr class="row-odd"><td>^</td>
+<td>表示匹配后面的子表达式的补</td>
+</tr>
+<tr class="row-even"><td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>表示匹配前面的子表达式 0 次或更多次</td>
+</tr>
+<tr class="row-odd"><td>?</td>
+<td>表示匹配前面的子表达式 1 次或更多次</td>
+</tr>
+<tr class="row-even"><td>{m}</td>
+<td>表示匹配前面的子表达式 m 次</td>
+</tr>
+<tr class="row-odd"><td>{m,}</td>
+<td>表示匹配前面的子表达式至少 m 次</td>
+</tr>
+<tr class="row-even"><td>{m,n}</td>
+<td>表示匹配前面的子表达式至少 m 次，至多 n 次</td>
+</tr>
+</tbody>
+</table>
+<p>例如：
+- ca*t 匹配： ct, cat, caaaat, ...
+- abd|acd 匹配： ab1, ac9, ...
+- ([^a-q]bd) 匹配： rbd, 5bd, ...</p>
+</div>
+<div class="section" id="id3">
+<h2>例子<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>假设我们要匹配这样的字符串：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">string</span> <span class="o">=</span> <span class="s1">&#39;hello world&#39;</span>
+<span class="n">pattern</span> <span class="o">=</span> <span class="s1">&#39;hello (\w+)&#39;</span>
+<span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">match</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>一旦找到了符合条件的部分，我们便可以使用 group 方法查看匹配的部分：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>string = &#39;hello world&#39;
+pattern = &#39;hello (\w+)&#39;
+match = re.match(pattern, string)
+if match is not None:
+    print match.group(0)
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>获得第二个匹配的部分</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>string = &#39;hello world&#39;
+pattern = &#39;hello (\w+)&#39;
+match = re.match(pattern, string)
+if match is not None:
+    print match.group(1)
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>我们可以改变 string 的内容：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>string = &#39;hello there&#39;
+pattern = &#39;hello (\w+)&#39;
+= re.match(pattern, string)
+if match is not None:
+    print match.group(0)
+print match.group(1)
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>通常，match.group(0) 匹配整个返回的内容，之后的 1,2,3,... 返回规则中每个括号（按照括号的位置排序）匹配的部分。</p>
+<p>如果某个 pattern 需要反复使用，那么我们可以将它预先编译：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>pattern1 = re.compile(&#39;hello (\w+)&#39;)
+match = pattern1.match(string)
+if match is not None:
+    print match.group(1)
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>由于元字符的存在，所以对于一些特殊字符，我们需要使用 &#8216;&#8217; 进行逃逸字符的处理，使用表达式 &#8216;\&#8217; 来匹配 &#8216;&#8217; 。
+但事实上，Python 本身对逃逸字符也是这样处理的：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pattern</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span>
+<span class="nb">print</span> <span class="n">pattern</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>因为逃逸字符的问题，我们需要使用四个 &#8216;\\&#8217; 来匹配一个单独的 &#8216;&#8217;：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pattern</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\\\\</span><span class="s1">&#39;</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">foo</span><span class="se">\\</span><span class="s2">bar</span><span class="se">\\</span><span class="s2">baz.txt&quot;</span>
+<span class="nb">print</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>这样看起来十分麻烦，好在 Python 提供了 raw string 来忽略对逃逸字符串的处理，从而可以这样进行匹配：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span>
+<span class="n">path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\foo\bar\baz.txt&quot;</span>
+<span class="nb">print</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>如果规则太多复杂，正则表达式不一定是个好选择。</p>
+</div>
+<div class="section" id="numpy-fromregex">
+<h2>Numpy 的 fromregex()<a class="headerlink" href="#numpy-fromregex" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># 有 test.dat 文件，内容如下</span>
+<span class="mi">1312</span> <span class="n">foo</span>
+<span class="mi">1534</span>    <span class="n">bar</span>
+<span class="mi">444</span>  <span class="n">qux</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>numpy.fromregex(file, pattern, dtype) 中，dtype 中的内容与 pattern 的括号一一对应：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pattern</span> <span class="o">=</span> <span class="s2">&quot;(\d+)\s+(...)&quot;</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;num&#39;</span><span class="p">,</span> <span class="s1">&#39;int64&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="s1">&#39;S3&#39;</span><span class="p">)]</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="k">import</span> <span class="n">fromregex</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">fromregex</span><span class="p">(</span><span class="s1">&#39;test.dat&#39;</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="n">dt</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">output</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<p>显示 num 项：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pattern</span> <span class="o">=</span> <span class="s2">&quot;(\d+)\s+(...)&quot;</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;num&#39;</span><span class="p">,</span> <span class="s1">&#39;int64&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="s1">&#39;S3&#39;</span><span class="p">)]</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="k">import</span> <span class="n">fromregex</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">fromregex</span><span class="p">(</span><span class="s1">&#39;test.dat&#39;</span><span class="p">,</span> <span class="n">pattern</span><span class="p">,</span> <span class="n">dt</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">output</span><span class="p">[</span><span class="s1">&#39;num&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+</div>
+<div class="section" id="id4">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>作者:<cite>李金  &lt;lijinwithyou&#64;gmail.com&gt;</cite></p>
+<p>提交: 2017/12/6</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+</main>
+<div class="star-footer">
+<img onclick="openPurchase()" src="../../static/star.jpg">
+<div id="praise"><span>0</span> persons have rewarded</div>
+</div>
+<div class="foo"></div>
+<footer class="clearfix fixfooter web-show">
+<div class="col-sm-offset-2 col-sm-6 footer-div1">
+<div class="footer-block-item">
+<span class="footer-item1">Built with Sphinx using a theme provid by QPython.</span>
+<span class="footer-item2 visible-xs">Copyight 2017, QPython.</span>
+</div>
+</div>
+<div class="col-sm-2 footer-div2">
+<a href="/index.html" class="pull-right"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+</footer>
+<script>
+var milib;
+if (milib==undefined) {
+var milib = function(){
+};
+milib.qeditor = function(str){
+alert('Please share this page to QPython then run it')
+};
+milib.getPurchaseNumber = function(str){
+//alert('getPurchaseNumber:'+str)
+return "10+";
+};
+milib.a8playVideoFromGW= function(url){
+window.open(url)
+};
+milib.qpylibinstall = function(cat,url,target){
+window.open(url)
+};
+milib.gotoIfPay = function(url, packageId, packageUrl){
+window.open(url)
+};
+} else {
+}
+function openPurchase() {
+//获取标识
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+milib.openPurchaseActivity(s)
+}
+//按钮事件
+function btnEvent(){
+var seq = this.getAttribute('target')-2
+var a = this.parentElement.getElementsByTagName('pre')
+if ( a && a.length > 0){
+/**********有代码，调用控制台*************/
+var code = a[seq].lastChild.nodeValue
+milib.qeditor(code)
+}else{
+//没有代码，调转
+var url = this.getAttribute('data-url');
+window.open(url);
+}
+}
+//获取赞赏
+function setPraise(){
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+var i = document.getElementById('praise').getElementsByTagName('span')[0]
+var num = milib.getPurchaseNumber(s);
+i.innerHTML = num
+}
+//初始化代码显示
+function initCode(){
+var prearr = document.getElementsByTagName('pre');
+for (var i = 0; i < prearr.length; i++) {
+var temp_data = prearr[i].lastChild.nodeValue
+//正则处理 lavel5
+temp_data = temp_data.replace(/\^2\$/g, spaceString(2));
+temp_data = temp_data.replace(/\^4\$/g, spaceString(4));
+temp_data = temp_data.replace(/\^6\$/g, spaceString(6));
+temp_data = temp_data.replace(/\^8\$/g, spaceString(8));
+temp_data = temp_data.replace(/\^10\$/g, spaceString(10));
+temp_data = temp_data.replace(/\^12\$/g, spaceString(12));
+temp_data = temp_data.replace(/\^16\$/g, spaceString(16));
+temp_data = temp_data.replace(/\^20\$/g, spaceString(20));
+//set
+prearr[i].lastChild.nodeValue = temp_data;
+}
+}
+//产生空格
+function spaceString(num){
+var v = ''
+for (var i = 0; i < num; i++) {
+v += ' ';
+}
+return v;
+}
+window.onload = function(){
+setPraise();
+initCode();
+//将所有的button绑定事件
+var b = document.getElementsByTagName('button');
+for (var i = 0; i < b.length; i++) {
+if (b[i].className=='button') {
+b[i].setAttribute('target', i)
+b[i].onclick = btnEvent ;
+}
+}
+}
+$(function(){
+var url = location.href.split('?');
+if (url.length === 2) {
+var c = url[1].split('=');
+if (c[1] == 'web') {
+$('.web-show').css('display','block');
+$('.web-content').addClass('margin-header');
+}
+}
+})
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-103260045-3', 'auto');
+ga('send', 'pageview');
+</script>
+</body>
+</html>
