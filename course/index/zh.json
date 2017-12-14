@@ -438,5 +438,65 @@
                 "downloads": "10,000+"
             }
         ]
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/aipy-numpy/index.html",
+        "smodule":"aipy-numpy",
+        "description":"Numpy programming with QPython",
+        "title":"AIPY - Numpy programming",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"featured",
+        "level": 4,
+        "logo": "http://edu.qpython.org/static/course-numpy.png",
+        "open": 0,
+        "courses":[
+        ]
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/aipy-scipy/index.html",
+        "smodule":"aipy-scipy",
+        "description":"Scipy programming with QPython",
+        "title":"AIPY - Scipy programming",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"featured",
+        "level": 4,
+        "logo": "http://edu.qpython.org/static/course-scipy.png",
+        "open": 0,
+        "courses":[
+        ]
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/aipy-theano/index.html",
+        "smodule":"aipy-scipy",
+        "description":"Theano programming with QPython",
+        "title":"AIPY - Theano programming",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"featured",
+        "level": 4,
+        "logo": "http://edu.qpython.org/static/course-theano.png",
+        "open": 0,
+        "courses":[
+        ]
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/interesting-3rd-packages/index.html",
+        "smodule":"interesting-3rd-packages",
+        "description":"Interesting 3rd packages",
+        "title":"Python Advanced : Interesting 3rd packages",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"new",
+        "level": 4,
+        "logo": "http://edu.qpython.org/static/interesting-3rd-packages.png",
+        "open": 0,
+        "courses":[
+        ]
     }
 ]
