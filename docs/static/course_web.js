@@ -3,7 +3,10 @@ var STATUS = false;
 var vm = new Vue({
   el: '#app',
   data: {
-    content: {},
+    content: {
+      'new': {},
+      'featured': {}
+    },
     tag: 'new',
     c_page: {
       new: 1,
@@ -11,11 +14,12 @@ var vm = new Vue({
     },
     page_size:6,
     new_page: false,
-    new_page_data: {}
+    new_page_data: {},
+    is_zh: navigator.language == 'zh-CN'  ? true : navigator.language == 'zh' ? true : false
   },
   created: function () {
     var that = this;
-    var _url = navigator.language == 'zh-CN'  ? '/index/zh.json' : navigator.language == 'zh' ? '/index/zh.json' : '/index/default.json';
+    var _url = this.is_zh === true ? '/index/zh.json' :  '/index/default.json';
     $.get(_url, function(data){
       var _new = [];
         var _featured = [];
@@ -46,6 +50,9 @@ var vm = new Vue({
     },
     is_has_next: function() {
       return this.content[this.tag] ? this.content[this.tag].length/this.page_size > this.c_page[this.tag] : false;
+    },
+    if_has_many_page:  function() {
+      return this.content[this.tag].length/this.page_size >1 ? true : false;
     },
     course_desc: function(data) {
       this.new_page_data = data;
