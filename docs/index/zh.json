@@ -66,48 +66,6 @@
         "title":"如何开发QPython WebApp",
         "ver":"1.0.0",
         "downloads": "10,000+",
-        "cat":"featured",
-        "level": 2,
-        "open": 1,
-        "logo": "http://edu.qpython.org/static/course-qpython-webapp.png",
-        "courses":[
-            {
-                "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-webapp/cn/index.html",
-                "smodule":"qpython-webapp-principle",
-                "description":"为什么要使用QPython WebApp",
-                "title":"QPython上的WebApp",
-                "ver":"1.0.0",
-                "downloads": "10,000+"
-            },
-            {
-                "link":"http://edu.qpython.org/qpython-webapp/cn/your-first-webapp.html",
-                "smodule":"qpython-webapp-your-first-webapp",
-                "description":"如何开发你的第一个WebApp",
-                "title":"你的第一个WebApp",
-                "ver":"1.0.0",
-                "downloads": "10,000+"
-            },
-            {
-                "link":"http://edu.qpython.org/qpython-webapp/cn/web-frameworks.html",
-                "smodule":"qpython-webapp-web-frameworks",
-                "description":"在QPython中使用你熟悉的Web开发框架来开发WebApp",
-                "title":"QPython支持的Web开发框架",
-                "ver":"1.0.0",
-                "downloads": "10,000+"
-            }
-        ]
-    },
-    {
-        "src":"http://qpython.org",
-        "rdate":"2017-06-15",
-        "author":"River",
-        "link":"http://edu.qpython.org/qpython-webapp/cn/index.html",
-        "smodule":"qpython-webapp",
-        "description":"如何开发QPython WebApp",
-        "title":"如何开发QPython WebApp",
-        "ver":"1.0.0",
-        "downloads": "10,000+",
         "cat":"new",
         "level": 2,
         "open": 1,
@@ -182,7 +140,7 @@
         "title":"QSL4A - QPython的安卓APIs",
         "ver":"1.0.0",
         "downloads": "3,000+",
-        "cat":"featured",
+        "cat":"new",
         "level": 3,
         "logo": "http://edu.qpython.org/static/course-sl4a.png",
         "open": 1,
@@ -375,7 +333,7 @@
         "title":"深入Python",
         "ver":"1.0.0",
         "downloads": "1,000+",
-        "cat":"featured",
+        "cat":"new",
         "level": 1,
         "logo": "http://edu.qpython.org/static/course-dive-into-python.png",
         "open": 0,
@@ -524,7 +482,7 @@
         "downloads": "1,000+",
         "cat":"featured",
         "level": 4,
-        "logo": "http://edu.qpython.org/static/course-skit-learn.png",
+        "logo": "http://edu.qpython.org/static/course-scikit-learn.png",
         "open": 0,
         "courses":[
         ]
