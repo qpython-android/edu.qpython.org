@@ -84,3 +84,11 @@ window.addEventListener('popstate', function () {
     history.go(-1);
   }
 });
+
+$(function(){
+  $('.hot-search a').bind('click', function(){
+    var t = $(this).text();
+    $('#index_search').val(t);
+    $('#index_search').parent().submit();
+  })
+})

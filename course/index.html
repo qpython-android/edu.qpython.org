@@ -14,71 +14,75 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app"> 
         <section v-if="!new_page">
-            <div class="header doc-header">
-                <div class="col-sm-offset-2 col-sm-8  index-header">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
-                            <span class="sr-only">切换导航</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a href="/index.html" class="logo"><img src="http://www.qpython.org/static/img_logo.png"></a>
-                    </div>
-                    <ul class="header-title collapse navbar-collapse" id="example-navbar-collapse"  style="overflow-y: hidden !important;">
-                        <li>
-                            <a href="http://www.qpython.org/index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="http://www.qpython.org/document.html">Guide</a>
-                        </li>
-                        <li class="header-phone-selected">
-                            <a href="/index.html" class="header-selected">Course</a>
-                            <span class="header-title-selected"></span>
-                        </li>
-                        <li>
-                            <a href="http://www.aipy.org">AIPY</a>
-                        </li>
-                        <li>
-                            <a target="_blank" href="https://github.com/qpython-android/qpython">Github</a>
-                        </li>
-                    </ul>
-                    <div class="search-box hidden-xs">
-                        <form action="search.html">
-                            <input type="search" name="q" placeholder="keyword">
-                            <input type="hidden" name="check_keywords" value="yes" />
-                            <input type="hidden" name="area" value="default" />
-                            <button><img src="http://www.qpython.org/static/ic_search.png"></button>
-                        </form>
-                    </div>
-                </div>
+            <header>
+        <div class="col-sm-offset-2 col-sm-8 index-header">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#example-navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/index.html" class="logo"><img src="http://www.qpython.org/static/img_logo.png"></a>
             </div>
+
+            <ul class="header-title collapse navbar-collapse" id="example-navbar-collapse">
+                <li>
+                    <a href="http://www.qpython.org/index.html">Home</a>
+                </li>
+                <li>
+                    <a href="/document.html">Guide</a>
+                </li>
+                <li class="header-phone-selected">
+                        <a href="http://edu.qpython.org/"  class="header-selected">Course</a>
+                </li>
+                <li>
+                    <a href="http://www.aipy.org">AIPY</a>
+                </li>
+
+                <li>
+                    <a target="_blank" href="https://github.com/qpython-android/qpython">Github</a>
+                </li>
+            </ul>
+            <div class="search-box hidden-xs">
+                <!-- <form action="/search.html">
+                    <input type="search" name="q" placeholder="keyword">
+                    <input type="hidden" name="check_keywords" value="yes" />
+                                <input type="hidden" name="area" value="default" />
+                    <button><img src="http://www.qpython.org/static/ic_search.png"></button>
+                </form> -->
+            </div>
+        </div>
+        <div class="head-more hidden-xs">
+            <div class="head-title-tit">Learning Python Efficiently on mobile. </div>
+            <div class="index-search-box">
+                <form action="/search.html">
+                    <input type="search" id="index_search" name="q" placeholder="search">
+                    <input type="hidden" name="check_keywords" value="yes" />
+                    <input type="hidden" name="area" value="default" />
+                    <input type="hidden" name="form" value="web" />
+                    <button><img src="http://www.qpython.org/static/ic_search.png"></button>
+                </form>
+            </div>
+            <div class="hot-search">
+                <div class="hot-name">hotSearch: </div>
+                <div><a href="javascript:void(0)">numpy</a></div>
+                <div><a href="javascript:void(0)">scipy</a></div>
+                <div><a href="javascript:void(0)">scikit-learn</a></div>
+                <div><a href="javascript:void(0)">webapp</a></div>
+            </div>
+
+            <div class="head-more-other">
+                From here you can search these documents. Enter your search words into the box below and click "search". Note that the search function will automatically search for all of the words. Pages containing fewer words won't appear in the result list.
+            </div>
+        </div>
+    </header>
             <main class="doc-content clearfix sc-doc-con" >
                 <div class="sc-con">
-                    <div class="sc-h-logo">
-                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                            <!-- 轮播（Carousel）指标 -->
-                            <ol class="carousel-indicators" >
-                                <li data-target="#myCarousel" data-slide-to="0" class="active" ></li>
-                                <li data-target="#myCarousel" data-slide-to="1"></li>
-                            </ol>
-                            <!-- 轮播（Carousel）项目 -->
-                            <div class="carousel-inner">
-                                <div class="item active" >
-                                    <a href="http://edu.qpython.org/activity-edu.html" target="_blank">
-                                        <img src="http://edu.qpython.org/static/activity-qpython-edu.png" alt="picture">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="http://edu.qpython.org/activity-qpypi.html" target="_blank">
-                                        <img src="http://edu.qpython.org/static/activity-qpython-qpypi.png" alt="picture">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="sc-body">
                         <div class="sc-tag">
                             <div @click="toggle_tag('new')" class="sc-la" :class="{active: tag=='new'}">{{is_zh? '最新' : 'Latest'}}</div>
@@ -88,7 +92,7 @@
                             <li class="sc-item" v-for="v,k in content[tag]" v-if="k < c_page[tag]*page_size && k >= (c_page[tag]-1)*page_size" >
                                 <div v-if="v.open == 1">
                                     <div class="hidden-xs">
-                                        <a :href="v.link+'?from=web'" :title="v.title">
+                                        <a :href="v.link+'?form=web'" :title="v.title">
                                             <div class="sc-img">
                                                 <img :src="v.logo" alt="picture">
                                                 <span class="sc-lv">lv {{v.level}}</span>
@@ -120,12 +124,12 @@
                                     </div>
                                     <transition-group name="list" tag="div">
                                         <div class="sc-course-item hidden-xs" v-if="v.is_open === true" :key="v.is_open">
-                                            <a v-for="v1 in v.courses" :href="v1.link+'?from=web'" title="click to enter">{{ v1.title }}</a>
+                                            <a v-for="v1 in v.courses" :href="v1.link+'?form=web'" title="click to enter">{{ v1.title }}</a>
                                         </div>
                                     </transition-group>
                                 </div>
                                 <div v-else="">
-                                    <a :href="v.link+'?from=web'" :title="v.title">
+                                    <a :href="v.link+'?form=web'" :title="v.title">
                                        <div class="sc-img">
                                             <img :src="v.logo" alt="picture">
                                             <span class="sc-lv">lv {{v.level}}</span>
@@ -173,7 +177,7 @@
                 <div>{{new_page_data.title}}</div>
             </div>
             <div style="height: 50px;"></div>
-            <a :href="new_page_data.link+'?from=web'" :title="new_page_data.title">
+            <a :href="new_page_data.link+'?form=web'" :title="new_page_data.title">
                 <div class="sc-img">
                     <img :src="new_page_data.logo" alt="picture">
                     <span class="sc-lv">lv {{new_page_data.level}}</span>
@@ -189,7 +193,7 @@
                 </div>
             </div>
             <div class="sc-course-item" >
-                <a v-for="v1 in new_page_data.courses" :href="v1.link+'?from=web'" title="click to enter">{{ v1.title }}</a>
+                <a v-for="v1 in new_page_data.courses" :href="v1.link+'?form=web'" title="click to enter">{{ v1.title }}</a>
             </div>
         </section>
     </div>

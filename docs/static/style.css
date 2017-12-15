@@ -25,6 +25,10 @@ h3 {
 /************* common  ***************/
 /* same css is useless */
 @media screen and (min-width: 768px) {
+    #example-navbar-collapse {
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+    }
     .foo {
         height: 80px;
     }

@@ -99,6 +99,79 @@
 }
 
 @media screen and (min-width: 768px){
+    .head-more {
+      display: block;
+      padding-top: 80px;
+    }
+  .head-more div {
+    display: block;
+  }
+    .head-title-tit {
+      font-size: 16px;
+      color: #FFFFFF;
+      line-height: 16px;
+      text-align: center;
+      margin: 40px 0 50px;
+    }
+    .index-search-box {
+      text-align: center;
+    }
+    .index-search-box input {
+      border: 0;
+      border-bottom: 1px solid #FFFFFF;
+      background-color: transparent;
+      font-size: 16px;
+      line-height: 26px;
+      color: #fff;
+      width: 300px;
+      text-align: center;
+    }
+    .index-search-box form {
+      position: relative;
+    }
+    .index-search-box button {
+      position: absolute;
+      right: 0;
+      bottom: 5px;
+      background-color: transparent;
+      border: none;
+    }
+    .head-more .hot-search {
+      color: #FFF;
+      width: 350px;
+      margin: 8px auto;
+    }
+    .head-more .hot-search > * {
+      display: inline-block;
+    }
+    .hot-search  a{
+      color: #ECCD00;
+      margin-right: 10px;
+    }
+    .hot-name {
+      font-size: 14px;
+      color: #aaa;
+    }
+    .head-more-other {
+      max-width: 800px;
+      padding: 0 20px;
+      margin: 30px auto;
+      text-align: center;
+      font-size: 13px;
+      color: #9B9B9B;
+    }
+
+
+      #example-navbar-collapse {
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+    }
+  header {
+    height: 350px;
+    background-color: #000;
+    background: url('http://www.qpython.org/static/img_background.png') no-repeat;
+    background-size: cover;
+  }
   .sc-tag {
     display: flex;
     justify-content: center;
