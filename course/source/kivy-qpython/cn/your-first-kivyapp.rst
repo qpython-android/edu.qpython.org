@@ -1,43 +1,43 @@
-Kivy App Tutorials >> A Simple Paint App
+Kivy App 教程>>一个简单的绘画应用程序
 ============================================
 
-Chapter Author, contributor
+贡献者
 ------------------------------------------------------
-Author: `Kivy <https://kivy.org/>`_
+作者: `Kivy <https://kivy.org/>`_
 
 
 
-In the following tutorial, you will be guided through the creation of your first widget. This provides powerful and important knowledge when programming Kivy applications, as it lets you create completely new user interfaces with custom elements for your specific purpose.
+在接下来的教程中, 您将需要创建一个新的小部件作为引导。 这将在编写Kivy应用程序时提供了丰富并且重要的知识，它可以根据您想要达到的目的让您创建全新的用户界面与自定义元素。 
 
-Basic Considerations
+基本事项
 ---------------------
-When creating an application, you have to ask yourself three important questions:
+在创建应用程序时，你必须问自己三个重要的问题：
 
-- What data does my application process?
-- How do I visually represent that data?
-- How does the user interact with that data?
-
-
-If you want to write a very simple line drawing application for example, you most likely want the user to just draw on the screen with his/her fingers. That’s how the user interacts with your application. While doing so, your application would memorize the positions where the user’s finger were, so that you can later draw lines between those positions. So the points where the fingers were would be your data and the lines that you draw between them would be your visual representation.
+- 我的应用程序要处理什么数据？
+- 我该如何直观地表示这些数据？
+- 用户如何与这些数据交互？
 
 
-In Kivy, an application’s user interface is composed of Widgets. Everything that you see on the screen is somehow drawn by a widget. Often you would like to be able to reuse code that you already wrote in a different context, which is why widgets typically represent one specific instance that answers the three questions above. A widget encapsulates data, defines the user’s interaction with that data and draws its visual representation. You can build anything from simple to complex user interfaces by nesting widgets. There are many widgets built in, such as buttons, sliders and other common stuff. In many cases, however, you need a custom widget that is beyond the scope of what is shipped with Kivy (e.g. a medical visualization widget).
+举个例子，如果您想写一个非常简单的线画应用程序，让用户用手指在屏幕上画画， 这就是用户和您的应用程序的交互方式。 当用户这么做时, 应用程序将会记住用户手指的位置， 以便稍后您可以在这些位置进行画线。所以手指所在的点将是您的数据，你在它们之间画的线将是您的视觉表现。
 
 
-So keep these three questions in mind when you design your widgets. Try to write them in a minimal and reusable manner (i.e. a widget does exactly what its supposed to do and nothing more. If you need more, write more widgets or compose other widgets of smaller widgets. We try to adhere to the Single Responsibility Principle).
+在Kivy上, 应用程序的用户界面由小部件组成。 您在屏幕上所看的的东西都是由这个小部件绘制而成。 通常情况下，你会想要重写之前在不同背景下的写的代码，这就是为什么小部件典型地代表了一个回答上述三个问题的具体实例。 小部件封装数据，定义用户与数据的交互并绘制其可视化表示。 您可以通过嵌套小部件来构建从简单到复杂的用户界面。 这里有很多内置的小部件，如按钮，滑块和其他常见的东西。在很多情况下， 你可能你需要一个超出Kivy附带范围的自定义小部件 (例如：一个医学可视化部件)。
+
+
+所以，在设计小部件的时候请记住这三个问题。 尝试以最小及可重用的方式写它们 (即一个小部件完全是它应该做的，只不过是其他事情而已。 如果您需要更多，可以编写更多的小部件或编写更小的小部件的其他小部件。 我们试图坚持单一责任原则).
 
 
 
-Paint Widget
+绘制小部件
 ------------
 
-We’re sure one of your childhood dreams has always been creating your own multitouch paint program. Allow us to help you achieve that. In the following sections you will successively learn how to write a program like that using Kivy. Make sure that you have read and understood Create an application. You have? Great! Let’s get started!
+我们确信您从童年开始就梦想创造属于自己的多点触控画图程序。而我们，可以助您圆梦 。在下面的章节中，您将会学习如何使用Kivy来编写这样的程序。 在此之前，请确保您已经阅读和理解创建一个应用程序。准备好了吗？让我们开始吧！ 
 
 
-**Initial Structure**
+**初始结构**
 
 
-Let’s start by writing the very basic code structure that we need. By the way, all the different pieces of code that are used in this section are also available in the examples/guide/firstwidget directory that comes with Kivy, so you don’t need to copy & paste it all the time. Here is the basic code skeleton that we will need:
+先来写一个我们需要的基础代码框架。顺便提一句，本节中使用的所有不同的代码片段也可以在Kivy附带的examples / guide / firstwidget目录中找到，所以您可以不用每次都要复制和粘贴 。下面是我们所需要的一个基础代码框架 ：
 
 
 ::
@@ -62,15 +62,16 @@ Let’s start by writing the very basic code structure that we need. By the way,
 <button>Run ...</button>
 
 
-This is actually really simple. Save it as paint.py. If you run it, you should only see a black screen. As you can see, instead of using a built-in widget such as a Button (see Create an application), we are going to write our own widget to do the drawing. We do that by creating a class that inherits from Widget (line 5-6) and although that class does nothing yet, we can still treat it like a normal Kivy widget (line 11). The if __name__ ... construct (line 14) is a Python mechanism that prevents you from executing the code in the if-statement when importing from the file, i.e. if you write import paint, it won’t do something unexpected but just nicely provide the classes defined in the file.
+说实话，这很简单。保存为paint.py. 如果你运行它，你应该只会看见黑屏。这时你所看到，并不是使用像Button这样的内置小部件（请参阅创建应用程序），我们将继续编写小部件来完成绘图。我们通过一个从小部件(line 5-6)继承的类来实现这一点，虽然这个类暂时还没什么用，但我们还能像正常的Kivy部件一样对待它（line 11）。if __name__ ...结构（第14行）是一种Python机制，可防止在从文件导入时执行if语句中的代码， 即：如果您编写导入绘图，它不会执行一些计划之外的事情，但可以很好地提供文件中定义的类。
+
+*注意: 您可能想知道为什么您必须单独导入App和Widget， 而不是从kivy导入 *. 尽管时间较短，但这会使你的命名造成污染，并导致应用程序的启动速度变慢。它也可能引入歧义类和变量命名，所以通常在Python社区中被人们所诟病。 我们这样做的方式更快，更全面。*
 
 
-*Note: You may be wondering why you have to import App and Widget separately, instead of doing something like from kivy import *. While shorter, this would have the disadvantage of polluting your namespace and make the start of the application potentially much slower. It can also introduce ambiguity into class and variable naming, so is generally frowned upon in the Python community. The way we do it is faster and cleaner.*
+**添加行为**
 
+现在就让我们开始添加一些实际行为，即：即使其对用户输入做出反应。
 
-**Adding Behaviour**
-
-Let’s now add some actual behaviour to the widget, i.e. make it react to user input. Change the code like so:
+像这样改编代码：
 
 
 ::
@@ -94,9 +95,9 @@ Let’s now add some actual behaviour to the widget, i.e. make it react to user 
 
 <button>Run ...</button>
 
-This is just to show how easy it is to react to user input. When a MotionEvent (i.e. a touch, click, etc.) occurs, we simply print the information about the touch object to the console. You won’t see anything on the screen, but if you observe the command-line from which you are running the program, you will see a message for every touch. This also demonstrates that a widget does not have to have a visual representation.
+这只是为了显示对用户输入做出反应的容易程度。当发生MotionEvent（即触摸，点击等）时，我们将会把关于触摸对象的信息打印6给控制台。 在屏幕上您不会看到任何东西，但是如果您观察从中运行程序的命令行，你会看到每一个触摸的消息。这也表明一个小部件不必具有可视化表示。
 
-Now that’s not really an overwhelming user experience. Let’s add some code that actually draws something into our window:
+这些用户体验并不会让人无所适从。接下来让我们在绘制窗口中添加一些实际的代码：
 
 
 ::
@@ -130,15 +131,17 @@ Now that’s not really an overwhelming user experience. Let’s add some code t
     :alt: screenshot of pong game
 
 
-If you run your code with these modifications, you will see that every time you touch, there will be a small yellow circle drawn where you touched. How does it work?
+如果您通过这些修改运行代码，您会看到每次触摸时，你会触摸到一个小的黄色圆圈。 
 
-- Line 9: We use Python’s with statement with the widget’s Canvas object. This is like an area in which the widget can draw things to represent itself on the screen. By using the with statement with it, all successive drawing commands that are properly indented will modify this canvas. The with statement also makes sure that after our drawing, internal state can be cleaned up properly.
-- Line 10: You might have guessed it already: This sets the Color for successive drawing operations to yellow (default color format is RGB, so (1, 1, 0) is yellow). This is true until another Color is set. Think of this as dipping your brushes in that color, which you can then use to draw on a canvas until you dip the brushes into another color.
-- Line 11: We specify the diameter for the circle that we are about to draw. Using a variable for that is preferable since we need to refer to that value multiple times and we don’t want to have to change it in several places if we want the circle bigger or smaller.
-- Line 12: To draw a circle, we simply draw an Ellipse with equal width and height. Since we want the circle to be drawn where the user touches, we pass the touch’s position to the ellipse. Note that we need to shift the ellipse by -d/2 in the x and y directions (i.e. left and downwards) because the position specifies the bottom left corner of the ellipse’s bounding box, and we want it to be centered around our touch.
+它是如何工作的？
+
+- Line 9: 我们使用Python的语句和小部件的Canvas对象 这就像是小部件可以在屏幕上绘制事物来表示自己的一个区域。通过使用with语句，所有正确缩进的连续绘图命令都将修改此画布。 with声明还确保在我们绘制之后，内部状态可以被妥善地清理。
+- Line 10: 您可能已经猜到了：这将连续绘制操作的颜色设置为黄色（默认颜色格式为RGB，所以（1,1,0）为黄色）。直到另一个颜色设置。 然后将该颜色当作是您的画笔， 您可以使用它在画布上绘画，直到将画笔切换成另一种颜色。
+- Line 11: 我们需要先确定即将绘制的圆的直径。 使用一个可取的变量，因为我们需要参考该值多次，我们并不希望在哪些地方会改变它，假如我们想圆更大或更小
+- Line 12: 想要绘制一个圆，我们只需绘制一个宽度和高度相等的椭圆。 由于我们希望在用户触摸的位置绘制圆，我们会将触摸的位置传递给椭圆。 请注意，我们需要在x和y方向上（即向左和向下）将椭圆移动到-d / 2，因为位置指定了椭圆边界框的左下角，我们希望它以我们的触摸为中心。
 
 
-That was easy, wasn’t it? It gets better! Update the code to look like this:
+那很简单，不是吗？ 它变得更好了！ 更新代码如下所示：
 
 ::
 
@@ -174,15 +177,15 @@ That was easy, wasn’t it? It gets better! Update the code to look like this:
 
 
 
-This is what has changed:
+发生了以下的变化：
 
-- Line 3: We now not only import the Ellipse drawing instruction, but also the Line drawing instruction. If you look at the documentation for Line, you will see that it accepts a points argument that has to be a list of 2D point coordinates, like (x1, y1, x2, y2, ..., xN, yN).
-- Line 13: This is where it gets interesting. touch.ud is a Python dictionary (type <dict>) that allows us to store custom attributes for a touch.
-- Line 13: We make use of the Line instruction that we imported and set a Line up for drawing. Since this is done in on_touch_down, there will be a new line for every new touch. By creating the line inside the with block, the canvas automatically knows about the line and will draw it. We just want to modify the line later, so we store a reference to it in the touch.ud dictionary under the arbitrarily chosen but aptly named key ‘line’. We pass the line that we’re creating the initial touch position because that’s where our line will begin.
-- Lines 15: We add a new method to our widget. This is similar to the on_touch_down method, but instead of being called when a new touch occurs, this method is being called when an existing touch (for which on_touch_down was already called) moves, i.e. its position changes. Note that this is the same MotionEvent object with updated attributes. This is something we found incredibly handy and you will shortly see why.
-- Line 16: Remember: This is the same touch object that we got in on_touch_down, so we can simply access the data we stored away in the touch.ud dictionary! To the line we set up for this touch earlier, we now add the current position of the touch as a new point. We know that we need to extend the line because this happens in on_touch_move, which is only called when the touch has moved, which is exactly why we want to update the line. Storing the line in the touch.ud makes it a whole lot easier for us as we don’t have to maintain our own touch-to-line bookkeeping.
+- Line 3: 我们现在不仅导入了椭圆绘图指令，还导入了线绘图指令如果您查看Line的文档，您将看到它接受的点参数必须是二维点坐标列表，比如 (x1, y1, x2, y2, ..., xN, yN).
+- Line 13: 这是它变得有趣的地方。 touch.ud是一个Python字典（键入<dict>），它允许我们存储触摸的自定义属性。
+- Line 13:我们利用我们导入的Line指令，并设置一个Line来绘制。由于这是在on_touch_down中完成的，所以每次新的触摸都会有一个新的线。 通过在with块内创建行， 画布会感应到该线，并将绘制它。 我们只是想稍后修改这行，所以我们在touch.ud字典下面存储了一个对它的引用，这个字典在任意选择的，但是恰当的命名键'line'下面。 通过我们创建初始触摸位置的线，这是我们的线开始的地方。
+- Lines 15: 我们添加一个新的方法到我们的小部件。这与on_touch_down方法类似，但不是在发生新的触摸时被调用，当现有的触摸（已经调用on_touch_down）移动，即其位置改变时，他的方法被调用。 请注意，这是具有更新属性的相同MotionEvent对象。 这会让人觉得十分方便，你很快就会明白为什么会有这样的感觉了。
+- Line 16: 请记住：这是我们在on_touch_down中获得的触摸对象，因此我们可以简单地访问我们存储在touch.ud字典中的数据！早些时候我们为这条线设置了触摸点，我们现在在当前位置添加新的触摸点。我们需要扩展这条线，因为这发生在on_touch_move上，这只是在触摸移动时才被调用，这正是我们要更新这一行的原因。为了使我们不必将这些触摸点记录到在线簿记中，在touch.ud中存储该行使我们在使用时可以更方便一些。
 
-So far so good. This isn’t exactly beautiful yet, though. It looks a bit like spaghetti bolognese. How about giving each touch its own color? Great, let’s do it:
+到目前为止一切还不错，虽然还不算漂亮。这让它看上去有点像意大利面。如何让触摸点有自己的颜色？让我们接着往下看：
 
 ::
 
@@ -222,27 +225,27 @@ So far so good. This isn’t exactly beautiful yet, though. It looks a bit like 
 
 Here are the changes:
 
-- Line 1: We import Python’s random() function that will give us random values in the range of [0., 1.).
-- Line 10: In this case we simply create a new tuple of 3 random float values that will represent a random RGB color. Since we do this in on_touch_down, every new touch will get its own color. Don’t get confused by the use of tuples. We’re just binding the tuple to color for use as a shortcut within this method because we’re lazy.
-- Line 12: As before, we set the color for the canvas. Only this time we use the random values we generated and feed them to the color class using Python’s tuple unpacking syntax (since the Color class expects three individual color components instead of just 1. If we were to pass the tuple directly, that would be just 1 value being passed, regardless of the fact that the tuple itself contains 3 values).
+- Line 1: 我们导入Python的random（）函数，它会给我们在[0.，1）范围内的随机值。
+- Line 10: 在这种情况下，我们只需创建一个包含3个随机浮点值的新元组，它们将代表随机的RGB颜色。这样，每一个新的触摸点都将有属于自己的颜色。 不要被使用元组困惑。我们只是将这个元组绑定在颜色上作为这个方法的一个快捷方式。
+- Line 12: 和上面一样，我们设置画布的颜色。这一次，我们使用我们生成的随机值，并使用Python的元组解压缩语法将它们提供给颜色类（因为Color类需要三个单独的颜色分量，而不是一个。如果我们要直接传递元组，1值被传递，而不管元组本身包含3个值的事实）。
 
-This looks a lot nicer already! With a lot of skill and patience, you might even be able to create a nice little drawing!
-
-
-*Note: Since by default the Color instructions assume RGB mode and we’re feeding a tuple with three random float values to it, it might very well happen that we end up with a lot of dark or even black colors if we are unlucky. That would be bad because by default the background color is dark as well, so you wouldn’t be able to (easily) see the lines you draw. There is a nice trick to prevent this: Instead of creating a tuple with three random values, create a tuple like this: (random(), 1., 1.). Then, when passing it to the color instruction, set the mode to HSV color space: Color(*color, mode='hsv'). This way you will have a smaller number of possible colors, but the colors that you get will always be equally bright: only the hue changes.*
+这看起来好多了！假如你有更多 的技能和耐心，您甚至可以创建一个漂亮的小绘图！
 
 
-**Bonus Points**
+*注意：由于默认情况下，颜色指令采用RGB模式，我们正在向它提供一个带有三个随机浮点值的元组，如果运气不好，很可能会得到黑色。 这并不是好的情况，因为默认情况下，背景颜色也很暗， 这样的话，你会很难看到你自己画的线。有一个很好的技巧来防止这种情况：而不是创建一个具有三个随机值的元组，像这样创建一个元组：（random（），1.，1）。然后，将它传递给颜色指令时，将模式设置为HSV颜色空间：颜色（* color，mode ='hsv'）。这样可能出现的颜色将会变少，但是你得到的颜色将永远是同样明亮的：只有色调会改变。
 
 
-At this point, we could say we are done. The widget does what it’s supposed to do: it traces the touches and draws lines. It even draws circles at the positions where a line begins.
+**奖励积分**
 
-But what if the user wants to start a new drawing? With the current code, the only way to clear the window would be to restart the entire application. Luckily, we can do better. Let us add a Clear button that erases all the lines and circles that have been drawn so far. There are two options now:
 
-- We could either create the button as a child of our widget. That would imply that if you create more than one widget, every widget gets its own button. If you’re not careful, this will also allow users to draw on top of the button, which might not be what you want.
-- Or we set up the button only once, initially, in our app class and when it’s pressed we clear the widget.
+在这一点上，我们可以说我们已经完成了。小部件做了它应该做的事：跟踪触摸并画线。在一条线开始的位置绘制圆圈。
 
-For our simple example, it doesn’t really matter that much. For larger applications you should give some thought to who does what in your app. We’ll go with the second option here so that you see how you can build up your application’s widget tree in your app class’s build() method. We’ll also change to the HSV color space (see preceding note):
+但是，如果用户想要开始一个新的绘图呢？使用当前的代码，清除窗口的唯一方法是重新启动整个应用程序。不过，我们可以做得更好。现在让我们添加一个清除按钮，删除迄今为止绘制的所有线条和圆圈。 有两种选择：
+
+- 我们可以创建按钮作为我们的小部件的附件。这意味着如果您创建多个小部件，则每个小部件都有自己的按钮。如果你不小心，这也将允许用户在按钮上绘制，这可能不是你想要的得到的结果。
+- 如果你不小心，这也将允许用户在按钮上绘制，这可能不是你想要的。或者我们只在我们的应用程序类中设置按钮一次，当它被按下时，我们清除这个小部件。
+
+就我们这个简单的例子来说，这并不重要。对于较大的应用程序，您应该考虑一下谁在你的应用程序中做什么。 我们将在这里介绍第二个选项，以便您了解如何在应用程序类的build（）方法中构建应用程序的构件树。我们也将更改为HSV色彩空间（参见前面的注释）：
 
 ::
 
@@ -291,16 +294,16 @@ For our simple example, it doesn’t really matter that much. For larger applica
     :alt: screenshot of pong game
 
 
-Here’s what happens:
+将会发生以下的事情：
 
-- Line 4: We added an import statement to be able to use the Button class.
-- Line 25: We create a dummy Widget() object as a parent for both our painting widget and the button we’re about to add. This is just a poor-man’s approach to setting up a widget tree hierarchy. We could just as well use a layout or do some other fancy stuff. Again: this widget does absolutely nothing except holding the two widgets we will now add to it as children.
-- Line 26: We create our MyPaintWidget() as usual, only this time we don’t return it directly but bind it to a variable name.
-- Line 27: We create a button widget. It will have a label on it that displays the text ‘Clear’.
-- Line 28: We then bind the button’s on_release event (which is fired when the button is pressed and then released) to the callback function clear_canvas defined on below on Lines 33 & 34.
-- Line 29 & 30: We set up the widget hierarchy by making both the painter and the clearbtn children of the dummy parent widget. That means painter and clearbtn are now siblings in the usual computer science tree terminology.
-- Line 33 & 34: Up to now, the button did nothing. It was there, visible, and you could press it, but nothing would happen. We change that here: we create a small, throw-away function that is going to be our callback function when the button is pressed. The function just clears the painter’s canvas’ contents, making it black again.
+- Line 4: 我们添加了一个导入语句，以便能够使用Button类。
+- Line 25: 我们创建一个虚拟的Widget（）对象作为我们的绘画控件和我们即将添加的按钮的父对象。 这只是一个比较简陋的方法来设置一个小部件树层次结构。 我们也可以使用布局或做其他一些丰富的东西。再一次：这个小部件除了保存我们现在添加的两个小部件以外，完全没有任何功能。
+- Line 26:我们像往常一样创建我们的MyPaintWidget（），只是这次我们不直接返回它，而是将它绑定到一个变量名。
+- Line 27: 我们创建一个按钮小部件。 它上面会有一个标签，显示文本“清除”。
+- Line 28: 然后，我们将按钮的on_release事件（当按钮被按下然后释放时触发）绑定到第33行和第34行上定义的回调函数clear_canvas。
+- Line 29 & 30: 我们通过制作虚拟父窗口小部件的画家和clearbtn子元素来设置窗口小部件层次结构。 这意味着画家和clearbtn在通常的计算机科学树术语中是兄弟姐妹。
+- Line 33 & 34: 到目前为止，按钮什么也没做。 它在那里，你可以看见它，也可以按它，但什么都不会发生。我们在这里改变：我们创建了一个小的抛弃函数，当按钮被按下时，它将成为我们的回调函数。该功能只是清除画家的画布内容，使其再次变黑。
 
-*Note: The Kivy Widget class, by design, is kept simple. There are no general properties such as background color and border color. Instead, the examples and documentation illustrate how to easily handle such simple things yourself, as we have done here, setting the color for the canvas, and drawing the shape. From a simple start, you can move to more elaborate customization. Higher-level built-in widgets, deriving from Widget, such as Button, do have convenience properties such as background_color, but these vary by widget. Use the API docs to see what is offered by a widget, and subclass if you need to add more functionality.*
+*注意：Kivy Widget类在设计上保持简单。没有一般属性，如背景颜色和边框颜色。相反，这些示例和文档说明了如何轻松地处理这些简单的事情，就像我们在这里完成的那样，为画布设置颜色并绘制形状。从一个简单的开始，你可以逐渐使它成为更精细的定制。从Widget派生的更高级别的内置小部件（如Button）确实具有诸如background_color之类的便利属性，但这些属性因widget而异。如果您需要添加更多功能，请使用API文档查看小部件提供的内容以及子类。*
 
-Congratulations! You’ve written your first Kivy widget. Obviously this was just a quick introduction. There is much more to discover. We suggest taking a short break to let what you just learned sink in. Maybe draw some nice pictures to relax? If you feel like you’ve understood everything and are ready for more, we encourage you to read on.
+恭喜！ 你已经写了你的第一个Kivy部件。很明显，这只是一个快速介绍。还会有更多的东西等着你去发现。 不过我们建议您短暂休息一下，让刚刚学到的东西沉淀一下。 不如先画一些不错的图片让自己放松一下？如果您觉得您已经理解了所有内容，并准备好学习更多，请继续往下阅读。
