@@ -12,7 +12,7 @@ var vm = new Vue({
       new: 1,
       featured: 1
     },
-    page_size:6,
+    page_size:9,
     new_page: false,
     new_page_data: {},
     is_zh: navigator.language == 'zh-CN'  ? true : navigator.language == 'zh' ? true : false

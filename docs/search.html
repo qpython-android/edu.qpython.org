@@ -208,12 +208,14 @@ b[i].onclick = btnEvent ;
 }
 $(function(){
 var url = location.href.split('?');
-if (url.length === 2) {
-var c = url[1].split('=');
-if (c[1] == 'web') {
-$('.web-show').css('display','block');
-$('.web-content').addClass('margin-header');
-}
+var arg = url[1];
+var args = arg.split('&');
+for (var i = 0; i < args.length; i++) {
+    var c = args[i].split('=');
+    if (c[0]=='form' && c[1] == 'web') {
+        $('.web-show').css('display','block');
+        $('.web-content').addClass('margin-header');
+    }
 }
 })
 </script>

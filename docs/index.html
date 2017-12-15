@@ -48,6 +48,7 @@
                     <div class="search-box hidden-xs">
                         <form action="search.html">
                             <input type="search" name="q" placeholder="keyword">
+                            <input type="hidden" name="form" value="web">
                             <input type="hidden" name="check_keywords" value="yes" />
                             <input type="hidden" name="area" value="default" />
                             <button><img src="http://www.qpython.org/static/ic_search.png"></button>
@@ -88,7 +89,7 @@
                             <li class="sc-item" v-for="v,k in content[tag]" v-if="k < c_page[tag]*page_size && k >= (c_page[tag]-1)*page_size" >
                                 <div v-if="v.open == 1">
                                     <div class="hidden-xs">
-                                        <a :href="v.link+'?from=web'" :title="v.title">
+                                        <a :href="v.link+'?form=web'" :title="v.title">
                                             <div class="sc-img">
                                                 <img :src="v.logo" alt="picture">
                                                 <span class="sc-lv">lv {{v.level}}</span>
@@ -120,12 +121,12 @@
                                     </div>
                                     <transition-group name="list" tag="div">
                                         <div class="sc-course-item hidden-xs" v-if="v.is_open === true" :key="v.is_open">
-                                            <a v-for="v1 in v.courses" :href="v1.link+'?from=web'" title="click to enter">{{ v1.title }}</a>
+                                            <a v-for="v1 in v.courses" :href="v1.link+'?form=web'" title="click to enter">{{ v1.title }}</a>
                                         </div>
                                     </transition-group>
                                 </div>
                                 <div v-else="">
-                                    <a :href="v.link+'?from=web'" :title="v.title">
+                                    <a :href="v.link+'?form=web'" :title="v.title">
                                        <div class="sc-img">
                                             <img :src="v.logo" alt="picture">
                                             <span class="sc-lv">lv {{v.level}}</span>
@@ -173,7 +174,7 @@
                 <div>{{new_page_data.title}}</div>
             </div>
             <div style="height: 50px;"></div>
-            <a :href="new_page_data.link+'?from=web'" :title="new_page_data.title">
+            <a :href="new_page_data.link+'?form=web'" :title="new_page_data.title">
                 <div class="sc-img">
                     <img :src="new_page_data.logo" alt="picture">
                     <span class="sc-lv">lv {{new_page_data.level}}</span>
@@ -189,7 +190,7 @@
                 </div>
             </div>
             <div class="sc-course-item" >
-                <a v-for="v1 in new_page_data.courses" :href="v1.link+'?from=web'" title="click to enter">{{ v1.title }}</a>
+                <a v-for="v1 in new_page_data.courses" :href="v1.link+'?form=web'" title="click to enter">{{ v1.title }}</a>
             </div>
         </section>
     </div>
