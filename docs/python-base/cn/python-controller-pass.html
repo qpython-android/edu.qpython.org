@@ -53,7 +53,7 @@ HAS_SOURCE:  true
 </li>
 </ul>
 <div class="search-box hidden-xs">
-<form action="search.html">
+<form action="/search.html">
 <input type="search" name="q" placeholder="keyword">
 <input type="hidden" name="check_keywords" value="yes" />
 <input type="hidden" name="area" value="default" />
@@ -237,9 +237,11 @@ b[i].onclick = btnEvent ;
 }
 $(function(){
 var url = location.href.split('?');
-if (url.length === 2) {
-var c = url[1].split('=');
-if (c[1] == 'web') {
+var arg = url[1];
+var args = arg.split('&');
+for (var i = 0; i < args.length; i++) {
+var c = args[i].split('=');
+if (c[0]=='form' && c[1] == 'web') {
 $('.web-show').css('display','block');
 $('.web-content').addClass('margin-header');
 }

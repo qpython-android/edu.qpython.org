@@ -58,7 +58,7 @@ jQuery(function() { Search.loadIndex("searchindex.js"); });
 </li>
 </ul>
 <div class="search-box hidden-xs">
-<form action="search.html">
+<form action="/search.html">
 <input type="search" name="q" placeholder="keyword">
 <input type="hidden" name="check_keywords" value="yes" />
 <input type="hidden" name="area" value="default" />
@@ -211,11 +211,11 @@ var url = location.href.split('?');
 var arg = url[1];
 var args = arg.split('&');
 for (var i = 0; i < args.length; i++) {
-    var c = args[i].split('=');
-    if (c[0]=='form' && c[1] == 'web') {
-        $('.web-show').css('display','block');
-        $('.web-content').addClass('margin-header');
-    }
+var c = args[i].split('=');
+if (c[0]=='form' && c[1] == 'web') {
+$('.web-show').css('display','block');
+$('.web-content').addClass('margin-header');
+}
 }
 })
 </script>
