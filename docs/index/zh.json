@@ -516,5 +516,50 @@
         "open": 0,
         "courses":[
         ]
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/bottle-web/index.html",
+        "smodule":"bottle-web",
+        "description":"Bottle Web快速开开始",
+        "title":"Python进阶 - Bottle Web快速开始",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"featured",
+        "level": 3,
+        "logo": "http://edu.qpython.org/static/course-bottle.png",
+        "open": 0,
+        "courses":[
+        ]
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/django/index.html",
+        "smodule":"django",
+        "description":"Django快速开始",
+        "title":"Python进阶 - Django快速开始",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"featured",
+        "level": 4,
+        "logo": "http://edu.qpython.org/static/course-django.png",
+        "open": 0,
+        "courses":[
+        ]
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/wego/index.html",
+        "smodule":"wego",
+        "description":"Wego快速开始",
+        "title":"Python进阶 - Wego快速开始",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"featured",
+        "level": 4,
+        "logo": "http://edu.qpython.org/static/course-wego.png",
+        "open": 0,
+        "courses":[
+        ]
     }
 ]
