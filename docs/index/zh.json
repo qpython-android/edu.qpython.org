@@ -155,8 +155,22 @@
                 "downloads": "10,000+"
             }
         ]
-    },
-    {
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/interesting-3rd-packages/index.html",
+        "smodule":"interesting-3rd-packages",
+        "description":"有趣的第三方库",
+        "title":"Python进阶 - 有趣的第三方库",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"featured",
+        "level": 4,
+        "logo": "http://edu.qpython.org/static/course-interesting.png",
+        "open": 0,
+        "courses":[
+        ]
+    },{
         "src":"http://qpython.org",
         "rdate":"2017-09-15",
         "link":"http://edu.qpython.org/data-analytics/index.html",
@@ -444,21 +458,6 @@
     },{
         "src":"http://qpython.org",
         "rdate":"2017-09-15",
-        "link":"http://edu.qpython.org/interesting-3rd-packages/index.html",
-        "smodule":"interesting-3rd-packages",
-        "description":"有趣的第三方库",
-        "title":"Python进阶 - 有趣的第三方库",
-        "ver":"1.0.0",
-        "downloads": "1,000+",
-        "cat":"new",
-        "level": 4,
-        "logo": "http://edu.qpython.org/static/course-interesting.png",
-        "open": 0,
-        "courses":[
-        ]
-    },{
-        "src":"http://qpython.org",
-        "rdate":"2017-09-15",
         "link":"http://edu.qpython.org/aipy-pandas/index.html",
         "smodule":"aipy-pandas",
         "description":"Pandas 入门",
@@ -513,6 +512,51 @@
         "cat":"featured",
         "level": 4,
         "logo": "http://edu.qpython.org/static/course-tensorflow.png",
+        "open": 0,
+        "courses":[
+        ]
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/bottle-web/index.html",
+        "smodule":"bottle-web",
+        "description":"Bottle Web快速开开始",
+        "title":"Python进阶 - Bottle Web快速开始",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"new",
+        "level": 3,
+        "logo": "http://edu.qpython.org/static/course-bottle.png",
+        "open": 0,
+        "courses":[
+        ]
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/django/index.html",
+        "smodule":"django",
+        "description":"Django快速开始",
+        "title":"Python进阶 - Django快速开始",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"new",
+        "level": 4,
+        "logo": "http://edu.qpython.org/static/course-django.png",
+        "open": 0,
+        "courses":[
+        ]
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/wego/index.html",
+        "smodule":"wego",
+        "description":"Wego快速开始",
+        "title":"Python进阶 - Wego快速开始",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"new",
+        "level": 4,
+        "logo": "http://edu.qpython.org/static/course-wego.png",
         "open": 0,
         "courses":[
         ]

@@ -156,8 +156,22 @@
             }
 
         ]
-    },
-    {
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/interesting-3rd-packages/index.html",
+        "smodule":"interesting-3rd-packages",
+        "description":"Interesting 3rd packages",
+        "title":"Python Advanced - Interesting 3rd packages",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"featured",
+        "level": 4,
+        "logo": "http://edu.qpython.org/static/course-interesting.png",
+        "open": 0,
+        "courses":[
+        ]
+    },{
         "src":"http://qpython.org",
         "rdate":"2017-09-15",
         "link":"http://edu.qpython.org/data-analytics/index.html",
@@ -207,8 +221,8 @@
         "rdate":"2017-09-15",
         "link":"http://edu.qpython.org/aipy-numpy/index.html",
         "smodule":"aipy-numpy",
-        "description":"Numpy quick start",
-        "title":"AIPY - Numpy quick start",
+        "description":"Numpy Quick Start",
+        "title":"AIPY - Numpy Quick Start",
         "ver":"1.0.0",
         "downloads": "1,000+",
         "cat":"featured",
@@ -222,8 +236,8 @@
         "rdate":"2017-09-15",
         "link":"http://edu.qpython.org/aipy-scipy/index.html",
         "smodule":"aipy-scipy",
-        "description":"Scipy quick start",
-        "title":"AIPY - Scipy quick start",
+        "description":"Scipy Quick Start",
+        "title":"AIPY - Scipy Quick Start",
         "ver":"1.0.0",
         "downloads": "1,000+",
         "cat":"featured",
@@ -237,8 +251,8 @@
         "rdate":"2017-09-15",
         "link":"http://edu.qpython.org/aipy-theano/index.html",
         "smodule":"aipy-scipy",
-        "description":"Theano quick start",
-        "title":"AIPY - Theano quick start",
+        "description":"Theano Quick Start",
+        "title":"AIPY - Theano Quick Start",
         "ver":"1.0.0",
         "downloads": "1,000+",
         "cat":"featured",
@@ -250,25 +264,10 @@
     },{
         "src":"http://qpython.org",
         "rdate":"2017-09-15",
-        "link":"http://edu.qpython.org/interesting-3rd-packages/index.html",
-        "smodule":"interesting-3rd-packages",
-        "description":"Interesting 3rd packages",
-        "title":"Python Advanced : Interesting 3rd packages",
-        "ver":"1.0.0",
-        "downloads": "1,000+",
-        "cat":"new",
-        "level": 4,
-        "logo": "http://edu.qpython.org/static/course-interesting.png",
-        "open": 0,
-        "courses":[
-        ]
-    },{
-        "src":"http://qpython.org",
-        "rdate":"2017-09-15",
         "link":"http://edu.qpython.org/aipy-pandas/index.html",
         "smodule":"aipy-pandas",
-        "description":"Pandas quick start",
-        "title":"AIPY - Pandas quick start",
+        "description":"Pandas Quick Start",
+        "title":"AIPY - Pandas Quick Start",
         "ver":"1.0.0",
         "downloads": "1,000+",
         "cat":"featured",
@@ -282,8 +281,8 @@
         "rdate":"2017-09-15",
         "link":"http://edu.qpython.org/aipy-scikit-learn/index.html",
         "smodule":"aipy-scikit-learn",
-        "description":"Scikit-learn quick start",
-        "title":"AIPY - Scikit-learn quick start",
+        "description":"Scikit-learn Quick Start",
+        "title":"AIPY - Scikit-learn Quick Start",
         "ver":"1.0.0",
         "downloads": "1,000+",
         "cat":"featured",
@@ -297,8 +296,8 @@
         "rdate":"2017-09-15",
         "link":"http://edu.qpython.org/aipy-keras/index.html",
         "smodule":"aipy-keras",
-        "description":"Keras quick start",
-        "title":"AIPY - Keras quick start",
+        "description":"Keras Quick Start",
+        "title":"AIPY - Keras Quick Start",
         "ver":"1.0.0",
         "downloads": "1,000+",
         "cat":"featured",
@@ -312,8 +311,8 @@
         "rdate":"2017-09-15",
         "link":"http://edu.qpython.org/aipy-tensorflow/index.html",
         "smodule":"aipy-tensorflow",
-        "description":"Tensorflow quick start",
-        "title":"AIPY - Tensorflow quick start",
+        "description":"Tensorflow Quick Start",
+        "title":"AIPY - Tensorflow Quick Start",
         "ver":"1.0.0",
         "downloads": "1,000+",
         "cat":"featured",
@@ -322,6 +321,50 @@
         "open": 0,
         "courses":[
         ]
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/bottle-web/index.html",
+        "smodule":"bottle-web",
+        "description":"Bottle Web Quick Start",
+        "title":"Python Advanced - Bottle Web",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"new",
+        "level": 3,
+        "logo": "http://edu.qpython.org/static/course-bottle.png",
+        "open": 0,
+        "courses":[
+        ]
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/django/index.html",
+        "smodule":"django",
+        "description":"Django Web Quick Start",
+        "title":"Python Advanced - Django Quick Start",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"new",
+        "level": 4,
+        "logo": "http://edu.qpython.org/static/course-django.png",
+        "open": 0,
+        "courses":[
+        ]
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/wego/index.html",
+        "smodule":"wego",
+        "description":"Wego Quick Start",
+        "title":"Python Advanced - Wego Quick Start",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"new",
+        "level": 4,
+        "logo": "http://edu.qpython.org/static/course-wego.png",
+        "open": 0,
+        "courses":[
+        ]
     }
-
 ]
