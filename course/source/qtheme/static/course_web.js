@@ -86,6 +86,8 @@ window.addEventListener('popstate', function () {
 });
 
 function setSearchHistory (t) {
+  if (!t)
+        return;
   if (localStorage.course_search_list) {
       var list = localStorage.course_search_list.split('%,%');
       var i = list.indexOf(t);
