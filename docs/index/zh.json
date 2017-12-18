@@ -350,7 +350,7 @@
         "cat":"new",
         "level": 1,
         "logo": "http://edu.qpython.org/static/course-dive-into-python.png",
-        "open": 0,
+        "open": 1,
         "courses":[
             {
                 "rdate":"2017-12-05",
@@ -406,6 +406,14 @@
                 "smodule":"dive-into-python-orm",
                 "description":"关系对象映射",
                 "title":"深入Python - 关系对象映射",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/dive-into-python/cn/builder.html",
+                "smodule":"dive-into-python-builder",
+                "description":"生成器 & 迭代器",
+                "title":"深入Python - 生成器 & 迭代器",
                 "reward":"0",
                 "downloads": "10,000+"
             }
