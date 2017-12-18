@@ -314,6 +314,23 @@ v += ' ';
 }
 return v;
 }
+function setSearchHistory (t) {
+if (!t)
+return;
+if (localStorage.course_search_list) {
+var list = localStorage.course_search_list.split('%,%');
+var i = list.indexOf(t);
+if (i !== -1) {
+list.splice(i, 1);
+list.push(t);
+localStorage.course_search_list = list.join('%,%');
+}else {
+localStorage.course_search_list += '%,%'+t;
+}
+}else {
+localStorage.course_search_list = t;
+}
+}
 window.onload = function(){
 setPraise();
 initCode();
@@ -337,6 +354,9 @@ $('.web-show').css('display','block');
 $('.web-content').addClass('margin-header');
 }
 }
+$('form').submit(function() {
+setSearchHistory($("input[name='q']").val());
+})
 })
 </script>
 <script>

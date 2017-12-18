@@ -186,24 +186,6 @@ temp_data = temp_data.replace(/\^20\$/g, spaceString(20));
 prearr[i].lastChild.nodeValue = temp_data;
 }
 }
-function setSearchHistory (t) {
-    if (!t)
-        return;
-  if (localStorage.course_search_list) {
-      var list = localStorage.course_search_list.split('%,%');
-      var i = list.indexOf(t);
-      if (i !== -1) {
-        list.splice(i, 1);
-        list.push(t);
-        localStorage.course_search_list = list.join('%,%');
-      }else {
-        localStorage.course_search_list += '%,%'+t;
-      }
-    }else {
-      localStorage.course_search_list = t;
-    }
-}
-
 //产生空格
 function spaceString(num){
 var v = ''
@@ -211,6 +193,23 @@ for (var i = 0; i < num; i++) {
 v += ' ';
 }
 return v;
+}
+function setSearchHistory (t) {
+if (!t)
+return;
+if (localStorage.course_search_list) {
+var list = localStorage.course_search_list.split('%,%');
+var i = list.indexOf(t);
+if (i !== -1) {
+list.splice(i, 1);
+list.push(t);
+localStorage.course_search_list = list.join('%,%');
+}else {
+localStorage.course_search_list += '%,%'+t;
+}
+}else {
+localStorage.course_search_list = t;
+}
 }
 window.onload = function(){
 setPraise();
@@ -236,8 +235,8 @@ $('.web-content').addClass('margin-header');
 }
 }
 $('form').submit(function() {
-        setSearchHistory($("input[name='q']").val());
-    })
+setSearchHistory($("input[name='q']").val());
+})
 })
 </script>
 <script>
