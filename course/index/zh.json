@@ -350,7 +350,7 @@
         "cat":"new",
         "level": 1,
         "logo": "http://edu.qpython.org/static/course-dive-into-python.png",
-        "open": 1,
+        "open": 0,
         "courses":[
             {
                 "rdate":"2017-12-05",
