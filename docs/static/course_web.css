@@ -38,6 +38,7 @@
 .sc-doc-con {
   padding: 0;
 }
+input{outline:none} 
 .sc-img,
 .sc-i-content {
   cursor: pointer;
