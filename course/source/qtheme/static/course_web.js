@@ -131,7 +131,7 @@ $(function(){
   $('#index_search').bind('blur', function() {
     setTimeout(function (){
       $('.search-history').hide();
-    }, 500)
+    }, 100)
   })
   $('.index-search-box form').submit(function(){
     setSearchHistory($('#index_search').val());
