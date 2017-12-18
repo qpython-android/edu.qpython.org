@@ -125,10 +125,56 @@
       color: #fff;
       width: 300px;
       text-align: center;
+      box-sizing: inherit;
+    }
+    .index-search-box input:active, .index-search-box input:focus {
+      border: none;
+      border-bottom: 2px solid #ECCD00;
+      text-align: left;
+    }
+    .index-search-box input {
+      padding: 5px 0;
     }
     .index-search-box form {
       position: relative;
+      box-sizing: border-box;
+      height: 38px;
     }
+    .search-history {
+      position: absolute;
+      z-index: 999;
+      width: 300px;
+      background-color: #FFF;
+      border: 1px solid #DDD;
+    }
+    .s-headline {
+      display: flex !important;
+      justify-content: space-between;
+      font-size: 14px;
+      color: #9B9B9B;
+      padding: 5px 10px;
+    }
+    #clear_history {
+      color: #C64857;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .history-list {
+      margin-bottom: 0;
+    }
+    .history-list li {
+      text-align: left;
+      padding: 2px 10px;
+      font-size: 18px;
+      color: #4A4A4A;
+      cursor: pointer;
+    }
+    .history-list li:hover {
+      background-color: #EEE;
+    }
+    .search-history li , .search-history ul,  .search-history div {
+      display: block;
+    } 
     .index-search-box button {
       position: absolute;
       right: 0;
@@ -138,7 +184,7 @@
     }
     .head-more .hot-search {
       color: #FFF;
-      width: 350px;
+      width:360px;
       margin: 8px auto;
     }
     .head-more .hot-search > * {
@@ -147,6 +193,9 @@
     .hot-search  a{
       color: #ECCD00;
       margin-right: 10px;
+    }
+    .hot-search {
+      line-height: 30px;
     }
     .hot-name {
       font-size: 14px;
@@ -167,7 +216,7 @@
         overflow-x: hidden !important;
     }
   header {
-    height: 350px;
+    height: 320px;
     background-color: #000;
     background: url('http://www.qpython.org/static/img_background.png') no-repeat;
     background-size: cover;
