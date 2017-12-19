@@ -133,7 +133,7 @@ $(function(){
   $('#index_search').bind('blur', function() {
     setTimeout(function (){
       $('.search-history').hide();
-    }, 100)
+    }, 200)
   })
   $('.index-search-box form').submit(function(){
     setSearchHistory($('#index_search').val());

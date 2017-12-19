@@ -210,12 +210,13 @@ function setSearchHistory (t) {
                 $('.web-content').addClass('margin-header');
             }
         }
-
-$('form').submit(function() {
-        setSearchHistory($("input[name='q']").val());
-    })
 })
-
+$(function() {
+    $('form').submit(function() {
+    setSearchHistory($("input[name='q']").val());
+    })
+    $('.bodywrapper .body form input').val("")
+})
 
 </script>
 <script>

@@ -23,6 +23,7 @@
   margin-top: -4px;
   right: 25px;
 }
+input{outline:none} 
 .list-enter-active, .list-leave-active {
   transition: all .6s;
 }
@@ -130,7 +131,6 @@
     .index-search-box input:active, .index-search-box input:focus {
       border: none;
       border-bottom: 2px solid #ECCD00;
-      text-align: left;
     }
     .index-search-box input {
       padding: 5px 0;
