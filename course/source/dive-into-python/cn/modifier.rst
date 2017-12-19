@@ -18,8 +18,11 @@
     
     print(type(foo))
 
+结果:
 
-<type 'function'>
+::
+
+    type 'function'
 
 
 
@@ -73,12 +76,12 @@
 
 ::
 
-
-
    foo.__call__(42)
 
+结果:
+::
 
-42
+    42
 
 
 相当于：
@@ -88,15 +91,16 @@
 
    foo(42)
 
-42
+结果:
+::
+
+    42
 
 
 因为函数是对象，所以函数可以作为参数传入另一个函数：
 
 
-
 ::
-
 
    def bar(f, x):
        x += 1
@@ -107,8 +111,10 @@
 
    bar(foo, 4)
 
+结果:
+::
 
-5
+    5
 
 
 修饰符
@@ -137,7 +143,10 @@
    declen = dec(len)
 
 
-I am decorating function 33716168
+结果:
+::
+
+    I am decorating function 33716168
 
 
 使用这个新生成的函数：
@@ -150,7 +159,10 @@ I am decorating function 33716168
 
 
 
-Out[9]:3
+结果:
+::
+
+    3
 
 
 
@@ -187,7 +199,10 @@ Out[9]:3
 <button>Run ...</button>
 
 
-Out[12]:3
+结果:
+::
+
+    3
 
 
 用 @ 来使用修饰符
@@ -212,7 +227,10 @@ Out[12]:3
 
 
 
-I am decorating function 64021672
+结果:
+::
+
+    I am decorating function 64021672
 
 
 可以替换为：
@@ -228,7 +246,10 @@ I am decorating function 64021672
         print x
 
 
-I am decorating function 64021112
+结果:
+::
+
+    I am decorating function 64021112
 
 
 
@@ -325,7 +346,10 @@ I am decorating function 64021112
 
 
 
-Out[19]:27
+结果:
+::
+
+    27
 
 
 
@@ -400,10 +424,14 @@ Out[19]:27
 
 
 ::
+    
     foo(12)
 
 
-12
+结果:
+::
+
+    12
 
 
 
@@ -422,6 +450,7 @@ Out[19]:27
 
 
 ::
+
     import os
     os.remove('test.txt')
 
