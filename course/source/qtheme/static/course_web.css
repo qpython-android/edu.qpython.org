@@ -131,7 +131,6 @@ input{outline:none}
     .index-search-box input:active, .index-search-box input:focus {
       border: none;
       border-bottom: 2px solid #ECCD00;
-      text-align: left;
     }
     .index-search-box input {
       padding: 5px 0;
