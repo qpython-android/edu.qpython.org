@@ -269,9 +269,12 @@ $('.web-show').css('display','block');
 $('.web-content').addClass('margin-header');
 }
 }
+})
+$(function() {
 $('form').submit(function() {
 setSearchHistory($("input[name='q']").val());
 })
+$('.bodywrapper .body form input').val("")
 })
 </script>
 <script>

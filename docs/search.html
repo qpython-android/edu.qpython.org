@@ -226,8 +226,6 @@ b[i].onclick = btnEvent ;
 $(function(){
 var url = location.href.split('?');
 var arg = url[1];
-if (!arg) 
-    return;
 var args = arg.split('&');
 for (var i = 0; i < args.length; i++) {
 var c = args[i].split('=');
@@ -238,10 +236,10 @@ $('.web-content').addClass('margin-header');
 }
 })
 $(function() {
-    $('form').submit(function() {
-    setSearchHistory($("input[name='q']").val());
-    })
-    $('.bodywrapper .body form input').val("");
+$('form').submit(function() {
+setSearchHistory($("input[name='q']").val());
+})
+$('.bodywrapper .body form input').val("")
 })
 </script>
 <script>
