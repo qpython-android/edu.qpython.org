@@ -283,7 +283,8 @@ $(function() {
 $('form').submit(function() {
 setSearchHistory($("input[name='q']").val());
 })
-$('.bodywrapper .body form input').val("")
+$('.bodywrapper .body form input').val("");
+$($('.bodywrapper .body form input')[0]).attr('placeholder', 'search');
 })
 </script>
 <script>
