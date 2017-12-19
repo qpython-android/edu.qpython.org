@@ -21,7 +21,7 @@ h2 {
 h3 {
     font-size: 18px;
 }
-
+input{outline:none} 
 /************* common  ***************/
 /* same css is useless */
 @media screen and (min-width: 768px) {
