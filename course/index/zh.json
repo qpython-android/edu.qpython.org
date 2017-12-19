@@ -418,6 +418,14 @@
                 "downloads": "10,000+"
             },{
                 "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/dive-into-python/cn/with.html",
+                "smodule":"dive-into-python-with",
+                "description":"with 语句和上下文",
+                "title":"深入Python - with 语句和上下文",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
                 "link":"http://edu.qpython.org/dive-into-python/cn/modifier.html",
                 "smodule":"dive-into-python-modifier",
                 "description":"修饰符",
