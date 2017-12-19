@@ -464,3 +464,29 @@ p {
 .web-show {
     display: none;
 }
+.bodywrapper .body form {
+    position: relative;
+}
+.bodywrapper .body form input:first-child {
+    border: 0;
+    border-bottom: 1px solid #333;
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 26px;
+    width: 200px;
+    text-align: center;
+    padding-right: 25px;
+}
+.bodywrapper .body form input:first-child:hover {
+    border-bottom: 2px solid #333;
+}
+.bodywrapper .body form input:nth-child(2) {
+    background-image: url(ic_search_1.png);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 180px;
+    bottom: 3px;
+    border: none;
+    background-color: transparent;
+}
