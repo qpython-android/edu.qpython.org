@@ -584,5 +584,35 @@
         "open": 0,
         "courses":[
         ]
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/blockchain/index.html",
+        "smodule":"blockchain",
+        "description":"区块链快速开始",
+        "title":"Python进阶 - 区块链快速开始",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"new",
+        "level": 4,
+        "logo": "http://edu.qpython.org/static/course-blockchain.png",
+        "open": 0,
+        "courses":[
+        ]
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/full-text-search/index.html",
+        "smodule":"full-text-search",
+        "description":"全局搜索快速开始",
+        "title":"Python进阶 - 全局搜索快速开始",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"new",
+        "level": 4,
+        "logo": "http://edu.qpython.org/static/course-full-text-search.png",
+        "open": 0,
+        "courses":[
+        ]
     }
 ]

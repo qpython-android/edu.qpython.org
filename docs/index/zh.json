@@ -424,6 +424,14 @@
                 "title":"深入Python - with 语句和上下文",
                 "reward":"0",
                 "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/dive-into-python/cn/modifier.html",
+                "smodule":"dive-into-python-modifier",
+                "description":"修饰符",
+                "title":"深入Python - 修饰符",
+                "reward":"0",
+                "downloads": "10,000+"
             }
         ]
     },{
@@ -573,6 +581,36 @@
         "cat":"new",
         "level": 4,
         "logo": "http://edu.qpython.org/static/course-wego.png",
+        "open": 0,
+        "courses":[
+        ]
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/blockchain/index.html",
+        "smodule":"blockchain",
+        "description":"区块链快速开始",
+        "title":"Python进阶 - 区块链快速开始",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"new",
+        "level": 4,
+        "logo": "http://edu.qpython.org/static/course-blockchain.png",
+        "open": 0,
+        "courses":[
+        ]
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/full-text-search/index.html",
+        "smodule":"full-text-search",
+        "description":"全局搜索快速开始",
+        "title":"Python进阶 - 全局搜索快速开始",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"new",
+        "level": 4,
+        "logo": "http://edu.qpython.org/static/course-full-text-search.png",
         "open": 0,
         "courses":[
         ]

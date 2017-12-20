@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<title>修饰符的使用</title>
+<link rel="stylesheet" href="../../static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true,
+SOURCELINK_SUFFIX: '.txt'
+};
+</script>
+<script type="text/javascript" src="../../static/jquery.js"></script>
+<script type="text/javascript" src="../../static/underscore.js"></script>
+<script type="text/javascript" src="../../static/doctools.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body role="document">
+<div class="header doc-header web-show">
+<div class="col-sm-offset-2 col-sm-8  index-header">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+<span class="sr-only">切换导航</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/index.html" class="logo"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+<ul class="header-title collapse navbar-collapse" id="example-navbar-collapse" >
+<li>
+<a href="http://www.qpython.org/index.html">Home</a>
+</li>
+<li>
+<a href="http://www.qpython.org/document.html">Guide</a>
+</li>
+<li class="header-phone-selected">
+<a href="/index.html" class="header-selected">Course</a>
+<span class="header-title-selected"></span>
+</li>
+<li>
+<a href="http://www.aipy.org">AIPY</a>
+</li>
+<li>
+<a target="_blank" href="https://github.com/qpython-android/qpython">Github</a>
+</li>
+</ul>
+<div class="search-box hidden-xs">
+<form action="/search.html">
+<input type="search" name="q" placeholder="keyword">
+<input type="hidden" name="check_keywords" value="yes" />
+<input type="hidden" name="area" value="default" />
+<button><img src="http://www.qpython.org/static/ic_search.png"></button>
+</form>
+</div>
+</div>
+</div>
+<main class="contain web-content">
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="id1">
+<h1>修饰符的使用<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="classmethod">
+<h2>&#64;classmethod 修饰符<a class="headerlink" href="#classmethod" title="Permalink to this headline">¶</a></h2>
+<p>在 <em>Python</em> 标准库中，有很多自带的修饰符，例如 <em>classmethod</em> 将一个对象方法转换了类方法：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>class Foo(object):
+@classmethod
+    def bar(cls, x):
+        print &#39;the input is&#39;, x
+    def __init__(self):
+        pass
+</pre></div>
+</div>
+<p>类方法可以通过 <strong>类名.方法</strong> 来调用：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Foo</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>the input is 12</p>
+</div>
+<div class="section" id="property">
+<h2>&#64;property 修饰符<a class="headerlink" href="#property" title="Permalink to this headline">¶</a></h2>
+<p>有时候，我们希望像 <strong>Java</strong> 一样支持 <em>getters</em> 和 <em>setters</em> 的方法，这时候就可以使用 <em>property</em> 修饰符：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>class Foo(object):
+    def __init__(self, data):
+        self.data = data
+    @property
+    def x(self):
+        return self.data
+</pre></div>
+</div>
+<p>此时可以使用* .x* 这个属性查看数据（不需要加上括号）：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="n">Foo</span><span class="p">(</span><span class="mi">23</span><span class="p">)</span>
+<span class="n">foo</span><span class="o">.</span><span class="n">x</span>
+</pre></div>
+</div>
+<p>Out[4]:23</p>
+<p>这样做的好处在于，这个属性是只读的：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">foo</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>AttributeError                            Traceback (most recent call last)
+&lt;ipython-input-5-e5e7e6c675ef&gt; in &lt;module&gt;()
+&#8212;-&gt; 1 foo.x = 1</p>
+<p>AttributeError: can&#8217;t set attribute</p>
+<p>如果想让它变成可读写，可以加上一个修饰符 <em>&#64;x.setter</em>：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>class Foo(object):
+def __init__(self, data):
+    self.data = data
+@property
+def x(self):
+    return self.data
+@x.setter
+def x(self, value):
+    self.data = value
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>::</dt>
+<dd>foo = Foo(23)
+print foo.x</dd>
+</dl>
+<p>23</p>
+<p>可以通过属性改变它的值：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">foo</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span> <span class="n">foo</span><span class="o">.</span><span class="n">x</span>
+</pre></div>
+</div>
+<p>1</p>
+</div>
+<div class="section" id="numpy-vectorize">
+<h2>Numpy 的 &#64;vectorize 修饰符<a class="headerlink" href="#numpy-vectorize" title="Permalink to this headline">¶</a></h2>
+<p><em>numpy</em> 的 <em>vectorize</em> 函数讲一个函数转换为 <em>ufunc</em>，事实上它也是一个修饰符：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>from numpy import vectorize, arange
+@vectorize
+def f(x):
+    if x &lt;= 0:
+        return x
+    else:
+        return 0
+f(arange(-10.0,10.0))
+</pre></div>
+</div>
+<p>Out[9]:
+array([-10.,  -9.,  -8.,  -7.,  -6.,  -5.,  -4.,  -3.,  -2.,  -1.,   0.,</p>
+<blockquote>
+<div>0.,   0.,   0.,   0.,   0.,   0.,   0.,   0.,   0.])</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h2>注册一个函数<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>来看这样的一个例子，定义一个类：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>class Registry(object):
+def __init__(self):
+    self._data = {}
+def register(self, f, name=None):
+    if name == None:
+        name = f.__name__
+    self._data[name] = f
+    setattr(self, name, f)
+</pre></div>
+</div>
+<p><em>register</em> 方法接受一个函数，将这个函数名作为属性注册到对象中。</p>
+<p>产生该类的一个对象：</p>
+<p>::
+registry = Registry()</p>
+<p>使用该对象的 <em>register</em> 方法作为修饰符：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>@registry.register
+def greeting():
+    print &quot;hello world&quot;
+</pre></div>
+</div>
+<p>这样这个函数就被注册到 <em>registry</em> 这个对象中去了：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">registry</span><span class="o">.</span><span class="n">_data</span>
+</pre></div>
+</div>
+<p>Out[13]:{&#8216;greeting&#8217;: &lt;function __main__.greeting&gt;}</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">registry</span><span class="o">.</span><span class="n">greeting</span>
+</pre></div>
+</div>
+<p>Out[14]:&lt;function __main__.greeting&gt;</p>
+<p><em>flask</em> ，一个常用的网络应用，处理 url 的机制跟这个类似。</p>
+</div>
+<div class="section" id="wraps">
+<h2>使用 &#64;wraps<a class="headerlink" href="#wraps" title="Permalink to this headline">¶</a></h2>
+<p>一个通常的问题在于：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span> def logging_call(f):
+    def wrapper(*a, **kw):
+        print &#39;calling {}&#39;.format(f.__name__)
+        return f(*a, **kw)
+    return wrapper
+@logging_call
+def square(x):
+&#39;&#39;&#39;
+square function.
+&#39;&#39;&#39;
+return x ** 2
+print square.__doc__, square.__name__
+</pre></div>
+</div>
+<p>None wrapper</p>
+<p>我们使用修饰符之后，<em>square</em> 的 <em>metadata</em> 完全丢失了，返回的函数名与函数的 <em>docstring</em> 都不对。</p>
+<p>一个解决的方法是从 <em>functools</em> 模块导入 <em>wraps</em> 修饰符来修饰我们的修饰符：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span> import functools
+def logging_call(f):
+@functools.wraps(f)
+    def wrapper(*a, **kw):
+        print &#39;calling {}&#39;.format(f.__name__)
+        return f(*a, **kw)
+    return wrapper
+@logging_call
+def square(x):
+&#39;&#39;&#39;
+square function.
+&#39;&#39;&#39;
+return x ** 2
+print square.__doc__, square.__name__
+</pre></div>
+</div>
+<button class="button">Run ...</button>
+<blockquote>
+<div><dl class="docutils">
+<dt>square function.</dt>
+<dd>square</dd>
+</dl>
+</div></blockquote>
+<p>现在这个问题解决了，所以在自定义修饰符方法的时候为了避免出现不必要的麻烦，尽量使用* wraps* 来修饰修饰符！</p>
+</div>
+<div class="section" id="class">
+<h2>Class 修饰符<a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h2>
+<p>与函数修饰符类似，类修饰符是这样一类函数，接受一个类作为参数，通常返回一个新的类。</p>
+</div>
+<div class="section" id="id3">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>作者:李金  <a class="reference external" href="mailto:lijinwithyou&#37;&#52;&#48;gmail&#46;com">lijinwithyou<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+<p>提交: 2017/12/6</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+</main>
+<div class="star-footer">
+<img onclick="openPurchase()" src="../../static/star.jpg">
+<div id="praise"><span>0</span> persons have rewarded</div>
+</div>
+<div class="foo"></div>
+<footer class="clearfix fixfooter web-show">
+<div class="col-sm-offset-2 col-sm-6 footer-div1">
+<div class="footer-block-item">
+<span class="footer-item1">Built with Sphinx using a theme provid by QPython.</span>
+<span class="footer-item2 visible-xs">Copyight 2017, QPython.</span>
+</div>
+</div>
+<div class="col-sm-2 footer-div2">
+<a href="/index.html" class="pull-right"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+</footer>
+<script>
+var milib;
+if (milib==undefined) {
+var milib = function(){
+};
+milib.qeditor = function(str){
+alert('Please share this page to QPython then run it')
+};
+milib.getPurchaseNumber = function(str){
+//alert('getPurchaseNumber:'+str)
+return "10+";
+};
+milib.a8playVideoFromGW= function(url){
+window.open(url)
+};
+milib.qpylibinstall = function(cat,url,target){
+window.open(url)
+};
+milib.gotoIfPay = function(url, packageId, packageUrl){
+window.open(url)
+};
+} else {
+}
+function openPurchase() {
+//获取标识
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+milib.openPurchaseActivity(s)
+}
+//按钮事件
+function btnEvent(){
+var seq = this.getAttribute('target')-2
+var a = this.parentElement.getElementsByTagName('pre')
+if ( a && a.length > 0){
+/**********有代码，调用控制台*************/
+var code = a[seq].lastChild.nodeValue
+milib.qeditor(code)
+}else{
+//没有代码，调转
+var url = this.getAttribute('data-url');
+window.open(url);
+}
+}
+//获取赞赏
+function setPraise(){
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+var i = document.getElementById('praise').getElementsByTagName('span')[0]
+var num = milib.getPurchaseNumber(s);
+i.innerHTML = num
+}
+//初始化代码显示
+function initCode(){
+var prearr = document.getElementsByTagName('pre');
+for (var i = 0; i < prearr.length; i++) {
+var temp_data = prearr[i].lastChild.nodeValue
+//正则处理 lavel5
+temp_data = temp_data.replace(/\^2\$/g, spaceString(2));
+temp_data = temp_data.replace(/\^4\$/g, spaceString(4));
+temp_data = temp_data.replace(/\^6\$/g, spaceString(6));
+temp_data = temp_data.replace(/\^8\$/g, spaceString(8));
+temp_data = temp_data.replace(/\^10\$/g, spaceString(10));
+temp_data = temp_data.replace(/\^12\$/g, spaceString(12));
+temp_data = temp_data.replace(/\^16\$/g, spaceString(16));
+temp_data = temp_data.replace(/\^20\$/g, spaceString(20));
+//set
+prearr[i].lastChild.nodeValue = temp_data;
+}
+}
+//产生空格
+function spaceString(num){
+var v = ''
+for (var i = 0; i < num; i++) {
+v += ' ';
+}
+return v;
+}
+function setSearchHistory (t) {
+if (!t)
+return;
+if (localStorage.course_search_list) {
+var list = localStorage.course_search_list.split('%,%');
+var i = list.indexOf(t);
+if (i !== -1) {
+list.splice(i, 1);
+list.push(t);
+localStorage.course_search_list = list.join('%,%');
+}else {
+localStorage.course_search_list += '%,%'+t;
+}
+}else {
+localStorage.course_search_list = t;
+}
+}
+window.onload = function(){
+setPraise();
+initCode();
+//将所有的button绑定事件
+var b = document.getElementsByTagName('button');
+for (var i = 0; i < b.length; i++) {
+if (b[i].className=='button') {
+b[i].setAttribute('target', i)
+b[i].onclick = btnEvent ;
+}
+}
+}
+$(function(){
+var url = location.href.split('?');
+var arg = url[1];
+var args = arg.split('&');
+for (var i = 0; i < args.length; i++) {
+var c = args[i].split('=');
+if (c[0]=='form' && c[1] == 'web') {
+$('.web-show').css('display','block');
+$('.web-content').addClass('margin-header');
+}
+}
+})
+$(function() {
+$('form').submit(function() {
+setSearchHistory($("input[name='q']").val());
+})
+$('.bodywrapper .body form input').val("");
+$($('.bodywrapper .body form input')[0]).attr('placeholder', 'search');
+})
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-103260045-3', 'auto');
+ga('send', 'pageview');
+</script>
+</body>
+</html>
