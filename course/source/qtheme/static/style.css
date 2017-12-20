@@ -490,3 +490,19 @@ p {
     border: none;
     background-color: transparent;
 }
+tr.row-even {
+    font-family: Roboto-Regular;
+    color: #4A4A4A;
+    background-color: #eae9e9;
+}
+
+.docutils th,
+.docutils td {
+    text-align: center;
+}
+table.docutils {
+    border: 1px solid #E0E0E0;
+    text-align: center;
+    /*border-collapse: collapse;*/
+    width: 100%;
+}
