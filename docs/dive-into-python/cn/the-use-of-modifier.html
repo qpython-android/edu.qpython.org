@@ -85,7 +85,10 @@ SOURCELINK_SUFFIX: '.txt'
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Foo</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>the input is 12</p>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">12</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="property">
 <h2>&#64;property 修饰符<a class="headerlink" href="#property" title="Permalink to this headline">¶</a></h2>
@@ -99,11 +102,11 @@ SOURCELINK_SUFFIX: '.txt'
 </pre></div>
 </div>
 <p>此时可以使用* .x* 这个属性查看数据（不需要加上括号）：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>  <span class="n">foo</span> <span class="o">=</span> <span class="n">Foo</span><span class="p">(</span><span class="mi">23</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="n">Foo</span><span class="p">(</span><span class="mi">23</span><span class="p">)</span>
 <span class="n">foo</span><span class="o">.</span><span class="n">x</span>
-<span class="n">结果</span><span class="p">:</span>
 </pre></div>
 </div>
+<p>结果:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">23</span>
 </pre></div>
 </div>
@@ -111,10 +114,6 @@ SOURCELINK_SUFFIX: '.txt'
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">foo</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
 </pre></div>
 </div>
-<p>AttributeError                            Traceback (most recent call last)
-&lt;ipython-input-5-e5e7e6c675ef&gt; in &lt;module&gt;()
-&#8212;-&gt; 1 foo.x = 1</p>
-<p>AttributeError: can&#8217;t set attribute</p>
 <p>如果想让它变成可读写，可以加上一个修饰符 <em>&#64;x.setter</em>：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>class Foo(object):
 def __init__(self, data):
@@ -127,23 +126,28 @@ def x(self, value):
     self.data = value
 </pre></div>
 </div>
-<dl class="docutils">
-<dt>::</dt>
-<dd>foo = Foo(23)
-print foo.x</dd>
-</dl>
-<p>23</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">foo</span> <span class="o">=</span> <span class="n">Foo</span><span class="p">(</span><span class="mi">23</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">foo</span><span class="o">.</span><span class="n">x</span>
+</pre></div>
+</div>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">23</span>
+</pre></div>
+</div>
 <p>可以通过属性改变它的值：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">foo</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="nb">print</span> <span class="n">foo</span><span class="o">.</span><span class="n">x</span>
 </pre></div>
 </div>
-<p>1</p>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="numpy-vectorize">
 <h2>Numpy 的 &#64;vectorize 修饰符<a class="headerlink" href="#numpy-vectorize" title="Permalink to this headline">¶</a></h2>
 <p><em>numpy</em> 的 <em>vectorize</em> 函数讲一个函数转换为 <em>ufunc</em>，事实上它也是一个修饰符：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>   from numpy import vectorize, arange
+<div class="highlight-default"><div class="highlight"><pre><span></span>from numpy import vectorize, arange
 @vectorize
 def f(x):
     if x &lt;= 0:
@@ -151,9 +155,9 @@ def f(x):
     else:
         return 0
 f(arange(-10.0,10.0))
-结果:
 </pre></div>
 </div>
+<p>结果:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mf">10.</span><span class="p">,</span>  <span class="o">-</span><span class="mf">9.</span><span class="p">,</span>  <span class="o">-</span><span class="mf">8.</span><span class="p">,</span>  <span class="o">-</span><span class="mf">7.</span><span class="p">,</span>  <span class="o">-</span><span class="mf">6.</span><span class="p">,</span>  <span class="o">-</span><span class="mf">5.</span><span class="p">,</span>  <span class="o">-</span><span class="mf">4.</span><span class="p">,</span>  <span class="o">-</span><span class="mf">3.</span><span class="p">,</span>  <span class="o">-</span><span class="mf">2.</span><span class="p">,</span>  <span class="o">-</span><span class="mf">1.</span><span class="p">,</span>   <span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span>   <span class="mf">0.</span><span class="p">,</span>   <span class="mf">0.</span><span class="p">,</span>   <span class="mf">0.</span><span class="p">,</span>   <span class="mf">0.</span><span class="p">,</span>   <span class="mf">0.</span><span class="p">,</span>   <span class="mf">0.</span><span class="p">,</span>   <span class="mf">0.</span><span class="p">,</span>   <span class="mf">0.</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -183,17 +187,17 @@ def greeting():
 </pre></div>
 </div>
 <p>这样这个函数就被注册到 <em>registry</em> 这个对象中去了：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>   <span class="n">registry</span><span class="o">.</span><span class="n">_data</span>
-<span class="n">结果</span><span class="p">:</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">registry</span><span class="o">.</span><span class="n">_data</span>
 </pre></div>
 </div>
+<p>结果:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;greeting&#39;</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">function</span> <span class="n">__main__</span><span class="o">.</span><span class="n">greeting</span><span class="o">&gt;</span><span class="p">}</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span>   <span class="n">registry</span><span class="o">.</span><span class="n">greeting</span>
-<span class="n">结果</span><span class="p">:</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">registry</span><span class="o">.</span><span class="n">greeting</span>
 </pre></div>
 </div>
+<p>结果:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">function</span> <span class="n">__main__</span><span class="o">.</span><span class="n">greeting</span><span class="o">&gt;</span>
 </pre></div>
 </div>

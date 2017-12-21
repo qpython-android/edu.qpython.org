@@ -35,7 +35,9 @@
    Foo.bar(12)
 
 
-the input is 12
+结果:
+::
+    12
 
 
 @property 修饰符
@@ -72,34 +74,18 @@ the input is 12
    foo = Foo(23)
    foo.x
 
-
-
- 结果: 
+结果: 
 ::
 
     23
 
 
-
 这样做的好处在于，这个属性是只读的：
-
-
-
- 
 
 ::
 
 
    foo.x = 1
-
-
-
-
-AttributeError                            Traceback (most recent call last)
-<ipython-input-5-e5e7e6c675ef> in <module>()
-----> 1 foo.x = 1
-
-AttributeError: can't set attribute
 
 
 
@@ -131,11 +117,14 @@ AttributeError: can't set attribute
 
 
 ::
+
     foo = Foo(23)
     print foo.x
 
+结果:
+::
 
-23
+    23
 
 
 可以通过属性改变它的值：
@@ -151,8 +140,10 @@ AttributeError: can't set attribute
    print foo.x
 
 
+结果:
+::
 
-1
+    1
 
 
 Numpy 的 @vectorize 修饰符
@@ -181,7 +172,7 @@ Numpy 的 @vectorize 修饰符
 
 
 
- 结果: 
+结果: 
 ::
 
     
@@ -254,7 +245,7 @@ Numpy 的 @vectorize 修饰符
     registry._data
 
 
- 结果: 
+结果: 
 ::
 
     {'greeting': <function __main__.greeting>}
@@ -269,7 +260,7 @@ Numpy 的 @vectorize 修饰符
     registry.greeting
 
 
- 结果: 
+结果: 
 ::
 
     <function __main__.greeting>
