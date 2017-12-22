@@ -633,7 +633,7 @@
     },{
         "src":"http://qpython.org",
         "rdate":"2017-09-15",
-        "link":"http://edu.qpython.org/full-text-search/index.html",
+        "link":"http://edu.qpython.org/vr/index.html",
         "smodule":"full-text-search",
         "description":"VR快速开始",
         "title":"Python进阶 - VR快速开始",
@@ -648,7 +648,7 @@
     },{
         "src":"http://qpython.org",
         "rdate":"2017-09-15",
-        "link":"http://edu.qpython.org/full-text-search/index.html",
+        "link":"http://edu.qpython.org/ar/index.html",
         "smodule":"full-text-search",
         "description":"AR快速开始",
         "title":"Python进阶 - AR快速开始",
@@ -663,7 +663,7 @@
     },{
         "src":"http://qpython.org",
         "rdate":"2017-09-15",
-        "link":"http://edu.qpython.org/full-text-search/index.html",
+        "link":"http://edu.qpython.org/unity3d/index.html",
         "smodule":"full-text-search",
         "description":"Unity 3D快速开始",
         "title":"Python进阶 - Unity 3D快速开始",

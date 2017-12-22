@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<title>Tutorial</title>
+<link rel="stylesheet" href="../static/style.css" type="text/css" />
+<link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true,
+SOURCELINK_SUFFIX: '.txt'
+};
+</script>
+<script type="text/javascript" src="../static/jquery.js"></script>
+<script type="text/javascript" src="../static/underscore.js"></script>
+<script type="text/javascript" src="../static/doctools.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body role="document">
+<div class="header doc-header web-show">
+<div class="col-sm-offset-2 col-sm-8  index-header">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+<span class="sr-only">切换导航</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/index.html" class="logo"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+<ul class="header-title collapse navbar-collapse" id="example-navbar-collapse" >
+<li>
+<a href="http://www.qpython.org/index.html">Home</a>
+</li>
+<li>
+<a href="http://www.qpython.org/document.html">Guide</a>
+</li>
+<li class="header-phone-selected">
+<a href="/index.html" class="header-selected">Course</a>
+<span class="header-title-selected"></span>
+</li>
+<li>
+<a href="http://www.aipy.org">AIPY</a>
+</li>
+<li>
+<a target="_blank" href="https://github.com/qpython-android/qpython">Github</a>
+</li>
+</ul>
+<div class="search-box hidden-xs">
+<form action="/search.html">
+<input type="search" name="q" placeholder="keyword">
+<input type="hidden" name="check_keywords" value="yes" />
+<input type="hidden" name="area" value="default" />
+<button><img src="http://www.qpython.org/static/ic_search.png"></button>
+</form>
+</div>
+</div>
+</div>
+<main class="contain web-content">
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<p>pache Server:
+.. _Apache: <a class="reference external" href="http://www.apache.org/">http://www.apache.org/</a>
+.. _cherrypy: <a class="reference external" href="http://www.cherrypy.org/">http://www.cherrypy.org/</a>
+.. _decorator: <a class="reference external" href="http://docs.python.org/glossary.html#term-decorator">http://docs.python.org/glossary.html#term-decorator</a>
+.. _flup: <a class="reference external" href="http://trac.saddi.com/flup">http://trac.saddi.com/flup</a>
+.. _http_code: <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html</a>
+.. _http_method: <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html">http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html</a>
+.. _json: <a class="reference external" href="http://de.wikipedia.org/wiki/JavaScript_Object_Notation">http://de.wikipedia.org/wiki/JavaScript_Object_Notation</a>
+.. _lighttpd: <a class="reference external" href="http://www.lighttpd.net/">http://www.lighttpd.net/</a>
+.. _mako: <a class="reference external" href="http://www.makotemplates.org/">http://www.makotemplates.org/</a>
+.. _mod_wsgi: <a class="reference external" href="http://code.google.com/p/modwsgi/">http://code.google.com/p/modwsgi/</a>
+.. _Paste: <a class="reference external" href="http://pythonpaste.org/">http://pythonpaste.org/</a>
+.. _Pound: <a class="reference external" href="http://www.apsis.ch/pound/">http://www.apsis.ch/pound/</a>
+.. <span class="target" id="wsgi-specification">WSGI Specification</span>: <a class="reference external" href="http://www.wsgi.org/">http://www.wsgi.org/</a>
+.. _issue: <a class="reference external" href="http://github.com/bottlepy/bottle/issues">http://github.com/bottlepy/bottle/issues</a>
+.. _Python: <a class="reference external" href="http://python.org/">http://python.org/</a>
+.. _SimpleCookie: <a class="reference external" href="http://docs.python.org/library/cookie.html#morsel-objects">http://docs.python.org/library/cookie.html#morsel-objects</a>
+.. _testing: <a class="reference external" href="http://github.com/bottlepy/bottle/raw/master/bottle.py">http://github.com/bottlepy/bottle/raw/master/bottle.py</a></p>
+<div class="section" id="tutorial">
+<h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h1>
+<p>This tutorial introduces you to the concepts and features of the Bottle web framework and covers basic and advanced topics alike. You can read it from start to end, or use it as a reference later on. The automatically generated <span class="xref doc">api</span> may be interesting for you, too. It covers more details, but explains less than this tutorial. Solutions for the most common questions can be found in our <span class="xref doc">recipes</span> collection or on the <span class="xref doc">faq</span> page. If you need any help, join our <a class="reference external" href="mailto:bottlepy&#37;&#52;&#48;googlegroups&#46;com">mailing list</a> or visit us in our <a class="reference external" href="http://webchat.freenode.net/?channels=bottlepy">IRC channel</a>.</p>
+<div class="section" id="installation">
+<span id="id1"></span><h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Bottle does not depend on any external libraries. You can just download <a class="reference external" href="/bottle.py">bottle.py</a> into your project directory and start coding:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ wget https://bottlepy.org/bottle.py
+</pre></div>
+</div>
+<p>This will get you the latest development snapshot that includes all the new features. If you prefer a more stable environment, you should stick with the stable releases. These are available on <a class="reference external" href="http://pypi.python.org/pypi/bottle">PyPI</a> and can be installed via <strong class="command">pip</strong> (recommended), <strong class="command">easy_install</strong> or your package manager:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo pip install bottle              <span class="c1"># recommended</span>
+$ sudo easy_install bottle             <span class="c1"># alternative without pip</span>
+$ sudo apt-get install python-bottle   <span class="c1"># works for debian, ubuntu, ...</span>
+</pre></div>
+</div>
+<p>Either way, you&#8217;ll need Python 2.7 or newer (including 3.2+) to run bottle applications. If you do not have permissions to install packages system-wide or simply don&#8217;t want to, create a <a class="reference external" href="http://pypi.python.org/pypi/virtualenv">virtualenv</a> first:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ virtualenv develop              <span class="c1"># Create virtual environment</span>
+$ <span class="nb">source</span> develop/bin/activate     <span class="c1"># Change default python to virtual one</span>
+<span class="o">(</span>develop<span class="o">)</span>$ pip install -U bottle  <span class="c1"># Install bottle to virtual environment</span>
+</pre></div>
+</div>
+<p>Or, if virtualenv is not installed on your system:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ wget https://raw.github.com/pypa/virtualenv/master/virtualenv.py
+$ python virtualenv.py develop    <span class="c1"># Create virtual environment</span>
+$ <span class="nb">source</span> develop/bin/activate     <span class="c1"># Change default python to virtual one</span>
+<span class="o">(</span>develop<span class="o">)</span>$ pip install -U bottle  <span class="c1"># Install bottle to virtual environment</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="quickstart-hello-world">
+<h2>Quickstart: &#8220;Hello World"<a class="headerlink" href="#quickstart-hello-world" title="Permalink to this headline">¶</a></h2>
+<p>This tutorial assumes you have Bottle either <a class="reference internal" href="#installation"><span class="std std-ref">installed</span></a> or copied into your project directory. Let&#8217;s start with a very basic &#8220;Hello World" example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bottle</span> <span class="k">import</span> <span class="n">route</span><span class="p">,</span> <span class="n">run</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/hello&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+<span class="k">return</span> <span class="s2">&quot;Hello World!&quot;</span>
+<span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8080</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This is it. Run this script, visit <a class="reference external" href="http://localhost:8080/hello">http://localhost:8080/hello</a> and you will see &#8220;Hello World!" in your browser. Here is how it works:</p>
+<p>The <code class="xref py py-func docutils literal"><span class="pre">route()</span></code> decorator binds a piece of code to an URL path. In this case, we link the <code class="docutils literal"><span class="pre">/hello</span></code> path to the <code class="docutils literal"><span class="pre">hello()</span></code> function. This is called a <cite>route</cite> (hence the decorator name) and is the most important concept of this framework. You can define as many routes as you want. Whenever a browser requests a URL, the associated function is called and the return value is sent back to the browser. It&#8217;s as simple as that.</p>
+<p>The <code class="xref py py-func docutils literal"><span class="pre">run()</span></code> call in the last line starts a built-in development server. It runs on <code class="docutils literal"><span class="pre">localhost</span></code> port <code class="docutils literal"><span class="pre">8080</span></code> and serves requests until you hit <code class="kbd docutils literal"><span class="pre">Control-c</span></code>. You can switch the server backend later, but for now a development server is all we need. It requires no setup at all and is an incredibly painless way to get your application up and running for local tests.</p>
+<p>The <a class="reference internal" href="#tutorial-debugging"><span class="std std-ref">Debug Mode</span></a> is very helpful during early development, but should be switched off for public applications. Keep that in mind.</p>
+<p>This is just a demonstration of the basic concept of how applications are built with Bottle. Continue reading and you&#8217;ll see what else is possible.</p>
+<div class="section" id="the-default-application">
+<span id="tutorial-default"></span><h3>The Default Application<a class="headerlink" href="#the-default-application" title="Permalink to this headline">¶</a></h3>
+<p>For the sake of simplicity, most examples in this tutorial use a module-level <code class="xref py py-func docutils literal"><span class="pre">route()</span></code> decorator to define routes. This adds routes to a global &#8220;default application", an instance of <code class="xref py py-class docutils literal"><span class="pre">Bottle</span></code> that is automatically created the first time you call <code class="xref py py-func docutils literal"><span class="pre">route()</span></code>. Several other module-level decorators and functions relate to this default application, but if you prefer a more object oriented approach and don&#8217;t mind the extra typing, you can create a separate application object and use that instead of the global one:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bottle</span> <span class="k">import</span> <span class="n">Bottle</span><span class="p">,</span> <span class="n">run</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Bottle</span><span class="p">()</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/hello&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+<span class="k">return</span> <span class="s2">&quot;Hello World!&quot;</span>
+<span class="n">run</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8080</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The object-oriented approach is further described in the <a class="reference internal" href="#default-app"><span class="std std-ref">Default Application</span></a> section. Just keep in mind that you have a choice.</p>
+</div>
+</div>
+<div class="section" id="request-routing">
+<span id="tutorial-routing"></span><h2>Request Routing<a class="headerlink" href="#request-routing" title="Permalink to this headline">¶</a></h2>
+<p>In the last chapter we built a very simple web application with only a single route. Here is the routing part of the &#8220;Hello World" example again:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/hello&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+<span class="k">return</span> <span class="s2">&quot;Hello World!&quot;</span>
+</pre></div>
+</div>
+<p>The <code class="xref py py-func docutils literal"><span class="pre">route()</span></code> decorator links an URL path to a callback function, and adds a new route to the <a class="reference internal" href="#tutorial-default"><span class="std std-ref">default application</span></a>. An application with just one route is kind of boring, though. Let&#8217;s add some more (don&#8217;t forget <code class="docutils literal"><span class="pre">from</span> <span class="pre">bottle</span> <span class="pre">import</span> <span class="pre">template</span></code>):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/hello/&lt;name&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Stranger&#39;</span><span class="p">):</span>
+<span class="k">return</span> <span class="n">template</span><span class="p">(</span><span class="s1">&#39;Hello {{name}}, how are you?&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This example demonstrates two things: You can bind more than one route to a single callback, and you can add wildcards to URLs and access them via keyword arguments.</p>
+<div class="section" id="dynamic-routes">
+<span id="tutorial-dynamic-routes"></span><h3>Dynamic Routes<a class="headerlink" href="#dynamic-routes" title="Permalink to this headline">¶</a></h3>
+<p>Routes that contain wildcards are called <cite>dynamic routes</cite> (as opposed to <cite>static routes</cite>) and match more than one URL at the same time. A simple wildcard consists of a name enclosed in angle brackets (e.g. <code class="docutils literal"><span class="pre">&lt;name&gt;</span></code>) and accepts one or more characters up to the next slash (<code class="docutils literal"><span class="pre">/</span></code>). For example, the route <code class="docutils literal"><span class="pre">/hello/&lt;name&gt;</span></code> accepts requests for <code class="docutils literal"><span class="pre">/hello/alice</span></code> as well as <code class="docutils literal"><span class="pre">/hello/bob</span></code>, but not for <code class="docutils literal"><span class="pre">/hello</span></code>, <code class="docutils literal"><span class="pre">/hello/</span></code> or <code class="docutils literal"><span class="pre">/hello/mr/smith</span></code>.</p>
+<p>Each wildcard passes the covered part of the URL as a keyword argument to the request callback. You can use them right away and implement RESTful, nice-looking and meaningful URLs with ease. Here are some other examples along with the URLs they&#8217;d match:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/wiki/&lt;pagename&gt;&#39;</span><span class="p">)</span>            <span class="c1"># matches /wiki/Learning_Python</span>
+<span class="k">def</span> <span class="nf">show_wiki_page</span><span class="p">(</span><span class="n">pagename</span><span class="p">):</span>
+<span class="o">...</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/&lt;action&gt;/&lt;user&gt;&#39;</span><span class="p">)</span>            <span class="c1"># matches /follow/defnull</span>
+<span class="k">def</span> <span class="nf">user_api</span><span class="p">(</span><span class="n">action</span><span class="p">,</span> <span class="n">user</span><span class="p">):</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>Filters can be used to define more specific wildcards, and/or transform the covered part of the URL before it is passed to the callback. A filtered wildcard is declared as <code class="docutils literal"><span class="pre">&lt;name:filter&gt;</span></code> or <code class="docutils literal"><span class="pre">&lt;name:filter:config&gt;</span></code>. The syntax for the optional config part depends on the filter used.</p>
+<p>The following filters are implemented by default and more may be added:</p>
+<ul class="simple">
+<li><strong>:int</strong> matches (signed) digits only and converts the value to integer.</li>
+<li><strong>:float</strong> similar to :int but for decimal numbers.</li>
+<li><strong>:path</strong> matches all characters including the slash character in a non-greedy way and can be used to match more than one path segment.</li>
+<li><strong>:re</strong> allows you to specify a custom regular expression in the config field. The matched value is not modified.</li>
+</ul>
+<p>Let&#8217;s have a look at some practical examples:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/object/&lt;id:int&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="nb">id</span><span class="p">):</span>
+<span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/show/&lt;name:re:[a-z]+&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+<span class="k">assert</span> <span class="n">name</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/static/&lt;path:path&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+<span class="k">return</span> <span class="n">static_file</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can add your own filters as well. See <span class="xref doc">routing</span> for details.</p>
+</div>
+<div class="section" id="http-request-methods">
+<h3>HTTP Request Methods<a class="headerlink" href="#http-request-methods" title="Permalink to this headline">¶</a></h3>
+<p>The HTTP protocol defines several <a href="#id5"><span class="problematic" id="id6">`request methods`__</span></a> (sometimes referred to as &#8220;verbs") for different tasks. GET is the default for all routes with no other method specified. These routes will match GET requests only. To handle other methods such as POST, PUT, DELETE or PATCH, add a <code class="docutils literal"><span class="pre">method</span></code> keyword argument to the <code class="xref py py-func docutils literal"><span class="pre">route()</span></code> decorator or use one of the five alternative decorators: <code class="xref py py-func docutils literal"><span class="pre">get()</span></code>, <code class="xref py py-func docutils literal"><span class="pre">post()</span></code>, <code class="xref py py-func docutils literal"><span class="pre">put()</span></code>, <code class="xref py py-func docutils literal"><span class="pre">delete()</span></code> or <code class="xref py py-func docutils literal"><span class="pre">patch()</span></code>.</p>
+<p>The POST method is commonly used for HTML form submission. This example shows how to handle a login form using POST:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bottle</span> <span class="k">import</span> <span class="n">get</span><span class="p">,</span> <span class="n">post</span><span class="p">,</span> <span class="n">request</span> <span class="c1"># or route</span>
+<span class="nd">@get</span><span class="p">(</span><span class="s1">&#39;/login&#39;</span><span class="p">)</span> <span class="c1"># or @route(&#39;/login&#39;)</span>
+<span class="k">def</span> <span class="nf">login</span><span class="p">():</span>
+<span class="k">return</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">        &lt;form action=&quot;/login&quot; method=&quot;post&quot;&gt;</span>
+<span class="s1">            Username: &lt;input name=&quot;username&quot; type=&quot;text&quot; /&gt;</span>
+<span class="s1">            Password: &lt;input name=&quot;password&quot; type=&quot;password&quot; /&gt;</span>
+<span class="s1">            &lt;input value=&quot;Login&quot; type=&quot;submit&quot; /&gt;</span>
+<span class="s1">        &lt;/form&gt;</span>
+<span class="s1">    &#39;&#39;&#39;</span>
+<span class="nd">@post</span><span class="p">(</span><span class="s1">&#39;/login&#39;</span><span class="p">)</span> <span class="c1"># or @route(&#39;/login&#39;, method=&#39;POST&#39;)</span>
+<span class="k">def</span> <span class="nf">do_login</span><span class="p">():</span>
+<span class="n">username</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">forms</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">)</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">forms</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">check_login</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+<span class="k">return</span> <span class="s2">&quot;&lt;p&gt;Your login information was correct.&lt;/p&gt;&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="k">return</span> <span class="s2">&quot;&lt;p&gt;Login failed.&lt;/p&gt;&quot;</span>
+</pre></div>
+</div>
+<p>In this example the <code class="docutils literal"><span class="pre">/login</span></code> URL is linked to two distinct callbacks, one for GET requests and another for POST requests. The first one displays a HTML form to the user. The second callback is invoked on a form submission and checks the login credentials the user entered into the form. The use of <code class="xref py py-attr docutils literal"><span class="pre">Request.forms</span></code> is further described in the <a class="reference internal" href="#tutorial-request"><span class="std std-ref">Request Data</span></a> section.</p>
+<p class="rubric">Special Methods: HEAD and ANY</p>
+<p>The HEAD method is used to ask for the response identical to the one that would correspond to a GET request, but without the response body. This is useful for retrieving meta-information about a resource without having to download the entire document. Bottle handles these requests automatically by falling back to the corresponding GET route and cutting off the request body, if present. You don&#8217;t have to specify any HEAD routes yourself.</p>
+<p>Additionally, the non-standard ANY method works as a low priority fallback: Routes that listen to ANY will match requests regardless of their HTTP method but only if no other more specific route is defined. This is helpful for <em>proxy-routes</em> that redirect requests to more specific sub-applications.</p>
+<p>To sum it up: HEAD requests fall back to GET routes and all requests fall back to ANY routes, but only if there is no matching route for the original request method. It&#8217;s as simple as that.</p>
+</div>
+<div class="section" id="routing-static-files">
+<h3>Routing Static Files<a class="headerlink" href="#routing-static-files" title="Permalink to this headline">¶</a></h3>
+<p>Static files such as images or CSS files are not served automatically. You have to add a route and a callback to control which files get served and where to find them:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bottle</span> <span class="k">import</span> <span class="n">static_file</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/static/&lt;filename&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">serverstatic</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<span class="k">return</span> <span class="n">static_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="s1">&#39;/path/to/your/static/files&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="xref py py-func docutils literal"><span class="pre">static_file()</span></code> function is a helper to serve files in a safe and convenient way (see <a class="reference internal" href="#tutorial-static-files"><span class="std std-ref">Static Files</span></a>). This example is limited to files directly within the <code class="docutils literal"><span class="pre">/path/to/your/static/files</span></code> directory because the <code class="docutils literal"><span class="pre">&lt;filename&gt;</span></code> wildcard won&#8217;t match a path with a slash in it. To serve files in subdirectories, change the wildcard to use the <cite>path</cite> filter:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/static/&lt;filepath:path&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">serverstatic</span><span class="p">(</span><span class="n">filepath</span><span class="p">):</span>
+<span class="k">return</span> <span class="n">static_file</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="s1">&#39;/path/to/your/static/files&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Be careful when specifying a relative root-path such as <code class="docutils literal"><span class="pre">root='./static/files'</span></code>. The working directory (<code class="docutils literal"><span class="pre">./</span></code>) and the project directory are not always the same.</p>
+</div>
+<div class="section" id="error-pages">
+<span id="tutorial-errorhandling"></span><h3>Error Pages<a class="headerlink" href="#error-pages" title="Permalink to this headline">¶</a></h3>
+<p>If anything goes wrong, Bottle displays an informative but fairly plain error page. You can override the default for a specific HTTP status code with the <code class="xref py py-func docutils literal"><span class="pre">error()</span></code> decorator:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bottle</span> <span class="k">import</span> <span class="n">error</span>
+<span class="nd">@error</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">error404</span><span class="p">(</span><span class="n">error</span><span class="p">):</span>
+<span class="k">return</span> <span class="s1">&#39;Nothing here, sorry&#39;</span>
+</pre></div>
+</div>
+<p>From now on, <cite>404 File not Found</cite> errors will display a custom error page to the user. The only parameter passed to the error-handler is an instance of <code class="xref py py-exc docutils literal"><span class="pre">HTTPError</span></code>. Apart from that, an error-handler is quite similar to a regular request callback. You can read from <code class="xref py py-data docutils literal"><span class="pre">request</span></code>, write to <code class="xref py py-data docutils literal"><span class="pre">response</span></code> and return any supported data-type except for <code class="xref py py-exc docutils literal"><span class="pre">HTTPError</span></code> instances.</p>
+<p>Error handlers are used only if your application returns or raises an <code class="xref py py-exc docutils literal"><span class="pre">HTTPError</span></code> exception (<code class="xref py py-func docutils literal"><span class="pre">abort()</span></code> does just that). Changing <code class="xref py py-attr docutils literal"><span class="pre">Request.status</span></code> or returning <code class="xref py py-exc docutils literal"><span class="pre">HTTPResponse</span></code> won&#8217;t trigger the error handler.</p>
+</div>
+</div>
+<div class="section" id="generating-content">
+<span id="tutorial-output"></span><h2>Generating content<a class="headerlink" href="#generating-content" title="Permalink to this headline">¶</a></h2>
+<p>In pure WSGI, the range of types you may return from your application is very limited. Applications must return an iterable yielding byte strings. You may return a string (because strings are iterable) but this causes most servers to transmit your content char by char. Unicode strings are not allowed at all. This is not very practical.</p>
+<p>Bottle is much more flexible and supports a wide range of types. It even adds a <code class="docutils literal"><span class="pre">Content-Length</span></code> header if possible and encodes unicode automatically, so you don&#8217;t have to. What follows is a list of data types you may return from your application callbacks and a short description of how these are handled by the framework:</p>
+<dl class="docutils">
+<dt>Dictionaries</dt>
+<dd>As mentioned above, Python dictionaries (or subclasses thereof) are automatically transformed into JSON strings and returned to the browser with the <code class="docutils literal"><span class="pre">Content-Type</span></code> header set to <code class="docutils literal"><span class="pre">application/json</span></code>. This makes it easy to implement json-based APIs. Data formats other than json are supported too. See the <span class="xref std std-ref">tutorial-output-filter</span> to learn more.</dd>
+<dt>Empty Strings, <code class="docutils literal"><span class="pre">False</span></code>, <code class="docutils literal"><span class="pre">None</span></code> or other non-true values:</dt>
+<dd>These produce an empty output with the <code class="docutils literal"><span class="pre">Content-Length</span></code> header set to 0.</dd>
+<dt>Unicode strings</dt>
+<dd>Unicode strings (or iterables yielding unicode strings) are automatically encoded with the codec specified in the <code class="docutils literal"><span class="pre">Content-Type</span></code> header (utf8 by default) and then treated as normal byte strings (see below).</dd>
+<dt>Byte strings</dt>
+<dd>Bottle returns strings as a whole (instead of iterating over each char) and adds a <code class="docutils literal"><span class="pre">Content-Length</span></code> header based on the string length. Lists of byte strings are joined first. Other iterables yielding byte strings are not joined because they may grow too big to fit into memory. The <code class="docutils literal"><span class="pre">Content-Length</span></code> header is not set in this case.</dd>
+<dt>Instances of <code class="xref py py-exc docutils literal"><span class="pre">HTTPError</span></code> or <code class="xref py py-exc docutils literal"><span class="pre">HTTPResponse</span></code></dt>
+<dd>Returning these has the same effect as when raising them as an exception. In case of an <code class="xref py py-exc docutils literal"><span class="pre">HTTPError</span></code>, the error handler is applied. See <a class="reference internal" href="#tutorial-errorhandling"><span class="std std-ref">Error Pages</span></a> for details.</dd>
+<dt>File objects</dt>
+<dd>Everything that has a <code class="docutils literal"><span class="pre">.read()</span></code> method is treated as a file or file-like object and passed to the <code class="docutils literal"><span class="pre">wsgi.file_wrapper</span></code> callable defined by the WSGI server framework. Some WSGI server implementations can make use of optimized system calls (sendfile) to transmit files more efficiently. In other cases this just iterates over chunks that fit into memory. Optional headers such as <code class="docutils literal"><span class="pre">Content-Length</span></code> or <code class="docutils literal"><span class="pre">Content-Type</span></code> are <em>not</em> set automatically. Use <code class="xref py py-func docutils literal"><span class="pre">send_file()</span></code> if possible. See <a class="reference internal" href="#tutorial-static-files"><span class="std std-ref">Static Files</span></a> for details.</dd>
+<dt>Iterables and generators</dt>
+<dd>You are allowed to use <code class="docutils literal"><span class="pre">yield</span></code> within your callbacks or return an iterable, as long as the iterable yields byte strings, unicode strings, <code class="xref py py-exc docutils literal"><span class="pre">HTTPError</span></code> or <code class="xref py py-exc docutils literal"><span class="pre">HTTPResponse</span></code> instances. Nested iterables are not supported, sorry. Please note that the HTTP status code and the headers are sent to the browser as soon as the iterable yields its first non-empty value. Changing these later has no effect.</dd>
+</dl>
+<p>The ordering of this list is significant. You may for example return a subclass of <code class="xref py py-class docutils literal"><span class="pre">str</span></code> with a <code class="docutils literal"><span class="pre">read()</span></code> method. It is still treated as a string instead of a file, because strings are handled first.</p>
+<p class="rubric">Changing the Default Encoding</p>
+<p>Bottle uses the <cite>charset</cite> parameter of the <code class="docutils literal"><span class="pre">Content-Type</span></code> header to decide how to encode unicode strings. This header defaults to <code class="docutils literal"><span class="pre">text/html;</span> <span class="pre">charset=UTF8</span></code> and can be changed using the <code class="xref py py-attr docutils literal"><span class="pre">Response.content_type</span></code> attribute or by setting the <code class="xref py py-attr docutils literal"><span class="pre">Response.charset</span></code> attribute directly. (The <code class="xref py py-class docutils literal"><span class="pre">Response</span></code> object is described in the section <a class="reference internal" href="#tutorial-response"><span class="std std-ref">The Response Object</span></a>.)</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bottle</span> <span class="k">import</span> <span class="n">response</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/iso&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">get_iso</span><span class="p">():</span>
+<span class="n">response</span><span class="o">.</span><span class="n">charset</span> <span class="o">=</span> <span class="s1">&#39;ISO-8859-15&#39;</span>
+<span class="k">return</span> <span class="sa">u</span><span class="s1">&#39;This will be sent with ISO-8859-15 encoding.&#39;</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/latin9&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">get_latin</span><span class="p">():</span>
+<span class="n">response</span><span class="o">.</span><span class="n">content_type</span> <span class="o">=</span> <span class="s1">&#39;text/html; charset=latin9&#39;</span>
+<span class="k">return</span> <span class="sa">u</span><span class="s1">&#39;ISO-8859-15 is also known as latin9.&#39;</span>
+</pre></div>
+</div>
+<p>In some rare cases the Python encoding names differ from the names supported by the HTTP specification. Then, you have to do both: first set the <code class="xref py py-attr docutils literal"><span class="pre">Response.content_type</span></code> header (which is sent to the client unchanged) and then set the <code class="xref py py-attr docutils literal"><span class="pre">Response.charset</span></code> attribute (which is used to encode unicode).</p>
+<div class="section" id="static-files">
+<span id="tutorial-static-files"></span><h3>Static Files<a class="headerlink" href="#static-files" title="Permalink to this headline">¶</a></h3>
+<p>You can directly return file objects, but <code class="xref py py-func docutils literal"><span class="pre">static_file()</span></code> is the recommended way to serve static files. It automatically guesses a mime-type, adds a <code class="docutils literal"><span class="pre">Last-Modified</span></code> header, restricts paths to a <code class="docutils literal"><span class="pre">root</span></code> directory for security reasons and generates appropriate error responses (403 on permission errors, 404 on missing files). It even supports the <code class="docutils literal"><span class="pre">If-Modified-Since</span></code> header and eventually generates a <code class="docutils literal"><span class="pre">304</span> <span class="pre">Not</span> <span class="pre">Modified</span></code> response. You can pass a custom MIME type to disable guessing.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bottle</span> <span class="k">import</span> <span class="n">static_file</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/images/&lt;filename:re:.*\.png&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">send_image</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<span class="k">return</span> <span class="n">static_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="s1">&#39;/path/to/image/files&#39;</span><span class="p">,</span> <span class="n">mimetype</span><span class="o">=</span><span class="s1">&#39;image/png&#39;</span><span class="p">)</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/static/&lt;filename:path&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">sendstatic</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<span class="k">return</span> <span class="n">static_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="s1">&#39;/path/to/static/files&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can raise the return value of <code class="xref py py-func docutils literal"><span class="pre">static_file()</span></code> as an exception if you really need to.</p>
+<p class="rubric">Forced Download</p>
+<p>Most browsers try to open downloaded files if the MIME type is known and assigned to an application (e.g. PDF files). If this is not what you want, you can force a download dialog and even suggest a filename to the user:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/download/&lt;filename:path&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">download</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+<span class="k">return</span> <span class="n">static_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="s1">&#39;/path/to/static/files&#39;</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="n">filename</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If the <code class="docutils literal"><span class="pre">download</span></code> parameter is just <code class="docutils literal"><span class="pre">True</span></code>, the original filename is used.</p>
+</div>
+<div class="section" id="http-errors-and-redirects">
+<span id="tutorial-error"></span><h3>HTTP Errors and Redirects<a class="headerlink" href="#http-errors-and-redirects" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="xref py py-func docutils literal"><span class="pre">abort()</span></code> function is a shortcut for generating HTTP error pages.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bottle</span> <span class="k">import</span> <span class="n">route</span><span class="p">,</span> <span class="n">abort</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/restricted&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">restricted</span><span class="p">():</span>
+<span class="n">abort</span><span class="p">(</span><span class="mi">401</span><span class="p">,</span> <span class="s2">&quot;Sorry, access denied.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To redirect a client to a different URL, you can send a <code class="docutils literal"><span class="pre">303</span> <span class="pre">See</span> <span class="pre">Other</span></code> response with the <code class="docutils literal"><span class="pre">Location</span></code> header set to the new URL. <code class="xref py py-func docutils literal"><span class="pre">redirect()</span></code> does that for you:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bottle</span> <span class="k">import</span> <span class="n">redirect</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/wrong/url&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">wrong</span><span class="p">():</span>
+<span class="n">redirect</span><span class="p">(</span><span class="s2">&quot;/right/url&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You may provide a different HTTP status code as a second parameter.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Both functions will interrupt your callback code by raising an <code class="xref py py-exc docutils literal"><span class="pre">HTTPError</span></code> exception.</p>
+</div>
+<p class="rubric">Other Exceptions</p>
+<p>All exceptions other than <code class="xref py py-exc docutils literal"><span class="pre">HTTPResponse</span></code> or <code class="xref py py-exc docutils literal"><span class="pre">HTTPError</span></code> will result in a <code class="docutils literal"><span class="pre">500</span> <span class="pre">Internal</span> <span class="pre">Server</span> <span class="pre">Error</span></code> response, so they won&#8217;t crash your WSGI server. You can turn off this behavior to handle exceptions in your middleware by setting <code class="docutils literal"><span class="pre">bottle.app().catchall</span></code> to <code class="docutils literal"><span class="pre">False</span></code>.</p>
+</div>
+<div class="section" id="the-response-object">
+<span id="tutorial-response"></span><h3>The <code class="xref py py-class docutils literal"><span class="pre">Response</span></code> Object<a class="headerlink" href="#the-response-object" title="Permalink to this headline">¶</a></h3>
+<p>Response metadata such as the HTTP status code, response headers and cookies are stored in an object called <code class="xref py py-data docutils literal"><span class="pre">response</span></code> up to the point where they are transmitted to the browser. You can manipulate these metadata directly or use the predefined helper methods to do so. The full API and feature list is described in the API section (see <code class="xref py py-class docutils literal"><span class="pre">Response</span></code>), but the most common use cases and features are covered here, too.</p>
+<p class="rubric">Status Code</p>
+<p>The <a class="reference external" href="http_code">HTTP status code</a> controls the behavior of the browser and defaults to <code class="docutils literal"><span class="pre">200</span> <span class="pre">OK</span></code>. In most scenarios you won&#8217;t need to set the <code class="xref py py-attr docutils literal"><span class="pre">Response.status</span></code> attribute manually, but use the <code class="xref py py-func docutils literal"><span class="pre">abort()</span></code> helper or return an <code class="xref py py-exc docutils literal"><span class="pre">HTTPResponse</span></code> instance with the appropriate status code. Any integer is allowed, but codes other than the ones defined by the <a class="reference external" href="http_code">HTTP specification</a> will only confuse the browser and break standards.</p>
+<p class="rubric">Response Header</p>
+<p>Response headers such as <code class="docutils literal"><span class="pre">Cache-Control</span></code> or <code class="docutils literal"><span class="pre">Location</span></code> are defined via <code class="xref py py-meth docutils literal"><span class="pre">Response.set_header()</span></code>. This method takes two parameters, a header name and a value. The name part is case-insensitive:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/wiki/&lt;page&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">wiki</span><span class="p">(</span><span class="n">page</span><span class="p">):</span>
+<span class="n">response</span><span class="o">.</span><span class="n">set_header</span><span class="p">(</span><span class="s1">&#39;Content-Language&#39;</span><span class="p">,</span> <span class="s1">&#39;en&#39;</span><span class="p">)</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>Most headers are unique, meaning that only one header per name is send to the client. Some special headers however are allowed to appear more than once in a response. To add an additional header, use <code class="xref py py-meth docutils literal"><span class="pre">Response.add_header()</span></code> instead of <code class="xref py py-meth docutils literal"><span class="pre">Response.set_header()</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">response</span><span class="o">.</span><span class="n">set_header</span><span class="p">(</span><span class="s1">&#39;Set-Cookie&#39;</span><span class="p">,</span> <span class="s1">&#39;name=value&#39;</span><span class="p">)</span>
+<span class="n">response</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s1">&#39;Set-Cookie&#39;</span><span class="p">,</span> <span class="s1">&#39;name2=value2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Please note that this is just an example. If you want to work with cookies, read <a class="reference internal" href="#tutorial-cookies"><span class="std std-ref">ahead</span></a>.</p>
+</div>
+<div class="section" id="cookies">
+<span id="tutorial-cookies"></span><h3>Cookies<a class="headerlink" href="#cookies" title="Permalink to this headline">¶</a></h3>
+<p>A cookie is a named piece of text stored in the user&#8217;s browser profile. You can access previously defined cookies via <code class="xref py py-meth docutils literal"><span class="pre">Request.get_cookie()</span></code> and set new cookies with <code class="xref py py-meth docutils literal"><span class="pre">Response.set_cookie()</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/hello&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello_again</span><span class="p">():</span>
+<span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">get_cookie</span><span class="p">(</span><span class="s2">&quot;visited&quot;</span><span class="p">):</span>
+<span class="k">return</span> <span class="s2">&quot;Welcome back! Nice to see you again&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="n">response</span><span class="o">.</span><span class="n">set_cookie</span><span class="p">(</span><span class="s2">&quot;visited&quot;</span><span class="p">,</span> <span class="s2">&quot;yes&quot;</span><span class="p">)</span>
+<span class="k">return</span> <span class="s2">&quot;Hello there! Nice to meet you&quot;</span>
+</pre></div>
+</div>
+<p>The <code class="xref py py-meth docutils literal"><span class="pre">Response.set_cookie()</span></code> method accepts a number of additional keyword arguments that control the cookies lifetime and behavior. Some of the most common settings are described here:</p>
+<ul class="simple">
+<li><strong>max_age:</strong>    Maximum age in seconds. (default: <code class="docutils literal"><span class="pre">None</span></code>)</li>
+<li><strong>expires:</strong>    A datetime object or UNIX timestamp. (default: <code class="docutils literal"><span class="pre">None</span></code>)</li>
+<li><strong>domain:</strong>     The domain that is allowed to read the cookie. (default: current domain)</li>
+<li><strong>path:</strong>       Limit the cookie to a given path (default: <code class="docutils literal"><span class="pre">/</span></code>)</li>
+<li><strong>secure:</strong>     Limit the cookie to HTTPS connections (default: off).</li>
+<li><strong>httponly:</strong>   Prevent client-side javascript to read this cookie (default: off, requires Python 2.7 or newer).</li>
+<li><strong>same_site:</strong>  Disables third-party use for a cookie. Allowed attributes: <cite>lax</cite> and <cite>strict</cite>. In strict mode the cookie will never be sent. In lax mode the cookie is only sent with a top-level GET request.</li>
+</ul>
+<p>If neither <cite>expires</cite> nor <cite>max_age</cite> is set, the cookie expires at the end of the browser session or as soon as the browser window is closed. There are some other gotchas you should consider when using cookies:</p>
+<ul class="simple">
+<li>Cookies are limited to 4 KB of text in most browsers.</li>
+<li>Some users configure their browsers to not accept cookies at all. Most search engines ignore cookies too. Make sure that your application still works without cookies.</li>
+<li>Cookies are stored at client side and are not encrypted in any way. Whatever you store in a cookie, the user can read it. Worse than that, an attacker might be able to steal a user&#8217;s cookies through <a class="reference external" href="http://en.wikipedia.org/wiki/HTTP_cookie#Cookie_theft_and_session_hijacking">XSS</a> vulnerabilities on your side. Some viruses are known to read the browser cookies, too. Thus, never store confidential information in cookies.</li>
+<li>Cookies are easily forged by malicious clients. Do not trust cookies.</li>
+</ul>
+<p class="rubric" id="tutorial-signed-cookies">Signed Cookies</p>
+<p>As mentioned above, cookies are easily forged by malicious clients. Bottle can cryptographically sign your cookies to prevent this kind of manipulation. All you have to do is to provide a signature key via the <cite>secret</cite> keyword argument whenever you read or set a cookie and keep that key a secret. As a result, <code class="xref py py-meth docutils literal"><span class="pre">Request.get_cookie()</span></code> will return <code class="docutils literal"><span class="pre">None</span></code> if the cookie is not signed or the signature keys don&#8217;t match:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/login&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">do_login</span><span class="p">():</span>
+<span class="n">username</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">forms</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">)</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">forms</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">check_login</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+<span class="n">response</span><span class="o">.</span><span class="n">set_cookie</span><span class="p">(</span><span class="s2">&quot;account&quot;</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">secret</span><span class="o">=</span><span class="s1">&#39;some-secret-key&#39;</span><span class="p">)</span>
+<span class="k">return</span> <span class="n">template</span><span class="p">(</span><span class="s2">&quot;&lt;p&gt;Welcome {{name}}! You are now logged in.&lt;/p&gt;&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">username</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="k">return</span> <span class="s2">&quot;&lt;p&gt;Login failed.&lt;/p&gt;&quot;</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/restricted&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">restricted_area</span><span class="p">():</span>
+<span class="n">username</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">get_cookie</span><span class="p">(</span><span class="s2">&quot;account&quot;</span><span class="p">,</span> <span class="n">secret</span><span class="o">=</span><span class="s1">&#39;some-secret-key&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">username</span><span class="p">:</span>
+<span class="k">return</span> <span class="n">template</span><span class="p">(</span><span class="s2">&quot;Hello {{name}}. Welcome back.&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">username</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="k">return</span> <span class="s2">&quot;You are not logged in. Access denied.&quot;</span>
+</pre></div>
+</div>
+<p>In addition, Bottle automatically pickles and unpickles any data stored to signed cookies. This allows you to store any pickle-able object (not only strings) to cookies, as long as the pickled data does not exceed the 4 KB limit.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Signed cookies are not encrypted (the client can still see the content) and not copy-protected (the client can restore an old cookie). The main intention is to make pickling and unpickling safe and prevent manipulation, not to store secret information at client side.</p>
+</div>
+</div>
+</div>
+<div class="section" id="request-data">
+<span id="tutorial-request"></span><h2>Request Data<a class="headerlink" href="#request-data" title="Permalink to this headline">¶</a></h2>
+<p>Cookies, HTTP header, HTML <code class="docutils literal"><span class="pre">&lt;form&gt;</span></code> fields and other request data is available through the global <code class="xref py py-data docutils literal"><span class="pre">request</span></code> object. This special object always refers to the <em>current</em> request, even in multi-threaded environments where multiple client connections are handled at the same time:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bottle</span> <span class="k">import</span> <span class="n">request</span><span class="p">,</span> <span class="n">route</span><span class="p">,</span> <span class="n">template</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/hello&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">cookies</span><span class="o">.</span><span class="n">username</span> <span class="ow">or</span> <span class="s1">&#39;Guest&#39;</span>
+<span class="k">return</span> <span class="n">template</span><span class="p">(</span><span class="s1">&#39;Hello {{name}}&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="xref py py-data docutils literal"><span class="pre">request</span></code> object is a subclass of <code class="xref py py-class docutils literal"><span class="pre">BaseRequest</span></code> and has a very rich API to access data. We only cover the most commonly used features here, but it should be enough to get started.</p>
+<div class="section" id="introducing-formsdict">
+<h3>Introducing <code class="xref py py-class docutils literal"><span class="pre">FormsDict</span></code><a class="headerlink" href="#introducing-formsdict" title="Permalink to this headline">¶</a></h3>
+<p>Bottle uses a special type of dictionary to store form data and cookies. <code class="xref py py-class docutils literal"><span class="pre">FormsDict</span></code> behaves like a normal dictionary, but has some additional features to make your life easier.</p>
+<p><strong>Attribute access</strong>: All values in the dictionary are also accessible as attributes. These virtual attributes return unicode strings, even if the value is missing or unicode decoding fails. In that case, the string is empty, but still present:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">cookies</span><span class="o">.</span><span class="n">name</span>
+<span class="c1"># is a shortcut for:</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">cookies</span><span class="o">.</span><span class="n">getunicode</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span> <span class="c1"># encoding=&#39;utf-8&#39; (default)</span>
+<span class="c1"># which basically does this:</span>
+<span class="k">try</span><span class="p">:</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">cookies</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">UnicodeError</span><span class="p">:</span>
+<span class="n">name</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+<p><strong>Multiple values per key:</strong> <code class="xref py py-class docutils literal"><span class="pre">FormsDict</span></code> is a subclass of <code class="xref py py-class docutils literal"><span class="pre">MultiDict</span></code> and can store more than one value per key. The standard dictionary access methods will only return a single value, but the <code class="xref py py-meth docutils literal"><span class="pre">getall()</span></code> method returns a (possibly empty) list of all values for a specific key:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">choice</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">forms</span><span class="o">.</span><span class="n">getall</span><span class="p">(</span><span class="s1">&#39;multiple_choice&#39;</span><span class="p">):</span>
+<span class="n">do_something</span><span class="p">(</span><span class="n">choice</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>WTForms support:</strong> Some libraries (e.g. <a class="reference external" href="http://wtforms.simplecodes.com/">WTForms</a>) want all-unicode dictionaries as input. <code class="xref py py-meth docutils literal"><span class="pre">FormsDict.decode()</span></code> does that for you. It decodes all values and returns a copy of itself, while preserving multiple values per key and all the other features.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>In <strong>Python 2</strong> all keys and values are byte-strings. If you need unicode, you can call <code class="xref py py-meth docutils literal"><span class="pre">FormsDict.getunicode()</span></code> or fetch values via attribute access. Both methods try to decode the string (default: utf8) and return an empty string if that fails. No need to catch <code class="xref py py-exc docutils literal"><span class="pre">UnicodeError</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">request</span><span class="o">.</span><span class="n">query</span><span class="p">[</span><span class="s1">&#39;city&#39;</span><span class="p">]</span>
+<span class="go">&#39;G\xc3\xb6ttingen&#39;  # A utf8 byte string</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">request</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">city</span>
+<span class="go">u&#39;Göttingen&#39;        # The same string as unicode</span>
+</pre></div>
+</div>
+<p>In <strong>Python 3</strong> all strings are unicode, but HTTP is a byte-based wire protocol. The server has to decode the byte strings somehow before they are passed to the application. To be on the safe side, WSGI suggests ISO-8859-1 (aka latin1), a reversible single-byte codec that can be re-encoded with a different encoding later. Bottle does that for <code class="xref py py-meth docutils literal"><span class="pre">FormsDict.getunicode()</span></code> and attribute access, but not for the dict-access methods. These return the unchanged values as provided by the server implementation, which is probably not what you want.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">request</span><span class="o">.</span><span class="n">query</span><span class="p">[</span><span class="s1">&#39;city&#39;</span><span class="p">]</span>
+<span class="go">&#39;GÃ¶ttingen&#39; # An utf8 string provisionally decoded as ISO-8859-1 by the server</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">request</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">city</span>
+<span class="go">&#39;Göttingen&#39;  # The same string correctly re-encoded as utf8 by bottle</span>
+</pre></div>
+</div>
+<p class="last">If you need the whole dictionary with correctly decoded values (e.g. for WTForms), you can call <code class="xref py py-meth docutils literal"><span class="pre">FormsDict.decode()</span></code> to get a re-encoded copy.</p>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>Cookies<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Cookies are small pieces of text stored in the clients browser and sent back to the server with each request. They are useful to keep some state around for more than one request (HTTP itself is stateless), but should not be used for security related stuff. They can be easily forged by the client.</p>
+<p>All cookies sent by the client are available through <code class="xref py py-attr docutils literal"><span class="pre">BaseRequest.cookies</span></code> (a <code class="xref py py-class docutils literal"><span class="pre">FormsDict</span></code>). This example shows a simple cookie-based view counter:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bottle</span> <span class="k">import</span> <span class="n">route</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/counter&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">counter</span><span class="p">():</span>
+<span class="n">count</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span> <span class="n">request</span><span class="o">.</span><span class="n">cookies</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;counter&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="n">response</span><span class="o">.</span><span class="n">set_cookie</span><span class="p">(</span><span class="s1">&#39;counter&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">count</span><span class="p">))</span>
+<span class="k">return</span> <span class="s1">&#39;You visited this page </span><span class="si">%d</span><span class="s1"> times&#39;</span> <span class="o">%</span> <span class="n">count</span>
+</pre></div>
+</div>
+<p>The <code class="xref py py-meth docutils literal"><span class="pre">BaseRequest.get_cookie()</span></code> method is a different way do access cookies. It supports decoding <a class="reference internal" href="#tutorial-signed-cookies"><span class="std std-ref">signed cookies</span></a> as described in a separate section.</p>
+</div>
+<div class="section" id="http-headers">
+<h3>HTTP Headers<a class="headerlink" href="#http-headers" title="Permalink to this headline">¶</a></h3>
+<p>All HTTP headers sent by the client (e.g. <code class="docutils literal"><span class="pre">Referer</span></code>, <code class="docutils literal"><span class="pre">Agent</span></code> or <code class="docutils literal"><span class="pre">Accept-Language</span></code>) are stored in a <code class="xref py py-class docutils literal"><span class="pre">WSGIHeaderDict</span></code> and accessible through the <code class="xref py py-attr docutils literal"><span class="pre">BaseRequest.headers</span></code> attribute. A <code class="xref py py-class docutils literal"><span class="pre">WSGIHeaderDict</span></code> is basically a dictionary with case-insensitive keys:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bottle</span> <span class="k">import</span> <span class="n">route</span><span class="p">,</span> <span class="n">request</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/is_ajax&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">is_ajax</span><span class="p">():</span>
+<span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;X-Requested-With&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;XMLHttpRequest&#39;</span><span class="p">:</span>
+<span class="k">return</span> <span class="s1">&#39;This is an AJAX request&#39;</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="k">return</span> <span class="s1">&#39;This is a normal request&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="query-variables">
+<h3>Query Variables<a class="headerlink" href="#query-variables" title="Permalink to this headline">¶</a></h3>
+<p>The query string (as in <code class="docutils literal"><span class="pre">/forum?id=1&amp;page=5</span></code>) is commonly used to transmit a small number of key/value pairs to the server. You can use the <code class="xref py py-attr docutils literal"><span class="pre">BaseRequest.query</span></code> attribute (a <code class="xref py py-class docutils literal"><span class="pre">FormsDict</span></code>) to access these values and the <code class="xref py py-attr docutils literal"><span class="pre">BaseRequest.query_string</span></code> attribute to get the whole string.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bottle</span> <span class="k">import</span> <span class="n">route</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">template</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/forum&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">display_forum</span><span class="p">():</span>
+<span class="n">forum_id</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">id</span>
+<span class="n">page</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">page</span> <span class="ow">or</span> <span class="s1">&#39;1&#39;</span>
+<span class="k">return</span> <span class="n">template</span><span class="p">(</span><span class="s1">&#39;Forum ID: {{id}} (page {{page}})&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">forum_id</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="n">page</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="html-form-handling">
+<h3>HTML <cite>&lt;form&gt;</cite> Handling<a class="headerlink" href="#html-form-handling" title="Permalink to this headline">¶</a></h3>
+<p>Let us start from the beginning. In HTML, a typical <code class="docutils literal"><span class="pre">&lt;form&gt;</span></code> looks something like this:</p>
+<div class="highlight-html"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;/login&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span><span class="p">&gt;</span>
+Username: <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;username&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="p">/&gt;</span>
+Password: <span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Login&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">action</span></code> attribute specifies the URL that will receive the form data. <code class="docutils literal"><span class="pre">method</span></code> defines the HTTP method to use (<code class="docutils literal"><span class="pre">GET</span></code> or <code class="docutils literal"><span class="pre">POST</span></code>). With <code class="docutils literal"><span class="pre">method=&quot;get&quot;</span></code> the form values are appended to the URL and available through <code class="xref py py-attr docutils literal"><span class="pre">BaseRequest.query</span></code> as described above. This is considered insecure and has other limitations, so we use <code class="docutils literal"><span class="pre">method=&quot;post&quot;</span></code> here. If in doubt, use <code class="docutils literal"><span class="pre">POST</span></code> forms.</p>
+<p>Form fields transmitted via <code class="docutils literal"><span class="pre">POST</span></code> are stored in <code class="xref py py-attr docutils literal"><span class="pre">BaseRequest.forms</span></code> as a <code class="xref py py-class docutils literal"><span class="pre">FormsDict</span></code>. The server side code may look like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bottle</span> <span class="k">import</span> <span class="n">route</span><span class="p">,</span> <span class="n">request</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/login&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">login</span><span class="p">():</span>
+<span class="k">return</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">        &lt;form action=&quot;/login&quot; method=&quot;post&quot;&gt;</span>
+<span class="s1">            Username: &lt;input name=&quot;username&quot; type=&quot;text&quot; /&gt;</span>
+<span class="s1">            Password: &lt;input name=&quot;password&quot; type=&quot;password&quot; /&gt;</span>
+<span class="s1">            &lt;input value=&quot;Login&quot; type=&quot;submit&quot; /&gt;</span>
+<span class="s1">        &lt;/form&gt;</span>
+<span class="s1">    &#39;&#39;&#39;</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/login&#39;</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;POST&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">do_login</span><span class="p">():</span>
+<span class="n">username</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">forms</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">)</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">forms</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">check_login</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+<span class="k">return</span> <span class="s2">&quot;&lt;p&gt;Your login information was correct.&lt;/p&gt;&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="k">return</span> <span class="s2">&quot;&lt;p&gt;Login failed.&lt;/p&gt;&quot;</span>
+</pre></div>
+</div>
+<p>There are several other attributes used to access form data. Some of them combine values from different sources for easier access. The following table should give you a decent overview.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="41%" />
+<col width="21%" />
+<col width="22%" />
+<col width="16%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute</th>
+<th class="head">GET Form fields</th>
+<th class="head">POST Form fields</th>
+<th class="head">File Uploads</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="xref py py-attr docutils literal"><span class="pre">BaseRequest.query</span></code></td>
+<td>yes</td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-attr docutils literal"><span class="pre">BaseRequest.forms</span></code></td>
+<td>no</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-attr docutils literal"><span class="pre">BaseRequest.files</span></code></td>
+<td>no</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-attr docutils literal"><span class="pre">BaseRequest.params</span></code></td>
+<td>yes</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-attr docutils literal"><span class="pre">BaseRequest.GET</span></code></td>
+<td>yes</td>
+<td>no</td>
+<td>no</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-attr docutils literal"><span class="pre">BaseRequest.POST</span></code></td>
+<td>no</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="file-uploads">
+<h3>File uploads<a class="headerlink" href="#file-uploads" title="Permalink to this headline">¶</a></h3>
+<p>To support file uploads, we have to change the <code class="docutils literal"><span class="pre">&lt;form&gt;</span></code> tag a bit. First, we tell the browser to encode the form data in a different way by adding an <code class="docutils literal"><span class="pre">enctype=&quot;multipart/form-data&quot;</span></code> attribute to the <code class="docutils literal"><span class="pre">&lt;form&gt;</span></code> tag. Then, we add <code class="docutils literal"><span class="pre">&lt;input</span> <span class="pre">type=&quot;file&quot;</span> <span class="pre">/&gt;</span></code> tags to allow the user to select a file. Here is an example:</p>
+<div class="highlight-html"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;/upload&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span> <span class="na">enctype</span><span class="o">=</span><span class="s">&quot;multipart/form-data&quot;</span><span class="p">&gt;</span>
+Category:      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;category&quot;</span> <span class="p">/&gt;</span>
+Select a file: <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;file&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;upload&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Start upload&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Bottle stores file uploads in <code class="xref py py-attr docutils literal"><span class="pre">BaseRequest.files</span></code> as <code class="xref py py-class docutils literal"><span class="pre">FileUpload</span></code> instances, along with some metadata about the upload. Let us assume you just want to save the file to disk:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/upload&#39;</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;POST&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">do_upload</span><span class="p">():</span>
+<span class="n">category</span>   <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">forms</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span>
+<span class="n">upload</span>     <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">files</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;upload&#39;</span><span class="p">)</span>
+<span class="n">name</span><span class="p">,</span> <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">upload</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">ext</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;.png&#39;</span><span class="p">,</span><span class="s1">&#39;.jpg&#39;</span><span class="p">,</span><span class="s1">&#39;.jpeg&#39;</span><span class="p">):</span>
+<span class="k">return</span> <span class="s1">&#39;File extension not allowed.&#39;</span>
+<span class="n">save_path</span> <span class="o">=</span> <span class="n">get_save_path_for_category</span><span class="p">(</span><span class="n">category</span><span class="p">)</span>
+<span class="n">upload</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">save_path</span><span class="p">)</span> <span class="c1"># appends upload.filename automatically</span>
+<span class="k">return</span> <span class="s1">&#39;OK&#39;</span>
+</pre></div>
+</div>
+<p><code class="xref py py-attr docutils literal"><span class="pre">FileUpload.filename</span></code> contains the name of the file on the clients file system, but is cleaned up and normalized to prevent bugs caused by unsupported characters or path segments in the filename. If you need the unmodified name as sent by the client, have a look at <code class="xref py py-attr docutils literal"><span class="pre">FileUpload.raw_filename</span></code>.</p>
+<p>The <code class="xref py py-attr docutils literal"><span class="pre">FileUpload.save</span></code> method is highly recommended if you want to store the file to disk. It prevents some common errors (e.g. it does not overwrite existing files unless you tell it to) and stores the file in a memory efficient way. You can access the file object directly via <code class="xref py py-attr docutils literal"><span class="pre">FileUpload.file</span></code>. Just be careful.</p>
+</div>
+<div class="section" id="json-content">
+<h3>JSON Content<a class="headerlink" href="#json-content" title="Permalink to this headline">¶</a></h3>
+<p>Some JavaScript or REST clients send <code class="docutils literal"><span class="pre">application/json</span></code> content to the server. The <code class="xref py py-attr docutils literal"><span class="pre">BaseRequest.json</span></code> attribute contains the parsed data structure, if available.</p>
+</div>
+<div class="section" id="the-raw-request-body">
+<h3>The raw request body<a class="headerlink" href="#the-raw-request-body" title="Permalink to this headline">¶</a></h3>
+<p>You can access the raw body data as a file-like object via <code class="xref py py-attr docutils literal"><span class="pre">BaseRequest.body</span></code>. This is a <code class="xref py py-class docutils literal"><span class="pre">BytesIO</span></code> buffer or a temporary file depending on the content length and <code class="xref py py-attr docutils literal"><span class="pre">BaseRequest.MEMFILE_MAX</span></code> setting. In both cases the body is completely buffered before you can access the attribute. If you expect huge amounts of data and want to get direct unbuffered access to the stream, have a look at <code class="docutils literal"><span class="pre">request['wsgi.input']</span></code>.</p>
+</div>
+<div class="section" id="wsgi-environment">
+<h3>WSGI Environment<a class="headerlink" href="#wsgi-environment" title="Permalink to this headline">¶</a></h3>
+<p>Each <code class="xref py py-class docutils literal"><span class="pre">BaseRequest</span></code> instance wraps a WSGI environment dictionary. The original is stored in <code class="xref py py-attr docutils literal"><span class="pre">BaseRequest.environ</span></code>, but the request object itself behaves like a dictionary, too. Most of the interesting data is exposed through special methods or attributes, but if you want to access <a class="reference external" href="WSGIspecification">WSGI environ variables</a> directly, you can do so:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/my_ip&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">show_ip</span><span class="p">():</span>
+<span class="n">ip</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;REMOTE_ADDR&#39;</span><span class="p">)</span>
+<span class="c1"># or ip = request.get(&#39;REMOTE_ADDR&#39;)</span>
+<span class="c1"># or ip = request[&#39;REMOTE_ADDR&#39;]</span>
+<span class="k">return</span> <span class="n">template</span><span class="p">(</span><span class="s2">&quot;Your IP is: {{ip}}&quot;</span><span class="p">,</span> <span class="n">ip</span><span class="o">=</span><span class="n">ip</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="templates">
+<span id="tutorial-templates"></span><h2>Templates<a class="headerlink" href="#templates" title="Permalink to this headline">¶</a></h2>
+<p>Bottle comes with a fast and powerful built-in template engine called <span class="xref doc">stpl</span>. To render a template you can use the <code class="xref py py-func docutils literal"><span class="pre">template()</span></code> function or the <code class="xref py py-func docutils literal"><span class="pre">view()</span></code> decorator. All you have to do is to provide the name of the template and the variables you want to pass to the template as keyword arguments. Here’s a simple example of how to render a template:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/hello&#39;</span><span class="p">)</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/hello/&lt;name&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;World&#39;</span><span class="p">):</span>
+<span class="k">return</span> <span class="n">template</span><span class="p">(</span><span class="s1">&#39;hello_template&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This will load the template file <code class="docutils literal"><span class="pre">hello_template.tpl</span></code> and render it with the <code class="docutils literal"><span class="pre">name</span></code> variable set. Bottle will look for templates in the <code class="docutils literal"><span class="pre">./views/</span></code> folder or any folder specified in the <code class="docutils literal"><span class="pre">bottle.TEMPLATE_PATH</span></code> list.</p>
+<p>The <code class="xref py py-func docutils literal"><span class="pre">view()</span></code> decorator allows you to return a dictionary with the template variables instead of calling <code class="xref py py-func docutils literal"><span class="pre">template()</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/hello&#39;</span><span class="p">)</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/hello/&lt;name&gt;&#39;</span><span class="p">)</span>
+<span class="nd">@view</span><span class="p">(</span><span class="s1">&#39;hello_template&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;World&#39;</span><span class="p">):</span>
+<span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="rubric">Syntax</p>
+<p>The template syntax is a very thin layer around the Python language. Its main purpose is to ensure correct indentation of blocks, so you can format your template without worrying about indentation. Follow the link for a full syntax description: <span class="xref doc">stpl</span></p>
+<p>Here is an example template:</p>
+<div class="highlight-html+django"><div class="highlight"><pre><span></span>%if name == &#39;World&#39;:
+<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello <span class="cp">{{</span><span class="nv">name</span><span class="cp">}}</span>!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is a test.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+%else:
+<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello <span class="cp">{{</span><span class="nv">name.title</span><span class="o">()</span><span class="cp">}}</span>!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>How are you?<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+%end
+</pre></div>
+</div>
+<p class="rubric">Caching</p>
+<p>Templates are cached in memory after compilation. Modifications made to the template files will have no affect until you clear the template cache. Call <code class="docutils literal"><span class="pre">bottle.TEMPLATES.clear()</span></code> to do so. Caching is disabled in debug mode.</p>
+</div>
+<div class="section" id="plugins">
+<span id="id4"></span><h2>Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.9.</span></p>
+</div>
+<p>Bottle&#8217;s core features cover most common use-cases, but as a micro-framework it has its limits. This is where &#8220;Plugins" come into play. Plugins add missing functionality to the framework, integrate third party libraries, or just automate some repetitive work.</p>
+<p>We have a growing <span class="xref doc">/plugins/index</span> and most plugins are designed to be portable and re-usable across applications. The chances are high that your problem has already been solved and a ready-to-use plugin exists. If not, the <span class="xref doc">/plugindev</span> may help you.</p>
+<p>The effects and APIs of plugins are manifold and depend on the specific plugin. The <code class="docutils literal"><span class="pre">SQLitePlugin</span></code> plugin for example detects callbacks that require a <code class="docutils literal"><span class="pre">db</span></code> keyword argument and creates a fresh database connection object every time the callback is called. This makes it very convenient to use a database:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bottle</span> <span class="kn">import</span> <span class="n">route</span><span class="p">,</span> <span class="n">install</span><span class="p">,</span> <span class="n">template</span>
+<span class="kn">from</span> <span class="nn">bottle_sqlite</span> <span class="kn">import</span> <span class="n">SQLitePlugin</span>
+<span class="n">install</span><span class="p">(</span><span class="n">SQLitePlugin</span><span class="p">(</span><span class="n">dbfile</span><span class="o">=</span><span class="s1">&#39;/tmp/test.db&#39;</span><span class="p">))</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/show/&lt;post_id:int&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="n">db</span><span class="p">,</span> <span class="n">post_id</span><span class="p">):</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;SELECT title, content FROM posts WHERE id = ?&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">post_id</span><span class="p">,))</span>
+<span class="n">row</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+<span class="k">return</span> <span class="n">template</span><span class="p">(</span><span class="s1">&#39;show_post&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">],</span> <span class="n">text</span><span class="o">=</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;content&#39;</span><span class="p">])</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/contact&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">contact_page</span><span class="p">():</span>
+<span class="sd">&#39;&#39;&#39; This callback does not need a db connection. Because the &#39;db&#39;</span>
+<span class="sd">        keyword argument is missing, the sqlite plugin ignores this callback</span>
+<span class="sd">        completely. &#39;&#39;&#39;</span>
+<span class="k">return</span> <span class="n">template</span><span class="p">(</span><span class="s1">&#39;contact&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Other plugin may populate the thread-safe <code class="xref py py-data docutils literal"><span class="pre">local</span></code> object, change details of the <code class="xref py py-data docutils literal"><span class="pre">request</span></code> object, filter the data returned by the callback or bypass the callback completely. An &#8220;auth" plugin for example could check for a valid session and return a login page instead of calling the original callback. What happens exactly depends on the plugin.</p>
+<div class="section" id="application-wide-installation">
+<h3>Application-wide Installation<a class="headerlink" href="#application-wide-installation" title="Permalink to this headline">¶</a></h3>
+<p>Plugins can be installed application-wide or just to some specific routes that need additional functionality. Most plugins can safely be installed to all routes and are smart enough to not add overhead to callbacks that do not need their functionality.</p>
+<p>Let us take the <code class="docutils literal"><span class="pre">SQLitePlugin</span></code> plugin for example. It only affects route callbacks that need a database connection. Other routes are left alone. Because of this, we can install the plugin application-wide with no additional overhead.</p>
+<p>To install a plugin, just call <code class="xref py py-func docutils literal"><span class="pre">install()</span></code> with the plugin as first argument:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bottle_sqlite</span> <span class="kn">import</span> <span class="n">SQLitePlugin</span>
+<span class="n">install</span><span class="p">(</span><span class="n">SQLitePlugin</span><span class="p">(</span><span class="n">dbfile</span><span class="o">=</span><span class="s1">&#39;/tmp/test.db&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The plugin is not applied to the route callbacks yet. This is delayed to make sure no routes are missed. You can install plugins first and add routes later, if you want to. The order of installed plugins is significant, though. If a plugin requires a database connection, you need to install the database plugin first.</p>
+<p class="rubric">Uninstall Plugins</p>
+<p>You can use a name, class or instance to <code class="xref py py-func docutils literal"><span class="pre">uninstall()</span></code> a previously installed plugin:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sqlite_plugin</span> <span class="o">=</span> <span class="n">SQLitePlugin</span><span class="p">(</span><span class="n">dbfile</span><span class="o">=</span><span class="s1">&#39;/tmp/test.db&#39;</span><span class="p">)</span>
+<span class="n">install</span><span class="p">(</span><span class="n">sqlite_plugin</span><span class="p">)</span>
+<span class="n">uninstall</span><span class="p">(</span><span class="n">sqlite_plugin</span><span class="p">)</span> <span class="c1"># uninstall a specific plugin</span>
+<span class="n">uninstall</span><span class="p">(</span><span class="n">SQLitePlugin</span><span class="p">)</span>  <span class="c1"># uninstall all plugins of that type</span>
+<span class="n">uninstall</span><span class="p">(</span><span class="s1">&#39;sqlite&#39;</span><span class="p">)</span>      <span class="c1"># uninstall all plugins with that name</span>
+<span class="n">uninstall</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>          <span class="c1"># uninstall all plugins at once</span>
+</pre></div>
+</div>
+<p>Plugins can be installed and removed at any time, even at runtime while serving requests. This enables some neat tricks (installing slow debugging or profiling plugins only when needed) but should not be overused. Each time the list of plugins changes, the route cache is flushed and all plugins are re-applied.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The module-level <code class="xref py py-func docutils literal"><span class="pre">install()</span></code> and <code class="xref py py-func docutils literal"><span class="pre">uninstall()</span></code> functions affect the <a class="reference internal" href="#default-app"><span class="std std-ref">Default Application</span></a>. To manage plugins for a specific application, use the corresponding methods on the <code class="xref py py-class docutils literal"><span class="pre">Bottle</span></code> application object.</p>
+</div>
+</div>
+<div class="section" id="route-specific-installation">
+<h3>Route-specific Installation<a class="headerlink" href="#route-specific-installation" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal"><span class="pre">apply</span></code> parameter of the <code class="xref py py-func docutils literal"><span class="pre">route()</span></code> decorator comes in handy if you want to install plugins to only a small number of routes:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sqlite_plugin</span> <span class="o">=</span> <span class="n">SQLitePlugin</span><span class="p">(</span><span class="n">dbfile</span><span class="o">=</span><span class="s1">&#39;/tmp/test.db&#39;</span><span class="p">)</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/create&#39;</span><span class="p">,</span> <span class="nb">apply</span><span class="o">=</span><span class="p">[</span><span class="n">sqlite_plugin</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="n">db</span><span class="p">):</span>
+<span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;INSERT INTO ...&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="blacklisting-plugins">
+<h3>Blacklisting Plugins<a class="headerlink" href="#blacklisting-plugins" title="Permalink to this headline">¶</a></h3>
+<p>You may want to explicitly disable a plugin for a number of routes. The <code class="xref py py-func docutils literal"><span class="pre">route()</span></code> decorator has a <code class="docutils literal"><span class="pre">skip</span></code> parameter for this purpose:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">sqlite_plugin</span> <span class="o">=</span> <span class="n">SQLitePlugin</span><span class="p">(</span><span class="n">dbfile</span><span class="o">=</span><span class="s1">&#39;/tmp/test1.db&#39;</span><span class="p">)</span>
+<span class="n">install</span><span class="p">(</span><span class="n">sqlite_plugin</span><span class="p">)</span>
+<span class="n">dbfile1</span> <span class="o">=</span> <span class="s1">&#39;/tmp/test1.db&#39;</span>
+<span class="n">dbfile2</span> <span class="o">=</span> <span class="s1">&#39;/tmp/test2.db&#39;</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/open/&lt;db&gt;&#39;</span><span class="p">,</span> <span class="n">skip</span><span class="o">=</span><span class="p">[</span><span class="n">sqlite_plugin</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">open_db</span><span class="p">(</span><span class="n">db</span><span class="p">):</span>
+<span class="c1"># The &#39;db&#39; keyword argument is not touched by the plugin this time.</span>
+<span class="c1"># The plugin handle can be used for runtime configuration, too.</span>
+<span class="k">if</span> <span class="n">db</span> <span class="o">==</span> <span class="s1">&#39;test1&#39;</span><span class="p">:</span>
+<span class="n">sqlite_plugin</span><span class="o">.</span><span class="n">dbfile</span> <span class="o">=</span> <span class="n">dbfile1</span>
+<span class="k">elif</span> <span class="n">db</span> <span class="o">==</span> <span class="s1">&#39;test2&#39;</span><span class="p">:</span>
+<span class="n">sqlite_plugin</span><span class="o">.</span><span class="n">dbfile</span> <span class="o">=</span> <span class="n">dbfile2</span>
+<span class="k">else</span><span class="p">:</span>
+<span class="n">abort</span><span class="p">(</span><span class="mi">404</span><span class="p">,</span> <span class="s2">&quot;No such database.&quot;</span><span class="p">)</span>
+<span class="k">return</span> <span class="s2">&quot;Database File switched to: &quot;</span> <span class="o">+</span> <span class="n">sqlite_plugin</span><span class="o">.</span><span class="n">dbfile</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">skip</span></code> parameter accepts a single value or a list of values. You can use a name, class or instance to identify the plugin that is to be skipped. Set <code class="docutils literal"><span class="pre">skip=True</span></code> to skip all plugins at once.</p>
+</div>
+<div class="section" id="plugins-and-sub-applications">
+<h3>Plugins and Sub-Applications<a class="headerlink" href="#plugins-and-sub-applications" title="Permalink to this headline">¶</a></h3>
+<p>Most plugins are specific to the application they were installed to. Consequently, they should not affect sub-applications mounted with <code class="xref py py-meth docutils literal"><span class="pre">Bottle.mount()</span></code>. Here is an example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">root</span> <span class="o">=</span> <span class="n">Bottle</span><span class="p">()</span>
+<span class="n">root</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/blog&#39;</span><span class="p">,</span> <span class="n">apps</span><span class="o">.</span><span class="n">blog</span><span class="p">)</span>
+<span class="nd">@root.route</span><span class="p">(</span><span class="s1">&#39;/contact&#39;</span><span class="p">,</span> <span class="n">template</span><span class="o">=</span><span class="s1">&#39;contact&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">contact</span><span class="p">():</span>
+<span class="k">return</span> <span class="p">{</span><span class="s1">&#39;email&#39;</span><span class="p">:</span> <span class="s1">&#39;contact@example.com&#39;</span><span class="p">}</span>
+<span class="n">root</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">plugins</span><span class="o">.</span><span class="n">WTForms</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Whenever you mount an application, Bottle creates a proxy-route on the main-application that forwards all requests to the sub-application. Plugins are disabled for this kind of proxy-route by default. As a result, our (fictional) <cite>WTForms</cite> plugin affects the <code class="docutils literal"><span class="pre">/contact</span></code> route, but does not affect the routes of the <code class="docutils literal"><span class="pre">/blog</span></code> sub-application.</p>
+<p>This behavior is intended as a sane default, but can be overridden. The following example re-activates all plugins for a specific proxy-route:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">root</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/blog&#39;</span><span class="p">,</span> <span class="n">apps</span><span class="o">.</span><span class="n">blog</span><span class="p">,</span> <span class="n">skip</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>But there is a snag: The plugin sees the whole sub-application as a single route, namely the proxy-route mentioned above. In order to affect each individual route of the sub-application, you have to install the plugin to the mounted application explicitly.</p>
+</div>
+</div>
+<div class="section" id="development">
+<h2>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h2>
+<p>So you have learned the basics and want to write your own application? Here are
+some tips that might help you being more productive.</p>
+<div class="section" id="default-application">
+<span id="default-app"></span><h3>Default Application<a class="headerlink" href="#default-application" title="Permalink to this headline">¶</a></h3>
+<p>Bottle maintains a global stack of <code class="xref py py-class docutils literal"><span class="pre">Bottle</span></code> instances and uses the top of the stack as a default for some of the module-level functions and decorators. The <code class="xref py py-func docutils literal"><span class="pre">route()</span></code> decorator, for example, is a shortcut for calling <code class="xref py py-meth docutils literal"><span class="pre">Bottle.route()</span></code> on the default application:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+<span class="k">return</span> <span class="s1">&#39;Hello World&#39;</span>
+<span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This is very convenient for small applications and saves you some typing, but also means that, as soon as your module is imported, routes are installed to the global default application. To avoid this kind of import side-effects, Bottle offers a second, more explicit way to build applications:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">app</span> <span class="o">=</span> <span class="n">Bottle</span><span class="p">()</span>
+<span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+<span class="k">return</span> <span class="s1">&#39;Hello World&#39;</span>
+<span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Separating the application object improves re-usability a lot, too. Other developers can safely import the <code class="docutils literal"><span class="pre">app</span></code> object from your module and use <code class="xref py py-meth docutils literal"><span class="pre">Bottle.mount()</span></code> to merge applications together.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.13.</span></p>
+</div>
+<p>Starting with bottle-0.13 you can use <code class="xref py py-class docutils literal"><span class="pre">Bottle</span></code> instances as context managers:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">app</span> <span class="o">=</span> <span class="n">Bottle</span><span class="p">()</span>
+<span class="k">with</span> <span class="n">app</span><span class="p">:</span>
+<span class="c1"># Our application object is now the default</span>
+<span class="c1"># for all shortcut functions and decorators</span>
+<span class="k">assert</span> <span class="n">my_app</span> <span class="ow">is</span> <span class="n">default_app</span><span class="p">()</span>
+<span class="nd">@route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+<span class="k">return</span> <span class="s1">&#39;Hello World&#39;</span>
+<span class="c1"># Also useful to capture routes defined in other modules</span>
+<span class="kn">import</span> <span class="nn">some_package.more_routes</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="debug-mode">
+<span id="tutorial-debugging"></span><h3>Debug Mode<a class="headerlink" href="#debug-mode" title="Permalink to this headline">¶</a></h3>
+<p>During early development, the debug mode can be very helpful.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">bottle</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this mode, Bottle is much more verbose and provides helpful debugging information whenever an error occurs. It also disables some optimisations that might get in your way and adds some checks that warn you about possible misconfiguration.</p>
+<p>Here is an incomplete list of things that change in debug mode:</p>
+<ul class="simple">
+<li>The default error page shows a traceback.</li>
+<li>Templates are not cached.</li>
+<li>Plugins are applied immediately.</li>
+</ul>
+<p>Just make sure not to use the debug mode on a production server.</p>
+</div>
+<div class="section" id="auto-reloading">
+<h3>Auto Reloading<a class="headerlink" href="#auto-reloading" title="Permalink to this headline">¶</a></h3>
+<p>During development, you have to restart the server a lot to test your
+recent changes. The auto reloader can do this for you. Every time you
+edit a module file, the reloader restarts the server process and loads
+the newest version of your code.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bottle</span> <span class="kn">import</span> <span class="n">run</span>
+<span class="n">run</span><span class="p">(</span><span class="n">reloader</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>How it works: the main process will not start a server, but spawn a new
+child process using the same command line arguments used to start the
+main process. All module-level code is executed at least twice! Be
+careful.</p>
+<p>The child process will have <code class="docutils literal"><span class="pre">os.environ['BOTTLE_CHILD']</span></code> set to <code class="docutils literal"><span class="pre">True</span></code>
+and start as a normal non-reloading app server. As soon as any of the
+loaded modules changes, the child process is terminated and re-spawned by
+the main process. Changes in template files will not trigger a reload.
+Please use debug mode to deactivate template caching.</p>
+<p>The reloading depends on the ability to stop the child process. If you are
+running on Windows or any other operating system not supporting
+<code class="docutils literal"><span class="pre">signal.SIGINT</span></code> (which raises <code class="docutils literal"><span class="pre">KeyboardInterrupt</span></code> in Python),
+<code class="docutils literal"><span class="pre">signal.SIGTERM</span></code> is used to kill the child. Note that exit handlers and
+finally clauses, etc., are not executed after a <code class="docutils literal"><span class="pre">SIGTERM</span></code>.</p>
+</div>
+<div class="section" id="command-line-interface">
+<h3>Command Line Interface<a class="headerlink" href="#command-line-interface" title="Permalink to this headline">¶</a></h3>
+<p>Starting with version 0.10 you can use bottle as a command-line tool:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> python -m bottle
+<span class="go">Usage: bottle.py [options] package.module:app</span>
+<span class="go">Options:</span>
+<span class="go">  -h, --help            show this help message and exit</span>
+<span class="go">  --version             show version number.</span>
+<span class="go">  -b ADDRESS, --bind=ADDRESS</span>
+<span class="go">                        bind socket to ADDRESS.</span>
+<span class="go">  -s SERVER, --server=SERVER</span>
+<span class="go">                        use SERVER as backend.</span>
+<span class="go">  -p PLUGIN, --plugin=PLUGIN</span>
+<span class="go">                        install additional plugin/s.</span>
+<span class="go">  -c FILE, --conf=FILE  load config values from FILE.</span>
+<span class="go">  -C NAME=VALUE, --param=NAME=VALUE</span>
+<span class="go">                        override config values.</span>
+<span class="go">  --debug               start server in debug mode.</span>
+<span class="go">  --reload              auto-reload on file changes.</span>
+</pre></div>
+</div>
+<p>The <cite>ADDRESS</cite> field takes an IP address or an IP:PORT pair and defaults to <code class="docutils literal"><span class="pre">localhost:8080</span></code>. The other parameters should be self-explanatory.</p>
+<p>Both plugins and applications are specified via import expressions. These consist of an import path (e.g. <code class="docutils literal"><span class="pre">package.module</span></code>) and an expression to be evaluated in the namespace of that module, separated by a colon. See <code class="xref py py-func docutils literal"><span class="pre">load()</span></code> for details. Here are some examples:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> Grab the <span class="s1">&#39;app&#39;</span> object from the <span class="s1">&#39;myapp.controller&#39;</span> module and
+<span class="gp">#</span> start a paste server on port <span class="m">80</span> on all interfaces.
+<span class="go">python -m bottle -server paste -bind 0.0.0.0:80 myapp.controller:app</span>
+<span class="gp">#</span> Start a self-reloading development server and serve the global
+<span class="gp">#</span> default application. The routes are defined in <span class="s1">&#39;test.py&#39;</span>
+<span class="go">python -m bottle --debug --reload test</span>
+<span class="gp">#</span> Install a custom debug plugin with some parameters
+<span class="go">python -m bottle --debug --reload --plugin &#39;utils:DebugPlugin(exc=True)&#39;&#39; test</span>
+<span class="gp">#</span> Serve an application that is created with <span class="s1">&#39;myapp.controller.make_app()&#39;</span>
+<span class="gp">#</span> on demand.
+<span class="go">python -m bottle &#39;myapp.controller:make_app()&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="deployment">
+<h2>Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline">¶</a></h2>
+<p>Bottle runs on the built-in <a class="reference external" href="http://docs.python.org/library/wsgiref.html#module-wsgiref.simple_server">wsgiref WSGIServer</a>  by default. This non-threading HTTP server is perfectly fine for development, but may become a performance bottleneck when server load increases.</p>
+<p>The easiest way to increase performance is to install a multi-threaded server library like <a href="#id7"><span class="problematic" id="id8">paste_</span></a> or <a href="#id9"><span class="problematic" id="id10">cherrypy_</span></a> and tell Bottle to use that instead of the single-threaded server:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">bottle</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">server</span><span class="o">=</span><span class="s1">&#39;paste&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This, and many other deployment options are described in a separate article: <span class="xref doc">deployment</span></p>
+</div>
+<div class="section" id="glossary">
+<span id="tutorial-glossary"></span><h2>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h2>
+<dl class="glossary docutils">
+<dt id="term-callback">callback</dt>
+<dd>Programmer code that is to be called when some external action happens.
+In the context of web frameworks, the mapping between URL paths and
+application code is often achieved by specifying a callback function
+for each URL.</dd>
+<dt id="term-decorator">decorator</dt>
+<dd>A function returning another function, usually applied as a function transformation using the <code class="docutils literal"><span class="pre">&#64;decorator</span></code> syntax. See <a class="reference external" href="http://docs.python.org/reference/compound_stmts.html#function">python documentation for function definition</a> for more about decorators.</dd>
+<dt id="term-environ">environ</dt>
+<dd>A structure where information about all documents under the root is
+saved, and used for cross-referencing.  The environment is pickled
+after the parsing stage, so that successive runs only need to read
+and parse new and changed documents.</dd>
+<dt id="term-handler-function">handler function</dt>
+<dd>A function to handle some specific event or situation. In a web
+framework, the application is developed by attaching a handler function
+as callback for each specific URL comprising the application.</dd>
+<dt id="term-source-directory">source directory</dt>
+<dd>The directory which, including its subdirectories, contains all
+source files for one Sphinx project.</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+</main>
+<div class="star-footer">
+<img onclick="openPurchase()" src="../static/star.jpg">
+<div id="praise"><span>0</span> persons have rewarded</div>
+</div>
+<div class="foo"></div>
+<footer class="clearfix fixfooter web-show">
+<div class="col-sm-offset-2 col-sm-6 footer-div1">
+<div class="footer-block-item">
+<span class="footer-item1">Built with Sphinx using a theme provid by QPython.</span>
+<span class="footer-item2 visible-xs">Copyight 2017, QPython.</span>
+</div>
+</div>
+<div class="col-sm-2 footer-div2">
+<a href="/index.html" class="pull-right"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+</footer>
+<script>
+var milib;
+if (milib==undefined) {
+var milib = function(){
+};
+milib.qeditor = function(str){
+alert('Please share this page to QPython then run it')
+};
+milib.getPurchaseNumber = function(str){
+//alert('getPurchaseNumber:'+str)
+return "10+";
+};
+milib.a8playVideoFromGW= function(url){
+window.open(url)
+};
+milib.qpylibinstall = function(cat,url,target){
+window.open(url)
+};
+milib.gotoIfPay = function(url, packageId, packageUrl){
+window.open(url)
+};
+} else {
+}
+function openPurchase() {
+//获取标识
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+milib.openPurchaseActivity(s)
+}
+//按钮事件
+function btnEvent(){
+var seq = this.getAttribute('target')-2
+var a = this.parentElement.getElementsByTagName('pre')
+if ( a && a.length > 0){
+/**********有代码，调用控制台*************/
+var code = a[seq].lastChild.nodeValue
+milib.qeditor(code)
+}else{
+//没有代码，调转
+var url = this.getAttribute('data-url');
+window.open(url);
+}
+}
+//获取赞赏
+function setPraise(){
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+var i = document.getElementById('praise').getElementsByTagName('span')[0]
+var num = milib.getPurchaseNumber(s);
+i.innerHTML = num
+}
+//初始化代码显示
+function initCode(){
+var prearr = document.getElementsByTagName('pre');
+for (var i = 0; i < prearr.length; i++) {
+var temp_data = prearr[i].lastChild.nodeValue
+//正则处理 lavel5
+temp_data = temp_data.replace(/\^2\$/g, spaceString(2));
+temp_data = temp_data.replace(/\^4\$/g, spaceString(4));
+temp_data = temp_data.replace(/\^6\$/g, spaceString(6));
+temp_data = temp_data.replace(/\^8\$/g, spaceString(8));
+temp_data = temp_data.replace(/\^10\$/g, spaceString(10));
+temp_data = temp_data.replace(/\^12\$/g, spaceString(12));
+temp_data = temp_data.replace(/\^16\$/g, spaceString(16));
+temp_data = temp_data.replace(/\^20\$/g, spaceString(20));
+//set
+prearr[i].lastChild.nodeValue = temp_data;
+}
+}
+//产生空格
+function spaceString(num){
+var v = ''
+for (var i = 0; i < num; i++) {
+v += ' ';
+}
+return v;
+}
+function setSearchHistory (t) {
+if (!t)
+return;
+if (localStorage.course_search_list) {
+var list = localStorage.course_search_list.split('%,%');
+var i = list.indexOf(t);
+if (i !== -1) {
+list.splice(i, 1);
+list.push(t);
+localStorage.course_search_list = list.join('%,%');
+}else {
+localStorage.course_search_list += '%,%'+t;
+}
+}else {
+localStorage.course_search_list = t;
+}
+}
+window.onload = function(){
+setPraise();
+initCode();
+//将所有的button绑定事件
+var b = document.getElementsByTagName('button');
+for (var i = 0; i < b.length; i++) {
+if (b[i].className=='button') {
+b[i].setAttribute('target', i)
+b[i].onclick = btnEvent ;
+}
+}
+}
+$(function(){
+var url = location.href.split('?');
+var arg = url[1];
+var args = arg.split('&');
+for (var i = 0; i < args.length; i++) {
+var c = args[i].split('=');
+if (c[0]=='form' && c[1] == 'web') {
+$('.web-show').css('display','block');
+$('.web-content').addClass('margin-header');
+}
+}
+})
+$(function() {
+$('form').submit(function() {
+setSearchHistory($("input[name='q']").val());
+})
+$('.bodywrapper .body form input').val("");
+$($('.bodywrapper .body form input')[0]).attr('placeholder', 'search');
+})
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-103260045-3', 'auto');
+ga('send', 'pageview');
+</script>
+</body>
+</html>

@@ -434,7 +434,7 @@
                 "downloads": "10,000+"
             },{
                 "rdate":"2017-12-05",
-                "link":"http://edu.qpython.org/dive-into-python/cn/the-use-of-modifier.html",
+                "link":"http://edu.qpython.org/dive-into-python/cn/useofmodifier.html",
                 "smodule":"dive-into-python-the-use-of-modifier",
                 "description":"修饰符的使用",
                 "title":"深入Python - 修饰符的使用",
@@ -594,7 +594,7 @@
         "title":"Python进阶 - Wego快速开始",
         "ver":"1.0.0",
         "downloads": "1,000+",
-        "cat":"new",
+        "cat":"featured",
         "level": 4,
         "logo": "http://edu.qpython.org/static/course-wego.png",
         "open": 0,
@@ -609,7 +609,7 @@
         "title":"Python进阶 - 区块链快速开始",
         "ver":"1.0.0",
         "downloads": "1,000+",
-        "cat":"new",
+        "cat":"featured",
         "level": 4,
         "logo": "http://edu.qpython.org/static/course-blockchain.png",
         "open": 0,
@@ -627,6 +627,51 @@
         "cat":"new",
         "level": 4,
         "logo": "http://edu.qpython.org/static/course-full-text-search.png",
+        "open": 0,
+        "courses":[
+        ]
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/vr/index.html",
+        "smodule":"full-text-search",
+        "description":"VR快速开始",
+        "title":"Python进阶 - VR快速开始",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"featured",
+        "level": 4,
+        "logo": "http://edu.qpython.org/static/course-vr.png",
+        "open": 0,
+        "courses":[
+        ]
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/ar/index.html",
+        "smodule":"full-text-search",
+        "description":"AR快速开始",
+        "title":"Python进阶 - AR快速开始",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"featured",
+        "level": 4,
+        "logo": "http://edu.qpython.org/static/course-ar.png",
+        "open": 0,
+        "courses":[
+        ]
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2017-09-15",
+        "link":"http://edu.qpython.org/unity3d/index.html",
+        "smodule":"full-text-search",
+        "description":"Unity 3D快速开始",
+        "title":"Python进阶 - Unity 3D快速开始",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"new",
+        "level": 4,
+        "logo": "http://edu.qpython.org/static/course-unit-3d.png",
         "open": 0,
         "courses":[
         ]
