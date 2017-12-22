@@ -335,6 +335,14 @@
         "logo": "http://edu.qpython.org/static/course-bottle.png",
         "open": 0,
         "courses":[
+            {
+                "rdate":"2017-06-15",
+                "link":"http://edu.qpython.org/bottle-web/tutorial.html",
+                "smodule":"bottle-web-tutorial",
+                "description":"Bottle Web Tutorial",
+                "title":"Bottle Web Tutorial",
+                "downloads": "10,000+"
+            }
         ]
     },{
         "src":"http://qpython.org",
