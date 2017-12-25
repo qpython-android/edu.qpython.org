@@ -448,6 +448,30 @@
                 "title":"深入Python - operator 模块",
                 "reward":"0",
                 "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/dive-into-python/cn/actionscope.html",
+                "smodule":"dive-into-python-operator",
+                "description":"作用域",
+                "title":"深入Python - 作用域",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/dive-into-python/cn/dynamiccompiling.html",
+                "smodule":"dive-into-python-operator",
+                "description":"动态编译",
+                "title":"深入Python - 动态编译",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/dive-into-python/cn/parameterpassing.html",
+                "smodule":"dive-into-python-operator",
+                "description":"函数进阶",
+                "title":"深入Python - 函数进阶",
+                "reward":"0",
+                "downloads": "10,000+"
             }
         ]
     },{
