@@ -81,7 +81,6 @@ SOURCELINK_SUFFIX: '.txt'
 <h2>Scipy<a class="headerlink" href="#scipy" title="Permalink to this headline">¶</a></h2>
 <p><strong>Scipy</strong> 由不同科学计算领域的子模块组成：</p>
 <p>在使用 <strong>Scipy</strong> 之前，为了方便，假定这些基础的模块已经被导入：</p>
-<p>In [1]:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
 <span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
@@ -89,18 +88,16 @@ SOURCELINK_SUFFIX: '.txt'
 </pre></div>
 </div>
 <p>使用 <strong>Scipy</strong> 中的子模块时，需要分别导入：</p>
-<p>In [2]:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="k">import</span> <span class="n">linalg</span><span class="p">,</span> <span class="n">optimize</span>
 </pre></div>
 </div>
 <p>对于一些常用的函数，这些在子模块中的函数可以在 <strong>scipy</strong> 命名空间中调用。另一方面，由于 <strong>Scipy</strong> 以 <strong>Numpy</strong> 为基础，因此很多基础的 Numpy 函数可以在scipy 命名空间中直接调用。</p>
 <p>我们可以使用 numpy 中的 info 函数来查看函数的文档：</p>
-<p>In [3]:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">optimize</span><span class="o">.</span><span class="n">fmin</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="highlight-default"><div class="highlight"><pre><span></span> fmin(func, x0, args=(), xtol=0.0001, ftol=0.0001, maxiter=None,     maxfun=None,
-full_output=0, disp=1, retall=0, callback=None)
+    full_output=0, disp=1, retall=0, callback=None)
 Minimize a function using the downhill simplex algorithm.
 This algorithm only uses function values, not derivatives or second
 derivatives.
@@ -166,7 +163,6 @@ Harlow, UK, pp. 191-208.
 </pre></div>
 </div>
 <p>可以用 lookfor 来查询特定关键词相关的函数：</p>
-<p>In [4]:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">lookfor</span><span class="p">(</span><span class="s2">&quot;resize array&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -188,7 +184,6 @@ Harlow, UK, pp. 191-208.
 <dd>warning</dd>
 </dl>
 <p>还可以指定查找的模块：</p>
-<p>In [5]:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">lookfor</span><span class="p">(</span><span class="s2">&quot;remove path&quot;</span><span class="p">,</span> <span class="n">module</span><span class="o">=</span><span class="s2">&quot;os&quot;</span><span class="p">)</span>
 </pre></div>
 </div>

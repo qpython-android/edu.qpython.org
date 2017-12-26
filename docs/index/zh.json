@@ -503,6 +503,23 @@
         "logo": "http://edu.qpython.org/static/course-scipy.png",
         "open": 0,
         "courses":[
+            {
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/aipy-scipy/cn/1synopsis.html",
+                "smodule":"aipy-scipy-synopsis",
+                "description":"SCIPy 简介",
+                "title":"SCIPy - 简介",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/aipy-scipy/cn/2interpolation.html",
+                "smodule":"aipy-scipy-interpolation",
+                "description":"SCIPy 插值",
+                "title":"SCIPy - 插值",
+                "reward":"0",
+                "downloads": "10,000+"
+            }
         ]
     },{
         "src":"http://qpython.org",
