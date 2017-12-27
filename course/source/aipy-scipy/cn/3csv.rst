@@ -14,7 +14,7 @@ CSV 文件和 csv 模块
 假设我们有这样的一个文件：
 
 
-%%file data.csv
+%% file data.csv
 
 ::
 
@@ -39,7 +39,7 @@ CSV 文件和 csv 模块
 ::
 
 	for row in r:
-	print row
+	^4$print row
 	    
 	fp.close()
 
