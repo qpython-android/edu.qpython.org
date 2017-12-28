@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>What is QPython</title>
 <link rel="stylesheet" href="../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
@@ -21,7 +21,7 @@ SOURCELINK_SUFFIX: '.txt'
 <script type="text/javascript" src="../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
-<script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body role="document">
 <div class="header doc-header web-show">
@@ -146,6 +146,31 @@ The business branch of QPython, on the other hand, is dedicated to providing uni
 <a href="/index.html" class="pull-right"><img src="http://www.qpython.org/static/img_logo.png"></a>
 </div>
 </footer>
+<div id="purchase-box">
+<div class="zh-img purchase-img"></div>
+<div class="en-img purchase-img">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="ST6KWAK8R63JW">
+<div class="en-thanks-tit">
+<input type="hidden" name="on0" value="Thanks">
+Thanks
+</div>
+<div class="en-thanks-sel">
+<select name="os0">
+<option value="Reward this course">Reward this course $ 0.99 USD</option>
+<option value="Reward this course">Reward this course $ 1.49 USD</option>
+<option value="Reward this course">Reward this course $ 1.99 USD</option>
+<option value="Reward this course">Reward this course $ 2.99 USD</option>
+<option value="Reward this course">Reward this course $ 3.49 USD</option>
+</select>
+</div>
+<input type="hidden" name="currency_code" value="USD">
+<input type="image" class="pay_img" src="https://www.paypalobjects.com/en_GB/i/btn/btn_paynow_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/zh_XC/i/scr/pixel.gif" width="1" height="1">
+</form>
+</div>
+</div>
 <script>
 var milib;
 if (milib==undefined) {
@@ -174,8 +199,27 @@ function openPurchase() {
 var u = window.location.href.split('/')
 var s = u[u.length-1].replace('.html', '')
 s = u[u.length-2]+'-'+s
+if (milib.openPurchaseActivity){
 milib.openPurchaseActivity(s)
+}else {
+if (navigator.language== "zh-CN" || navigator.language== "zh"){
+$('.zh-img ').show();
+$('.en-img').hide();
+}else {
+$('.zh-img ').hide();
+$('.en-img').show();
 }
+$('#purchase-box').show();
+}
+}
+$(function() {
+$('#purchase-box').click(function() {
+$(this).hide();
+})
+$('.purchase-img').click(function(e) {
+e.stopPropagation();
+})
+})
 //按钮事件
 function btnEvent(){
 var seq = this.getAttribute('target')-2
@@ -257,6 +301,9 @@ b[i].onclick = btnEvent ;
 $(function(){
 var url = location.href.split('?');
 var arg = url[1];
+if (!arg){
+return;
+}
 var args = arg.split('&');
 for (var i = 0; i < args.length; i++) {
 var c = args[i].split('=');
