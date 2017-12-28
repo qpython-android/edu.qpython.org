@@ -22,6 +22,34 @@ h3 {
     font-size: 18px;
 }
 input{outline:none} 
+#purchase-box {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #121212;
+    filter: alpha(opacity=60);
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.zh-img, 
+.en-img {
+    width: 240px;
+    height: 240px;
+    margin: 120px auto;
+    border-radius: 5px;
+    box-shadow: 0 0 9px #aaa;
+    background-size: 100%;
+    z-index: 1000;
+}
+.zh-img {
+    background-image: url(purchase-zh.jpg);
+}
+.en-img {
+    background-image: url(purchase-en.jpg);
+}
 /************* common  ***************/
 /* same css is useless */
 @media screen and (min-width: 768px) {

@@ -86,6 +86,10 @@
             <a href="/index.html" class="pull-right"><img src="http://www.qpython.org/static/img_logo.png"></a>
         </div>
     </footer> 
+    <div id="purchase-box">
+        <div class="zh-img purchase-img"></div>
+        <div class="en-img purchase-img"></div>
+    </div>
 <script>
     var milib;
     if (milib==undefined) {
@@ -115,8 +119,27 @@
         var u = window.location.href.split('/')
         var s = u[u.length-1].replace('.html', '')
         s = u[u.length-2]+'-'+s
-        milib.openPurchaseActivity(s)
+        if (milib.openPurchaseActivity){
+            milib.openPurchaseActivity(s)
+        }else {
+            if (navigator.language== "zh-CN" || navigator.language== "zh"){
+                $('.zh-img ').show();
+                $('.en-img').hide();
+            }else {
+                $('.zh-img ').hide();
+                $('.en-img').show();
+            }
+            $('#purchase-box').show();
+        }
     }
+    $(function() {
+        $('#purchase-box').click(function() {
+            $(this).hide();
+        })
+        $('.purchase-img').click(function(e) {
+            e.stopPropagation();
+        })
+    })
 
     //按钮事件
     function btnEvent(){
@@ -202,6 +225,9 @@ function setSearchHistory (t) {
     $(function(){
         var url = location.href.split('?');
         var arg = url[1];
+        if (!arg){
+            return;
+        }
         var args = arg.split('&');
         for (var i = 0; i < args.length; i++) {
             var c = args[i].split('=');
