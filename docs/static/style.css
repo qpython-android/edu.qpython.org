@@ -29,10 +29,10 @@ input{outline:none}
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #121212;
+    background-color: #C5D3D6;
     filter: alpha(opacity=60);
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgb(80, 149, 174);
+    background-color: rgba(80, 149, 174, 0.6);
 }
 .zh-img, 
 .en-img {
@@ -48,7 +48,40 @@ input{outline:none}
     background-image: url(purchase-zh.jpg);
 }
 .en-img {
-    background-image: url(purchase-en.jpg);
+    background-color: #FFF;
+    box-sizing: border-box;
+    padding: 30px 0;
+}
+.en-thanks-tit {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+.en-thanks-sel select{
+    width: 90%;
+    margin-left: 5%;
+}
+.pay_img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;    
+}
+#purchase-box::after {
+    content: "x";
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    width: 24px;
+    height: 24px;
+    left: 50%;
+    margin-left: -12px;
+    cursor: pointer;
+    background-color: #ccc;
+    color: #FFF;
+    line-height: 24px;
+    position: fixed;
+    top: 370px;
+    z-index: 9999;
 }
 /************* common  ***************/
 /* same css is useless */
