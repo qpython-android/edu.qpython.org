@@ -535,6 +535,14 @@
                 "title":"SCIPy - 概率统计方法",
                 "reward":"0",
                 "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/aipy-scipy/cn/5curve-fitting.html",
+                "smodule":"aipy-scipy-curve-fitting",
+                "description":"SCIPy 曲线拟合",
+                "title":"SCIPy - 曲线拟合",
+                "reward":"0",
+                "downloads": "10,000+"
             }
         ]
     },{
