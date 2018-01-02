@@ -231,7 +231,7 @@
 一般来书，当我们使用一个 N-1 阶的多项式拟合这 M 个点时，有这样的关系存在：
 
 
-:math:`XC = Y`
+*XC = Y*
 
 
 Scipy.linalg.lstsq 最小二乘解
@@ -377,7 +377,7 @@ Scipy.stats.linregress 线性回归
     from scipy.optimize import leastsq
 
 
-先定义这个非线性函数：:math:`y = a e^{-b sin( f x + \phi)}`
+先定义这个非线性函数： *y = a e^{-b sin( f x + \phi)}*
 
 
 
