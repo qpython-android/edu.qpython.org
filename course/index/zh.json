@@ -551,6 +551,14 @@
                 "title":"SCIPy - 最小化函数",
                 "reward":"0",
                 "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-14",
+                "link":"http://edu.qpython.org/aipy-scipy/cn/7integral.html",
+                "smodule":"aipy-scipy-integral",
+                "description":"SCIPy 积分",
+                "title":"SCIPy - 积分",
+                "reward":"0",
+                "downloads": "10,000+"
             }
         ]
     },{
