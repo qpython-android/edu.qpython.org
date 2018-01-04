@@ -559,6 +559,14 @@
                 "title":"SCIPy - 积分",
                 "reward":"0",
                 "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-14",
+                "link":"http://edu.qpython.org/aipy-scipy/cn/8differential-equation.html",
+                "smodule":"aipy-scipy-differential-equation",
+                "description":"SCIPy 解微分方程",
+                "title":"SCIPy - 解微分方程",
+                "reward":"0",
+                "downloads": "10,000+"
             }
         ]
     },{
