@@ -575,6 +575,22 @@
                 "title":"SCIPy - 稀疏矩阵",
                 "reward":"0",
                 "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-14",
+                "link":"http://edu.qpython.org/aipy-scipy/cn/10linear-algebra.html",
+                "smodule":"aipy-scipy-linear-algebra",
+                "description":"SCIPy 线性代数",
+                "title":"SCIPy - 线性代数",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-14",
+                "link":"http://edu.qpython.org/aipy-scipy/cn/11sparse-matrix.html",
+                "smodule":"aipy-scipy-sparse-matrix",
+                "description":"SCIPy 稀疏矩阵的线性代数",
+                "title":"SCIPy - 稀疏矩阵的线性代数",
+                "reward":"0",
+                "downloads": "10,000+"
             }
         ]
     },{

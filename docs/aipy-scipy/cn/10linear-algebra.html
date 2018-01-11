@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<title>线性代数</title>
+<link rel="stylesheet" href="../../static/style.css" type="text/css" />
+<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true,
+SOURCELINK_SUFFIX: '.txt'
+};
+</script>
+<script type="text/javascript" src="../../static/jquery.js"></script>
+<script type="text/javascript" src="../../static/underscore.js"></script>
+<script type="text/javascript" src="../../static/doctools.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body role="document">
+<div class="header doc-header web-show">
+<div class="col-sm-offset-2 col-sm-8  index-header">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+<span class="sr-only">切换导航</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="/index.html" class="logo"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+<ul class="header-title collapse navbar-collapse" id="example-navbar-collapse" >
+<li>
+<a href="http://www.qpython.org/index.html">Home</a>
+</li>
+<li>
+<a href="http://www.qpython.org/document.html">Guide</a>
+</li>
+<li class="header-phone-selected">
+<a href="/index.html" class="header-selected">Course</a>
+<span class="header-title-selected"></span>
+</li>
+<li>
+<a href="http://www.aipy.org">AIPY</a>
+</li>
+<li>
+<a target="_blank" href="https://github.com/qpython-android/qpython">Github</a>
+</li>
+</ul>
+<div class="search-box hidden-xs">
+<form action="/search.html">
+<input type="search" name="q" placeholder="keyword">
+<input type="hidden" name="check_keywords" value="yes" />
+<input type="hidden" name="area" value="default" />
+<button><img src="http://www.qpython.org/static/ic_search.png"></button>
+</form>
+</div>
+</div>
+</div>
+<main class="contain web-content">
+<div class="document">
+<div class="documentwrapper">
+<div class="bodywrapper">
+<div class="body" role="main">
+<div class="section" id="id1">
+<h1>线性代数<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>numpy 和 scipy 中，负责进行线性代数部分计算的模块叫做 linalg。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">numpy.linalg</span>
+<span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="kn">import</span> <span class="nn">scipy.linalg</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="k">import</span> <span class="n">linalg</span>
+</pre></div>
+</div>
+<p>%matplotlib inline</p>
+</div>
+<div class="section" id="numpy-linalg-vs-scipy-linalg">
+<h1>numpy.linalg VS scipy.linalg<a class="headerlink" href="#numpy-linalg-vs-scipy-linalg" title="Permalink to this headline">¶</a></h1>
+<p>一方面scipy.linalg 包含 numpy.linalg 中的所有函数，同时还包含了很多 numpy.linalg 中没有的函数。</p>
+<p>另一方面，scipy.linalg 能够保证这些函数使用 BLAS/LAPACK 加速，而 numpy.linalg 中这些加速是可选的。</p>
+<p>因此，在使用时，我们一般使用 scipy.linalg 而不是 numpy.linalg。</p>
+<p>我们可以简单看看两个模块的差异：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s2">&quot;number of items in numpy.linalg:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">linalg</span><span class="p">))</span>
+<span class="nb">print</span> <span class="s2">&quot;number of items in scipy.linalg:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">scipy</span><span class="o">.</span><span class="n">linalg</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="n">of</span> <span class="n">items</span> <span class="ow">in</span> <span class="n">numpy</span><span class="o">.</span><span class="n">linalg</span><span class="p">:</span> <span class="mi">36</span>
+<span class="n">number</span> <span class="n">of</span> <span class="n">items</span> <span class="ow">in</span> <span class="n">scipy</span><span class="o">.</span><span class="n">linalg</span><span class="p">:</span> <span class="mi">115</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="numpy-matrix-vs-2d-numpy-ndarray">
+<h1>numpy.matrix VS 2D numpy.ndarray<a class="headerlink" href="#numpy-matrix-vs-2d-numpy-ndarray" title="Permalink to this headline">¶</a></h1>
+<p>线性代数的基本操作对象是矩阵，而矩阵的表示方法主要有两种：numpy.matrix 和 2D numpy.ndarray。</p>
+</div>
+<div class="section" id="numpy-matrix">
+<h1>numpy.matrix<a class="headerlink" href="#numpy-matrix" title="Permalink to this headline">¶</a></h1>
+<p>numpy.matrix 是一个矩阵类，提供了一些方便的矩阵操作：</p>
+<ul class="simple">
+<li>支持类似 MATLAB 创建矩阵的语法</li>
+<li>矩阵乘法默认用 * 号</li>
+<li>.I 表示逆，.T 表示转置</li>
+</ul>
+<p>可以用 mat 或者 matrix 来产生矩阵：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mat</span><span class="p">(</span><span class="s2">&quot;[1, 2; 3, 4]&quot;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="nb">repr</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="s2">&quot;[1, 2; 3, 4]&quot;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="nb">repr</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+<span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>转置和逆：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="nb">repr</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">I</span><span class="p">)</span>
+<span class="nb">print</span> <span class="nb">repr</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">matrix</span><span class="p">([[</span><span class="o">-</span><span class="mf">2.</span> <span class="p">,</span>  <span class="mf">1.</span> <span class="p">],</span>
+<span class="p">[</span> <span class="mf">1.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">]])</span>
+<span class="n">matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>矩阵乘法：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mat</span><span class="p">(</span><span class="s1">&#39;[5; 6]&#39;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="nb">repr</span><span class="p">(</span><span class="n">A</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">matrix</span><span class="p">([[</span><span class="mi">17</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">39</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="numpy-ndarray">
+<h1>2 维 numpy.ndarray<a class="headerlink" href="#numpy-ndarray" title="Permalink to this headline">¶</a></h1>
+<p>虽然 numpy.matrix 有着上面的好处，但是一般不建议使用，而是用 2 维 numpy.ndarray 对象替代，这样可以避免一些不必要的困惑。</p>
+<p>我们可以使用 array 复现上面的操作：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]])</span>
+<span class="nb">print</span> <span class="nb">repr</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>逆和转置：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="nb">repr</span><span class="p">(</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
+<span class="nb">print</span> <span class="nb">repr</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">2.</span> <span class="p">,</span>  <span class="mf">1.</span> <span class="p">],</span>
+<span class="p">[</span> <span class="mf">1.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">]])</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>矩阵乘法：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="nb">print</span> <span class="nb">repr</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">([</span><span class="mi">17</span><span class="p">,</span> <span class="mi">39</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>普通乘法：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="nb">repr</span><span class="p">(</span><span class="n">A</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">([[</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">24</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>scipy.linalg 的操作可以作用到两种类型的对象上，没有区别。</p>
+</div>
+<div class="section" id="id2">
+<h1>基本操作<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<p><strong>求逆</strong></p>
+<p>矩阵 $mathbf{A}$ 的逆 $mathbf{B}$ 满足：$mathbf{BA}=mathbf{AB}=I$，记作 $mathbf{B} = mathbf{A}^{-1}$。</p>
+<p>事实上，我们已经见过求逆的操作，linalg.inv 可以求一个可逆矩阵的逆：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]])</span>
+<span class="nb">print</span> <span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">A</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">scipy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="o">-</span><span class="mf">2.</span>   <span class="mf">1.</span> <span class="p">]</span>
+<span class="p">[</span> <span class="mf">1.5</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">]]</span>
+<span class="p">[[</span>  <span class="mf">1.00000000e+00</span>   <span class="mf">0.00000000e+00</span><span class="p">]</span>
+<span class="p">[</span>  <span class="mf">8.88178420e-16</span>   <span class="mf">1.00000000e+00</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h1>求解线性方程组<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
+<p>例如，下列方程组 $$</p>
+<p>begin{eqnarray*}
+x + 3y + 5z &amp;amp; = &amp;amp; 10 \
+2x + 5y + z &amp;amp; = &amp;amp; 8  \
+2x + 3y + 8z &amp;amp; = &amp;amp; 3
+end{eqnarray*}</p>
+<p>$$ 的解为： $$</p>
+<p>begin{split}left[begin{array}{c} x\ y\ zend{array}right]=left[begin{array}{ccc} 1 &amp;amp; 3 &amp;amp; 5\ 2 &amp;amp; 5 &amp;amp; 1\ 2 &amp;amp; 3 &amp;amp; 8end{array}right]^{-1}left[begin{array}{c} 10\ 8\ 3end{array}right]=frac{1}{25}left[begin{array}{c} -232\ 129\ 19end{array}right]=left[begin{array}{c} -9.28\ 5.16\ 0.76end{array}right].end{split}
+$$</p>
+<p>我们可以使用 linalg.solve 求解方程组，也可以先求逆再相乘，两者中 solve 比较快。</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">tic</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">xrange</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">x</span>
+<span class="nb">print</span> <span class="n">A</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="n">b</span>
+<span class="nb">print</span> <span class="s2">&quot;inv and dot: </span><span class="si">{}</span><span class="s2"> s&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">tic</span><span class="p">)</span>
+<span class="n">tic</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">xrange</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">x</span>
+<span class="nb">print</span> <span class="n">A</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">-</span><span class="n">b</span>
+<span class="nb">print</span> <span class="s2">&quot;solve: </span><span class="si">{}</span><span class="s2"> s&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">tic</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="o">-</span><span class="mf">9.28</span>  <span class="mf">5.16</span>  <span class="mf">0.76</span><span class="p">]</span>
+<span class="p">[</span>  <span class="mf">0.00000000e+00</span>  <span class="o">-</span><span class="mf">1.77635684e-15</span>  <span class="o">-</span><span class="mf">8.88178420e-16</span><span class="p">]</span>
+<span class="n">inv</span> <span class="ow">and</span> <span class="n">dot</span><span class="p">:</span> <span class="mf">0.0353579521179</span> <span class="n">s</span>
+<span class="p">[</span><span class="o">-</span><span class="mf">9.28</span>  <span class="mf">5.16</span>  <span class="mf">0.76</span><span class="p">]</span>
+<span class="p">[</span>  <span class="mf">0.00000000e+00</span>  <span class="o">-</span><span class="mf">1.77635684e-15</span>  <span class="o">-</span><span class="mf">1.77635684e-15</span><span class="p">]</span>
+<span class="n">solve</span><span class="p">:</span> <span class="mf">0.0284671783447</span> <span class="n">s</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h1>计算行列式<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h1>
+<p>方阵的行列式为</p>
+<p>$$
+left|mathbf{A}right|=sum_{j}left(-1right)^{i+j}a_{ij}M_{ij}.
+$$</p>
+<p>其中 $a_{ij}$ 表示 $mathbf{A}$ 的第 $i$ 行 第 $j$ 列的元素，$M_{ij}$ 表示矩阵 $mathbf{A}$ 去掉第 $i$ 行 第 $j$ 列的新矩阵的行列式。</p>
+<p>例如，矩阵 $$</p>
+<p>begin{split}mathbf{A=}left[begin{array}{ccc} 1 &amp;amp; 3 &amp;amp; 5\ 2 &amp;amp; 5 &amp;amp; 1\ 2 &amp;amp; 3 &amp;amp; 8end{array}right]end{split}</p>
+<p>$$ 的行列式是： $$</p>
+<p>begin{eqnarray*} left|mathbf{A}right| &amp;amp; = &amp;amp; 1left|begin{array}{cc} 5 &amp;amp; 1\ 3 &amp;amp; 8end{array}right|-3left|begin{array}{cc} 2 &amp;amp; 1\ 2 &amp;amp; 8end{array}right|+5left|begin{array}{cc} 2 &amp;amp; 5\ 2 &amp;amp; 3end{array}right|\  &amp;amp; = &amp;amp; 1left(5cdot8-3cdot1right)-3left(2cdot8-2cdot1right)+5left(2cdot3-2cdot5right)=-25.end{eqnarray*}
+$$</p>
+<p>可以用 linalg.det 计算行列式：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
+<span class="nb">print</span> <span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mf">25.0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h1>计算矩阵或向量的模<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h1>
+<p>矩阵的模定义如下： $$</p>
+<p>begin{split}leftVert mathbf{A}rightVert =left{ begin{array}{cc} max_{i}sum_{j}left|a_{ij}right| &amp;amp; textrm{ord}=textrm{inf}\ min_{i}sum_{j}left|a_{ij}right| &amp;amp; textrm{ord}=-textrm{inf}\ max_{j}sum_{i}left|a_{ij}right| &amp;amp; textrm{ord}=1\ min_{j}sum_{i}left|a_{ij}right| &amp;amp; textrm{ord}=-1\ maxsigma_{i} &amp;amp; textrm{ord}=2\ minsigma_{i} &amp;amp; textrm{ord}=-2\ sqrt{textrm{trace}left(mathbf{A}^{H}mathbf{A}right)} &amp;amp; textrm{ord}=textrm{&#8216;fro&#8217;}end{array}right.end{split}</p>
+<p>$$ 其中，$sigma_i$ 是矩阵的奇异值。</p>
+<p>向量的模定义如下：</p>
+<p>$$
+begin{split}leftVert mathbf{x}rightVert =left{ begin{array}{cc} maxleft|x_{i}right| &amp;amp; textrm{ord}=textrm{inf}\ minleft|x_{i}right| &amp;amp; textrm{ord}=-textrm{inf}\ left(sum_{i}left|x_{i}right|^{textrm{ord}}right)^{1/textrm{ord}} &amp;amp; left|textrm{ord}right|&amp;lt;infty.end{array}right.end{split}
+$$</p>
+<p>linalg.norm 可以计算向量或者矩阵的模：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+<span class="nb">print</span> <span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="s1">&#39;fro&#39;</span><span class="p">)</span> <span class="c1"># frobenius norm 默认值</span>
+<span class="nb">print</span> <span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># L1 norm 最大列和</span>
+<span class="nb">print</span> <span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># L -1 norm 最小列和</span>
+<span class="nb">print</span> <span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">)</span> <span class="c1"># L inf norm 最大行和</span>
+</pre></div>
+</div>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mf">5.47722557505</span>
+<span class="mf">5.47722557505</span>
+<span class="mi">6</span>
+<span class="mi">4</span>
+<span class="mi">7</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h1>最小二乘解和伪逆<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h1>
+<p><strong>问题描述</strong></p>
+<p>所谓最小二乘问题的定义如下：</p>
+<p>假设 $y_i$ 与 $mathbf{x_i}$ 的关系可以用一组系数 $c_j$ 和对应的模型函数 $f_j(mathbf{x_i})$ 的模型表示：</p>
+<p>$$
+y_{i}=sum_{j}c_{j}f_{j}left(mathbf{x}_{i}right)+epsilon_{i}
+$$</p>
+<p>其中 $epsilon_i$ 表示数据的不确定性。最小二乘就是要优化这样一个关于 $c_j$ 的问题：</p>
+<p>$$
+Jleft(mathbf{c}right)=sum_{i}left|y_{i}-sum_{j}c_{j}f_{j}left(x_{i}right)right|^{2}
+$$</p>
+<p>其理论解满足：</p>
+<p>$$
+frac{partial J}{partial c_{n}^{*}}=0=sum_{i}left(y_{i}-sum_{j}c_{j}f_{j}left(x_{i}right)right)left(-f_{n}^{*}left(x_{i}right)right)
+$$</p>
+<p>改写为：</p>
+<p>$$
+begin{eqnarray*} sum_{j}c_{j}sum_{i}f_{j}left(x_{i}right)f_{n}^{*}left(x_{i}right) &amp;amp; = &amp;amp; sum_{i}y_{i}f_{n}^{*}left(x_{i}right)\ mathbf{A}^{H}mathbf{Ac} &amp;amp; = &amp;amp; mathbf{A}^{H}mathbf{y}end{eqnarray*}
+$$</p>
+<p>其中：</p>
+<p>$$
+left{ mathbf{A}right} _{ij}=f_{j}left(x_{i}right).
+$$</p>
+<p>当 $mathbf{A^HA}$ 可逆时，我们有：</p>
+<p>$$
+mathbf{c}=left(mathbf{A}^{H}mathbf{A}right)^{-1}mathbf{A}^{H}mathbf{y}=mathbf{A}^{dagger}mathbf{y}
+$$</p>
+<p>矩阵 $mathbf{A}^{dagger}$ 叫做 $mathbf{A}$ 的伪逆。</p>
+<p><strong>问题求解</strong></p>
+<p>注意到，我们的模型可以写为：</p>
+<p>$$
+mathbf{y}=mathbf{Ac}+boldsymbol{epsilon}.
+$$</p>
+<p>在给定 $mathbf{y}$ 和 $mathbf{A}$ 的情况下，我们可以使用 linalg.lstsq 求解 $mathbf c$。</p>
+<p>在给定 $mathbf{A}$ 的情况下，我们可以使用 linalg.pinv 或者 linalg.pinv2 求解 $mathbf{A}^{dagger}$。</p>
+<p><strong>例子</strong></p>
+<p>假设我们的数据满足：</p>
+<p>$$
+begin{align}
+y_{i} &amp;amp; =c_{1}e^{-x_{i}}+c_{2}x_{i} \
+z_{i} &amp;amp; = y_i + epsilon_i
+end{align}
+$$</p>
+<p>其中 $x_i = frac{i}{10},i = 1,dots,10$，$c_1 = 5, c_2 = 2$，产生数据</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">c1</span><span class="p">,</span> <span class="n">c2</span> <span class="o">=</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">2.0</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">11</span><span class="p">]</span>
+<span class="n">xi</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">*</span><span class="n">i</span>
+<span class="n">yi</span> <span class="o">=</span> <span class="n">c1</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">xi</span><span class="p">)</span> <span class="o">+</span> <span class="n">c2</span><span class="o">*</span><span class="n">xi</span>
+<span class="n">zi</span> <span class="o">=</span> <span class="n">yi</span> <span class="o">+</span> <span class="mf">0.05</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">yi</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">yi</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>构造矩阵 $mathbf A$：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">xi</span><span class="p">)[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">],</span> <span class="n">xi</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]]</span>
+<span class="nb">print</span> <span class="n">A</span>
+</pre></div>
+</div>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[[</span> <span class="mf">0.90483742</span>  <span class="mf">0.1</span>       <span class="p">]</span>
+<span class="p">[</span> <span class="mf">0.81873075</span>  <span class="mf">0.2</span>       <span class="p">]</span>
+<span class="p">[</span> <span class="mf">0.74081822</span>  <span class="mf">0.3</span>       <span class="p">]</span>
+<span class="p">[</span> <span class="mf">0.67032005</span>  <span class="mf">0.4</span>       <span class="p">]</span>
+<span class="p">[</span> <span class="mf">0.60653066</span>  <span class="mf">0.5</span>       <span class="p">]</span>
+<span class="p">[</span> <span class="mf">0.54881164</span>  <span class="mf">0.6</span>       <span class="p">]</span>
+<span class="p">[</span> <span class="mf">0.4965853</span>   <span class="mf">0.7</span>       <span class="p">]</span>
+<span class="p">[</span> <span class="mf">0.44932896</span>  <span class="mf">0.8</span>       <span class="p">]</span>
+<span class="p">[</span> <span class="mf">0.40656966</span>  <span class="mf">0.9</span>       <span class="p">]</span>
+<span class="p">[</span> <span class="mf">0.36787944</span>  <span class="mf">1.</span>        <span class="p">]]</span>
+</pre></div>
+</div>
+<p>求解最小二乘问题：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">c</span><span class="p">,</span> <span class="n">resid</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">sigma</span> <span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">lstsq</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">zi</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">c</span>
+</pre></div>
+</div>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="mf">4.87016856</span>  <span class="mf">2.19081311</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>其中 c 的形状与 zi 一致，为最小二乘解，resid 为 zi - A c 每一列差值的二范数，rank 为矩阵 A 的秩，sigma 为矩阵 A 的奇异值。
+查看拟合效果：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">xi2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="mf">0.1</span><span class="p">:</span><span class="mf">1.0</span><span class="p">:</span><span class="mi">100</span><span class="n">j</span><span class="p">]</span>
+<span class="n">yi2</span> <span class="o">=</span> <span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">xi2</span><span class="p">)</span> <span class="o">+</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">xi2</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xi</span><span class="p">,</span><span class="n">zi</span><span class="p">,</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="n">xi2</span><span class="p">,</span><span class="n">yi2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.1</span><span class="p">,</span><span class="mf">3.0</span><span class="p">,</span><span class="mf">5.5</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;$x_i$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Data fitting with linalg.lstsq&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img alt="data:image/png;base64,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%0AgIuIRNT/AXU6OlSJKzNiAAAAAElFTkSuQmCC%0A" src="data:image/png;base64,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%0AgIuIRNT/AXU6OlSJKzNiAAAAAElFTkSuQmCC%0A" />
+</div>
+<div class="section" id="id7">
+<h1>广义逆<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h1>
+<p>linalg.pinv 或 linalg.pinv2 可以用来求广义逆，其区别在于前者使用求最小二乘解的算法，后者使用求奇异值的算法求解。</p>
+</div>
+<div class="section" id="id8">
+<h1>矩阵分解<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="id9">
+<h1>特征值和特征向量<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="id10">
+<h1>问题描述<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h1>
+<p>对于给定的 $N times N$ 矩阵 $mathbf A$，特征值和特征向量问题相当与寻找标量 $lambda$ 和对应的向量 $mathbf v$ 使得： $$
+mathbf{Av} = lambda mathbf{v}
+$$</p>
+<p>矩阵的 $N$ 个特征值（可能相同）可以通过计算特征方程的根得到： $$
+left|mathbf{A} - lambda mathbf{I}right| = 0
+$$</p>
+<p>然后利用这些特征值求（归一化的）特征向量。</p>
+</div>
+<div class="section" id="id11">
+<h1>问题求解<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>linalg.eig(A)</dt>
+<dd><ul class="first last">
+<li>返回矩阵的特征值与特征向量</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>linalg.eigvals(A)</dt>
+<dd><ul class="first last">
+<li>返回矩阵的特征值</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>linalg.eig(A, B)</dt>
+<dd><ul class="first last">
+<li>求解 $mathbf{Av} = lambdamathbf{Bv}$ 的问题</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p><strong>例子</strong></p>
+<p>矩阵为 $$
+begin{split}mathbf{A}=left[begin{array}{ccc} 1 &amp;amp; 5 &amp;amp; 2\ 2 &amp;amp; 4 &amp;amp; 1\ 3 &amp;amp; 6 &amp;amp; 2end{array}right].end{split}
+$$</p>
+<p>特征多项式为： $$
+begin{eqnarray*} left|mathbf{A}-lambdamathbf{I}right| &amp;amp; = &amp;amp; left(1-lambdaright)left[left(4-lambdaright)left(2-lambdaright)-6right]-\  &amp;amp;  &amp;amp; 5left[2left(2-lambdaright)-3right]+2left[12-3left(4-lambdaright)right]\  &amp;amp; = &amp;amp; -lambda^{3}+7lambda^{2}+8lambda-3.end{eqnarray*}
+$$</p>
+<p>特征根为： $$
+begin{eqnarray*} lambda_{1} &amp;amp; = &amp;amp; 7.9579\ lambda_{2} &amp;amp; = &amp;amp; -1.2577\ lambda_{3} &amp;amp; = &amp;amp; 0.2997.end{eqnarray*}
+$$</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+<span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+<span class="n">la</span><span class="p">,</span> <span class="n">v</span> <span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">la</span>
+<span class="c1"># 验证是否归一化</span>
+<span class="nb">print</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">v</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1"># 第一个特征值</span>
+<span class="n">l1</span> <span class="o">=</span> <span class="n">la</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1"># 对应的特征向量</span>
+<span class="n">v1</span> <span class="o">=</span> <span class="n">v</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">T</span>
+<span class="c1"># 验证是否为特征值和特征向量对</span>
+<span class="nb">print</span> <span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span><span class="o">-</span><span class="n">l1</span><span class="o">*</span><span class="n">v1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="mf">7.95791620</span><span class="o">+</span><span class="mf">0.</span><span class="n">j</span> <span class="o">-</span><span class="mf">1.25766471</span><span class="o">+</span><span class="mf">0.</span><span class="n">j</span>  <span class="mf">0.29974850</span><span class="o">+</span><span class="mf">0.</span><span class="n">j</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">1.</span>  <span class="mf">1.</span>  <span class="mf">1.</span><span class="p">]</span>
+<span class="mf">3.23301824835e-15</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h1>奇异值分解<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h1>
+<p><strong>问题描述</strong></p>
+<p>$M times N$ 矩阵 $mathbf A$ 的奇异值分解为： $$
+mathbf{A=U}boldsymbol{Sigma}mathbf{V}^{H}
+$$</p>
+<p>其中 $boldsymbol{Sigma}, (M times N)$ 只有对角线上的元素不为 0，$mathbf U, (M times M)$ 和 $mathbf V, (N times N)$ 为正交矩阵。</p>
+<p>其具体原理可以查看维基百科： <a class="reference external" href="https://en.wikipedia.org/wiki/Singular_value_decomposition">https://en.wikipedia.org/wiki/Singular_value_decomposition</a></p>
+<p><strong>问题求解</strong></p>
+<dl class="docutils">
+<dt>-mU,s,Vh = linalg.svd(A)</dt>
+<dd><ul class="first last simple">
+<li>返回 $U$ 矩阵，奇异值 $s$，$V^H$ 矩阵</li>
+</ul>
+</dd>
+<dt>-mSig = linalg.diagsvd(s,M,N)</dt>
+<dd><ul class="first last simple">
+<li>从奇异值恢复 $boldsymbol{Sigma}$ 矩阵</li>
+</ul>
+</dd>
+</dl>
+<p><strong>例子</strong></p>
+<p>奇异值分解：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]])</span>
+<span class="n">U</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">Vh</span> <span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">svd</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>$boldsymbol{Sigma}$ 矩阵：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">M</span><span class="p">,</span> <span class="n">N</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">Sig</span> <span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">diagsvd</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">M</span><span class="p">,</span><span class="n">N</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">Sig</span>
+</pre></div>
+</div>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[[</span> <span class="mf">9.508032</span>    <span class="mf">0.</span>          <span class="mf">0.</span>        <span class="p">]</span>
+<span class="p">[</span> <span class="mf">0.</span>          <span class="mf">0.77286964</span>  <span class="mf">0.</span>        <span class="p">]]</span>
+</pre></div>
+</div>
+<p>检查正确性：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">A</span>
+<span class="nb">print</span> <span class="n">U</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Sig</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Vh</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span><span class="p">]]</span>
+<span class="p">[[</span> <span class="mf">1.</span>  <span class="mf">2.</span>  <span class="mf">3.</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">4.</span>  <span class="mf">5.</span>  <span class="mf">6.</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p><strong>LU 分解</strong></p>
+<p>$M times N$ 矩阵 $mathbf A$ 的 LU 分解为： $$
+mathbf{A}=mathbf{P},mathbf{L},mathbf{U}
+$$</p>
+<p>$mathbf P$ 是 $M times M$ 的单位矩阵的一个排列，$mathbf L$ 是下三角阵，$mathbf U$ 是上三角阵。</p>
+<p>可以使用 linalg.lu 进行 LU 分解的求解：</p>
+<p>具体原理可以查看维基百科： <a class="reference external" href="https://en.wikipedia.org/wiki/LU_decomposition">https://en.wikipedia.org/wiki/LU_decomposition</a></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]])</span>
+<span class="n">P</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">U</span> <span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">lu</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">P</span>
+<span class="nb">print</span> <span class="n">L</span>
+<span class="nb">print</span> <span class="n">U</span>
+</pre></div>
+</div>
+<p>print P.dot(L).dot(U)</p>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[[</span> <span class="mf">0.</span>  <span class="mf">1.</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">1.</span>  <span class="mf">0.</span><span class="p">]]</span>
+<span class="p">[[</span> <span class="mf">1.</span>    <span class="mf">0.</span>  <span class="p">]</span>
+<span class="p">[</span> <span class="mf">0.25</span>  <span class="mf">1.</span>  <span class="p">]]</span>
+<span class="p">[[</span> <span class="mf">4.</span>    <span class="mf">5.</span>    <span class="mf">6.</span>  <span class="p">]</span>
+<span class="p">[</span> <span class="mf">0.</span>    <span class="mf">0.75</span>  <span class="mf">1.5</span> <span class="p">]]</span>
+<span class="p">[[</span> <span class="mf">1.</span>  <span class="mf">2.</span>  <span class="mf">3.</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">4.</span>  <span class="mf">5.</span>  <span class="mf">6.</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cholesky">
+<h1>Cholesky 分解<a class="headerlink" href="#cholesky" title="Permalink to this headline">¶</a></h1>
+<p>Cholesky 分解是一种特殊的 LU 分解，此时要求 $mathbf A$ 为 Hermitian 正定矩阵 （$mathbf A = mathbf{A^H}$）。
+此时有： $$
+begin{eqnarray*} mathbf{A} &amp;amp; = &amp;amp; mathbf{U}^{H}mathbf{U}\ mathbf{A} &amp;amp; = &amp;amp; mathbf{L}mathbf{L}^{H}end{eqnarray*}
+$$ 即 $$
+mathbf{L}=mathbf{U}^{H}.
+$$</p>
+<p>可以用 linalg.cholesky 求解。</p>
+<p><strong>QR 分解</strong></p>
+<p>$M×N$ 矩阵 $mathbf A$ 的 QR 分解为： $$
+mathbf{A=QR}
+$$
+$mathbf R$ 为上三角形矩阵，$mathbf Q$ 是正交矩阵。</p>
+<p>维基链接： <a class="reference external" href="https://en.wikipedia.org/wiki/QR_decomposition">https://en.wikipedia.org/wiki/QR_decomposition</a></p>
+<p>可以用 linalg.qr 求解。</p>
+<p><strong>Schur 分解</strong></p>
+<p>对于 $Ntimes N$ 方阵 $mathbf A$, Schur 分解要求找到满足下式的矩阵： $$
+mathbf{A=ZTZ^H}
+$$
+其中 $mathbf Z$ 是正交矩阵，$mathbf T$ 是一个上三角矩阵。</p>
+<p>维基链接： <a class="reference external" href="https://en.wikipedia.org/wiki/Schur_decomposition">https://en.wikipedia.org/wiki/Schur_decomposition</a></p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mat</span><span class="p">(</span><span class="s1">&#39;[1 3 2; 1 4 5; 2 3 6]&#39;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">A</span>
+<span class="n">T</span><span class="p">,</span> <span class="n">Z</span> <span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">schur</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">T</span><span class="p">,</span> <span class="n">Z</span>
+<span class="nb">print</span> <span class="n">Z</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Z</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">1</span> <span class="mi">3</span> <span class="mi">2</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">1</span> <span class="mi">4</span> <span class="mi">5</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">2</span> <span class="mi">3</span> <span class="mi">6</span><span class="p">]]</span>
+<span class="p">[[</span> <span class="mf">9.90012467</span>  <span class="mf">1.78947961</span> <span class="o">-</span><span class="mf">0.65498528</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">0.</span>          <span class="mf">0.54993766</span> <span class="o">-</span><span class="mf">1.57754789</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">0.</span>          <span class="mf">0.51260928</span>  <span class="mf">0.54993766</span><span class="p">]]</span> <span class="p">[[</span> <span class="mf">0.36702395</span> <span class="o">-</span><span class="mf">0.85002495</span> <span class="o">-</span><span class="mf">0.37782404</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">0.63681656</span> <span class="o">-</span><span class="mf">0.06646488</span>  <span class="mf">0.76814522</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">0.67805463</span>  <span class="mf">0.52253231</span> <span class="o">-</span><span class="mf">0.51691576</span><span class="p">]]</span>
+<span class="p">[[</span> <span class="mf">1.</span>  <span class="mf">3.</span>  <span class="mf">2.</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">1.</span>  <span class="mf">4.</span>  <span class="mf">5.</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">2.</span>  <span class="mf">3.</span>  <span class="mf">6.</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id13">
+<h1>矩阵函数<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h1>
+<p>考虑函数 $f(x)$ 的泰勒展开： $$
+fleft(xright)=sum_{k=0}^{infty}frac{f^{left(kright)}left(0right)}{k!}x^{k}
+$$</p>
+<p>对于方阵，矩阵函数可以定义如下： $$
+fleft(mathbf{A}right)=sum_{k=0}^{infty}frac{f^{left(kright)}left(0right)}{k!}mathbf{A}^{k}
+$$</p>
+<p>这也是计算矩阵函数的最好的方式。</p>
+</div>
+<div class="section" id="id14">
+<h1>指数和对数函数<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="id15">
+<h1>指数<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h1>
+<p>指数可以定义如下： $$
+e^{mathbf{A}}=sum_{k=0}^{infty}frac{1}{k!}mathbf{A}^{k}
+$$</p>
+<p>linalg.expm3 使用的是泰勒展开的方法计算结果：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+<span class="nb">print</span> <span class="n">linalg</span><span class="o">.</span><span class="n">expm3</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[[</span>  <span class="mf">51.96890355</span>   <span class="mf">74.73648784</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">112.10473176</span>  <span class="mf">164.07363531</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>另一种方法先计算 A 的特征值分解：
+$$
+mathbf{A}=mathbf{V}boldsymbol{Lambda}mathbf{V}^{-1}
+$$</p>
+<p>然后有（正交矩阵和对角阵的性质）：
+$$
+e^{mathbf{A}}=mathbf{V}e^{boldsymbol{Lambda}}mathbf{V}^{-1}
+$$</p>
+<p>linalg.expm2 使用的就是这种方法：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">linalg</span><span class="o">.</span><span class="n">expm2</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[[</span>  <span class="mf">51.9689562</span>    <span class="mf">74.73656457</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">112.10484685</span>  <span class="mf">164.07380305</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>最优的方法是用 Padé 近似 实现，Padé 近似往往比截断的泰勒级数准确，而且当泰勒级数不收敛时，Padé 近似往往仍可行，所以多用于在计算机数学中。</p>
+<p>linalg.expm 使用的就是这种方法：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">linalg</span><span class="o">.</span><span class="n">expm</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[[</span>  <span class="mf">51.9689562</span>    <span class="mf">74.73656457</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">112.10484685</span>  <span class="mf">164.07380305</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id16">
+<h1>对数<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h1>
+<p>指数的逆运算，可以用 linalg.logm 实现：</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">A</span>
+<span class="nb">print</span> <span class="n">linalg</span><span class="o">.</span><span class="n">logm</span><span class="p">(</span><span class="n">linalg</span><span class="o">.</span><span class="n">expm</span><span class="p">(</span><span class="n">A</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>结果:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">1</span> <span class="mi">2</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">3</span> <span class="mi">4</span><span class="p">]]</span>
+<span class="p">[[</span> <span class="mf">1.</span>  <span class="mf">2.</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">3.</span>  <span class="mf">4.</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id17">
+<h1>三角函数<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h1>
+<p>根据欧拉公式，其定义为： $$
+begin{eqnarray*} sinleft(mathbf{A}right) &amp;amp; = &amp;amp; frac{e^{jmathbf{A}}-e^{-jmathbf{A}}}{2j}\ cosleft(mathbf{A}right) &amp;amp; = &amp;amp; frac{e^{jmathbf{A}}+e^{-jmathbf{A}}}{2}.end{eqnarray*}
+$$</p>
+<p>正切函数定义为： $$
+tanleft(xright)=frac{sinleft(xright)}{cosleft(xright)}=left[cosleft(xright)right]^{-1}sinleft(xright)
+$$</p>
+<p>因此矩阵的正切函数定义为： $$
+left[cosleft(mathbf{A}right)right]^{-1}sinleft(mathbf{A}right).
+$$</p>
+<p>具体实现：</p>
+<ul class="simple">
+<li>linalg.sinm</li>
+<li>linalg.cosm</li>
+<li>linalg.tanm</li>
+</ul>
+</div>
+<div class="section" id="id18">
+<h1>双曲三角函数<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h1>
+<p>$$begin{eqnarray*} sinhleft(mathbf{A}right) &amp;amp; = &amp;amp; frac{e^{mathbf{A}}-e^{-mathbf{A}}}{2}\ coshleft(mathbf{A}right) &amp;amp; = &amp;amp; frac{e^{mathbf{A}}+e^{-mathbf{A}}}{2}\ tanhleft(mathbf{A}right) &amp;amp; = &amp;amp; left[coshleft(mathbf{A}right)right]^{-1}sinhleft(mathbf{A}right).end{eqnarray*}$$</p>
+<p>具体实现：</p>
+<ul class="simple">
+<li>linalg.sinhm</li>
+<li>linalg.coshm</li>
+<li>linalg.tanhm</li>
+</ul>
+</div>
+<div class="section" id="id19">
+<h1>特殊矩阵<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h1>
+<p>Scipy 提供了一些特殊矩阵的实现，具体可以参考：</p>
+<p><a class="reference external" href="http://docs.scipy.org/doc/scipy/reference/tutorial/linalg.html#special-matrices">http://docs.scipy.org/doc/scipy/reference/tutorial/linalg.html#special-matrices</a></p>
+</div>
+<div class="section" id="id20">
+<h1>作者 &amp; 更新时间<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h1>
+<p>作者:<cite>李金  &lt;lijinwithyou&#64;gmail.com&gt;</cite></p>
+<p>提交: 2017/12/14</p>
+</div>
+</div>
+</div>
+</div>
+<div class="clearer"></div>
+</div>
+</main>
+<div class="star-footer">
+<img onclick="openPurchase()" src="../../static/star.jpg">
+<div id="praise"><span>0</span> persons have rewarded</div>
+</div>
+<div class="foo"></div>
+<footer class="clearfix fixfooter web-show">
+<div class="col-sm-offset-2 col-sm-6 footer-div1">
+<div class="footer-block-item">
+<span class="footer-item1">Built with Sphinx using a theme provid by QPython.</span>
+<span class="footer-item2 visible-xs">Copyight 2017, QPython.</span>
+</div>
+</div>
+<div class="col-sm-2 footer-div2">
+<a href="/index.html" class="pull-right"><img src="http://www.qpython.org/static/img_logo.png"></a>
+</div>
+</footer>
+<div id="purchase-box">
+<div class="zh-img purchase-img"></div>
+<div class="en-img purchase-img">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="ST6KWAK8R63JW">
+<div class="en-thanks-tit">
+<input type="hidden" name="on0" value="Thanks">
+Thanks
+</div>
+<div class="en-thanks-sel">
+<select name="os0">
+<option value="Reward this course">Reward this course $ 0.99 USD</option>
+<option value="Reward this course">Reward this course $ 1.49 USD</option>
+<option value="Reward this course">Reward this course $ 1.99 USD</option>
+<option value="Reward this course">Reward this course $ 2.99 USD</option>
+<option value="Reward this course">Reward this course $ 3.49 USD</option>
+</select>
+</div>
+<input type="hidden" name="currency_code" value="USD">
+<input type="image" class="pay_img" src="https://www.paypalobjects.com/en_GB/i/btn/btn_paynow_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/zh_XC/i/scr/pixel.gif" width="1" height="1">
+</form>
+</div>
+</div>
+<script>
+var milib;
+if (milib==undefined) {
+var milib = function(){
+};
+milib.qeditor = function(str){
+alert('Please share this page to QPython then run it')
+};
+milib.getPurchaseNumber = function(str){
+//alert('getPurchaseNumber:'+str)
+return "10+";
+};
+milib.a8playVideoFromGW= function(url){
+window.open(url)
+};
+milib.qpylibinstall = function(cat,url,target){
+window.open(url)
+};
+milib.gotoIfPay = function(url, packageId, packageUrl){
+window.open(url)
+};
+} else {
+}
+function openPurchase() {
+//获取标识
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+if (milib.openPurchaseActivity){
+milib.openPurchaseActivity(s)
+}else {
+if (navigator.language== "zh-CN" || navigator.language== "zh"){
+$('.zh-img ').show();
+$('.en-img').hide();
+}else {
+$('.zh-img ').hide();
+$('.en-img').show();
+}
+$('#purchase-box').show();
+}
+}
+$(function() {
+$('#purchase-box').click(function() {
+$(this).hide();
+})
+$('.purchase-img').click(function(e) {
+e.stopPropagation();
+})
+})
+//按钮事件
+function btnEvent(){
+var seq = this.getAttribute('target')-2
+var a = this.parentElement.getElementsByTagName('pre')
+if ( a && a.length > 0){
+/**********有代码，调用控制台*************/
+var code = a[seq].lastChild.nodeValue
+milib.qeditor(code)
+}else{
+//没有代码，调转
+var url = this.getAttribute('data-url');
+window.open(url);
+}
+}
+//获取赞赏
+function setPraise(){
+var u = window.location.href.split('/')
+var s = u[u.length-1].replace('.html', '')
+s = u[u.length-2]+'-'+s
+var i = document.getElementById('praise').getElementsByTagName('span')[0]
+var num = milib.getPurchaseNumber(s);
+i.innerHTML = num
+}
+//初始化代码显示
+function initCode(){
+var prearr = document.getElementsByTagName('pre');
+for (var i = 0; i < prearr.length; i++) {
+var temp_data = prearr[i].lastChild.nodeValue
+//正则处理 lavel5
+temp_data = temp_data.replace(/\^2\$/g, spaceString(2));
+temp_data = temp_data.replace(/\^4\$/g, spaceString(4));
+temp_data = temp_data.replace(/\^6\$/g, spaceString(6));
+temp_data = temp_data.replace(/\^8\$/g, spaceString(8));
+temp_data = temp_data.replace(/\^10\$/g, spaceString(10));
+temp_data = temp_data.replace(/\^12\$/g, spaceString(12));
+temp_data = temp_data.replace(/\^16\$/g, spaceString(16));
+temp_data = temp_data.replace(/\^20\$/g, spaceString(20));
+//set
+prearr[i].lastChild.nodeValue = temp_data;
+}
+}
+//产生空格
+function spaceString(num){
+var v = ''
+for (var i = 0; i < num; i++) {
+v += ' ';
+}
+return v;
+}
+function setSearchHistory (t) {
+if (!t)
+return;
+if (localStorage.course_search_list) {
+var list = localStorage.course_search_list.split('%,%');
+var i = list.indexOf(t);
+if (i !== -1) {
+list.splice(i, 1);
+list.push(t);
+localStorage.course_search_list = list.join('%,%');
+}else {
+localStorage.course_search_list += '%,%'+t;
+}
+}else {
+localStorage.course_search_list = t;
+}
+}
+window.onload = function(){
+setPraise();
+initCode();
+//将所有的button绑定事件
+var b = document.getElementsByTagName('button');
+for (var i = 0; i < b.length; i++) {
+if (b[i].className=='button') {
+b[i].setAttribute('target', i)
+b[i].onclick = btnEvent ;
+}
+}
+}
+$(function(){
+var url = location.href.split('?');
+var arg = url[1];
+if (!arg){
+return;
+}
+var args = arg.split('&');
+for (var i = 0; i < args.length; i++) {
+var c = args[i].split('=');
+if (c[0]=='form' && c[1] == 'web') {
+$('.web-show').css('display','block');
+$('.web-content').addClass('margin-header');
+}
+}
+})
+$(function() {
+$('form').submit(function() {
+setSearchHistory($("input[name='q']").val());
+})
+$('.bodywrapper .body form input').val("");
+$($('.bodywrapper .body form input')[0]).attr('placeholder', 'search');
+})
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-103260045-3', 'auto');
+ga('send', 'pageview');
+</script>
+</body>
+</html>
