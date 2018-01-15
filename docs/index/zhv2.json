@@ -215,6 +215,40 @@
         "auth_avatar": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAEgASAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAAAwQFBgcCAf/EADMQAAIBAwIDBQYGAwEAAAAAAAECAwAEEQUhBhIxE0FRYYEHIkJxkbEUFTKhwdEzUnIj/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAIEAwEF/8QAHBEBAQEBAQEAAwAAAAAAAAAAAQACEQMxISJB/9oADAMBAAIRAxEAPwC+oKdQx81NEYAqCQCdhk9ak7VRtRclorbI2phfxQ29wlzcukcajcu2BmvOLeJ7fhbT0cxia8nyLeLOAcYyWPcBmsbv7m+1rUjd6lO8rsSyht1U+AHQd30pXQTGe2strmhs5jGr2JkGAV7dc5+vnS5CSIHidXRujKcg+tYpLYSGNygIO29PdH1TUeHroywM7wLgSQFvcdc7/wDJ67iuG7rhLWWGKT7zXlpdwahZQ3lq3NDMvMpPX5HzHSg9TTyQaK8NeURLKA2AakbJEAxg4Jz1qNQ70+tpMEURZ7xbi/4hvZJXYiN+xjVvhUeHrk+tIWumgqD1wdhikNVuu34gvCOhnY4+RqWsZF2xImT51H6qNf4ZE/N6NOjCEFQc71GXtrFGwAUAdDU88yopaSVFUDfeoXVJoniwGzzfpONqQXttsOU7wQw/KpoAciGYgY8Dv9yamm/Uaq3AlwydvbGJiZGLs+dlxgfzVpbqaty9LzNHG5oorymlu1NK9uIgCQTk4AHU03DUlcXK2zxyyjEIyGf/AE8CfLzoio+o28EuqSGNh7zOuA2cHIPUV3bWjCRnmf3FUYURqCD379agtTli03iyaxt5keGaTt4ijAheYbg4qyvMzWZyMZXGTUnoca/xTR1u4ws/Yo/Ux7HPf40g+niGR5JZZGXmLYdyceQ8qRt7p5polVVQxADK53/rpTu7LOhyTygb1n8tv1Zbg2UHUJVVcjLb56Daraep+dULgW4c6/cQgAp2RfOO8kf1V7Lbn51Zg4Xnej1gmiuSaKezvM0je3f4S3MgjMjkhUjXqxPd/J8gaVrpaIs99oS2U1tBqlkOSa3xzoECllPKdx3fqA38/CldOU6tp6XEczImMBVPWrlr1l+Y6Nd2x+OM4NZPwve6lbrL+XSRyGNsNBIfdcHvU9xrP0BLbyXvK2QWHZkqCykYBIYk11qKmxtCxkJVvdHMcmmdtqmpTs7LZpCFxnnkBI9BSnJNcH8Reuryj/GgGFTzx4+dYPD+1XHX4Cf+ztLMLessoN+rBZYid0UdDjwOatx76webU7mw4kmvdPmMc0Uh5WHQ9AQR3g46VoOk+0rTrhFXUrWe2l+J4wHj+/N+x+dVHyh19a6k0VG22saNqnILXUbd3zlV5wr/AEO9Fdln9xcQWkLT3c8cMS9XkYKB6mqlq/tH0qz5k02KS/lHxD/zjHqRk+g9aKKLtSdX4u1nWg6XFz2Nu+34eAcqkefefU48qb8Iz41NoeYBpUPJk9WG+PvRRS7O5ZsPNDXYRB8Soh94fCcYpvqV4LHSprnAHICEBPVug/eiio8ndcvR08wpZrCC7sSck538aUVSrYxRRV15ktRRRRF//9k=",
         "funding_process": 69,
         "funding_desc": "众筹相关说明众筹相关说明众筹相关说明众筹相关说明众筹相关说明众筹相关说明众筹相关说明众筹相关说明众筹相关说明众筹相关说明",
+        "comment" : [
+            {
+                "id":"String",
+                "avatar":"http://www.qqu.cc/uploads/allimg/161214/1-1612141141550-L.jpg",
+                "from":"User name",
+                "re":"User name(nullable)",
+                "content":"String",
+                "data":"String"
+            },
+            {
+                "id":"String",
+                "avatar":"http://www.qqu.cc/uploads/allimg/161214/1-1612141141550-L.jpg",
+                "from":"User name",
+                "re":"",
+                "content":"String",
+                "data":"String"
+            },
+            {
+                "id":"String",
+                "avatar":"http://www.qqu.cc/uploads/allimg/161214/1-1612141141550-L.jpg",
+                "from":"User name",
+                "re":"",
+                "content":"String",
+                "data":"String"
+            },
+            {
+                "id":"String",
+                "avatar": "http://file5.u148.net/2016/12/images/14812753384668S4GWNCTK.jpg",
+                "from":"User name",
+                "re":"",
+                "content":"String",
+                "data":"String"
+            }
+        ],
         "funding_user": [
             {
                 "avatar": "http://file5.u148.net/2016/12/images/14812753384668S4GWNCTK.jpg",
