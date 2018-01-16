@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>简述</title>
 <link rel="stylesheet" href="../../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true,
+SOURCELINK_SUFFIX: '.txt'
+};
+</script>
+<script type="text/javascript" src="../../static/jquery.js"></script>
+<script type="text/javascript" src="../../static/underscore.js"></script>
+<script type="text/javascript" src="../../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body role="document">
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -67,7 +80,7 @@ type(s)
 &lt;class &#39;str&#39;&gt;
 </pre></div>
 </div>
-<p>可以使用单引号（’‘）或双引号（”“）来表示字符串。</p>
+<p>可以使用单引号（&#8217;&#8216;）或双引号（"&#8220;）来表示字符串。</p>
 <p><strong>PS</strong>： 单引号比双引号更常用。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>  <span class="c1"># 单引号</span>
 <span class="n">s</span>
@@ -75,15 +88,15 @@ type(s)
 <span class="n">s</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>字符串可以跨多行，但是每行末尾必须添加反斜杠（）以转义换行符。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello </span><span class="se">\</span>
 <span class="s1">World&#39;</span>
 <span class="n">s</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
-<p>三重引号（’‘’ 或 “”“）内的字符串可以跨多个文本行。</p>
+<button class="button">Run ...</button>
+<p>三重引号（&#8217;&#8216;&#8217; 或 &#8220;"&#8220;）内的字符串可以跨多个文本行。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;Hello</span>
 <span class="s1">Python</span>
 <span class="s1">&#39;&#39;&#39;</span>
@@ -95,7 +108,7 @@ type(s)
 <span class="n">s</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p><strong>注意</strong>： 三重引号通常用于表示多行字符串和 docstring。</p>
 </div>
 </div>
@@ -110,7 +123,7 @@ type(s)
 <li>反向索引（从右到左）：索引从 -1 开始，直到 -length，可以很方便地访问字符串末尾附近的字符。</li>
 </ul>
 <p>其中，length 为字符串的长度。</p>
-<p>为了更清晰以上概念，来看一个直观地索引图。假设，有一个字符串 s = “Hello”：</p>
+<p>为了更清晰以上概念，来看一个直观地索引图。假设，有一个字符串 s = &#8220;Hello"：</p>
 <img alt="http://img.blog.csdn.net/20170510181247783" src="http://img.blog.csdn.net/20170510181247783" />
 <p>使用 [index] 的语法形式来访问指定索引处的字符：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
@@ -118,21 +131,21 @@ type(s)
 <span class="n">s</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>  <span class="c1"># 最后一个字符</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>负索引（反向索引）从字符串的末尾开始计数，也可以起到同样的效果：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
 <span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">]</span>  <span class="c1"># 第一个字符</span>
 <span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># 最后一个字符</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>试图访问索引范围外的字符会引发 IndexError。索引必须是一个整数，不能使用 float 或其他类型，这将引发 TypeError。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
 <span class="n">s</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span>
 <span class="n">s</span><span class="p">[</span><span class="mf">1.5</span><span class="p">]</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 </div>
 <div class="section" id="id5">
 <h2>切片<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
@@ -152,7 +165,7 @@ type(s)
 <span class="n">s</span><span class="p">[:]</span>  <span class="c1"># 所有字符（从开始到结束）</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p><strong>PS</strong>： s[:] 形式会忽略开始和结束索引，总是获得一个完整的副本。是 pythonic 使用的方式，用于复制序列（例如：字符串或列表）。</p>
 <p>和提取字符类似，切片操作也可以使用反向索引：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># 第 2 个到第 4 个字符</span>
@@ -160,7 +173,7 @@ type(s)
 <span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span>  <span class="c1"># 第 3 个到最后一个字符</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>对于任何索引 n，s[:n] + s[n:] == s 是一个整齐的切片，甚至对于负数或超出界限的值也是如此。换一种说法，s[:n] 和 s[n:] 总是将字符串分成两部分，来保存所有的字符。</p>
 </div>
 <div class="section" id="id6">
@@ -173,7 +186,7 @@ type(s)
 <span class="n">s</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>无法从字符串中删除字符，但是可以使用关键字 del 完全删除字符串。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
 <span class="k">del</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
@@ -181,7 +194,7 @@ type(s)
 <span class="n">s</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 </div>
 <div class="section" id="id7">
 <h2>基本操作<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
@@ -206,7 +219,7 @@ type(s)
 <span class="n">s</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>如果想在不同的行中连接字符串，可以使用括号。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># 两个字符串一起</span>
 <span class="s1">&#39;Hello,&#39;</span> <span class="s1">&#39; World!&#39;</span>
@@ -215,7 +228,7 @@ type(s)
 <span class="n">s</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>操作符 + 不会将数字或其他类型自动转换为字符串形式，需要通过 str() 函数将值转换为字符串形式，以便它们可以与其他字符串组合。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">18</span>
 <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;My age is &#39;</span> <span class="o">+</span> <span class="n">age</span>
@@ -223,7 +236,7 @@ type(s)
 <span class="n">s</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 </div>
 <div class="section" id="id11">
 <h2>重复字符串<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
@@ -233,7 +246,7 @@ type(s)
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="mi">20</span><span class="p">)</span>  <span class="c1"># 无需输入很多 -</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 </div>
 <div class="section" id="id12">
 <h2>最大值/最小值<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
@@ -243,14 +256,14 @@ type(s)
 <span class="nb">chr</span><span class="p">(</span><span class="mi">72</span><span class="p">)</span>  <span class="c1"># ASCII 码转字符</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>别犹豫啦，开始比较吧！</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
 <span class="nb">min</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># 最小字符</span>
 <span class="nb">max</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># 最大字符</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 </div>
 <div class="section" id="id13">
 <h2>字符串成员测试<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
@@ -259,7 +272,7 @@ type(s)
 <span class="s1">&#39;th&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s1">&#39;python&#39;</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 </div>
 <div class="section" id="id14">
 <h2>字符串长度<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
@@ -268,7 +281,7 @@ type(s)
 <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>  <span class="c1"># 字符数</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 </div>
 <div class="section" id="id15">
 <h2>迭代字符串<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
@@ -281,7 +294,7 @@ for letter in &#39;Hello&#39;:
 print(count, &#39;letters found&#39;)
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>还可使用 enumerate()，它会返回一个枚举对象，包含字符串中所有元素的索引和值（作为一对），这对于迭代很有用。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>s = &#39;Hello&#39;
 e = list(enumerate(s))
@@ -290,7 +303,7 @@ for index, item in e:
     print(index, item)
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>运行程序，输出如下：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>[(0, ‘H’), (1, ‘e’), (2, ‘l’), (3, ‘l’), (4, ‘o’)]
 </pre></div>
@@ -330,7 +343,7 @@ for index, item in e:
 <span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>  <span class="c1"># 分割字符串</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 </div>
 <div class="section" id="id17">
 <h2>作者 &amp; 更新时间<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>

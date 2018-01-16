@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>生成器 &amp; 迭代器</title>
 <link rel="stylesheet" href="../../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true,
+SOURCELINK_SUFFIX: '.txt'
+};
+</script>
+<script type="text/javascript" src="../../static/jquery.js"></script>
+<script type="text/javascript" src="../../static/underscore.js"></script>
+<script type="text/javascript" src="../../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body role="document">
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -108,7 +121,7 @@ for x in collatz(7):
     print x,
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>运行的结果会是：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">22</span> <span class="mi">11</span> <span class="mi">34</span> <span class="mi">17</span> <span class="mi">52</span> <span class="mi">26</span> <span class="mi">13</span> <span class="mi">40</span> <span class="mi">20</span> <span class="mi">10</span> <span class="mi">5</span> <span class="mi">16</span> <span class="mi">8</span> <span class="mi">4</span> <span class="mi">2</span> <span class="mi">1</span>
 </pre></div>
@@ -131,7 +144,7 @@ for x in Collatz(7):
     print x,
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>生成器的版本如下：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>def collatz(n):
     while n != 1:
@@ -144,13 +157,13 @@ for x in collatz(7):
     print x,
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>事实上，生成器也是一种迭代器：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">collatz</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 <span class="nb">print</span> <span class="n">x</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>输出如下</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">generator</span> <span class="nb">object</span> <span class="n">collatz</span> <span class="n">at</span> <span class="mh">0x0000000003B63750</span><span class="o">&gt;</span>
 </pre></div>
@@ -161,7 +174,7 @@ for x in collatz(7):
 <span class="nb">print</span> <span class="n">x</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p><em>__iter__</em> 方法返回的是它本身：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">collatz</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 <span class="nb">print</span> <span class="n">x</span><span class="o">.</span><span class="fm">__iter__</span><span class="p">()</span>
@@ -206,7 +219,7 @@ for x in collatz(7):
         node = node.right
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <div class="highlight-default"><div class="highlight"><pre><span></span>class BinaryTree(object):
     def __init__(self, value, left=None, right=None):
         self.value = value
@@ -246,7 +259,7 @@ for value in tree:
     print value,
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>正确应输出：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span>
 </pre></div>

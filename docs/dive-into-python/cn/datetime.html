@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>datetime 模块</title>
 <link rel="stylesheet" href="../../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true,
+SOURCELINK_SUFFIX: '.txt'
+};
+</script>
+<script type="text/javascript" src="../../static/jquery.js"></script>
+<script type="text/javascript" src="../../static/underscore.js"></script>
+<script type="text/javascript" src="../../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body role="document">
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -62,7 +75,7 @@
 <span class="nb">dir</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <div class="section" id="date">
 <h2>date 对象<a class="headerlink" href="#date" title="Permalink to this headline">¶</a></h2>
 <p>可以使用 date(year, month, day) 产生一个 date 对象：</p>
@@ -80,7 +93,7 @@
 <span class="nb">print</span> <span class="n">d1</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%a, %m-</span><span class="si">%d</span><span class="s1">-%Y&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>可以看两个日期相差多久：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
 <span class="n">d1</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2007</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
@@ -88,7 +101,7 @@
 <span class="nb">print</span> <span class="n">d2</span> <span class="o">-</span> <span class="n">d1</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>返回的是一个 timedelta 对象：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
 <span class="n">d1</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2007</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
@@ -103,7 +116,7 @@
 <span class="nb">print</span> <span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 </div>
 <div class="section" id="time">
 <h2>time 对象<a class="headerlink" href="#time" title="Permalink to this headline">¶</a></h2>
@@ -113,7 +126,7 @@
 <span class="n">t2</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">time</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>改变显示格式：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
 <span class="n">t1</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">time</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">38</span><span class="p">)</span>
@@ -122,7 +135,7 @@
 <span class="nb">print</span> <span class="n">t1</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%H:%M:%S, %p&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>因为没有具体的日期信息，所以 time 对象不支持减法操作。</p>
 </div>
 <div class="section" id="id1">
@@ -134,7 +147,7 @@
 <span class="nb">print</span> <span class="n">d1</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>给当前的时间加上 30 天，timedelta 的参数是 timedelta(day, hr, min, sec, us)：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
 <span class="n">d1</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
@@ -142,13 +155,13 @@
 <span class="nb">print</span> <span class="n">d2</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>除此之外，我们还可以通过一些指定格式的字符串来创建 datetime 对象：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
 <span class="nb">print</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="s1">&#39;2/10/01&#39;</span><span class="p">,</span> <span class="s1">&#39;%m/</span><span class="si">%d</span><span class="s1">/%y&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <table border="1" class="docutils">
 <colgroup>
 <col width="12%" />

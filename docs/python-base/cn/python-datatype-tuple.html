@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>简述</title>
 <link rel="stylesheet" href="../../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true,
+SOURCELINK_SUFFIX: '.txt'
+};
+</script>
+<script type="text/javascript" src="../../static/jquery.js"></script>
+<script type="text/javascript" src="../../static/underscore.js"></script>
+<script type="text/javascript" src="../../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body role="document">
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -80,7 +93,7 @@ type(tup)
 &lt;class &#39;tuple&#39;&gt;
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>元组中的元素可以是任意数量，还可以是不同类型（例如：数字、字符串、列表等）。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span> <span class="n">tup</span> <span class="o">=</span> <span class="p">()</span>  <span class="c1"># 空元组</span>
 <span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">)</span>   <span class="c1"># 字符串类型元组</span>
@@ -98,7 +111,7 @@ type(tup)
 <span class="s1">&#39;Python&#39;</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>构造包含一个元素的元组比较特殊，括号内只包含一个元素是不够的，还需要在元素后添加一个逗号。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>tup = (&#39;Python&#39;)  # 只有括号
 type(tup)
@@ -108,7 +121,7 @@ type(tup)
 &lt;class &#39;tuple&#39;&gt;
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>可以看出，没有逗号就不是元组，加了逗号才是。</p>
 </div>
 <div class="section" id="id4">
@@ -131,7 +144,7 @@ type(tup)
 <span class="p">(</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>其他的一些基本操作，例如：连接（+）、重复（*）、成员测试（in）、遍历（for）等，就不再一一展示了，请参考：Python 列表</p>
 <p>更改元组</p>
 <p>元组是不可变的，也就是说，元组中的元素在被赋值后不能改变。</p>
@@ -143,7 +156,7 @@ type(tup)
 <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 </div>
 <div class="section" id="id5">
 <h2>删除元组<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
@@ -155,7 +168,7 @@ type(tup)
 <span class="n">tup</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 </div>
 <div class="section" id="id6">
 <h2>列表和元组互转<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
@@ -170,7 +183,7 @@ type(tup)
 <span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>既然可以互转，那么要改变元组，可以先将其转化为列表，对列表进行更改，然后再将列表转换为元组。</p>
 <p>例如，删除元组中的元素：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span> <span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">)</span>
@@ -181,7 +194,7 @@ type(tup)
 <span class="p">(</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p><strong>注意</strong>： 元组本身是不可变的。这里说的并不是传统意义的改变，相当于元组的重新赋值。</p>
 </div>
 <div class="section" id="id7">
@@ -191,7 +204,7 @@ type(tup)
 <span class="p">[</span><span class="s1">&#39;__add__&#39;</span><span class="p">,</span> <span class="s1">&#39;__class__&#39;</span><span class="p">,</span> <span class="s1">&#39;__contains__&#39;</span><span class="p">,</span> <span class="s1">&#39;__delattr__&#39;</span><span class="p">,</span> <span class="s1">&#39;__dir__&#39;</span><span class="p">,</span> <span class="s1">&#39;__doc__&#39;</span><span class="p">,</span> <span class="s1">&#39;__eq__&#39;</span><span class="p">,</span> <span class="s1">&#39;__format__&#39;</span><span class="p">,</span> <span class="s1">&#39;__ge__&#39;</span><span class="p">,</span> <span class="s1">&#39;__getattribute__&#39;</span><span class="p">,</span> <span class="s1">&#39;__getitem__&#39;</span><span class="p">,</span>      <span class="s1">&#39;__getnewargs__&#39;</span><span class="p">,</span> <span class="s1">&#39;__gt__&#39;</span><span class="p">,</span> <span class="s1">&#39;__hash__&#39;</span><span class="p">,</span> <span class="s1">&#39;__init__&#39;</span><span class="p">,</span> <span class="s1">&#39;__iter__&#39;</span><span class="p">,</span> <span class="s1">&#39;__le__&#39;</span><span class="p">,</span> <span class="s1">&#39;__len__&#39;</span><span class="p">,</span> <span class="s1">&#39;__lt__&#39;</span><span class="p">,</span> <span class="s1">&#39;__mul__&#39;</span><span class="p">,</span> <span class="s1">&#39;__ne__&#39;</span><span class="p">,</span> <span class="s1">&#39;__new__&#39;</span><span class="p">,</span> <span class="s1">&#39;__reduce__&#39;</span><span class="p">,</span> <span class="s1">&#39;__reduce_ex__&#39;</span><span class="p">,</span>      <span class="s1">&#39;__repr__&#39;</span><span class="p">,</span> <span class="s1">&#39;__rmul__&#39;</span><span class="p">,</span> <span class="s1">&#39;__setattr__&#39;</span><span class="p">,</span> <span class="s1">&#39;__sizeof__&#39;</span><span class="p">,</span> <span class="s1">&#39;__str__&#39;</span><span class="p">,</span> <span class="s1">&#39;__subclasshook__&#39;</span><span class="p">,</span> <span class="s1">&#39;count&#39;</span><span class="p">,</span> <span class="s1">&#39;index&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>可以看到，有两个可用的方法：：</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -218,7 +231,7 @@ type(tup)
 <span class="n">tup</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>  <span class="c1"># 统计 &#39;o&#39; 在元组中出现的次数</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p><strong>注意</strong>： 元组不可变，所以添加或删除元素的方法不适用于元组。</p>
 </div>
 <div class="section" id="id8">

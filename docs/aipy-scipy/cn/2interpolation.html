@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>插值</title>
 <link rel="stylesheet" href="../../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true,
+SOURCELINK_SUFFIX: '.txt'
+};
+</script>
+<script type="text/javascript" src="../../static/jquery.js"></script>
+<script type="text/javascript" src="../../static/underscore.js"></script>
+<script type="text/javascript" src="../../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body role="document">
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -88,7 +101,7 @@ print &quot;...\t...&quot;
 <p>298.15  35.639</p>
 <p>300.0   35.708</p>
 <p>350.0   37.874</p>
-<p>…     …</p>
+<p>...     ...</p>
 <p>绘图：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;TK&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Cp&#39;</span><span class="p">],</span> <span class="s1">&#39;kx&#39;</span><span class="p">)</span>
 <span class="n">t</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;JANAF data for Methane $CH_4$&quot;</span><span class="p">)</span>
@@ -108,7 +121,7 @@ print &quot;...\t...&quot;
 </div>
 <dl class="docutils">
 <dt>::</dt>
-<dd>ch4_cp = interp1d(data[‘TK’], data[‘Cp’])</dd>
+<dd>ch4_cp = interp1d(data[&#8216;TK&#8217;], data[&#8216;Cp&#8217;])</dd>
 </dl>
 <p>interp1d 的返回值可以像函数一样接受输入，并返回插值的结果。
 单个输入值，注意返回的是数组：</p>

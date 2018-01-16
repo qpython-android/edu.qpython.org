@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>SQL 数据库</title>
 <link rel="stylesheet" href="../../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true,
+SOURCELINK_SUFFIX: '.txt'
+};
+</script>
+<script type="text/javascript" src="../../static/jquery.js"></script>
+<script type="text/javascript" src="../../static/underscore.js"></script>
+<script type="text/javascript" src="../../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body role="document">
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -84,7 +97,7 @@
 <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>不过为了安全起见，一般不将数据内容写入字符串再传入，而是使用这样的方式：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="k">as</span> <span class="nn">db</span>
 <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;my_database.sqlite&quot;</span><span class="p">)</span>
@@ -98,7 +111,7 @@
 <span class="n">connection</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>cx-oracle 数据库使用不同的方式：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cursor</span><span class="o">.</span><span class="n">executemany</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;INSERT INTO orders VALUES</span>
 <span class="s2">    (:order_id, :date, :symbol, :quantity, :price)&quot;&quot;&quot;</span><span class="p">,</span>
@@ -110,13 +123,13 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">paramstyle</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>在 query 语句执行之后，我们需要进行 commit，否则数据库将不会接受这些变化，如果想撤销某个 commit，可以使用 rollback() 方法撤销到上一次 commit() 的结果：</p>
 <dl class="docutils">
 <dt>::</dt>
 <dd><dl class="first last docutils">
 <dt>try:</dt>
-<dd>    … # perform some operations</dd>
+<dd>    ... # perform some operations</dd>
 <dt>except:</dt>
 <dd>    connection.rollback()
     raise</dd>
@@ -138,7 +151,7 @@
 <span class="nb">print</span> <span class="n">row</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>cursor.fetchone() 返回下一条内容， cursor.fetchall() 返回所有查询到的内容组成的列表（可能非常大）：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="k">as</span> <span class="nn">db</span>
 <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;my_database.sqlite&quot;</span><span class="p">)</span>
@@ -151,7 +164,7 @@
 <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 <p>读写完毕数据库之后需要关闭数据库：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>

@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>QSL4A - QPython’s Android script layer</title>
 <link rel="stylesheet" href="../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true,
+SOURCELINK_SUFFIX: '.txt'
+};
+</script>
+<script type="text/javascript" src="../static/jquery.js"></script>
+<script type="text/javascript" src="../static/underscore.js"></script>
+<script type="text/javascript" src="../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body role="document">
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -56,11 +69,11 @@
 <div class="bodywrapper">
 <div class="body" role="main">
 <div class="section" id="qsl4a-qpython-s-android-script-layer">
-<h1>QSL4A - QPython’s Android script layer<a class="headerlink" href="#qsl4a-qpython-s-android-script-layer" title="Permalink to this headline">¶</a></h1>
-<p>SL4A is an acronym for Android’s script layer, QSL4A is QPython’s Android script layer.</p>
+<h1>QSL4A - QPython&#8217;s Android script layer<a class="headerlink" href="#qsl4a-qpython-s-android-script-layer" title="Permalink to this headline">¶</a></h1>
+<p>SL4A is an acronym for Android&#8217;s script layer, QSL4A is QPython&#8217;s Android script layer.</p>
 <div class="section" id="what-is-sl4a">
 <h2>What is SL4A?<a class="headerlink" href="#what-is-sl4a" title="Permalink to this headline">¶</a></h2>
-<p>The full name of SL4A Scripting Layer for Android, as the name suggests is Android’s script architecture layer, Its purpose is to develop Android applications using well-known scripting languages.Its working principle is based on RPC remote call, through the local script parser and the remote native Android server layer APK information exchange,That is to achieve a remote agent,The local script function calls is encapsulated by JSON format,pass to the Remote ECS APK and proceed to the actual android system function call,and the results of the operation will be fed back to the local script parser,finally the terminal will show the results of the operation.</p>
+<p>The full name of SL4A Scripting Layer for Android, as the name suggests is Android&#8217;s script architecture layer, Its purpose is to develop Android applications using well-known scripting languages.Its working principle is based on RPC remote call, through the local script parser and the remote native Android server layer APK information exchange,That is to achieve a remote agent,The local script function calls is encapsulated by JSON format,pass to the Remote ECS APK and proceed to the actual android system function call,and the results of the operation will be fed back to the local script parser,finally the terminal will show the results of the operation.</p>
 <p>QPython integrated support of SL4A, users can easily be invoked by Andrews characteristics Python code, by SL4A.</p>
 </div>
 <div class="section" id="qsl4a-supported-interfaces">
@@ -75,7 +88,7 @@
 </ul>
 <p><strong>Android related device interface</strong></p>
 <ul class="simple">
-<li>Camera??Access &amp; recall device’s camera interface <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#camerafacade">(APIs Document)</a></li>
+<li>Camera??Access &amp; recall device&#8217;s camera interface <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#camerafacade">(APIs Document)</a></li>
 <li>Contact??Contact access interface <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#contactsfacade">(APIs Document)</a></li>
 <li>Location??Access location interface <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#locationfacade">(APIs Document)</a></li>
 <li>Phone: Access the phone interface <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#phonefacade">(APIs Document)</a></li>
@@ -84,11 +97,11 @@
 <li>Sensor Management: Access Control &amp; Sensor device <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#sensormanagerfacade">(APIs Document)</a></li>
 <li>Settings: Ability to set device screen, flight mode, ringtone mode, vibration mode, volume, brightness, etc. <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#settingsfacade">(APIs Document)</a></li>
 <li>SMS: equipment can be access to SMS <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#smsfacade">(APIs Document)</a></li>
-<li>Speech recognition: Can recognize the user’s speech and returns the most likely outcome <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#speechrecognitionfacade">(APIs Document)</a></li>
+<li>Speech recognition: Can recognize the user&#8217;s speech and returns the most likely outcome <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#speechrecognitionfacade">(APIs Document)</a></li>
 <li>Tone Generator: The ability to generate DTMF speech from a given phone number <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#tonegeneratorfacade">(APIs Document)</a></li>
-<li>Wake lock: The device’s wake lock interface <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#wakelockfacade">(APIs Document)</a></li>
+<li>Wake lock: The device&#8217;s wake lock interface <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#wakelockfacade">(APIs Document)</a></li>
 <li>WIFI: Device WIFI Management <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#wififacade">(APIs Document)</a></li>
-<li>Battery Management: Provides the device’s battery management interface <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#batterymanagerfacade">(APIs Document)</a></li>
+<li>Battery Management: Provides the device&#8217;s battery management interface <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#batterymanagerfacade">(APIs Document)</a></li>
 <li>Media Player: Media Player Settings <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#mediaplayerfacade">(APIs Document)</a></li>
 <li>Preferences: Access / Control Preferences <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#preferencesfacade">(APIs Document)</a></li>
 <li>Text Voice: Control text to voice output <a class="reference external" href="http://www.qpython.org/en/guide_androidhelpers.html#texttospeechfacade">(APIs Document)</a></li>
@@ -106,7 +119,7 @@
 </div>
 <div class="section" id="sample-code">
 <h2>Sample Code<a class="headerlink" href="#sample-code" title="Permalink to this headline">¶</a></h2>
-<p>In Android, you can import the androidhelper module to load QSL4A support.Let’s run a simple QSL4A script to experience the following:</p>
+<p>In Android, you can import the androidhelper module to load QSL4A support.Let&#8217;s run a simple QSL4A script to experience the following:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>import androidhelper
 droid = androidhelper.Android()
 line = droid.dialogGetInput()
@@ -114,7 +127,7 @@ s = &quot;Hello, %s&quot; % (line.result,)
 droid.makeToast(line)
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 </div>
 </div>
 </div>

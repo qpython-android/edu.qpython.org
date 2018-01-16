@@ -1,16 +1,29 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>QPython’s KivyApp</title>
 <link rel="stylesheet" href="../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+<script type="text/javascript">
+var DOCUMENTATION_OPTIONS = {
+URL_ROOT:    '../',
+VERSION:     '0.9',
+COLLAPSE_INDEX: false,
+FILE_SUFFIX: '.html',
+HAS_SOURCE:  true,
+SOURCELINK_SUFFIX: '.txt'
+};
+</script>
+<script type="text/javascript" src="../static/jquery.js"></script>
+<script type="text/javascript" src="../static/underscore.js"></script>
+<script type="text/javascript" src="../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body role="document">
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -56,15 +69,15 @@
 <div class="bodywrapper">
 <div class="body" role="main">
 <div class="section" id="qpython-s-kivyapp">
-<h1>QPython’s KivyApp<a class="headerlink" href="#qpython-s-kivyapp" title="Permalink to this headline">¶</a></h1>
+<h1>QPython&#8217;s KivyApp<a class="headerlink" href="#qpython-s-kivyapp" title="Permalink to this headline">¶</a></h1>
 <p>Kivy is a support multi-touch cross-platform graphical interface development framework in python.Use Kivy can easily develop GUI applications including games.QPython can support Kivy better.</p>
 <div class="section" id="kivy-s-installation">
-<h2>Kivy’s installation<a class="headerlink" href="#kivy-s-installation" title="Permalink to this headline">¶</a></h2>
+<h2>Kivy&#8217;s installation<a class="headerlink" href="#kivy-s-installation" title="Permalink to this headline">¶</a></h2>
 <p>Before using Kivy, you need to have Kivy installed.You can install and upgrade kivy related libraries in QPYPI,QPYPI can automatically install dependent libraries.If Kivy needs to be updated, You can also upgrade operated by QPYPI.</p>
 <img alt="Manage kivy libraries in QPYPI" src="http://edu.qpython.org/static/qpypi-kivy.png" />
 </div>
 <div class="section" id="kivyapp-sstatement">
-<h2>KivyApp’sstatement<a class="headerlink" href="#kivyapp-sstatement" title="Permalink to this headline">¶</a></h2>
+<h2>KivyApp&#8217;sstatement<a class="headerlink" href="#kivyapp-sstatement" title="Permalink to this headline">¶</a></h2>
 <p>In QPython, the program type distinguished by head declarations, When the header has the following definition, we know it is a KivyApp program.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#qpy:kivy</span>
 </pre></div>
@@ -75,7 +88,7 @@
 </div>
 </div>
 <div class="section" id="kivyapp-s-run-process">
-<h2>KivyApp’s Run Process<a class="headerlink" href="#kivyapp-s-run-process" title="Permalink to this headline">¶</a></h2>
+<h2>KivyApp&#8217;s Run Process<a class="headerlink" href="#kivyapp-s-run-process" title="Permalink to this headline">¶</a></h2>
 <p>After the program is identified as KivyApp operation, QPython will start the OpenGL engine at the same time, Create a new SDL view, And in which to complete the rendering, output screen.</p>
 </div>
 <div class="section" id="exit">
@@ -84,7 +97,7 @@
 </div>
 <div class="section" id="e-g">
 <h2>E.g<a class="headerlink" href="#e-g" title="Permalink to this headline">¶</a></h2>
-<p>Let’s look at a simple example about KivyApp,This is the default sample program installed after installing QPython.</p>
+<p>Let&#8217;s look at a simple example about KivyApp,This is the default sample program installed after installing QPython.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#qpy:kivy
 from kivy.app import App
 from kivy.uix.button import Button
@@ -94,7 +107,7 @@ class TestApp(App):
 TestApp().run()
 </pre></div>
 </div>
-<button class="button">Run …</button>
+<button class="button">Run ...</button>
 </div>
 </div>
 </div>
