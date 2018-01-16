@@ -29,7 +29,7 @@ You can submit multiple times, we will take the final manuscript as your final w
 
 Evaluation methods
 -----------------------
-At the end of the month, we will issue a document on this public account to list the entries, Each contest will  voted the user selected the most Pythonic code winner, Domestic winners receive QPython T-Shirt or themed souvenirs.
+At the end of the month, we will issue a document on QPython community to list the entries, Each contest will voted the user selected the most Pythonic code winner, Domestic winners receive QPython T-Shirt or themed souvenirs.
 
 The 0x00 issue of the challenge
 --------------------------------
@@ -44,5 +44,9 @@ The title of Challenge 2 is already in the article, please find it.
 Take out QPython in your pocket and write out the Pythonic code comments on the subject two subject names and send them to us, Compared to other QPythoners, see who is more Pythonic?
 
 
+Join the QPython community
+----------------------------
 
+* `QPython@Facebook <https://www.facebook.com/groups/qpython>`_
+* `QPython@G+ <https://plus.google.com/u/2/communities/111759148772865961493>`_
 

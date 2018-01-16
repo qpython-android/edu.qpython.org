@@ -1,4 +1,4 @@
-Data Analytics
+Dive into Python
 =======================
 The courses are still in the planning. Welcome to reward us. 
 

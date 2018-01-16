@@ -1,4 +1,4 @@
-Data Analytics
+Python Basics
 =======================
 The courses are still in the planning. Welcome to reward us. 
 

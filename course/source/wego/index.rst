@@ -1,5 +1,5 @@
-Data Analytics
-=======================
+WegoX (Wechat openplatform SDK)
+==============================================
 The courses are still in the planning. Welcome to reward us. 
 
 1. **Primary course**
