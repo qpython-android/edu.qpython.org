@@ -221,7 +221,8 @@
                 "avatar":"http://www.qqu.cc/uploads/allimg/161214/1-1612141141550-L.jpg",
                 "from":"User name",
                 "re":"User name(nullable)",
-                "content":"String",
+                "re_content":"String",
+                "from_content":"String", 
                 "data":"String"
             },
             {
@@ -229,7 +230,8 @@
                 "avatar":"http://www.qqu.cc/uploads/allimg/161214/1-1612141141550-L.jpg",
                 "from":"User name",
                 "re":"",
-                "content":"String",
+                "re_content":"String",
+                "from_content":"String", 
                 "data":"String"
             },
             {
@@ -237,7 +239,8 @@
                 "avatar":"http://www.qqu.cc/uploads/allimg/161214/1-1612141141550-L.jpg",
                 "from":"User name",
                 "re":"",
-                "content":"String",
+                "re_content":"String",
+                "from_content":"String", 
                 "data":"String"
             },
             {
@@ -245,7 +248,8 @@
                 "avatar": "http://file5.u148.net/2016/12/images/14812753384668S4GWNCTK.jpg",
                 "from":"User name",
                 "re":"",
-                "content":"String",
+                "re_content":"String",
+                "from_content":"String", 
                 "data":"String"
             }
         ],

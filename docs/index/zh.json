@@ -488,6 +488,96 @@
         "logo": "http://edu.qpython.org/static/course-numpy.png",
         "open": 0,
         "courses":[
+            {
+                "rdate":"2017-12-14",
+                "link":"http://edu.qpython.org/aipy-numpy/cn/1pyplot.html",
+                "smodule":"aipy-numpy-pyplot",
+                "description":"Pyplot 教程",
+                "title":"Numpy 入门 - Pyplot 教程",
+                "reward":"0",
+                "downloads": "10,000+"
+            },
+            {
+                "rdate":"2017-12-14",
+                "link":"http://edu.qpython.org/aipy-numpy/cn/2pyplot-style.html",
+                "smodule":"aipy-numpy-pyplot-style",
+                "description":"使用 style 来配置 pyplot 风格",
+                "title":"Numpy 入门 - 使用 style 来配置 pyplot 风格",
+                "reward":"0",
+                "downloads": "10,000+"
+            },
+            {
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/aipy-numpy/cn/3text-base.html",
+                "smodule":"aipy-numpy-text-base",
+                "description":"处理文本（基础）",
+                "title":"Numpy 入门 - 处理文本（基础）",
+                "reward":"0",
+                "downloads": "10,000+"
+            },
+            {
+                "rdate":"2017-12-14",
+                "link":"http://edu.qpython.org/aipy-numpy/cn/4text-math.html",
+                "smodule":"aipy-numpy-text-math",
+                "description":"处理文本（数学表达式）",
+                "title":"Numpy 入门 - 处理文本（数学表达式）",
+                "reward":"0",
+                "downloads": "10,000+"
+            },
+            {
+                "rdate":"2017-12-14",
+                "link":"http://edu.qpython.org/aipy-numpy/cn/5image-base.html",
+                "smodule":"aipy-numpy-image-base",
+                "description":"图像基础",
+                "title":"Numpy 入门 - 图像基础",
+                "reward":"0",
+                "downloads": "10,000+"
+            },
+            {
+                "rdate":"2017-12-14",
+                "link":"http://edu.qpython.org/aipy-numpy/cn/6annotation.html",
+                "smodule":"aipy-numpy-annotation",
+                "description":"注释",
+                "title":"Numpy 入门 - 注释",
+                "reward":"0",
+                "downloads": "10,000+"
+            },
+            {
+                "rdate":"2017-12-14",
+                "link":"http://edu.qpython.org/aipy-numpy/cn/7tag.html",
+                "smodule":"aipy-numpy-tag",
+                "description":"标签",
+                "title":"Numpy 入门 - 标签",
+                "reward":"0",
+                "downloads": "10,000+"
+            },
+            {
+                "rdate":"2017-12-14",
+                "link":"http://edu.qpython.org/aipy-numpy/cn/8figures-subplots-axes-ticks.html",
+                "smodule":"aipy-numpy-figures-subplots-axes-ticks",
+                "description":"figures, subplots, axes 和 ticks 对象",
+                "title":"Numpy 入门 - figures, subplots, axes 和 ticks 对象",
+                "reward":"0",
+                "downloads": "10,000+"
+            },
+            {
+                "rdate":"2017-12-14",
+                "link":"http://edu.qpython.org/aipy-numpy/cn/9dont-trust-default.html",
+                "smodule":"aipy-numpy-dont-trust-default",
+                "description":"函数进阶",
+                "title":"Numpy 入门 - 函数进阶",
+                "reward":"0",
+                "downloads": "10,000+"
+            },
+            {
+                "rdate":"2017-12-14",
+                "link":"http://edu.qpython.org/aipy-numpy/cn/10sample.html",
+                "smodule":"aipy-numpy-sample",
+                "description":"各种绘图实例",
+                "title":"Numpy 入门 - 各种绘图实例",
+                "reward":"0",
+                "downloads": "10,000+"
+            }
         ]
     },{
         "src":"http://qpython.org",
