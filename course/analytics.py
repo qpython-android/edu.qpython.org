@@ -1,3 +1,4 @@
+#!/usr/bin/env python2
 import sys,os
 with open(sys.argv[1], 'r') as f, open('/tmp/qpydoc.tmp', 'wb') as g, open(os.path.dirname(os.path.abspath(__file__))+'/analyticscode.txt','r') as e:
     pth = sys.argv[1][1:]

@@ -1,29 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>Python 集合</title>
 <link rel="stylesheet" href="../../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
-<script type="text/javascript">
-var DOCUMENTATION_OPTIONS = {
-URL_ROOT:    '../../',
-VERSION:     '0.9',
-COLLAPSE_INDEX: false,
-FILE_SUFFIX: '.html',
-HAS_SOURCE:  true,
-SOURCELINK_SUFFIX: '.txt'
-};
-</script>
-<script type="text/javascript" src="../../static/jquery.js"></script>
-<script type="text/javascript" src="../../static/underscore.js"></script>
-<script type="text/javascript" src="../../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body role="document">
+<body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -88,11 +75,11 @@ SOURCELINK_SUFFIX: '.txt'
 <p>要创建集合，需要将所有项（元素）放在花括号（{}）内，以逗号（,）分隔。</p>
 <dl class="docutils">
 <dt>::</dt>
-<dd>d = {&#8216;name&#8217;:&#8217;Python&#8217;, &#8216;site&#8217;:&#8217;www.python.org&#8217;}
+<dd>d = {‘name’:’Python’, ‘site’:’www.python.org’}
 type(d)
-&lt;class &#8216;dict&#8217;&gt;</dd>
+&lt;class ‘dict’&gt;</dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>字典的创建方式很多，还可以使用 dict()：</p>
 <p>由于列表是可变的，不可 hash，因此不能作为字典的 key。</p>
 <p>key 唯一，意思是说：不要有重复的 key 出现。</p>
@@ -100,40 +87,40 @@ type(d)
 <dl class="docutils">
 <dt>::</dt>
 <dd><blockquote class="first">
-<div>s = {&#8216;P&#8217;, &#8216;y&#8217;, &#8216;t&#8217;, &#8216;h&#8217;, &#8216;o&#8217;, &#8216;n&#8217;}
+<div>s = {‘P’, ‘y’, ‘t’, ‘h’, ‘o’, ‘n’}
 type(s)</div></blockquote>
-<p class="last">&lt;class &#8216;set&#8217;&gt;</p>
+<p class="last">&lt;class ‘set’&gt;</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>集合可以有任意数量的元素，它们可以是不同的类型（例如：数字、元组、字符串等）。但是，集合不能有可变元素（例如：列表、集合或字典）。</p>
 <dl class="docutils">
 <dt>::</dt>
 <dd><blockquote class="first">
 <div><p>s = {1, 2, 3}  # 整形的集合</p>
-<p>s = {1.0, &#8216;Python&#8217;, (1, 2, 3)}  # 混合类型的集合</p>
-<p>s = set([&#8216;P&#8217;, &#8216;y&#8217;])  # 从列表创建</p>
+<p>s = {1.0, ‘Python’, (1, 2, 3)}  # 混合类型的集合</p>
+<p>s = set([‘P’, ‘y’])  # 从列表创建</p>
 <p>s = {1, 2, [3, 4]}  # 不能有可变元素</p>
 </div></blockquote>
-<p class="last">...
-TypeError: unhashable type: &#8216;list&#8217;</p>
+<p class="last">…
+TypeError: unhashable type: ‘list’</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>创建空集合比较特殊。在 Python 中，空花括号（{}）用于创建空字典。要创建一个没有任何元素的集合，使用 set() 函数（不要包含任何参数）。</p>
 <dl class="docutils">
 <dt>::</dt>
 <dd><blockquote class="first">
 <div>d = {}  # 空字典
 type(d)</div></blockquote>
-<p>&lt;class &#8216;dict&#8217;&gt;</p>
+<p>&lt;class ‘dict’&gt;</p>
 <blockquote>
 <div>s = set()  # 空集合</div></blockquote>
 <p class="last">type(s)
-&lt;class &#8216;set&#8217;&gt;</p>
+&lt;class ‘set’&gt;</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id3">
 <h2>集合的特性<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
@@ -151,31 +138,31 @@ type(d)</div></blockquote>
 <dt>::</dt>
 <dd><dl class="first docutils">
 <dt># 无序性</dt>
-<dd>s = set(&#8216;Python&#8217;)
+<dd>s = set(‘Python’)
 s</dd>
 </dl>
-<p>{&#8216;y&#8217;, &#8216;n&#8217;, &#8216;h&#8217;, &#8216;o&#8217;, &#8216;P&#8217;, &#8216;t&#8217;}</p>
+<p>{‘y’, ‘n’, ‘h’, ‘o’, ‘P’, ‘t’}</p>
 <blockquote>
 <div>s[0]  # 不支持索引</div></blockquote>
-<p>...
-TypeError: &#8216;set&#8217; object does not support indexing</p>
+<p>…
+TypeError: ‘set’ object does not support indexing</p>
 <dl class="docutils">
 <dt># 互异性</dt>
-<dd>s = set(&#8216;Hello&#8217;)
+<dd>s = set(‘Hello’)
 s</dd>
 </dl>
-<p>{&#8216;e&#8217;, &#8216;H&#8217;, &#8216;l&#8217;, &#8216;o&#8217;}</p>
+<p>{‘e’, ‘H’, ‘l’, ‘o’}</p>
 <dl class="docutils">
 <dt># 确定性</dt>
-<dd>&#8216;l&#8217; in s</dd>
+<dd>‘l’ in s</dd>
 </dl>
 <p>True</p>
 <blockquote>
-<div>&#8216;P&#8217; not in s</div></blockquote>
+<div>‘P’ not in s</div></blockquote>
 <p class="last">True</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p><strong>注意：</strong> 由于集合是无序的，所以索引没有任何意义。也就是说，无法使用索引或切片访问或更改集合元素。</p>
 </div>
 <div class="section" id="id4">
@@ -184,10 +171,10 @@ s</dd>
 <p>考虑 A、B 两个集合，进行以下操作。</p>
 <dl class="docutils">
 <dt>::</dt>
-<dd>A = set(&#8216;abcd&#8217;)
-B = set(&#8216;cdef&#8217;)</dd>
+<dd>A = set(‘abcd’)
+B = set(‘cdef’)</dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id5">
 <h2>子集<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
@@ -196,7 +183,7 @@ B = set(&#8216;cdef&#8217;)</dd>
 <dl class="docutils">
 <dt>::</dt>
 <dd><blockquote class="first">
-<div><p>C = set(&#8216;ab&#8217;)</p>
+<div><p>C = set(‘ab’)</p>
 <p>C &lt; A</p>
 </div></blockquote>
 <p>True</p>
@@ -208,7 +195,7 @@ True</p>
 </div></blockquote>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id6">
 <h2>并集<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
@@ -218,13 +205,13 @@ True</p>
 <dt>::</dt>
 <dd><blockquote class="first">
 <div>A | B</div></blockquote>
-<p>{&#8216;e&#8217;, &#8216;f&#8217;, &#8216;d&#8217;, &#8216;c&#8217;, &#8216;b&#8217;, &#8216;a&#8217;}</p>
+<p>{‘e’, ‘f’, ‘d’, ‘c’, ‘b’, ‘a’}</p>
 <blockquote>
 <div>A.union(B)</div></blockquote>
-<p class="last">{&#8216;e&#8217;, &#8216;f&#8217;, &#8216;d&#8217;, &#8216;c&#8217;, &#8216;b&#8217;, &#8216;a&#8217;}</p>
+<p class="last">{‘e’, ‘f’, ‘d’, ‘c’, ‘b’, ‘a’}</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id7">
 <h2>交集<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
@@ -234,13 +221,13 @@ True</p>
 <dt>::</dt>
 <dd><blockquote class="first">
 <div>A &amp; B</div></blockquote>
-<p>{&#8216;d&#8217;, &#8216;c&#8217;}</p>
+<p>{‘d’, ‘c’}</p>
 <blockquote>
 <div>A.intersection(B)</div></blockquote>
-<p class="last">{&#8216;d&#8217;, &#8216;c&#8217;}</p>
+<p class="last">{‘d’, ‘c’}</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id8">
 <h2>差集<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
@@ -250,13 +237,13 @@ True</p>
 <dt>::</dt>
 <dd><blockquote class="first">
 <div>A - B</div></blockquote>
-<p>{&#8216;b&#8217;, &#8216;a&#8217;}</p>
+<p>{‘b’, ‘a’}</p>
 <blockquote>
 <div>A.difference(B)</div></blockquote>
-<p class="last">{&#8216;b&#8217;, &#8216;a&#8217;}</p>
+<p class="last">{‘b’, ‘a’}</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id9">
 <h2>对称差<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
@@ -266,13 +253,13 @@ True</p>
 <dt>::</dt>
 <dd><blockquote class="first">
 <div>A ^ B</div></blockquote>
-<p>{&#8216;b&#8217;, &#8216;e&#8217;, &#8216;f&#8217;, &#8216;a&#8217;}</p>
+<p>{‘b’, ‘e’, ‘f’, ‘a’}</p>
 <blockquote>
 <div>A.symmetric_difference(B)</div></blockquote>
-<p class="last">{&#8216;b&#8217;, &#8216;e&#8217;, &#8216;f&#8217;, &#8216;a&#8217;}</p>
+<p class="last">{‘b’, ‘e’, ‘f’, ‘a’}</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id10">
 <h2>更改集合<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
@@ -281,22 +268,22 @@ True</p>
 <dl class="docutils">
 <dt>::</dt>
 <dd><blockquote class="first">
-<div><p>s = {&#8216;P&#8217;, &#8216;y&#8217;}</p>
-<p>s.add(&#8216;t&#8217;)  # 添加一个元素
+<div><p>s = {‘P’, ‘y’}</p>
+<p>s.add(‘t’)  # 添加一个元素
 s</p>
 </div></blockquote>
-<p>{&#8216;P&#8217;, &#8216;y&#8217;, &#8216;t&#8217;}</p>
+<p>{‘P’, ‘y’, ‘t’}</p>
 <blockquote>
-<div>s.update([&#8216;h&#8217;, &#8216;o&#8217;, &#8216;n&#8217;])  # 添加多个元素</div></blockquote>
+<div>s.update([‘h’, ‘o’, ‘n’])  # 添加多个元素</div></blockquote>
 <p>s
-{&#8216;y&#8217;, &#8216;o&#8217;, &#8216;n&#8217;, &#8216;t&#8217;, &#8216;P&#8217;, &#8216;h&#8217;}</p>
+{‘y’, ‘o’, ‘n’, ‘t’, ‘P’, ‘h’}</p>
 <blockquote>
-<div>s.update([&#8216;H&#8217;, &#8216;e&#8217;], {&#8216;l&#8217;, &#8216;l&#8217;, &#8216;o&#8217;})  # 添加列表和集合
+<div>s.update([‘H’, ‘e’], {‘l’, ‘l’, ‘o’})  # 添加列表和集合
 s</div></blockquote>
-<p class="last">{&#8216;H&#8217;, &#8216;y&#8217;, &#8216;e&#8217;, &#8216;o&#8217;, &#8216;n&#8217;, &#8216;t&#8217;, &#8216;l&#8217;, &#8216;P&#8217;, &#8216;h&#8217;}</p>
+<p class="last">{‘H’, ‘y’, ‘e’, ‘o’, ‘n’, ‘t’, ‘l’, ‘P’, ‘h’}</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>在所有情况下，元素都不会重复。</p>
 </div>
 <div class="section" id="id11">
@@ -306,43 +293,43 @@ s</div></blockquote>
 <dl class="docutils">
 <dt>::</dt>
 <dd><blockquote class="first">
-<div><p>s = {&#8216;P&#8217;, &#8216;y&#8217;, &#8216;t&#8217;, &#8216;h&#8217;, &#8216;o&#8217;, &#8216;n&#8217;}</p>
-<p>s.discard(&#8216;t&#8217;)  # 去掉一个存在的元素
+<div><p>s = {‘P’, ‘y’, ‘t’, ‘h’, ‘o’, ‘n’}</p>
+<p>s.discard(‘t’)  # 去掉一个存在的元素
 s</p>
 </div></blockquote>
 <dl class="docutils">
-<dt>{&#8216;y&#8217;, &#8216;o&#8217;, &#8216;n&#8217;, &#8216;P&#8217;, &#8216;h&#8217;}</dt>
-<dd>s.remove(&#8216;h&#8217;)  # 删除一个存在的元素
+<dt>{‘y’, ‘o’, ‘n’, ‘P’, ‘h’}</dt>
+<dd>s.remove(‘h’)  # 删除一个存在的元素
 s</dd>
 </dl>
-<p>{&#8216;y&#8217;, &#8216;o&#8217;, &#8216;n&#8217;, &#8216;P&#8217;}</p>
+<p>{‘y’, ‘o’, ‘n’, ‘P’}</p>
 <blockquote>
-<div>s.discard(&#8216;w&#8217;)  # 去掉一个不存在的元素（正常）
+<div>s.discard(‘w’)  # 去掉一个不存在的元素（正常）
 s</div></blockquote>
-<p>{&#8216;y&#8217;, &#8216;o&#8217;, &#8216;n&#8217;, &#8216;P&#8217;}</p>
+<p>{‘y’, ‘o’, ‘n’, ‘P’}</p>
 <blockquote>
-<div>s.remove(&#8216;w&#8217;)  # 删除一个不存在的元素（引发错误）</div></blockquote>
-<p class="last">...
-KeyError: &#8216;w&#8217;</p>
+<div>s.remove(‘w’)  # 删除一个不存在的元素（引发错误）</div></blockquote>
+<p class="last">…
+KeyError: ‘w’</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>类似地，可以使用 pop() 方法删除和返回一个项目。</p>
 <p>还可以使用 clear() 删除集合中的所有元素。</p>
 <dl class="docutils">
 <dt>::</dt>
 <dd><blockquote class="first">
-<div><p>s = set(&#8216;Python&#8217;)</p>
+<div><p>s = set(‘Python’)</p>
 <p>s.pop()  # 随机返回一个元素</p>
 </div></blockquote>
-<p>&#8216;y&#8217;</p>
+<p>‘y’</p>
 <blockquote>
 <div>s.clear()  # 清空集合
 s</div></blockquote>
 <p class="last">set()</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p><strong>注意：</strong> 集合是无序的，所以无法确定哪个元素将被 pop，完全随机。</p>
 </div>
 <div class="section" id="id12">
@@ -352,13 +339,13 @@ s</div></blockquote>
 <dt>::</dt>
 <dd><blockquote class="first">
 <div>dir(set)</div></blockquote>
-<p class="last">[&#8216;__and__&#8217;, &#8216;__class__&#8217;, &#8216;__contains__&#8217;, &#8216;__delattr__&#8217;, &#8216;__dir__&#8217;, &#8216;__doc__&#8217;, &#8216;__eq__&#8217;, &#8216;__format__&#8217;, &#8216;__ge__&#8217;, &#8216;__getattribute__&#8217;, &#8216;__gt__&#8217;, &#8216;__hash__&#8217;, &#8216;__iand__&#8217;, &#8216;__init__&#8217;, &#8216;__ior__&#8217;, &#8216;__isub__&#8217;, &#8216;__iter__&#8217;, &#8216;__ixor__&#8217;, &#8216;__le__&#8217;, &#8216;__len__&#8217;, &#8216;__lt__&#8217;, &#8216;__ne__&#8217;, &#8216;__new__&#8217;, &#8216;__or__&#8217;, &#8216;__rand__&#8217;, &#8216;__reduce__&#8217;, &#8216;__reduce_ex__&#8217;, &#8216;__repr__&#8217;, &#8216;__ror__&#8217;, &#8216;__rsub__&#8217;, &#8216;__rxor__&#8217;, &#8216;__setattr__&#8217;, &#8216;__sizeof__&#8217;, &#8216;__str__&#8217;, &#8216;__sub__&#8217;, &#8216;__subclasshook__&#8217;, &#8216;__xor__&#8217;, &#8216;add&#8217;, &#8216;clear&#8217;, &#8216;copy&#8217;, &#8216;difference&#8217;, &#8216;difference_update&#8217;, &#8216;discard&#8217;, &#8216;intersection&#8217;, &#8216;intersection_update&#8217;, &#8216;isdisjoint&#8217;, &#8216;issubset&#8217;, &#8216;issuperset&#8217;, &#8216;pop&#8217;, &#8216;remove&#8217;, &#8216;symmetric_difference&#8217;, &#8216;symmetric_difference_update&#8217;, &#8216;union&#8217;, &#8216;update&#8217;]</p>
+<p class="last">[‘__and__’, ‘__class__’, ‘__contains__’, ‘__delattr__’, ‘__dir__’, ‘__doc__’, ‘__eq__’, ‘__format__’, ‘__ge__’, ‘__getattribute__’, ‘__gt__’, ‘__hash__’, ‘__iand__’, ‘__init__’, ‘__ior__’, ‘__isub__’, ‘__iter__’, ‘__ixor__’, ‘__le__’, ‘__len__’, ‘__lt__’, ‘__ne__’, ‘__new__’, ‘__or__’, ‘__rand__’, ‘__reduce__’, ‘__reduce_ex__’, ‘__repr__’, ‘__ror__’, ‘__rsub__’, ‘__rxor__’, ‘__setattr__’, ‘__sizeof__’, ‘__str__’, ‘__sub__’, ‘__subclasshook__’, ‘__xor__’, ‘add’, ‘clear’, ‘copy’, ‘difference’, ‘difference_update’, ‘discard’, ‘intersection’, ‘intersection_update’, ‘isdisjoint’, ‘issubset’, ‘issuperset’, ‘pop’, ‘remove’, ‘symmetric_difference’, ‘symmetric_difference_update’, ‘union’, ‘update’]</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>可以看到，有以下方法可用：</p>
 <p>可以看到，有以下方法可用：
-+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+
++—————————–+————————————————————————————–+
 | 方法                          |                                描述                                                  |
 +=============================+======================================================================================+
 <a href="#id13"><span class="problematic" id="id14">|</span></a>add()                        |            将元素添加到集合中                                                        |
@@ -394,15 +381,13 @@ symmetric_difference_update() |           用自己和另一个的对称差来�
 union()                       |           将集合的并集作为一个新集合返回                                             |
 +=============================+======================================================================================+
 update()                      |           用自己和另一个的并集来更新这个集合                                         |
-+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+</p>
++—————————–+————————————————————————————–+</p>
 <p>其中一些方法在上述示例中已经被使用过了，如果有方法不会用，可利用 help() 函数，查看用途及详细说明。</p>
 </div>
 <div class="section" id="id15">
 <h2>集合与内置函数<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
 <p>下述内置函数通常作用于集合，来执行不同的任务。</p>
 <table border="1" class="docutils">
-<colgroup>
-</colgroup>
 <tbody valign="top">
 </tbody>
 </table>
@@ -423,7 +408,7 @@ min()       <a href="#id26"><span class="problematic" id="id27">|</span></a>返�
 sorted()    |   从集合中的元素返回新的排序列表（不排序集合本身）                                     |
 +===========+========================================================================================+
 sum()       <a href="#id28"><span class="problematic" id="id29">|</span></a>返回集合的所有元素之和                                                                  |
-+&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-+</p>
++———–+—————————————————————————————-+</p>
 </div>
 <div class="section" id="id30">
 <h2>不可变集合<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h2>
@@ -433,18 +418,18 @@ sum()       <a href="#id28"><span class="problematic" id="id29">|</span></a>返�
 <dl class="docutils">
 <dt>::</dt>
 <dd><blockquote class="first">
-<div>s = frozenset(&#8216;Python&#8217;)
+<div>s = frozenset(‘Python’)
 type(s)</div></blockquote>
-<p class="last">&lt;class &#8216;frozenset&#8217;&gt;</p>
+<p class="last">&lt;class ‘frozenset’&gt;</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>frozenset 也提供了一些列方法，和 set 中的类似。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span> <span class="nb">dir</span><span class="p">(</span><span class="nb">frozenset</span><span class="p">)</span>
 <span class="p">[</span><span class="s1">&#39;__and__&#39;</span><span class="p">,</span> <span class="s1">&#39;__class__&#39;</span><span class="p">,</span> <span class="s1">&#39;__contains__&#39;</span><span class="p">,</span> <span class="s1">&#39;__delattr__&#39;</span><span class="p">,</span> <span class="s1">&#39;__dir__&#39;</span><span class="p">,</span> <span class="s1">&#39;__doc__&#39;</span><span class="p">,</span> <span class="s1">&#39;__eq__&#39;</span><span class="p">,</span> <span class="s1">&#39;__format__&#39;</span><span class="p">,</span> <span class="s1">&#39;__ge__&#39;</span><span class="p">,</span> <span class="s1">&#39;__getattribute__&#39;</span><span class="p">,</span> <span class="s1">&#39;__gt__&#39;</span><span class="p">,</span> <span class="s1">&#39;__hash__&#39;</span><span class="p">,</span> <span class="s1">&#39;__init__&#39;</span><span class="p">,</span> <span class="s1">&#39;__iter__&#39;</span><span class="p">,</span> <span class="s1">&#39;__le__&#39;</span><span class="p">,</span> <span class="s1">&#39;__len__&#39;</span><span class="p">,</span> <span class="s1">&#39;__lt__&#39;</span><span class="p">,</span> <span class="s1">&#39;__ne__&#39;</span><span class="p">,</span> <span class="s1">&#39;__new__&#39;</span><span class="p">,</span> <span class="s1">&#39;__or__&#39;</span><span class="p">,</span> <span class="s1">&#39;__rand__&#39;</span><span class="p">,</span> <span class="s1">&#39;__reduce__&#39;</span><span class="p">,</span> <span class="s1">&#39;__reduce_ex__&#39;</span><span class="p">,</span> <span class="s1">&#39;__repr__&#39;</span><span class="p">,</span> <span class="s1">&#39;__ror__&#39;</span><span class="p">,</span> <span class="s1">&#39;__rsub__&#39;</span><span class="p">,</span> <span class="s1">&#39;__rxor__&#39;</span><span class="p">,</span> <span class="s1">&#39;__setattr__&#39;</span><span class="p">,</span> <span class="s1">&#39;__sizeof__&#39;</span><span class="p">,</span> <span class="s1">&#39;__str__&#39;</span><span class="p">,</span> <span class="s1">&#39;__sub__&#39;</span><span class="p">,</span> <span class="s1">&#39;__subclasshook__&#39;</span><span class="p">,</span> <span class="s1">&#39;__xor__&#39;</span><span class="p">,</span> <span class="s1">&#39;copy&#39;</span><span class="p">,</span> <span class="s1">&#39;difference&#39;</span><span class="p">,</span> <span class="s1">&#39;intersection&#39;</span><span class="p">,</span> <span class="s1">&#39;isdisjoint&#39;</span><span class="p">,</span> <span class="s1">&#39;issubset&#39;</span><span class="p">,</span> <span class="s1">&#39;issuperset&#39;</span><span class="p">,</span> <span class="s1">&#39;symmetric_difference&#39;</span><span class="p">,</span> <span class="s1">&#39;union&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>由于 frozenset 是不可变的，所以没有添加或删除元素的方法。</p>
 </div>
 <div class="section" id="id31">

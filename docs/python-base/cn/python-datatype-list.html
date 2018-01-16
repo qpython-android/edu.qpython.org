@@ -1,29 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>简述</title>
 <link rel="stylesheet" href="../../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
-<script type="text/javascript">
-var DOCUMENTATION_OPTIONS = {
-URL_ROOT:    '../../',
-VERSION:     '0.9',
-COLLAPSE_INDEX: false,
-FILE_SUFFIX: '.html',
-HAS_SOURCE:  true,
-SOURCELINK_SUFFIX: '.txt'
-};
-</script>
-<script type="text/javascript" src="../../static/jquery.js"></script>
-<script type="text/javascript" src="../../static/underscore.js"></script>
-<script type="text/javascript" src="../../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body role="document">
+<body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -80,7 +67,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="nb">type</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>列表可以有任意数量（n &gt;= 0）的元素，当 n 为 0 时，表示一个空列表。</p>
 <p>列表中元素的类型可以不同，支持数字、字符串，甚至可以包含列表（所谓的嵌套）。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># 空列表</span>
@@ -89,7 +76,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Python&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]]</span>  <span class="c1"># 嵌套列表</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 </div>
 <div class="section" id="id3">
@@ -103,20 +90,20 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="n">l</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>  <span class="c1"># 第 5 个元素</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>序列也可以反向索引，-1 表示最后一个元素，-2 表示倒数第二个元素，依此类推。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">6</span><span class="p">]</span>  <span class="c1"># 第 1 个元素</span>
 <span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># 第 5 个元素</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>同样地，嵌套的列表可以使用嵌套索引来访问。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Python&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]]</span>  <span class="c1"># 嵌套列表</span>
 <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>  <span class="c1"># 使用嵌套索引</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id5">
 <h2>对列表进行切片<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
@@ -129,14 +116,14 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="n">l</span><span class="p">[:]</span>  <span class="c1"># 所有元素（从开始到结束）</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>和索引类似，切片操作也可以使用反向索引：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># 第 2 个到第 5 个元素</span>
 <span class="n">l</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>  <span class="c1"># 开始到第 3 个元素</span>
 <span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span>  <span class="c1"># 第 4 个到最后一个元素</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id6">
 <h2>更改及添加元素<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
@@ -149,7 +136,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="n">l</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>可以使用 append() 方法将一个元素添加到列表中，或者使用 extend() 方法添加多个元素。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">]</span>
 <span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>  <span class="c1"># 添加一个元素</span>
@@ -158,7 +145,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="n">l</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>此外，可以使用 insert() 方法将一个元素插入到所需的位置。要插入多个元素，可以将其挤压进到一个列表的空切片中。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
 <span class="n">l</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">)</span>  <span class="c1"># 在指定索引处插入一个元素</span>
@@ -167,7 +154,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="n">l</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id7">
 <h2>从列表中删除元素<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
@@ -181,7 +168,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="n">l</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>可以使用 remove() 方法删除指定的元素，或用 pop() 方法删除一个给定索引处的元素。</p>
 <p>如果没有提供索引，pop() 方法将删除并返回最后一个元素。这有助于我们将列表实现为栈（先进后出数据结构）。</p>
 <p>还可以使用 clear() 方法清空一个列表。</p>
@@ -196,7 +183,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="n">l</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>最后，还可以通过将一个空列表分配给一个元素切片的方式来删除列表中的项目。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
 <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
@@ -205,7 +192,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="n">l</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id8">
 <h2>基本操作<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
@@ -217,7 +204,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="n">l1</span> <span class="o">+</span> <span class="n">l2</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id9">
 <h2>重复列表<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
@@ -226,7 +213,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="n">l</span> <span class="o">*</span> <span class="mi">2</span>  <span class="c1"># 重复列表 2 次</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id10">
 <h2>最小值/最大值<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
@@ -236,7 +223,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="nb">max</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>  <span class="c1"># 最大值</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id11">
 <h2>列表长度<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
@@ -245,7 +232,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>  <span class="c1"># 元素个数</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id12">
 <h2>成员测试<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
@@ -255,7 +242,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="s1">&#39;o&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">l</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id13">
 <h2>遍历列表<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
@@ -265,7 +252,7 @@ for letter in l:
     print(letter)
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id14">
 <h2>列表的方法<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
@@ -273,7 +260,7 @@ for letter in l:
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>以双下划线开始和结尾的（例如：__add__）暂不考虑，后面讨论。剩下以下几个：</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -338,7 +325,7 @@ for letter in l:
 <span class="n">l</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id15">
 <h2>列表推导式<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
@@ -351,29 +338,29 @@ for x in range(10):
 square
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>用列表推导式，可以获得相同的结果：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>这也相当于：squares = map(lambda x: x**2, range(10))，但它更简洁可读。</p>
 <p>列表推导式可以可选地包含更多的 for 或 if 语句，if 语句可以过滤出新列表的元素。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">]</span>
 <span class="n">squares</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">odd</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">odd</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="n">y</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;I love &#39;</span><span class="p">,</span><span class="s1">&#39;I like &#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;C++&#39;</span><span class="p">,</span><span class="s1">&#39;Python&#39;</span><span class="p">]]</span>
 <span class="p">[</span><span class="s1">&#39;I love C++&#39;</span><span class="p">,</span> <span class="s1">&#39;I love Python&#39;</span><span class="p">,</span> <span class="s1">&#39;I like C++&#39;</span><span class="p">,</span> <span class="s1">&#39;I like Python&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id16">
 <h2>列表与内置函数<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>

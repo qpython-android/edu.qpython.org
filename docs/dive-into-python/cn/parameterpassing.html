@@ -1,29 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>函数进阶</title>
 <link rel="stylesheet" href="../../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
-<script type="text/javascript">
-var DOCUMENTATION_OPTIONS = {
-URL_ROOT:    '../../',
-VERSION:     '0.9',
-COLLAPSE_INDEX: false,
-FILE_SUFFIX: '.html',
-HAS_SOURCE:  true,
-SOURCELINK_SUFFIX: '.txt'
-};
-</script>
-<script type="text/javascript" src="../../static/jquery.js"></script>
-<script type="text/javascript" src="../../static/underscore.js"></script>
-<script type="text/javascript" src="../../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body role="document">
+<body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -87,7 +74,7 @@ def cube(x):
     return x*x*x
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>作为字典的值：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">funcs</span> <span class="o">=</span> <span class="p">{</span>
 <span class="s1">&#39;square&#39;</span><span class="p">:</span> <span class="n">square</span><span class="p">,</span>
@@ -100,14 +87,14 @@ def cube(x):
 <dt>::</dt>
 <dd><dl class="first docutils">
 <dt>def square(x):</dt>
-<dd>    "&#8220;"Square of x."&#8220;"
+<dd>    ”“”Square of x.”“”
     return x*x</dd>
 <dt>def cube(x):</dt>
-<dd>    "&#8220;"Cube of x."&#8220;"
+<dd>    ”“”Cube of x.”“”
     return x*x*x</dd>
 <dt>funcs = {</dt>
-<dd>&#8216;square&#8217;: square,
-&#8216;cube&#8217;: cube,</dd>
+<dd>‘square’: square,
+‘cube’: cube,</dd>
 </dl>
 <p>}</p>
 <p>x = 2</p>
@@ -119,7 +106,7 @@ print cube(x)</p>
 </dl>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 </div>
 <div class="section" id="id3">
@@ -141,7 +128,7 @@ print mod_f(x)
 print x
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <div class="highlight-default"><div class="highlight"><pre><span></span>def no_mod_f(x):
     x = [4, 5, 6]
     return x
@@ -151,7 +138,7 @@ print no_mod_f(x)
 print x
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id5">
 <h2>默认参数是可变的<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
@@ -178,7 +165,7 @@ print f()
 print f()</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>将会得到以下结果</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
@@ -202,7 +189,7 @@ print f()</p>
 <span class="nb">print</span> <span class="n">f</span><span class="p">()</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>输出应该是</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -232,7 +219,7 @@ print f()</p>
 <span class="nb">filter</span><span class="p">(</span><span class="n">is_even</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>输出：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 </pre></div>
@@ -263,33 +250,33 @@ reduce(my_add, [1,2,3,4,5])
 <dd><dl class="first docutils">
 <dt>def logger(data):</dt>
 <dd><dl class="first last docutils">
-<dt>with open(target, &#8216;a&#8217;) as f:</dt>
-<dd>f.write(data + &#8216;n&#8217;)</dd>
+<dt>with open(target, ‘a’) as f:</dt>
+<dd>f.write(data + ‘n’)</dd>
 </dl>
 </dd>
 </dl>
 <p class="last">return logger</p>
 </dd>
 </dl>
-<p class="last">foo_logger = make_logger(&#8216;foo.txt&#8217;)
-foo_logger(&#8216;Hello&#8217;)
-foo_logger(&#8216;World&#8217;)</p>
+<p class="last">foo_logger = make_logger(‘foo.txt’)
+foo_logger(‘Hello’)
+foo_logger(‘World’)</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>In [14]:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>!cat foo.txt
 Hello
 World
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>In [15]:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;foo.txt&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id7">
 <h2>匿名函数<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
@@ -301,14 +288,14 @@ World
 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>用匿名函数替换为：</p>
 <p>In [17]:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>匿名函数虽然写起来比较方便（省去了定义函数的烦恼），但是有时候会比较难于阅读：</p>
 <p>In [18]:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s1</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)))</span>
@@ -316,7 +303,7 @@ World
 <span class="mi">285</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>当然，更简单地，我们可以写成这样：</p>
 <p>In [19]:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s2</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
@@ -324,7 +311,7 @@ World
 <span class="mi">285</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="global">
 <h2>global 变量<a class="headerlink" href="#global" title="Permalink to this headline">¶</a></h2>
@@ -337,7 +324,7 @@ World
 <span class="mi">15</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>但是要在函数中修改全局变量的值，需要加上 <em>global</em> 关键字：</p>
 <p>In [21]:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">15</span>
@@ -351,7 +338,7 @@ World
 <span class="mi">18</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>如果不加上这句 global 那么全局变量的值不会改变：</p>
 <p>In [22]:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">15</span>
@@ -364,7 +351,7 @@ World
 <span class="mi">15</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id8">
 <h2>递归<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
@@ -383,7 +370,7 @@ World
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">55</span><span class="p">]</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>一个更高效的非递归版本：</p>
 <p>In [24]:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fib2</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -396,7 +383,7 @@ World
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">55</span><span class="p">]</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>速度比较：</p>
 <p>In [25]:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">timeit</span> <span class="n">fib1</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
@@ -405,7 +392,7 @@ World
 <span class="mi">100000</span> <span class="n">loops</span><span class="p">,</span> <span class="n">best</span> <span class="n">of</span> <span class="mi">3</span><span class="p">:</span> <span class="mf">2.2</span> <span class="n">μs</span> <span class="n">per</span> <span class="n">loop</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>对于第一个递归函数来说，调用 <em>fib(n+2)</em> 的时候计算 <em>fib(n+1)</em>, <em>fib(n)</em>，调用 <em>fib(n+1)</em> 的时候也计算了一次 <em>fib(n)</em>，这样造成了重复计算。</p>
 <p>使用缓存机制的递归版本，这里利用了默认参数可变的性质，构造了一个缓存：</p>
 <p>In [26]:</p>
@@ -422,7 +409,7 @@ World
 <span class="o">%</span><span class="n">timeit</span> <span class="n">fib3</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <blockquote>
 <div>[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 100 loops, best of 3: 5.37 ms per loop

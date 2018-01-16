@@ -1,0 +1,48 @@
+QPY Programming Challenge 0x00
+================================================
+
+.. image:: http://edu.qpython.org/static/qpyprogrammingchanlleage-0x00.png
+    :alt: QPython - QPY Programming Challenge 0x00
+
+
+Did you learn the word "Pythonic" when you first write Python?
+
+Have you read the P2P transmission of 15 lines, neural network of 11 lines or block chain python code of 50 lines?
+
+Even if you have written countless Bugs, do you still remember the heart that you wanted to write Simple and elegant code at first?
+
+Why not try to put down the impetuous and try to revisit Pythonic?
+
+
+QPY Programming Challenge
+-----------------------------------------------
+Since 2018, we plan to start QPython Challenge once a month.
+
+
+
+How to submit
+-----------------------
+You can send your entries to us via email (support@qpython.org)，note QPyC20181 participate in this event and your nickname.
+
+You can submit multiple times, we will take the final manuscript as your final work. The event at the end of the month, the highest percentage of votes is the champion.
+
+
+Evaluation methods
+-----------------------
+At the end of the month, we will issue a document on this public account to list the entries, Each contest will  voted the user selected the most Pythonic code winner, Domestic winners receive QPython T-Shirt or themed souvenirs.
+
+The 0x00 issue of the challenge
+--------------------------------
+#The first topic
+The title of Challenge 2 is already in the article, please find it.
+
+
+# The second topic
+100 * 100 a chessboard, the first piece at the position [0, 0],Every second piece random walk horizontal or vertical step, At the same time there are n traps on the board, traps arranged randomly. Known traps abscissa i(nt[]) coordx and ordinate (int[]) coordy,how many steps can a player move without falling into the trap?
+
+
+Take out QPython in your pocket and write out the Pythonic code comments on the subject two subject names and send them to us, Compared to other QPythoners, see who is more Pythonic?
+
+
+
+

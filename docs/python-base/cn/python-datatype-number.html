@@ -1,29 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>简述</title>
 <link rel="stylesheet" href="../../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
-<script type="text/javascript">
-var DOCUMENTATION_OPTIONS = {
-URL_ROOT:    '../../',
-VERSION:     '0.9',
-COLLAPSE_INDEX: false,
-FILE_SUFFIX: '.html',
-HAS_SOURCE:  true,
-SOURCELINK_SUFFIX: '.txt'
-};
-</script>
-<script type="text/javascript" src="../../static/jquery.js"></script>
-<script type="text/javascript" src="../../static/underscore.js"></script>
-<script type="text/javascript" src="../../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body role="document">
+<body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -87,7 +74,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id3">
 <h2>整数溢出？<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
@@ -98,14 +85,14 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="n">i</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>哇，多么幸运，Python 做出了如此精妙的安排。</p>
 <p>虽然整数可以是任意长度，但是浮点数只能精确到 15 位小数（16 位不准确）。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="mf">0.12345678901234567890</span>  <span class="c1"># 值被截断</span>
 <span class="n">f</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p><strong>注意</strong>： f 的值被截断。</p>
 </div>
 <div class="section" id="id4">
@@ -126,7 +113,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="nb">hex</span><span class="p">(</span><span class="n">dec</span><span class="p">)</span>  <span class="c1"># 十进制转十六进制</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id5">
 <h2>类型转换<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
@@ -135,7 +122,7 @@ SOURCELINK_SUFFIX: '.txt'
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">+</span> <span class="mf">3.0</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>可以看到，2（整数）被转换为 2.0（浮点数），计算结果（5.0）也是一个浮点数。</p>
 <p>除此之外，还可以使用 int()、float() 和 complex() 等内置函数来**显式转换**类型，这些函数甚至可以将字符串转换为数字。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="mf">2.3</span><span class="p">)</span>
@@ -144,7 +131,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="nb">complex</span><span class="p">(</span><span class="s1">&#39;3+5j&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>从 float 转换为 int 时，数字将被截断（整数更接近零）。</p>
 <p>Decimal</p>
 <hr class="docutils" />
@@ -154,7 +141,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>What？难道是眼花了？和数学知识不一样？</p>
 <p>事实证明，浮点数在计算机硬件中以二进制小数来表示，因为计算机只能理解二进制（0 和 1）。出于这个原因，大部分十进制小数都不能准确地存储在计算机中。</p>
 <p>例如，十进制小数 0.1，将转换为无限长的二进制小数 0.000110011001100110011…，而计算机存储的位数是有限的。也就是说，转换为二进制后，只会接近十进制的 0.1，但永远不会相等。</p>
@@ -172,14 +159,14 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="n">d</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>除此之外，它也保留了重要意义。我们知道 25.50 比 25.5 更精确，因为 25.50 有两个有效的小数位。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">decimal</span> <span class="k">import</span> <span class="n">Decimal</span> <span class="k">as</span> <span class="n">D</span>
 <span class="n">D</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">D</span><span class="p">(</span><span class="s1">&#39;0.2&#39;</span><span class="p">)</span>
 <span class="n">D</span><span class="p">(</span><span class="s1">&#39;1.2&#39;</span><span class="p">)</span> <span class="o">*</span> <span class="n">D</span><span class="p">(</span><span class="s1">&#39;2.50&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p><strong>注意</strong>： 计算结果末尾的 0</p>
 <p>有人可能会问：既然 Decimal 这么棒，为什么每次不使用 Decimal 来代替 float 呢？主要原因是效率，float 运算要比 Decimal 运算更快。</p>
 <p>何时使用 Decimal，而不是 float 呢？在以下情况下，通常使用 Decimal。</p>
@@ -204,7 +191,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="nb">print</span><span class="p">(</span><span class="n">fractions</span><span class="o">.</span><span class="n">Fraction</span><span class="p">(</span><span class="mf">1.5</span><span class="p">))</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>当从 float 创建 Fraction 时，可能会得到一些不寻常的结果，这是由于之前讨论的不完美的二进制浮点数造成的。</p>
 <p>幸运的是，fraction 也允许用字符串进行实例化，这是使用十进制数时的首选方案。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fractions</span> <span class="k">import</span> <span class="n">Fraction</span>
@@ -212,7 +199,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="nb">print</span><span class="p">(</span><span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;1.1&#39;</span><span class="p">))</span>  <span class="c1"># 字符串 &#39;1.1&#39;</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>此外，该数据类型也支持所有基本操作。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fractions</span> <span class="k">import</span> <span class="n">Fraction</span> <span class="k">as</span> <span class="n">F</span>
 <span class="n">F</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="n">F</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
@@ -222,7 +209,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="n">F</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="math">
 <h2>math（数学函数）<a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h2>
@@ -237,7 +224,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># 5!（5 的阶乘）</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="random">
 <h2>random（生成伪随机数）<a class="headerlink" href="#random" title="Permalink to this headline">¶</a></h2>
@@ -250,7 +237,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>  <span class="c1"># 随机生成一个实数，范围 [0,1)。</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id6">
 <h2>作者 &amp; 更新时间<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>

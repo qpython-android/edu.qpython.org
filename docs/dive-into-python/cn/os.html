@@ -1,29 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>与操作系统进行交互：os 模块</title>
 <link rel="stylesheet" href="../../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
-<script type="text/javascript">
-var DOCUMENTATION_OPTIONS = {
-URL_ROOT:    '../../',
-VERSION:     '0.9',
-COLLAPSE_INDEX: false,
-FILE_SUFFIX: '.html',
-HAS_SOURCE:  true,
-SOURCELINK_SUFFIX: '.txt'
-};
-</script>
-<script type="text/javascript" src="../../static/jquery.js"></script>
-<script type="text/javascript" src="../../static/underscore.js"></script>
-<script type="text/javascript" src="../../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body role="document">
+<body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -75,7 +62,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="nb">dir</span><span class="p">(</span><span class="n">os</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <div class="section" id="id1">
 <h2>文件路径操作<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -86,7 +73,7 @@ SOURCELINK_SUFFIX: '.txt'
 <li><em>os.curdir</em>：表示当前目录的符号</li>
 <li><em>os.rename(old, new)</em>：重命名文件</li>
 <li><em>os.renames(old, new)</em>：重命名文件，如果中间路径的文件夹不存在，则创建文件夹</li>
-<li><em>os.listdir(path)</em>：返回给定目录下的所有文件夹和文件名，不包括 <em>&#8216;.&#8217;</em> 和 <em>&#8216;..&#8217;</em> 以及子文件夹下的目录。（<em>&#8216;.&#8217;</em> 和* &#8216;..&#8217;* 分别指当前目录和父目录）</li>
+<li><em>os.listdir(path)</em>：返回给定目录下的所有文件夹和文件名，不包括 <em>‘.’</em> 和 <em>‘..’</em> 以及子文件夹下的目录。（<em>’.’</em> 和* ‘..’* 分别指当前目录和父目录）</li>
 <li><em>os.mkdir(name)</em>：产生新文件夹</li>
 <li><em>os.makedirs(name)</em>：产生新文件夹，如果中间路径的文件夹不存在，则创建文件夹</li>
 </ul>
@@ -95,7 +82,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>获得当前目录下的文件：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">curdir</span><span class="p">)</span>
@@ -108,7 +95,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="nb">print</span> <span class="s2">&quot;test.file&quot;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">curdir</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>重命名文件：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s2">&quot;test.file&quot;</span><span class="p">,</span> <span class="s2">&quot;test.new.file&quot;</span><span class="p">)</span>
@@ -116,13 +103,13 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="nb">print</span> <span class="s2">&quot;test.new.file&quot;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">curdir</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>删除文件：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;test.new.file&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id2">
 <h2>系统常量<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
@@ -131,19 +118,19 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>当前操作系统的路径分隔符：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">sep</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
-<p>当前操作系统的环境变量中的分隔符（<em>&#8216;;&#8217;</em> 或 <em>&#8216;:&#8217;</em>）：</p>
+<button class="button">Run …</button>
+<p>当前操作系统的环境变量中的分隔符（<em>’;’</em> 或 <em>‘:’</em>）：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">pathsep</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id3">
 <h2>其他<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
@@ -152,7 +139,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;USER&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p><em>os.urandom(len)</em> 返回指定长度的随机字节。</p>
 </div>
 <div class="section" id="os-path">
@@ -179,7 +166,7 @@ SOURCELINK_SUFFIX: '.txt'
 <li>os.path.dirname(path)：返回路径中的文件夹部分</li>
 <li>os.path.basename(path)：返回路径中的文件部分</li>
 <li>os.path.splitext(path)：将路径与扩展名分开</li>
-<li>os.path.expanduser(path)：展开 &#8216;~&#8217; 和 &#8216;~user&#8217;</li>
+<li>os.path.expanduser(path)：展开 ‘~’ 和 ‘~user’</li>
 </ul>
 </div>
 <div class="section" id="id5">
