@@ -272,6 +272,39 @@
             }
         ],
         "courses":[
+            {
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/python-base/cn/python-base-keyword.html",
+                "smodule":"python-base-keyword",
+                "description":"Python的关键字",
+                "title":"基础 - 关键字",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/python-base/cn/python-base-annotation.html",
+                "smodule":"python-base-annotation",
+                "description":"Python注释",
+                "title":"基础 - 注释",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/python-base/cn/python-base-variable.html",
+                "smodule":"python-base-variable",
+                "description":"Python的变量",
+                "title":"基础 - 变量",
+                "reward":"0",
+                "downloads": "10,000+"
+            },{
+                "rdate":"2017-12-05",
+                "link":"http://edu.qpython.org/python-base/cn/python-base-python-datatype-number.html",
+                "smodule":"python-base-python-datatype-number",
+                "description":"Python的数据类型",
+                "title":"基础 - 数据类型",
+                "reward":"0",
+                "downloads": "10,000+"
+            }
         ]
     },
     {
