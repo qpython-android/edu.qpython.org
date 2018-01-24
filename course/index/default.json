@@ -434,5 +434,20 @@
         "open": 0,
         "courses":[
         ]
+    },{
+        "src":"http://qpython.org",
+        "rdate":"2018-01-23",
+        "link":"http://edu.qpython.org/opencv/index.html",
+        "smodule":"opencv",
+        "description":"OpenCV Quick Start",
+        "title":"OpenCV - OpenCV Quick Start",
+        "ver":"1.0.0",
+        "downloads": "1,000+",
+        "cat":"featured",
+        "level": 4,
+        "logo": "http://edu.qpython.org/static/course-opencv.png",
+        "open": 0,
+        "courses":[
+        ]
     }
 ]
