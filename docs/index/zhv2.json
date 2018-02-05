@@ -1,5 +1,107 @@
 [
+   
     {
+        "src":"http://qpython.org",
+        "rdate":"2017-07-15",
+        "link":"http://edu.qpython.org/qsl4a-develop/index.html",
+        "smodule":"qsl4a-develop",
+        "description":"如何在QPython里调用安卓接口",
+        "title":"QSL4A - QPython的安卓APIs",
+        "ver":"1.0.0",
+        "downloads": "3,000+",
+        "cat":"new",
+        "level": 3,
+        "logo": "http://edu.qpython.org/static/course-sl4a.png",
+        "open": 1,
+        "crowdfunding": 0,
+        "courses":[
+            {
+                "rdate":"2017-06-15",
+                "link":"http://edu.qpython.org/qsl4a-develop/cn/index.html",
+                "smodule":"qsl4a-develop-index",
+                "description":"QSL4A是Python调用安卓的桥梁",
+                "title":"QSL4A介绍",
+                "ver":"1.0.0",
+                "downloads": "10,000+"
+            }
+        ]
+    }, 
+    {
+        "src":"http://kivy.org",
+        "rdate":"2017-06-15",
+        "link":"http://edu.qpython.org/kivy-qpython/index.html",
+        "smodule":"kivy-qpython",
+        "description":"如何用Kivy开发图形界面程序",
+        "title":"如何用Kivy开发图形界面程序",
+        "ver":"1.0.0",
+        "downloads": "5,000+",
+        "cat":"new",
+        "level": 3,
+        "logo": "http://edu.qpython.org/static/course-kivy-qpython.png",
+        "open": 1,
+        "crowdfunding": 1,
+        "courses":[
+            {
+                "rdate":"2017-06-15",
+                "link":"http://edu.qpython.org/kivy-qpython/cn/index.html",
+                "smodule":"qpython-webapp-principle",
+                "description":"介绍QPython上的Kivy",
+                "title":"QPython上的Kivy",
+                "ver":"1.0.0",
+                "downloads": "10,000+"
+            },
+            {
+                "link":"http://edu.qpython.org/kivy-qpython/cn/your-first-kivyapp.html",
+                "smodule":"kivy-qpython-your-first-kivyapp",
+                "description":"如何开发第一个KivyApp",
+                "title":"你的第一个KivyApp",
+                "ver":"1.0.0",
+                "downloads": "10,000+"
+            }
+        ]
+    }, {
+        "src":"http://qpython.org",
+        "rdate":"2017-06-15",
+        "author":"River",
+        "link":"http://edu.qpython.org/qpython-webapp/cn/index.html",
+        "smodule":"qpython-webapp",
+        "description":"如何开发QPython WebApp",
+        "title":"如何开发QPython WebApp",
+        "ver":"1.0.0",
+        "downloads": "10,000+",
+        "cat":"new",
+        "level": 2,
+        "open": 1,
+        "crowdfunding": 0,
+        "logo": "http://edu.qpython.org/static/course-qpython-webapp.png",
+        "courses":[
+            {
+                "rdate":"2017-06-15",
+                "link":"http://edu.qpython.org/qpython-webapp/cn/index.html",
+                "smodule":"qpython-webapp-principle",
+                "description":"为什么要使用QPython WebApp",
+                "title":"QPython上的WebApp",
+                "ver":"1.0.0",
+                "downloads": "10,000+"
+            },
+            {
+                "link":"http://edu.qpython.org/qpython-webapp/cn/your-first-webapp.html",
+                "smodule":"qpython-webapp-your-first-webapp",
+                "description":"如何开发你的第一个WebApp",
+                "title":"你的第一个WebApp",
+                "ver":"1.0.0",
+                "downloads": "10,000+"
+            },
+            {
+                "link":"http://edu.qpython.org/qpython-webapp/cn/web-frameworks.html",
+                "smodule":"qpython-webapp-web-frameworks",
+                "description":"在QPython中使用你熟悉的Web开发框架来开发WebApp",
+                "title":"QPython支持的Web开发框架",
+                "ver":"1.0.0",
+                "downloads": "10,000+"
+            }
+        ]
+    },{
         "src":"http://qpython.org",
         "rdate":"2017-06-15",
         "auth":"River",
@@ -59,106 +161,64 @@
                 "downloads": "10,000+"
             }
         ]
-    },
-    {
+    }, {
         "src":"http://qpython.org",
         "rdate":"2017-06-15",
-        "author":"River",
-        "link":"http://edu.qpython.org/qpython-webapp/cn/index.html",
-        "smodule":"qpython-webapp",
-        "description":"如何开发QPython WebApp",
-        "title":"如何开发QPython WebApp",
+        "auth":"River",
+        "link":"http://edu.qpython.org/qpython-quick-start/cn/index.html",
+        "smodule":"qpython-quick-start",
+        "description":"QPython快速开始QPython快速开始QPython快速开始QPython快速开始QPython快速开始QPython快速开始QPython快速开始QPython快速开始QPython快速开始QPython快速开始QPython快速开始QPython快速开始QPython快速开始QPython快速开始QPython快速开始QPython快速开始",
+        "title":"QPython快速开始",
         "ver":"1.0.0",
         "downloads": "10,000+",
-        "cat":"new",
-        "level": 2,
+        "cat":"featured",
+        "type":"basic",
+        "level": 1,
+        "logo": "http://edu.qpython.org/static/course-qpython-quick-start.png",
         "open": 1,
         "crowdfunding": 0,
-        "logo": "http://edu.qpython.org/static/course-qpython-webapp.png",
+        "auth_desc": "",
+        "auth_avatar": "",
+        "funding_process": 69,
         "courses":[
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-webapp/cn/index.html",
-                "smodule":"qpython-webapp-principle",
-                "description":"为什么要使用QPython WebApp",
-                "title":"QPython上的WebApp",
-                "ver":"1.0.0",
+                "link":"http://edu.qpython.org/qpython-quick-start/cn/principle.html",
+                "smodule":"qpython-quick-start-principles",
+                "description":"为何要使用QPython",
+                "title":"随时随地学习编程",
                 "downloads": "10,000+"
             },
-            {
-                "link":"http://edu.qpython.org/qpython-webapp/cn/your-first-webapp.html",
-                "smodule":"qpython-webapp-your-first-webapp",
-                "description":"如何开发你的第一个WebApp",
-                "title":"你的第一个WebApp",
-                "ver":"1.0.0",
-                "downloads": "10,000+"
-            },
-            {
-                "link":"http://edu.qpython.org/qpython-webapp/cn/web-frameworks.html",
-                "smodule":"qpython-webapp-web-frameworks",
-                "description":"在QPython中使用你熟悉的Web开发框架来开发WebApp",
-                "title":"QPython支持的Web开发框架",
-                "ver":"1.0.0",
-                "downloads": "10,000+"
-            }
-        ]
-    },
-    {
-        "src":"http://kivy.org",
-        "rdate":"2017-06-15",
-        "link":"http://edu.qpython.org/kivy-qpython/index.html",
-        "smodule":"kivy-qpython",
-        "description":"如何用Kivy开发图形界面程序",
-        "title":"如何用Kivy开发图形界面程序",
-        "ver":"1.0.0",
-        "downloads": "5,000+",
-        "cat":"new",
-        "level": 3,
-        "logo": "http://edu.qpython.org/static/course-kivy-qpython.png",
-        "open": 1,
-        "crowdfunding": 1,
-        "courses":[
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/kivy-qpython/cn/index.html",
-                "smodule":"qpython-webapp-principle",
-                "description":"介绍QPython上的Kivy",
-                "title":"QPython上的Kivy",
-                "ver":"1.0.0",
+                "link":"http://edu.qpython.org/qpython-quick-start/cn/terminal-howto.html",
+                "smodule":"qpython-quick-start-terminal-howto",
+                "description":"使用QPython的终端来探索",
+                "title":"终端使用帮助",
                 "downloads": "10,000+"
             },
             {
-                "link":"http://edu.qpython.org/kivy-qpython/cn/your-first-kivyapp.html",
-                "smodule":"kivy-qpython-your-first-kivyapp",
-                "description":"如何开发第一个KivyApp",
-                "title":"你的第一个KivyApp",
-                "ver":"1.0.0",
+                "rdate":"2017-06-15",
+                "link":"http://edu.qpython.org/qpython-quick-start/cn/editor-howto.html",
+                "smodule":"qpython-quick-start-editor-howto",
+                "description":"使用QPython的编辑器来进行开发",
+                "title":"编辑器使用帮助",
                 "downloads": "10,000+"
-            }
-        ]
-    },
-    {
-        "src":"http://qpython.org",
-        "rdate":"2017-07-15",
-        "link":"http://edu.qpython.org/qsl4a-develop/index.html",
-        "smodule":"qsl4a-develop",
-        "description":"如何在QPython里调用安卓接口",
-        "title":"QSL4A - QPython的安卓APIs",
-        "ver":"1.0.0",
-        "downloads": "3,000+",
-        "cat":"new",
-        "level": 3,
-        "logo": "http://edu.qpython.org/static/course-sl4a.png",
-        "open": 1,
-        "crowdfunding": 0,
-        "courses":[
+            },
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qsl4a-develop/cn/index.html",
-                "smodule":"qsl4a-develop-index",
-                "description":"QSL4A是Python调用安卓的桥梁",
-                "title":"QSL4A介绍",
-                "ver":"1.0.0",
+                "link":"http://edu.qpython.org/qpython-quick-start/cn/qpypi-howto.html",
+                "smodule":"qpython-quick-start-qpypi-howto",
+                "description":"在QPython上如何安装包和快捷工具",
+                "title":"QPYPI使用帮助",
+                "downloads": "10,000+"
+            },
+            {
+                "rdate":"2017-06-15",
+                "link":"http://edu.qpython.org/qpython-quick-start/cn/community-howto.html",
+                "smodule":"qpython-quick-start-community-howto",
+                "description":"如何加入QPython的社区",
+                "title":"关于社区",
                 "downloads": "10,000+"
             }
         ]

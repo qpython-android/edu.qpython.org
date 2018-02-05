@@ -1,5 +1,107 @@
 [
+   
+     {
+        "src":"http://qpython.org",
+        "rdate":"2017-07-15",
+        "link":"http://edu.qpython.org/qsl4a-develop/index.html",
+        "smodule":"qsl4a-develop",
+        "description":"How to call android APIs on QPython",
+        "title":"QSL4A - QPython's Android APIs",
+        "ver":"1.0.0",
+        "downloads": "3,000+",
+        "cat":"new",
+        "level": 3,
+        "logo": "http://edu.qpython.org/static/course-sl4a.png",
+        "open": 1,
+        "courses":[
+            {
+                "rdate":"2017-06-15",
+                "link":"http://edu.qpython.org/qsl4a-develop/index.html",
+                "smodule":"qsl4a-develop-index",
+                "description":"QSL4A is the bridge of calling Android APIs with Python",
+                "title":"QSL4A Introduction",
+                "ver":"1.0.0",
+                "downloads": "10,000+"
+            }
+
+        ]
+    }, {
+        "src":"http://qpython.org",
+        "rdate":"2017-06-15",
+        "author":"River",
+        "link":"http://edu.qpython.org/qpython-webapp/index.html",
+        "smodule":"qpython-webapp",
+        "description":"Introduce how to develop QPython WebApp",
+        "title":"QPython WebApp",
+        "ver":"1.0.0",
+        "downloads": "10,000+",
+        "cat":"new",
+        "level": 2,
+        "open": 1,
+        "logo": "http://edu.qpython.org/static/course-qpython-webapp.png",
+        "courses":[
+            {
+                "rdate":"2017-06-15",
+                "link":"http://edu.qpython.org/qpython-webapp/index.html",
+                "smodule":"qpython-webapp-principle",
+                "description":"Why QPython WebApp",
+                "title":"QPython WebApp Principle",
+                "ver":"1.0.0",
+                "downloads": "10,000+"
+            },
+            {
+                "link":"http://edu.qpython.org/qpython-webapp/your-first-webapp.html",
+                "smodule":"qpython-webapp-your-first-webapp",
+                "description":"How to develop your first WebApp",
+                "title":"Your first WebApp",
+                "ver":"1.0.0",
+                "downloads": "10,000+"
+            },
+            {
+                "link":"http://edu.qpython.org/qpython-webapp/web-frameworks.html",
+                "smodule":"qpython-webapp-web-frameworks",
+                "description":"Develop WebApp with your familiar web framework",
+                "title":"Web Frameworks on QPython",
+                "ver":"1.0.0",
+                "downloads": "10,000+"
+            }
+        ]
+    },
     {
+        "src":"http://kivy.org",
+        "rdate":"2017-06-15",
+        "link":"http://edu.qpython.org/kivy-qpython/index.html",
+        "smodule":"kivy-qpython",
+        "description":"How to develop a GUI program with Kivy",
+        "title":"Kivy on QPython",
+        "ver":"1.0.0",
+        "downloads": "5,000+",
+        "cat":"new",
+        "level": 3,
+        "crowdfunding": 1,
+        "logo": "http://edu.qpython.org/static/course-kivy-qpython.png",
+        "open": 1,
+        "courses":[
+            {
+                "rdate":"2017-06-15",
+                "link":"http://edu.qpython.org/kivy-qpython/index.html",
+                "smodule":"qpython-webapp-principle",
+                "description":"Kivy on QPython",
+                "title":"QPython Kivy Principle",
+                "ver":"1.0.0",
+                "downloads": "10,000+"
+            },
+            {
+                "link":"http://edu.qpython.org/kivy-qpython/your-first-kivyapp.html",
+                "smodule":"kivy-qpython-your-first-kivyapp",
+                "description":"How to develop your first KivyApp",
+                "title":"Your first KivyApp",
+                "ver":"1.0.0",
+                "downloads": "10,000+"
+            }
+        ]
+    },
+   {
         "src":"http://qpython.org",
         "rdate":"2017-06-15",
         "auth":"River",
@@ -55,399 +157,61 @@
                 "downloads": "10,000+"
             }
         ]
-    },
-    {
+    }, {
         "src":"http://qpython.org",
         "rdate":"2017-06-15",
-        "author":"River",
-        "link":"http://edu.qpython.org/qpython-webapp/index.html",
-        "smodule":"qpython-webapp",
-        "description":"Introduce how to develop QPython WebApp",
-        "title":"QPython WebApp",
+        "auth":"River",
+        "link":"http://edu.qpython.org/qpython-quick-start/index.html",
+        "smodule":"qpython-quick-start",
+        "description":"QPython Quick Start",
+        "title":"QPython Quick Start",
         "ver":"1.0.0",
         "downloads": "10,000+",
-        "cat":"new",
-        "level": 2,
-        "open": 0,
-        "logo": "http://edu.qpython.org/static/course-qpython-webapp.png",
-        "courses":[
-            {
-                "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-webapp/index.html",
-                "smodule":"qpython-webapp-principle",
-                "description":"Why QPython WebApp",
-                "title":"QPython WebApp Principle",
-                "ver":"1.0.0",
-                "downloads": "10,000+"
-            },
-            {
-                "link":"http://edu.qpython.org/qpython-webapp/your-first-webapp.html",
-                "smodule":"qpython-webapp-your-first-webapp",
-                "description":"How to develop your first WebApp",
-                "title":"Your first WebApp",
-                "ver":"1.0.0",
-                "downloads": "10,000+"
-            },
-            {
-                "link":"http://edu.qpython.org/qpython-webapp/web-frameworks.html",
-                "smodule":"qpython-webapp-web-frameworks",
-                "description":"Develop WebApp with your familiar web framework",
-                "title":"Web Frameworks on QPython",
-                "ver":"1.0.0",
-                "downloads": "10,000+"
-            }
-        ]
-    },
-    {
-        "src":"http://kivy.org",
-        "rdate":"2017-06-15",
-        "link":"http://edu.qpython.org/kivy-qpython/index.html",
-        "smodule":"kivy-qpython",
-        "description":"How to develop a GUI program with Kivy",
-        "title":"Kivy on QPython",
-        "ver":"1.0.0",
-        "downloads": "5,000+",
-        "cat":"new",
-        "level": 3,
-        "logo": "http://edu.qpython.org/static/course-kivy-qpython.png",
-        "open": 0,
-        "courses":[
-            {
-                "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/kivy-qpython/index.html",
-                "smodule":"qpython-webapp-principle",
-                "description":"Kivy on QPython",
-                "title":"QPython Kivy Principle",
-                "ver":"1.0.0",
-                "downloads": "10,000+"
-            },
-            {
-                "link":"http://edu.qpython.org/kivy-qpython/your-first-kivyapp.html",
-                "smodule":"kivy-qpython-your-first-kivyapp",
-                "description":"How to develop your first KivyApp",
-                "title":"Your first KivyApp",
-                "ver":"1.0.0",
-                "downloads": "10,000+"
-            }
-        ]
-    },
-    {
-        "src":"http://qpython.org",
-        "rdate":"2017-07-15",
-        "link":"http://edu.qpython.org/qsl4a-develop/index.html",
-        "smodule":"qsl4a-develop",
-        "description":"How to call android APIs on QPython",
-        "title":"QSL4A - QPython's Android APIs",
-        "ver":"1.0.0",
-        "downloads": "3,000+",
-        "cat":"new",
-        "level": 3,
-        "logo": "http://edu.qpython.org/static/course-sl4a.png",
-        "open": 0,
-        "courses":[
-            {
-                "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qsl4a-develop/index.html",
-                "smodule":"qsl4a-develop-index",
-                "description":"QSL4A is the bridge of calling Android APIs with Python",
-                "title":"QSL4A Introduction",
-                "ver":"1.0.0",
-                "downloads": "10,000+"
-            }
-
-        ]
-    },{
-        "src":"http://qpython.org",
-        "rdate":"2017-09-15",
-        "link":"http://edu.qpython.org/interesting-3rd-packages/index.html",
-        "smodule":"interesting-3rd-packages",
-        "description":"Interesting 3rd packages",
-        "title":"Python Advanced - Interesting 3rd packages",
-        "ver":"1.0.0",
-        "downloads": "1,000+",
-        "cat":"new",
-        "level": 4,
-        "logo": "http://edu.qpython.org/static/course-interesting.png",
-        "open": 0,
-        "courses":[
-        ]
-    },{
-        "src":"http://qpython.org",
-        "rdate":"2017-09-15",
-        "link":"http://edu.qpython.org/data-analytics/index.html",
-        "smodule":"data-analytics",
-        "description":"How to do the data analytics with QPython",
-        "title":"Data Analytics",
-        "ver":"1.0.0",
-        "downloads": "1,000+",
         "cat":"featured",
-        "level": 4,
-        "logo": "http://edu.qpython.org/static/course-data-analytics.png",
-        "open": 0,
-        "courses":[
-        ]
-    },{
-        "src":"http://qpython.org",
-        "rdate":"2017-09-15",
-        "link":"http://edu.qpython.org/python-base/index.html",
-        "smodule":"python-base",
-        "description":"Python Basic",
-        "title":"Python Basic",
-        "ver":"1.0.0",
-        "downloads": "1,000+",
-        "cat":"new",
         "level": 1,
-        "logo": "http://edu.qpython.org/static/course-python-basic.png",
-        "open": 0,
-        "courses":[
-        ]
-    },{
-        "src":"http://qpython.org",
-        "rdate":"2017-09-15",
-        "link":"http://edu.qpython.org/dive-into-python/index.html",
-        "smodule":"dive-into-python",
-        "description":"Dive into Python",
-        "title":"Dive into Python",
-        "ver":"1.0.0",
-        "downloads": "1,000+",
-        "cat":"new",
-        "level": 1,
-        "logo": "http://edu.qpython.org/static/course-dive-into-python.png",
-        "open": 0,
-        "courses":[
-        ]
-    },{
-        "src":"http://qpython.org",
-        "rdate":"2017-09-15",
-        "link":"http://edu.qpython.org/aipy-numpy/index.html",
-        "smodule":"aipy-numpy",
-        "description":"Numpy Quick Start",
-        "title":"AIPY - Numpy Quick Start",
-        "ver":"1.0.0",
-        "downloads": "1,000+",
-        "cat":"featured",
-        "level": 4,
-        "logo": "http://edu.qpython.org/static/course-numpy.png",
-        "open": 0,
-        "courses":[
-        ]
-    },{
-        "src":"http://qpython.org",
-        "rdate":"2017-09-15",
-        "link":"http://edu.qpython.org/aipy-scipy/index.html",
-        "smodule":"aipy-scipy",
-        "description":"Scipy Quick Start",
-        "title":"AIPY - Scipy Quick Start",
-        "ver":"1.0.0",
-        "downloads": "1,000+",
-        "cat":"featured",
-        "level": 4,
-        "logo": "http://edu.qpython.org/static/course-scipy.png",
-        "open": 0,
-        "courses":[
-        ]
-    },{
-        "src":"http://qpython.org",
-        "rdate":"2017-09-15",
-        "link":"http://edu.qpython.org/aipy-theano/index.html",
-        "smodule":"aipy-scipy",
-        "description":"Theano Quick Start",
-        "title":"AIPY - Theano Quick Start",
-        "ver":"1.0.0",
-        "downloads": "1,000+",
-        "cat":"featured",
-        "level": 4,
-        "logo": "http://edu.qpython.org/static/course-theano.png",
-        "open": 0,
-        "courses":[
-        ]
-    },{
-        "src":"http://qpython.org",
-        "rdate":"2017-09-15",
-        "link":"http://edu.qpython.org/aipy-pandas/index.html",
-        "smodule":"aipy-pandas",
-        "description":"Pandas Quick Start",
-        "title":"AIPY - Pandas Quick Start",
-        "ver":"1.0.0",
-        "downloads": "1,000+",
-        "cat":"featured",
-        "level": 4,
-        "logo": "http://edu.qpython.org/static/course-pandas.png",
-        "open": 0,
-        "courses":[
-        ]
-    },{
-        "src":"http://qpython.org",
-        "rdate":"2017-09-15",
-        "link":"http://edu.qpython.org/aipy-scikit-learn/index.html",
-        "smodule":"aipy-scikit-learn",
-        "description":"Scikit-learn Quick Start",
-        "title":"AIPY - Scikit-learn Quick Start",
-        "ver":"1.0.0",
-        "downloads": "1,000+",
-        "cat":"featured",
-        "level": 4,
-        "logo": "http://edu.qpython.org/static/course-scikit-learn.png",
-        "open": 0,
-        "courses":[
-        ]
-    },{
-        "src":"http://qpython.org",
-        "rdate":"2017-09-15",
-        "link":"http://edu.qpython.org/aipy-keras/index.html",
-        "smodule":"aipy-keras",
-        "description":"Keras Quick Start",
-        "title":"AIPY - Keras Quick Start",
-        "ver":"1.0.0",
-        "downloads": "1,000+",
-        "cat":"featured",
-        "level": 4,
-        "logo": "http://edu.qpython.org/static/course-keras.png",
-        "open": 0,
-        "courses":[
-        ]
-    },{
-        "src":"http://qpython.org",
-        "rdate":"2017-09-15",
-        "link":"http://edu.qpython.org/aipy-tensorflow/index.html",
-        "smodule":"aipy-tensorflow",
-        "description":"Tensorflow Quick Start",
-        "title":"AIPY - Tensorflow Quick Start",
-        "ver":"1.0.0",
-        "downloads": "1,000+",
-        "cat":"featured",
-        "level": 4,
-        "logo": "http://edu.qpython.org/static/course-tensorflow.png",
-        "open": 0,
-        "courses":[
-        ]
-    },{
-        "src":"http://qpython.org",
-        "rdate":"2017-09-15",
-        "link":"http://edu.qpython.org/bottle-web/index.html",
-        "smodule":"bottle-web",
-        "description":"Bottle Web Quick Start",
-        "title":"Python Advanced - Bottle Web",
-        "ver":"1.0.0",
-        "downloads": "1,000+",
-        "cat":"new",
-        "level": 3,
-        "logo": "http://edu.qpython.org/static/course-bottle.png",
-        "open": 0,
+        "logo": "http://edu.qpython.org/static/course-qpython-quick-start.png",
+        "open": 1,
         "courses":[
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/bottle-web/tutorial.html",
-                "smodule":"bottle-web-tutorial",
-                "description":"Bottle Web Tutorial",
-                "title":"Bottle Web Tutorial",
+                "link":"http://edu.qpython.org/qpython-quick-start/principle.html",
+                "smodule":"qpython-quick-start-principles",
+                "description":"Why QPython",
+                "title":"QPython principle",
+                "downloads": "10,000+"
+            },
+            {
+                "rdate":"2017-06-15",
+                "link":"http://edu.qpython.org/qpython-quick-start/terminal-howto.html",
+                "smodule":"qpython-quick-start-terminal-howto",
+                "description":"Explore to use QPython's Terminal",
+                "title":"Terminal howto",
+                "downloads": "10,000+"
+            },
+            {
+                "rdate":"2017-06-15",
+                "link":"http://edu.qpython.org/qpython-quick-start/editor-howto.html",
+                "smodule":"qpython-quick-start-editor-howto",
+                "description":"Develop with QPython's editor ",
+                "title":"Editor howto",
+                "downloads": "10,000+"
+            },
+            {
+                "rdate":"2017-06-15",
+                "link":"http://edu.qpython.org/qpython-quick-start/qpypi-howto.html",
+                "smodule":"qpython-quick-start-qpypi-howto",
+                "description":"Install packages & programs on QPython",
+                "title":"QPYPI howto",
+                "downloads": "10,000+"
+            },
+            {
+                "rdate":"2017-06-15",
+                "link":"http://edu.qpython.org/qpython-quick-start/community-howto.html",
+                "smodule":"qpython-quick-start-community-howto",
+                "description":"Join a QPython community",
+                "title":"Community howto",
                 "downloads": "10,000+"
             }
-        ]
-    },{
-        "src":"http://qpython.org",
-        "rdate":"2017-09-15",
-        "link":"http://edu.qpython.org/django/index.html",
-        "smodule":"django",
-        "description":"Django Web Quick Start",
-        "title":"Python Advanced - Django Quick Start",
-        "ver":"1.0.0",
-        "downloads": "1,000+",
-        "cat":"new",
-        "level": 4,
-        "logo": "http://edu.qpython.org/static/course-django.png",
-        "open": 0,
-        "courses":[
-        ]
-    },{
-        "src":"http://qpython.org",
-        "rdate":"2017-09-15",
-        "link":"http://edu.qpython.org/blockchain/index.html",
-        "smodule":"blockchain",
-        "description":"Blockchain Quick Start",
-        "title":"Python Advanced - Blockchain Quick Start",
-        "ver":"1.0.0",
-        "downloads": "1,000+",
-        "cat":"featured",
-        "level": 4,
-        "logo": "http://edu.qpython.org/static/course-blockchain.png",
-        "open": 0,
-        "courses":[
-        ]
-    },{
-        "src":"http://qpython.org",
-        "rdate":"2017-09-15",
-        "link":"http://edu.qpython.org/wego/index.html",
-        "smodule":"wego",
-        "description":"Wego Quick Start",
-        "title":"Python Advanced - Wego Quick Start",
-        "ver":"1.0.0",
-        "downloads": "1,000+",
-        "cat":"featured",
-        "level": 4,
-        "logo": "http://edu.qpython.org/static/course-wego.png",
-        "open": 0,
-        "courses":[
-        ]
-    },{
-        "src":"http://qpython.org",
-        "rdate":"2017-09-15",
-        "link":"http://edu.qpython.org/vr/index.html",
-        "smodule":"full-text-search",
-        "description":"VR Quick Start",
-        "title":"Python Advanced - VR Quick Start",
-        "ver":"1.0.0",
-        "downloads": "1,000+",
-        "cat":"featured",
-        "level": 4,
-        "logo": "http://edu.qpython.org/static/course-vr.png",
-        "open": 0,
-        "courses":[
-        ]
-    },{
-        "src":"http://qpython.org",
-        "rdate":"2017-09-15",
-        "link":"http://edu.qpython.org/ar/index.html",
-        "smodule":"full-text-search",
-        "description":"AR Quick Start",
-        "title":"Python Advanced - AR Quick Start",
-        "ver":"1.0.0",
-        "downloads": "1,000+",
-        "cat":"featured",
-        "level": 4,
-        "logo": "http://edu.qpython.org/static/course-ar.png",
-        "open": 0,
-        "courses":[
-        ]
-    },{
-        "src":"http://qpython.org",
-        "rdate":"2017-09-15",
-        "link":"http://edu.qpython.org/unity3d/index.html",
-        "smodule":"full-text-search",
-        "description":"Unity 3D Quick Start",
-        "title":"Python Advanced - Unity 3D Quick Start",
-        "ver":"1.0.0",
-        "downloads": "1,000+",
-        "cat":"new",
-        "level": 4,
-        "logo": "http://edu.qpython.org/static/course-unit-3d.png",
-        "open": 0,
-        "courses":[
-        ]
-    },{
-        "src":"http://qpython.org",
-        "rdate":"2018-01-23",
-        "link":"http://edu.qpython.org/opencv/index.html",
-        "smodule":"opencv",
-        "description":"OpenCV Quick Start",
-        "title":"OpenCV - OpenCV Quick Start",
-        "ver":"1.0.0",
-        "downloads": "1,000+",
-        "cat":"featured",
-        "level": 4,
-        "logo": "http://edu.qpython.org/static/course-opencv.png",
-        "open": 0,
-        "courses":[
         ]
     }
 ]
