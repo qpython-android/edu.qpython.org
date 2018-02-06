@@ -1,8 +1,7 @@
 #!/bin/bash
-subFolder=/Users/Hmei/DL:ML/course/docs 
-commentFolder=/Users/Hmei/DL:ML/course/docs/comments
-tamplate=/Users/Hmei/DL:ML/course/docs/comments/data-analytics-index.html 
-for i in "$subFolder"/* ; do
+commentFolder=./comments
+tamplate=./comments/data-analytics-index.html 
+for i in ./* ; do
     if [ -d "$i" ]; then
         basename=$(basename "$i").html
         file=$commentFolder/$basename
