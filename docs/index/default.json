@@ -1,6 +1,42 @@
 [
    
-     {
+    {
+        "src":"http://kivy.org",
+        "rdate":"2017-06-15",
+        "link":"http://edu.qpython.org/kivy-qpython/index.html",
+        "smodule":"kivy-qpython",
+        "description":"How to develop a GUI program with Kivy",
+        "title":"Kivy on QPython",
+        "ver":"1.0.0",
+        "downloads": "5,000+",
+        "cat":"new",
+        "level": 3,
+        "auth_avatar":"https://avatars1.githubusercontent.com/u/3059527?s=400&v=4",
+        "auth":"River",
+        "auth_desc":"Original Author of QPython, CTO of some startup",
+        "crowdfunding": 1,
+        "logo": "http://edu.qpython.org/static/course-kivy-qpython.png",
+        "open": 1,
+        "courses":[
+            {
+                "rdate":"2017-06-15",
+                "link":"http://edu.qpython.org/kivy-qpython/index.html",
+                "smodule":"qpython-webapp-principle",
+                "description":"Kivy on QPython",
+                "title":"QPython Kivy Principle",
+                "ver":"1.0.0",
+                "downloads": "10,000+"
+            },
+            {
+                "link":"http://edu.qpython.org/kivy-qpython/your-first-kivyapp.html",
+                "smodule":"kivy-qpython-your-first-kivyapp",
+                "description":"How to develop your first KivyApp",
+                "title":"Your first KivyApp",
+                "ver":"1.0.0",
+                "downloads": "10,000+"
+            }
+        ]
+    }, {
         "src":"http://qpython.org",
         "rdate":"2017-07-15",
         "link":"http://edu.qpython.org/qsl4a-develop/index.html",
@@ -73,43 +109,7 @@
             }
         ]
     },
-    {
-        "src":"http://kivy.org",
-        "rdate":"2017-06-15",
-        "link":"http://edu.qpython.org/kivy-qpython/index.html",
-        "smodule":"kivy-qpython",
-        "description":"How to develop a GUI program with Kivy",
-        "title":"Kivy on QPython",
-        "ver":"1.0.0",
-        "downloads": "5,000+",
-        "cat":"new",
-        "level": 3,
-        "auth_avatar":"https://avatars1.githubusercontent.com/u/3059527?s=400&v=4",
-        "auth":"River",
-        "auth_desc":"Original Author of QPython, CTO of some startup",
-        "crowdfunding": 1,
-        "logo": "http://edu.qpython.org/static/course-kivy-qpython.png",
-        "open": 1,
-        "courses":[
-            {
-                "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/kivy-qpython/index.html",
-                "smodule":"qpython-webapp-principle",
-                "description":"Kivy on QPython",
-                "title":"QPython Kivy Principle",
-                "ver":"1.0.0",
-                "downloads": "10,000+"
-            },
-            {
-                "link":"http://edu.qpython.org/kivy-qpython/your-first-kivyapp.html",
-                "smodule":"kivy-qpython-your-first-kivyapp",
-                "description":"How to develop your first KivyApp",
-                "title":"Your first KivyApp",
-                "ver":"1.0.0",
-                "downloads": "10,000+"
-            }
-        ]
-    },
+    
    {
         "src":"http://qpython.org",
         "rdate":"2017-06-15",
