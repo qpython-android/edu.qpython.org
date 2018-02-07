@@ -41,8 +41,8 @@
         "src":"http://qpython.org",
         "rdate":"2017-07-15",
         "link":"http://edu.qpython.org/qsl4a-develop/index.html",
-        "smodule":"SL4A能让开发者使用脚本语言来和安卓设备交互。在QPython里，QSL4能让你使用Python语言来调用Android上的API，获取硬件状态，实现手机的全控制，听起来有没有心动?  快来学习一下吧。",
-        "description":"如何在QPython里调用安卓接口",
+        "smodule":"qsl4a-develop",
+        "description":"SL4A能让开发者使用脚本语言来和安卓设备交互。在QPython里，QSL4能让你使用Python语言来调用Android上的API，获取硬件状态，实现手机的全控制，听起来有没有心动?  快来学习一下吧。",
         "title":"QSL4A - QPython的安卓APIs",
         "ver":"1.0.0",
         "downloads": "3,000+",
@@ -53,7 +53,7 @@
         "auth_desc":"QPython开发组资深工程师",
         "logo": "http://edu.qpython.org/static/course-sl4a.png",
         "open": 1,
-        "crowdfunding": 0,
+        "crowdfunding": 1,
         "courses":[
             {
                 "rdate":"2017-06-15",

@@ -52,6 +52,7 @@
         "auth_desc":"Senior Engineer of QPython Team",
         "logo": "http://edu.qpython.org/static/course-sl4a.png",
         "open": 1,
+        "crowdfunding": 1,
         "courses":[
             {
                 "rdate":"2017-06-15",
