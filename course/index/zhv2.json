@@ -71,7 +71,7 @@
         "author":"River",
         "link":"http://edu.qpython.org/qpython-webapp/cn/index.html",
         "smodule":"qpython-webapp",
-        "description":"作为当今领用领域最广泛的Web开发领域，Python拥有包括bottle, django, tornado, flask在内的Web开发库，能满足你不同的开发需求，  本课程不仅会教你如何使用这些开发框架开发Web应用，同时也能让你掌握如何用QPython开发超级WebApp。",
+        "description":"作为当今应用领域最广泛的Web开发语言，Python拥有包括bottle, django, tornado, flask在内的Web开发库，能满足你不同的开发需求，  本课程不仅会教你如何使用这些开发框架开发Web应用，同时也能让你掌握如何用QPython开发超级WebApp。",
         "title":"如何开发QPython WebApp",
         "ver":"1.0.0",
         "downloads": "10,000+",
