@@ -16,7 +16,7 @@
         "auth_desc":"Senior Engineer of QPython Team",
         "crowdfunding": 1,
         "logo": "http://edu.qpython.org/static/course-kivy-qpython.png",
-        "open": 0,
+        "open": 1,
         "courses":[
             {
                 "rdate":"2017-06-15",
