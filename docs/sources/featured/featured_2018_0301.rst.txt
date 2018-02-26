@@ -1,0 +1,51 @@
+Share a live documents with QPyNotebook
+========================================
+
+Do you want some application which helps you create and share documents that contain live Python code, equations, visualizations and narrative text?
+
+Now, QPyNotebook for QPython is published, which is developed based on the great opensource project jupyter notebook, it will help you do the following jobs easily like data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning and much more.
+
+How to install
+-----------
+You can get it with the following links:
+
+* `Install from GooglePlay <http://nb.qpython.org/install.html>`_
+* `Get APK from Github <https://github.com/qpython-android/notebook/releases/>`_ *(please check the "Trust unknow source" in system's setting if you install it with APK downloaded from github)*
+
+.. image:: http://edu.qpython.org/static/notebook-setting.png
+    :alt: Enable QPyNotebook in QPython Setting
+
+.. image:: http://edu.qpython.org/static/notebook-app.png
+    :alt: Start QPyNotebook
+
+
+
+How to use
+-----------------------
+After installing, please follow these steps to enable QPyNotebook on QPython.
+
+- Make sure you have installed the newest QPython **(>=2.2.0)**
+- Check "Install QPyNotebook" from QPython's setting page, then it will guide you to install some necessary resources.
+- Open the Explorer from QPython dashboard, find some *.ipynb files (For example notebooks/Welcome.ipynb) and open it, then you will start the QPyNotebook.
+
+
+.. image:: http://edu.qpython.org/static/notebook-explorer.png
+    :alt: You could start QPyNotebook from QPython's explorer
+
+.. image:: http://edu.qpython.org/static/notebook-page.png
+    :alt: Start to access Welcome.ipynb
+
+
+Feedback
+-----------------------
+Feel free to give us any feedback please.
+
+* `@qpython <http://twitter.com/qpython>`_
+* `support@qpython.org <support@qpython.org>`_
+
+Join the community
+----------------------------
+
+* `QPython@G+ <https://plus.google.com/u/2/communities/111759148772865961493>`_
+* `QPython@Facebook <https://www.facebook.com/groups/qpython>`_
+
