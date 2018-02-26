@@ -12,11 +12,16 @@ You can get it with the following links:
 * `Install from GooglePlay <http://nb.qpython.org/install.html>`_
 * `Get APK from Github <https://github.com/qpython-android/notebook/releases/>`_ *(please check the "Trust unknow source" in system's setting if you install it with APK downloaded from github)*
 
-.. image:: http://edu.qpython.org/static/notebook-setting.png
-    :alt: Enable QPyNotebook in QPython Setting
 
+*You can start QPyNotebook*
 .. image:: http://edu.qpython.org/static/notebook-app.png
     :alt: Start QPyNotebook
+
+
+*Please enable QPyNotebook from QPython's setting page*
+
+.. image:: http://edu.qpython.org/static/notebook-setting.png
+    :alt: Enable QPyNotebook in QPython Setting
 
 
 
@@ -29,9 +34,11 @@ After installing, please follow these steps to enable QPyNotebook on QPython.
 - Open the Explorer from QPython dashboard, find some *.ipynb files (For example notebooks/Welcome.ipynb) and open it, then you will start the QPyNotebook.
 
 
+*You could start the QPyNotebook from QPython's explorer*
 .. image:: http://edu.qpython.org/static/notebook-explorer.png
     :alt: You could start QPyNotebook from QPython's explorer
 
+*This is the QPyNotebook's page*
 .. image:: http://edu.qpython.org/static/notebook-page.png
     :alt: Start to access Welcome.ipynb
 
