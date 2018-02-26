@@ -14,6 +14,7 @@ You can get it with the following links:
 
 
 *You can start QPyNotebook*
+
 .. image:: http://edu.qpython.org/static/notebook-app.png
     :alt: Start QPyNotebook
 
@@ -35,10 +36,12 @@ After installing, please follow these steps to enable QPyNotebook on QPython.
 
 
 *You could start the QPyNotebook from QPython's explorer*
+
 .. image:: http://edu.qpython.org/static/notebook-explorer.png
     :alt: You could start QPyNotebook from QPython's explorer
 
-*This is the QPyNotebook's page*
+*QPyNotebook's live documentation*
+
 .. image:: http://edu.qpython.org/static/notebook-page.png
     :alt: Start to access Welcome.ipynb
 
