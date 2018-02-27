@@ -29,6 +29,10 @@ Click the QPyNotebook Libraries button and there'll be a terminal window to down
 
 
 
+.. image:: http://edu.qpython.org/static/notebook-download.png
+    :alt: Download libraries
+
+
 **Now all set!**
 
 .. image:: http://edu.qpython.org/static/notebook-downloaded.png
