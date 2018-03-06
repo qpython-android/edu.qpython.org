@@ -167,6 +167,22 @@
                 "description":"Join a QPython community",
                 "title":"Community howto",
                 "downloads": "10,000+"
+            },
+            {
+                "rdate":"2017-09-15",
+                "link":"http://edu.qpython.org/AIPY/index.html",
+                "smodule":"qpython-quick-start-aipy-howto",
+                "description":"Learn AI with QPython",
+                "title":"AIPY howto",
+                "downloads": "5,000+"
+            },
+            {
+                "rdate":"2018-03-05",
+                "link":"http://edu.qpython.org/featured/featured_2018_0301_notebook.html",
+                "smodule":"qpython-quick-start-notebook-howto",
+                "description":"Practice Python step by step",
+                "title":"QPyNotebook howto",
+                "downloads": "5,000+"
             }
         ]
     }, {
