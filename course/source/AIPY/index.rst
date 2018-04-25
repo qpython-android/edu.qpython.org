@@ -6,21 +6,21 @@ AIPY - Learn AI programming on Mobile
 
 AIPY  is a high-level AI learning app, based on related libraries like Numpy, Scipy, theano, keras, etc.... It was developed with a focus on helping you learn and practise AI related programming well and fast.
 
-Now, AIPY is released as a QPython plugin, aftering being installed, you could see the AIPY category in QPYPI, where you could find Numpy, Scipy, Pandas, Matplotlib, Scikit-learn, Theano, Lasange, Keras.
+Now, AIPY is released as a QPython plugin, after being installed, you can see the AIPY category in QPYPI, where you could find Numpy, Scipy, Pandas, Matplotlib, Scikit-learn, Theano, Lasange, Keras.
 
 By installing these libraries, you could start mathematics, scientific, data  analytics, deeplearning etc. with QPython.
 
 
 How to use
 --------------
-You should install AIPY application first, then please make sure you have the QPython(version >=2.0.7) installed.
+You should install AIPY application first, then please make sure you have the latest QPython(version >=2.2.3-1) installed.
 
-If you have complete the previous step, then you could launch QPython and enter the QPYPI, you will see the AIPY category, from where you could install the related libraries. They are numpy, scipy, pandas, matplotlib, scikit-learn, theano, Lasagne, keras etc.
+If you have completed the previous step, then you could launch QPython and enter the QPYPI, you will see the AIPY category, from where you can install the related libraries. They are numpy, scipy, pandas, matplotlib, scikit-learn, theano, Lasagne, keras etc.
 
 .. image:: http://edu.qpython.org/static/qpypi-aipy.png
     :alt: AIPY libraires
 
-*You could install AIPY libraries from QPython's QPYPI*
+*You can install AIPY libraries from QPython's QPYPI*
 
 
 Keras
@@ -44,12 +44,12 @@ Theano is a Python library that allows you to define, optimize, and evaluate mat
 
 Numpy
 -----------
-NumPy is the fundamental package for scientific computing with Python. It contains among other things:
+NumPy is the fundamental package for scientific computing with Python. It contains the following things:
 
-- 1 a powerful N-dimensional array object
-- 2 sophisticated (broadcasting) functions
-- 3 tools for integrating C/C++ and Fortran code
-- 4 useful linear algebra, Fourier transform, and random number capabilities
+- 1 A powerful N-dimensional array object
+- 2 Sophisticated (broadcasting) functions
+- 3 Tools for integrating C/C++ and Fortran code
+- 4 Useful linear algebra, Fourier transform, and random number capabilities
 
 
 Scipy
