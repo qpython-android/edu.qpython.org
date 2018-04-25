@@ -5,12 +5,12 @@ About
 --------
 QPython(for Android) is a Python script engine for Android system, which runs Python programs on any Android device. It contains a Python interpreter, a console, and an editor. Besides a basic Python library, QPython also integrates a bottle library that supports WebApp development, and an SL4A library that supports invoking Android APIs.
 
-A QPython (for iOS) application designed for iOS users is released in appstore also.
+A QPython (iOS) application designed for iOS users is also released in Appstore.
 
 
 History of QPython
 ------------------------------------------------------
-Born in 2012, QPython at first was a Python script SDK created by River for the rapid release of hotfix on Android programs, and was later independently released as a Python App on Android system. Ever since its release, QPython has been widely favored by Python developers, and received tens of thousands of installment and reviews in a very short time even in the circumstance of none market promotion. In 2015, the total installment exceeds 2,000,000. Until now, it is the most popular Python integrated development environment on Android.
+Born in 2012, QPython at first was a Python script SDK created by River for the rapid release of hotfix on Android programs, and was later independently released as a Python App on Android system. Ever since its release, QPython has been widely favored by Python developers, and received hundreds of thousands of installations and reviews in a very short time even in the circumstances of none market promotion. In 2015, the total installations exceeded more than 2,000,000. Until now, it is the most popular Python integrated development environment on Android.
 
 Supported program types
 ------------------------------------------------------
@@ -18,7 +18,7 @@ Currently, QPython can run console applications, WebApp applications, backend ap
 
 How to install a third party library
 ------------------------------------------------------
-QPython is imbedded with most of the Python libraries for PCs. As Android system itself does not support compilation tool links, you cannot install all libraries like Python on PCs. However, you can install some pre-compiled libraries via QPYPI, which supports libraries including kivy, numpy, opencv, pycrypto, tornado. In addition, you can use the pip client to install most libraries implemented by Python from the official website or from a third party Pypi designated by you.
+QPython is imbedded with most of the Python libraries for PCs. As Android system itself does not support compilation tool links, you cannot install all libraries like Python on PCs. However, you can install some pre-compiled libraries via QPYPI, which supports libraries including kivy, numpy, opencv, pycrypto, tornado and so on . In addition, you can use the pip client to install most libraries implemented by Python from the official website or from a third party Pypi designated by you.
 
 
 *WebApp header declaration*
@@ -74,3 +74,4 @@ Author: `River <https://github.com/riverfor>`_
 Translator: `TGJ <http://quseit.com/>`_
 
 Submitted: 2017/8/6
+Updated: 2018/04/25
