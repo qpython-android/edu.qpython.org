@@ -4,12 +4,12 @@ Principle
 
 About
 --------
-QPython is focus on providing the convenient mobile Python IDE and learning service for Python users.
+QPython is focused on providing the convenient mobile Python IDE and learning service for Python users.
 
 
 Supports Python2 and Python3
 ----------------------------
-QPython supports the newest Python2 and Python3, which satisfy users’ requirements for different Python versions.
+QPython supports the newest Python2 and Python3, which satisfy users requirements for different Python versions.
 
 
 Mobile IDE and learning community
@@ -28,3 +28,4 @@ Author & updated time
 Author: `River <https://github.com/riverfor>`_
 
 Submitted: 2017/8/7
+Updated: 2018/04/25
