@@ -1,7 +1,7 @@
 Share a live documents with QPyNotebook
 ========================================
 
-Do you want some application which helps you create and share documents that contain live Python code, equations, visualizations and narrative text?
+Do you want an application which helps you create and share documents that contain live Python code, equations, visualizations and narrative text?
 
 Now, QPyNotebook for QPython is published, which is developed based on the great opensource project jupyter notebook, it will help you do the following jobs easily like data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning and much more.
 
@@ -13,7 +13,7 @@ Before Use
 
 - Click the QPyNotebook App button to download QPyNotebook, the button will take you to the Google Play App Store.
 
-- If you could not connect to Google you can download directly from our `Github page <https://github.com/qpython-android/notebook/releases/>`_ *(please check the "Trust unknow source" in system's setting if you install it with APK downloaded from github)*
+- If you could not connect to Google you can download directly from our `Github page <https://github.com/qpython-android/notebook/releases/>`_ *(please check the "Trust unknown source" in system's setting if you want to install it with APK downloaded from github)*
 
 .. image:: http://edu.qpython.org/static/notebook-setting.png
     :alt: Enable QPyNotebook in QPython Setting
@@ -22,7 +22,7 @@ Before Use
 
 **3. Download related libraries**
 
-Click the QPyNotebook Libraries button and there'll be a terminal window to download those libraries. It may take a while, and after downloading finish, the terminal window will be closed automatically.
+Click the QPyNotebook Libraries button and there'll be a terminal window to download those libraries. It may take a while, and after downloading is finished, the terminal window will be closed automatically.
 
 .. image:: http://edu.qpython.org/static/notebook-lib.png
     :alt: Enable QPyNotebook in QPython Setting
@@ -46,7 +46,7 @@ Open the Explorer from QPython dashboard, find some *.ipynb files (For example n
 - You could start the QPyNotebook from QPython's explorer*
 
 .. image:: http://edu.qpython.org/static/notebook-explorer.png
-    :alt: You could start QPyNotebook from QPython's explorer
+    :alt: You can start QPyNotebook from QPython's explorer
 
 - Or from QPyNotebook App
 
@@ -61,7 +61,7 @@ Open the Explorer from QPython dashboard, find some *.ipynb files (For example n
 
 Feedback
 -----------------------
-Feel free to give us any feedback please.
+Feel free to give us any feedback.
 
 * `@qpython <http://twitter.com/qpython>`_
 * `support@qpython.org <support@qpython.org>`_
