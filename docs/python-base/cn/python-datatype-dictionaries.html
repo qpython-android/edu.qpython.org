@@ -1,29 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>Python pass 语句</title>
 <link rel="stylesheet" href="../../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
-<script type="text/javascript">
-var DOCUMENTATION_OPTIONS = {
-URL_ROOT:    '../../',
-VERSION:     '0.9',
-COLLAPSE_INDEX: false,
-FILE_SUFFIX: '.html',
-HAS_SOURCE:  true,
-SOURCELINK_SUFFIX: '.txt'
-};
-</script>
-<script type="text/javascript" src="../../static/jquery.js"></script>
-<script type="text/javascript" src="../../static/underscore.js"></script>
-<script type="text/javascript" src="../../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body role="document">
+<body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -94,11 +81,11 @@ SOURCELINK_SUFFIX: '.txt'
 <p><strong>注意：</strong> 字典中的 key 必须是唯一的。</p>
 <dl class="docutils">
 <dt>::</dt>
-<dd>d = {&#8216;name&#8217;:&#8217;Python&#8217;, &#8216;site&#8217;:&#8217;www.python.org&#8217;}
+<dd>d = {‘name’:’Python’, ‘site’:’www.python.org’}
 type(d)
-&lt;class &#8216;dict&#8217;&gt;</dd>
+&lt;class ‘dict’&gt;</dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>字典的创建方式很多，还可以使用 dict()：</p>
 <p>由于列表是可变的，不可 hash，因此不能作为字典的 key。</p>
 <p>key 唯一，意思是说：不要有重复的 key 出现。</p>
@@ -106,27 +93,27 @@ type(d)
 <dl class="docutils">
 <dt>::</dt>
 <dd><blockquote class="first">
-<div>d = {&#8216;name&#8217;:&#8217;python&#8217;, (1, 2):&#8217;C++&#8217;}  # 具有不可变元素的元组
+<div>d = {‘name’:’python’, (1, 2):’C++’}  # 具有不可变元素的元组
 d</div></blockquote>
-<p>{(1, 2): &#8216;C++&#8217;, &#8216;name&#8217;: &#8216;python&#8217;}</p>
+<p>{(1, 2): ‘C++’, ‘name’: ‘python’}</p>
 <blockquote>
-<div>d = {&#8216;name&#8217;:&#8217;python&#8217;, [1, 2]:&#8217;C++&#8217;}  # 列表</div></blockquote>
-<p class="last">...
-TypeError: unhashable type: &#8216;list&#8217;</p>
+<div>d = {‘name’:’python’, [1, 2]:’C++’}  # 列表</div></blockquote>
+<p class="last">…
+TypeError: unhashable type: ‘list’</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>由于列表是可变的，不可 hash，因此不能作为字典的 key。</p>
 <p>key 唯一，意思是说：不要有重复的 key 出现。</p>
 <dl class="docutils">
 <dt>::</dt>
 <dd><blockquote class="first">
-<div>d = {&#8216;name&#8217;:&#8217;Python&#8217;, &#8216;name&#8217;:&#8217;C++&#8217;}  # key 都是 &#8216;name&#8217;
+<div>d = {‘name’:’Python’, ‘name’:’C++’}  # key 都是 ‘name’
 d</div></blockquote>
-<p class="last">{&#8216;name&#8217;: &#8216;C++&#8217;}</p>
+<p class="last">{‘name’: ‘C++’}</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>虽然没有报错，但前面的值被后面的覆盖了，这样做毫无意义。</p>
 </div>
 <div class="section" id="id5">
@@ -140,28 +127,28 @@ d</div></blockquote>
 <dl class="docutils">
 <dt>::</dt>
 <dd><blockquote class="first">
-<div><p>d = {&#8216;name&#8217;:&#8217;Python&#8217;, &#8216;site&#8217;:&#8217;www.python.org&#8217;}</p>
-<p>print(d[&#8216;name&#8217;])</p>
+<div><p>d = {‘name’:’Python’, ‘site’:’www.python.org’}</p>
+<p>print(d[‘name’])</p>
 </div></blockquote>
 <p>Python</p>
 <blockquote>
-<div>print(d.get(&#8216;site&#8217;))</div></blockquote>
+<div>print(d.get(‘site’))</div></blockquote>
 <p>www.python.org</p>
 <blockquote>
-<div>print(d[&#8216;version&#8217;])  # 没有找到 key，引发 KeyError</div></blockquote>
-<p>...
-KeyError: &#8216;version&#8217;</p>
+<div>print(d[‘version’])  # 没有找到 key，引发 KeyError</div></blockquote>
+<p>…
+KeyError: ‘version’</p>
 <blockquote>
-<div>print(d.get(&#8216;version&#8217;))  # 没有找到 key，返回 None</div></blockquote>
+<div>print(d.get(‘version’))  # 没有找到 key，返回 None</div></blockquote>
 <dl class="docutils">
 <dt>None</dt>
-<dd>print(d.get(&#8216;version&#8217;, 3.5))  # 没有找到 key，返回默认值</dd>
+<dd>print(d.get(‘version’, 3.5))  # 没有找到 key，返回默认值</dd>
 </dl>
 <p class="last">3.5
 1</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id6">
 <h2>更改或添加元素<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
@@ -171,21 +158,21 @@ KeyError: &#8216;version&#8217;</p>
 <dt>::</dt>
 <dd><blockquote class="first">
 <div><p>d = {}</p>
-<p>d[&#8216;name&#8217;] = &#8216;Python&#8217;  # 添加
+<p>d[‘name’] = ‘Python’  # 添加
 d</p>
 </div></blockquote>
-<p>{&#8216;name&#8217;: &#8216;Python&#8217;}</p>
+<p>{‘name’: ‘Python’}</p>
 <blockquote>
-<div>d[&#8216;site&#8217;] = &#8216;www.python.org&#8217;  # 添加
+<div>d[‘site’] = ‘www.python.org’  # 添加
 d</div></blockquote>
-<p>{&#8216;site&#8217;: &#8216;www.python.org&#8217;, &#8216;name&#8217;: &#8216;Python&#8217;}</p>
+<p>{‘site’: ‘www.python.org’, ‘name’: ‘Python’}</p>
 <blockquote>
-<div>d[&#8216;name&#8217;] = &#8216;Py&#8217;  #  更新
+<div>d[‘name’] = ‘Py’  #  更新
 d</div></blockquote>
-<p class="last">{&#8216;site&#8217;: &#8216;www.python.org&#8217;, &#8216;name&#8217;: &#8216;Py&#8217;}</p>
+<p class="last">{‘site’: ‘www.python.org’, ‘name’: ‘Py’}</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id7">
 <h2>删除字典或元素<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
@@ -195,7 +182,7 @@ d</div></blockquote>
 <dl class="docutils">
 <dt>::</dt>
 <dd><blockquote class="first">
-<div>d = {&#8216;name&#8217;:&#8217;Python&#8217;, &#8216;site&#8217;:&#8217;www.python.org&#8217;, &#8216;version&#8217;:3.5, &#8216;from&#8217;:1991}</div></blockquote>
+<div>d = {‘name’:’Python’, ‘site’:’www.python.org’, ‘version’:3.5, ‘from’:1991}</div></blockquote>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="go">&gt;&gt;&gt;</span>
 <span class="go"> d.pop(&#39;site&#39;)  # 删除某一项</span>
 <span class="go">&#39;www.python.org&#39;</span>
@@ -206,14 +193,14 @@ d</div></blockquote>
 <blockquote>
 <div>d.popitem()  # 删除任意项</div></blockquote>
 <dl class="docutils">
-<dt>(&#8216;from&#8217;, 1991)</dt>
+<dt>(‘from’, 1991)</dt>
 <dd>d</dd>
 </dl>
-<p>{&#8216;version&#8217;: 3.5, &#8216;name&#8217;: &#8216;Python&#8217;}</p>
+<p>{‘version’: 3.5, ‘name’: ‘Python’}</p>
 <blockquote>
-<div>del d[&#8216;version&#8217;]  # 删除某一项
+<div>del d[‘version’]  # 删除某一项
 d</div></blockquote>
-<p>{&#8216;name&#8217;: &#8216;Python&#8217;}</p>
+<p>{‘name’: ‘Python’}</p>
 <blockquote>
 <div>d.clear()  # 清空 - 删除所有项
 d</div></blockquote>
@@ -221,11 +208,11 @@ d</div></blockquote>
 <blockquote>
 <div>del d  # 删除字典本身
 d</div></blockquote>
-<p class="last">...
-NameError: name &#8216;d&#8217; is not defined</p>
+<p class="last">…
+NameError: name ‘d’ is not defined</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id8">
 <h2>基本操作<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
@@ -238,19 +225,19 @@ NameError: name &#8216;d&#8217; is not defined</p>
 <dl class="docutils">
 <dt>::</dt>
 <dd><blockquote class="first">
-<div><p>d = {&#8216;name&#8217;:&#8217;Python&#8217;, &#8216;site&#8217;:&#8217;www.python.org&#8217;}</p>
-<p>&#8216;name&#8217; in d</p>
+<div><p>d = {‘name’:’Python’, ‘site’:’www.python.org’}</p>
+<p>‘name’ in d</p>
 </div></blockquote>
 <p>True</p>
 <blockquote>
-<div>&#8216;version&#8217; not in d</div></blockquote>
+<div>‘version’ not in d</div></blockquote>
 <p>True</p>
 <blockquote>
-<div>&#8216;Python&#8217; in d  # 不能检测 value</div></blockquote>
+<div>‘Python’ in d  # 不能检测 value</div></blockquote>
 <p class="last">False</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id10">
 <h3>遍历字典<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
@@ -258,16 +245,16 @@ NameError: name &#8216;d&#8217; is not defined</p>
 <dl class="docutils">
 <dt>::</dt>
 <dd><blockquote class="first">
-<div><p>d = {&#8216;name&#8217;:&#8217;Python&#8217;, &#8216;site&#8217;:&#8217;www.python.org&#8217;}</p>
+<div><p>d = {‘name’:’Python’, ‘site’:’www.python.org’}</p>
 <p>for key in d:</p>
 </div></blockquote>
-<p class="last">...     print(key)
-...
+<p class="last">…     print(key)
+…
 name
 site</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 </div>
 <div class="section" id="id11">
@@ -277,13 +264,13 @@ site</p>
 <dt>::</dt>
 <dd><blockquote class="first">
 <div>dir(dict)</div></blockquote>
-<p class="last">[&#8216;__class__&#8217;, &#8216;__contains__&#8217;, &#8216;__delattr__&#8217;, &#8216;__delitem__&#8217;, &#8216;__dir__&#8217;, &#8216;__doc__&#8217;, &#8216;__eq__&#8217;, &#8216;__format__&#8217;, &#8216;__ge__&#8217;, &#8216;__getattribute__&#8217;, &#8216;__getitem__&#8217;, &#8216;__gt__&#8217;, &#8216;__hash__&#8217;, &#8216;__init__&#8217;, &#8216;__iter__&#8217;, &#8216;__le__&#8217;, &#8216;__len__&#8217;, &#8216;__lt__&#8217;, &#8216;__ne__&#8217;, &#8216;__new__&#8217;, &#8216;__reduce__&#8217;, &#8216;__reduce_ex__&#8217;, &#8216;__repr__&#8217;, &#8216;__setattr__&#8217;, &#8216;__setitem__&#8217;, &#8216;__sizeof__&#8217;, &#8216;__str__&#8217;, &#8216;__subclasshook__&#8217;, &#8216;clear&#8217;, &#8216;copy&#8217;, &#8216;fromkeys&#8217;, &#8216;get&#8217;, &#8216;items&#8217;, &#8216;keys&#8217;, &#8216;pop&#8217;, &#8216;popitem&#8217;, &#8216;setdefault&#8217;, &#8216;update&#8217;, &#8216;values&#8217;]</p>
+<p class="last">[‘__class__’, ‘__contains__’, ‘__delattr__’, ‘__delitem__’, ‘__dir__’, ‘__doc__’, ‘__eq__’, ‘__format__’, ‘__ge__’, ‘__getattribute__’, ‘__getitem__’, ‘__gt__’, ‘__hash__’, ‘__init__’, ‘__iter__’, ‘__le__’, ‘__len__’, ‘__lt__’, ‘__ne__’, ‘__new__’, ‘__reduce__’, ‘__reduce_ex__’, ‘__repr__’, ‘__setattr__’, ‘__setitem__’, ‘__sizeof__’, ‘__str__’, ‘__subclasshook__’, ‘clear’, ‘copy’, ‘fromkeys’, ‘get’, ‘items’, ‘keys’, ‘pop’, ‘popitem’, ‘setdefault’, ‘update’, ‘values’]</p>
 </dd>
 </dl>
 <p>1
 2
 可以看到，有以下方法可用：
-+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-+
++———————–+—————————————————————————————————————-+
 | 方法                    |         描述                                                                                                   |
 +=======================+================================================================================================================+
 <a href="#id39"><span class="problematic" id="id40">|clear()                |       删除字典中的所有元素                                                                                     |
@@ -307,28 +294,28 @@ site</p>
 <a href="#id20"><span class="problematic" id="id21">|</span></a>update([other])        <a href="#id22"><span class="problematic" id="id23">|</span></a>将 other 字典中的键/值对更新到字典中，覆盖现有键。                                                              |
 +=======================+================================================================================================================+
 <a href="#id24"><span class="problematic" id="id25">|</span></a>values()               <a href="#id26"><span class="problematic" id="id27">|</span></a>以列表的形式，返回字典中所有的 value                                                                            |
-+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-+</p>
++———————–+—————————————————————————————————————-+</p>
 <p>其中一些在上述示例中已经被使用过了。</p>
 <dl class="docutils">
 <dt>::</dt>
 <dd><blockquote class="first">
-<div><p>all_stars = {}.fromkeys([&#8216;Lebron&#8217;, &#8216;Kobe&#8217;, &#8216;Curry&#8217;], &#8216;NBA&#8217;)</p>
+<div><p>all_stars = {}.fromkeys([‘Lebron’, ‘Kobe’, ‘Curry’], ‘NBA’)</p>
 <p>all_stars
-{&#8216;Lebron&#8217;: &#8216;NBA&#8217;, &#8216;Curry&#8217;: &#8216;NBA&#8217;, &#8216;Kobe&#8217;: &#8216;NBA&#8217;}</p>
+{‘Lebron’: ‘NBA’, ‘Curry’: ‘NBA’, ‘Kobe’: ‘NBA’}</p>
 <p>all_stars.keys()  # 返回所有 key
-dict_keys([&#8216;Lebron&#8217;, &#8216;Curry&#8217;, &#8216;Kobe&#8217;])</p>
+dict_keys([‘Lebron’, ‘Curry’, ‘Kobe’])</p>
 <p>all_stars.values()  # 返回所有 value
-dict_values([&#8216;NBA&#8217;, &#8216;NBA&#8217;, &#8216;NBA&#8217;])</p>
+dict_values([‘NBA’, ‘NBA’, ‘NBA’])</p>
 <p>for item in all_stars.items():</p>
 </div></blockquote>
-<p class="last">...     print(item)
-...
-(&#8216;Lebron&#8217;, &#8216;NBA&#8217;)
-(&#8216;Curry&#8217;, &#8216;NBA&#8217;)
-(&#8216;Kobe&#8217;, &#8216;NBA&#8217;)</p>
+<p class="last">…     print(item)
+…
+(‘Lebron’, ‘NBA’)
+(‘Curry’, ‘NBA’)
+(‘Kobe’, ‘NBA’)</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id28">
 <h2>字典推导式<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h2>
@@ -338,14 +325,14 @@ dict_values([&#8216;NBA&#8217;, &#8216;NBA&#8217;, &#8216;NBA&#8217;])</p>
 <dl class="docutils">
 <dt>::</dt>
 <dd><blockquote class="first">
-<div><p>all_stars = [&#8216;Lebron&#8217;, &#8216;Kobe&#8217;, &#8216;Curry&#8217;]</p>
+<div><p>all_stars = [‘Lebron’, ‘Kobe’, ‘Curry’]</p>
 <p>d = {key: value for key, value in enumerate(all_stars)}
 d</p>
 </div></blockquote>
-<p class="last">{0: &#8216;Lebron&#8217;, 1: &#8216;Kobe&#8217;, 2: &#8216;Curry&#8217;}</p>
+<p class="last">{0: ‘Lebron’, 1: ‘Kobe’, 2: ‘Curry’}</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>列表推导式可以可选地包含更多的 for 或 if 语句，if 语句可以过滤出新字典的元素。</p>
 <dl class="docutils">
 <dt>::</dt>
@@ -356,16 +343,16 @@ d</p>
 d</dd>
 </dl>
 </div></blockquote>
-<p class="last">{0: &#8216;Lebron&#8217;}</p>
+<p class="last">{0: ‘Lebron’}</p>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>666，老詹独一档。。。</p>
 </div>
 <div class="section" id="id29">
 <h2>字典与内置函数<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h2>
 <p>下述内置函数通常与字典一起使用，来执行不同的任务。
-+&#8212;&#8212;&#8211;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;+
++——–+————————————————————————————–+
 函数     <a href="#id30"><span class="problematic" id="id31">|</span></a>描述                                                                                  |
 +======+========================================================================================+
 all()    <a href="#id32"><span class="problematic" id="id33">|</span></a>如果字典的所有 key 都是 True（或者字典为空），返回 True。                             |
@@ -375,7 +362,7 @@ any()    <a href="#id34"><span class="problematic" id="id35">|</span></a>如果�
 len()    <a href="#id36"><span class="problematic" id="id37">|</span></a>返回字典的长度（元素个数）                                                            |
 +======+========================================================================================+
 sorted() |      返回一个新的排序字典（不排序字典本身）                                          |
-+&#8212;&#8212;+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-+</p>
++——+—————————————————————————————-+</p>
 </div>
 <div class="section" id="id38">
 <h2>作者 &amp; 更新时间<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h2>

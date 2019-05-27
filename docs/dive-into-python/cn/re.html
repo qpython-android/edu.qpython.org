@@ -1,29 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>正则表达式和 re 模块</title>
 <link rel="stylesheet" href="../../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
-<script type="text/javascript">
-var DOCUMENTATION_OPTIONS = {
-URL_ROOT:    '../../',
-VERSION:     '0.9',
-COLLAPSE_INDEX: false,
-FILE_SUFFIX: '.html',
-HAS_SOURCE:  true,
-SOURCELINK_SUFFIX: '.txt'
-};
-</script>
-<script type="text/javascript" src="../../static/jquery.js"></script>
-<script type="text/javascript" src="../../static/underscore.js"></script>
-<script type="text/javascript" src="../../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body role="document">
+<body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -78,7 +65,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="nb">dir</span><span class="p">(</span><span class="n">re</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="re-match-re-search">
 <h2>re.match &amp; re.search<a class="headerlink" href="#re-match-re-search" title="Permalink to this headline">¶</a></h2>
@@ -133,10 +120,10 @@ re.finditer 则返回一个迭代器。</p>
 <tr class="row-even"><td>W,D,S</td>
 <td>匹配对应小写字母形式的补</td>
 </tr>
-<tr class="row-odd"><td>[...]</td>
+<tr class="row-odd"><td>[…]</td>
 <td>表示可以匹配的集合支持范围表示如 a-z, 0-9 等</td>
 </tr>
-<tr class="row-even"><td>(...)</td>
+<tr class="row-even"><td>(…)</td>
 <td>表示作为一个整体进行匹配</td>
 </tr>
 <tr class="row-odd"><td>^</td>
@@ -163,9 +150,9 @@ re.finditer 则返回一个迭代器。</p>
 </tbody>
 </table>
 <p>例如：
-- ca*t 匹配： ct, cat, caaaat, ...
-- abd|acd 匹配： ab1, ac9, ...
-- ([^a-q]bd) 匹配： rbd, 5bd, ...</p>
+- ca*t 匹配： ct, cat, caaaat, …
+- abd|acd 匹配： ab1, ac9, …
+- ([^a-q]bd) 匹配： rbd, 5bd, …</p>
 </div>
 <div class="section" id="id3">
 <h2>例子<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
@@ -176,7 +163,7 @@ re.finditer 则返回一个迭代器。</p>
 <span class="nb">print</span> <span class="n">match</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>一旦找到了符合条件的部分，我们便可以使用 group 方法查看匹配的部分：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>string = &#39;hello world&#39;
 pattern = &#39;hello (\w+)&#39;
@@ -185,7 +172,7 @@ if match is not None:
     print match.group(0)
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>获得第二个匹配的部分</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>string = &#39;hello world&#39;
 pattern = &#39;hello (\w+)&#39;
@@ -194,7 +181,7 @@ if match is not None:
     print match.group(1)
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>我们可以改变 string 的内容：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>string = &#39;hello there&#39;
 pattern = &#39;hello (\w+)&#39;
@@ -204,8 +191,8 @@ if match is not None:
 print match.group(1)
 </pre></div>
 </div>
-<button class="button">Run ...</button>
-<p>通常，match.group(0) 匹配整个返回的内容，之后的 1,2,3,... 返回规则中每个括号（按照括号的位置排序）匹配的部分。</p>
+<button class="button">Run …</button>
+<p>通常，match.group(0) 匹配整个返回的内容，之后的 1,2,3,… 返回规则中每个括号（按照括号的位置排序）匹配的部分。</p>
 <p>如果某个 pattern 需要反复使用，那么我们可以将它预先编译：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>pattern1 = re.compile(&#39;hello (\w+)&#39;)
 match = pattern1.match(string)
@@ -213,28 +200,28 @@ if match is not None:
     print match.group(1)
 </pre></div>
 </div>
-<button class="button">Run ...</button>
-<p>由于元字符的存在，所以对于一些特殊字符，我们需要使用 &#8216;&#8217; 进行逃逸字符的处理，使用表达式 &#8216;\&#8217; 来匹配 &#8216;&#8217; 。
+<button class="button">Run …</button>
+<p>由于元字符的存在，所以对于一些特殊字符，我们需要使用 ‘’ 进行逃逸字符的处理，使用表达式 ‘' 来匹配 ‘’ 。
 但事实上，Python 本身对逃逸字符也是这样处理的：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pattern</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span>
 <span class="nb">print</span> <span class="n">pattern</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
-<p>因为逃逸字符的问题，我们需要使用四个 &#8216;\\&#8217; 来匹配一个单独的 &#8216;&#8217;：</p>
+<button class="button">Run …</button>
+<p>因为逃逸字符的问题，我们需要使用四个 ‘\’ 来匹配一个单独的 ‘’：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pattern</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\\\\</span><span class="s1">&#39;</span>
 <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">foo</span><span class="se">\\</span><span class="s2">bar</span><span class="se">\\</span><span class="s2">baz.txt&quot;</span>
 <span class="nb">print</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>这样看起来十分麻烦，好在 Python 提供了 raw string 来忽略对逃逸字符串的处理，从而可以这样进行匹配：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span>
 <span class="n">path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\foo\bar\baz.txt&quot;</span>
 <span class="nb">print</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>如果规则太多复杂，正则表达式不一定是个好选择。</p>
 </div>
 <div class="section" id="numpy-fromregex">
@@ -245,7 +232,7 @@ if match is not None:
 <span class="mi">444</span>  <span class="n">qux</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>numpy.fromregex(file, pattern, dtype) 中，dtype 中的内容与 pattern 的括号一一对应：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pattern</span> <span class="o">=</span> <span class="s2">&quot;(\d+)\s+(...)&quot;</span>
 <span class="n">dt</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;num&#39;</span><span class="p">,</span> <span class="s1">&#39;int64&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="s1">&#39;S3&#39;</span><span class="p">)]</span>
@@ -254,7 +241,7 @@ if match is not None:
 <span class="nb">print</span> <span class="n">output</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>显示 num 项：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pattern</span> <span class="o">=</span> <span class="s2">&quot;(\d+)\s+(...)&quot;</span>
 <span class="n">dt</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;num&#39;</span><span class="p">,</span> <span class="s1">&#39;int64&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="s1">&#39;S3&#39;</span><span class="p">)]</span>
@@ -263,7 +250,7 @@ if match is not None:
 <span class="nb">print</span> <span class="n">output</span><span class="p">[</span><span class="s1">&#39;num&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id4">
 <h2>作者 &amp; 更新时间<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>

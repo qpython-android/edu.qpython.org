@@ -1,29 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>简述</title>
 <link rel="stylesheet" href="../../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
-<script type="text/javascript">
-var DOCUMENTATION_OPTIONS = {
-URL_ROOT:    '../../',
-VERSION:     '0.9',
-COLLAPSE_INDEX: false,
-FILE_SUFFIX: '.html',
-HAS_SOURCE:  true,
-SOURCELINK_SUFFIX: '.txt'
-};
-</script>
-<script type="text/javascript" src="../../static/jquery.js"></script>
-<script type="text/javascript" src="../../static/underscore.js"></script>
-<script type="text/javascript" src="../../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body role="document">
+<body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -107,7 +94,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>整数可以是任何长度，只受到可用内存的限制。</p>
 <p>浮点数精确到 15 位小数。</p>
 <p>复数以 x + yj 的形式写成，其中 x 是实部，y 是虚部。</p>
@@ -116,17 +103,17 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="n">c</span> <span class="o">=</span> <span class="mi">5</span><span class="o">+</span><span class="mi">6</span><span class="n">j</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="string">
 <h2>String（字符串）<a class="headerlink" href="#string" title="Permalink to this headline">¶</a></h2>
 <p>字符串是 Unicode 字符的序列。</p>
-<p>可以使用单引号（&#8217;&#8216;）或双引号（"&#8220;）来表示字符串，多行字符串可以使用三重引号 &#8216;&#8217;&#8217; 或 &#8220;"" 来表示。</p>
+<p>可以使用单引号（’‘）或双引号（”“）来表示字符串，多行字符串可以使用三重引号 ‘’’ 或 “”” 来表示。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello, Python!&#39;</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>各种表示方式：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Hello, Python!&#39;</span>  <span class="c1"># 单引号</span>
 <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;Hello, World!&quot;</span>  <span class="c1"># 双引号</span>
@@ -148,7 +135,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="n">s</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;p&#39;</span>  <span class="c1"># 生成错误，字符串是不可变的</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>加号（+）是字符串的连接符， 星号（*） 表示复制当前字符串，紧跟的数字为复制的次数。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s1</span> <span class="o">=</span> <span class="s2">&quot;Hello,&quot;</span>
 <span class="n">s2</span> <span class="o">=</span> <span class="s2">&quot; World!&quot;</span>
@@ -156,7 +143,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="p">(</span><span class="n">s1</span> <span class="o">+</span> <span class="n">s2</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span>  <span class="c1"># 复制 3 次字符串</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="list">
 <h2>List（列表）<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
@@ -167,7 +154,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="nb">type</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>和字符串一样，列表同样可以被索引和截取，列表被截取后返回一个包含所需元素的新列表。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">l</span>
@@ -176,14 +163,14 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="n">l</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span> <span class="c1"># 从第三个元素开始的所有元素</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>列表是可变的，意思是说，列表中元素的值可以被改变。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># 将第三个元素 3 变为 5</span>
 <span class="n">l</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="tuple">
 <h2>Tuple（元组）<a class="headerlink" href="#tuple" title="Permalink to this headline">¶</a></h2>
@@ -194,7 +181,7 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>元组也可以被索引和截取，但是不能被更改。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">t</span>
@@ -203,14 +190,14 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># 生成错误，元组是不可变的</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>虽然元组中的元素不可变，但它可以包含可变的对象，例如：List（列表）。</p>
 <p>构造一个空的或者包含一个元素的元组比较特殊，所以要采用一些额外的语法规则：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tup1</span> <span class="o">=</span> <span class="p">()</span>  <span class="c1"># 空元组</span>
 <span class="n">tup2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="p">)</span>  <span class="c1"># 一个元素，需要在元素后添加逗号</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="set">
 <h2>Set（集合）<a class="headerlink" href="#set" title="Permalink to this headline">¶</a></h2>
@@ -221,19 +208,19 @@ SOURCELINK_SUFFIX: '.txt'
 <span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>既然集合是无序的，那么索引就没有任何意义，也就是说，切片操作符 [] 不起作用。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Java&quot;</span><span class="p">,</span> <span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;PHP&quot;</span><span class="p">}</span>
 <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># 生成错误，不支持索引</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>不重复，是指集合中相同的元素会被自动过滤掉，只保留一份。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;PHP&quot;</span><span class="p">,</span> <span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;Java&quot;</span><span class="p">,</span> <span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;PHP&quot;</span><span class="p">}</span>
 <span class="n">s</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>除了去重之外，还常用于成员关系的测试。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>if (&#39;Python&#39; in s) :
     print(&#39;Python 在集合中&#39;)
@@ -241,7 +228,7 @@ else :
     print(&#39;Python 不在集合中&#39;)
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>集合之间也可执行运算，例如：并集、差集、交集。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;abcdefg&#39;</span><span class="p">)</span>
 <span class="n">b</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;abghijk&#39;</span><span class="p">)</span>
@@ -271,7 +258,7 @@ else :
 <span class="nb">type</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>可以用 key 来检索相应的 value，但相反则不行。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># 创建空字典</span>
 <span class="n">d</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Python&#39;</span>  <span class="c1"># 增加新的键/值对</span>
@@ -281,7 +268,7 @@ else :
 <span class="n">d</span><span class="p">[</span><span class="s1">&#39;Python&#39;</span><span class="p">]</span>  <span class="c1"># 生成错误，不能用 value 检索 key</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>字典有一些内置的函数，例如：keys()、values()、clear() 等。</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>  <span class="c1"># 所有键</span>
 <span class="n">dict_keys</span><span class="p">([</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;site&#39;</span><span class="p">])</span>
@@ -291,7 +278,7 @@ else :
 <span class="n">d</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id3">
 <h2>数据类型之间的转换<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
@@ -300,13 +287,13 @@ else :
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">float</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>从 float 到 int 的转换，值将会被截断（使其接近零）：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="mf">10.8</span><span class="p">)</span>
 <span class="nb">int</span><span class="p">(</span><span class="o">-</span><span class="mf">10.8</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>字符串的转换必须包含兼容的值：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;2.5&#39;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span><span class="mf">2.5</span>
@@ -324,12 +311,12 @@ else :
 <span class="nb">list</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>要转换为字典，每个元素必须是一对：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">dict</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 </div>
 <div class="section" id="id4">
 <h2>作者 &amp; 更新时间<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>

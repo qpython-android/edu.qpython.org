@@ -1,29 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>线性代数</title>
 <link rel="stylesheet" href="../../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
-<script type="text/javascript">
-var DOCUMENTATION_OPTIONS = {
-URL_ROOT:    '../../',
-VERSION:     '0.9',
-COLLAPSE_INDEX: false,
-FILE_SUFFIX: '.html',
-HAS_SOURCE:  true,
-SOURCELINK_SUFFIX: '.txt'
-};
-</script>
-<script type="text/javascript" src="../../static/jquery.js"></script>
-<script type="text/javascript" src="../../static/underscore.js"></script>
-<script type="text/javascript" src="../../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body role="document">
+<body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -277,7 +264,7 @@ $$</p>
 <div class="section" id="id5">
 <h1>计算矩阵或向量的模<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h1>
 <p>矩阵的模定义如下： $$</p>
-<p>begin{split}leftVert mathbf{A}rightVert =left{ begin{array}{cc} max_{i}sum_{j}left|a_{ij}right| &amp;amp; textrm{ord}=textrm{inf}\ min_{i}sum_{j}left|a_{ij}right| &amp;amp; textrm{ord}=-textrm{inf}\ max_{j}sum_{i}left|a_{ij}right| &amp;amp; textrm{ord}=1\ min_{j}sum_{i}left|a_{ij}right| &amp;amp; textrm{ord}=-1\ maxsigma_{i} &amp;amp; textrm{ord}=2\ minsigma_{i} &amp;amp; textrm{ord}=-2\ sqrt{textrm{trace}left(mathbf{A}^{H}mathbf{A}right)} &amp;amp; textrm{ord}=textrm{&#8216;fro&#8217;}end{array}right.end{split}</p>
+<p>begin{split}leftVert mathbf{A}rightVert =left{ begin{array}{cc} max_{i}sum_{j}left|a_{ij}right| &amp;amp; textrm{ord}=textrm{inf}\ min_{i}sum_{j}left|a_{ij}right| &amp;amp; textrm{ord}=-textrm{inf}\ max_{j}sum_{i}left|a_{ij}right| &amp;amp; textrm{ord}=1\ min_{j}sum_{i}left|a_{ij}right| &amp;amp; textrm{ord}=-1\ maxsigma_{i} &amp;amp; textrm{ord}=2\ minsigma_{i} &amp;amp; textrm{ord}=-2\ sqrt{textrm{trace}left(mathbf{A}^{H}mathbf{A}right)} &amp;amp; textrm{ord}=textrm{‘fro’}end{array}right.end{split}</p>
 <p>$$ 其中，$sigma_i$ 是矩阵的奇异值。</p>
 <p>向量的模定义如下：</p>
 <p>$$

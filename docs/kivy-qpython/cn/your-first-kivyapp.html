@@ -1,29 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>Kivy App 教程&gt;&gt;一个简单的绘画应用程序</title>
 <link rel="stylesheet" href="../../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
-<script type="text/javascript">
-var DOCUMENTATION_OPTIONS = {
-URL_ROOT:    '../../',
-VERSION:     '0.9',
-COLLAPSE_INDEX: false,
-FILE_SUFFIX: '.html',
-HAS_SOURCE:  true,
-SOURCELINK_SUFFIX: '.txt'
-};
-</script>
-<script type="text/javascript" src="../../static/jquery.js"></script>
-<script type="text/javascript" src="../../static/underscore.js"></script>
-<script type="text/javascript" src="../../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body role="document">
+<body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -104,8 +91,8 @@ if __name__ == &#39;__main__&#39;:
     MyPaintApp().run()
 </pre></div>
 </div>
-<button class="button">Run ...</button>
-<p>说实话，这很简单。保存为paint.py. 如果你运行它，你应该只会看见黑屏。这时你所看到，并不是使用像Button这样的内置小部件（请参阅创建应用程序），我们将继续编写小部件来完成绘图。我们通过一个从小部件(line 5-6)继承的类来实现这一点，虽然这个类暂时还没什么用，但我们还能像正常的Kivy部件一样对待它（line 11）。if __name__ ...结构（第14行）是一种Python机制，可防止在从文件导入时执行if语句中的代码， 即：如果您编写导入绘图，它不会执行一些计划之外的事情，但可以很好地提供文件中定义的类。</p>
+<button class="button">Run …</button>
+<p>说实话，这很简单。保存为paint.py. 如果你运行它，你应该只会看见黑屏。这时你所看到，并不是使用像Button这样的内置小部件（请参阅创建应用程序），我们将继续编写小部件来完成绘图。我们通过一个从小部件(line 5-6)继承的类来实现这一点，虽然这个类暂时还没什么用，但我们还能像正常的Kivy部件一样对待它（line 11）。if __name__ …结构（第14行）是一种Python机制，可防止在从文件导入时执行if语句中的代码， 即：如果您编写导入绘图，它不会执行一些计划之外的事情，但可以很好地提供文件中定义的类。</p>
 <p><em>注意: 您可能想知道为什么您必须单独导入App和Widget， 而不是从kivy导入 *. 尽管时间较短，但这会使你的命名造成污染，并导致应用程序的启动速度变慢。它也可能引入歧义类和变量命名，所以通常在Python社区中被人们所诟病。 我们这样做的方式更快，更全面。</em></p>
 <p><strong>添加行为</strong></p>
 <p>现在就让我们开始添加一些实际行为，即：即使其对用户输入做出反应。</p>
@@ -127,12 +114,12 @@ from kivy.uix.widget import Widget</p>
 <dd>        return MyPaintWidget()</dd>
 </dl>
 </dd>
-<dt>if __name__ == &#8216;__main__&#8217;:</dt>
+<dt>if __name__ == ‘__main__’:</dt>
 <dd>    MyPaintApp().run()</dd>
 </dl>
 </dd>
 </dl>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>这只是为了显示对用户输入做出反应的容易程度。当发生MotionEvent（即触摸，点击等）时，我们将会把关于触摸对象的信息打印6给控制台。 在屏幕上您不会看到任何东西，但是如果您观察从中运行程序的命令行，你会看到每一个触摸的消息。这也表明一个小部件不必具有可视化表示。</p>
 <p>这些用户体验并不会让人无所适从。接下来让我们在绘制窗口中添加一些实际的代码：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>#qpy:kivy
@@ -152,7 +139,7 @@ if __name__ == &#39;__main__&#39;:
     MyPaintApp().run()
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <img alt="screenshot of pong game" src="http://edu.qpython.org/static/kivy-guide-3.jpg" />
 <p>如果您通过这些修改运行代码，您会看到每次触摸时，你会触摸到一个小的黄色圆圈。</p>
 <p>它是如何工作的？</p>
@@ -183,13 +170,13 @@ if __name__ == &#39;__main__&#39;:
     MyPaintApp().run()
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <img alt="screenshot of pong game" src="http://edu.qpython.org/static/kivy-guide-4.jpg" />
 <p>发生了以下的变化：</p>
 <ul class="simple">
-<li>Line 3: 我们现在不仅导入了椭圆绘图指令，还导入了线绘图指令如果您查看Line的文档，您将看到它接受的点参数必须是二维点坐标列表，比如 (x1, y1, x2, y2, ..., xN, yN).</li>
+<li>Line 3: 我们现在不仅导入了椭圆绘图指令，还导入了线绘图指令如果您查看Line的文档，您将看到它接受的点参数必须是二维点坐标列表，比如 (x1, y1, x2, y2, …, xN, yN).</li>
 <li>Line 13: 这是它变得有趣的地方。 touch.ud是一个Python字典（键入&lt;dict&gt;），它允许我们存储触摸的自定义属性。</li>
-<li>Line 13:我们利用我们导入的Line指令，并设置一个Line来绘制。由于这是在on_touch_down中完成的，所以每次新的触摸都会有一个新的线。 通过在with块内创建行， 画布会感应到该线，并将绘制它。 我们只是想稍后修改这行，所以我们在touch.ud字典下面存储了一个对它的引用，这个字典在任意选择的，但是恰当的命名键&#8217;line&#8217;下面。 通过我们创建初始触摸位置的线，这是我们的线开始的地方。</li>
+<li>Line 13:我们利用我们导入的Line指令，并设置一个Line来绘制。由于这是在on_touch_down中完成的，所以每次新的触摸都会有一个新的线。 通过在with块内创建行， 画布会感应到该线，并将绘制它。 我们只是想稍后修改这行，所以我们在touch.ud字典下面存储了一个对它的引用，这个字典在任意选择的，但是恰当的命名键’line’下面。 通过我们创建初始触摸位置的线，这是我们的线开始的地方。</li>
 <li>Lines 15: 我们添加一个新的方法到我们的小部件。这与on_touch_down方法类似，但不是在发生新的触摸时被调用，当现有的触摸（已经调用on_touch_down）移动，即其位置改变时，他的方法被调用。 请注意，这是具有更新属性的相同MotionEvent对象。 这会让人觉得十分方便，你很快就会明白为什么会有这样的感觉了。</li>
 <li>Line 16: 请记住：这是我们在on_touch_down中获得的触摸对象，因此我们可以简单地访问我们存储在touch.ud字典中的数据！早些时候我们为这条线设置了触摸点，我们现在在当前位置添加新的触摸点。我们需要扩展这条线，因为这发生在on_touch_move上，这只是在触摸移动时才被调用，这正是我们要更新这一行的原因。为了使我们不必将这些触摸点记录到在线簿记中，在touch.ud中存储该行使我们在使用时可以更方便一些。</li>
 </ul>
@@ -216,7 +203,7 @@ if __name__ == &#39;__main__&#39;:
     MyPaintApp().run()
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <img alt="Screenshot of pong game" src="http://edu.qpython.org/static/kivy-guide-5.jpg" />
 <p>Here are the changes:</p>
 <ul class="simple">
@@ -225,7 +212,7 @@ if __name__ == &#39;__main__&#39;:
 <li>Line 12: 和上面一样，我们设置画布的颜色。这一次，我们使用我们生成的随机值，并使用Python的元组解压缩语法将它们提供给颜色类（因为Color类需要三个单独的颜色分量，而不是一个。如果我们要直接传递元组，1值被传递，而不管元组本身包含3个值的事实）。</li>
 </ul>
 <p>这看起来好多了！假如你有更多 的技能和耐心，您甚至可以创建一个漂亮的小绘图！</p>
-<p><em>注意：由于默认情况下，颜色指令采用RGB模式，我们正在向它提供一个带有三个随机浮点值的元组，如果运气不好，很可能会得到黑色。 这并不是好的情况，因为默认情况下，背景颜色也很暗， 这样的话，你会很难看到你自己画的线。有一个很好的技巧来防止这种情况：而不是创建一个具有三个随机值的元组，像这样创建一个元组：（random（），1.，1）。然后，将它传递给颜色指令时，将模式设置为HSV颜色空间：颜色（</em> color，mode =&#8217;hsv&#8217;）。这样可能出现的颜色将会变少，但是你得到的颜色将永远是同样明亮的：只有色调会改变。</p>
+<p><em>注意：由于默认情况下，颜色指令采用RGB模式，我们正在向它提供一个带有三个随机浮点值的元组，如果运气不好，很可能会得到黑色。 这并不是好的情况，因为默认情况下，背景颜色也很暗， 这样的话，你会很难看到你自己画的线。有一个很好的技巧来防止这种情况：而不是创建一个具有三个随机值的元组，像这样创建一个元组：（random（），1.，1）。然后，将它传递给颜色指令时，将模式设置为HSV颜色空间：颜色（</em> color，mode =’hsv’）。这样可能出现的颜色将会变少，但是你得到的颜色将永远是同样明亮的：只有色调会改变。</p>
 <p><strong>奖励积分</strong></p>
 <p>在这一点上，我们可以说我们已经完成了。小部件做了它应该做的事：跟踪触摸并画线。在一条线开始的位置绘制圆圈。</p>
 <p>但是，如果用户想要开始一个新的绘图呢？使用当前的代码，清除窗口的唯一方法是重新启动整个应用程序。不过，我们可以做得更好。现在让我们添加一个清除按钮，删除迄今为止绘制的所有线条和圆圈。 有两种选择：</p>
@@ -265,7 +252,7 @@ if __name__ == &#39;__main__&#39;:
     MyPaintApp().run()
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <img alt="screenshot of pong game" src="http://edu.qpython.org/static/kivy-guide-6.jpg" />
 <p>将会发生以下的事情：</p>
 <ul class="simple">

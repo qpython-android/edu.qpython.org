@@ -1,29 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>CSV 文件和 csv 模块</title>
 <link rel="stylesheet" href="../../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
-<script type="text/javascript">
-var DOCUMENTATION_OPTIONS = {
-URL_ROOT:    '../../',
-VERSION:     '0.9',
-COLLAPSE_INDEX: false,
-FILE_SUFFIX: '.html',
-HAS_SOURCE:  true,
-SOURCELINK_SUFFIX: '.txt'
-};
-</script>
-<script type="text/javascript" src="../../static/jquery.js"></script>
-<script type="text/javascript" src="../../static/underscore.js"></script>
-<script type="text/javascript" src="../../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body role="document">
+<body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -125,7 +112,7 @@ data
 </div>
 <div class="section" id="id1">
 <h2>写 csv 文件<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>可以使用 <em>csv.writer</em> 写入文件，不过相应地，传入的应该是以写方式打开的文件，不过一般要用 <em>&#8216;wb&#8217;</em> 即二进制写入方式，防止出现换行不正确的问题：</p>
+<p>可以使用 <em>csv.writer</em> 写入文件，不过相应地，传入的应该是以写方式打开的文件，不过一般要用 <em>‘wb’</em> 即二进制写入方式，防止出现换行不正确的问题：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">)]</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;out.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
 <span class="n">w</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>

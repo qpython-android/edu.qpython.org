@@ -1,29 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>最小化函数</title>
 <link rel="stylesheet" href="../../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
-<script type="text/javascript">
-var DOCUMENTATION_OPTIONS = {
-URL_ROOT:    '../../',
-VERSION:     '0.9',
-COLLAPSE_INDEX: false,
-FILE_SUFFIX: '.html',
-HAS_SOURCE:  true,
-SOURCELINK_SUFFIX: '.txt'
-};
-</script>
-<script type="text/javascript" src="../../static/jquery.js"></script>
-<script type="text/javascript" src="../../static/underscore.js"></script>
-<script type="text/javascript" src="../../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body role="document">
+<body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -181,14 +168,14 @@ yl = ylabel(&#39;horizontal distance traveled&#39;)
 <span class="p">[</span><span class="o">-</span><span class="mf">0.993</span>  <span class="mf">0.997</span>  <span class="mf">0.998</span>  <span class="mf">0.999</span>  <span class="mf">0.999</span>  <span class="mf">0.999</span>  <span class="mf">0.998</span>  <span class="mf">0.997</span>  <span class="mf">0.994</span>  <span class="mf">0.988</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>对于 N &gt; 3，函数的最小值为 <em>(x_1,x_2, ..., x_N) = (1,1,...,1)</em>，不过有一个局部极小值点 <em>(x_1,x_2, ..., x_N) = (-1,1,...,1)</em>，所以随机初始值如果选的不好的话，有可能返回的结果是局部极小值点：</p>
+<p>对于 N &gt; 3，函数的最小值为 <em>(x_1,x_2, …, x_N) = (1,1,…,1)</em>，不过有一个局部极小值点 <em>(x_1,x_2, …, x_N) = (-1,1,…,1)</em>，所以随机初始值如果选的不好的话，有可能返回的结果是局部极小值点：</p>
 </div>
 <div class="section" id="id2">
 <h2>优化方法<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="bfgs">
 <h2>BFGS 算法<a class="headerlink" href="#bfgs" title="Permalink to this headline">¶</a></h2>
-<p>minimize 函数默认根据问题是否有界或者有约束，使用 &#8216;BFGS&#8217;, &#8216;L-BFGS-B&#8217;, &#8216;SLSQP&#8217; 中的一种。</p>
+<p>minimize 函数默认根据问题是否有界或者有约束，使用 ‘BFGS’, ‘L-BFGS-B’, ‘SLSQP’ 中的一种。</p>
 <p>可以查看帮助来得到更多的信息：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">info</span><span class="p">(</span><span class="n">minimize</span><span class="p">)</span>
 </pre></div>
@@ -217,18 +204,18 @@ yl = ylabel(&#39;horizontal distance traveled&#39;)
 <div><p>Type of solver.  Should be one of</p>
 <blockquote>
 <div><ul class="simple">
-<li>&#8216;Nelder-Mead&#8217;</li>
-<li>&#8216;Powell&#8217;</li>
-<li>&#8216;CG&#8217;</li>
-<li>&#8216;BFGS&#8217;</li>
-<li>&#8216;Newton-CG&#8217;</li>
-<li>&#8216;Anneal (deprecated as of scipy version 0.14.0)&#8217;</li>
-<li>&#8216;L-BFGS-B&#8217;</li>
-<li>&#8216;TNC&#8217;</li>
-<li>&#8216;COBYLA&#8217;</li>
-<li>&#8216;SLSQP&#8217;</li>
-<li>&#8216;dogleg&#8217;</li>
-<li>&#8216;trust-ncg&#8217;</li>
+<li>‘Nelder-Mead’</li>
+<li>‘Powell’</li>
+<li>‘CG’</li>
+<li>‘BFGS’</li>
+<li>‘Newton-CG’</li>
+<li>‘Anneal (deprecated as of scipy version 0.14.0)’</li>
+<li>‘L-BFGS-B’</li>
+<li>‘TNC’</li>
+<li>‘COBYLA’</li>
+<li>‘SLSQP’</li>
+<li>‘dogleg’</li>
+<li>‘trust-ncg’</li>
 <li>custom - a callable object (added in version 0.14.0)</li>
 </ul>
 </div></blockquote>
@@ -275,7 +262,7 @@ yl = ylabel(&#39;horizontal distance traveled&#39;)
 <blockquote>
 <div><p>type : str</p>
 <blockquote>
-<div>Constraint type: &#8216;eq&#8217; for equality, &#8216;ineq&#8217; for inequality.</div></blockquote>
+<div>Constraint type: ‘eq’ for equality, ‘ineq’ for inequality.</div></blockquote>
 <p>fun : callable</p>
 <blockquote>
 <div>The function defining the constraint.</div></blockquote>
@@ -335,14 +322,14 @@ yl = ylabel(&#39;horizontal distance traveled&#39;)
 <p>This section describes the available solvers that can be selected by</p>
 <blockquote>
 <div>the</div></blockquote>
-<p>&#8216;method&#8217; parameter. The default method is <em>BFGS</em>.</p>
+<p>‘method’ parameter. The default method is <em>BFGS</em>.</p>
 <p><strong>Unconstrained minimization</strong></p>
 <p>Method <em>Nelder-Mead</em> uses the Simplex algorithm <a class="footnote-reference" href="#id20" id="id3">[1]</a>, <a class="footnote-reference" href="#id21" id="id4">[2]</a>. This</p>
 <p>algorithm has been successful in many applications but other algorithms</p>
 <p>using the first and/or second derivatives information might be</p>
 <p>preferred</p>
 <p>for their better performances and robustness in general.</p>
-<p>Method <em>Powell</em> is a modification of Powell&#8217;s method <a class="footnote-reference" href="#id22" id="id5">[3]</a>, <a class="footnote-reference" href="#id23" id="id6">[4]</a> which</p>
+<p>Method <em>Powell</em> is a modification of Powell’s method <a class="footnote-reference" href="#id22" id="id5">[3]</a>, <a class="footnote-reference" href="#id23" id="id6">[4]</a> which</p>
 <p>is a conjugate direction method. It performs sequential one-dimensional</p>
 <p>minimizations along each vector of the directions set (<cite>direc</cite> field in</p>
 <p><cite>options</cite> and <cite>info</cite>), which is updated at each iteration of the main</p>
@@ -518,7 +505,7 @@ a function of several variables without calculating derivatives. The</p>
 <tbody valign="top">
 <tr><td class="label"><a class="fn-backref" href="#id19">[12]</a></td><td><p class="first">Kraft, D. A software package for sequential quadratic</p>
 <p>programming. 1988. Tech. Rep. DFVLR-FB 88-28, DLR German Aerospace</p>
-<p class="last">Center &#8211; Institute for Flight Mechanics, Koln, Germany.</p>
+<p class="last">Center – Institute for Flight Mechanics, Koln, Germany.</p>
 </td></tr>
 </tbody>
 </table>

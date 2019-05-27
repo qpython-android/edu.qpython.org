@@ -1,29 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>简述</title>
 <link rel="stylesheet" href="../../static/style.css" type="text/css" />
 <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
-<script type="text/javascript">
-var DOCUMENTATION_OPTIONS = {
-URL_ROOT:    '../../',
-VERSION:     '0.9',
-COLLAPSE_INDEX: false,
-FILE_SUFFIX: '.html',
-HAS_SOURCE:  true,
-SOURCELINK_SUFFIX: '.txt'
-};
-</script>
-<script type="text/javascript" src="../../static/jquery.js"></script>
-<script type="text/javascript" src="../../static/underscore.js"></script>
-<script type="text/javascript" src="../../static/doctools.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body role="document">
+<body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -124,7 +111,7 @@ a@e = 18  // 错误，使用特殊符号 @
 <span class="n">teacher</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>在这里，teacher 标签就是所谓的变量，Jack Ma 就是该变量所对应的值，存储于内存中。</p>
 <p>在 Python 中，有非常重要的一句话：<strong>对象有类型，变量无类型。</strong> 可以这样理解，就是标签不仅可以贴在整形类型的对象上，还可以贴在其他类型的对象上（例如：字符串）。变量的这个特点（随意贴标签）非常重要，它没有类型。</p>
 </div>
@@ -138,7 +125,7 @@ a@e = 18  // 错误，使用特殊符号 @
 <span class="n">teacher</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>一开始，相当于将 teacher 这个标签拴在了 Jack Ma 上，后来标签换了位置，拴在了 Pony 上。</p>
 <p>如果学过其他编程语言，例如：C++，很容易想到的是 teacher 开辟了内存空间，里面存了 Jack Ma，然后这个空间当中又换为 Pony。就好比 teacher 是一个容器，里面放着值。实际在 Python 当中，正好相反，Python 是以数据为主，Jack Ma、Pony 都存储在内存当中，teacher 无非是对数据的一个引用。所以，当重新赋值后，查看 teacher 所对应的地址时，会发生变化。</p>
 <p>每个对象在内存中都有对应的地址，这就是它的“身份”，使用 Python 的内建函数 id() 来查看：</p>
@@ -148,7 +135,7 @@ a@e = 18  // 错误，使用特殊符号 @
 <span class="nb">id</span><span class="p">(</span><span class="n">teacher</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>可以看到，重新赋值后，teacher 对应的内存空间已经变了。所以，JacK Ma 和 Pony 实际上存储在两个空间中。</p>
 </div>
 <div class="section" id="id7">
@@ -162,7 +149,7 @@ a@e = 18  // 错误，使用特殊符号 @
 <span class="n">ceo</span> <span class="o">=</span> <span class="n">teacher</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>看似不相关的变量，但他们指的都是同一个人 Jack Ma，不妨看一下：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">teacher</span> <span class="o">=</span> <span class="s2">&quot;Jack Ma&quot;</span>
 <span class="n">ceo</span> <span class="o">=</span> <span class="n">teacher</span>
@@ -170,7 +157,7 @@ a@e = 18  // 错误，使用特殊符号 @
 <span class="nb">id</span><span class="p">(</span><span class="n">ceo</span><span class="p">)</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>显然，对应的是同一个内存地址。也就是说，teacher、ceo 是不同的标签，但是所引用的数据是同一地址上的。</p>
 <p>将多个值分配给多个变量</p>
 <p>要将多个值分配给多个变量，可以单独分开来写：</p>
@@ -178,14 +165,14 @@ a@e = 18  // 错误，使用特殊符号 @
 <span class="n">teacher</span> <span class="o">=</span> <span class="s2">&quot;Jack Ma&quot;</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>也可以连在一起：</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">age</span><span class="p">,</span> <span class="n">teacher</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;Jack Ma&quot;</span>
 <span class="n">age</span>
 <span class="n">teacher</span>
 </pre></div>
 </div>
-<button class="button">Run ...</button>
+<button class="button">Run …</button>
 <p>这里，值为 18 的整形分配给了变量 age，值为 “Jack Ma” 的字符串分配给了变量 teacher。</p>
 </div>
 <div class="section" id="id8">
