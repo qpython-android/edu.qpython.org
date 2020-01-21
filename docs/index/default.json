@@ -3,7 +3,7 @@
     {
         "src":"http://kivy.org",
         "rdate":"2017-06-15",
-        "link":"http://edu.qpython.org/kivy-qpython/index.html",
+        "link":"https://edu.qpython.org/kivy-qpython/index.html",
         "smodule":"kivy-qpython",
         "description":"Kivy is a multi-touch GUI development frameworks for Python. After completing this course, you will learn how to use kivy to quickly develop innovative cross-platform graphics programs.",
         "title":"Kivy on QPython",
@@ -15,12 +15,12 @@
         "auth":"Mea",
         "auth_desc":"Senior Engineer of QPython Team",
         "crowdfunding": 1,
-        "logo": "http://edu.qpython.org/static/course-kivy-qpython.png",
+        "logo": "https://edu.qpython.org/static/course-kivy-qpython.png",
         "open": 1,
         "courses":[
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/kivy-qpython/index.html",
+                "link":"https://edu.qpython.org/kivy-qpython/index.html",
                 "smodule":"qpython-webapp-principle",
                 "description":"Kivy on QPython",
                 "title":"QPython Kivy Principle",
@@ -28,7 +28,7 @@
                 "downloads": "10,000+"
             },
             {
-                "link":"http://edu.qpython.org/kivy-qpython/your-first-kivyapp.html",
+                "link":"https://edu.qpython.org/kivy-qpython/your-first-kivyapp.html",
                 "smodule":"kivy-qpython-your-first-kivyapp",
                 "description":"How to develop your first KivyApp",
                 "title":"Your first KivyApp",
@@ -39,7 +39,7 @@
     }, {
         "src":"http://qpython.org",
         "rdate":"2017-07-15",
-        "link":"http://edu.qpython.org/qsl4a-develop/index.html",
+        "link":"https://edu.qpython.org/qsl4a-develop/index.html",
         "smodule":"qsl4a-develop",
         "description":"SL4A lets developers use scripting languages to interact with Android devices. In QPython, QSL4 lets you use the Python language to call APIs on Android, get the hardware status, and take full control of the phone. Isn't it great? Come and learn.",
         "title":"QSL4A - QPython's Android APIs",
@@ -50,13 +50,13 @@
         "auth_avatar":"",
         "auth":"RH",
         "auth_desc":"Senior Engineer of QPython Team",
-        "logo": "http://edu.qpython.org/static/course-sl4a.png",
+        "logo": "https://edu.qpython.org/static/course-sl4a.png",
         "open": 1,
         "crowdfunding": 1,
         "courses":[
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qsl4a-develop/index.html",
+                "link":"https://edu.qpython.org/qsl4a-develop/index.html",
                 "smodule":"qsl4a-develop-index",
                 "description":"QSL4A is the bridge of calling Android APIs with Python",
                 "title":"QSL4A Introduction",
@@ -69,7 +69,7 @@
         "src":"http://qpython.org",
         "rdate":"2017-06-15",
         "author":"River",
-        "link":"http://edu.qpython.org/qpython-webapp/index.html",
+        "link":"https://edu.qpython.org/qpython-webapp/index.html",
         "smodule":"qpython-webapp",
         "description":"As the most widely used web development language in today's application, Python has a web development library that includes bottle, django, tornado, and flask to meet your different development needs. This course will not only teach you how to use these development frameworks to develop web applications but also lets you master how to develop super WebApp with QPython.",
         "title":"QPython WebApp",
@@ -81,11 +81,11 @@
         "auth":"River",
         "auth_desc":"Original Author of QPython, CTO of some startup",
         "open": 1,
-        "logo": "http://edu.qpython.org/static/course-qpython-webapp.png",
+        "logo": "https://edu.qpython.org/static/course-qpython-webapp.png",
         "courses":[
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-webapp/index.html",
+                "link":"https://edu.qpython.org/qpython-webapp/index.html",
                 "smodule":"qpython-webapp-principle",
                 "description":"Why QPython WebApp",
                 "title":"QPython WebApp Principle",
@@ -93,7 +93,7 @@
                 "downloads": "10,000+"
             },
             {
-                "link":"http://edu.qpython.org/qpython-webapp/your-first-webapp.html",
+                "link":"https://edu.qpython.org/qpython-webapp/your-first-webapp.html",
                 "smodule":"qpython-webapp-your-first-webapp",
                 "description":"How to develop your first WebApp",
                 "title":"Your first WebApp",
@@ -101,7 +101,7 @@
                 "downloads": "10,000+"
             },
             {
-                "link":"http://edu.qpython.org/qpython-webapp/web-frameworks.html",
+                "link":"https://edu.qpython.org/qpython-webapp/web-frameworks.html",
                 "smodule":"qpython-webapp-web-frameworks",
                 "description":"Develop WebApp with your familiar web framework",
                 "title":"Web Frameworks on QPython",
@@ -114,7 +114,7 @@
    {
         "src":"http://qpython.org",
         "rdate":"2017-06-15",
-        "link":"http://edu.qpython.org/qpython-quick-start/index.html",
+        "link":"https://edu.qpython.org/qpython-quick-start/index.html",
         "smodule":"qpython-quick-start",
         "description":"What is QPython? How to use it? Why use it? This is probably the most frequently asked question for new users. To this end, we introduced the \"User's Guide\" to introduce QPython core functions and modules, and QPython is also constantly upgrading. The course will also be updated according to the new features, so stay tuned.",
         "title":"QPython Quick Start",
@@ -125,12 +125,12 @@
         "auth_avatar":"https://avatars1.githubusercontent.com/u/3059527?s=400&v=4",
         "auth":"River",
         "auth_desc":"Original Author of QPython, CTO of some startup",
-        "logo": "http://edu.qpython.org/static/course-qpython-quick-start.png",
+        "logo": "https://edu.qpython.org/static/course-qpython-quick-start.png",
         "open": 1,
         "courses":[
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/principle.html",
+                "link":"https://edu.qpython.org/qpython-quick-start/principle.html",
                 "smodule":"qpython-quick-start-principles",
                 "description":"Why QPython",
                 "title":"QPython principle",
@@ -138,7 +138,7 @@
             },
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/terminal-howto.html",
+                "link":"https://edu.qpython.org/qpython-quick-start/terminal-howto.html",
                 "smodule":"qpython-quick-start-terminal-howto",
                 "description":"Explore to use QPython's Terminal",
                 "title":"Terminal howto",
@@ -146,7 +146,7 @@
             },
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/editor-howto.html",
+                "link":"https://edu.qpython.org/qpython-quick-start/editor-howto.html",
                 "smodule":"qpython-quick-start-editor-howto",
                 "description":"Develop with QPython's editor ",
                 "title":"Editor howto",
@@ -154,7 +154,7 @@
             },
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/qpypi-howto.html",
+                "link":"https://edu.qpython.org/qpython-quick-start/qpypi-howto.html",
                 "smodule":"qpython-quick-start-qpypi-howto",
                 "description":"Install packages & programs on QPython",
                 "title":"QPYPI howto",
@@ -162,7 +162,7 @@
             },
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/community-howto.html",
+                "link":"https://edu.qpython.org/qpython-quick-start/community-howto.html",
                 "smodule":"qpython-quick-start-community-howto",
                 "description":"Join a QPython community",
                 "title":"Community howto",
@@ -170,7 +170,7 @@
             },
             {
                 "rdate":"2017-09-15",
-                "link":"http://edu.qpython.org/AIPY/index.html",
+                "link":"https://edu.qpython.org/AIPY/index.html",
                 "smodule":"qpython-quick-start-aipy-howto",
                 "description":"Learn AI with QPython",
                 "title":"AIPY howto",
@@ -178,7 +178,7 @@
             },
             {
                 "rdate":"2018-03-05",
-                "link":"http://edu.qpython.org/featured/featured_2018_0301_notebook.html",
+                "link":"https://edu.qpython.org/featured/featured_2018_0301_notebook.html",
                 "smodule":"qpython-quick-start-notebook-howto",
                 "description":"Practice Python step by step",
                 "title":"QPyNotebook howto",
@@ -188,7 +188,7 @@
     }, {
         "src":"http://qpython.org",
         "rdate":"2017-06-15",
-        "link":"http://edu.qpython.org/qpython-quick-start/index.html",
+        "link":"https://edu.qpython.org/qpython-quick-start/index.html",
         "smodule":"qpython-quick-start",
         "description":"What is QPython? How to use it? Why use it? This is probably the most frequently asked question for new users. To this end, we introduced the \"User's Guide\" to introduce QPython core functions and modules, and QPython is also constantly upgrading. The course will also be updated according to the new features, so stay tuned.",
         "title":"QPython Quick Start",
@@ -199,12 +199,12 @@
         "auth_desc":"Original  Author of QPython, CTO of some startup",
         "cat":"featured",
         "level": 1,
-        "logo": "http://edu.qpython.org/static/course-qpython-quick-start.png",
+        "logo": "https://edu.qpython.org/static/course-qpython-quick-start.png",
         "open": 1,
         "courses":[
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/principle.html",
+                "link":"https://edu.qpython.org/qpython-quick-start/principle.html",
                 "smodule":"qpython-quick-start-principles",
                 "description":"Why QPython",
                 "title":"QPython principle",
@@ -212,7 +212,7 @@
             },
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/terminal-howto.html",
+                "link":"https://edu.qpython.org/qpython-quick-start/terminal-howto.html",
                 "smodule":"qpython-quick-start-terminal-howto",
                 "description":"Explore to use QPython's Terminal",
                 "title":"Terminal howto",
@@ -220,7 +220,7 @@
             },
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/editor-howto.html",
+                "link":"https://edu.qpython.org/qpython-quick-start/editor-howto.html",
                 "smodule":"qpython-quick-start-editor-howto",
                 "description":"Develop with QPython's editor ",
                 "title":"Editor howto",
@@ -228,7 +228,7 @@
             },
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/qpypi-howto.html",
+                "link":"https://edu.qpython.org/qpython-quick-start/qpypi-howto.html",
                 "smodule":"qpython-quick-start-qpypi-howto",
                 "description":"Install packages & programs on QPython",
                 "title":"QPYPI howto",
@@ -236,7 +236,7 @@
             },
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/community-howto.html",
+                "link":"https://edu.qpython.org/qpython-quick-start/community-howto.html",
                 "smodule":"qpython-quick-start-community-howto",
                 "description":"Join a QPython community",
                 "title":"Community howto",
