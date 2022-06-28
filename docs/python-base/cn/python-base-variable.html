@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>简述</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,31 +55,31 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="id1">
-<h1>简述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<section id="id1">
+<h1>简述<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
 <p>变量只不过是保留的内存位置，用于存储规定范围内的值。这意味着，在创建变量时会在内存中开辟一个空间。</p>
 <p>基于变量的数据类型，解释器会分配指定内存，并决定什么数据可以被存储在内存中。因此，变量可以指定不同的数据类型，例如：整数、小数或字符串等。</p>
-<div class="section" id="id2">
-<h2>何为变量？<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<section id="id2">
+<h2>何为变量？<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>简单地说，变量就是给数据起一个名字。</p>
 <p>变量更多情况下是一种引用，对应的只是内存当中的一个值，该值可以根据需要存储不同的数据类型。</p>
 <p>如下等式，一个名为 age 的变量被赋值为 18 。正如每个人都有姓名一样，变量的名字叫做标识符。</p>
 <img alt="http://img.blog.csdn.net/20170331192942534" src="http://img.blog.csdn.net/20170331192942534" />
 <p><strong>注意</strong>： 在很多语言中，声明变量必须要声明变量的类型。例如，要在 C++ 中声明一个整形变量，必须先声明变量的类型为 int，然后使用变量名以及变量对应的值。而在 Python 中，</p>
-</div>
-<div class="section" id="id3">
-<h2>变量命名<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id3">
+<h2>变量命名<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
 <p>变量可以任意取名，但必须遵循以下命名规则：</p>
 <blockquote>
 <div><ul class="simple">
-<li>由字母、数字、下划线（_）组成</li>
-<li>不能以数字开头</li>
-<li>不能使用 Python 关键字</li>
-<li>不能使用特殊符号，例如：!、&#64;、#、$、% 等</li>
+<li><p>由字母、数字、下划线（_）组成</p></li>
+<li><p>不能以数字开头</p></li>
+<li><p>不能使用 Python 关键字</p></li>
+<li><p>不能使用特殊符号，例如：!、&#64;、#、$、% 等</p></li>
 </ul>
 </div></blockquote>
 <p>例如，定义以下变量：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>age = 18  // 正确
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>age = 18  // 正确
 _age = 18  // 正确
 age_18 = 18  // 正确
 18_age = 18  // 错误，以数字开头
@@ -89,37 +89,37 @@ a@e = 18  // 错误，使用特殊符号 @
 </div>
 <p>除此之外，还需要注意：</p>
 <ul class="simple">
-<li>变量对大小写敏感（区分大小写）</li>
+<li><p>变量对大小写敏感（区分大小写）</p></li>
 </ul>
 <p>例如，定义以下变量：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">AGE</span> <span class="o">=</span> <span class="mi">18</span>  <span class="o">//</span> <span class="n">正确</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AGE</span> <span class="o">=</span> <span class="mi">18</span>  <span class="o">//</span> <span class="n">正确</span>
 <span class="n">age</span> <span class="o">=</span> <span class="mi">18</span>  <span class="o">//</span> <span class="n">正确</span>
 </pre></div>
 </div>
 <p>AGE 和 age 是两个不同的变量，而非同一个。</p>
 <p><strong>建议</strong>： 变量名应做到见明知义，避免晦涩难懂。虽然可以是任意长度，但一般应确保精简、无歧义。</p>
-</div>
-</div>
-<div class="section" id="id4">
-<h1>变量赋值<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id5">
-<h2>变量的基本赋值<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="id4">
+<h1>变量赋值<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h1>
+<section id="id5">
+<h2>变量的基本赋值<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h2>
 <p>变量是数据的引用，更像是标签。</p>
 <p>例如，有一个 teacher 叫 Jack Ma，相当于将 teacher 这个标签拴在了 Jack Ma 上。通过这个 teacher，就顺延到了 Jack Ma，于是当我们叫 teacher 时，实际是在叫 Jack Ma，给人的</p>
 <p>感觉似乎 teacher 就是 Jack Ma，而事实上是 teacher 这个标签贴在了 Jack Ma 上。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">teacher</span> <span class="o">=</span> <span class="s2">&quot;Jack Ma&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">teacher</span> <span class="o">=</span> <span class="s2">&quot;Jack Ma&quot;</span>
 <span class="n">teacher</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>在这里，teacher 标签就是所谓的变量，Jack Ma 就是该变量所对应的值，存储于内存中。</p>
 <p>在 Python 中，有非常重要的一句话：<strong>对象有类型，变量无类型。</strong> 可以这样理解，就是标签不仅可以贴在整形类型的对象上，还可以贴在其他类型的对象上（例如：字符串）。变量的这个特点（随意贴标签）非常重要，它没有类型。</p>
-</div>
-<div class="section" id="id6">
-<h2>变量的重新赋值<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id6">
+<h2>变量的重新赋值<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h2>
 <p>变量，从字面意思理解就是变化的量，也就是说，数值是可变的。将变量从一个存储空间移至另一个存储空间中（也就是将标签移走，换到另一个位置），被称作变量的重新赋值。</p>
 <p>例如，原来 teacher 叫 Jack Ma，后来年龄大退休了，换了一个老师叫 Pony，当我们再叫 teacher 时，其实叫的是 Pony，而非 Jack Ma。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">teacher</span> <span class="o">=</span> <span class="s2">&quot;Jack Ma&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">teacher</span> <span class="o">=</span> <span class="s2">&quot;Jack Ma&quot;</span>
 <span class="n">teacher</span>
 <span class="n">teacher</span> <span class="o">=</span> <span class="s2">&quot;Pony&quot;</span>
 <span class="n">teacher</span>
@@ -129,7 +129,7 @@ a@e = 18  // 错误，使用特殊符号 @
 <p>一开始，相当于将 teacher 这个标签拴在了 Jack Ma 上，后来标签换了位置，拴在了 Pony 上。</p>
 <p>如果学过其他编程语言，例如：C++，很容易想到的是 teacher 开辟了内存空间，里面存了 Jack Ma，然后这个空间当中又换为 Pony。就好比 teacher 是一个容器，里面放着值。实际在 Python 当中，正好相反，Python 是以数据为主，Jack Ma、Pony 都存储在内存当中，teacher 无非是对数据的一个引用。所以，当重新赋值后，查看 teacher 所对应的地址时，会发生变化。</p>
 <p>每个对象在内存中都有对应的地址，这就是它的“身份”，使用 Python 的内建函数 id() 来查看：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">teacher</span> <span class="o">=</span> <span class="s2">&quot;JacK Ma&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">teacher</span> <span class="o">=</span> <span class="s2">&quot;JacK Ma&quot;</span>
 <span class="nb">id</span><span class="p">(</span><span class="n">teacher</span><span class="p">)</span>
 <span class="n">teacher</span> <span class="o">=</span> <span class="s2">&quot;Pony&quot;</span>
 <span class="nb">id</span><span class="p">(</span><span class="n">teacher</span><span class="p">)</span>
@@ -137,21 +137,21 @@ a@e = 18  // 错误，使用特殊符号 @
 </div>
 <button class="button">Run …</button>
 <p>可以看到，重新赋值后，teacher 对应的内存空间已经变了。所以，JacK Ma 和 Pony 实际上存储在两个空间中。</p>
-</div>
-<div class="section" id="id7">
-<h2>为多个变量指定同一个值<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id7">
+<h2>为多个变量指定同一个值<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h2>
 <p>同一个内存地址，可以有多个标签。这个很容易理解，一个人可以有多重身份，JacK Ma 既是 teacher，又是 ceo。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ceo</span> <span class="o">=</span> <span class="n">teacher</span> <span class="o">=</span> <span class="s2">&quot;Jack Ma&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ceo</span> <span class="o">=</span> <span class="n">teacher</span> <span class="o">=</span> <span class="s2">&quot;Jack Ma&quot;</span>
 </pre></div>
 </div>
 <p>或者：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">teacher</span> <span class="o">=</span> <span class="s2">&quot;Jack Ma&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">teacher</span> <span class="o">=</span> <span class="s2">&quot;Jack Ma&quot;</span>
 <span class="n">ceo</span> <span class="o">=</span> <span class="n">teacher</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>看似不相关的变量，但他们指的都是同一个人 Jack Ma，不妨看一下：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">teacher</span> <span class="o">=</span> <span class="s2">&quot;Jack Ma&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">teacher</span> <span class="o">=</span> <span class="s2">&quot;Jack Ma&quot;</span>
 <span class="n">ceo</span> <span class="o">=</span> <span class="n">teacher</span>
 <span class="nb">id</span><span class="p">(</span><span class="n">teacher</span><span class="p">)</span>
 <span class="nb">id</span><span class="p">(</span><span class="n">ceo</span><span class="p">)</span>
@@ -161,26 +161,27 @@ a@e = 18  // 错误，使用特殊符号 @
 <p>显然，对应的是同一个内存地址。也就是说，teacher、ceo 是不同的标签，但是所引用的数据是同一地址上的。</p>
 <p>将多个值分配给多个变量</p>
 <p>要将多个值分配给多个变量，可以单独分开来写：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">18</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">18</span>
 <span class="n">teacher</span> <span class="o">=</span> <span class="s2">&quot;Jack Ma&quot;</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>也可以连在一起：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">age</span><span class="p">,</span> <span class="n">teacher</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;Jack Ma&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">age</span><span class="p">,</span> <span class="n">teacher</span> <span class="o">=</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;Jack Ma&quot;</span>
 <span class="n">age</span>
 <span class="n">teacher</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>这里，值为 18 的整形分配给了变量 age，值为 “Jack Ma” 的字符串分配给了变量 teacher。</p>
-</div>
-<div class="section" id="id8">
-<h2>作者 &amp; 更新时间<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id8">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h2>
 <p>作者: <a class="reference external" href="http://blog.csdn.net/liang19890820">一去丶二三里</a></p>
 <p>提交: 2017/12/6</p>
-</div>
-</div>
+</section>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>QPython的WebApp</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,30 +55,30 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="qpythonwebapp">
-<h1>QPython的WebApp<a class="headerlink" href="#qpythonwebapp" title="Permalink to this headline">¶</a></h1>
+<section id="qpythonwebapp">
+<h1>QPython的WebApp<a class="headerlink" href="#qpythonwebapp" title="Permalink to this heading">¶</a></h1>
 <p>WebApp是一种Web开发者能够快速上手开发的应用，QPython的WebApp支持常见WebAApp的优势。此外，QPython让手机本身就能成为WebApp的运行容器，支持处理复杂的程序逻辑，因此能极大地提高WebApp使用体验，同时也增加了开发的灵活度。</p>
-<div class="section" id="webapp">
-<h2>WebApp声明<a class="headerlink" href="#webapp" title="Permalink to this headline">¶</a></h2>
+<section id="webapp">
+<h2>WebApp声明<a class="headerlink" href="#webapp" title="Permalink to this heading">¶</a></h2>
 <p>在QPython中，通过头部声明来区分程序类型，当头部有以下定义时，我们知道它是一个WebApp程序。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#qpy:webapp:&lt;WebApp程序名称&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#qpy:webapp:&lt;WebApp程序名称&gt;</span>
 <span class="c1">#qpy://&lt;WebApp运行所在的IP，一般为127.0.0.1&gt;:&lt;WebApp运行所在的端口&gt;/&lt;初次载入时对应的WebApp Url路径&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id1">
-<h2>WebApp运行流程<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id1">
+<h2>WebApp运行流程<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
 <p>在程序被识别为WebApp运行后，QPython会让程序作为后台服务的方式启动，同时在前端会启动一个WebView组件，载入你在程序头部声明所对应的URL（由IP、端口、URL路径组合而成）</p>
 <p>如，如果IP为127.0.0.1，端口为8080，URL路径为hello/test，则WebView载入的URL为：<a class="reference external" href="http://127.0.0.1:8080/hello/test">http://127.0.0.1:8080/hello/test</a></p>
-</div>
-<div class="section" id="id2">
-<h2>WebApp退出原理<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id2">
+<h2>WebApp退出原理<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>当你点了后退键退出WebView时，WebApp后台进程也需要退出，由于一开始QPython让其按照后台服务的方式启动，所以我们需要通知其退出，QPython是在WebView退出时，发出一个http://IP:端口/__exit 的GET请求到后台服务，由其处理结束后台进程，退出服务的工作，因此，作为一个完成的流程，您需要在自己的WebApp中定义/__exit 对应的退出服务操作，我们在结尾示例中附有示例。</p>
-</div>
-<div class="section" id="id3">
-<h2>例子<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id3">
+<h2>例子<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
 <p>作为QPython内嵌的Web开发库，来看一个最简单的bottle的Hello world</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#qpy:webapp:Hello Qpython
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#qpy:webapp:Hello Qpython
 #qpy://127.0.0.1:8080/
 &quot;&quot;&quot;
 This is a sample for qpython webapp
@@ -127,8 +127,9 @@ except Exception,ex:
 <button class="button">Run …</button>
 <p>点击运行，将代码复制到编辑器中点击运行即可看见效果。</p>
 <p>当然，在QPython中，还提供了其他Web开发框架的支持来帮助你简化工作。</p>
-</div>
-</div>
+</section>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>

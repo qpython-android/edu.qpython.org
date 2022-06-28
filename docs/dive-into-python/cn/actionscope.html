@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>作用域</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,39 +55,39 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="id1">
-<h1>作用域<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<section id="id1">
+<h1>作用域<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
 <p>在函数中，<em>Python</em> 从命名空间中寻找变量的顺序如下：</p>
 <ul class="simple">
-<li>local function scope</li>
-<li>enclosing scope</li>
-<li>global scope</li>
-<li>builtin scope</li>
+<li><p>local function scope</p></li>
+<li><p>enclosing scope</p></li>
+<li><p>global scope</p></li>
+<li><p>builtin scope</p></li>
 </ul>
 <p>例子：</p>
-</div>
-<div class="section" id="local">
-<h1>local 作用域<a class="headerlink" href="#local" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-default"><div class="highlight"><pre><span></span>def foo(a,b):
+</section>
+<section id="local">
+<h1>local 作用域<a class="headerlink" href="#local" title="Permalink to this heading">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>def foo(a,b):
     c = 1
     d = a + b + c
 </pre></div>
 </div>
 <p>这里所有的变量都在 <em>local</em> 作用域。</p>
-</div>
-<div class="section" id="global">
-<h1>global 作用域<a class="headerlink" href="#global" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-default"><div class="highlight"><pre><span></span>c = 1
+</section>
+<section id="global">
+<h1>global 作用域<a class="headerlink" href="#global" title="Permalink to this heading">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>c = 1
 def foo(a,b):
     d = a + b + c
 </pre></div>
 </div>
 <p>这里的 <em>c</em> 就在 <em>global</em> 作用域。</p>
-</div>
-<div class="section" id="id2">
-<h1>global 关键词<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="id2">
+<h1>global 关键词<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h1>
 <p>使用 <em>global</em> 关键词可以在 <em>local</em> 作用域中修改 <em>global</em> 作用域的值。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>c = 1
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>c = 1
 def foo():
     global c
     c = 2
@@ -97,13 +97,13 @@ print c
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
 <span class="mi">2</span>
 </pre></div>
 </div>
 <p>其作用是将 <em>c</em> 指向 <em>global</em> 中的 <em>c</em></p>
 <p>如果不加关键词，那么 <em>local</em> 作用域的 <em>c</em> 不会影响 <em>globa</em> 作用域中的值：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>c = 1
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>c = 1
 def foo():
     c = 2
 print c
@@ -112,54 +112,50 @@ print c
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span>
 <span class="mi">1</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="built-in">
-<h1>built-in 作用域<a class="headerlink" href="#built-in" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-default"><div class="highlight"><pre><span></span>def list_length(a):
+</section>
+<section id="built-in">
+<h1>built-in 作用域<a class="headerlink" href="#built-in" title="Permalink to this heading">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>def list_length(a):
     return len(a)
 a = [1,2,3]
 print list_length(a)
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">3</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>
 </pre></div>
 </div>
 <p>这里函数 <em>len *就是在</em> built-in* 作用域中：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">__builtin__</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">__builtin__</span>
 <span class="n">__builtin__</span><span class="o">.</span><span class="n">len</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="class">
-<h1>class 中的作用域<a class="headerlink" href="#class" title="Permalink to this headline">¶</a></h1>
-<table border="1" class="docutils">
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Global</th>
-<th class="head">MyClass</th>
+</section>
+<section id="class">
+<h1>class 中的作用域<a class="headerlink" href="#class" title="Permalink to this heading">¶</a></h1>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Global</p></th>
+<th class="head"><p>MyClass</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>var = 0</td>
-<td>&#160;</td>
+<tbody>
+<tr class="row-even"><td><p>var = 0</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td>MyClass</td>
-<td>var = 1</td>
+<tr class="row-odd"><td><p>MyClass</p></td>
+<td><p>var = 1</p></td>
 </tr>
-<tr class="row-even"><td>access_class</td>
-<td>access_class</td>
+<tr class="row-even"><td><p>access_class</p></td>
+<td><p>access_class</p></td>
 </tr>
 </tbody>
 </table>
-<div class="highlight-default"><div class="highlight"><pre><span></span># global
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># global
 var = 0
 class MyClass(object):
     # class variable
@@ -176,7 +172,7 @@ class MyClass(object):
              print &#39;instance var:&#39;, self.var
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Global</span>         <span class="n">MyClass</span>        <span class="n">obj</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Global</span>         <span class="n">MyClass</span>        <span class="n">obj</span>
 <span class="n">var</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">MyClass</span>
 <span class="p">[</span><span class="n">access_class</span><span class="p">]</span>
@@ -184,11 +180,11 @@ class MyClass(object):
 <span class="n">access_class</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>查询 <em>self.var</em> 时，由于 <em>obj</em> 不存在 <em>var</em>，所以跳到 <strong>MyClass</strong> 中：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Global</span>        <span class="n">MyClass</span>        <span class="n">obj</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Global</span>        <span class="n">MyClass</span>        <span class="n">obj</span>
 <span class="n">var</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">MyClass</span>
 <span class="p">[</span><span class="n">access_class</span>
@@ -197,12 +193,12 @@ class MyClass(object):
 <span class="n">access_class</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">access_class_c</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">access_class_c</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>class var: 1</p>
 <p>查询 <em>var</em> 直接跳到 <em>global</em> 作用域：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Global</span>       <span class="n">MyClass</span> <span class="n">obj</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Global</span>       <span class="n">MyClass</span> <span class="n">obj</span>
 <span class="n">var</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">MyClass</span>
 <span class="p">[</span><span class="n">access_class</span>
@@ -211,12 +207,12 @@ class MyClass(object):
 <span class="n">access_class</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">access_global_c</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">access_global_c</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>global var: 0</p>
 <p>修改类中的 <em>MyClass.var</em>：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Global</span>       <span class="n">MyClass</span> <span class="n">obj</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Global</span>       <span class="n">MyClass</span> <span class="n">obj</span>
 <span class="n">var</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">MyClass</span>
 <span class="p">[</span><span class="n">access_class</span>
@@ -225,12 +221,12 @@ class MyClass(object):
 <span class="n">access_class</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">write_class_c</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">write_class_c</span><span class="p">()</span>
 <span class="k">class</span> <span class="nc">var</span><span class="p">:</span> <span class="mi">2</span>
 </pre></div>
 </div>
 <p>修改实例中的 <em>var</em> 时，会直接在 <em>obj</em> 域中创建一个：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Global</span>        <span class="n">MyClass</span> <span class="n">obj</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Global</span>        <span class="n">MyClass</span> <span class="n">obj</span>
 <span class="n">var</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">MyClass</span>
 <span class="p">[</span><span class="n">access_class</span>
@@ -239,23 +235,23 @@ class MyClass(object):
 <span class="n">access_class</span>  <span class="n">var</span> <span class="o">=</span> <span class="mi">3</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">write_instance_c</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj</span><span class="o">.</span><span class="n">write_instance_c</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>instance var: 3</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">MyClass</span><span class="o">.</span><span class="n">var</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MyClass</span><span class="o">.</span><span class="n">var</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span>
 </pre></div>
 </div>
 <p><em>MyClass</em> 中的 <em>var</em> 并没有改变。</p>
-</div>
-<div class="section" id="id3">
-<h1>词法作用域<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="id3">
+<h1>词法作用域<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h1>
 <p>对于嵌套函数：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>def outer():
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>def outer():
     a = 1
     def inner():
              print &quot;a =&quot;, a
@@ -264,12 +260,12 @@ outer()
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 </pre></div>
 </div>
 <p>如果里面的函数没有找到变量，那么会向外一层寻找变量，如果再找不到，则到 global 作用域。</p>
 <p>返回的是函数的情况：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>def outer():
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>def outer():
     a = 1
     def inner():
             return a
@@ -279,16 +275,17 @@ print &#39;a (1):&#39;, func()
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="p">(</span><span class="mi">1</span><span class="p">):</span> <span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="p">(</span><span class="mi">1</span><span class="p">):</span> <span class="mi">1</span>
 </pre></div>
 </div>
 <p><em>func()</em> 函数中调用的* a <em>要从它定义的地方开始寻找，而不是在 *func</em> 所在的作用域寻找。</p>
-</div>
-<div class="section" id="id4">
-<h1>作者 &amp; 更新时间<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="id4">
+<h1>作者 &amp; 更新时间<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h1>
 <p>作者:李金  <a class="reference external" href="mailto:lijinwithyou&#37;&#52;&#48;gmail&#46;com">lijinwithyou<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
 <p>提交: 2017/12/6</p>
-</div>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>

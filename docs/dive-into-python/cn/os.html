@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>与操作系统进行交互：os 模块</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,41 +55,41 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="os">
-<h1>与操作系统进行交互：os 模块<a class="headerlink" href="#os" title="Permalink to this headline">¶</a></h1>
+<section id="os">
+<h1>与操作系统进行交互：os 模块<a class="headerlink" href="#os" title="Permalink to this heading">¶</a></h1>
 <p>os 模块提供了对系统文件进行操作的方法：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="nb">dir</span><span class="p">(</span><span class="n">os</span><span class="p">)</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
-<div class="section" id="id1">
-<h2>文件路径操作<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<section id="id1">
+<h2>文件路径操作<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li><em>os.remove(path)</em> 或 <em>os.unlink(path)</em> ：删除指定路径的文件。路径可以是全名，也可以是当前工作目录下的路径。</li>
-<li><em>os.removedirs</em>：删除文件，并删除中间路径中的空文件夹</li>
-<li><em>os.chdir(path)</em>：将当前工作目录改变为指定的路径</li>
-<li><em>os.getcwd()</em>：返回当前的工作目录</li>
-<li><em>os.curdir</em>：表示当前目录的符号</li>
-<li><em>os.rename(old, new)</em>：重命名文件</li>
-<li><em>os.renames(old, new)</em>：重命名文件，如果中间路径的文件夹不存在，则创建文件夹</li>
-<li><em>os.listdir(path)</em>：返回给定目录下的所有文件夹和文件名，不包括 <em>‘.’</em> 和 <em>‘..’</em> 以及子文件夹下的目录。（<em>’.’</em> 和* ‘..’* 分别指当前目录和父目录）</li>
-<li><em>os.mkdir(name)</em>：产生新文件夹</li>
-<li><em>os.makedirs(name)</em>：产生新文件夹，如果中间路径的文件夹不存在，则创建文件夹</li>
+<li><p><em>os.remove(path)</em> 或 <em>os.unlink(path)</em> ：删除指定路径的文件。路径可以是全名，也可以是当前工作目录下的路径。</p></li>
+<li><p><em>os.removedirs</em>：删除文件，并删除中间路径中的空文件夹</p></li>
+<li><p><em>os.chdir(path)</em>：将当前工作目录改变为指定的路径</p></li>
+<li><p><em>os.getcwd()</em>：返回当前的工作目录</p></li>
+<li><p><em>os.curdir</em>：表示当前目录的符号</p></li>
+<li><p><em>os.rename(old, new)</em>：重命名文件</p></li>
+<li><p><em>os.renames(old, new)</em>：重命名文件，如果中间路径的文件夹不存在，则创建文件夹</p></li>
+<li><p><em>os.listdir(path)</em>：返回给定目录下的所有文件夹和文件名，不包括 <em>‘.’</em> 和 <em>‘..’</em> 以及子文件夹下的目录。（<em>’.’</em> 和* ‘..’* 分别指当前目录和父目录）</p></li>
+<li><p><em>os.mkdir(name)</em>：产生新文件夹</p></li>
+<li><p><em>os.makedirs(name)</em>：产生新文件夹，如果中间路径的文件夹不存在，则创建文件夹</p></li>
 </ul>
 <p>获得当前目录：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>获得当前目录下的文件：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">curdir</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>写文件：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test.file&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
 <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 <span class="nb">print</span> <span class="s2">&quot;test.file&quot;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">curdir</span><span class="p">)</span>
@@ -97,7 +97,7 @@
 </div>
 <button class="button">Run …</button>
 <p>重命名文件：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s2">&quot;test.file&quot;</span><span class="p">,</span> <span class="s2">&quot;test.new.file&quot;</span><span class="p">)</span>
 <span class="nb">print</span> <span class="s2">&quot;test.file&quot;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">curdir</span><span class="p">)</span>
 <span class="nb">print</span> <span class="s2">&quot;test.new.file&quot;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">curdir</span><span class="p">)</span>
@@ -105,76 +105,77 @@
 </div>
 <button class="button">Run …</button>
 <p>删除文件：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;test.new.file&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
-</div>
-<div class="section" id="id2">
-<h2>系统常量<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id2">
+<h2>系统常量<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>当前操作系统的换行符：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">linesep</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>当前操作系统的路径分隔符：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">sep</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>当前操作系统的环境变量中的分隔符（<em>’;’</em> 或 <em>‘:’</em>）：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">pathsep</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
-</div>
-<div class="section" id="id3">
-<h2>其他<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id3">
+<h2>其他<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
 <p><em>os.environ</em> 是一个存储所有环境变量的值的字典，可以修改。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;USER&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p><em>os.urandom(len)</em> 返回指定长度的随机字节。</p>
-</div>
-<div class="section" id="os-path">
-<h2>os.path 模块<a class="headerlink" href="#os-path" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="os-path">
+<h2>os.path 模块<a class="headerlink" href="#os-path" title="Permalink to this heading">¶</a></h2>
 <p>不同的操作系统使用不同的路径规范，这样当我们在不同的操作系统下进行操作时，可能会带来一定的麻烦，而 <em>os.path</em> 模块则帮我们解决了这个问题。</p>
 <ul class="simple">
-<li>os.path.isfile(path) ：检测一个路径是否为普通文件</li>
-<li>os.path.isdir(path)：检测一个路径是否为文件夹</li>
-<li>os.path.exists(path)：检测路径是否存在</li>
-<li>os.path.isabs(path)：检测路径是否为绝对路径</li>
+<li><p>os.path.isfile(path) ：检测一个路径是否为普通文件</p></li>
+<li><p>os.path.isdir(path)：检测一个路径是否为文件夹</p></li>
+<li><p>os.path.exists(path)：检测路径是否存在</p></li>
+<li><p>os.path.isabs(path)：检测路径是否为绝对路径</p></li>
 </ul>
-</div>
-<div class="section" id="split-join">
-<h2>split 和 join<a class="headerlink" href="#split-join" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="split-join">
+<h2>split 和 join<a class="headerlink" href="#split-join" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li>os.path.split(path)：拆分一个路径为 (head, tail) 两部分</li>
-<li>os.path.join(a, * p)：使用系统的路径分隔符，将各个部分合成一个路径</li>
+<li><p>os.path.split(path)：拆分一个路径为 (head, tail) 两部分</p></li>
+<li><p>os.path.join(a, * p)：使用系统的路径分隔符，将各个部分合成一个路径</p></li>
 </ul>
-</div>
-<div class="section" id="id4">
-<h2>其他<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id4">
+<h2>其他<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
-<li>os.path.abspath()：返回路径的绝对路径</li>
-<li>os.path.dirname(path)：返回路径中的文件夹部分</li>
-<li>os.path.basename(path)：返回路径中的文件部分</li>
-<li>os.path.splitext(path)：将路径与扩展名分开</li>
-<li>os.path.expanduser(path)：展开 ‘~’ 和 ‘~user’</li>
+<li><p>os.path.abspath()：返回路径的绝对路径</p></li>
+<li><p>os.path.dirname(path)：返回路径中的文件夹部分</p></li>
+<li><p>os.path.basename(path)：返回路径中的文件部分</p></li>
+<li><p>os.path.splitext(path)：将路径与扩展名分开</p></li>
+<li><p>os.path.expanduser(path)：展开 ‘~’ 和 ‘~user’</p></li>
 </ul>
-</div>
-<div class="section" id="id5">
-<h2>作者 &amp; 更新时间<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id5">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h2>
 <p>作者:<cite>李金  &lt;lijinwithyou&#64;gmail.com&gt;</cite></p>
 <p>提交: 2017/12/6</p>
-</div>
-</div>
+</section>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>

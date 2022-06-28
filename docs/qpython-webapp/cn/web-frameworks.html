@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>QPython中的WEB框架</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,14 +55,14 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="qpythonweb">
-<h1>QPython中的WEB框架<a class="headerlink" href="#qpythonweb" title="Permalink to this headline">¶</a></h1>
+<section id="qpythonweb">
+<h1>QPython中的WEB框架<a class="headerlink" href="#qpythonweb" title="Permalink to this heading">¶</a></h1>
 <p>使用WEB开发框架，开发者能够高效迅速地开发出WEB应用。同样，在QPython中，你能用下列WEB框架来快速开发WebApp。</p>
-<div class="section" id="bottle">
-<h2>Bottle<a class="headerlink" href="#bottle" title="Permalink to this headline">¶</a></h2>
+<section id="bottle">
+<h2>Bottle<a class="headerlink" href="#bottle" title="Permalink to this heading">¶</a></h2>
 <p>Bottle是QPython内置的WebApp开发框架，您无需额外安装，只需要遵循WebApp的规范，参考bottle开发的方法就可以进行。</p>
 <p>来看一个最简单的bottle的Hello world。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#qpy:webapp:Hello Qpython
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#qpy:webapp:Hello Qpython
 #qpy://127.0.0.1:8080/
 &quot;&quot;&quot;
 This is a sample for qpython webapp
@@ -110,14 +110,14 @@ except Exception,ex:
 </div>
 <button class="button">Run …</button>
 <p>点击运行，将代码复制到编辑器中点击运行即可看见效果。</p>
-</div>
-<div class="section" id="tornado">
-<h2>Tornado<a class="headerlink" href="#tornado" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="tornado">
+<h2>Tornado<a class="headerlink" href="#tornado" title="Permalink to this heading">¶</a></h2>
 <p>QPython同样支持异步通信Web开发框架Tornado，您可以通过QPYPI来安装它。</p>
 <img alt="tornado library in QPYPI" src="http://edu.qpython.org/static/qpypi-tornado.png" />
 <p><em>通过QPYPI来安装tornado库</em></p>
 <p>安装完毕之后，点击以下代码底部的运行即可将代码拷贝到编辑器中，保存运行即可看到基于Tornado的WebApp示例效果。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#qpy:webapp:Tornado Sample
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#qpy:webapp:Tornado Sample
 #qpy://127.0.0.1:8080/
 import tornado
 import tornado.web
@@ -141,19 +141,20 @@ if __name__ == &quot;__main__&quot;:
 </div>
 <button class="button">Run …</button>
 <p>此外值得一提的是，在QPython的AIPY扩展插件中，matlibplot也是默认支持了用Tornado作为绘图展示支持后端。</p>
-</div>
-<div class="section" id="django">
-<h2>Django<a class="headerlink" href="#django" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="django">
+<h2>Django<a class="headerlink" href="#django" title="Permalink to this heading">¶</a></h2>
 <p>作为Python WEB开发的最常用框架，Django同样获得了QPython的支持, QPython提供了一个djangoman.py脚本来帮助您快速安装django库和初始化django项目，通过运行该工具，你可以快速创建或者管理django项目。</p>
 <img alt="djangoman.py" src="http://edu.qpython.org/static/djangoman.png" />
 <p><em>可以通过Django manage script来管理Django项目</em></p>
 <p>通过djangoman.py来完成项目的初始化之后，您就可以按照WebApp的规范来开发您的WebApp并在QPython上运行。</p>
-</div>
-<div class="section" id="id1">
-<h2>其他<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id1">
+<h2>其他<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
 <p>除了上述框架，诸如其他框架如Flask,cherrypy等也有可能被QPython支持，你若感兴趣可以通过QPYPI中的INSTALL FROM PYTHON’S PYPI来探索。</p>
-</div>
-</div>
+</section>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>

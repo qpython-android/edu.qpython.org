@@ -4,7 +4,7 @@
     {
         "src":"http://kivy.org",
         "rdate":"2017-06-15",
-        "link":"http://edu.qpython.org/kivy-qpython/index.html",
+        "link":"https://edu.qpython.org/kivy-qpython/index.html",
         "smodule":"kivy-qpython",
         "description":"Kivy 是一套 Python 下的支持多点触摸的GUI开发框架，学习完本课程，你就能掌握如何使用kivy快速开发创新性的跨平台的图形程序。",
         "title":"如何用Kivy开发图形界面程序",
@@ -15,13 +15,13 @@
         "auth_avatar":"https://avatars2.githubusercontent.com/u/10812534?s=400&u=02720c06955eff7ed82b4fadfe210fc13d450916&v=4",
         "auth":"Mea",
         "auth_desc":"QPython开发组资深工程师",
-        "logo": "http://edu.qpython.org/static/course-kivy-qpython.png",
+        "logo": "https://edu.qpython.org/static/course-kivy-qpython.png",
         "open": 1,
         "crowdfunding": 1,
         "courses":[
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/kivy-qpython/cn/index.html",
+                "link":"https://edu.qpython.org/kivy-qpython/cn/index.html",
                 "smodule":"qpython-webapp-principle",
                 "description":"介绍QPython上的Kivy",
                 "title":"QPython上的Kivy",
@@ -29,7 +29,7 @@
                 "downloads": "10,000+"
             },
             {
-                "link":"http://edu.qpython.org/kivy-qpython/cn/your-first-kivyapp.html",
+                "link":"https://edu.qpython.org/kivy-qpython/cn/your-first-kivyapp.html",
                 "smodule":"kivy-qpython-your-first-kivyapp",
                 "description":"如何开发第一个KivyApp",
                 "title":"你的第一个KivyApp",
@@ -40,7 +40,7 @@
     }, {
         "src":"http://qpython.org",
         "rdate":"2017-07-15",
-        "link":"http://edu.qpython.org/qsl4a-develop/index.html",
+        "link":"https://edu.qpython.org/qsl4a-develop/index.html",
         "smodule":"qsl4a-develop",
         "description":"SL4A能让开发者使用脚本语言来和安卓设备交互。在QPython里，QSL4能让你使用Python语言来调用Android上的API，获取硬件状态，实现手机的全控制，听起来有没有心动?  快来学习一下吧。",
         "title":"QSL4A - QPython的安卓APIs",
@@ -51,13 +51,13 @@
         "auth_avatar":"",
         "auth":"RH",
         "auth_desc":"QPython开发组资深工程师",
-        "logo": "http://edu.qpython.org/static/course-sl4a.png",
+        "logo": "https://edu.qpython.org/static/course-sl4a.png",
         "open": 1,
         "crowdfunding": 1,
         "courses":[
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qsl4a-develop/cn/index.html",
+                "link":"https://edu.qpython.org/qsl4a-develop/cn/index.html",
                 "smodule":"qsl4a-develop-index",
                 "description":"QSL4A是Python调用安卓的桥梁",
                 "title":"QSL4A介绍",
@@ -69,7 +69,7 @@
         "src":"http://qpython.org",
         "rdate":"2017-06-15",
         "author":"River",
-        "link":"http://edu.qpython.org/qpython-webapp/cn/index.html",
+        "link":"https://edu.qpython.org/qpython-webapp/cn/index.html",
         "smodule":"qpython-webapp",
         "description":"作为当今应用领域最广泛的Web开发语言，Python拥有包括bottle, django, tornado, flask在内的Web开发库，能满足你不同的开发需求，  本课程不仅会教你如何使用这些开发框架开发Web应用，同时也能让你掌握如何用QPython开发超级WebApp。",
         "title":"如何开发QPython WebApp",
@@ -82,11 +82,11 @@
         "auth_desc":"QPython 最初作者，某创业公司CTO",
         "open": 1,
         "crowdfunding": 0,
-        "logo": "http://edu.qpython.org/static/course-qpython-webapp.png",
+        "logo": "https://edu.qpython.org/static/course-qpython-webapp.png",
         "courses":[
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-webapp/cn/index.html",
+                "link":"https://edu.qpython.org/qpython-webapp/cn/index.html",
                 "smodule":"qpython-webapp-principle",
                 "description":"为什么要使用QPython WebApp",
                 "title":"QPython上的WebApp",
@@ -94,7 +94,7 @@
                 "downloads": "10,000+"
             },
             {
-                "link":"http://edu.qpython.org/qpython-webapp/cn/your-first-webapp.html",
+                "link":"https://edu.qpython.org/qpython-webapp/cn/your-first-webapp.html",
                 "smodule":"qpython-webapp-your-first-webapp",
                 "description":"如何开发你的第一个WebApp",
                 "title":"你的第一个WebApp",
@@ -102,7 +102,7 @@
                 "downloads": "10,000+"
             },
             {
-                "link":"http://edu.qpython.org/qpython-webapp/cn/web-frameworks.html",
+                "link":"https://edu.qpython.org/qpython-webapp/cn/web-frameworks.html",
                 "smodule":"qpython-webapp-web-frameworks",
                 "description":"在QPython中使用你熟悉的Web开发框架来开发WebApp",
                 "title":"QPython支持的Web开发框架",
@@ -113,7 +113,7 @@
     },{
         "src":"http://qpython.org",
         "rdate":"2017-06-15",
-        "link":"http://edu.qpython.org/qpython-quick-start/cn/index.html",
+        "link":"https://edu.qpython.org/qpython-quick-start/cn/index.html",
         "smodule":"qpython-quick-start",
         "description":"QPython是什么? 怎么用? 为什么要使用它? 这大概是新朋友们最常问的问题。为此我们推出了该\"用户指南\"来介绍QPython核心功能及模块，同时QPython也在不断升级换代，该课程也会根据推出的特性进行同步更新，敬请持续关注。",
         "title":"QPython快速开始",
@@ -124,14 +124,14 @@
         "auth_avatar":"https://avatars1.githubusercontent.com/u/3059527?s=400&v=4",
         "auth":"River",
         "auth_desc":"QPython 最初作者，某创业公司CTO",
-        "logo": "http://edu.qpython.org/static/course-qpython-quick-start.png",
+        "logo": "https://edu.qpython.org/static/course-qpython-quick-start.png",
         "open": 1,
         "crowdfunding": 0,
         "funding_process": 69,
         "courses":[
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/cn/principle.html",
+                "link":"https://edu.qpython.org/qpython-quick-start/cn/principle.html",
                 "smodule":"qpython-quick-start-principles",
                 "description":"为何要使用QPython",
                 "title":"随时随地学习编程",
@@ -139,7 +139,7 @@
             },
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/cn/terminal-howto.html",
+                "link":"https://edu.qpython.org/qpython-quick-start/cn/terminal-howto.html",
                 "smodule":"qpython-quick-start-terminal-howto",
                 "description":"使用QPython的终端来探索",
                 "title":"终端使用帮助",
@@ -147,7 +147,7 @@
             },
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/cn/editor-howto.html",
+                "link":"https://edu.qpython.org/qpython-quick-start/cn/editor-howto.html",
                 "smodule":"qpython-quick-start-editor-howto",
                 "description":"使用QPython的编辑器来进行开发",
                 "title":"编辑器使用帮助",
@@ -155,7 +155,7 @@
             },
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/cn/qpypi-howto.html",
+                "link":"https://edu.qpython.org/qpython-quick-start/cn/qpypi-howto.html",
                 "smodule":"qpython-quick-start-qpypi-howto",
                 "description":"在QPython上如何安装包和快捷工具",
                 "title":"QPYPI使用帮助",
@@ -163,7 +163,7 @@
             },
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/cn/community-howto.html",
+                "link":"https://edu.qpython.org/qpython-quick-start/cn/community-howto.html",
                 "smodule":"qpython-quick-start-community-howto",
                 "description":"如何加入QPython的社区",
                 "title":"关于社区",
@@ -173,7 +173,7 @@
     }, {
         "src":"http://qpython.org",
         "rdate":"2017-06-15",
-        "link":"http://edu.qpython.org/qpython-quick-start/cn/index.html",
+        "link":"https://edu.qpython.org/qpython-quick-start/cn/index.html",
         "smodule":"qpython-quick-start",
         "description":"QPython是什么? 怎么用? 为什么要使用它? 这大概是新朋友们最常问的问题。为此我们推出了该\"用户指南\"来介绍QPython核心功能及模块，同时QPython也在不断升级换代，该课程也会根据推出的特性进行同步更新，敬请持续关注。",
         "title":"QPython快速开始",
@@ -185,14 +185,14 @@
         "auth_avatar":"https://avatars1.githubusercontent.com/u/3059527?s=400&v=4",
         "auth":"River",
         "auth_desc":"QPython 最初作者，某创业公司CTO",
-        "logo": "http://edu.qpython.org/static/course-qpython-quick-start.png",
+        "logo": "https://edu.qpython.org/static/course-qpython-quick-start.png",
         "open": 1,
         "crowdfunding": 0,
         "funding_process": 69,
         "courses":[
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/cn/principle.html",
+                "link":"https://edu.qpython.org/qpython-quick-start/cn/principle.html",
                 "smodule":"qpython-quick-start-principles",
                 "description":"为何要使用QPython",
                 "title":"随时随地学习编程",
@@ -200,7 +200,7 @@
             },
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/cn/terminal-howto.html",
+                "link":"https://edu.qpython.org/qpython-quick-start/cn/terminal-howto.html",
                 "smodule":"qpython-quick-start-terminal-howto",
                 "description":"使用QPython的终端来探索",
                 "title":"终端使用帮助",
@@ -208,7 +208,7 @@
             },
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/cn/editor-howto.html",
+                "link":"https://edu.qpython.org/qpython-quick-start/cn/editor-howto.html",
                 "smodule":"qpython-quick-start-editor-howto",
                 "description":"使用QPython的编辑器来进行开发",
                 "title":"编辑器使用帮助",
@@ -216,7 +216,7 @@
             },
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/cn/qpypi-howto.html",
+                "link":"https://edu.qpython.org/qpython-quick-start/cn/qpypi-howto.html",
                 "smodule":"qpython-quick-start-qpypi-howto",
                 "description":"在QPython上如何安装包和快捷工具",
                 "title":"QPYPI使用帮助",
@@ -224,7 +224,7 @@
             },
             {
                 "rdate":"2017-06-15",
-                "link":"http://edu.qpython.org/qpython-quick-start/cn/community-howto.html",
+                "link":"https://edu.qpython.org/qpython-quick-start/cn/community-howto.html",
                 "smodule":"qpython-quick-start-community-howto",
                 "description":"如何加入QPython的社区",
                 "title":"关于社区",

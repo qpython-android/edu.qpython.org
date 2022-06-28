@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>QPython的KivyApp</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,37 +55,37 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="qpythonkivyapp">
-<h1>QPython的KivyApp<a class="headerlink" href="#qpythonkivyapp" title="Permalink to this headline">¶</a></h1>
+<section id="qpythonkivyapp">
+<h1>QPython的KivyApp<a class="headerlink" href="#qpythonkivyapp" title="Permalink to this heading">¶</a></h1>
 <p>Kivy是Python上一个支持多点触摸的跨平台图形界面开发框架，使用Kivy可以方便地开发包括游戏在内的图形界面程序。QPython能较好地支持Kivy。</p>
-<div class="section" id="kivy">
-<h2>Kivy的安装<a class="headerlink" href="#kivy" title="Permalink to this headline">¶</a></h2>
+<section id="kivy">
+<h2>Kivy的安装<a class="headerlink" href="#kivy" title="Permalink to this heading">¶</a></h2>
 <p>在使用Kivy之前，您需要先安装Kivy。您可以在QPYPI中安装及升级kivy相关的库，QPYPI能自动安装依赖库。如果Kivy有更新，也可以通过QPYPI来进行升级操作。</p>
 <img alt="在QPYPI中管理kivy库" src="http://edu.qpython.org/static/qpypi-kivy.png" />
-</div>
-<div class="section" id="kivyapp">
-<h2>KivyApp声明<a class="headerlink" href="#kivyapp" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="kivyapp">
+<h2>KivyApp声明<a class="headerlink" href="#kivyapp" title="Permalink to this heading">¶</a></h2>
 <p>在QPython中，通过头部声明来区分程序类型，当头部有以下定义时，我们知道它是一个KivyApp程序。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#qpy:kivy</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#qpy:kivy</span>
 </pre></div>
 </div>
 <p>此外，如果想要让你的Kivy程序按照全屏模式运行，您需要增加下面声明。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#qpy:fullscreen</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#qpy:fullscreen</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id1">
-<h2>KivyApp运行流程<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id1">
+<h2>KivyApp运行流程<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
 <p>在程序被识别为KivyApp运行后，QPython会启动OpenGL引擎，新建一个SDL视图，并在其中完成渲染，输出画面。</p>
-</div>
-<div class="section" id="id2">
-<h2>KivyApp退出流程<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id2">
+<h2>KivyApp退出流程<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>按退出退出时，QPython会结束Kivy程序，进行清理，结束OpenGL引擎，同时退出SDL视图。</p>
-</div>
-<div class="section" id="id3">
-<h2>例子<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id3">
+<h2>例子<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
 <p>让我们来看一个最简单的KivyApp示例，这个是安装完QPython后默认带的示例程序。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>#qpy:kivy
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#qpy:kivy
 from kivy.app import App
 from kivy.uix.button import Button
 class TestApp(App):
@@ -95,8 +95,9 @@ TestApp().run()
 </pre></div>
 </div>
 <button class="button">Run …</button>
-</div>
-</div>
+</section>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>

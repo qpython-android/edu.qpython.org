@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>生成器 &amp; 迭代器</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,10 +55,10 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="id1">
-<h1>生成器 &amp;  迭代器<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<section id="id1">
+<h1>生成器 &amp;  迭代器<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
 <p><em>while</em> 循环通常有这样的形式：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>&lt;do setup&gt;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;do setup&gt;
 result = []
 while True:
     &lt;generate value&gt;
@@ -68,7 +68,7 @@ while True:
 </pre></div>
 </div>
 <p>使用迭代器实现这样的循环：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>class GenericIterator(object):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>class GenericIterator(object):
     def __init__(self, ...):
     &lt;do setup&gt;
     # 需要额外储存状态
@@ -83,7 +83,7 @@ while True:
 </pre></div>
 </div>
 <p>更简单的，可以使用生成器：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>def generator(...):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>def generator(...):
     &lt;do setup&gt;
     while True:
         &lt;generate value&gt;
@@ -95,7 +95,7 @@ while True:
 </div>
 <p>生成器使用 <em>yield</em> 关键字将值输出，而迭代器则通过 <em>next</em> 的 <em>return</em> 将值返回；与迭代器不同的是，生成器会自动记录当前的状态，而迭代器则需要进行额外的操作来记录当前的状态。</p>
 <p>对于之前的 <em>collatz</em> 猜想，简单循环的实现如下：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>def collatz(n):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>def collatz(n):
     sequence = []
     while n != 1:
         if n % 2 == 0:
@@ -110,11 +110,11 @@ for x in collatz(7):
 </div>
 <button class="button">Run …</button>
 <p>运行的结果会是：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">22</span> <span class="mi">11</span> <span class="mi">34</span> <span class="mi">17</span> <span class="mi">52</span> <span class="mi">26</span> <span class="mi">13</span> <span class="mi">40</span> <span class="mi">20</span> <span class="mi">10</span> <span class="mi">5</span> <span class="mi">16</span> <span class="mi">8</span> <span class="mi">4</span> <span class="mi">2</span> <span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">22</span> <span class="mi">11</span> <span class="mi">34</span> <span class="mi">17</span> <span class="mi">52</span> <span class="mi">26</span> <span class="mi">13</span> <span class="mi">40</span> <span class="mi">20</span> <span class="mi">10</span> <span class="mi">5</span> <span class="mi">16</span> <span class="mi">8</span> <span class="mi">4</span> <span class="mi">2</span> <span class="mi">1</span>
 </pre></div>
 </div>
 <p>迭代器的版本如下：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>class Collatz(object):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>class Collatz(object):
     def __init__(self, start):
         self.value = start
     def __iter__(self):
@@ -133,7 +133,7 @@ for x in Collatz(7):
 </div>
 <button class="button">Run …</button>
 <p>生成器的版本如下：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>def collatz(n):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>def collatz(n):
     while n != 1:
         if n % 2 == 0:
             n /= 2
@@ -146,33 +146,33 @@ for x in collatz(7):
 </div>
 <button class="button">Run …</button>
 <p>事实上，生成器也是一种迭代器：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">collatz</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">collatz</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 <span class="nb">print</span> <span class="n">x</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>输出如下</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">generator</span> <span class="nb">object</span> <span class="n">collatz</span> <span class="n">at</span> <span class="mh">0x0000000003B63750</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">generator</span> <span class="nb">object</span> <span class="n">collatz</span> <span class="n">at</span> <span class="mh">0x0000000003B63750</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>它支持 <em>next</em> 方法，返回下一个 <em>yield</em> 的值：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">collatz</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">collatz</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 <span class="nb">print</span> <span class="n">x</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
 <span class="nb">print</span> <span class="n">x</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p><em>__iter__</em> 方法返回的是它本身：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">collatz</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">collatz</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
 <span class="nb">print</span> <span class="n">x</span><span class="o">.</span><span class="fm">__iter__</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>输出结果：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">generator</span> <span class="nb">object</span> <span class="n">collatz</span> <span class="n">at</span> <span class="mh">0x0000000003B63750</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">generator</span> <span class="nb">object</span> <span class="n">collatz</span> <span class="n">at</span> <span class="mh">0x0000000003B63750</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>之前的二叉树迭代器可以改写为更简单的生成器模式来进行中序遍历：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>class BinaryTree(object):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>class BinaryTree(object):
     def __init__(self, value, left=None, right=None):
         self.value = value
         self.left = left
@@ -194,7 +194,7 @@ for x in collatz(7):
 </pre></div>
 </div>
 <p>非递归的实现：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>def inorder(self):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>def inorder(self):
     node = self
     stack = []
     while len(stack) &gt; 0 or node is not None:
@@ -207,7 +207,7 @@ for x in collatz(7):
 </pre></div>
 </div>
 <button class="button">Run …</button>
-<div class="highlight-default"><div class="highlight"><pre><span></span>class BinaryTree(object):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>class BinaryTree(object):
     def __init__(self, value, left=None, right=None):
         self.value = value
         self.left = left
@@ -248,15 +248,16 @@ for value in tree:
 </div>
 <button class="button">Run …</button>
 <p>正确应输出：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span>
 </pre></div>
 </div>
-<div class="section" id="id2">
-<h2>作者 &amp; 更新时间<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<section id="id2">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>作者:李金  <a class="reference external" href="mailto:lijinwithyou&#37;&#52;&#48;gmail&#46;com">lijinwithyou<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
 <p>提交: 2017/12/6</p>
-</div>
-</div>
+</section>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>

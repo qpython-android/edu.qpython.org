@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>QPython WebApp Principle</title>
-<link rel="stylesheet" href="../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,37 +55,38 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="qpython-webapp-principle">
-<h1>QPython WebApp Principle<a class="headerlink" href="#qpython-webapp-principle" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="about">
-<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<section id="qpython-webapp-principle">
+<h1>QPython WebApp Principle<a class="headerlink" href="#qpython-webapp-principle" title="Permalink to this heading">¶</a></h1>
+<section id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this heading">¶</a></h2>
 <p>QPython supports WebApp, the goal is to enable all WEB developers to the fastest development of mobile applications.</p>
-</div>
-<div class="section" id="advantages">
-<h2>Advantages<a class="headerlink" href="#advantages" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="advantages">
+<h2>Advantages<a class="headerlink" href="#advantages" title="Permalink to this heading">¶</a></h2>
 <p>There are lots of mobile WebApp solutions, like cordova, phonegap etc, and compared to them, QPython’s WebApp has the following advantages.</p>
 <p><em>QPython is a powerful Python engine that can handle many logical jobs, effectively reducing data transfer time and enhancing your app’s user experience</em></p>
 <p><em>QPython supports massive Python libraries, you could import them in your project, so that you could save much develop time.</em></p>
 <p><em>It is very convenient for development with QPython, you can complete your development just in palm. And you could develop from PC then transfer to your mobile to run</em></p>
-</div>
-<div class="section" id="how-does-webapp-work-in-qpython">
-<h2>How does WebApp work in QPython<a class="headerlink" href="#how-does-webapp-work-in-qpython" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="how-does-webapp-work-in-qpython">
+<h2>How does WebApp work in QPython<a class="headerlink" href="#how-does-webapp-work-in-qpython" title="Permalink to this heading">¶</a></h2>
 <p>QPython WebApp contains the following components: WebApp service and Webview. The WebApp service runs in the background and is responsible for responding to user’s input. WebView is a front component, which shows the user interface and and is responsible for responding to render user interactions, such as scrolling, click the button and so on.</p>
 <p><strong>1</strong> When you run a WebApp program from QPython, QPython launch the WebApp service in the background, at the same time, QPython will start a webview which loads the entry link declared in the program header in the front.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#qpy:webapp:&lt;webapp-title&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#qpy:webapp:&lt;webapp-title&gt;</span>
 <span class="c1">#qpy://&lt;webapp-address&gt;:&lt;webapp-port&gt;/&lt;webapp-path&gt;</span>
 </pre></div>
 </div>
 <p><strong>2</strong> Then the user can start to interact with the applicaton with the web mode. So the developer could write the logic code with the web development way.</p>
 <p><strong>3</strong> When the user exit by clicking the left arrow, the application will request the <strong>http://&lt;webapp-address&gt;&lt;:webapp-port&gt;/__exit</strong> to exit the application
 The developer could rewrite the __exit function to defines the exit behaviors.</p>
-</div>
-<div class="section" id="chapter-author-contributor-and-updated-time">
-<h2>Chapter Author, contributor and updated time<a class="headerlink" href="#chapter-author-contributor-and-updated-time" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="chapter-author-contributor-and-updated-time">
+<h2>Chapter Author, contributor and updated time<a class="headerlink" href="#chapter-author-contributor-and-updated-time" title="Permalink to this heading">¶</a></h2>
 <p>Author: <a class="reference external" href="https://github.com/riverfor">River</a></p>
 <p>Submitted: 2017/10/16</p>
-</div>
-</div>
+</section>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>
@@ -291,5 +292,13 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-103260045-3', 'auto');
 ga('send', 'pageview');
 </script>
+
+::...
+<hr />
+
+<script src="https://utteranc.es/client.js" repo="qpython-android/comments" issue-term="url" label="💬"
+    theme="preferred-color-scheme" crossorigin="anonymous" async>
+    </script>
+...::
 </body>
 </html>

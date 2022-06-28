@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>SCIentific PYthon 简介</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,8 +55,8 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="scientific-python">
-<h1>SCIentific PYthon 简介<a class="headerlink" href="#scientific-python" title="Permalink to this headline">¶</a></h1>
+<section id="scientific-python">
+<h1>SCIentific PYthon 简介<a class="headerlink" href="#scientific-python" title="Permalink to this heading">¶</a></h1>
 <p><strong>Ipython</strong> 提供了一个很好的解释器界面。</p>
 <p><strong>Matplotlib</strong> 提供了一个类似 <strong>Matlab</strong> 的画图工具。</p>
 <p><strong>Numpy</strong> 提供了 ndarray 对象，可以进行快速的向量化计算。</p>
@@ -64,26 +64,26 @@
 <p><strong>Pandas</strong> 是处理时间序列数据的第三方库，提供一个类似 <strong>R</strong> 语言的环境。</p>
 <p><strong>StatsModels</strong> 是一个统计库，着重于统计模型。</p>
 <p><strong>Scikits</strong> 以 <strong>Scipy</strong> 为基础，提供如 <strong>scikits-learn</strong> 机器学习和**scikits-image 图像处理** 等高级用法。</p>
-<div class="section" id="scipy">
-<h2>Scipy<a class="headerlink" href="#scipy" title="Permalink to this headline">¶</a></h2>
+<section id="scipy">
+<h2>Scipy<a class="headerlink" href="#scipy" title="Permalink to this heading">¶</a></h2>
 <p><strong>Scipy</strong> 由不同科学计算领域的子模块组成：</p>
 <p>在使用 <strong>Scipy</strong> 之前，为了方便，假定这些基础的模块已经被导入：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
 <span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
 </div>
 <p>使用 <strong>Scipy</strong> 中的子模块时，需要分别导入：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="k">import</span> <span class="n">linalg</span><span class="p">,</span> <span class="n">optimize</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">linalg</span><span class="p">,</span> <span class="n">optimize</span>
 </pre></div>
 </div>
 <p>对于一些常用的函数，这些在子模块中的函数可以在 <strong>scipy</strong> 命名空间中调用。另一方面，由于 <strong>Scipy</strong> 以 <strong>Numpy</strong> 为基础，因此很多基础的 Numpy 函数可以在scipy 命名空间中直接调用。</p>
 <p>我们可以使用 numpy 中的 info 函数来查看函数的文档：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">optimize</span><span class="o">.</span><span class="n">fmin</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">optimize</span><span class="o">.</span><span class="n">fmin</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span> fmin(func, x0, args=(), xtol=0.0001, ftol=0.0001, maxiter=None,     maxfun=None,
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> fmin(func, x0, args=(), xtol=0.0001, ftol=0.0001, maxiter=None,     maxfun=None,
     full_output=0, disp=1, retall=0, callback=None)
 Minimize a function using the downhill simplex algorithm.
 This algorithm only uses function values, not derivatives or second
@@ -150,44 +150,45 @@ Harlow, UK, pp. 191-208.
 </pre></div>
 </div>
 <p>可以用 lookfor 来查询特定关键词相关的函数：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">lookfor</span><span class="p">(</span><span class="s2">&quot;resize array&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">lookfor</span><span class="p">(</span><span class="s2">&quot;resize array&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Search results for ‘resize array’</p>
-<dl class="docutils">
-<dt>numpy.chararray.resize</dt>
-<dd>Change shape and size of array in-place.</dd>
-<dt>numpy.ma.resize</dt>
-<dd>Return a new masked array with the specified size and shape.</dd>
-<dt>numpy.oldnumeric.ma.resize</dt>
-<dd>The original array’s total size can be any size.</dd>
-<dt>numpy.resize</dt>
-<dd>Return a new array with the specified shape.</dd>
-<dt>numpy.chararray</dt>
-<dd>chararray(shape, itemsize=1, unicode=False, buffer=None, offset=0,</dd>
-<dt>numpy.memmap</dt>
-<dd>Create a memory-map to an array stored in a <em>binary</em> file on disk.</dd>
-<dt>numpy.ma.mvoid.resize</dt>
-<dd>warning</dd>
+<dl class="simple">
+<dt>numpy.chararray.resize</dt><dd><p>Change shape and size of array in-place.</p>
+</dd>
+<dt>numpy.ma.resize</dt><dd><p>Return a new masked array with the specified size and shape.</p>
+</dd>
+<dt>numpy.oldnumeric.ma.resize</dt><dd><p>The original array’s total size can be any size.</p>
+</dd>
+<dt>numpy.resize</dt><dd><p>Return a new array with the specified shape.</p>
+</dd>
+<dt>numpy.chararray</dt><dd><p>chararray(shape, itemsize=1, unicode=False, buffer=None, offset=0,</p>
+</dd>
+<dt>numpy.memmap</dt><dd><p>Create a memory-map to an array stored in a <em>binary</em> file on disk.</p>
+</dd>
+<dt>numpy.ma.mvoid.resize</dt><dd><p>warning</p>
+</dd>
 </dl>
 <p>还可以指定查找的模块：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">lookfor</span><span class="p">(</span><span class="s2">&quot;remove path&quot;</span><span class="p">,</span> <span class="n">module</span><span class="o">=</span><span class="s2">&quot;os&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">lookfor</span><span class="p">(</span><span class="s2">&quot;remove path&quot;</span><span class="p">,</span> <span class="n">module</span><span class="o">=</span><span class="s2">&quot;os&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Search results for ‘remove path’</p>
-<dl class="docutils">
-<dt>os.removedirs</dt>
-<dd>removedirs(path)</dd>
-<dt>os.walk</dt>
-<dd>Directory tree generator.</dd>
+<dl class="simple">
+<dt>os.removedirs</dt><dd><p>removedirs(path)</p>
+</dd>
+<dt>os.walk</dt><dd><p>Directory tree generator.</p>
+</dd>
 </dl>
-</div>
-<div class="section" id="id1">
-<h2>作者 &amp; 更新时间<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id1">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
 <p>作者:<cite>李金  &lt;lijinwithyou&#64;gmail.com&gt;</cite></p>
 <p>提交: 2017/12/14</p>
-</div>
-</div>
+</section>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>

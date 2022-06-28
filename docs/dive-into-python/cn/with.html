@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>with 语句和上下文管理器</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,9 +55,9 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="with">
-<h1>with 语句和上下文管理器<a class="headerlink" href="#with" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># create/aquire some resource</span>
+<section id="with">
+<h1>with 语句和上下文管理器<a class="headerlink" href="#with" title="Permalink to this heading">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># create/aquire some resource</span>
 <span class="o">...</span>
 <span class="k">try</span><span class="p">:</span>
 <span class="c1"># do something with the resource</span>
@@ -69,14 +69,14 @@
 </div>
 <p>处理文件，线程，数据库，网络编程等等资源的时候，我们经常需要使用上面这样的代码形式，以确保资源的正常使用和释放。</p>
 <p>好在Python 提供了 with 语句帮我们自动进行这样的处理，例如之前在打开文件时我们使用：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>with open(&#39;my_file&#39;, &#39;w&#39;) as fp:
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>with open(&#39;my_file&#39;, &#39;w&#39;) as fp:
     # do stuff with fp
     data = fp.write(&quot;Hello world&quot;)
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>这等效于下面的代码，但是要更简便：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>fp = open(&#39;my_file&#39;, &#39;w&#39;)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>fp = open(&#39;my_file&#39;, &#39;w&#39;)
 try:
     # do stuff with f
     data = fp.write(&quot;Hello world&quot;)
@@ -85,15 +85,15 @@ finally:
 </pre></div>
 </div>
 <button class="button">Run …</button>
-<div class="section" id="id1">
-<h2>上下文管理器<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<section id="id1">
+<h2>上下文管理器<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
 <p>其基本用法如下：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>with &lt;expression&gt;:
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>with &lt;expression&gt;:
     &lt;block&gt;
 </pre></div>
 </div>
 <p><em>&lt;expression&gt;</em> 执行的结果应当返回一个实现了上下文管理器的对象，即实现这样两个方法，<em>__enter__</em> 和 <em>__exit__</em>：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>with open(&#39;my_file&#39;, &#39;w&#39;) as fp:
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>with open(&#39;my_file&#39;, &#39;w&#39;) as fp:
     # do stuff with fp
     data = fp.write(&quot;Hello world&quot;)
     print fp.__enter__
@@ -101,13 +101,13 @@ finally:
 </pre></div>
 </div>
 <p>输出如下：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">built</span><span class="o">-</span><span class="ow">in</span> <span class="n">method</span> <span class="fm">__enter__</span> <span class="n">of</span> <span class="n">file</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x0000000003C1D540</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">built</span><span class="o">-</span><span class="ow">in</span> <span class="n">method</span> <span class="fm">__enter__</span> <span class="n">of</span> <span class="n">file</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x0000000003C1D540</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">built</span><span class="o">-</span><span class="ow">in</span> <span class="n">method</span> <span class="fm">__exit__</span> <span class="n">of</span> <span class="n">file</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x0000000003C1D540</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p><em>__enter__ *方法在 *&lt;block&gt;</em> 执行前执行，而 <em>__exit__ *在 *&lt;block&gt;</em> 执行结束后执行：</p>
 <p>比如可以这样定义一个简单的上下文管理器：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>class ContextManager(object):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>class ContextManager(object):
     def __enter__(self):
         print &quot;Entering&quot;
     def __exit__(self, exc_type, exc_value, traceback):
@@ -118,7 +118,7 @@ with ContextManager():
 </div>
 <button class="button">Run …</button>
 <p>即使 <em>&lt;block&gt;</em> 中执行的内容出错，<em>__exit__</em> 也会被执行：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>class ContextManager(object):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>class ContextManager(object):
     def __enter__(self):
         print &quot;Entering&quot;
     def __exit__(self, exc_type, exc_value, traceback):
@@ -129,17 +129,17 @@ with ContextManager():
 </div>
 <button class="button">Run …</button>
 <p>输出会是：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Entering</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Entering</span>
 <span class="n">Exiting</span>
 <span class="ne">ZeroDivisionError</span> <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
 <span class="ne">ZeroDivisionError</span><span class="p">:</span> <span class="n">integer</span> <span class="n">division</span> <span class="ow">or</span> <span class="n">modulo</span> <span class="n">by</span> <span class="n">zero</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="enter">
-<h2><em>__enter__</em> 的返回值<a class="headerlink" href="#enter" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="enter">
+<h2><em>__enter__</em> 的返回值<a class="headerlink" href="#enter" title="Permalink to this heading">¶</a></h2>
 <p>如果在 <em>__enter__ *方法下添加了返回值，那么我们可以使用 *as</em> 把这个返回值传给某个参数：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>class ContextManager(object):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>class ContextManager(object):
     def __enter__(self):
         print &quot;Entering&quot;
         return &quot;my value&quot;
@@ -152,13 +152,13 @@ with ContextManager() as value:
 </div>
 <button class="button">Run …</button>
 <p>输出应该是：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Entering</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Entering</span>
 <span class="n">my</span> <span class="n">value</span>
 <span class="n">Exiting</span>
 </pre></div>
 </div>
 <p>一个通常的做法是将 <em>__enter__</em> 的返回值设为这个上下文管理器对象本身，文件对象就是这样做的：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;my_file&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;my_file&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
 <span class="nb">print</span> <span class="n">fp</span><span class="o">.</span><span class="fm">__enter__</span><span class="p">()</span>
 <span class="n">fp</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 <span class="kn">import</span> <span class="nn">os</span>
@@ -167,7 +167,7 @@ with ContextManager() as value:
 </div>
 <button class="button">Run …</button>
 <p>实现方法非常简单：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>class ContextManager(object):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>class ContextManager(object):
     def __enter__(self):
         print &quot;Entering&quot;
         return self
@@ -176,21 +176,21 @@ with ContextManager() as value:
 </pre></div>
 </div>
 <button class="button">Run …</button>
-<div class="highlight-default"><div class="highlight"><pre><span></span>with ContextManager() as value:
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>with ContextManager() as value:
     print value
 </pre></div>
 </div>
 <p>输出是：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Entering</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Entering</span>
 <span class="o">&lt;</span><span class="n">__main__</span><span class="o">.</span><span class="n">ContextManager</span> <span class="nb">object</span> <span class="n">at</span> <span class="mh">0x0000000003D48828</span><span class="o">&gt;</span>
 <span class="n">Exiting</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id2">
-<h2>错误处理<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id2">
+<h2>错误处理<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>上下文管理器对象将错误处理交给 <em>__exit__</em> 进行，可以将错误类型，错误值和 <em>traceback</em> 等内容作为参数传递给 <em>__exit__</em> 函数：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>class ContextManager(object):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>class ContextManager(object):
     def __enter__(self):
         print &quot;Entering&quot;
     def __exit__(self, exc_type, exc_value, traceback):
@@ -204,7 +204,7 @@ with ContextManager():
 </div>
 <button class="button">Run …</button>
 <p>输出是：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Entering</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Entering</span>
 <span class="n">Exiting</span>
 <span class="ne">Exception</span><span class="p">:</span> <span class="n">integer</span> <span class="n">division</span> <span class="ow">or</span> <span class="n">modulo</span> <span class="n">by</span> <span class="n">zero</span>
 <span class="ne">ZeroDivisionError</span> <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
@@ -212,7 +212,7 @@ with ContextManager():
 </pre></div>
 </div>
 <p>在这个例子中，我们只是简单的显示了错误的值，并没有对错误进行处理，所以错误被向上抛出了，如果不想让错误抛出，只需要将 <em>__exit__</em> 的返回值设为* True*：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>class ContextManager(object):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>class ContextManager(object):
     def __enter__(self):
         print &quot;Entering&quot;
     def __exit__(self, exc_type, exc_value, traceback):
@@ -226,17 +226,17 @@ with ContextManager():
 </div>
 <button class="button">Run …</button>
 <p>输出是：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Entering</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Entering</span>
 <span class="n">Exiting</span>
 <span class="ne">Exception</span> <span class="n">suppresed</span><span class="p">:</span> <span class="n">integer</span> <span class="n">division</span> <span class="ow">or</span> <span class="n">modulo</span> <span class="n">by</span> <span class="n">zero</span>
 </pre></div>
 </div>
 <p>在这种情况下，错误就不会被向上抛出。</p>
-</div>
-<div class="section" id="id3">
-<h2>数据库的例子<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id3">
+<h2>数据库的例子<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
 <p>对于数据库的 <em>transaction</em> 来说，如果没有错误，我们就将其 <em>commit</em> 进行保存，如果有错误，那么我们将其回滚到上一次成功的状态。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>class Transaction(object):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>class Transaction(object):
     def __init__(self, connection):
         self.connection = connection
     def __enter__(self):
@@ -278,31 +278,31 @@ with Transaction(connection) as cursor:
 </div>
 <button class="button">Run …</button>
 <p>输出为：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="ne">Exception</span> <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">Exception</span> <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
 <span class="o">...</span>
 <span class="ne">Exception</span><span class="p">:</span> <span class="n">out</span> <span class="n">of</span> <span class="n">addresses</span>
 </pre></div>
 </div>
 <p>最新的一次插入将不会被保存，而是返回上一次 commit 成功的状态：</p>
 <p>如果继续执行：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>cursor.execute(&quot;SELECT * FROM addresses&quot;)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cursor.execute(&quot;SELECT * FROM addresses&quot;)
 for row in cursor:
     print row
 </pre></div>
 </div>
 <p>输出为：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;515 Congress Ave&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;Austin&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;Texas&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;78701&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;515 Congress Ave&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;Austin&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;Texas&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;78701&#39;</span><span class="p">)</span>
 <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;245 Park Avenue&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;10167&#39;</span><span class="p">)</span>
 <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;21 J.J. Thompson Ave.&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;Cambridge&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;UK&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;CB3 0FA&#39;</span><span class="p">)</span>
 <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;Supreme Business Park&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;Hiranandani Gardens, Powai, Mumbai&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;Maharashtra&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;India&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;400076&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="contextlib">
-<h2>contextlib 模块<a class="headerlink" href="#contextlib" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="contextlib">
+<h2>contextlib 模块<a class="headerlink" href="#contextlib" title="Permalink to this heading">¶</a></h2>
 <p>很多的上下文管理器有很多相似的地方，为了防止写入很多重复的模式，可以使用 <em>contextlib</em> 模块来进行处理。</p>
 <p>最简单的处理方式是使用 <em>closing</em> 函数确保对象的 <em>close()</em> 方法始终被调用：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>from contextlib import closing
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>from contextlib import closing
 import urllib
 with closing(urllib.urlopen(&#39;http://www.qpython.com&#39;)) as url:
     html = url.read()
@@ -311,7 +311,7 @@ print html[:100]
 </div>
 <button class="button">Run …</button>
 <p>另一个有用的方法是使用修饰符 <em>&#64;contextlib</em>：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>from contextlib import contextmanager
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>from contextlib import contextmanager
 @contextmanager
 def my_contextmanager():
     print &quot;Enter&quot;
@@ -323,14 +323,14 @@ with my_contextmanager():
 </div>
 <button class="button">Run …</button>
 <p>输出应是：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Enter</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span>
 <span class="n">Inside</span> <span class="n">the</span> <span class="k">with</span> <span class="n">statement</span>
 <span class="n">Exit</span>
 </pre></div>
 </div>
 <p><em>yield *之前的部分可以看成是</em> __enter__* 的部分，<em>yield</em> 的值可以看成是 <em>__enter__</em> 返回的值，<em>yield *之后的部分可以看成是</em> __exit__* 的部分。</p>
 <p>使用 <em>yield</em> 的值：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@contextmanager</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@contextmanager</span>
 <span class="k">def</span> <span class="nf">my_contextmanager</span><span class="p">():</span>
 <span class="nb">print</span> <span class="s2">&quot;Enter&quot;</span>
 <span class="k">yield</span> <span class="s2">&quot;my value&quot;</span>
@@ -340,13 +340,13 @@ with my_contextmanager():
 </pre></div>
 </div>
 <p>输出是：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Enter</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span>
 <span class="n">my</span> <span class="n">value</span>
 <span class="n">Exit</span>
 </pre></div>
 </div>
 <p>错误处理可以用 <em>try</em> 块来完成：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>@contextmanager
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@contextmanager
 def my_contextmanager():
     print &quot;Enter&quot;
     try:
@@ -361,13 +361,13 @@ with my_contextmanager():
 </div>
 <button class="button">Run …</button>
 <p>输出为：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Enter</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span>
 <span class="n">Error</span><span class="p">:</span> <span class="n">integer</span> <span class="n">division</span> <span class="ow">or</span> <span class="n">modulo</span> <span class="n">by</span> <span class="n">zero</span>
 <span class="n">Exit</span>
 </pre></div>
 </div>
 <p>对于之前的数据库 <em>transaction</em> 我们可以这样定义：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>@contextmanager
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@contextmanager
 def transaction(connection):
     cursor = connection.cursor()
     try:
@@ -380,13 +380,14 @@ def transaction(connection):
 </pre></div>
 </div>
 <button class="button">Run …</button>
-</div>
-<div class="section" id="id4">
-<h2>作者 &amp; 更新时间<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id4">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
 <p>作者:<cite>李金  &lt;lijinwithyou&#64;gmail.com&gt;</cite></p>
 <p>提交: 2017/12/6</p>
-</div>
-</div>
+</section>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>

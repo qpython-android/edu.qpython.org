@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>对象关系映射</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,71 +55,60 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="id1">
-<h1>对象关系映射<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<section id="id1">
+<h1>对象关系映射<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
 <p>数据库中的记录可以与一个 Python 对象对应。</p>
 <p>例如对于上一节中的数据库：</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="11%" />
-<col width="30%" />
-<col width="18%" />
-<col width="21%" />
-<col width="20%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Order</th>
-<th class="head">Date</th>
-<th class="head" colspan="3">Stock    |             Quantity  |        Price</th>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Order</p></th>
+<th class="head"><p>Date</p></th>
+<th class="head" colspan="3"><p>Stock    |             Quantity  |        Price</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>A0001</td>
-<td>2013-12-01</td>
-<td colspan="3">AAPL      |              1000     |        203.4</td>
+<tbody>
+<tr class="row-even"><td><p>A0001</p></td>
+<td><p>2013-12-01</p></td>
+<td colspan="3"><p>AAPL      |              1000     |        203.4</p></td>
 </tr>
-<tr class="row-odd"><td>A0002</td>
-<td>2013-12-01</td>
-<td>MSFT</td>
-<td>1500</td>
-<td>167.5</td>
+<tr class="row-odd"><td><p>A0002</p></td>
+<td><p>2013-12-01</p></td>
+<td><p>MSFT</p></td>
+<td><p>1500</p></td>
+<td><p>167.5</p></td>
 </tr>
-<tr class="row-even"><td>A0003</td>
-<td>2013-12-02</td>
-<td>GOOG</td>
-<td>150</td>
-<td>167.5</td>
+<tr class="row-even"><td><p>A0003</p></td>
+<td><p>2013-12-02</p></td>
+<td><p>GOOG</p></td>
+<td><p>150</p></td>
+<td><p>167.5</p></td>
 </tr>
 </tbody>
 </table>
 <p>可以用一个类来描述：</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="27%" />
-<col width="73%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Attr.</th>
-<th class="head">Method</th>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Attr.</p></th>
+<th class="head"><p>Method</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>Order id</td>
-<td>Cost</td>
+<tbody>
+<tr class="row-even"><td><p>Order id</p></td>
+<td><p>Cost</p></td>
 </tr>
-<tr class="row-odd"><td>Stock</td>
-<td>&#160;</td>
+<tr class="row-odd"><td><p>Stock</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td>Quant.</td>
-<td>&#160;</td>
+<tr class="row-even"><td><p>Quant.</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td>Price</td>
-<td>&#160;</td>
+<tr class="row-odd"><td><p>Price</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <p>可以使用 sqlalchemy 来实现这种对应：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>from sqlalchemy.ext.declarative import declarative_base
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Date, Float, Integer, String
 Base = declarative_base()
 class Order(Base):
@@ -134,62 +123,63 @@ class Order(Base):
 </pre></div>
 </div>
 <p>生成一个 Order 对象：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
 <span class="n">order</span> <span class="o">=</span> <span class="n">Order</span><span class="p">(</span><span class="n">order_id</span><span class="o">=</span><span class="s1">&#39;A0004&#39;</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">(),</span> <span class="n">symbol</span><span class="o">=</span><span class="s1">&#39;MSFT&#39;</span><span class="p">,</span> <span class="n">quantity</span><span class="o">=-</span><span class="mi">1000</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="mf">187.54</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>调用方法：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">order</span><span class="o">.</span><span class="n">get_cost</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">order</span><span class="o">.</span><span class="n">get_cost</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>使用上一节生成的数据库产生一个 session：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="k">import</span> <span class="n">create_engine</span>
-<span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="k">import</span> <span class="n">sessionmaker</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.orm</span> <span class="kn">import</span> <span class="n">sessionmaker</span>
 <span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s2">&quot;sqlite:///my_database.sqlite&quot;</span><span class="p">)</span>   <span class="c1"># 相当于 connection</span>
 <span class="n">Session</span> <span class="o">=</span> <span class="n">sessionmaker</span><span class="p">(</span><span class="n">bind</span><span class="o">=</span><span class="n">engine</span><span class="p">)</span> <span class="c1"># 相当于 cursor</span>
 <span class="n">session</span> <span class="o">=</span> <span class="n">Session</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>使用这个 session 向数据库中添加刚才生成的对象：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">order</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">order</span><span class="p">)</span>
 <span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>显示是否添加成功：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>for row in engine.execute(&quot;SELECT * FROM orders&quot;):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for row in engine.execute(&quot;SELECT * FROM orders&quot;):
     print row
 </pre></div>
 </div>
 <p>成功则会输出以下内容</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39;A0001&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;2013-12-01&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;AAPL&#39;</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mf">203.4</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="sa">u</span><span class="s1">&#39;A0001&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;2013-12-01&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;AAPL&#39;</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mf">203.4</span><span class="p">)</span>
 <span class="p">(</span><span class="sa">u</span><span class="s1">&#39;A0002&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;2013-12-01&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;MSFT&#39;</span><span class="p">,</span> <span class="mi">1500</span><span class="p">,</span> <span class="mf">167.5</span><span class="p">)</span>
 <span class="p">(</span><span class="sa">u</span><span class="s1">&#39;A0003&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;2013-12-02&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;GOOG&#39;</span><span class="p">,</span> <span class="mi">1500</span><span class="p">,</span> <span class="mf">167.5</span><span class="p">)</span>
 <span class="p">(</span><span class="sa">u</span><span class="s1">&#39;A0004&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;2015-09-10&#39;</span><span class="p">,</span> <span class="sa">u</span><span class="s1">&#39;MSFT&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1000</span><span class="p">,</span> <span class="mf">187.54</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>使用 filter 进行查询，返回的是 Order 对象的列表：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>for order in session.query(Order).filter(Order.symbol==&quot;AAPL&quot;):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for order in session.query(Order).filter(Order.symbol==&quot;AAPL&quot;):
     print order.order_id, order.date, order.get_cost()
 </pre></div>
 </div>
 <p>成功则会输出以下内容</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">A0001</span> <span class="mi">2013</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">01</span> <span class="mf">203400.0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A0001</span> <span class="mi">2013</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">01</span> <span class="mf">203400.0</span>
 </pre></div>
 </div>
 <p>返回列表的第一个：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">order_2</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Order</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Order</span><span class="o">.</span><span class="n">order_id</span><span class="o">==</span><span class="s1">&#39;A0002&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">order_2</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">Order</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Order</span><span class="o">.</span><span class="n">order_id</span><span class="o">==</span><span class="s1">&#39;A0002&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">order_2</span><span class="o">.</span><span class="n">symbol</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">order_2</span><span class="o">.</span><span class="n">symbol</span>
 </pre></div>
 </div>
 <p>输出： u’MSFT’</p>
-<div class="section" id="id2">
-<h2>作者 &amp; 更新时间<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<section id="id2">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>作者:<cite>李金  &lt;lijinwithyou&#64;gmail.com&gt;</cite></p>
 <p>提交: 2017/12/6</p>
-</div>
-</div>
+</section>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>

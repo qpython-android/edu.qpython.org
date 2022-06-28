@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>SQL 数据库</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,23 +55,23 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="sql">
-<h1>SQL 数据库<a class="headerlink" href="#sql" title="Permalink to this headline">¶</a></h1>
+<section id="sql">
+<h1>SQL 数据库<a class="headerlink" href="#sql" title="Permalink to this heading">¶</a></h1>
 <p>Python 提供了一系列标准的数据库的 API，这里我们介绍 sqlite 数据库的用法，其他的数据库的用法大同小异：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="k">as</span> <span class="nn">db</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="k">as</span> <span class="nn">db</span>
 </pre></div>
 </div>
 <p>首先我们要建立或者连接到一个数据库上：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="k">as</span> <span class="nn">db</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="k">as</span> <span class="nn">db</span>
 <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;my_database.sqlite&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>不同的数据库有着不同的连接方法，例如 cx-oracle 数据库的链接方式为：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span>  <span class="s1">&#39;XE&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span>  <span class="s1">&#39;XE&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>一旦建立连接，我们可以利用它的 cursor() 来执行 SQL 语句：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="k">as</span> <span class="nn">db</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="k">as</span> <span class="nn">db</span>
 <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;my_database.sqlite&quot;</span><span class="p">)</span>
 <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;CREATE TABLE IF NOT EXISTS orders(</span>
@@ -86,7 +86,7 @@
 </div>
 <button class="button">Run …</button>
 <p>不过为了安全起见，一般不将数据内容写入字符串再传入，而是使用这样的方式：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="k">as</span> <span class="nn">db</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="k">as</span> <span class="nn">db</span>
 <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;my_database.sqlite&quot;</span><span class="p">)</span>
 <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 <span class="n">orders</span> <span class="o">=</span> <span class="p">[</span>
@@ -100,33 +100,32 @@
 </div>
 <button class="button">Run …</button>
 <p>cx-oracle 数据库使用不同的方式：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cursor</span><span class="o">.</span><span class="n">executemany</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;INSERT INTO orders VALUES</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cursor</span><span class="o">.</span><span class="n">executemany</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;INSERT INTO orders VALUES</span>
 <span class="s2">    (:order_id, :date, :symbol, :quantity, :price)&quot;&quot;&quot;</span><span class="p">,</span>
 <span class="n">orders</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>查看支持的数据库格式：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="k">as</span> <span class="nn">db</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="k">as</span> <span class="nn">db</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">paramstyle</span><span class="p">)</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>在 query 语句执行之后，我们需要进行 commit，否则数据库将不会接受这些变化，如果想撤销某个 commit，可以使用 rollback() 方法撤销到上一次 commit() 的结果：</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd><dl class="first last docutils">
-<dt>try:</dt>
-<dd>    … # perform some operations</dd>
-<dt>except:</dt>
-<dd>    connection.rollback()
-    raise</dd>
-<dt>else:</dt>
-<dd>    connection.commit()</dd>
+<dl class="simple">
+<dt>::</dt><dd><dl class="simple">
+<dt>try:</dt><dd><p>    … # perform some operations</p>
+</dd>
+<dt>except:</dt><dd><p>    connection.rollback()
+    raise</p>
+</dd>
+<dt>else:</dt><dd><p>    connection.commit()</p>
+</dd>
 </dl>
 </dd>
 </dl>
 <p>使用 SELECT 语句对数据库进行查询：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="k">as</span> <span class="nn">db</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="k">as</span> <span class="nn">db</span>
 <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;my_database.sqlite&quot;</span><span class="p">)</span>
 <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 <span class="n">stock</span> <span class="o">=</span> <span class="s1">&#39;MSFT&#39;</span>
@@ -140,7 +139,7 @@
 </div>
 <button class="button">Run …</button>
 <p>cursor.fetchone() 返回下一条内容， cursor.fetchall() 返回所有查询到的内容组成的列表（可能非常大）：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="k">as</span> <span class="nn">db</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span> <span class="k">as</span> <span class="nn">db</span>
 <span class="n">connection</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;my_database.sqlite&quot;</span><span class="p">)</span>
 <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 <span class="n">stock</span> <span class="o">=</span> <span class="s1">&#39;AAPL&#39;</span>
@@ -153,16 +152,17 @@
 </div>
 <button class="button">Run …</button>
 <p>读写完毕数据库之后需要关闭数据库：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 <span class="n">connection</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<div class="section" id="id1">
-<h2>作者 &amp; 更新时间<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<section id="id1">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
 <p>作者:<cite>李金  &lt;lijinwithyou&#64;gmail.com&gt;</cite></p>
 <p>提交: 2017/12/6</p>
-</div>
-</div>
+</section>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>

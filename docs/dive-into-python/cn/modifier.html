@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>修饰符</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,22 +55,22 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="id1">
-<h1>修饰符<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id2">
-<h2>函数是一种对象<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<section id="id1">
+<h1>修饰符<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<section id="id2">
+<h2>函数是一种对象<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>在 <em>Python</em> 中，函数是也是一种对象。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="nb">print</span> <span class="n">x</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">foo</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">type</span> <span class="s1">&#39;function&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span> <span class="s1">&#39;function&#39;</span>
 </pre></div>
 </div>
 <p>查看函数拥有的方法：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
 <span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span>
 <span class="p">[</span><span class="s1">&#39;__call__&#39;</span><span class="p">,</span>
 <span class="s1">&#39;__class__&#39;</span><span class="p">,</span>
@@ -106,61 +106,61 @@
 </pre></div>
 </div>
 <p>在这些方法中，<em>__call__</em> 是最重要的一种方法：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">foo</span><span class="o">.</span><span class="fm">__call__</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span><span class="o">.</span><span class="fm">__call__</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">42</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">42</span>
 </pre></div>
 </div>
 <p>相当于：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">foo</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">42</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">42</span>
 </pre></div>
 </div>
 <p>因为函数是对象，所以函数可以作为参数传入另一个函数：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">bar</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">bar</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
 <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
 <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bar</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bar</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">5</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id3">
-<h2>修饰符<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id3">
+<h2>修饰符<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
 <p>修饰符是这样的一种函数，它接受一个函数作为输入，通常输出也是一个函数：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dec</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dec</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
 <span class="nb">print</span> <span class="s1">&#39;I am decorating function&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 <span class="k">return</span> <span class="n">f</span>
 </pre></div>
 </div>
 <p>将 <em>len</em> 函数作为参数传入这个修饰符函数：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">declen</span> <span class="o">=</span> <span class="n">dec</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">declen</span> <span class="o">=</span> <span class="n">dec</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">I</span> <span class="n">am</span> <span class="n">decorating</span> <span class="n">function</span> <span class="mi">33716168</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">I</span> <span class="n">am</span> <span class="n">decorating</span> <span class="n">function</span> <span class="mi">33716168</span>
 </pre></div>
 </div>
 <p>使用这个新生成的函数：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">declen</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">])</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">declen</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">30</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">3</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>
 </pre></div>
 </div>
 <p>上面的例子中，我们仅仅返回了函数的本身，也可以利用这个函数生成一个新的函数，看一个新的例子：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">loud</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">loud</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
 <span class="k">def</span> <span class="nf">new_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">):</span>
 <span class="nb">print</span> <span class="s1">&#39;calling with&#39;</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kw</span>
 <span class="n">rtn</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
@@ -170,7 +170,7 @@
 </pre></div>
 </div>
 <button class="button">Run …</button>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">loudlen</span> <span class="o">=</span> <span class="n">loud</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">loudlen</span> <span class="o">=</span> <span class="n">loud</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
 <span class="n">loudlen</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">])</span>
 <span class="n">calling</span> <span class="k">with</span> <span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">],)</span> <span class="p">{}</span>
 <span class="k">return</span> <span class="n">value</span> <span class="ow">is</span> <span class="mi">3</span>
@@ -178,31 +178,31 @@
 </div>
 <button class="button">Run …</button>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">3</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id4">
-<h2>用 &#64; 来使用修饰符<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id4">
+<h2>用 &#64; 来使用修饰符<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
 <p><em>Python</em> 使用 &#64; 符号来将某个函数替换为修饰符之后的函数：</p>
 <p>例如这个函数：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="nb">print</span> <span class="n">x</span>
 <span class="n">foo</span> <span class="o">=</span> <span class="n">dec</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">I</span> <span class="n">am</span> <span class="n">decorating</span> <span class="n">function</span> <span class="mi">64021672</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">I</span> <span class="n">am</span> <span class="n">decorating</span> <span class="n">function</span> <span class="mi">64021672</span>
 </pre></div>
 </div>
 <p>可以替换为：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@dec</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@dec</span>
 <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="nb">print</span> <span class="n">x</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">I</span> <span class="n">am</span> <span class="n">decorating</span> <span class="n">function</span> <span class="mi">64021112</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">I</span> <span class="n">am</span> <span class="n">decorating</span> <span class="n">function</span> <span class="mi">64021112</span>
 </pre></div>
 </div>
 <p>事实上，如果修饰符返回的是一个函数，那么可以链式的使用修饰符：</p>
@@ -211,25 +211,26 @@
 <p>&#64;dec2</p>
 <p>def foo(x):</p>
 <blockquote>
-<div>print x</div></blockquote>
+<div><p>print x</p>
+</div></blockquote>
 </div></blockquote>
 <p>使用修饰符 <em>loud</em> 来定义这个函数：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@loud</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@loud</span>
 <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="nb">print</span> <span class="n">x</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">foo</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 <span class="n">calling</span> <span class="k">with</span> <span class="p">(</span><span class="mi">42</span><span class="p">,)</span> <span class="p">{}</span>
 <span class="mi">42</span>
 <span class="k">return</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id5">
-<h2>例子<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id5">
+<h2>例子<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h2>
 <p>定义两个修饰器函数，一个将原来的函数值加一，另一个乘二：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plus_one</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plus_one</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
 <span class="k">def</span> <span class="nf">new_func</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="k">return</span> <span class="n">new_func</span>
@@ -241,24 +242,24 @@
 </div>
 <button class="button">Run …</button>
 <p>定义函数，先乘二再加一：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@plus_one</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@plus_one</span>
 <span class="nd">@times_two</span>
 <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">foo</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">27</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">27</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id6">
-<h2>修饰器工厂<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id6">
+<h2>修饰器工厂<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h2>
 <p><em>decorators factories</em> 是返回修饰器的函数，例如：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>def super_dec(x, y, z):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>def super_dec(x, y, z):
 def dec(f):
 def new_func(*args, **kw):
             print x + y + z
@@ -268,7 +269,7 @@ return dec
 </pre></div>
 </div>
 <p>它的作用在于产生一个可以接受参数的修饰器，例如我们想将 <em>loud</em> 输出的内容写入一个文件去，可以这样做：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>def super_loud(filename):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>def super_loud(filename):
 fp = open(filename, &#39;w&#39;)
 def loud(f):
 def new_func(*args, **kw):
@@ -283,36 +284,37 @@ return loud
 </pre></div>
 </div>
 <p>可以这样使用这个修饰器工厂：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@super_loud</span><span class="p">(</span><span class="s1">&#39;test.txt&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@super_loud</span><span class="p">(</span><span class="s1">&#39;test.txt&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="nb">print</span> <span class="n">x</span>
 </pre></div>
 </div>
 <p>调用 <em>foo</em> 就会在文件中写入内容：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">foo</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">foo</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">12</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">12</span>
 </pre></div>
 </div>
 <p>查看文件内容：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;test.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;test.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
 <span class="nb">print</span> <span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 <span class="n">calling</span> <span class="k">with</span><span class="p">(</span><span class="mi">12</span><span class="p">,){}</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;test.txt&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id7">
-<h2>作者 &amp; 更新时间<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id7">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h2>
 <p>作者:李金  <a class="reference external" href="mailto:lijinwithyou&#37;&#52;&#48;gmail&#46;com">lijinwithyou<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
 <p>提交: 2017/12/6</p>
-</div>
-</div>
+</section>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>

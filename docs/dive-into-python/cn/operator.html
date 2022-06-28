@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>operator, functools, itertools, toolz, fn, funcy 模块</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,31 +55,31 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="operator-functools-itertools-toolz-fn-funcy">
-<h1>operator, functools, itertools, toolz, fn, funcy 模块<a class="headerlink" href="#operator-functools-itertools-toolz-fn-funcy" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="operator">
-<h2>operator 模块<a class="headerlink" href="#operator" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">operator</span> <span class="k">as</span> <span class="nn">op</span>
+<section id="operator-functools-itertools-toolz-fn-funcy">
+<h1>operator, functools, itertools, toolz, fn, funcy 模块<a class="headerlink" href="#operator-functools-itertools-toolz-fn-funcy" title="Permalink to this heading">¶</a></h1>
+<section id="operator">
+<h2>operator 模块<a class="headerlink" href="#operator" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">operator</span> <span class="k">as</span> <span class="nn">op</span>
 </pre></div>
 </div>
 <p><em>operator</em> 模块提供了各种操作符（<em>+,</em>,[]*）的函数版本方便使用：</p>
 <p>加法：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">reduce</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">reduce</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">45</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">45</span>
 </pre></div>
 </div>
 <p>乘法：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">reduce</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">mul</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">reduce</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">mul</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">362880</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">362880</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span> <span class="n">my_list</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bb&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;ccc&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;dddd&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">my_list</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bb&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;ccc&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;dddd&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span>
 <span class="c1"># 标准排序</span>
 <span class="nb">print</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 <span class="c1"># 使用元素的第二个元素排序</span>
@@ -89,16 +89,16 @@
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bb&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;ccc&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;dddd&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bb&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;ccc&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;dddd&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span>
 <span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;ccc&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;dddd&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bb&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)]</span>
 <span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;bb&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;ccc&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;dddd&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="functools">
-<h2>functools 模块<a class="headerlink" href="#functools" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="functools">
+<h2>functools 模块<a class="headerlink" href="#functools" title="Permalink to this heading">¶</a></h2>
 <p><em>functools</em> 包含很多跟函数相关的工具，比如之前看到的 <em>wraps</em> 函数，不过最常用的是 <em>partial</em> 函数，这个函数允许我们使用一个函数中生成一个新函数，这个函数使用原来的函数，不过某些参数被指定了：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="k">import</span> <span class="n">partial</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
 <span class="c1"># 将 reduce 的第一个参数指定为加法，得到的是类似求和的函数</span>
 <span class="n">sum_</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">reduce</span><span class="p">,</span> <span class="n">op</span><span class="o">.</span><span class="n">add</span><span class="p">)</span>
 <span class="c1"># 将 reduce 的第一个参数指定为乘法，得到的是类似求连乘的函数</span>
@@ -108,28 +108,28 @@
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">10</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span>
 <span class="mi">24</span>
 </pre></div>
 </div>
 <p><em>partial</em> 函数还可以按照键值对传入固定参数。</p>
-</div>
-<div class="section" id="itertools">
-<h2>itertools 模块<a class="headerlink" href="#itertools" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="itertools">
+<h2>itertools 模块<a class="headerlink" href="#itertools" title="Permalink to this heading">¶</a></h2>
 <p><em>itertools</em> 包含很多与迭代器对象相关的工具，其中比较常用的是排列组合生成器* permutations <em>和</em> combinations*，还有在数据分析中常用的 <em>groupby</em> 生成器：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="k">import</span> <span class="n">cycle</span><span class="p">,</span> <span class="n">groupby</span><span class="p">,</span> <span class="n">islice</span><span class="p">,</span> <span class="n">permutations</span><span class="p">,</span> <span class="n">combinations</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">cycle</span><span class="p">,</span> <span class="n">groupby</span><span class="p">,</span> <span class="n">islice</span><span class="p">,</span> <span class="n">permutations</span><span class="p">,</span> <span class="n">combinations</span>
 </pre></div>
 </div>
 <p><em>cycle</em> 返回一个无限的迭代器，按照顺序重复输出输入迭代器中的内容，<em>islice</em> 则返回一个迭代器中的一段内容：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="nb">list</span><span class="p">(</span><span class="n">islice</span><span class="p">(</span><span class="n">cycle</span><span class="p">(</span><span class="s1">&#39;abcd&#39;</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="nb">list</span><span class="p">(</span><span class="n">islice</span><span class="p">(</span><span class="n">cycle</span><span class="p">(</span><span class="s1">&#39;abcd&#39;</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p><em>groupby</em> 返回一个字典，按照指定的 <em>key</em> 对一组数据进行分组，字典的键是 <em>key</em>，值是一个迭代器：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>animals = sorted([&#39;pig&#39;, &#39;cow&#39;, &#39;giraffe&#39;, &#39;elephant&#39;,
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>animals = sorted([&#39;pig&#39;, &#39;cow&#39;, &#39;giraffe&#39;, &#39;elephant&#39;,
 &#39;dog&#39;, &#39;cat&#39;, &#39;hippo&#39;, &#39;lion&#39;, &#39;tiger&#39;], key=len)
 # 按照长度进行分组
 for k, g in groupby(animals, key=len):
@@ -138,7 +138,7 @@ print
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="p">[</span><span class="s1">&#39;pig&#39;</span><span class="p">,</span> <span class="s1">&#39;cow&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="p">[</span><span class="s1">&#39;pig&#39;</span><span class="p">,</span> <span class="s1">&#39;cow&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">]</span>
 <span class="mi">4</span> <span class="p">[</span><span class="s1">&#39;lion&#39;</span><span class="p">]</span>
 <span class="mi">5</span> <span class="p">[</span><span class="s1">&#39;hippo&#39;</span><span class="p">,</span> <span class="s1">&#39;tiger&#39;</span><span class="p">]</span>
 <span class="mi">7</span> <span class="p">[</span><span class="s1">&#39;giraffe&#39;</span><span class="p">]</span>
@@ -146,32 +146,33 @@ print
 </pre></div>
 </div>
 <p>排列：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">permutations</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">)]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">permutations</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">)]</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="s1">&#39;acb&#39;</span><span class="p">,</span> <span class="s1">&#39;bac&#39;</span><span class="p">,</span> <span class="s1">&#39;bca&#39;</span><span class="p">,</span> <span class="s1">&#39;cab&#39;</span><span class="p">,</span> <span class="s1">&#39;cba&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="s1">&#39;acb&#39;</span><span class="p">,</span> <span class="s1">&#39;bac&#39;</span><span class="p">,</span> <span class="s1">&#39;bca&#39;</span><span class="p">,</span> <span class="s1">&#39;cab&#39;</span><span class="p">,</span> <span class="s1">&#39;cba&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>组合：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">combinations</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="n">r</span><span class="o">=</span><span class="mi">2</span><span class="p">)]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">combinations</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="n">r</span><span class="o">=</span><span class="mi">2</span><span class="p">)]</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]]</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="toolz-fn-funcy">
-<h2>toolz, fn 和 funcy 模块<a class="headerlink" href="#toolz-fn-funcy" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="toolz-fn-funcy">
+<h2>toolz, fn 和 funcy 模块<a class="headerlink" href="#toolz-fn-funcy" title="Permalink to this heading">¶</a></h2>
 <p>这三个模块的作用是方便我们在编程的时候使用函数式编程的风格。</p>
-</div>
-<div class="section" id="id1">
-<h2>作者 &amp; 更新时间<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id1">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
 <p>作者:李金  <a class="reference external" href="mailto:lijinwithyou&#37;&#52;&#48;gmail&#46;com">lijinwithyou<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
 <p>提交: 2017/12/6</p>
-</div>
-</div>
+</section>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>

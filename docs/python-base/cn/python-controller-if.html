@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>简述</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,15 +55,15 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="id1">
-<h1>简述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<section id="id1">
+<h1>简述<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
 <p>当仅在满足某个条件才会执行相应的代码时，需要进行决策。在 Python 中，由 if … elif … else 语句来实现。</p>
-<div class="section" id="if">
-<h2>if 语句<a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h2>
+<section id="if">
+<h2>if 语句<a class="headerlink" href="#if" title="Permalink to this heading">¶</a></h2>
 <p>语法格式：</p>
-<dl class="docutils">
-<dt>if &lt;判断条件&gt;：</dt>
-<dd>&lt;执行语句……&gt;</dd>
+<dl class="simple">
+<dt>if &lt;判断条件&gt;：</dt><dd><p>&lt;执行语句……&gt;</p>
+</dd>
 </dl>
 <p>当“判断条件”成立（True）时，才执行语句；反之，则不执行。</p>
 <p>执行语句可以为多行，以缩进来区分表示同一范围。</p>
@@ -73,7 +73,7 @@
 <div><img alt="http://img.blog.csdn.net/20170416144600526" src="http://img.blog.csdn.net/20170416144600526" />
 </div></blockquote>
 <p>以购物为例（预算 500），进入商场，价格都是 1000+。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">price</span> <span class="o">=</span> <span class="mi">1000</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">price</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;纳尼，居然&#39;</span><span class="p">,</span> <span class="n">price</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;简直太贵了！&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;货比三家，再转转。&quot;</span><span class="p">)</span>
@@ -81,16 +81,16 @@
 </div>
 <button class="button">Run …</button>
 <p>执行程序，输出如下：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>纳尼，居然 1000
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>纳尼，居然 1000
 简直太贵了！
 货比三家，再转转。
 </pre></div>
 </div>
-</div>
-<div class="section" id="if-else">
-<h2>if…else 语句<a class="headerlink" href="#if-else" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="if-else">
+<h2>if…else 语句<a class="headerlink" href="#if-else" title="Permalink to this heading">¶</a></h2>
 <p>语法格式：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>if &lt;判断条件&gt;:
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>if &lt;判断条件&gt;:
     &lt;执行语句1……&gt;
 else:
     &lt;执行语句2……&gt;
@@ -100,34 +100,34 @@ else:
 <p>流程图：</p>
 <img alt="http://img.blog.csdn.net/20170416145014731" src="http://img.blog.csdn.net/20170416145014731" />
 <p>既然 1000 贵了，好吧！开始讨价还价，降价到 300：</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd><p class="first">price = 300
+<dl>
+<dt>::</dt><dd><p>price = 300
 if price &gt; 500:</p>
 <blockquote>
-<div>print(‘纳尼，居然’, price)
-print(‘简直太贵了！’)</div></blockquote>
-<dl class="last docutils">
-<dt>else:</dt>
-<dd>print(price, ‘还算地道’)
+<div><p>print(‘纳尼，居然’, price)
+print(‘简直太贵了！’)</p>
+</div></blockquote>
+<dl class="simple">
+<dt>else:</dt><dd><p>print(price, ‘还算地道’)
 print(‘来一打！’)
-print(“合适才买”)</dd>
+print(“合适才买”)</p>
+</dd>
 </dl>
 </dd>
 </dl>
 <button class="button">Run …</button>
 <p>执行程序，输出如下：</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd>300 还算地道
+<dl class="simple">
+<dt>::</dt><dd><p>300 还算地道
 来一打！
-合适才买</dd>
+合适才买</p>
+</dd>
 </dl>
-</div>
-<div class="section" id="if-elif-else">
-<h2>if…elif…else 语句<a class="headerlink" href="#if-elif-else" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="if-elif-else">
+<h2>if…elif…else 语句<a class="headerlink" href="#if-elif-else" title="Permalink to this heading">¶</a></h2>
 <p>语法格式：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>if &lt;判断条件1&gt;:
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>if &lt;判断条件1&gt;:
     &lt;执行语句1……&gt;
 elif &lt;判断条件2&gt;:
     &lt;执行语句2……&gt;
@@ -141,7 +141,7 @@ else:
 <p>流程图：</p>
 <img alt="http://img.blog.csdn.net/20170416145420452" src="http://img.blog.csdn.net/20170416145420452" />
 <p>一般，大部分顾客买东西都要讨价还价。当然，其中不乏土豪，只管买买买。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>price = 2000
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>price = 2000
 if price &gt; 1000:
     print(&#39;这么贵，肯定是好东西。&#39;)
     print(&#39;买、买、买！&#39;)
@@ -159,18 +159,18 @@ print(&#39;管它多钱，反正我要买买买。&#39;)
 </div>
 <button class="button">Run …</button>
 <p>执行程序，输出如下：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>这么贵，肯定是好东西。
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>这么贵，肯定是好东西。
 买、买、买！
 管它多钱，反正我要买买买。
 </pre></div>
 </div>
-</div>
-<div class="section" id="id2">
-<h2>嵌套 if 语句<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id2">
+<h2>嵌套 if 语句<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>可以将一个 if … elif … else 语句加入至另一个 if … elif … else 语句中，这被称为嵌套。</p>
 <p>任何数量的这些语句都可以嵌套在一起，要找出嵌套级别，缩进是唯一的方法。</p>
 <p>买东西，追求的是性价比，所以既要价格适中，又要质量有保证：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>price = 300
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>price = 300
 quality = True
 if price &gt; 500:
     print(&#39;纳尼，居然&#39;, price)
@@ -188,19 +188,20 @@ else:
 </div>
 <button class="button">Run …</button>
 <p>输出如下：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">300</span> <span class="n">价钱合适</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">300</span> <span class="n">价钱合适</span>
 <span class="n">质量也还不错</span>
 <span class="n">来一打</span>
 <span class="n">性价比较高再买</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id3">
-<h2>作者 &amp; 更新时间<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id3">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
 <p>作者: <a class="reference external" href="http://blog.csdn.net/liang19890820">一去丶二三里</a></p>
 <p>提交: 2017/12/6</p>
-</div>
-</div>
+</section>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>

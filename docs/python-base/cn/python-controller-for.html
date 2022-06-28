@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>Python 运算符</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,16 +55,16 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="python">
-<h1>Python 运算符<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2>简述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<section id="python">
+<h1>Python 运算符<a class="headerlink" href="#python" title="Permalink to this heading">¶</a></h1>
+<section id="id1">
+<h2>简述<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
 <p>在 Python 中，for 循环用于迭代序列（例如：列表、元组）或其他可迭代对象，迭代序列称为遍历。</p>
-</div>
-<div class="section" id="for">
-<h2>for 循环<a class="headerlink" href="#for" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="for">
+<h2>for 循环<a class="headerlink" href="#for" title="Permalink to this heading">¶</a></h2>
 <p>语法格式：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>for &lt;val&gt; in &lt;序列&gt;:
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for &lt;val&gt; in &lt;序列&gt;:
     &lt;循环体&gt;
 </pre></div>
 </div>
@@ -72,7 +72,7 @@
 <p>循环会一直继续，直到到达序列的最后一项。循环体与其余的代码使用缩进分隔。</p>
 <p>流程图：</p>
 <img alt="http://img.blog.csdn.net/20170416152544984" src="http://img.blog.csdn.net/20170416152544984" />
-<div class="highlight-default"><div class="highlight"><pre><span></span>for letter in &#39;Jay&#39;:
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for letter in &#39;Jay&#39;:
     print(&#39;当前字母：&#39;, letter)
 songs = [&#39;安静&#39;, &#39;蜗牛&#39;, &#39;稻香&#39;]
 for song in songs:
@@ -81,7 +81,7 @@ for song in songs:
 </div>
 <button class="button">Run …</button>
 <p>运行程序，输出如下：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>当前字母： J
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>当前字母： J
 当前字母： a
 当前字母： y
 正在播放： 安静
@@ -90,13 +90,13 @@ for song in songs:
 </pre></div>
 </div>
 <p>这里，可以将 for 循环视为歌曲中的顺序播放。</p>
-</div>
-<div class="section" id="id2">
-<h2>通过索引遍历<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id2">
+<h2>通过索引遍历<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>可以使用 range() 函数生成一个数字序列。</p>
 <p>还可以定义 range(start, stop[, step]) 中的 start、stop 和 step，如果没有提供 step，步长默认为 1。</p>
 <p>要强制该函数输出所有元素，可以使用函数 list()：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># 输出：range(0, 10)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 输出：range(0, 10)</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 <span class="c1"># 输出：[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)))</span>
@@ -109,7 +109,7 @@ for song in songs:
 <button class="button">Run …</button>
 <p>可以在 for 循环中使用 range() 来遍历一个数字序列，它可以与内置函数 len() 结合，使用索引进行序列迭代。</p>
 <p>len() 返回列表的长度，即：元素的个数。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>songs = [&#39;安静&#39;, &#39;蜗牛&#39;, &#39;稻香&#39;]
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>songs = [&#39;安静&#39;, &#39;蜗牛&#39;, &#39;稻香&#39;]
 # 通过索引遍历列表
 for i in range(len(songs)):
     print(&quot;正在播放：&quot;, songs[i])
@@ -117,17 +117,17 @@ for i in range(len(songs)):
 </div>
 <button class="button">Run …</button>
 <p>运行程序，输出如下：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>正在播放： 安静
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>正在播放： 安静
 正在播放： 蜗牛
 正在播放： 稻香
 </pre></div>
 </div>
-</div>
-<div class="section" id="for-else">
-<h2>for … else<a class="headerlink" href="#for-else" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="for-else">
+<h2>for … else<a class="headerlink" href="#for-else" title="Permalink to this heading">¶</a></h2>
 <p>for 循环也可以有一个可选的 else 块，如果循环正常执行完（即：不是通过 break 跳出而中断的），则执行 else 部分。</p>
 <p><strong>注意：</strong> break 语句可以用来跳出 for 循环，在这种情况下，else 部分会被忽略。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>songs = [&#39;安静&#39;, &#39;蜗牛&#39;, &#39;稻香&#39;]
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>songs = [&#39;安静&#39;, &#39;蜗牛&#39;, &#39;稻香&#39;]
 for song in songs:
     print(&#39;正在播放：&#39;, song)
 else:
@@ -136,20 +136,21 @@ else:
 </div>
 <button class="button">Run …</button>
 <p>运行程序，输出如下：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>正在播放： 安静
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>正在播放： 安静
 正在播放： 蜗牛
 正在播放： 稻香
 播放结束
 </pre></div>
 </div>
 <p>可以看到，当 for 循环结束时，执行 else 中的代码块。</p>
-</div>
-<div class="section" id="id3">
-<h2>作者 &amp; 更新时间<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id3">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
 <p>作者: <a class="reference external" href="http://blog.csdn.net/liang19890820">一去丶二三里</a></p>
 <p>提交: 2017/12/6</p>
-</div>
-</div>
+</section>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>

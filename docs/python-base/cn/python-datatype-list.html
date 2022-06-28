@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>简述</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,61 +55,61 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="id1">
-<h1>简述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<section id="id1">
+<h1>简述<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
 <p>Python 提供了一系列复合数据类型，通常被称为序列，列表（List）就是其中的一种。</p>
 <p>在 Python 中，列表是使用最频繁、用途最广泛的数据类型之一，非常灵活。</p>
-<div class="section" id="id2">
-<h2>列表<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<section id="id2">
+<h2>列表<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>列表是有序的元素序列，在 Python 中，列表由内置的 list 类型定义。</p>
 <p>要创建列表，需要将所有项（元素）放在方括号（[]）内，以逗号（,）分隔。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>列表可以有任意数量（n &gt;= 0）的元素，当 n 为 0 时，表示一个空列表。</p>
 <p>列表中元素的类型可以不同，支持数字、字符串，甚至可以包含列表（所谓的嵌套）。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># 空列表</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># 空列表</span>
 <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>  <span class="c1"># 整形列表</span>
 <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">]</span>  <span class="c1"># 混合类型列表</span>
 <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Python&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]]</span>  <span class="c1"># 嵌套列表</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
-</div>
-</div>
-<div class="section" id="id3">
-<h1>访问列表中的元素<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id4">
-<h2>列表索引<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="id3">
+<h1>访问列表中的元素<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h1>
+<section id="id4">
+<h2>列表索引<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
 <p>和字符串类似，可以使用索引操作符（[]）访问列表中的一个元素。</p>
 <img alt="http://img.blog.csdn.net/20170516213732766" src="http://img.blog.csdn.net/20170516213732766" />
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
 <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># 第 1 个元素</span>
 <span class="n">l</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>  <span class="c1"># 第 5 个元素</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>序列也可以反向索引，-1 表示最后一个元素，-2 表示倒数第二个元素，依此类推。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">6</span><span class="p">]</span>  <span class="c1"># 第 1 个元素</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">6</span><span class="p">]</span>  <span class="c1"># 第 1 个元素</span>
 <span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># 第 5 个元素</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>同样地，嵌套的列表可以使用嵌套索引来访问。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Python&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]]</span>  <span class="c1"># 嵌套列表</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Python&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]]</span>  <span class="c1"># 嵌套列表</span>
 <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>  <span class="c1"># 使用嵌套索引</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
-</div>
-<div class="section" id="id5">
-<h2>对列表进行切片<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id5">
+<h2>对列表进行切片<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h2>
 <p>可以使用切片操作符（:）来访问列表中的一系列元素。</p>
 <p><strong>PS</strong>： 通过上图，可以很直观地看到切片。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
 <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>  <span class="c1">#  第 2 个到第 4 个元素</span>
 <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>  <span class="c1"># 第 2 个到最后一个元素（将索引默认设置为列表的开始或结束）</span>
 <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">100</span><span class="p">]</span>  <span class="c1"># 索引太大，被截断至列表长度处</span>
@@ -118,18 +118,18 @@
 </div>
 <button class="button">Run …</button>
 <p>和索引类似，切片操作也可以使用反向索引：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># 第 2 个到第 5 个元素</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># 第 2 个到第 5 个元素</span>
 <span class="n">l</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>  <span class="c1"># 开始到第 3 个元素</span>
 <span class="n">l</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span>  <span class="c1"># 第 4 个到最后一个元素</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
-</div>
-<div class="section" id="id6">
-<h2>更改及添加元素<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id6">
+<h2>更改及添加元素<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h2>
 <p>列表是可变的，也就是说，其中的元素可以被改变（不像字符串或元组）。</p>
 <p>可以使用赋值运算符（=）改变一个或一系列元素。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
 <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;H&#39;</span>  <span class="c1"># 更改第 1 个元素</span>
 <span class="n">l</span>
 <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;l&#39;</span><span class="p">,</span> <span class="s1">&#39;l&#39;</span><span class="p">]</span>  <span class="c1"># 更改第 2 个到第四个元素</span>
@@ -138,7 +138,7 @@
 </div>
 <button class="button">Run …</button>
 <p>可以使用 append() 方法将一个元素添加到列表中，或者使用 extend() 方法添加多个元素。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">]</span>
 <span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>  <span class="c1"># 添加一个元素</span>
 <span class="n">l</span>
 <span class="n">l</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">])</span>  <span class="c1"># 添加多个元素</span>
@@ -147,7 +147,7 @@
 </div>
 <button class="button">Run …</button>
 <p>此外，可以使用 insert() 方法将一个元素插入到所需的位置。要插入多个元素，可以将其挤压进到一个列表的空切片中。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
 <span class="n">l</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">)</span>  <span class="c1"># 在指定索引处插入一个元素</span>
 <span class="n">l</span>
 <span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">]</span>  <span class="c1"># 插入多个元素</span>
@@ -155,11 +155,11 @@
 </pre></div>
 </div>
 <button class="button">Run …</button>
-</div>
-<div class="section" id="id7">
-<h2>从列表中删除元素<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id7">
+<h2>从列表中删除元素<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h2>
 <p>可以使用关键字 del，从列表中删除一个或多个元素，甚至可以完全删除列表。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
 <span class="k">del</span> <span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># 删除第 3 个元素</span>
 <span class="n">l</span>
 <span class="k">del</span> <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>  <span class="c1"># 删除第 2 个到第 3 个元素</span>
@@ -172,7 +172,7 @@
 <p>可以使用 remove() 方法删除指定的元素，或用 pop() 方法删除一个给定索引处的元素。</p>
 <p>如果没有提供索引，pop() 方法将删除并返回最后一个元素。这有助于我们将列表实现为栈（先进后出数据结构）。</p>
 <p>还可以使用 clear() 方法清空一个列表。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
 <span class="n">l</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">)</span>  <span class="c1"># 删除指定的元素</span>
 <span class="n">l</span>
 <span class="n">l</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># 删除并返回第 3 个元素</span>
@@ -185,7 +185,7 @@
 </div>
 <button class="button">Run …</button>
 <p>最后，还可以通过将一个空列表分配给一个元素切片的方式来删除列表中的项目。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
 <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">l</span>
 <span class="n">l</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
@@ -193,130 +193,126 @@
 </pre></div>
 </div>
 <button class="button">Run …</button>
-</div>
-<div class="section" id="id8">
-<h2>基本操作<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id8">
+<h2>基本操作<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h2>
 <p>在字符串一节中已经提过，所有的序列都有几种基本操作。列表是序列的一种，固然也适用。</p>
 <p>连接列表</p>
 <p>操作符 + 用于组合列表，也被称为连接。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">]</span>
 <span class="n">l2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
 <span class="n">l1</span> <span class="o">+</span> <span class="n">l2</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
-</div>
-<div class="section" id="id9">
-<h2>重复列表<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id9">
+<h2>重复列表<a class="headerlink" href="#id9" title="Permalink to this heading">¶</a></h2>
 <p>操作符 * 会以给定次数重复一个列表。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
 <span class="n">l</span> <span class="o">*</span> <span class="mi">2</span>  <span class="c1"># 重复列表 2 次</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
-</div>
-<div class="section" id="id10">
-<h2>最小值/最大值<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id10">
+<h2>最小值/最大值<a class="headerlink" href="#id10" title="Permalink to this heading">¶</a></h2>
 <p>min() 和 max() 用于获取最小值和最大值。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
 <span class="nb">min</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>  <span class="c1"># 最小值</span>
 <span class="nb">max</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>  <span class="c1"># 最大值</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
-</div>
-<div class="section" id="id11">
-<h2>列表长度<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id11">
+<h2>列表长度<a class="headerlink" href="#id11" title="Permalink to this heading">¶</a></h2>
 <p>要获取一个列表的长度，可以使用内置函数 len()。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
 <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>  <span class="c1"># 元素个数</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
-</div>
-<div class="section" id="id12">
-<h2>成员测试<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id12">
+<h2>成员测试<a class="headerlink" href="#id12" title="Permalink to this heading">¶</a></h2>
 <p>使用关键字 in，可以测试一个元素是否存在于列表中。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
 <span class="s1">&#39;t&#39;</span> <span class="ow">in</span> <span class="n">l</span>
 <span class="s1">&#39;o&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">l</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
-</div>
-<div class="section" id="id13">
-<h2>遍历列表<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id13">
+<h2>遍历列表<a class="headerlink" href="#id13" title="Permalink to this heading">¶</a></h2>
 <p>使用 for 循环，可以遍历列表中的每个元素。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>l = [&#39;P&#39;, &#39;y&#39;, &#39;t&#39;, &#39;h&#39;, &#39;o&#39;, &#39;n&#39;]
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>l = [&#39;P&#39;, &#39;y&#39;, &#39;t&#39;, &#39;h&#39;, &#39;o&#39;, &#39;n&#39;]
 for letter in l:
     print(letter)
 </pre></div>
 </div>
 <button class="button">Run …</button>
-</div>
-<div class="section" id="id14">
-<h2>列表的方法<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id14">
+<h2>列表的方法<a class="headerlink" href="#id14" title="Permalink to this heading">¶</a></h2>
 <p>列表中有许多方法，可以通过 dir() 来查看方法列表：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>以双下划线开始和结尾的（例如：__add__）暂不考虑，后面讨论。剩下以下几个：</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="12%" />
-<col width="88%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">方法</th>
-<th class="head">描述</th>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>方法</p></th>
+<th class="head"><p>描述</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>append()</td>
-<td>将元素添加到列表的末尾</td>
+<tbody>
+<tr class="row-even"><td><p>append()</p></td>
+<td><p>将元素添加到列表的末尾</p></td>
 </tr>
-<tr class="row-odd"><td>extend()</td>
-<td>将列表的所有元素添加到另一个列表</td>
+<tr class="row-odd"><td><p>extend()</p></td>
+<td><p>将列表的所有元素添加到另一个列表</p></td>
 </tr>
-<tr class="row-even"><td>insert()</td>
-<td>在定义的索引处插入一个元素</td>
+<tr class="row-even"><td><p>insert()</p></td>
+<td><p>在定义的索引处插入一个元素</p></td>
 </tr>
-<tr class="row-odd"><td>remove()</td>
-<td>从列表中删除一个元素</td>
+<tr class="row-odd"><td><p>remove()</p></td>
+<td><p>从列表中删除一个元素</p></td>
 </tr>
-<tr class="row-even"><td>pop()</td>
-<td>从列表中删除所有元素</td>
+<tr class="row-even"><td><p>pop()</p></td>
+<td><p>从列表中删除所有元素</p></td>
 </tr>
-<tr class="row-odd"><td>clear()</td>
-<td>断言，用于判断变量或者条件表达式的值是否为真</td>
+<tr class="row-odd"><td><p>clear()</p></td>
+<td><p>断言，用于判断变量或者条件表达式的值是否为真</p></td>
 </tr>
-<tr class="row-even"><td>index()</td>
-<td>返回第一个匹配项的索引</td>
+<tr class="row-even"><td><p>index()</p></td>
+<td><p>返回第一个匹配项的索引</p></td>
 </tr>
-<tr class="row-odd"><td>count()</td>
-<td>统计某个元素在列表中出现的次数</td>
+<tr class="row-odd"><td><p>count()</p></td>
+<td><p>统计某个元素在列表中出现的次数</p></td>
 </tr>
-<tr class="row-even"><td>sort()</td>
-<td>按升序排列列表中的元素</td>
+<tr class="row-even"><td><p>sort()</p></td>
+<td><p>按升序排列列表中的元素</p></td>
 </tr>
-<tr class="row-odd"><td>reverse()</td>
-<td>反转列表中元素的顺序</td>
+<tr class="row-odd"><td><p>reverse()</p></td>
+<td><p>反转列表中元素的顺序</p></td>
 </tr>
-<tr class="row-even"><td>copy()</td>
-<td>返回一个列表的浅拷贝</td>
+<tr class="row-even"><td><p>copy()</p></td>
+<td><p>返回一个列表的浅拷贝</p></td>
 </tr>
 </tbody>
 </table>
 <p>按照惯例，在使用不熟悉的方法时，先看官方文档描述：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">list</span><span class="o">.</span><span class="n">append</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">list</span><span class="o">.</span><span class="n">append</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span><span class="n">Help</span> <span class="n">on</span> <span class="n">method_descriptor</span><span class="p">:</span>
 <span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 <span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span> <span class="o">--</span> <span class="n">append</span> <span class="nb">object</span> <span class="n">to</span> <span class="n">end</span>
 </pre></div>
 </div>
 <p>可以使用 list.method() 的方式来访问方法，上面已经列举了一些。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">]</span>
 <span class="n">l</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">)</span>  <span class="c1"># 返回第一个匹配 &#39;h&#39; 的索引</span>
 <span class="n">l</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>  <span class="c1"># 统计 &#39;o&#39; 在列表中出现的次数</span>
 <span class="n">l</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>  <span class="c1"># 按升序排列列表中的元素</span>
@@ -326,13 +322,13 @@ for letter in l:
 </pre></div>
 </div>
 <button class="button">Run …</button>
-</div>
-<div class="section" id="id15">
-<h2>列表推导式<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id15">
+<h2>列表推导式<a class="headerlink" href="#id15" title="Permalink to this heading">¶</a></h2>
 <p>列表推导式（List Comprehension）是一种优雅、简洁的方式，通过现有列表来创建一个新列表。</p>
 <p>列表推导式由方括号标识，其中包含一个表达式，紧随其后的是 for 语句。</p>
 <p>假设，要创建一个正方形：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>squares = []
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>squares = []
 for x in range(10):
     squares.append(x**2)
 square
@@ -340,78 +336,75 @@ square
 </div>
 <button class="button">Run …</button>
 <p>用列表推导式，可以获得相同的结果：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>这也相当于：squares = map(lambda x: x**2, range(10))，但它更简洁可读。</p>
 <p>列表推导式可以可选地包含更多的 for 或 if 语句，if 语句可以过滤出新列表的元素。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">]</span>
 <span class="n">squares</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">odd</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">odd</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">odd</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="n">y</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;I love &#39;</span><span class="p">,</span><span class="s1">&#39;I like &#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;C++&#39;</span><span class="p">,</span><span class="s1">&#39;Python&#39;</span><span class="p">]]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x</span><span class="o">+</span><span class="n">y</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;I love &#39;</span><span class="p">,</span><span class="s1">&#39;I like &#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;C++&#39;</span><span class="p">,</span><span class="s1">&#39;Python&#39;</span><span class="p">]]</span>
 <span class="p">[</span><span class="s1">&#39;I love C++&#39;</span><span class="p">,</span> <span class="s1">&#39;I love Python&#39;</span><span class="p">,</span> <span class="s1">&#39;I like C++&#39;</span><span class="p">,</span> <span class="s1">&#39;I like Python&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
-</div>
-<div class="section" id="id16">
-<h2>列表与内置函数<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id16">
+<h2>列表与内置函数<a class="headerlink" href="#id16" title="Permalink to this heading">¶</a></h2>
 <p>下述内置函数通常与列表一起使用，来执行不同的任务。</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="12%" />
-<col width="88%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">函数</th>
-<th class="head">描述</th>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>函数</p></th>
+<th class="head"><p>描述</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>all()</td>
-<td>如果列表中的所有元素都是 True（或者列表为空），则返回 True。</td>
+<tbody>
+<tr class="row-even"><td><p>all()</p></td>
+<td><p>如果列表中的所有元素都是 True（或者列表为空），则返回 True。</p></td>
 </tr>
-<tr class="row-odd"><td>any()</td>
-<td>如果列表中的所有元素都是 True，则返回 True；如果列表为空，则返回 False。</td>
+<tr class="row-odd"><td><p>any()</p></td>
+<td><p>如果列表中的所有元素都是 True，则返回 True；如果列表为空，则返回 False。</p></td>
 </tr>
-<tr class="row-even"><td>enumerate()</td>
-<td>返回一个枚举对象，其中包含了列表中所有元素的索引和值（配对）。</td>
+<tr class="row-even"><td><p>enumerate()</p></td>
+<td><p>返回一个枚举对象，其中包含了列表中所有元素的索引和值（配对）。</p></td>
 </tr>
-<tr class="row-odd"><td>len()</td>
-<td>返回列表的长度（元素个数）。</td>
+<tr class="row-odd"><td><p>len()</p></td>
+<td><p>返回列表的长度（元素个数）。</p></td>
 </tr>
-<tr class="row-even"><td>max()</td>
-<td>返回列表的最大项</td>
+<tr class="row-even"><td><p>max()</p></td>
+<td><p>返回列表的最大项</p></td>
 </tr>
-<tr class="row-odd"><td>min()</td>
-<td>返回列表的最小项</td>
+<tr class="row-odd"><td><p>min()</p></td>
+<td><p>返回列表的最小项</p></td>
 </tr>
-<tr class="row-even"><td>sorted()</td>
-<td>返回一个排序的新列表（不排序列表本身）</td>
+<tr class="row-even"><td><p>sorted()</p></td>
+<td><p>返回一个排序的新列表（不排序列表本身）</p></td>
 </tr>
-<tr class="row-odd"><td>sum()</td>
-<td>返回列表的所有元素之和</td>
+<tr class="row-odd"><td><p>sum()</p></td>
+<td><p>返回列表的所有元素之和</p></td>
 </tr>
-<tr class="row-even"><td>list()</td>
-<td>将 iterable（元组、字符串、集合、字典）转换为列表</td>
+<tr class="row-even"><td><p>list()</p></td>
+<td><p>将 iterable（元组、字符串、集合、字典）转换为列表</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="id17">
-<h2>作者 &amp; 更新时间<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id17">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id17" title="Permalink to this heading">¶</a></h2>
 <p>作者: <a class="reference external" href="http://blog.csdn.net/liang19890820">一去丶二三里</a></p>
 <p>提交: 2017/12/6</p>
-</div>
-</div>
+</section>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>稀疏矩阵的线性代数</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,80 +55,76 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="id1">
-<h1>稀疏矩阵的线性代数<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<section id="id1">
+<h1>稀疏矩阵的线性代数<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
 <p>对于稀疏矩阵来说，其线性代数操作可以使用 scipy.sparse.linalg 实现：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.sparse.linalg</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.sparse.linalg</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id2">
-<h1>矩阵操作<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="id2">
+<h1>矩阵操作<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h1>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>scipy.sparse.linalg.inv</dt>
-<dd><ul class="first last">
-<li>稀疏矩阵求逆</li>
+<li><dl class="simple">
+<dt>scipy.sparse.linalg.inv</dt><dd><ul>
+<li><p>稀疏矩阵求逆</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt>scipy.sparse.linalg.expm</dt>
-<dd><ul class="first last">
-<li>求稀疏矩阵的指数函数</li>
+<li><dl class="simple">
+<dt>scipy.sparse.linalg.expm</dt><dd><ul>
+<li><p>求稀疏矩阵的指数函数</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 </ul>
-</div>
-<div class="section" id="id3">
-<h1>矩阵范数<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="id3">
+<h1>矩阵范数<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h1>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>scipy.sparse.linalg.norm</dt>
-<dd><ul class="first last">
-<li>稀疏矩阵求范数</li>
+<li><dl class="simple">
+<dt>scipy.sparse.linalg.norm</dt><dd><ul>
+<li><p>稀疏矩阵求范数</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 </ul>
-</div>
-<div class="section" id="id4">
-<h1>线性方程组求解<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="id4">
+<h1>线性方程组求解<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h1>
 <p>提供了一系列求解方法： <a class="reference external" href="http://docs.scipy.org/doc/scipy/reference/sparse.linalg.html#solving">http://docs.scipy.org/doc/scipy/reference/sparse.linalg.html#solving</a>
 -linear-problems</p>
 <p>主要使用的是迭代方法求解。</p>
-</div>
-<div class="section" id="id5">
-<h1>特征值分解和奇异值分解<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="id5">
+<h1>特征值分解和奇异值分解<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h1>
 <p>对于特别大的矩阵，原来的方法可能需要太大的内存，考虑使用这两个方法替代：</p>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>scipy.sparse.linalg.eigs</dt>
-<dd><ul class="first last">
-<li>返回前 k 大的特征值和特征向量</li>
+<li><dl class="simple">
+<dt>scipy.sparse.linalg.eigs</dt><dd><ul>
+<li><p>返回前 k 大的特征值和特征向量</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt>scipy.sparse.linalg.svds</dt>
-<dd><ul class="first last">
-<li>返回前 k 大的奇异值和奇异向量</li>
+<li><dl class="simple">
+<dt>scipy.sparse.linalg.svds</dt><dd><ul>
+<li><p>返回前 k 大的奇异值和奇异向量</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 </ul>
-</div>
-<div class="section" id="id6">
-<h1>作者 &amp; 更新时间<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="id6">
+<h1>作者 &amp; 更新时间<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h1>
 <p>作者:<cite>李金  &lt;lijinwithyou&#64;gmail.com&gt;</cite></p>
 <p>提交: 2017/12/14</p>
-</div>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>CSV 文件和 csv 模块</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,42 +55,42 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="csv-csv">
-<h1>CSV 文件和 csv 模块<a class="headerlink" href="#csv-csv" title="Permalink to this headline">¶</a></h1>
+<section id="csv-csv">
+<h1>CSV 文件和 csv 模块<a class="headerlink" href="#csv-csv" title="Permalink to this heading">¶</a></h1>
 <p>标准库中有自带的 csv (逗号分隔值) 模块处理 csv 格式的文件：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
 </pre></div>
 </div>
-<div class="section" id="csv">
-<h2>读 csv 文件<a class="headerlink" href="#csv" title="Permalink to this headline">¶</a></h2>
+<section id="csv">
+<h2>读 csv 文件<a class="headerlink" href="#csv" title="Permalink to this heading">¶</a></h2>
 <p>假设我们有这样的一个文件：</p>
 <p>%% file data.csv</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;alpha 1&quot;</span><span class="p">,</span>  <span class="mi">100</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.443</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;alpha 1&quot;</span><span class="p">,</span>  <span class="mi">100</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.443</span>
 <span class="s2">&quot;beat  3&quot;</span><span class="p">,</span>   <span class="mi">12</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0934</span>
 <span class="s2">&quot;gamma 3a&quot;</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.6621</span>
 <span class="s2">&quot;delta 2a&quot;</span><span class="p">,</span>  <span class="mi">15</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.515</span>
 </pre></div>
 </div>
 <p>打开这个文件，并产生一个文件 reader：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.csv&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.csv&quot;</span><span class="p">)</span>
 <span class="n">r</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>可以按行迭代数据：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>for row in r:
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for row in r:
     print row
 fp.close()
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;alpha 1&#39;</span><span class="p">,</span> <span class="s1">&#39;  100&#39;</span><span class="p">,</span> <span class="s1">&#39; -1.443&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;alpha 1&#39;</span><span class="p">,</span> <span class="s1">&#39;  100&#39;</span><span class="p">,</span> <span class="s1">&#39; -1.443&#39;</span><span class="p">]</span>
 <span class="p">[</span><span class="s1">&#39;beat  3&#39;</span><span class="p">,</span> <span class="s1">&#39;   12&#39;</span><span class="p">,</span> <span class="s1">&#39; -0.0934&#39;</span><span class="p">]</span>
 <span class="p">[</span><span class="s1">&#39;gamma 3a&#39;</span><span class="p">,</span> <span class="s1">&#39; 192&#39;</span><span class="p">,</span> <span class="s1">&#39; -0.6621&#39;</span><span class="p">]</span>
 <span class="p">[</span><span class="s1">&#39;delta 2a&#39;</span><span class="p">,</span> <span class="s1">&#39;  15&#39;</span><span class="p">,</span> <span class="s1">&#39; -4.515&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>默认数据内容都被当作字符串处理，不过可以自己进行处理：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>data = []
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>data = []
 with open(&#39;data.csv&#39;) as fp:
     r = csv.reader(fp)
     for row in r:
@@ -99,78 +99,78 @@ data
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="s1">&#39;alpha 1&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.443</span><span class="p">],</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="s1">&#39;alpha 1&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.443</span><span class="p">],</span>
 <span class="p">[</span><span class="s1">&#39;beat  3&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.0934</span><span class="p">],</span>
 <span class="p">[</span><span class="s1">&#39;gamma 3a&#39;</span><span class="p">,</span> <span class="mi">192</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.6621</span><span class="p">],</span>
 <span class="p">[</span><span class="s1">&#39;delta 2a&#39;</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.515</span><span class="p">]]</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;data.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id1">
-<h2>写 csv 文件<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id1">
+<h2>写 csv 文件<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
 <p>可以使用 <em>csv.writer</em> 写入文件，不过相应地，传入的应该是以写方式打开的文件，不过一般要用 <em>‘wb’</em> 即二进制写入方式，防止出现换行不正确的问题：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">)]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">)]</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;out.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
 <span class="n">w</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
 <span class="n">w</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>显示结果：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>!cat &#39;out.csv&#39;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!cat &#39;out.csv&#39;
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">one</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">1.5</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">one</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">1.5</span>
 <span class="n">two</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mf">8.0</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id2">
-<h2>更换分隔符<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id2">
+<h2>更换分隔符<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>默认情况下，<em>csv</em> 模块默认 <em>csv</em> 文件都是由 <em>excel</em> 产生的，实际中可能会遇到这样的问题：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;one, </span><span class="se">\&quot;</span><span class="s1">real</span><span class="se">\&quot;</span><span class="s1"> string&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">)]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;one, </span><span class="se">\&quot;</span><span class="s1">real</span><span class="se">\&quot;</span><span class="s1"> string&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">)]</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;out.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
 <span class="n">w</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
 <span class="n">w</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span>!cat &#39;out.csv&#39;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!cat &#39;out.csv&#39;
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;one, &quot;&quot;real&quot;&quot; string&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">1.5</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;one, &quot;&quot;real&quot;&quot; string&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">1.5</span>
 <span class="n">two</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mf">8.0</span>
 </pre></div>
 </div>
 <p>可以修改分隔符来处理这组数据：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;one, </span><span class="se">\&quot;</span><span class="s1">real</span><span class="se">\&quot;</span><span class="s1"> string&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">)]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;one, </span><span class="se">\&quot;</span><span class="s1">real</span><span class="se">\&quot;</span><span class="s1"> string&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">)]</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;out.psv&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
 <span class="n">w</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;|&quot;</span><span class="p">)</span>
 <span class="n">w</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span>!cat &#39;out.psv&#39;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!cat &#39;out.psv&#39;
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;one, &quot;&quot;real&quot;&quot; string&quot;</span> <span class="o">|</span> <span class="mi">1</span> <span class="o">|</span> <span class="mf">1.5</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;one, &quot;&quot;real&quot;&quot; string&quot;</span> <span class="o">|</span> <span class="mi">1</span> <span class="o">|</span> <span class="mf">1.5</span>
 <span class="n">two</span><span class="o">|</span><span class="mi">2</span><span class="o">|</span><span class="mf">8.0</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;out.psv&#39;</span><span class="p">)</span>
 <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;out.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id3">
-<h2>其他选项<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id3">
+<h2>其他选项<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
 <p><em>numpy.loadtxt()</em> 和 <em>pandas.read_csv()</em> 可以用来读写包含很多数值数据的 <em>csv</em> 文件：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">file</span> <span class="n">trades</span><span class="o">.</span><span class="n">csv</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">file</span> <span class="n">trades</span><span class="o">.</span><span class="n">csv</span>
 <span class="n">Order</span><span class="p">,</span><span class="n">Date</span><span class="p">,</span><span class="n">Stock</span><span class="p">,</span><span class="n">Quantity</span><span class="p">,</span><span class="n">Price</span>
 <span class="n">A0001</span><span class="p">,</span><span class="mi">2013</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">01</span><span class="p">,</span><span class="n">AAPL</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mf">203.4</span>
 <span class="n">A0002</span><span class="p">,</span><span class="mi">2013</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">01</span><span class="p">,</span><span class="n">MSFT</span><span class="p">,</span><span class="mi">1500</span><span class="p">,</span><span class="mf">167.5</span>
@@ -179,40 +179,41 @@ data
 </div>
 <p>Writing trades.csv</p>
 <p>使用 pandas 进行处理，生成一个 DataFrame 对象：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;trades.csv&#39;</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="nb">print</span> <span class="n">df</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Order</span>  <span class="n">Date</span> <span class="n">Stock</span>  <span class="n">Quantity</span>  <span class="n">Price</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Order</span>  <span class="n">Date</span> <span class="n">Stock</span>  <span class="n">Quantity</span>  <span class="n">Price</span>
 <span class="n">A0001</span>  <span class="mi">2013</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">01</span>  <span class="n">AAPL</span>      <span class="mi">1000</span>  <span class="mf">203.4</span>
 <span class="n">A0002</span>  <span class="mi">2013</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">01</span>  <span class="n">MSFT</span>      <span class="mi">1500</span>  <span class="mf">167.5</span>
 <span class="n">A0003</span>  <span class="mi">2013</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">02</span>  <span class="n">GOOG</span>      <span class="mi">1500</span>  <span class="mf">167.5</span>
 </pre></div>
 </div>
 <p>通过名字进行索引：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Quantity&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Price&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Quantity&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Price&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Order</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Order</span>
 <span class="n">A0001</span>    <span class="mi">203400</span>
 <span class="n">A0002</span>    <span class="mi">251250</span>
 <span class="n">A0003</span>    <span class="mi">251250</span>
 <span class="n">dtype</span><span class="p">:</span> <span class="n">float64</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;trades.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id4">
-<h2>作者 &amp; 更新时间<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id4">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
 <p>作者:李金  <a class="reference external" href="mailto:lijinwithyou&#37;&#52;&#48;gmail&#46;com">lijinwithyou<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
-</div>
-</div>
+</section>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>

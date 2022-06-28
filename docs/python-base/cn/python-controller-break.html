@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>Python break 和 continue 语句</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,25 +55,25 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="python-break-continue">
-<h1>Python break 和 continue 语句<a class="headerlink" href="#python-break-continue" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2>简述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<section id="python-break-continue">
+<h1>Python break 和 continue 语句<a class="headerlink" href="#python-break-continue" title="Permalink to this heading">¶</a></h1>
+<section id="id1">
+<h2>简述<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
 <p>在 Python 中，break 和 continue 语句用于改变普通循环的流程。</p>
 <p>通常情况下，循环遍历一段代码，直到判断条件为 False。但有时，可能会希望不检测判断条件就可以终止当前迭代，甚至是整个循环。这种情况下，就需要使用 break 和 continue 语句。</p>
-</div>
-<div class="section" id="break">
-<h2>break 语句<a class="headerlink" href="#break" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="break">
+<h2>break 语句<a class="headerlink" href="#break" title="Permalink to this heading">¶</a></h2>
 <p>break 用于终止循环语句。即使循环条件不是 False 或者序列还没被完全递归完，也会终止。</p>
 <p><strong>注意：</strong> 如果 break 语句在嵌套循环内，break 将终止最内层循环。</p>
 <p>语法格式：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">break</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">break</span>
 </pre></div>
 </div>
 <p>流程图：</p>
 <img alt="http://img.blog.csdn.net/20170416165752222" src="http://img.blog.csdn.net/20170416165752222" />
 <p>当我们陶醉在单曲循环的世界中时，突然一声：老师来啦，^_^以迅雷不及掩耳之势关闭歌曲吧：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>i = 0
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>i = 0
 while i &lt; 3:
     if i == 1:
         print(&#39;老师来啦&#39;)
@@ -85,22 +85,22 @@ while i &lt; 3:
 </div>
 <button class="button">Run …</button>
 <p>运行程序，输出如下：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>正在播放：双节棍
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>正在播放：双节棍
 老师来啦
 关闭歌曲
 </pre></div>
 </div>
-</div>
-<div class="section" id="continue">
-<h2>continue 语句<a class="headerlink" href="#continue" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="continue">
+<h2>continue 语句<a class="headerlink" href="#continue" title="Permalink to this heading">¶</a></h2>
 <p>语法格式：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">continue</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">continue</span>
 </pre></div>
 </div>
 <p>流程图：</p>
 <img alt="http://img.blog.csdn.net/20170416170554216" src="http://img.blog.csdn.net/20170416170554216" />
 <p>列表播放时，遇到不喜欢的歌曲经常会选择下一曲，直接跳过当前歌曲：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>songs = [&#39;安静&#39;, &#39;蜗牛&#39;, &#39;稻香&#39;]
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>songs = [&#39;安静&#39;, &#39;蜗牛&#39;, &#39;稻香&#39;]
 # 通过索引遍历列表
 for i in range(len(songs)):
     if i == 1:
@@ -112,7 +112,7 @@ for i in range(len(songs)):
 </div>
 <button class="button">Run …</button>
 <p>运行程序，输出如下：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>正在播放： 安静
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>正在播放： 安静
 不想听 蜗牛
 快进，下一曲
 正在播放： 稻香
@@ -120,13 +120,14 @@ for i in range(len(songs)):
 </div>
 <p>遍历歌曲列表，当播放到“蜗牛”时，发现这首歌曲太煽情了，直接进入下一曲。</p>
 <p><strong>两者的根本区别：</strong> break 用于终止整个循环；continue 用于跳出本次循环，还会继续下一次循环。</p>
-</div>
-<div class="section" id="id2">
-<h2>作者 &amp; 更新时间<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id2">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>作者: <a class="reference external" href="http://blog.csdn.net/liang19890820">一去丶二三里</a></p>
 <p>提交: 2017/12/6</p>
-</div>
-</div>
+</section>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>

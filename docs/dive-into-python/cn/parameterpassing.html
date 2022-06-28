@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>函数进阶</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,18 +55,18 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="id1">
-<h1>函数进阶<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<section id="id1">
+<h1>函数进阶<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
 <p>本章内容包括参数传递，高阶函数，lambda 匿名函数，global 变量，递归</p>
-<div class="section" id="id2">
-<h2>函数是基本类型<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<section id="id2">
+<h2>函数是基本类型<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>在 Python 中，函数是一种基本类型的对象，这意味着</p>
 <ul class="simple">
-<li>可以将函数作为参数传给另一个函数</li>
-<li>将函数作为字典的值储存</li>
-<li>将函数作为另一个函数的返回值</li>
+<li><p>可以将函数作为参数传给另一个函数</p></li>
+<li><p>将函数作为字典的值储存</p></li>
+<li><p>将函数作为另一个函数的返回值</p></li>
 </ul>
-<div class="highlight-default"><div class="highlight"><pre><span></span>def square(x):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>def square(x):
     &quot;&quot;&quot;Square of x.&quot;&quot;&quot;
     return x*x
 def cube(x):
@@ -76,50 +76,49 @@ def cube(x):
 </div>
 <button class="button">Run …</button>
 <p>作为字典的值：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">funcs</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">funcs</span> <span class="o">=</span> <span class="p">{</span>
 <span class="s1">&#39;square&#39;</span><span class="p">:</span> <span class="n">square</span><span class="p">,</span>
 <span class="s1">&#39;cube&#39;</span><span class="p">:</span> <span class="n">cube</span><span class="p">,</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>例子：</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd><dl class="first docutils">
-<dt>def square(x):</dt>
-<dd>    ”“”Square of x.”“”
-    return x*x</dd>
-<dt>def cube(x):</dt>
-<dd>    ”“”Cube of x.”“”
-    return x*x*x</dd>
-<dt>funcs = {</dt>
-<dd>‘square’: square,
-‘cube’: cube,</dd>
+<dl>
+<dt>::</dt><dd><dl class="simple">
+<dt>def square(x):</dt><dd><p>    ”””Square of x.”””
+    return x*x</p>
+</dd>
+<dt>def cube(x):</dt><dd><p>    ”””Cube of x.”””
+    return x*x*x</p>
+</dd>
+<dt>funcs = {</dt><dd><p>‘square’: square,
+‘cube’: cube,</p>
+</dd>
 </dl>
 <p>}</p>
 <p>x = 2</p>
 <p>print square(x)
 print cube(x)</p>
-<dl class="last docutils">
-<dt>func in sorted(funcs):</dt>
-<dd>    print func, funcs[func](x)</dd>
+<dl class="simple">
+<dt>func in sorted(funcs):</dt><dd><p>    print func, funcs[func](x)</p>
+</dd>
 </dl>
 </dd>
 </dl>
 <button class="button">Run …</button>
-</div>
-</div>
-<div class="section" id="id3">
-<h1>函数参数<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id4">
-<h2>引用传递<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="id3">
+<h1>函数参数<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h1>
+<section id="id4">
+<h2>引用传递<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
 <p>Python 中的函数传递方式是 call by reference 即引用传递，例如，对于这样的用法：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
 <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>传递给函数 f 的是一个指向 x 所包含内容的引用，如果我们修改了这个引用所指向内容的值（例如 x[0]=999），那么外面的 x 的值也会被改变。不过如果我们在函数中赋给 x 一个新的值（例如另一个列表），那么在函数外面的 x 的值不会改变：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>def mod_f(x):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>def mod_f(x):
     x[0] = 999
     return x
 x = [1, 2, 3]
@@ -129,7 +128,7 @@ print x
 </pre></div>
 </div>
 <button class="button">Run …</button>
-<div class="highlight-default"><div class="highlight"><pre><span></span>def no_mod_f(x):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>def no_mod_f(x):
     x = [4, 5, 6]
     return x
 x = [1,2,3]
@@ -139,25 +138,24 @@ print x
 </pre></div>
 </div>
 <button class="button">Run …</button>
-</div>
-<div class="section" id="id5">
-<h2>默认参数是可变的<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id5">
+<h2>默认参数是可变的<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h2>
 <p>函数可以传递默认参数，默认参数的绑定发生在函数定义的时候，以后每次调用默认参数时都会使用同一个引用。</p>
 <p>这样的机制会导致这种情况的发生：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>def f(x = []):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>def f(x = []):
     x.append(1)
     return x
 </pre></div>
 </div>
 <p>理论上说，我们希望调用 f() 时返回的是 [1]， 但事实上：</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd><dl class="first docutils">
-<dt>def f(x = []):</dt>
-<dd>    x.append(1)
-    return x</dd>
+<dl>
+<dt>::</dt><dd><dl class="simple">
+<dt>def f(x = []):</dt><dd><p>    x.append(1)
+    return x</p>
+</dd>
 </dl>
-<p class="last">print f()
+<p>print f()
 print f()
 print f()
 print f(x = [9,9,9])
@@ -167,7 +165,7 @@ print f()</p>
 </dl>
 <button class="button">Run …</button>
 <p>将会得到以下结果</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
@@ -176,7 +174,7 @@ print f()</p>
 </pre></div>
 </div>
 <p>而我们希望看到的应该是这样：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
 <span class="k">if</span> <span class="n">x</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
 <span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -191,7 +189,7 @@ print f()</p>
 </div>
 <button class="button">Run …</button>
 <p>输出应该是</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
@@ -199,41 +197,41 @@ print f()</p>
 <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id6">
-<h2>高阶函数<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id6">
+<h2>高阶函数<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h2>
 <p>以函数作为参数，或者返回一个函数的函数是高阶函数，常用的例子有 <em>map</em> 和 <em>filter</em> 函数：</p>
 <p><em>map(f, sq)</em> 函数将 <em>f</em> 作用到*sq* 的每个元素上去，并返回结果组成的列表，相当于：</p>
 <p><em>[f(s) for s in sq]</em></p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">map</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">map</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>输入：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
 </pre></div>
 </div>
 <p><em>filter(f, sq)</em> 函数的作用相当于，对于 <em>sq</em> 的每个元素 <em>s</em>，返回所有 <em>f(s)</em> 为 <em>True</em> 的 <em>s</em> 组成的列表，相当于：</p>
 <p><em>[s for s in sq if f(s)]</em></p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_even</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_even</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="k">return</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
 <span class="nb">filter</span><span class="p">(</span><span class="n">is_even</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>输出：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>一起使用：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">map</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="nb">filter</span><span class="p">(</span><span class="n">is_even</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">map</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="nb">filter</span><span class="p">(</span><span class="n">is_even</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)))</span>
 </pre></div>
 </div>
 <p>输出：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
 </pre></div>
 </div>
 <p><em>reduce(f, sq)</em> 函数接受一个二元操作函数 <em>f(x,y)</em>，并对于序列 <em>sq</em> 每次合并两个元素：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>def my_add(x, y):
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>def my_add(x, y):
     return x + y
 reduce(my_add, [1,2,3,4,5])
 </pre></div>
@@ -243,62 +241,59 @@ reduce(my_add, [1,2,3,4,5])
 <p>传入加法函数，相当于对序列求和。</p>
 <p>返回一个函数：</p>
 <p>In [13]:</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd><dl class="first docutils">
-<dt>def make_logger(target):</dt>
-<dd><dl class="first docutils">
-<dt>def logger(data):</dt>
-<dd><dl class="first last docutils">
-<dt>with open(target, ‘a’) as f:</dt>
-<dd>f.write(data + ‘n’)</dd>
+<dl>
+<dt>::</dt><dd><dl>
+<dt>def make_logger(target):</dt><dd><dl class="simple">
+<dt>def logger(data):</dt><dd><dl class="simple">
+<dt>with open(target, ‘a’) as f:</dt><dd><p>f.write(data + ‘n’)</p>
+</dd>
 </dl>
 </dd>
 </dl>
-<p class="last">return logger</p>
+<p>return logger</p>
 </dd>
 </dl>
-<p class="last">foo_logger = make_logger(‘foo.txt’)
+<p>foo_logger = make_logger(‘foo.txt’)
 foo_logger(‘Hello’)
 foo_logger(‘World’)</p>
 </dd>
 </dl>
 <button class="button">Run …</button>
 <p>In [14]:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>!cat foo.txt
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!cat foo.txt
 Hello
 World
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>In [15]:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;foo.txt&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
-</div>
-<div class="section" id="id7">
-<h2>匿名函数<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id7">
+<h2>匿名函数<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h2>
 <p>在使用 <em>map</em>， <em>filter</em>，<em>reduce</em> 等函数的时候，为了方便，对一些简单的函数，我们通常使用匿名函数的方式进行处理，其基本形式是：</p>
 <p>lambda &lt;variables&gt;: &lt;expression&gt;</p>
 <p>例如，我们可以将这个：</p>
 <p>In [16]:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="nb">map</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="nb">map</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>用匿名函数替换为：</p>
 <p>In [17]:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>匿名函数虽然写起来比较方便（省去了定义函数的烦恼），但是有时候会比较难于阅读：</p>
 <p>In [18]:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s1</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">s1</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span>
 <span class="mi">285</span>
 </pre></div>
@@ -306,18 +301,18 @@ World
 <button class="button">Run …</button>
 <p>当然，更简单地，我们可以写成这样：</p>
 <p>In [19]:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s2</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">s2</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 <span class="nb">print</span> <span class="n">s2</span>
 <span class="mi">285</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
-</div>
-<div class="section" id="global">
-<h2>global 变量<a class="headerlink" href="#global" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="global">
+<h2>global 变量<a class="headerlink" href="#global" title="Permalink to this heading">¶</a></h2>
 <p>一般来说，函数中是可以直接使用全局变量的值的：</p>
 <p>In [20]:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">15</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">15</span>
 <span class="k">def</span> <span class="nf">print_x</span><span class="p">():</span>
 <span class="nb">print</span> <span class="n">x</span>
 <span class="n">print_x</span><span class="p">()</span>
@@ -327,7 +322,7 @@ World
 <button class="button">Run …</button>
 <p>但是要在函数中修改全局变量的值，需要加上 <em>global</em> 关键字：</p>
 <p>In [21]:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">15</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">15</span>
 <span class="k">def</span> <span class="nf">print_newx</span><span class="p">():</span>
 <span class="k">global</span> <span class="n">x</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">18</span>
@@ -341,7 +336,7 @@ World
 <button class="button">Run …</button>
 <p>如果不加上这句 global 那么全局变量的值不会改变：</p>
 <p>In [22]:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">15</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">15</span>
 <span class="k">def</span> <span class="nf">print_newx</span><span class="p">():</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">18</span>
 <span class="nb">print</span> <span class="n">x</span>
@@ -352,13 +347,13 @@ World
 </pre></div>
 </div>
 <button class="button">Run …</button>
-</div>
-<div class="section" id="id8">
-<h2>递归<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id8">
+<h2>递归<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h2>
 <p>递归是指函数在执行的过程中调用了本身，一般用于分治法，不过在 <em>Python</em> 中这样的用法十分地小，所以一般不怎么使用：</p>
 <p>Fibocacci 数列：</p>
 <p>In [23]:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fib1</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fib1</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 <span class="sd">&quot;&quot;&quot;Fib with recursion.&quot;&quot;&quot;</span>
 <span class="c1"># base case</span>
 <span class="k">if</span> <span class="n">n</span><span class="o">==</span><span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
@@ -373,7 +368,7 @@ World
 <button class="button">Run …</button>
 <p>一个更高效的非递归版本：</p>
 <p>In [24]:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fib2</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fib2</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 <span class="sd">&quot;&quot;&quot;Fib without recursion.&quot;&quot;&quot;</span>
 <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
@@ -386,7 +381,7 @@ World
 <button class="button">Run …</button>
 <p>速度比较：</p>
 <p>In [25]:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">timeit</span> <span class="n">fib1</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">timeit</span> <span class="n">fib1</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 <span class="o">%</span><span class="n">timeit</span> <span class="n">fib2</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 <span class="mi">100</span> <span class="n">loops</span><span class="p">,</span> <span class="n">best</span> <span class="n">of</span> <span class="mi">3</span><span class="p">:</span> <span class="mf">5.35</span> <span class="n">ms</span> <span class="n">per</span> <span class="n">loop</span>
 <span class="mi">100000</span> <span class="n">loops</span><span class="p">,</span> <span class="n">best</span> <span class="n">of</span> <span class="mi">3</span><span class="p">:</span> <span class="mf">2.2</span> <span class="n">μs</span> <span class="n">per</span> <span class="n">loop</span>
@@ -396,7 +391,7 @@ World
 <p>对于第一个递归函数来说，调用 <em>fib(n+2)</em> 的时候计算 <em>fib(n+1)</em>, <em>fib(n)</em>，调用 <em>fib(n+1)</em> 的时候也计算了一次 <em>fib(n)</em>，这样造成了重复计算。</p>
 <p>使用缓存机制的递归版本，这里利用了默认参数可变的性质，构造了一个缓存：</p>
 <p>In [26]:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fib3</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">cache</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">}):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fib3</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">cache</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">}):</span>
 <span class="sd">&quot;&quot;&quot;Fib with recursion and caching.&quot;&quot;&quot;</span>
 <span class="k">try</span><span class="p">:</span>
 <span class="k">return</span> <span class="n">cache</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
@@ -411,18 +406,20 @@ World
 </div>
 <button class="button">Run …</button>
 <blockquote>
-<div>[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+<div><p>[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 100 loops, best of 3: 5.37 ms per loop
 100000 loops, best of 3: 2.19 μs per loop
 The slowest run took 150.16 times longer than the fastest. This could mean that an intermediate result is being cached
-1000000 loops, best of 3: 230 ns per loop</div></blockquote>
-</div>
-<div class="section" id="id9">
-<h2>作者 &amp; 更新时间<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+1000000 loops, best of 3: 230 ns per loop</p>
+</div></blockquote>
+</section>
+<section id="id9">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id9" title="Permalink to this heading">¶</a></h2>
 <p>作者:李金  <a class="reference external" href="mailto:lijinwithyou&#37;&#52;&#48;gmail&#46;com">lijinwithyou<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
 <p>提交: 2017/12/6</p>
-</div>
-</div>
+</section>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>

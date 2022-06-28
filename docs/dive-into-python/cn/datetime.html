@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>datetime 模块</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,34 +55,34 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="datetime">
-<h1>datetime 模块<a class="headerlink" href="#datetime" title="Permalink to this headline">¶</a></h1>
+<section id="datetime">
+<h1>datetime 模块<a class="headerlink" href="#datetime" title="Permalink to this heading">¶</a></h1>
 <p>datetime 提供了基础时间和日期的处理。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
 <span class="nb">dir</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
-<div class="section" id="date">
-<h2>date 对象<a class="headerlink" href="#date" title="Permalink to this headline">¶</a></h2>
+<section id="date">
+<h2>date 对象<a class="headerlink" href="#date" title="Permalink to this heading">¶</a></h2>
 <p>可以使用 date(year, month, day) 产生一个 date 对象：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
 <span class="n">d1</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2007</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
 <span class="n">d2</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2008</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>可以格式化 date 对象的输出：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
 <span class="n">d1</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2007</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
 <span class="n">d2</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2008</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
 <span class="nb">print</span> <span class="n">d1</span>
 <span class="nb">print</span> <span class="n">d1</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%A, %m/</span><span class="si">%d</span><span class="s1">/%y&#39;</span><span class="p">)</span>
-<span class="nb">print</span> <span class="n">d1</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%a, %m-</span><span class="si">%d</span><span class="s1">-%Y&#39;</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">d1</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%a</span><span class="s1">, %m-</span><span class="si">%d</span><span class="s1">-%Y&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>可以看两个日期相差多久：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
 <span class="n">d1</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2007</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
 <span class="n">d2</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2008</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
 <span class="nb">print</span> <span class="n">d2</span> <span class="o">-</span> <span class="n">d1</span>
@@ -90,7 +90,7 @@
 </div>
 <button class="button">Run …</button>
 <p>返回的是一个 timedelta 对象：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
 <span class="n">d1</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2007</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
 <span class="n">d2</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2008</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
 <span class="n">d</span> <span class="o">=</span> <span class="n">d2</span> <span class="o">-</span> <span class="n">d1</span>
@@ -99,23 +99,23 @@
 </pre></div>
 </div>
 <p>查看今天的日期：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
 <span class="nb">print</span> <span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
-</div>
-<div class="section" id="time">
-<h2>time 对象<a class="headerlink" href="#time" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="time">
+<h2>time 对象<a class="headerlink" href="#time" title="Permalink to this heading">¶</a></h2>
 <p>可以使用 time(hour, min, sec, us) 产生一个 time 对象：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
 <span class="n">t1</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">time</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">38</span><span class="p">)</span>
 <span class="n">t2</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">time</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>改变显示格式：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
 <span class="n">t1</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">time</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">38</span><span class="p">)</span>
 <span class="nb">print</span> <span class="n">t1</span>
 <span class="nb">print</span> <span class="n">t1</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%I:%M, %p&#39;</span><span class="p">)</span>
@@ -124,19 +124,19 @@
 </div>
 <button class="button">Run …</button>
 <p>因为没有具体的日期信息，所以 time 对象不支持减法操作。</p>
-</div>
-<div class="section" id="id1">
-<h2>datetime 对象<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id1">
+<h2>datetime 对象<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
 <p>可以使用 datetime(year, month, day, hr, min, sec, us) 来创建一个 datetime 对象。</p>
 <p>获得当前时间：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
 <span class="n">d1</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
 <span class="nb">print</span> <span class="n">d1</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>给当前的时间加上 30 天，timedelta 的参数是 timedelta(day, hr, min, sec, us)：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
 <span class="n">d1</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
 <span class="n">d2</span> <span class="o">=</span> <span class="n">d1</span> <span class="o">+</span> <span class="n">dt</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
 <span class="nb">print</span> <span class="n">d2</span>
@@ -144,82 +144,79 @@
 </div>
 <button class="button">Run …</button>
 <p>除此之外，我们还可以通过一些指定格式的字符串来创建 datetime 对象：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
 <span class="nb">print</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="s1">&#39;2/10/01&#39;</span><span class="p">,</span> <span class="s1">&#39;%m/</span><span class="si">%d</span><span class="s1">/%y&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
-<table border="1" class="docutils">
-<colgroup>
-<col width="12%" />
-<col width="88%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">子表达式</th>
-<th class="head">匹配内容</th>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>子表达式</p></th>
+<th class="head"><p>匹配内容</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>%a</td>
-<td>星期英文缩写</td>
+<tbody>
+<tr class="row-even"><td><p>%a</p></td>
+<td><p>星期英文缩写</p></td>
 </tr>
-<tr class="row-odd"><td>%A</td>
-<td>星期英文</td>
+<tr class="row-odd"><td><p>%A</p></td>
+<td><p>星期英文</p></td>
 </tr>
-<tr class="row-even"><td>%w</td>
-<td>一星期的第几天，[0(sun),6]</td>
+<tr class="row-even"><td><p>%w</p></td>
+<td><p>一星期的第几天，[0(sun),6]</p></td>
 </tr>
-<tr class="row-odd"><td>%b</td>
-<td>月份英文缩写</td>
+<tr class="row-odd"><td><p>%b</p></td>
+<td><p>月份英文缩写</p></td>
 </tr>
-<tr class="row-even"><td>%B</td>
-<td>月份英文</td>
+<tr class="row-even"><td><p>%B</p></td>
+<td><p>月份英文</p></td>
 </tr>
-<tr class="row-odd"><td>%d</td>
-<td>日期，[01,31]</td>
+<tr class="row-odd"><td><p>%d</p></td>
+<td><p>日期，[01,31]</p></td>
 </tr>
-<tr class="row-even"><td>%H</td>
-<td>小时，[00,23]</td>
+<tr class="row-even"><td><p>%H</p></td>
+<td><p>小时，[00,23]</p></td>
 </tr>
-<tr class="row-odd"><td>%I</td>
-<td>小时，[01,12]</td>
+<tr class="row-odd"><td><p>%I</p></td>
+<td><p>小时，[01,12]</p></td>
 </tr>
-<tr class="row-even"><td>%j</td>
-<td>一年的第几天，[001,366]</td>
+<tr class="row-even"><td><p>%j</p></td>
+<td><p>一年的第几天，[001,366]</p></td>
 </tr>
-<tr class="row-odd"><td>%m</td>
-<td>月份，[01,12]</td>
+<tr class="row-odd"><td><p>%m</p></td>
+<td><p>月份，[01,12]</p></td>
 </tr>
-<tr class="row-even"><td>%M</td>
-<td>分钟，[00,59]</td>
+<tr class="row-even"><td><p>%M</p></td>
+<td><p>分钟，[00,59]</p></td>
 </tr>
-<tr class="row-odd"><td>%p</td>
-<td>AM 和 PM</td>
+<tr class="row-odd"><td><p>%p</p></td>
+<td><p>AM 和 PM</p></td>
 </tr>
-<tr class="row-even"><td>%S</td>
-<td>秒钟，[00,61] （大概是有闰秒的存在）</td>
+<tr class="row-even"><td><p>%S</p></td>
+<td><p>秒钟，[00,61] （大概是有闰秒的存在）</p></td>
 </tr>
-<tr class="row-odd"><td>%U</td>
-<td>一年中的第几个星期，星期日为第一天，[00,53]</td>
+<tr class="row-odd"><td><p>%U</p></td>
+<td><p>一年中的第几个星期，星期日为第一天，[00,53]</p></td>
 </tr>
-<tr class="row-even"><td>%W</td>
-<td>一年中的第几个星期，星期一为第一天，[00,53]</td>
+<tr class="row-even"><td><p>%W</p></td>
+<td><p>一年中的第几个星期，星期一为第一天，[00,53]</p></td>
 </tr>
-<tr class="row-odd"><td>%y</td>
-<td>没有世纪的年份</td>
+<tr class="row-odd"><td><p>%y</p></td>
+<td><p>没有世纪的年份</p></td>
 </tr>
-<tr class="row-even"><td>%Y</td>
-<td>完整的年份</td>
+<tr class="row-even"><td><p>%Y</p></td>
+<td><p>完整的年份</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="id2">
-<h2>作者 &amp; 更新时间<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id2">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>作者:<cite>李金  &lt;lijinwithyou&#64;gmail.com&gt;</cite></p>
 <p>提交: 2017/12/6</p>
-</div>
-</div>
+</section>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>

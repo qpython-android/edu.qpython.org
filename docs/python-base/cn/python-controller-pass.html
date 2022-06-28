@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>Python pass 语句</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,61 +55,61 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="python-pass">
-<h1>Python pass 语句<a class="headerlink" href="#python-pass" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2>简述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<section id="python-pass">
+<h1>Python pass 语句<a class="headerlink" href="#python-pass" title="Permalink to this heading">¶</a></h1>
+<section id="id1">
+<h2>简述<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
 <p>在 Python 中，pass 是一个空语句，为了保持程序结构的完整性。一般情况下，pass 被用作占位符。</p>
 <p>pass 和注释之间的区别在于：解释器会完全忽略注释，但不会忽略 pass。</p>
 <p>然而，执行 pass 时什么都不会发生，导致无操作（NOP）。</p>
-</div>
-<div class="section" id="pass">
-<h2>pass 语句<a class="headerlink" href="#pass" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="pass">
+<h2>pass 语句<a class="headerlink" href="#pass" title="Permalink to this heading">¶</a></h2>
 <p>语法格式：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">pass</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">pass</span>
 </pre></div>
 </div>
 <p>假设，欧阳锋写了一个循环或者函数，尚未实现（暂未想好如何实现或者出差交付给其他人），但是会在将来的某个时候实现。这时，如果循环体或者函数体为空，解释器就会报错。所以，可以使用 pass 语句构造一个不做任何事情的主体。</p>
 <p>上课了，开始听歌，随机播放、顺序播放、单曲循环、列表循环。。。反复思量着，到底选哪一个呢？没想好，那么就先纠结着，什么都不干！</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">songs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;安静&#39;</span><span class="p">,</span> <span class="s1">&#39;蜗牛&#39;</span><span class="p">,</span> <span class="s1">&#39;稻香&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">songs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;安静&#39;</span><span class="p">,</span> <span class="s1">&#39;蜗牛&#39;</span><span class="p">,</span> <span class="s1">&#39;稻香&#39;</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">song</span> <span class="ow">in</span> <span class="n">songs</span><span class="p">:</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>执行语句，输出如下：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">unexpected</span> <span class="n">EOF</span> <span class="k">while</span> <span class="n">parsing</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">unexpected</span> <span class="n">EOF</span> <span class="k">while</span> <span class="n">parsing</span>
 </pre></div>
 </div>
 <p>报错了，所以呢？还是乖乖的加上 pass 吧！</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>songs = [&#39;安静&#39;, &#39;蜗牛&#39;, &#39;稻香&#39;]
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>songs = [&#39;安静&#39;, &#39;蜗牛&#39;, &#39;稻香&#39;]
 for song in songs:
     pass
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>相应的，也可以在空函数或类中做同样的事情：</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd><dl class="first last docutils">
-<dt>def function(args):</dt>
-<dd>    pass</dd>
+<dl class="simple">
+<dt>::</dt><dd><dl class="simple">
+<dt>def function(args):</dt><dd><p>    pass</p>
+</dd>
 </dl>
 </dd>
 </dl>
 <button class="button">Run …</button>
-<div class="highlight-default"><div class="highlight"><pre><span></span>class example:
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>class example:
     pass
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>总之，pass 什么也不做，就是为了占位，防止语法错误。</p>
-</div>
-<div class="section" id="id2">
-<h2>作者 &amp; 更新时间<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id2">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>作者: <a class="reference external" href="http://blog.csdn.net/liang19890820">一去丶二三里</a></p>
 <p>提交: 2017/12/6</p>
-</div>
-</div>
+</section>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>

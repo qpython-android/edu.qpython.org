@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>简述</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,26 +55,26 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="id1">
-<h1>简述<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<section id="id1">
+<h1>简述<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
 <p>在字符串中，有时需要包含一些特殊的符号，但是有些符号不能直接输出，就需要使用转义序列。</p>
 <p>关于转义，维基百科这样定义：</p>
 <p>转义是当由于技术等原因、无法直接在代码中写出所要的字符时采用的，以多个字符的有序组合来表示原本需要的字符的手段，而转义序列（escape sequence）指在转义时使用的有序字符组合。</p>
-<div class="section" id="id2">
-<h2>转义序列<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<section id="id2">
+<h2>转义序列<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>作为一名伟大的程序员，在向别人介绍自己的职业时，往往会很自豪的说：Hi, “I’m a Pythoner”。如果要在 Python 中表示这句话，不能直接使用单引号或双引号。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi, &quot;I&#39;</span><span class="n">m</span> <span class="n">a</span> <span class="n">Pythoner</span><span class="s2">&quot;&#39;)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi, &quot;I&#39;</span><span class="n">m</span> <span class="n">a</span> <span class="n">Pythoner</span><span class="s2">&quot;&#39;)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hi, &quot;</span><span class="n">I</span><span class="s1">&#39;m a Pythoner&quot;&quot;)</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>要解决这个问题，有两种方式：</p>
 <ul class="simple">
-<li>使用三重引号</li>
-<li>使用转义序列</li>
+<li><p>使用三重引号</p></li>
+<li><p>使用转义序列</p></li>
 </ul>
 <p>转义序列以反斜杠（）开头，并以不同的方式解释。如果使用单引号来表示字符串，那么字符串内的所有单引号都必须转义，双引号也不例外。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;Hi, &quot;I&#39;m a Pythoner&quot;&#39;&#39;&#39;</span><span class="p">)</span>  <span class="c1"># 使用三重引号</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;Hi, &quot;I&#39;m a Pythoner&quot;&#39;&#39;&#39;</span><span class="p">)</span>  <span class="c1"># 使用三重引号</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hi, &quot;I</span><span class="se">\&#39;</span><span class="s1">m a Pythoner&quot;&#39;</span><span class="p">)</span>  <span class="c1"># 转义单引号</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hi, </span><span class="se">\&quot;</span><span class="s2">I&#39;m a Pythoner</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># 转义双引号</span>
 </pre></div>
@@ -82,35 +82,36 @@
 <button class="button">Run …</button>
 <p>以下是 Python 支持的所有转义序列的列表：</p>
 <p>测试其中的转义序列，感受一下实际的意思：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Windows</span><span class="se">\\</span><span class="s1">System32&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Windows</span><span class="se">\\</span><span class="s1">System32&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;I like </span><span class="se">\n</span><span class="s1">Python&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This is </span><span class="se">\x48\x45\x58</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
-</div>
-<div class="section" id="id3">
-<h2>原始字符串<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id3">
+<h2>原始字符串<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
 <p>原始字符串（Raw String），简单理解就是：字符串中的每个字符都表示原始含义。</p>
 <p>有时，可能希望忽略字符串中的转义序列：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This is </span><span class="se">\x48\x45\x58</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This is </span><span class="se">\x48\x45\x58</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>遗憾的是，这里的反斜杠并不是原始符号的含义，而是和后面的字符一起表示十六进制（被转义了）。</p>
 <p>如何避免呢？很 easy，为字符串加上前缀 r 或者 R（大小写均可）：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;This is \x48\x45\x58&#39;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;This is \x48\x45\x58&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <button class="button">Run …</button>
 <p>R 是 Raw 的缩写，以其开头的字符串被称作原始字符串，并将反斜杠视为原义字符。因此，其中的任何转义序列都不会被特别处理，将会被忽略。</p>
-</div>
-<div class="section" id="id4">
-<h2>作者 &amp; 更新时间<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id4">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
 <p>作者: <a class="reference external" href="http://blog.csdn.net/liang19890820">一去丶二三里</a></p>
 <p>提交: 2017/12/6</p>
-</div>
-</div>
+</section>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>

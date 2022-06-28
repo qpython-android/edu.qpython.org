@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <title>动态编译</title>
-<link rel="stylesheet" href="../../static/style.css" type="text/css" />
-<link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../../static/pygments.css" />
+<link rel="stylesheet" type="text/css" href="../../static/style.css" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
+</head><body>
 <div class="header doc-header web-show">
 <div class="col-sm-offset-2 col-sm-8  index-header">
 <div class="navbar-header">
@@ -55,156 +55,158 @@
 <div class="documentwrapper">
 <div class="bodywrapper">
 <div class="body" role="main">
-<div class="section" id="id1">
-<h1>动态编译<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id2">
-<h2>标准编程语言<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<section id="id1">
+<h1>动态编译<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<section id="id2">
+<h2>标准编程语言<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h2>
 <p>对于 <strong>C</strong> 语言，代码一般要先编译，再执行。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">.</span><span class="n">c</span> <span class="o">-&gt;</span> <span class="o">.</span><span class="n">exe</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span><span class="n">c</span> <span class="o">-&gt;</span> <span class="o">.</span><span class="n">exe</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id3">
-<h2>解释器语言<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">shell</span> <span class="n">脚本</span>
+</section>
+<section id="id3">
+<h2>解释器语言<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">shell</span> <span class="n">脚本</span>
 <span class="o">.</span><span class="n">sh</span> <span class="o">-&gt;</span> <span class="n">interpreter</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="byte-code">
-<h2>Byte Code 编译<a class="headerlink" href="#byte-code" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="byte-code">
+<h2>Byte Code 编译<a class="headerlink" href="#byte-code" title="Permalink to this heading">¶</a></h2>
 <p><strong>Python</strong>, <strong>Java</strong> 等语言先将代码编译为 byte code（不是机器码），然后再处理：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">.</span><span class="n">py</span> <span class="o">-&gt;</span> <span class="o">.</span><span class="n">pyc</span> <span class="o">-&gt;</span> <span class="n">interpreter</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">.</span><span class="n">py</span> <span class="o">-&gt;</span> <span class="o">.</span><span class="n">pyc</span> <span class="o">-&gt;</span> <span class="n">interpreter</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="eval">
-<h2>eval 函数<a class="headerlink" href="#eval" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">eval</span><span class="p">(</span><span class="n">statement</span><span class="p">,</span> <span class="n">glob</span><span class="p">,</span> <span class="n">local</span><span class="p">)</span>
+</section>
+<section id="eval">
+<h2>eval 函数<a class="headerlink" href="#eval" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">eval</span><span class="p">(</span><span class="n">statement</span><span class="p">,</span> <span class="n">glob</span><span class="p">,</span> <span class="n">local</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>使用 <em>eval</em> 函数动态执行代码，返回执行的值：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="nb">eval</span><span class="p">(</span><span class="s2">&quot;a+1&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span>
 </pre></div>
 </div>
 <p>可以接收明明空间参数：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">local</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">local</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">glob</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="nb">eval</span><span class="p">(</span><span class="s2">&quot;a+1&quot;</span><span class="p">,</span> <span class="n">glob</span><span class="p">,</span> <span class="n">local</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">3</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>
 </pre></div>
 </div>
 <p>这里 <em>local</em> 中的 <em>a</em> 先被找到。</p>
-</div>
-<div class="section" id="exec">
-<h2>exec 函数<a class="headerlink" href="#exec" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">exec</span><span class="p">(</span><span class="n">statement</span><span class="p">,</span> <span class="n">glob</span><span class="p">,</span> <span class="n">local</span><span class="p">)</span>
+</section>
+<section id="exec">
+<h2>exec 函数<a class="headerlink" href="#exec" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">exec</span><span class="p">(</span><span class="n">statement</span><span class="p">,</span> <span class="n">glob</span><span class="p">,</span> <span class="n">local</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>使用 <em>exec</em> 可以添加修改原有的变量。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">exec</span><span class="p">(</span><span class="s2">&quot;b = a+1&quot;</span><span class="p">)</span>
 <span class="nb">print</span> <span class="n">b</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">local</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">local</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">glob</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">exec</span><span class="p">(</span><span class="s2">&quot;b = a+1&quot;</span><span class="p">,</span> <span class="n">glob</span><span class="p">,</span> <span class="n">local</span><span class="p">)</span>
 <span class="nb">print</span> <span class="n">local</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
 </pre></div>
 </div>
 <p>执行之后，<em>b</em> 在 <em>local</em> 命名空间中。</p>
-</div>
-<div class="section" id="id4">
-<h2>警告<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id4">
+<h2>警告<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h2>
 <p>动态执行的时候要注意，不要执行不信任的用户输入，因为它们拥有 <em>Python</em> 的全部权限。</p>
-</div>
-<div class="section" id="compile-byte-code">
-<h2>compile 函数生成 byte code<a class="headerlink" href="#compile-byte-code" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="compile-byte-code">
+<h2>compile 函数生成 byte code<a class="headerlink" href="#compile-byte-code" title="Permalink to this heading">¶</a></h2>
 <blockquote>
-<div>compile(str, filename, mode)</div></blockquote>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<div><p>compile(str, filename, mode)</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">c</span> <span class="o">=</span> <span class="nb">compile</span><span class="p">(</span><span class="s2">&quot;a+2&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s1">&#39;eval&#39;</span><span class="p">)</span>
 <span class="nb">eval</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">3</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">c</span> <span class="o">=</span> <span class="nb">compile</span><span class="p">(</span><span class="s2">&quot;b=a+2&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s1">&#39;exec&#39;</span><span class="p">)</span>
 <span class="n">exec</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 <span class="n">b</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">3</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="abstract-syntax-trees">
-<h2>abstract syntax trees<a class="headerlink" href="#abstract-syntax-trees" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ast</span>
+</section>
+<section id="abstract-syntax-trees">
+<h2>abstract syntax trees<a class="headerlink" href="#abstract-syntax-trees" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ast</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tree</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;a+2&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;eval&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tree</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&quot;a+2&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;eval&quot;</span><span class="p">)</span>
 <span class="n">ast</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;Expression(body=BinOp(left=Name(id=&#39;a&#39;, ctx=Load()), op=Add(), right=Num(n=2)))&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Expression(body=BinOp(left=Name(id=&#39;a&#39;, ctx=Load()), op=Add(), right=Num(n=2)))&quot;</span>
 </pre></div>
 </div>
 <p>改变常数的值：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tree</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="mi">3</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tree</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">right</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">ast</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;Expression(body=BinOp(left=Name(id=&#39;a&#39;, ctx=Load()), op=Add(), right=Num(n=3)))&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Expression(body=BinOp(left=Name(id=&#39;a&#39;, ctx=Load()), op=Add(), right=Num(n=3)))&quot;</span>
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">c</span> <span class="o">=</span> <span class="nb">compile</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;eval&#39;</span><span class="p">)</span>
 <span class="nb">eval</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">4</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span>
 </pre></div>
 </div>
 <p>安全的使用方法 <em>literal_eval</em> ，只支持基本值的操作：</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ast</span><span class="o">.</span><span class="n">literal_eval</span><span class="p">(</span><span class="s2">&quot;[10.0, 2, True, &#39;foo&#39;]&quot;</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ast</span><span class="o">.</span><span class="n">literal_eval</span><span class="p">(</span><span class="s2">&quot;[10.0, 2, True, &#39;foo&#39;]&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>结果:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mf">10.0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mf">10.0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id5">
-<h2>作者 &amp; 更新时间<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id5">
+<h2>作者 &amp; 更新时间<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h2>
 <p>作者:李金  <a class="reference external" href="mailto:lijinwithyou&#37;&#52;&#48;gmail&#46;com">lijinwithyou<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
 <p>提交: 2017/12/6</p>
-</div>
-</div>
+</section>
+</section>
+<div class="clearer"></div>
 </div>
 </div>
 </div>
