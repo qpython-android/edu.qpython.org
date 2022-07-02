@@ -37,16 +37,13 @@ def cd(c, path2, echo=True):
         print('='*42)
         c.run('echo \n')
 
+@task
+def built(c):
 
-def _fix(c):
+    c.run("rm -fr ../docs")
+    c.run("sphinx-build -b html -d build/doctrees source  build/html")
 
-    c.run("find . -name '*.html' -exec python ../../analytics.py {} \;")
-    c.run("find . -name '*.html' -exec sed -i -e 's/_static/static/g;s/_images/images/g' {} \;")
-    c.run("python ../../replace.py")
-    c.run("find . -name '*-e' -exec rm {} \;")
-    c.run("mv _static static")
-    c.run("mv _images  images")
-
+    print("BUILT & export => build/html")
     #ver(c)
     return None
 
@@ -54,9 +51,8 @@ def _fix(c):
 def pub(c):
     """$ inv pub ~ build all and publish through githuba-pages
     """
-    c.run("rm -fr ../docs")
-    c.run("sphinx-build -b html -d build/doctrees source  build/html")
-
+    built(c)
+    
     with c.cd("build/html"):
         c.run("find . -name '*.html' -exec python ../../analytics.py {} \;")
         c.run("find . -name '*.html' -exec sed -i -e 's/_static/static/g;s/_images/images/g' {} \;")

@@ -4,7 +4,7 @@ The courses are still in the planning. Welcome to reward us.
 
 1. **Primary course**
 
-If the total number of people who reward us is more than 100, we promise to complete the primary course within 1 week, so that, after finishing your study, you can master the basic concepts and write simple scripts. 
+If the total number of people who reward us is more than 100, we promise to complete the primary course within 1 week, so that, after finishing your study, you can master the basic concepts and write simple scripts.
 
 2. **Intermediate course**
 
