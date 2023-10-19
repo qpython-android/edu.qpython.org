@@ -1,4 +1,5 @@
 #!/usr/bin/env python2
+#author: River
 import sys,os
 with open(sys.argv[1], 'r') as f, open('/tmp/qpydoc.tmp', 'w') as g, open(os.path.dirname(os.path.abspath(__file__))+'/analyticscode.txt','r') as e:
     pth = sys.argv[1][1:]
