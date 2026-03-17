@@ -6,16 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QPython+ - 个性化编程学习社区</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
     <div class="container mx-auto p-4">
         <div class="grid grid-cols-1 gap-6">
-            <a href="#" onclick="milib.download('https://edu.qpython.org/static/yhc-startup.png','image/png')" class="block bg-gray-100 rounded-lg shadow-lg overflow-hidden">
-                <img src="static/qpy-wechat.png" width="100%">
-                <div class="p-4 bg-white">
-                <p style='padding:0px 10px;color:grey'>截图 & 扫码关注学习应用（服务号：QPython编程）或添加River+（微信号yhc-startup）获得学习帮助</p>
+            <a href="#" class="block bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+                <img src="static/qpy-wechat.png" width="100%" onclick="milib.download('https://edu.qpython.org/static/qpy-wechat.png','image/png')">
+                <div class="p-4 bg-white" style="text-aligh:center">
+                    <p style='padding:0px 10px;color:grey;'>
+                    微信搜索 <b>learnwithqpy <i class="far fa-copy" style="font-size:0.9rem; margin-left:4px; color:#666; cursor:pointer;" onclick="event.preventDefault(); event.stopPropagation(); navigator.clipboard.writeText('learnwithqpy').then(function(){var t=document.createElement('div');t.innerText='✓ 复制成功';t.style.cssText='position:fixed;top:20px;left:50%;transform:translateX(-50%);background:#333;color:#fff;padding:8px 16px;border-radius:20px;font-size:14px;z-index:9999;opacity:0;transition:opacity 0.3s';document.body.appendChild(t);setTimeout(function(){t.style.opacity='1'},10);setTimeout(function(){t.style.opacity='0';setTimeout(function(){document.body.removeChild(t)},300)},1500)});"></i></b>，添加小Q后加入学习社区
+                    </p>
                 </div>
-            </a>
+	        </a>
+
             <!-- Image 2 -->
             <a href="#" onclick="milib.openUrl('https://www.qpython.org')" class="block bg-gray-100 rounded-lg shadow-lg overflow-hidden">
                 <img src="static/qpy-guide-cn.png" alt="QPython使用向导" class="w-full">
