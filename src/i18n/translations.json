@@ -20,7 +20,7 @@
     "WEB开发": "WEB开发",
     "智能硬件": "智能硬件",
     "viewDetails": "查看详情",
-    "filterByTag": "按Tag筛选"
+    "filterByTag": "Tags"
   },
   "en": {
     "discoverCourses": "QPY Courses",
@@ -43,6 +43,6 @@
     "WEB开发": "Web Development",
     "智能硬件": "Smart Hardware",
     "viewDetails": "View Details",
-    "filterByTag": "Filter by Tag"
+    "filterByTag": "Tags"
   }
 }
