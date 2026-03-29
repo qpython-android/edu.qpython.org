@@ -3,6 +3,7 @@ import { BookOpen } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
 import { Course, CourseData } from '@/types/course'
 import { cn } from '@/lib/utils'
+import { LanguageSwitch } from '@/components/LanguageSwitch'
 
 const CATALOG_ORDER = [
   '人工智能',
@@ -14,7 +15,7 @@ const CATALOG_ORDER = [
 ]
 
 export function CoursesPage() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
   const [courses, setCourses] = useState<Course[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [selectedCatalog, setSelectedCatalog] = useState<string>('all')
@@ -22,14 +23,15 @@ export function CoursesPage() {
   const [tagModalOpen, setTagModalOpen] = useState(false)
 
   useEffect(() => {
-    fetch('/data/courses.json')
+    const url = language === 'zh' ? '/data/courses.json' : '/data/courses_en.json'
+    fetch(url)
       .then(res => res.json())
       .then((data: CourseData) => {
         setCourses(data.courses)
       })
       .catch(console.error)
       .finally(() => setIsLoading(false))
-  }, [])
+  }, [language])
 
   const availableCatalogs = useMemo(() => {
     const cats = [...new Set(courses.map(c => c.catalog).filter(Boolean))]
@@ -127,13 +129,18 @@ export function CoursesPage() {
       {/* Header */}
       <header className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
-          <div>
-            <h1 className="text-xl font-bold">{t('discoverCourses')}</h1>
-            {!isLoading && (
-              <p className="text-muted-foreground mt-0.5 text-gray-600 text-sm">
-                {t('totalCourses', { count: filteredCourses.length })}
-              </p>
-            )}
+          <div className="flex items-center gap-4">
+            <div>
+              <h1 className="text-xl font-bold">{t('discoverCourses')}</h1>
+              {!isLoading && (
+                <div className="flex items-center gap-2 mt-0.5">
+                  <span className="text-gray-600 text-sm">
+                    {t('totalCourses', { count: filteredCourses.length })}
+                  </span>
+                  <LanguageSwitch />
+                </div>
+              )}
+            </div>
           </div>
           {/* Mobile controls */}
           <div className="flex items-center gap-2 lg:hidden">
@@ -274,6 +281,12 @@ export function CoursesPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    onClick={(e) => {
+                      if (typeof window !== 'undefined' && (window as any).milib) {
+                        e.preventDefault()
+                        ;(window as any).milib.openUrl(course.url)
+                      }
+                    }}
                   >
                     <div className="aspect-video w-full overflow-hidden bg-gray-200">
                       <img

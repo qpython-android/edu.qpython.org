@@ -53,6 +53,23 @@
       "slug": "getting-started-with-qpy-generative-ai-development"
     },
     {
+      "id": "7229",
+      "title": "Scrapy网络爬虫编程",
+      "description": "关于 Scrapy\nScrapy是一个强大且高效的Python网络爬虫框架，它能够帮助开发者快速抓取和提取网站上的数据。Scrapy的设计初衷是为了抓取大规模网站，并将抓取数据结构化存储，用于数据分析、机器学习模型训练、内容聚合等多种应用场景。\nScrapy提供了灵活的API和丰富的功能，包括支持处理多种页面结构、轻松定义数据提取逻辑、配置代理、处理重定向和页面缓存等功能。\n此外，它还具有出色的扩展性，允许用户编写自定义组件，满足各种复杂的需求。",
+      "image": "/assets/udemy_11.png",
+      "url": "https://www.qpython.com.cn/course/scrapy-spider/",
+      "tags": [
+        "数据采集",
+        "爬虫",
+        "中级"
+      ],
+      "difficulty": "intermediate",
+      "price": "¥9",
+      "status": "publish",
+      "catalog": "数据分析与处理",
+      "slug": "scrapy-spider"
+    },
+    {
       "id": "4200",
       "title": "Pico小车基本运动编程",
       "description": "什么是Q派Pico智能小车\nQ派Pico智能小车是一款基于树莓派Pico微控制器的迷你小车编程平台，专为编程教育和创客爱好者设计。利用Micropython工具，它允许编程爱好者在一个扁平式、小巧的车身设计中，通过多种传感器进行互动和探索，学习编程的同时了解物理计算和机器人控制的基本原理。\n互动性强：Pico智能小车允许学习者通过编程直接与硬件交互，增强了学习的趣味性和实践性。\n多种传感器支持：包括红外传感器、超声波传感器等，可实现自动避障、循迹等功能。\nQPython环境支持：可在QPython移动环境中进行编程实验，随时随地学习和创作。",
@@ -175,23 +192,6 @@
       "status": "publish",
       "catalog": "数据分析与处理",
       "slug": "qpy-bs4-basics"
-    },
-    {
-      "id": "7229",
-      "title": "Scrapy网络爬虫编程",
-      "description": "关于 Scrapy\nScrapy是一个强大且高效的Python网络爬虫框架，它能够帮助开发者快速抓取和提取网站上的数据。Scrapy的设计初衷是为了抓取大规模网站，并将抓取数据结构化存储，用于数据分析、机器学习模型训练、内容聚合等多种应用场景。\nScrapy提供了灵活的API和丰富的功能，包括支持处理多种页面结构、轻松定义数据提取逻辑、配置代理、处理重定向和页面缓存等功能。\n此外，它还具有出色的扩展性，允许用户编写自定义组件，满足各种复杂的需求。",
-      "image": "/assets/udemy_11.png",
-      "url": "https://www.qpython.com.cn/course/scrapy-spider/",
-      "tags": [
-        "数据采集",
-        "爬虫",
-        "中级"
-      ],
-      "difficulty": "intermediate",
-      "price": "¥9",
-      "status": "publish",
-      "catalog": "数据分析与处理",
-      "slug": "scrapy-spider"
     },
     {
       "id": "7552",
