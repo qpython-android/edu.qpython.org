@@ -1,6 +1,23 @@
 {
   "courses": [
     {
+      "id": "6492",
+      "title": "Python语法实践",
+      "description": "关于 Python编程\nPython：简单又强大的编程语言\n想象一下，有这样一种编程语言，它不仅容易学习，而且功能强大，这就是Python。就像我们用简单的话语就能表达复杂的想法一样，Python用简单的代码就能完成很多工作。\nPython的设计非常人性化，它的代码看起来就像是在讲故事，容易理解和编写。而且Python还能自我检查错误，比一些更古老的编程语言做得更好。它内置了很多有用的工具，就像是你手边有一个万能工具箱，可以随时拿出来解决问题。",
+      "image": "/assets/udemy_06.png",
+      "url": "https://www.qpython.com.cn/course/python-basic-syntax/",
+      "tags": [
+        "Python语法",
+        "入门",
+        "初级"
+      ],
+      "difficulty": "advanced",
+      "price": "¥5",
+      "status": "publish",
+      "catalog": "深入Python开发",
+      "slug": "python-basic-syntax"
+    },
+    {
       "id": "3995",
       "title": "QPython入门实践",
       "description": "关于QPython\nQPython是一款专为Android设备设计的Python编程引擎，它整合了解释器、控制台、编辑器，并集成了QSL4A库和APIGPT，全面支持Web开发、科学计算以及AI扩展。无论您是Python新手还是资深开发者，QPython都能为您提供一个功能强大的移动编程平台。\n核心功能包括：\n完善的Python环境：内建Python解释器，让您能够随时随地编写和执行代码。\n高效的代码编辑器：QEditor为您提供了一个在手机上便捷开发Python项目的编辑器。\nJupyter Notebook兼容：通过QNotebook浏览器，您可以轻松学习和运行Notebook文件。\n扩展库与PIP支持：轻松安装和管理第三方库，极大地扩展您的编程可能性。\n核心库：QPython专有的QSL4A和APIGPT库，为您的Android或AI项目带来独特的功能和强大支持。\n学习资源与社区：内置精选课程和社区链接，助您迅速提升编程技能。",
@@ -87,23 +104,6 @@
       "status": "publish",
       "catalog": "人工智能",
       "slug": "poetry-you-ask-and-i-answer"
-    },
-    {
-      "id": "6492",
-      "title": "Python语法实践",
-      "description": "关于 Python编程\nPython：简单又强大的编程语言\n想象一下，有这样一种编程语言，它不仅容易学习，而且功能强大，这就是Python。就像我们用简单的话语就能表达复杂的想法一样，Python用简单的代码就能完成很多工作。\nPython的设计非常人性化，它的代码看起来就像是在讲故事，容易理解和编写。而且Python还能自我检查错误，比一些更古老的编程语言做得更好。它内置了很多有用的工具，就像是你手边有一个万能工具箱，可以随时拿出来解决问题。",
-      "image": "/assets/udemy_06.png",
-      "url": "https://www.qpython.com.cn/course/python-basic-syntax/",
-      "tags": [
-        "Python语法",
-        "入门",
-        "初级"
-      ],
-      "difficulty": "advanced",
-      "price": "¥5",
-      "status": "publish",
-      "catalog": "深入Python开发",
-      "slug": "python-basic-syntax"
     },
     {
       "id": "6705",
