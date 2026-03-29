@@ -3,7 +3,6 @@ import { BookOpen } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
 import { Course, CourseData } from '@/types/course'
 import { cn } from '@/lib/utils'
-import { LanguageSwitch } from '@/components/LanguageSwitch'
 
 const CATALOG_ORDER = [
   '人工智能',
@@ -137,7 +136,6 @@ export function CoursesPage() {
                   <span className="text-gray-600 text-sm">
                     {t('totalCourses', { count: filteredCourses.length })}
                   </span>
-                  <LanguageSwitch />
                 </div>
               )}
             </div>
