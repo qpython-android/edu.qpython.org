@@ -4,7 +4,7 @@
       "id": "6492",
       "title": "Python Syntax Practice",
       "description": "About Python Programming\nPython: A Simple Yet Powerful Programming Language\nImagine a programming language that is not only easy to learn but also powerful - that's Python. Just as we can express complex ideas with simple words, Python lets us accomplish a lot with simple code.\nPython is designed to be human-friendly, its code reads like a story, easy to understand and write. And Python checks for errors better than some older programming languages. It comes with many useful tools built-in, like having a versatile toolkit at your side that you can use anytime to solve problems.",
-      "image": "/assets/udemy_06.png",
+      "image": "/assets/udemy_en_06.png",
       "url": "https://www.qpython.com/course/python-basic-syntax/",
       "tags": [
         "Python Syntax",
@@ -21,7 +21,7 @@
       "id": "3995",
       "title": "QPython Getting Started",
       "description": "About QPython\nQPython is a Python programming engine designed specifically for Android devices. It integrates an interpreter, console, and editor, along with the QSL4A library and APIGPT, fully supporting web development, scientific computing, and AI extensions. Whether you are a Python beginner or an experienced developer, QPython provides you with a powerful mobile programming platform.\nCore Features:\nComplete Python Environment: Built-in Python interpreter allows you to write and execute code anytime, anywhere.\nEfficient Code Editor: QEditor provides a convenient editor for developing Python projects on your phone.\nJupyter Notebook Compatibility: Through QNotebook browser, you can easily learn and run Notebook files.\nExtension Libraries and PIP Support: Easily install and manage third-party libraries, greatly expanding your programming possibilities.\nCore Libraries: QPython's exclusive QSL4A and APIGPT libraries bring unique features and powerful support for your Android or AI projects.\nLearning Resources and Community: Built-in curated courses and community links to help you quickly improve your programming skills.",
-      "image": "/assets/udemy_01.png",
+      "image": "/assets/udemy_en_01.png",
       "url": "https://www.qpython.com/course/qpython-basic/",
       "tags": [
         "QPython",
@@ -38,7 +38,7 @@
       "id": "4198",
       "title": "Generative AI Programming Getting Started",
       "description": "Course Overview\nWith the rise of Generative AI (AIGC), especially the widespread adoption of ChatGPT, learning how to integrate AIGC technology into your applications has become a trend. The QPai Generative AI Development Series - Getting Started course aims to provide Python developers with a quick start path, enabling you to master AIGC application skills in program development.\nCourse Features\nDeep Understanding of AIGC: We will explore the fundamental principles of generative AI and its applications in artistic creation, image generation, dialogue generation, and text content generation.\nMaster PGPT Services: PGPT, as a cloud API platform that aggregates multiple large AI services, provides a lightweight AIGC development library to help developers quickly build applications.\nSpecial QPython Support: The course specifically uses the method of calling PGPT services in QPython, allowing learners to conveniently experience the charm of generative AI on mobile devices.",
-      "image": "/assets/udemy_02.png",
+      "image": "/assets/udemy_en_02.png",
       "url": "https://www.qpython.com/course/getting-started-with-qpy-generative-ai-development/",
       "tags": [
         "AI Application",
@@ -56,7 +56,7 @@
       "id": "7229",
       "title": "Scrapy Web Crawler Programming",
       "description": "About Scrapy\nScrapy is a powerful and efficient Python web crawling framework that helps developers quickly crawl and extract data from websites. Scrapy was designed from the ground up for crawling large-scale websites and storing crawled data in a structured way for data analysis, machine learning model training, content aggregation, and more.\nScrapy provides a flexible API and rich features, including support for handling various page structures, easily defining data extraction logic, configuring proxies, handling redirects, and page caching.\nAdditionally, it has excellent extensibility, allowing users to write custom components to meet various complex needs.",
-      "image": "/assets/udemy_11.png",
+      "image": "/assets/udemy_en_11.png",
       "url": "https://www.qpython.com/course/scrapy-spider/",
       "tags": [
         "Data Collection",
@@ -73,7 +73,7 @@
       "id": "4200",
       "title": "Pico Car Basic Motion Programming",
       "description": "What is QPai Pico Smart Car\nThe QPai Pico Smart Car is a mini car programming platform based on the Raspberry Pi Pico microcontroller, designed specifically for programming education and maker enthusiasts. Using MicroPython tools, it allows programming enthusiasts to interact and explore through various sensors in a flat, compact car design, learning programming while understanding the basic principles of physical computing and robot control.\nStrong Interactivity: The Pico Smart Car allows learners to directly interact with hardware through programming, enhancing the fun and practicality of learning.\nMultiple Sensor Support: Including infrared sensors, ultrasonic sensors, etc., enabling functions like automatic obstacle avoidance and line tracking.\nQPython Environment Support: Programming experiments can be conducted in the QPython mobile environment, allowing learning and creating anytime, anywhere.",
-      "image": "/assets/udemy_03.png",
+      "image": "/assets/udemy_en_03.png",
       "url": "https://www.qpython.com/course/picocar-basic/",
       "tags": [
         "Smart Hardware",
@@ -90,7 +90,7 @@
       "id": "4218",
       "title": "Flask Web Development Getting Started",
       "description": "What is Flask\nFlask is a simple, flexible, and easy-to-use web framework in Python, suitable for beginners. It provides rich features and extensibility, helping developers quickly build fully functional web applications.\nSimple and Easy to Use: Flask's design philosophy is to keep things simple and user-friendly. Its API is straightforward and easy to learn and understand.\nRouting System: Flask provides a powerful routing system that can match different handler functions based on URL paths.\nTemplate Engine: Flask comes with the Jinja2 template engine, making it easy to separate dynamic content from static HTML pages.\nDatabase Integration: Flask supports various database extensions for easy database operations.",
-      "image": "/assets/udemy_04.png",
+      "image": "/assets/udemy_en_04.png",
       "url": "https://www.qpython.com/course/flask-web-development-course/",
       "tags": [
         "Web Development",
@@ -108,7 +108,7 @@
       "id": "6457",
       "title": "Poetry Q&A Project Practice",
       "description": "This course aims to help students master basic Python programming skills through actual project development, and further learn how to apply programming technology in the field of culture and art. Through developing an interactive poetry Q&A system, students will learn the entire process from conception, design to implementing a complete application.\nCourse Content:\n1. Python Programming Basics\n2. Design and Implementation of Q&A Logic\n3. Application of Generative AI in Poetry\n4. Interface Design and User Experience Optimization\nExpected Outcomes:\nAfter completing this course, students will master practical skills for developing complex projects using Python.",
-      "image": "/assets/udemy_05.png",
+      "image": "/assets/udemy_en_05.png",
       "url": "https://www.qpython.com/course/poetry-you-ask-and-i-answer/",
       "tags": [
         "AI Application",
@@ -126,7 +126,7 @@
       "id": "6705",
       "title": "Django Web Development Getting Started",
       "description": "About Django\nImagine you are building a house. Django is like a set of pre-designed blueprints and tools that help you quickly build a sturdy, beautiful, and powerful website.\nDjango is an open-source web framework written in Python. It helps you handle many tedious tasks in website development, such as user authentication, database management, URL routing, and more.\nRapid Development: Django's design philosophy is rapid development. It provides a large number of built-in features that allow you to build fully functional websites in a short time.\nSecurity: Django has many built-in security mechanisms that can effectively protect your website from common network attacks.",
-      "image": "/assets/udemy_07.png",
+      "image": "/assets/udemy_en_07.png",
       "url": "https://www.qpython.com/course/django-basics/",
       "tags": [
         "Web Development",
@@ -144,7 +144,7 @@
       "id": "6898",
       "title": "NumPy Scientific Computing Programming",
       "description": "About NumPy\nNumPy (Numerical Python) is a library specially designed for Python to help us handle large amounts of data more easily. Think of it as a \"computing assistant\" in Python that allows us to complete complex mathematical operations and data processing with less code.\nWith NumPy, you can:\nCreate Arrays: Not only can it handle one-dimensional data like lists, but also easily handle two-dimensional, three-dimensional, and even higher-dimensional arrays.\nFast Computation: NumPy provides a complete set of built-in functions for quick arithmetic, statistical analysis, and other operations.\nTime-Saving: Due to its efficient computation method, NumPy is much faster than traditional Python methods.",
-      "image": "/assets/udemy_08.png",
+      "image": "/assets/udemy_en_08.png",
       "url": "https://www.qpython.com/course/qpy-numpy-basic/",
       "tags": [
         "Data Analysis",
@@ -162,7 +162,7 @@
       "id": "6948",
       "title": "Pandas Data Analysis and Processing Programming",
       "description": "About Pandas\nPandas is a powerful and easy-to-use library in Python specifically for processing and analyzing structured data. It allows you to handle data tables as easily as operating Excel spreadsheets, suitable for organizing, cleaning, filtering, and analyzing various datasets.\nWith Pandas, you can quickly perform common tasks such as data cleaning, missing value handling, data grouping, and aggregation. Pandas is an essential tool for data analysis that can greatly simplify the workflow of processing large amounts of data.\nBenefits of Learning Pandas:\nImprove Efficiency: Mastering Pandas can significantly improve your efficiency in processing large amounts of data.\nEnhanced Insight: With Pandas, you can quickly extract valuable information and insights from data.",
-      "image": "/assets/udemy_09.png",
+      "image": "/assets/udemy_en_09.png",
       "url": "https://www.qpython.com/course/qpy-pandas-basic/",
       "tags": [
         "Data Analysis",
@@ -179,7 +179,7 @@
       "id": "7168",
       "title": "Web Scraping with Beautiful Soup 4",
       "description": "About Beautiful Soup\nBeautiful Soup is a Python library for extracting data from HTML and XML documents. The charm of Beautiful Soup lies in its simplicity and flexibility. It provides an intuitive API that allows you to easily parse web pages, just like easily browsing your own bookshelf.\nWhether encountering non-standardized HTML documents or needing to find specific information in complex data structures, Beautiful Soup can help you easily handle it.\nWith Beautiful Soup, you can quickly locate specific elements in web pages, extract the text or attributes you need, and even clean and organize data.",
-      "image": "/assets/udemy_10.png",
+      "image": "/assets/udemy_en_10.png",
       "url": "https://www.qpython.com/course/qpy-bs4-basics/",
       "tags": [
         "Data Collection",
@@ -197,7 +197,7 @@
       "id": "7552",
       "title": "Pillow Image Processing Programming",
       "description": "About Pillow\nIn today's programming world, image processing is an indispensable skill, and the Pillow library is a leader in this field. Pillow, as the modern branch of the Python Imaging Library (PIL), has become the most popular image processing library in Python.\nImagine you want to edit an image, whether for simple operations like opening and saving images, cropping part of an image, or rotating an image, or for more complex processing like applying various filters, compositing multiple images, or even changing the color mode of an image, Pillow can help you complete these tasks efficiently.\nIts ease of use allows even beginners to get started quickly, while its powerful features can meet the needs of professional developers.",
-      "image": "/assets/udemy_12.png",
+      "image": "/assets/udemy_en_12.png",
       "url": "https://www.qpython.com/course/py-pillow-started/",
       "tags": [
         "Image Processing",
@@ -214,7 +214,7 @@
       "id": "8878",
       "title": "QSL4A Programming with QPython",
       "description": "About QSL4A\nQSL4A (QPython Scripting Layer for Android) is an extension library developed by the QPython team based on the SL4A project, designed to provide a more flexible scripting programming environment for Android developers. Through QSL4A, developers can not only quickly implement prototypes of Android applications using Python, but also achieve device control and automation tasks by calling Android APIs.\nQSL4A Feature Highlights:\nLightweight User Interface (UI) Support: Provides basic user interface functionality, allowing developers to quickly create simple interactive applications.\nHTML and JavaScript Integration: Supports building mobile app interfaces through HTML and JavaScript.\nSensor and Hardware Control: Can access Android device sensors, cameras, phone, and other features.",
-      "image": "/assets/udemy_13.png",
+      "image": "/assets/udemy_en_13.png",
       "url": "https://www.qpython.com/course/qpy-qsl4a/",
       "tags": [
         "QPython",
@@ -231,7 +231,7 @@
       "id": "9562",
       "title": "OpenPyXL Spreadsheet Programming",
       "description": "About OpenPyXL\nOpenPyXL is a powerful Python library specifically for handling Excel files, especially .xlsx format files. It allows developers to create, modify, read, and save Excel files, supporting complex operations such as adding charts, setting formats, handling formulas, merging cells, and setting cell styles.\nOpenPyXL is widely used in data processing, automated office work, and report generation scenarios.\nCourse Introduction\nThis course will take you to deeply learn how to use OpenPyXL to process Excel files. Whether you are a data analyst, developer, or need to automate report generation, you can master the core skills of using OpenPyXL through this course. The course specifically includes practical content in QPython.",
-      "image": "/assets/udemy_14.png",
+      "image": "/assets/udemy_en_14.png",
       "url": "https://www.qpython.com/course/qpy-openpyxl/",
       "tags": [
         "Data Analysis",
@@ -248,7 +248,7 @@
       "id": "9799",
       "title": "Scikit-learn Machine Learning Getting Started",
       "description": "About Scikit-learn\nScikit-learn is an open-source Python library widely used in machine learning and data science. It provides simple and efficient tools for data mining, data analysis, and building machine learning models. Scikit-learn is built on NumPy, SciPy, and matplotlib, focusing on machine learning model implementation, suitable for both beginners and experienced developers.\nMain Features:\nEasy to Use: Scikit-learn provides a consistent interface to call different machine learning algorithms, making it very intuitive to use.\nWide Algorithm Support: Includes many classic machine learning algorithms such as classification, regression, clustering, dimensionality reduction, etc.\nRich Documentation and Examples: With detailed documentation and a large number of examples to help developers get started quickly.",
-      "image": "/assets/udemy_15.png",
+      "image": "/assets/udemy_en_15.png",
       "url": "https://www.qpython.com/course/scikit-learn-startup/",
       "tags": [
         "Machine Learning",
@@ -266,7 +266,7 @@
       "id": "10416",
       "title": "PyTorch From Beginner to Practice",
       "description": "About PyTorch\nPyTorch is a widely used deep learning framework that provides dynamic computation graphs and powerful GPU acceleration, enabling researchers and developers to quickly implement and test complex neural network models. Its tensor computation and automatic differentiation mechanisms provide efficient and flexible support for deep learning.\nPyTorch's concise API makes learning and practicing deep learning easier, especially suitable for academic research and industrial applications.\nCourse Introduction\nThis course aims to help you quickly get started with PyTorch, comprehensively covering the basic concepts of PyTorch, including tensor operations, automatic differentiation, and building and training simple neural networks.",
-      "image": "/assets/udemy_17.png",
+      "image": "/assets/udemy_en_17.png",
       "url": "https://www.qpython.com/course/pytorch-startup/",
       "tags": [
         "Deep Learning",
@@ -284,7 +284,7 @@
       "id": "11000",
       "title": "AI Literacy Fundamentals",
       "description": "About AI\nArtificial Intelligence (AI) is a technology and discipline that studies how to make machines possess human intelligence. AI technology has been widely used in daily life, from voice assistants to recommendation algorithms, and self-driving cars.\nThe core of AI is to enable computers to imitate human thinking, learning, and problem-solving abilities, including understanding natural language, analyzing data, recognizing images, planning decisions, and more.\nIn this course, we will introduce you to the basic concepts and practical applications of AI in an vivid and easy-to-understand way. Whether you have a technical background or not, this course can help you take your first step in learning AI.",
-      "image": "/assets/udemy_16.png",
+      "image": "/assets/udemy_en_16.png",
       "url": "https://www.qpython.com/course/qpai-artificial-intelligence-open-course-ai-literacy-foundation/",
       "tags": [
         "AI Fundamentals",
@@ -301,7 +301,7 @@
       "id": "11564",
       "title": "OpenCV Getting Started Course",
       "description": "About OpenCV\nOpenCV (Open Source Computer Vision Library) is an open-source computer vision library widely used in image processing, video analysis, machine learning, and other fields. It provides rich tools that allow developers to process images and videos, and even develop real-time computer vision applications.\nThis course is specially designed for Python programming beginners, helping you master the basic knowledge and practical skills of the OpenCV library through simple and easy-to-understand steps, easily starting your journey in the world of computer vision.\nCourse Content:\nIn this tutorial, we will start from the most basic content and gradually guide you through learning how to use OpenCV for image and video processing.",
-      "image": "/assets/udemy_18.png",
+      "image": "/assets/udemy_en_18.png",
       "url": "https://www.qpython.com/course/opencv-started-tutorial/",
       "tags": [
         "Computer Vision",
@@ -319,7 +319,7 @@
       "id": "12497",
       "title": "OpenAI Getting Started Practice",
       "description": "About the OpenAI Library\nOpenAI is an artificial intelligence research laboratory, the lab behind the famous ChatGPT, dedicated to developing AI technology that benefits all of humanity. In this course, we will learn how to use the Python library provided by OpenAI to interact with AI models connected through PGPT.\nThe OpenAI Python library makes it simple and efficient to communicate with and use powerful AI models (such as the GPT series, DALL·E, etc.). Through this library, you can easily send requests to AI and get responses, generate text, images, and even code!\nCourse Content:\nThis course will help you understand how to interact with AI models by calling PGPT services through OpenAI, and master common usage scenarios through practical cases.",
-      "image": "/assets/udemy_19.png",
+      "image": "/assets/udemy_en_19.png",
       "url": "https://www.qpython.com/course/pgpt-openai-introduction/",
       "tags": [
         "AI Application",
@@ -337,7 +337,7 @@
       "id": "12759",
       "title": "DeepSeek Getting Started Practice",
       "description": "About DeepSeek\nIn today's wave of artificial intelligence sweeping the globe, DeepSeek shines like a rising star, attracting global attention with its pursuit and innovative spirit toward Artificial General Intelligence (AGI).\nDeepSeek was established in 2023 and is a company focused on achieving AGI. AGI, the ability to think, learn, reason, and solve problems like humans, is the ultimate goal of artificial intelligence.\nDeepSeek models support multiple functions including intelligent dialogue, accurate translation, creative writing, efficient programming, intelligent problem solving, and file interpretation. Its \"deep thinking\" and \"web search\" features enable DeepSeek to more comprehensively understand user questions and provide accurate answers.",
-      "image": "/assets/udemy_20.png",
+      "image": "/assets/udemy_en_20.png",
       "url": "https://www.qpython.com/course/aipy-deepseek-intro/",
       "tags": [
         "AI Application",
@@ -355,7 +355,7 @@
       "id": "13083",
       "title": "Twisted Getting Started",
       "description": "About Twisted\nTwisted is a powerful Python asynchronous programming framework designed for event-driven network applications. It supports the development of multiple protocols such as TCP, UDP, HTTP, FTP, etc., suitable for building high-performance network server and client applications.\nTwisted's core idea is event loop-based asynchronous programming, which allows it to efficiently handle a large number of concurrent connections without using traditional threads or processes.\nIts Deferred and Callback mechanisms make asynchronous operations simpler and easier to understand, avoiding callback hell issues.",
-      "image": "/assets/udemy_21.png",
+      "image": "/assets/udemy_en_21.png",
       "url": "https://www.qpython.com/course/python-twisted-intro/",
       "tags": [
         "Advanced Python Development",
@@ -372,7 +372,7 @@
       "id": "13724",
       "title": "Prompt Engineering Getting Started",
       "description": "About Prompt Engineering\nThe powerful capabilities of large language models come from massive data training, but they are extremely sensitive to prompt interpretation - even tiny changes can lead to completely different results. Therefore, precisely designing effective prompts can not only significantly improve model performance but also avoid wasting computing resources and reduce errors.\nAs AI technology, especially large language models (like GPT and DeepSeek), are widely used in various industries, Prompt Engineering has become a key skill for improving human-computer interaction efficiency. Mastering how to design, optimize, and evaluate prompts can help us have more efficient conversations with these powerful language models.\nIn this course, we will deeply explore the basic concepts, design principles, and optimization techniques of prompt engineering.",
-      "image": "/assets/udemy_22.png",
+      "image": "/assets/udemy_en_22.png",
       "url": "https://www.qpython.com/course/qpy-prompt-engineering/",
       "tags": [
         "AI Application",
@@ -390,7 +390,7 @@
       "id": "13934",
       "title": "LangChain Development Getting Started",
       "description": "About LangChain\nLangChain is an open-source framework designed to help developers efficiently interact with and develop applications using large language models (such as GPT, LLMs, etc.). It provides a powerful set of tools that enables developers to easily build complex applications when processing natural language tasks.\nLangChain helps developers fully leverage the potential of language models to solve practical problems by simplifying data flow, managing multi-step tasks, integrating with external APIs, and providing memory and state management.\nCourse Introduction\nThis course will deeply explain how to develop AI applications using the LangChain framework, from basic knowledge to advanced applications, helping you master the core usage of LangChain.",
-      "image": "/assets/udemy_23.png",
+      "image": "/assets/udemy_en_23.png",
       "url": "https://www.qpython.com/course/ai-development-getting-started-with-langchain/",
       "tags": [
         "AI Development",
@@ -407,7 +407,7 @@
       "id": "14285",
       "title": "LangGraph Development Getting Started",
       "description": "About LangGraph\nLangGraph is a library based on LangChain, specifically designed for building reliable and scalable state management and workflow orchestration tools for language model applications. It is not just a simple programming library, but a revolutionary platform that enables developers to create complex, dynamic, and intelligent AI applications.\nIn traditional AI application development, developers are often limited by linear, static workflows. LangGraph has completely changed this situation. LangGraph allows developers to create complex, stateful AI workflows with precise control over the execution process of language model agents.\nIt is especially suitable for AI applications that require multi-step, stateful interactions.",
-      "image": "/assets/udemy_24.png",
+      "image": "/assets/udemy_en_24.png",
       "url": "https://www.qpython.com/course/ai-course-langgraph/",
       "tags": [
         "AI Development",
