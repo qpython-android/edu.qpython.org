@@ -3,6 +3,7 @@ import { BookOpen } from 'lucide-react'
 import { useLanguage } from '@/context/LanguageContext'
 import { Course, CourseData } from '@/types/course'
 import { cn } from '@/lib/utils'
+import { LanguageSwitch } from '@/components/LanguageSwitch'
 
 const CATALOG_ORDER = [
   '人工智能',
@@ -20,6 +21,7 @@ export function CoursesPage() {
   const [selectedCatalog, setSelectedCatalog] = useState<string>('all')
   const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [tagModalOpen, setTagModalOpen] = useState(false)
+  const showLangSwitch = new URLSearchParams(window.location.search).get('lang') === 'true'
 
   useEffect(() => {
     const url = language === 'zh' ? '/data/courses.json' : '/data/courses_en.json'
@@ -136,6 +138,7 @@ export function CoursesPage() {
                   <span className="text-gray-600 text-sm">
                     {t('totalCourses', { count: filteredCourses.length })}
                   </span>
+                  {showLangSwitch && <LanguageSwitch />}
                 </div>
               )}
             </div>
@@ -261,6 +264,14 @@ export function CoursesPage() {
 
           {/* Course grid */}
           <div className="flex-1 min-w-0">
+            {/* Tip banner */}
+            <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+              <p className="text-sm text-blue-800">
+                {language === 'zh'
+                  ? '需要选课帮助，请加微信助手 learnwithqpy'
+                  : 'For course selection assistance, please add our WhatsApp assistant: +85262684559'}
+              </p>
+            </div>
             {isLoading ? (
               <div className="flex items-center justify-center py-20">
                 <span className="ml-3 text-lg text-gray-600">{t('loading')}</span>
