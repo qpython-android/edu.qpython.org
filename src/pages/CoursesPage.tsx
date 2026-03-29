@@ -148,7 +148,7 @@ export function CoursesPage() {
             <select
               value={selectedCatalog}
               onChange={e => setSelectedCatalog(e.target.value)}
-              className="text-sm border border-gray-300 rounded-md px-2 py-1.5 bg-white text-gray-700 focus:outline-none focus:border-gray-700"
+              className="text-sm border border-gray-300 rounded-md px-2 py-1.5 bg-white text-gray-700 focus:outline-none focus:border-gray-700 w-4/5"
             >
               <option value="all">{t('all')}</option>
               {availableCatalogs.map(cat => (
