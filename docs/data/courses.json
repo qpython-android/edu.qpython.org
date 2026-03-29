@@ -4,7 +4,7 @@
       "id": "3995",
       "title": "QPython入门实践",
       "description": "关于QPython\nQPython是一款专为Android设备设计的Python编程引擎，它整合了解释器、控制台、编辑器，并集成了QSL4A库和APIGPT，全面支持Web开发、科学计算以及AI扩展。无论您是Python新手还是资深开发者，QPython都能为您提供一个功能强大的移动编程平台。\n核心功能包括：\n完善的Python环境：内建Python解释器，让您能够随时随地编写和执行代码。\n高效的代码编辑器：QEditor为您提供了一个在手机上便捷开发Python项目的编辑器。\nJupyter Notebook兼容：通过QNotebook浏览器，您可以轻松学习和运行Notebook文件。\n扩展库与PIP支持：轻松安装和管理第三方库，极大地扩展您的编程可能性。\n核心库：QPython专有的QSL4A和APIGPT库，为您的Android或AI项目带来独特的功能和强大支持。\n学习资源与社区：内置精选课程和社区链接，助您迅速提升编程技能。",
-      "image": "/assets/udemy_01.png",
+      "image": "/assets/course_3995.png",
       "url": "https://www.qpython.com.cn/course/qpython-basic/",
       "tags": [
         "QPython",
@@ -21,7 +21,7 @@
       "id": "4198",
       "title": "生成式AI编程入门实践",
       "description": "课程简介\n随着生成式AI（AIGC）的兴起，特别是ChatGPT的广泛应用，学习如何在您的应用程序中融入AIGC技术已成为一个趋势。《Q派生成式AI开发系列 – 入门篇》课程旨在为Python开发者提供一个快速入门的路径，让您能够在程序开发中掌握应用AIGC的能力。\n课程特色\n深入理解AIGC：我们将探索生成式AI的基本原理，以及它在艺术创作、图像生成、对话生成和文字内容生成等领域的应用。\n掌握PGPT服务：PGPT作为一个聚合了多个大型AI服务的云API平台，提供了一个轻量级的AIGC开发库，帮助开发者快速构建应用程序。\nQPython特别支持：课程特别使用了在QPython可以调用PGPT服务的方式，使得学习者能够在移动端便捷地体验生成式AI的魅力。",
-      "image": "/assets/udemy_02.png",
+      "image": "/assets/course_4198.png",
       "url": "https://www.qpython.com.cn/course/getting-started-with-qpy-generative-ai-development/",
       "tags": [
         "AI应用",
@@ -39,7 +39,7 @@
       "id": "4200",
       "title": "Pico小车基本运动编程",
       "description": "什么是Q派Pico智能小车\nQ派Pico智能小车是一款基于树莓派Pico微控制器的迷你小车编程平台，专为编程教育和创客爱好者设计。利用Micropython工具，它允许编程爱好者在一个扁平式、小巧的车身设计中，通过多种传感器进行互动和探索，学习编程的同时了解物理计算和机器人控制的基本原理。\n互动性强：Pico智能小车允许学习者通过编程直接与硬件交互，增强了学习的趣味性和实践性。\n多种传感器支持：包括红外传感器、超声波传感器等，可实现自动避障、循迹等功能。\nQPython环境支持：可在QPython移动环境中进行编程实验，随时随地学习和创作。",
-      "image": "/assets/udemy_03.png",
+      "image": "/assets/course_4200.png",
       "url": "https://www.qpython.com.cn/course/picocar-basic/",
       "tags": [
         "智能硬件",
@@ -56,7 +56,7 @@
       "id": "4218",
       "title": "Flask编程入门实践",
       "description": "什么是Flask\nFlask是Python中一个简单、灵活和易用的Web框架，适合初学者使用。它提供了丰富的功能和扩展性，可以帮助开发者快速构建功能完善的Web应用程序。\n简单易用：Flask的设计理念是保持简洁和易用性。它的API简单明了，容易学习和理解。\n路由系统：Flask提供了强大的路由系统，可以根据URL路径来匹配不同的处理函数。\n模板引擎：Flask内置了Jinja2模板引擎，可以方便地将动态内容与静态HTML页面分离。\n数据库集成：Flask支持多种数据库扩展，可以轻松地进行数据库操作。",
-      "image": "/assets/udemy_04.png",
+      "image": "/assets/course_4218.png",
       "url": "https://www.qpython.com.cn/course/flask-web-development-course/",
       "tags": [
         "Web开发",
@@ -74,7 +74,7 @@
       "id": "6457",
       "title": "诗词问答项目实战",
       "description": "本课程旨在通过实际项目的开发，让学员掌握Python编程的基本技能，并进一步深入学习如何将编程技术应用于文化艺术领域。通过开发一个互动式的诗词问答系统，学员将学习到从构思、设计到实现完整应用的全过程。\n课程内容：\n1. Python编程基础\n2. 问答逻辑的设计与实现\n3. 生成式AI在诗词中的应用\n4. 界面的设计与用户体验优化\n预期成果：\n完成本课程后，学员将掌握使用Python进行复杂项目开发的实战技能。",
-      "image": "/assets/udemy_05.png",
+      "image": "/assets/course_6457.png",
       "url": "https://www.qpython.com.cn/course/poetry-you-ask-and-i-answer/",
       "tags": [
         "AI应用",
@@ -92,7 +92,7 @@
       "id": "6492",
       "title": "Python语法实践",
       "description": "关于 Python编程\nPython：简单又强大的编程语言\n想象一下，有这样一种编程语言，它不仅容易学习，而且功能强大，这就是Python。就像我们用简单的话语就能表达复杂的想法一样，Python用简单的代码就能完成很多工作。\nPython的设计非常人性化，它的代码看起来就像是在讲故事，容易理解和编写。而且Python还能自我检查错误，比一些更古老的编程语言做得更好。它内置了很多有用的工具，就像是你手边有一个万能工具箱，可以随时拿出来解决问题。",
-      "image": "/assets/udemy_06.png",
+      "image": "/assets/course_6492.png",
       "url": "https://www.qpython.com.cn/course/python-basic-syntax/",
       "tags": [
         "Python语法",
@@ -109,7 +109,7 @@
       "id": "6705",
       "title": "Django编程入门实践",
       "description": "关于Django\n想象一下，你正在搭建一栋房子。Django就像是一套预先设计好的蓝图和工具，它能帮你快速地搭建起一个坚固、美观、功能强大的网站。\nDjango是一个使用Python语言编写的开源Web框架。它能帮你处理网站开发中许多繁琐的工作，比如用户认证、数据库管理、URL路由等等。\n快速开发：Django的设计理念就是快速开发。它提供了大量的内置功能，能让你在短时间内搭建出功能完整的网站。\n安全：Django内置了许多安全机制，能有效地保护你的网站免受常见的网络攻击。",
-      "image": "/assets/udemy_07.png",
+      "image": "/assets/course_6705.png",
       "url": "https://www.qpython.com.cn/course/django-basics/",
       "tags": [
         "Web开发",
@@ -127,7 +127,7 @@
       "id": "6898",
       "title": "NumPy科学计算编程",
       "description": "关于Numpy\nNumPy（全称为Numerical Python）是一个专门为Python设计的工具库，帮助我们更轻松地处理大量数据。可以把它看作是Python中的“计算小帮手”，它能让我们用更少的代码来完成复杂的数学运算和数据处理。\n通过NumPy，你可以：\n创建数组：不仅能处理像列表一样的一维数据，还能轻松处理二维、三维甚至更多维度的数组。\n快速计算：NumPy提供了一整套内置的函数，让你能快速进行加减乘除、统计分析等运算。\n节省时间：由于它的高效运算方式，NumPy比传统的Python方法要快得多。",
-      "image": "/assets/udemy_08.png",
+      "image": "/assets/course_6898.png",
       "url": "https://www.qpython.com.cn/course/qpy-numpy-basic/",
       "tags": [
         "数据分析",
@@ -145,7 +145,7 @@
       "id": "6948",
       "title": "Pandas数据分析和处理编程",
       "description": "关于Pandas\nPandas是Python中一个强大且易用的库，专门用于处理和分析结构化数据。它能让您像操作Excel表格一样轻松处理数据表，适合整理、清洗、筛选和分析各类数据集。\n通过Pandas，您可以快速执行数据清洗、缺失值处理、数据分组、聚合等常见任务。Pandas是数据分析的必备工具，它能大大简化处理大量数据的工作流程。\n学习Pandas的好处：\n提升效率：掌握Pandas可以显著提高您处理大量数据的效率。\n增强洞察力：通过Pandas，您可以快速从数据中提取有价值的信息和洞察。",
-      "image": "/assets/udemy_09.png",
+      "image": "/assets/course_6948.png",
       "url": "https://www.qpython.com.cn/course/qpy-pandas-basic/",
       "tags": [
         "数据分析",
@@ -162,7 +162,7 @@
       "id": "7168",
       "title": "使用Beautiful Soup 4解析网页",
       "description": "关于Beautiful Soup\nBeautiful Soup是一个Python库，用于从HTML和XML文档中提取数据。Beautiful Soup的魅力在于它的简单和灵活性。它提供了一个直观的API，让你能够轻松地解析网页，就像浏览自己的书架一样轻松。\n无论是遇到格式不规范的HTML文档，还是需要在复杂的数据结构中找到特定的信息，Beautiful Soup都能帮你轻松应对。\n使用Beautiful Soup，你可以快速定位到网页中的特定元素，提取出你需要的文本或属性，甚至还能进行数据的清洗和整理。",
-      "image": "/assets/udemy_10.png",
+      "image": "/assets/course_7168.webp",
       "url": "https://www.qpython.com.cn/course/qpy-bs4-basics/",
       "tags": [
         "数据采集",
@@ -180,7 +180,7 @@
       "id": "7229",
       "title": "Scrapy网络爬虫编程",
       "description": "关于 Scrapy\nScrapy是一个强大且高效的Python网络爬虫框架，它能够帮助开发者快速抓取和提取网站上的数据。Scrapy的设计初衷是为了抓取大规模网站，并将抓取数据结构化存储，用于数据分析、机器学习模型训练、内容聚合等多种应用场景。\nScrapy提供了灵活的API和丰富的功能，包括支持处理多种页面结构、轻松定义数据提取逻辑、配置代理、处理重定向和页面缓存等功能。\n此外，它还具有出色的扩展性，允许用户编写自定义组件，满足各种复杂的需求。",
-      "image": "/assets/udemy_11.png",
+      "image": "/assets/course_7229.png",
       "url": "https://www.qpython.com.cn/course/scrapy-spider/",
       "tags": [
         "数据采集",
@@ -197,7 +197,7 @@
       "id": "7552",
       "title": "Pillow图像处理编程",
       "description": "关于Pillow\n在当今的编程世界中，图像处理是一个不可或缺的技能，而Pillow库正是这一领域的佼佼者。Pillow，作为Python Imaging Library（PIL）的现代分支，已经成为Python中最流行的图像处理库。\n想象一下，你想要编辑一张图片，无论是进行简单的操作，比如打开和保存图像、剪切图像的一部分、或者旋转图像，还是进行更复杂的处理，比如应用各种滤镜、合成多个图像、甚至改变图像的颜色模式，Pillow都能帮你高效地完成这些任务。\n它的易用性使得即使是初学者也能快速上手，而其强大的功能也能满足专业开发者的需求。",
-      "image": "/assets/udemy_12.png",
+      "image": "/assets/course_7552.png",
       "url": "https://www.qpython.com.cn/course/py-pillow-started/",
       "tags": [
         "图像处理",
@@ -214,7 +214,7 @@
       "id": "8878",
       "title": "使用QPython的QSL4A编程",
       "description": "关于QSL4A\nQSL4A（QPython Scripting Layer for Android）是QPython团队在SL4A项目基础上开发的扩展库，旨在为Android开发者提供更灵活的脚本编程环境。通过QSL4A，开发者不仅可以使用Python快速实现Android应用的原型，还可以通过调用Android API，实现设备控制和自动化任务。\nQSL4A的功能亮点：\n轻量级用户界面（UI）支持：提供基础的用户界面功能，开发者可以快速创建简单的交互式应用程序。\nHTML和JavaScript集成：支持通过HTML和JavaScript构建移动应用界面。\n传感器和硬件控制：能够访问Android设备的传感器、相机、电话等功能。",
-      "image": "/assets/udemy_13.png",
+      "image": "/assets/course_8878.png",
       "url": "https://www.qpython.com.cn/course/qpy-qsl4a/",
       "tags": [
         "QPython",
@@ -231,7 +231,7 @@
       "id": "9562",
       "title": "OpenPyXL数据表格编程",
       "description": "关于OpenPyXL\nOpenPyXL是一个功能强大的Python库，专门用于处理Excel文件，特别是.xlsx格式的文件。它允许开发者创建、修改、读取和保存Excel文件，支持复杂的操作，如添加图表、设置格式、处理公式、合并单元格、设置单元格样式等。\nOpenPyXL被广泛应用于数据处理、自动化办公以及生成报告等场景。\n课程介绍\n本课程将带您深入学习如何使用OpenPyXL来处理Excel文件。无论您是数据分析师、开发者，还是需要自动化生成报告的用户，都能通过本课程掌握使用OpenPyXL的核心技能。课程特别加入了在QPython中进行实践的内容。",
-      "image": "/assets/udemy_14.png",
+      "image": "/assets/course_9562.png",
       "url": "https://www.qpython.com.cn/course/qpy-openpyxl/",
       "tags": [
         "数据分析",
@@ -248,7 +248,7 @@
       "id": "9799",
       "title": "Scikit-learn机器学习入门实践",
       "description": "关于Scikit-learn\nScikit-learn是一个开源的Python库，广泛应用于机器学习和数据科学领域。它提供了简单而高效的工具，适用于数据挖掘、数据分析以及构建机器学习模型。Scikit-learn建立在NumPy、SciPy和matplotlib等科学计算库的基础之上，专注于机器学习模型的实现，既适合初学者，也适合有经验的开发者。\n主要特点：\n简单易用：Scikit-learn提供了一致的接口来调用不同的机器学习算法，使用起来十分直观。\n广泛的算法支持：包含了众多经典的机器学习算法，如分类、回归、聚类、降维等。\n丰富的文档和示例：拥有详尽的文档和大量示例，帮助开发者快速上手。",
-      "image": "/assets/udemy_15.png",
+      "image": "/assets/course_9799.webp",
       "url": "https://www.qpython.com.cn/course/scikit-learn-startup/",
       "tags": [
         "机器学习",
@@ -266,7 +266,7 @@
       "id": "10416",
       "title": "PyTorch 从入门到实践",
       "description": "关于PyTorch\nPyTorch是一个广泛使用的深度学习框架，它提供了动态计算图和强大的GPU加速功能，使得研究人员和开发人员能够快速实现和测试复杂的神经网络模型。它的张量计算和自动微分机制为深度学习提供了高效且灵活的支持。\nPyTorch通过简洁的API使得深度学习的学习和实践变得更加容易，特别适合用于学术研究和工业应用。\n课程介绍\n本课程旨在帮助你快速入门PyTorch，全面涵盖PyTorch的基础概念，包括张量操作、自动微分，以及构建和训练简单神经网络。",
-      "image": "/assets/udemy_17.png",
+      "image": "/assets/course_10416.png",
       "url": "https://www.qpython.com.cn/course/pytorch-startup/",
       "tags": [
         "深度学习",
@@ -284,7 +284,7 @@
       "id": "11000",
       "title": "AI素养基础",
       "description": "关于AI\n人工智能（Artificial Intelligence, AI）是一门研究如何让机器具备人类智能的技术和学科。AI技术已经广泛应用于日常生活，从语音助手到推荐算法，再到自动驾驶汽车。\nAI的核心是让计算机能够模仿人类的思考、学习和解决问题的能力，这包括理解自然语言、分析数据、识别图像、规划决策等。\n在本课程中，我们将通过生动易懂的方式向您介绍AI的基本概念和实际应用。无论您是否拥有技术背景，这门课程都能帮助您迈出学习AI的第一步。",
-      "image": "/assets/udemy_16.png",
+      "image": "/assets/course_11000.png",
       "url": "https://www.qpython.com.cn/course/qpai-artificial-intelligence-open-course-ai-literacy-foundation/",
       "tags": [
         "AI基础",
@@ -301,7 +301,7 @@
       "id": "11564",
       "title": "OpenCV入门课程",
       "description": "关于OpenCV\nOpenCV（Open Source Computer Vision Library）是一个开源的计算机视觉库，广泛应用于图像处理、视频分析、机器学习等领域。它提供了丰富的工具，可以让开发者处理图像、视频，甚至进行实时计算机视觉应用开发。\n本课程特别为Python编程新手设计，帮助你通过简单易懂的步骤掌握OpenCV库的基础知识和实用技巧，轻松开启计算机视觉的世界。\n课程内容：\n在本教程中，我们将从最基础的内容开始，逐步引导你学习如何使用OpenCV进行图像和视频处理。",
-      "image": "/assets/udemy_18.png",
+      "image": "/assets/course_11564.png",
       "url": "https://www.qpython.com.cn/course/opencv-started-tutorial/",
       "tags": [
         "计算机视觉",
@@ -319,7 +319,7 @@
       "id": "12497",
       "title": "OpenAI 入门实践",
       "description": "关于OpenAI库\nOpenAI是一个人工智能研究实验室，即鼎鼎大名的ChatGPT背后的实验室，它致力于开发对全人类有益的AI技术。在这门课程中，我们将学习如何使用OpenAI提供的Python库，借助该库与PGPT对接的AI模型进行交互。\nOpenAI Python库使得与强大的AI模型（如GPT系列、DALL·E等）进行沟通和使用变得简单而高效。通过这个库，你可以轻松地向AI发送请求并获取回答，生成文本、图像，甚至代码！\n课程内容：\n本课程将帮助你理解如何通过OpenAI调用PGPT服务与AI模型进行交互，并通过实际案例来掌握常见的使用场景。",
-      "image": "/assets/udemy_19.png",
+      "image": "/assets/course_12497.jpg",
       "url": "https://www.qpython.com.cn/course/pgpt-openai-introduction/",
       "tags": [
         "AI应用",
@@ -337,7 +337,7 @@
       "id": "12759",
       "title": "DeepSeek入门实践",
       "description": "关于DeepSeek\n在人工智能浪潮席卷全球的今天，Deepseek如同一颗冉冉升起的新星，以其对通用人工智能（AGI）的执着追求和创新精神，吸引着全球的目光。\nDeepseek成立于2023年，是一家专注实现AGI的中国公司。AGI，即能够像人类一样思考、学习、推理和解决问题的通用人工智能，是人工智能领域的终极目标。\nDeepSeek模型支持多种功能，包括智能对话、准确翻译、创意写作、高效编程、智能解题和文件解读等。其“深度思考”和“联网搜索”功能使得DeepSeek能够更全面地理解用户问题并提供准确答案。",
-      "image": "/assets/udemy_20.png",
+      "image": "/assets/course_12759.png",
       "url": "https://www.qpython.com.cn/course/aipy-deepseek-intro/",
       "tags": [
         "AI应用",
@@ -355,7 +355,7 @@
       "id": "13083",
       "title": "Twisted入门篇",
       "description": "关于Twisted\nTwisted是一个强大的Python异步编程框架，专为事件驱动的网络应用程序设计。它支持多种协议的开发，如TCP、UDP、HTTP、FTP等，适用于构建高性能的网络服务器和客户端应用。\nTwisted的核心思想是基于事件循环的异步编程，这使得它能够高效地处理大量并发连接，而无需使用传统的线程或进程。\n它的Deferred和Callback机制使得异步操作变得更加简单易懂，避免了回调地狱的问题。",
-      "image": "/assets/udemy_21.png",
+      "image": "/assets/course_13083.png",
       "url": "https://www.qpython.com.cn/course/python-twisted-intro/",
       "tags": [
         "深入Python开发",
@@ -372,7 +372,7 @@
       "id": "13724",
       "title": "提示词工程入门",
       "description": "关于提示词工程\n大语言模型的强大能力来源于海量的数据训练，但它们对提示词的解读极为敏感，甚至是微小的变化都可能导致完全不同的结果。因此，精准设计有效的提示词，不仅能显著提升模型表现，还能避免浪费计算资源和减少错误输出。\n随着人工智能技术，尤其是大语言模型（如GPT和Deepseek）在各行各业的广泛应用，提示词工程（Prompt Engineering）已经成为提高人机交互效率的关键技能。掌握如何设计、优化和评估提示词，能够帮助我们更好地与这些强大的语言模型进行高效对话。\n在这门课程中，我们将深入探索提示词工程的基本概念、设计原理和优化技巧。",
-      "image": "/assets/udemy_22.png",
+      "image": "/assets/course_13724.png",
       "url": "https://www.qpython.com.cn/course/qpy-prompt-engineering/",
       "tags": [
         "AI应用",
@@ -390,7 +390,7 @@
       "id": "13934",
       "title": "Langchain开发入门",
       "description": "关于Langchain\nLangchain是一个开源框架，旨在帮助开发者与大语言模型（如GPT、LLMs等）进行高效的交互与应用开发。它提供了一套强大的工具，使得开发者能够在处理自然语言任务时，轻松构建复杂的应用程序。\nLangchain通过简化数据流、管理多步任务、与外部API集成以及提供内存和状态管理等功能，帮助开发者充分利用语言模型的潜力，解决实际问题。\n课程简介\n本课程将深入讲解如何使用Langchain框架开发AI应用，从基础知识到高级应用，帮助你掌握Langchain的核心用法。",
-      "image": "/assets/udemy_23.png",
+      "image": "/assets/course_13934.png",
       "url": "https://www.qpython.com.cn/course/ai-development-getting-started-with-langchain/",
       "tags": [
         "AI开发",
@@ -407,7 +407,7 @@
       "id": "14285",
       "title": "LangGraph开发入门",
       "description": "关于LangGraph\nLangGraph是一个基于LangChain的库，专门用于构建可靠且可扩展的语言模型应用程序的状态管理和工作流编排工具。它不仅仅是一个简单的编程库，而是一个革命性的平台，使开发者能够创建复杂、动态且智能的AI应用程序。\n在传统的AI应用开发中，开发者常常受限于线性、静态的工作流程。LangGraph的出现彻底改变了这一局面。LangGraph允许开发者创建复杂的、有状态的AI工作流，可以精确控制语言模型代理的执行过程。\n它特别适合需要多步骤、有状态交互的AI应用程序。",
-      "image": "/assets/udemy_24.png",
+      "image": "/assets/course_14285.jpg",
       "url": "https://www.qpython.com.cn/course/ai-course-langgraph/",
       "tags": [
         "AI开发",
