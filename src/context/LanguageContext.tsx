@@ -12,7 +12,16 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | null>(null)
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('zh')
+  const getInitialLanguage = (): Language => {
+    const params = new URLSearchParams(window.location.search)
+    const langParam = params.get('lang')
+    if (langParam === 'zh' || langParam === 'en') {
+      return langParam
+    }
+    return 'en'
+  }
+
+  const [language, setLanguage] = useState<Language>(getInitialLanguage)
 
   const t = useCallback((key: string, params?: Record<string, string | number>) => {
     const langData = translations[language] as Record<string, string>
