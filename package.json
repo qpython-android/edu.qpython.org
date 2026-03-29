@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "cp docs/CNAME /tmp/qpy-CNAME && cp docs/courses-cn.html /tmp/qpy-courses-cn.html && cp docs/courses.html /tmp/qpy-courses.html && cp -r docs/static /tmp/qpy-static && tsc && vite build && cp /tmp/qpy-CNAME docs/CNAME && cp /tmp/qpy-courses-cn.html docs/courses-cn.html && cp /tmp/qpy-courses.html docs/courses.html && cp -r /tmp/qpy-static docs/static",
     "preview": "vite preview"
   },
   "dependencies": {
