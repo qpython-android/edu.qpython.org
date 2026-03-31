@@ -291,6 +291,12 @@ export function CoursesPage() {
                     rel="noopener noreferrer"
                     className="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                     onClick={(e) => {
+                      if (typeof window.gtag !== 'undefined') {
+                        window.gtag('event', 'select_content', {
+                          content_type: 'course',
+                          item_id: course.id,
+                        })
+                      }
                       if (typeof window !== 'undefined' && (window as any).milib) {
                         e.preventDefault()
                         ;(window as any).milib.openUrl(course.url)
