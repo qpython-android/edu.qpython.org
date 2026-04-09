@@ -1,6 +1,24 @@
 {
   "courses": [
     {
+      "id": "1001",
+      "title": "与AI协作的Python编程入门",
+      "description": "你是否觉得编程很难？在AI时代，这一切正在改变。本课程将带你掌握Python编程基础，同时学会与AI高效协作。独创AI辅助教学法，系统讲解Python核心知识，教你向AI精确表达需求、协同调试代码。通过聊天机器人、数据分析助手等项目，建立人机协作工作流，打破对代码的畏惧。",
+      "image": "/assets/udemy_aipy_featured.png",
+      "url": "https://aipy.org.cn/course/python-programming-with-ai",
+      "tags": [
+        "Python入门",
+        "AI协作编程",
+        "人机协同",
+        "零基础"
+      ],
+      "difficulty": "beginner",
+      "price": "¥299",
+      "status": "publish",
+      "catalog": "AIPY编程系列",
+      "slug": "ai-python-collaboration-intro"
+    },
+    {
       "id": "6492",
       "title": "Python语法实践",
       "description": "关于 Python编程\nPython：简单又强大的编程语言\n想象一下，有这样一种编程语言，它不仅容易学习，而且功能强大，这就是Python。就像我们用简单的话语就能表达复杂的想法一样，Python用简单的代码就能完成很多工作。\nPython的设计非常人性化，它的代码看起来就像是在讲故事，容易理解和编写。而且Python还能自我检查错误，比一些更古老的编程语言做得更好。它内置了很多有用的工具，就像是你手边有一个万能工具箱，可以随时拿出来解决问题。",
